@@ -1,0 +1,246 @@
+@use "../../healpers" as *;
+@use "footer-svc-links";
+/* Block footer */
+.footer {
+  background-color: var(--color-gray-800);
+  color: var(--color-white-opacity-35);
+  letter-spacing: 0.02em;
+
+  &__inner {
+    padding-block: fluid(25, 15) fluid(62, 22);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: repeat(2, auto);
+    row-gap: fluid(49, 31);
+    column-gap: rem(26);
+  }
+
+  &__heading {
+    max-width: rem(331);
+
+    &-text {
+      font-size: rem(13);
+      line-height: 1.4;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  &__logo {
+    width: rem(331);
+    height: rem(78);
+    margin-bottom: rem(16);
+  }
+
+  &__buttons {
+    @include flex-space-between;
+
+    column-gap: rem(22);
+    align-self: flex-end;
+    max-width: rem(832);
+  }
+
+  &__qs-line {
+    grid-area: qs;
+    max-width: rem(404);
+    width: 100%;
+
+    &-link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding-block: fluid(17, 0);
+      padding-inline: rem(40);
+      border: var(--border-light);
+      border-radius: var(--border-radius-small);
+      color: var(--color-green-light);
+      font-size: rem(20);
+      font-weight: 700;
+      line-height: 1.5;
+      letter-spacing: var(--letter-spacing);
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    &-phone {
+      white-space: nowrap;
+    }
+
+    &-text {
+      font-size: rem(15);
+      line-height: 1.3;
+      max-width: rem(230);
+    }
+  }
+
+  &__yandex-button {
+    grid-area: yandex;
+    justify-self: center;
+    width: fluid(72, 54);
+    height: fluid(92, 69);
+    margin-top: rem(-9);
+  }
+
+  &__button {
+    grid-area: button;
+    font-size: rem(16);
+    letter-spacing: 0.03em;
+  }
+
+  &__svc-links {
+    max-width: rem(832);
+  }
+
+  &__links {
+    align-self: end;
+    color: var(--color-light);
+    font-size: rem(16);
+    line-height: 1.25;
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: rem(30) rem(30);
+    }
+
+    &-link {
+      letter-spacing: 0.06em;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin-block: 0;
+    padding: 0;
+  }
+}
+
+@include laptop-media {
+  .footer {
+    &__buttons {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-rows: minmax(rem(92), auto) auto;
+      grid-template-areas:
+        "yandex qs"
+        "button button";
+      row-gap: rem(36);
+    }
+
+    &__button {
+      justify-self: center;
+    }
+
+    &__links {
+      align-self: center;
+    }
+  }
+}
+@include tablet-media {
+  .footer {
+    &__inner {
+      grid-template-areas:
+        "heading heading"
+        "buttons buttons"
+        "links-list svc";
+    }
+
+    &__heading {
+      grid-area: heading;
+      justify-self: center;
+      max-width: unset;
+      text-align: center;
+    }
+
+    &__buttons {
+      grid-area: buttons;
+    }
+
+    &__links {
+      grid-area: links-list;
+    }
+
+    &__svc-links {
+      grid-area: svc;
+    }
+
+    &__buttons {
+      margin-inline: auto;
+      grid-template-columns: 1fr 1fr auto;
+      max-width: unset;
+      width: 100%;
+      grid-template-rows: 1fr;
+      grid-template-areas: "yandex button qs";
+      row-gap: rem(36);
+    }
+  }
+}
+@include mobile-media {
+  .footer {
+    .conteiner {
+      --container-padding-x: #{rem(16)};
+    }
+
+    &__inner {
+      grid-template-areas:
+        "heading"
+        "buttons"
+        "links-list"
+        "svc";
+      row-gap: 0;
+    }
+
+    &__heading {
+      width: 100%;
+      margin-bottom: rem(16);
+
+      &-text {
+        font-size: rem(12);
+        letter-spacing: 0.03em;
+      }
+    }
+
+    &__logo {
+      margin-bottom: rem(14);
+    }
+
+    &__buttons {
+      grid-template-rows: 1fr minmax(rem(92), auto);
+      grid-template-columns: 1fr auto;
+      grid-template-areas:
+        "button button"
+        "yandex qs";
+      column-gap: rem(30);
+      margin-bottom: rem(24);
+    }
+
+    &__yandex-button {
+      align-self: start;
+      margin-top: rem(7);
+    }
+
+    &__links {
+      margin-bottom: rem(28);
+
+      &-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: rem(20) rem(24);
+      }
+    }
+  }
+}
+
+@include mobile-s-media {
+  .footer {
+    &__heading {
+      margin-left: rem(-10);
+    }
+
+    &__yandex-button {
+      margin-top: rem(7);
+    }
+  }
+}
+/*  ===================================  */
+/*  ===================================  */

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/svg+xml" sizes="16x16" href="./images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="32x32" href="./images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="48x48" href="./images/icons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./images/icons/favicon.svg">
+	<!-- <meta name="description"
+		content=""> -->
+
+	<link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css">
+	<title>2ATM</title>
+	<link rel="stylesheet" href="./styles/index-page/index.css ">
+</head>
+
+
+<body>
+	<header class="header">
+		<nav class="header-top-menu hidden-mobile">
+			<ul class="header-top-menu__list container">
+				<li>
+					<a class="header-top-menu__link header-top-menu__link--color-accent" href="#!">
+						Услуги
+					</a>
+				</li>
+				<li>
+					<a class="header-top-menu__link" href="#!">
+						Адреса
+					</a>
+				</li>
+				<li>
+					<a class="header-top-menu__link" href="#!">
+						Корпоративным клиентам
+					</a>
+				</li>
+				<li>
+					<a class="header-top-menu__link header-top-menu__link--color-green" href="#!">
+						Спецпредложения
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="header__general header__general--not-to-scroll container">
+			<a class="header__logo logo" href="./index.html" aria-label="Логотип 2ATM">
+				<picture>
+					<source srcset="./images/logo/logo-mobile.svg" media="(max-width: 767px)" type="image/svg+xml">
+					<source srcset="./images/logo/logo.svg" type="image/svg+xml">
+					<img class="logo__image" src="./images/logo/logo-mobile.svg" width="263" height="54" alt="Логотип 2ATM">
+				</picture>
+			</a>
+
+			<div class="header__mobile-menu mobile-menu visible-mobile">
+				<input id="menu-switch" type="checkbox">
+				<label class="mobile-menu__burger" for="menu-switch">
+					<span class="mobile-menu__burger-line"></span>
+					<span class="mobile-menu__burger-line"></span>
+					<span class="mobile-menu__burger-line"></span>
+				</label>
+
+				<div class="mobile-menu__wrapper">
+					<nav class="mobile-menu__box header-top-menu">
+						<ul class="header-top-menu__list">
+							<li>
+								<a class="mobile-menu__link mobile-menu__link--color-accent" href="#!">
+									Услуги
+								</a>
+							</li>
+							<li>
+								<a class="mobile-menu__link" href="#!">
+									Адреса
+								</a>
+							</li>
+							<li>
+								<a class="mobile-menu__link" href="#!">
+									Корпоративным клиентам
+								</a>
+							</li>
+							<li>
+								<a class="mobile-menu__link mobile-menu__link--color-green" href="#!">
+									Спецпредложения
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<nav class="header__buttons">
+				<address class="call-up hidden-mobile">
+					<svg viewBox="0 0 32 32" width="32" height="32">
+						<use xlink:href="./images/icons/sprite-icons.svg#call-up"></use>
+					</svg>
+
+					<a class="call-up__link" href="tel:78123855054" target="_blank" title="Позвонить нам">
+						<span>+7&nbsp;812 385-50-54</span>
+						<span class="call-up__text">круглосуточно</span>
+					</a>
+				</address>
+
+				<a class="header__button button button--accent-bg visible-mobile" href="#!">
+					Запись&nbsp;на&nbsp;сайте
+				</a>
+
+				<a class="header__button button" href="#!">
+					<span class="header-buttons__link-text hidden-mobile">
+						Записаться&nbsp;в&nbsp;Telegram
+					</span>
+
+					<span class="header-buttons__link-text visible-mobile">
+						Запись&nbsp;в&nbsp;Telegram
+					</span>
+				</a>
+			</nav>
+		</div>
+
+		<nav class="header-menu header-menu--not-to-scroll header-menu--color-accent">
+			<ul class="header-menu__list container">
+				<li class="header-menu__item">
+					<a href="#!">Шиномонтаж</a>
+				</li>
+				<li class="header-menu__item">
+					<a href="#!">Автомойка</a>
+				</li>
+				<li class="header-menu__item">
+					<a href="#!">Автосервис</a>
+				</li>
+				<li class="header-menu__item">
+					<a href="#!">Заправка кондиционеров</a>
+				</li>
+				<li class="header-menu__item">
+					<a href="#!">Техосмотр</a>
+				</li>
+				<li class="header-menu__item">
+					<a href="#!">Развал-схождение</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="header__general header__general--to-scroll container hidden-tablet">
+			<a class="logo logo--short" href="./index.html" aria-label="Логотип 2ATM">
+				<img class="logo__image" src="./images/logo/logo-short.svg" width="45" height="45" alt="Логотип 2ATM">
+			</a>
+
+			<nav class="header__menu header-menu">
+				<ul class="header-menu__list">
+					<li>
+						<a href="#!">Шиномонтаж</a>
+					</li>
+					<li>
+						<a href="#!">Автомойка</a>
+					</li>
+					<li>
+						<a href="#!">Заправка кондиционеров</a>
+					</li>
+					<li>
+						<a href="#!">Автосервис</a>
+					</li>
+					<li>
+						<a href="#!">Техосмотр</a>
+					</li>
+				</ul>
+			</nav>
+
+			<a class="header__button button" href="#!">
+				<span class="header-buttons__link-text">
+					Запись&nbsp;в&nbsp;Telegram
+				</span>
+			</a>
+		</div>
+	</header>
+
+	<main class="content">
+		<h1 class="visually-hidden">Две атмосферы</h1>
+
+		<div>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laboriosam dolores quos, est quae dicta eaque illum
+			odio animi deserunt nihil beatae doloribus. Laborum dolores incidunt omnis, quisquam impedit, repellat tenetur
+			itaque officia quaerat, magnam quasi. Mollitia atque ipsum maiores velit nulla veritatis delectus nisi tempore
+			quasi suscipit. Sequi corrupti incidunt ipsum corporis labore voluptatum iure totam amet ipsam libero obcaecati
+			adipisci reprehenderit temporibus excepturi, deleniti possimus atque? Eveniet repudiandae maxime quam aperiam
+			consequatur saepe ut dicta? Placeat ipsam enim quibusdam atque aspernatur minus numquam, distinctio, commodi
+			quidem dolores totam in explicabo assumenda excepturi ullam optio consectetur. Doloremque sed maxime odit. Nisi
+			delectus exercitationem hic deleniti, amet ipsam velit. Expedita eum repellat reprehenderit nobis alias, dicta
+			laboriosam, aperiam, sunt cum iste aut consectetur quam nemo in atque! Totam vitae repellat nobis inventore,
+			mollitia quidem officiis perferendis quis sequi, necessitatibus explicabo. Distinctio porro minima autem quibusdam
+			tempore cupiditate fugit minus. Ut earum doloremque non consequuntur eaque perspiciatis ex temporibus facere
+			dignissimos sunt praesentium nesciunt, vitae minima libero? Facilis illo suscipit incidunt temporibus delectus
+			perferendis non alias obcaecati aliquam. Voluptates animi labore culpa quisquam molestiae dolorum maiores,
+			suscipit aperiam cum dignissimos. Aut labore dolorum fugit optio aliquid eligendi atque voluptatibus quas,
+			assumenda ut vero animi iure modi enim voluptatem voluptate pariatur eum qui dolore repudiandae iste. Temporibus
+			quia consequuntur necessitatibus repudiandae eum laboriosam delectus et at similique distinctio praesentium
+			commodi quam facilis enim ipsa laborum ullam, reiciendis accusantium aut veniam, eveniet alias dolorem illum!
+			Cumque neque aut corrupti perferendis, et eligendi pariatur adipisci temporibus vero veniam, nulla ipsum culpa at
+			dolorum quos illo dicta amet aliquid dolor quo excepturi sequi ipsam. Corporis nostrum et, eius quae eligendi
+			reiciendis ducimus labore consectetur laborum. Animi voluptate molestias at assumenda, mollitia tempore suscipit
+			hic facere sed, ad labore neque laborum placeat, quae consequatur esse voluptatibus obcaecati excepturi? Veritatis
+			placeat aliquid accusamus odit fugit animi aut ex enim cupiditate tempora quod voluptatem, vitae modi rerum,
+			dolores vel omnis saepe nemo possimus facere natus sapiente reiciendis deserunt odio. Maxime, aliquid? Vitae
+			consectetur, quas eligendi porro provident et molestias accusantium doloremque neque aliquam? Iusto ipsum
+			distinctio accusamus tempore corrupti. Temporibus nam dolorum ab error provident molestiae ex soluta quod
+			accusantium commodi repellendus quas sed fugiat cupiditate distinctio ipsa dolore eum atque, natus fugit labore
+			similique. Omnis nihil eius ipsa unde numquam natus aperiam laborum. Nisi temporibus nesciunt vel atque nemo
+			voluptatem culpa, unde harum autem, ipsa architecto perferendis eaque ea fugiat repudiandae aut, itaque debitis?
+			Facilis quidem libero exercitationem, totam eveniet suscipit dignissimos aperiam adipisci unde possimus?
+			Laboriosam quas qui autem explicabo voluptas odio dicta delectus exercitationem quo mollitia ipsam porro magni
+			fugiat a in nihil molestias harum at recusandae nisi quis voluptates, molestiae provident! Quidem illo unde ab
+			harum. Quae dolorem libero id laboriosam debitis voluptatibus at! Facere rem alias necessitatibus odit ipsum iusto
+			fugit inventore numquam laudantium adipisci voluptatibus sunt qui ea expedita facilis cupiditate tenetur, placeat
+			incidunt aliquid corporis magni! Officia itaque architecto iure est sed ut aliquid dicta, eligendi fugiat odit
+			quas, quis assumenda repudiandae explicabo ratione provident dolore rem fuga ducimus possimus vero quos qui atque
+			natus. Ea ducimus non, itaque eos incidunt quam sint quod aut at totam architecto voluptatem similique. Enim minus
+			maxime ullam ipsam temporibus iusto architecto eaque quod in, aspernatur id commodi soluta velit sunt sed ad,
+			porro exercitationem non voluptatem quia. Eligendi, temporibus voluptate iste aperiam voluptatibus hic recusandae
+			officiis adipisci quasi sit, voluptas repudiandae aut deleniti totam dolorum aspernatur accusamus cumque iusto
+			cupiditate doloremque possimus doloribus labore? Omnis facere ex reprehenderit, tempora sit inventore vel cumque.
+			Unde doloremque officia id aspernatur iure in ut voluptate, ex consequuntur sapiente nam enim culpa reiciendis
+			reprehenderit. Esse eveniet omnis non illo recusandae tempore, dolorem inventore, nulla voluptatum repellendus,
+			nisi explicabo totam atque repellat aliquam eaque deserunt dicta. Ratione nihil sed culpa, aspernatur eum, a
+			repellendus maiores provident asperiores corporis eligendi officiis voluptate nesciunt, consequuntur ipsam
+			laudantium cumque! Eos illo tenetur delectus mollitia optio laboriosam quod quo impedit aperiam saepe rerum,
+			itaque praesentium amet minima. Obcaecati provident reprehenderit eius nesciunt temporibus, beatae rem quia
+			eligendi dolores earum rerum aut dolore animi quos repudiandae repellendus. Voluptates quaerat voluptas
+			consequatur. Doloremque optio suscipit blanditiis error voluptates ducimus, quisquam eos nulla quia labore, ut
+			laudantium corrupti vitae nihil natus asperiores magni? Nihil dignissimos quas nobis nisi, fuga cum odio placeat
+			eaque, aspernatur, maxime quia sint eos? Asperiores vitae dicta provident perspiciatis optio, blanditiis quod
+			corporis veritatis est repudiandae exercitationem dolore voluptatibus nulla ab voluptas deleniti dolores facilis
+			neque harum at et. Corporis qui tempora, aut harum iste eveniet fugiat expedita dolor placeat! Perferendis ipsam
+			non ad! Harum praesentium iste possimus accusantium nostrum perferendis magni quaerat molestiae, eum corrupti amet
+			assumenda reiciendis, necessitatibus, dolore illum minima aliquam ipsam facilis laborum quisquam asperiores vero
+			earum enim fugit! Quis nemo necessitatibus repellendus voluptatem exercitationem adipisci voluptas recusandae
+			explicabo voluptatum deleniti sequi, culpa, officia vitae maiores. Explicabo magnam, reprehenderit vitae repellat
+			necessitatibus architecto unde exercitationem obcaecati pariatur quas itaque, assumenda nemo natus. Nulla tempore
+			ab distinctio necessitatibus in repellat eaque vitae, minima atque tenetur molestias suscipit minus tempora
+			laboriosam vel! Laborum praesentium alias cumque? Deleniti sunt neque et quos. Ratione quos, inventore temporibus
+			ex fugit impedit, amet, fuga excepturi nemo saepe perspiciatis repellendus recusandae odit mollitia ipsum aliquid!
+			Repellat omnis itaque tempore qui accusantium architecto quas sapiente eos magnam nostrum minus id quidem corporis
+			magni vero cum et mollitia, sit temporibus cumque. Dolor nulla sit ea repellat hic veniam suscipit eaque numquam
+			eius natus voluptates doloremque, maxime ex necessitatibus eligendi quas laudantium optio fugit odit tempore
+			quibusdam. Dolor repellendus aperiam itaque dignissimos, odit voluptates pariatur explicabo dolores ab optio quo.
+			Iure quibusdam non, voluptates recusandae error cum fugit magnam rem aliquid dolorum ipsa tempore, fugiat ea
+			libero numquam ipsum doloribus quaerat praesentium consequuntur. Eum unde consequuntur quasi maxime adipisci
+			incidunt mollitia, neque aut eligendi magnam illo quo, esse dolorum perferendis nulla cum quod vitae numquam
+			reprehenderit odit amet deserunt rerum harum. Ex commodi aut officia eos accusantium quae perspiciatis nostrum
+			suscipit quod, nisi hic excepturi. Atque, nesciunt! Quisquam nemo quidem eaque perspiciatis mollitia ea ex
+			laudantium quasi. Architecto atque nostrum, placeat explicabo necessitatibus animi, velit nihil eius iste culpa
+			reprehenderit sunt deleniti repellat ducimus sapiente! Magnam esse velit inventore est, expedita ullam harum
+			commodi perspiciatis sed ex ea eaque voluptatem illum dolor incidunt voluptatum totam iste repellat temporibus
+			consectetur rerum nesciunt voluptatibus assumenda? Minus consectetur aliquid possimus aperiam. Perferendis sit
+			dolore ab hic possimus dolor odit nemo ad, sapiente tempora officia consectetur quos doloremque asperiores
+			provident aliquam doloribus deleniti quidem quaerat tenetur quae obcaecati? Itaque dolorum quam, laborum molestiae
+			sint, tempore magnam minima cum sequi ullam nesciunt magni iste animi. Consequatur soluta, reiciendis ex
+			voluptatibus sint asperiores sequi maxime tempore officiis quibusdam natus doloribus, facere cumque, ut iure
+			repellat animi et iste quae sapiente modi. Ab, ullam vel quaerat quis ipsum culpa labore, a, harum dolor saepe
+			itaque quidem fugiat! Error quibusdam quidem pariatur? Maiores dignissimos qui architecto nesciunt laudantium eius
+			accusamus tempora earum modi provident illum iusto labore ipsa odio, enim assumenda blanditiis harum quasi. Rerum
+			placeat sunt, aut cupiditate voluptates officia tempore velit commodi quos! Ipsam voluptatum suscipit id iusto
+			voluptatem delectus sapiente praesentium porro voluptatibus nostrum, impedit quam, dolorum, optio a maxime aliquid
+			ipsum. Molestias voluptates cupiditate quidem exercitationem saepe maiores deserunt! Dolores reprehenderit
+			necessitatibus sint vitae qui, maiores repellat minus ducimus esse, aliquam tempore aut ullam adipisci harum non
+			praesentium facilis voluptatibus quibusdam dolore repudiandae, repellendus at! Numquam ratione quisquam eveniet
+			deleniti, dolorem aperiam dolores harum nihil neque, ab labore nisi fugit. Hic blanditiis nobis ex necessitatibus
+			eos ratione accusantium, a soluta sapiente natus optio cumque itaque magnam obcaecati suscipit, rem commodi quasi
+			placeat exercitationem aliquid eius voluptates sint dolorem. Praesentium earum, necessitatibus inventore unde nam
+			ratione. Sed delectus dolore ad nihil officia nisi asperiores non illo deleniti harum et alias nam vero
+			consequuntur temporibus, culpa, nobis accusamus quo mollitia optio! Natus dolor minus laudantium suscipit
+			cupiditate quis perferendis perspiciatis earum consectetur unde quam voluptatum dolore, labore eum asperiores. Hic
+			eaque nobis vero ab culpa. Numquam ea, porro officia eveniet placeat reprehenderit ullam omnis! Exercitationem nam
+			ratione quibusdam dolore tenetur fugiat vero inventore temporibus ipsam autem nesciunt dolores non hic eveniet
+			iusto at magnam esse assumenda facere, in labore! Neque mollitia, consequatur sapiente cum quibusdam nisi alias
+			nulla eveniet molestiae voluptatem sint quisquam corrupti placeat praesentium natus nam voluptate molestias
+			quaerat, iste ullam magnam tempore, optio blanditiis ut. Pariatur, aliquam quibusdam ipsam quam provident dolorem
+			laborum quos tenetur totam vitae praesentium eveniet reiciendis animi magni voluptatum officiis quo expedita.
+			Fugit ea sequi eos pariatur laudantium nihil nisi obcaecati veritatis, earum accusantium hic delectus consectetur
+			corporis ducimus tenetur neque officia numquam ipsam perspiciatis sed harum alias adipisci iusto. Quasi quaerat
+			magni tempora similique veritatis unde nostrum iure distinctio labore corporis tenetur officia cum doloremque
+			fugit ipsam ut ipsum, voluptate saepe accusamus! Laudantium provident ratione consectetur voluptate blanditiis,
+			explicabo, ullam eius quos, dolore magni itaque necessitatibus similique laborum quisquam! Eligendi dolorum sunt
+			ad ipsam modi maiores unde nulla quae asperiores commodi. Natus minus, aliquam suscipit harum placeat aspernatur
+			cum facere officiis iure voluptatem rerum! Laudantium temporibus quibusdam quia nihil obcaecati aperiam velit,
+			dicta deleniti at sunt sit fugit ab magnam tenetur! Cumque voluptatum consequuntur consectetur vero esse natus
+			ipsam cupiditate explicabo blanditiis culpa aspernatur temporibus harum quas optio rem sequi, quod eius? Vero
+			rerum beatae voluptates, expedita earum at officia magnam ipsam, alias molestiae ipsa est corrupti dignissimos rem
+			tempora laborum, reiciendis illo non consequatur adipisci optio! Rem consectetur, modi veritatis tenetur delectus
+			id enim rerum nulla quo assumenda eaque numquam non dignissimos totam, vitae, aliquid atque eligendi quam. Cumque
+			repellat consequatur laudantium non soluta atque illum incidunt veniam nemo itaque laboriosam, ut perspiciatis
+			optio deserunt rerum ratione deleniti placeat beatae omnis unde! Fuga, ad totam blanditiis, vero tenetur repellat
+			nihil dignissimos nulla tempora asperiores delectus ea modi provident eum. Reiciendis voluptatibus iste alias enim
+			tempore illo eveniet nisi dolorum repellat architecto modi libero saepe pariatur, esse autem ratione earum aut est
+			laudantium eligendi maiores cupiditate quo ea numquam. Ut recusandae unde modi placeat labore enim perferendis
+			sunt repellendus ab ad. Perferendis molestiae, deleniti totam eveniet nostrum dolore ullam accusamus repudiandae
+			obcaecati non excepturi ducimus aliquam fuga illo. Sequi, neque. Repellat voluptatum reiciendis nobis veniam
+			quaerat tempore ipsum, aut quibusdam aliquid, totam iusto eum quo rerum quisquam illum soluta earum sapiente
+			tenetur blanditiis laboriosam. Facilis exercitationem qui commodi sit vero culpa vel laudantium minima iste, magni
+			quis, laboriosam molestias non distinctio ad accusantium ex cum nemo odio iure similique! Suscipit eos totam cum
+			pariatur minima optio impedit fugiat alias nihil vitae dolorem vero consequatur aspernatur voluptatem ea modi hic
+			temporibus corrupti, accusantium ipsa quidem excepturi dignissimos quisquam. Amet a ea mollitia totam rerum
+			nostrum, esse incidunt sapiente repellat aliquam, obcaecati, aperiam sed soluta ut ullam. Velit omnis ab ratione,
+			cum deserunt porro sed odio quibusdam eius rerum ipsum, ducimus dolorem cumque repellat delectus optio! Eveniet
+			accusamus non tempora totam repellendus corrupti a illo pariatur? Obcaecati est suscipit accusamus dignissimos
+			reiciendis ex impedit, vitae asperiores officia? Quos totam placeat cum nostrum dicta. Quaerat voluptatem
+			explicabo error, obcaecati tenetur dolores esse voluptatibus minus laudantium, voluptate nam dolorum vero
+			pariatur. Magnam temporibus accusamus architecto quam assumenda ullam similique molestiae officiis et, consectetur
+			voluptatem illum repudiandae atque earum velit, est sint reprehenderit ipsam nostrum cum quidem maxime. Sit,
+			doloribus quo vero nostrum harum nobis iure assumenda. Incidunt consequuntur saepe laudantium nostrum quo dolores
+			harum reiciendis illum voluptatum, error vitae omnis non expedita, ab aperiam magnam accusamus ullam! Ea cumque
+			voluptatibus ipsam, tempora incidunt molestias id iure voluptatem illo possimus maxime eius repellendus veniam
+			itaque delectus quam reiciendis voluptas. Sapiente in harum facilis tempore laboriosam quibusdam totam nihil qui,
+			velit quia voluptas nemo saepe, dolorem magnam ipsa facere. Aperiam distinctio maiores earum at optio laborum id
+			similique repellat pariatur voluptate vitae impedit, fugiat aliquam nemo aspernatur est quas doloremque ipsam sit
+			quo nostrum minus repellendus quos soluta! Id, quod modi soluta provident ullam excepturi nihil totam vero est quo
+			eaque repellendus nam iste laborum ipsam impedit, tempora maiores neque, similique et. Laboriosam quos atque
+			temporibus quidem molestias sint nemo voluptates deleniti repellat sit, dolorem aut voluptatibus provident
+			suscipit vitae, beatae odit laborum voluptate placeat? Illo error ullam beatae, aspernatur inventore facilis,
+			tempore suscipit deleniti asperiores quam quod ipsam sunt laboriosam ad nobis. Necessitatibus ab obcaecati
+			consequatur quidem possimus officiis officia quasi, temporibus ipsum ratione distinctio incidunt minima! Tenetur
+			nam enim magni incidunt vero cum earum reprehenderit totam assumenda debitis ipsam eos voluptatem, in, cupiditate
+			sit accusamus aliquid rerum atque nulla mollitia! Delectus nulla accusantium at, beatae odit inventore nisi
+			pariatur omnis error, provident atque dolores a? Deserunt repellendus ducimus ad provident quam dolorem impedit
+			eos assumenda corporis aut minus, at cumque delectus expedita nihil quia odio sequi numquam fuga quod consequatur
+			harum aspernatur eaque repellat. A similique, ipsam praesentium quis ea dignissimos, laboriosam quidem, aspernatur
+			labore rerum libero est quo quas inventore dolor ipsum? Recusandae ipsum perferendis, odio asperiores corrupti
+			adipisci est ratione perspiciatis corporis et porro aperiam quidem quis commodi laborum eos sit tenetur quibusdam
+			similique? Molestias aliquid adipisci maiores facilis qui aut officia libero vero ea? Laudantium maxime fugiat,
+			non dolorem laboriosam dolore saepe exercitationem voluptas itaque quisquam molestias eum quos iure culpa
+			recusandae corrupti deleniti eveniet nihil magnam tempore cumque quia odit? Nulla minus numquam voluptates. Vitae
+			commodi repudiandae accusantium maxime nisi? Voluptate praesentium ipsam facilis corrupti quis sit similique alias
+			possimus nisi, ratione unde quos, maxime rerum rem in iste quidem, dolor modi excepturi? Eius quaerat non illo?
+			Nulla beatae eaque soluta sit suscipit, rerum earum facere enim nisi eveniet asperiores animi, repellendus non
+			odio quam excepturi deleniti aliquid, porro laboriosam deserunt nemo amet? Explicabo nihil minima laudantium
+			tempora vel odit nam velit. Delectus eius enim, iure placeat doloremque fugiat cum eum autem quisquam nam commodi
+			nesciunt aut, amet, ipsam dolores neque est officia laudantium maiores quam facilis reiciendis. Quisquam esse at
+			cumque voluptas explicabo beatae assumenda aliquid labore quibusdam asperiores repellat, vel consequatur tenetur
+			molestiae nemo, est nulla voluptates ratione iure aperiam debitis saepe. Quo ratione debitis quas pariatur. Dolore
+			numquam earum vel! Deleniti nam error accusamus, unde accusantium voluptatum fuga velit maiores magni, ad eos enim
+			nemo. Sapiente quisquam eos laboriosam soluta quam ex, delectus totam tenetur iste. Corrupti eligendi quod
+			voluptatem odit voluptatibus est officia odio ex non rem iusto, eos itaque distinctio. Asperiores incidunt autem
+			nulla quia reiciendis, iste nam ea maiores, reprehenderit adipisci, quisquam suscipit soluta. Laborum ipsa
+			architecto quis, ratione eligendi impedit odio, ex maxime veritatis vel necessitatibus hic cum! Sit voluptates
+			amet qui ducimus cupiditate quam fugiat odio quisquam quis dolorem tempora commodi culpa, tempore hic doloribus
+			corporis optio rerum aliquid tenetur. Quisquam architecto nihil, neque inventore iusto quasi minus mollitia error
+			magnam eos accusamus animi est in praesentium voluptatibus pariatur et at ducimus voluptate, molestiae hic? Quos
+			dignissimos totam earum recusandae, animi deserunt. Ipsam fugit accusantium dolorem, aperiam fuga iste magnam
+			totam optio. Animi velit tempora aspernatur, cum reprehenderit eveniet eligendi? Fugiat doloribus animi impedit
+			quasi nesciunt ea commodi tempore, asperiores, vitae delectus voluptatum ullam placeat omnis molestiae in!
+		</div>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer__inner container">
+			<div class="footer__heading">
+				<a class="footer__logo logo" href="./index.html" aria-label="Логотип 2ATM">
+					<img class="logo__image" src="./images/logo/logo-footer.svg" width="331" height="78" alt="Логотип 2ATM">
+				</a>
+
+				<div class="footer__heading-text">
+					<p>
+						Сеть шиномонтажей, автомоек и&nbsp;автосервисов  с&nbsp;качественным обслуживанием в&nbsp;Санкт-Петербурге
+					</p>
+				</div>
+			</div>
+
+			<nav class="footer__buttons">
+				<address class="footer__qs-line">
+					<a class="footer__qs-line-link" href="tel:88126482248" target="_blank"
+						title="Связаться с линией контроля качества">
+						<span class="footer__qs-line-phone">8&nbsp;812 648-22-48</span>
+						<span class="footer__qs-line-text">линия контроля качества обслуживания клиентов</span>
+					</a>
+				</address>
+
+				<a class="footer__yandex-button" href="" aria-label="yandex-button" title="Перейти в Яндекс">
+					<svg width="72" height="92" viewBox="0 0 72 92">
+						<use xlink:href="./images/icons/sprite-icons.svg#yandex-plate"></use>
+					</svg>
+				</a>
+
+				<a class="footer__button button button--accent-bg" href="#!">
+					Записаться&nbsp;в&nbsp;Telegram
+				</a>
+			</nav>
+
+			<nav class="footer__links">
+				<ul class="footer__links-list">
+					<li>
+						<a class="footer__links-link" href="#!">Адреса</a>
+					</li>
+
+					<li>
+						<a class="footer__links-link" href="#!">Cпецпредложения</a>
+					</li>
+
+					<li>
+						<a class="footer__links-link" href="#!">Корпоративным клиентам</a>
+					</li>
+
+					<li>
+						<a class="footer__links-link" href="#!">Контакты</a>
+					</li>
+
+					<li>
+						<a class="footer__links-link" href="#!">Аренда и&nbsp;развитие</a>
+					</li>
+				</ul>
+			</nav>
+
+			<section class="footer__svc-links footer-svc-links">
+				<h2 class="footer-svc-links__heading">Услуги</h2>
+
+				<nav class="footer-svc-links__nemu">
+					<ul class="footer-svc-links__list">
+						<li>
+							<ul>
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">Автомойка</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">Химчистка</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">Защитные покрытия</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">Полировка&nbsp;и бронирование фар</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<ul>
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">Шиномонтаж</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">Ремонт шин и&nbsp;дисков</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">Ошиповка колес</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">Реставрация дисков</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">Аргоновая сварка</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<ul>
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">Автосервис</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">
+										Установка системы контроля давления в&nbsp;шинах
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<ul>
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">Технический осмотр</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">Развал-схождение</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">
+										Заправка кондиционеров
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</section>
+		</div>
+	</footer>
+
+	<!-- <script src="./libs/swiper/swiper-bundle.min.js"></script> -->
+	<!-- <script type="module" src="./js/develop/index.js"></script> -->
+
+</body>
+
+</html>

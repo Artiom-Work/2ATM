@@ -1,0 +1,32 @@
+@use "../../healpers" as *;
+/* Styles for block logo */
+.logo {
+  width: rem(330);
+  height: rem(70);
+
+  &--short {
+    flex-shrink: 0;
+    width: rem(45);
+    height: rem(45);
+  }
+  @include hover {
+    filter: opacity(50%);
+  }
+  @include active {
+    filter: opacity(30%);
+    scale: 0.98;
+  }
+
+  &__image {
+    width: inherit;
+    height: inherit;
+  }
+}
+@include tablet-media {
+  .logo {
+    width: rem(263);
+    height: rem(54);
+  }
+}
+/*  ===================================  */
+/*  ===================================  */

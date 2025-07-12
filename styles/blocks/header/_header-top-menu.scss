@@ -1,0 +1,49 @@
+@use "../../healpers" as *;
+/* BLock header-top-menu */
+.header-top-menu {
+  --mobileMenuTextColor: var(--color-light);
+
+  display: block;
+  background-color: var(--color-gray-900);
+  padding-block: rem(11);
+  color: var(--mobileMenuTextColor);
+  font-weight: 600;
+  font-size: rem(14);
+  /* Временно , заменить на display none , через JS */
+  animation-name: hidden-to-scroll;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: rem(400) rem(400);
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: rem(26);
+  }
+
+  &__link {
+    &--color-accent {
+      color: var(--color-accent);
+    }
+
+    &--color-green {
+      color: var(--color-green-light);
+    }
+  }
+}
+
+@include mobile-media {
+  .header-top-menu {
+    &__list {
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
+      background-color: transparent;
+      padding-block: 20% 0;
+    }
+  }
+}
+/*  ===================================  */
+/*  ===================================  */

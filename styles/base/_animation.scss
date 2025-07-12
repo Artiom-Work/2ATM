@@ -1,0 +1,25 @@
+@use "../healpers" as *;
+/* Animations */
+@keyframes scrolling-header {
+  to {
+    box-shadow: 0 0 10rem 1rem var(--color-black-opacity-80);
+  }
+}
+@keyframes visible-to-scroll {
+  to {
+    position: static;
+    translate: 0 0;
+    height: auto;
+    overflow: visible;
+  }
+}
+@keyframes hidden-to-scroll {
+  to {
+    position: absolute;
+    translate: 0 rem(-1000);
+    height: rem(1);
+    overflow: hidden;
+  }
+}
+/*  ===================================  */
+/*  ===================================  */

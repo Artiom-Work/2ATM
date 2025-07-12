@@ -1,0 +1,51 @@
+@use "../../healpers" as *;
+
+/* Styles for buttons */
+.button {
+  --buttonColor: var(--color-blue);
+
+  @include flex-center(true);
+  @include fluid-text(16, 13);
+
+  line-height: 1.5;
+  letter-spacing: var(--letter-spacing);
+  font-weight: 700;
+  color: var(--text-color-light);
+  background-color: var(--buttonColor);
+  border: none;
+  border-radius: var(--border-radius);
+  min-height: var(--button-height);
+  padding: rem(9) rem(20);
+
+  @include hover {
+    filter: brightness(90%);
+  }
+
+  @include active {
+    filter: brightness(90%);
+    will-change: transform;
+    scale: 0.97;
+  }
+
+  &--accent-bg {
+    background-color: var(--color-accent);
+  }
+
+  &--light {
+    line-height: 1.69;
+    background-color: var(--color-light);
+    color: var(--text-color-secondary);
+    border: rem(1) solid currentColor;
+
+    &-accent {
+      background-color: var(--color-accent);
+    }
+  }
+}
+@include mobile-media {
+  .button {
+    --buttonColor: var(--color-blue-light);
+  }
+}
+/*  ===================================  */
+/*  ===================================  */

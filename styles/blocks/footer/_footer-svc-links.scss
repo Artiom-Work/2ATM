@@ -1,0 +1,57 @@
+@use "../../healpers" as *;
+/* Navigation footer section */
+.footer-svc-links {
+  &__heading {
+    font-size: rem(16);
+    line-height: rem(42);
+    letter-spacing: var(--letter-spacing);
+    font-weight: 600;
+    text-align: center;
+    color: var(--color-light);
+    border-bottom: var(--border-light);
+    width: 100%;
+    margin-bottom: rem(36);
+  }
+
+  &__nemu {
+    font-weight: 600;
+    font-size: rem(14);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, rem(190)));
+    gap: rem(24);
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: rem(14);
+    }
+  }
+
+  &__link {
+    line-height: 1.44;
+    letter-spacing: 0.02em;
+  }
+}
+
+@include laptop-media {
+  .footer-svc-links {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(44) rem(24);
+    }
+  }
+}
+
+@include mobile-s-media {
+  .footer-svc-links {
+    &__list {
+      grid-template-columns: 1fr;
+      gap: rem(14) rem(24);
+    }
+  }
+}
+/*  ===================================  */
+/*  ===================================  */

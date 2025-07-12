@@ -1,0 +1,88 @@
+@use "../healpers" as *;
+/* Global variables */
+:root {
+  // --color-light-2atm-50: #fefdfd;
+  // --color-light-2atm-50: #323232;
+
+  --color-accent-50: #fefdfd;
+  // --color-accent-100: #f9f3f2;
+  --color-accent-200: #f2e5e1;
+  // --color-accent-300: #dfc4be;
+  // --color-accent-400: #feb59d;
+  --color-accent-500: #fe4f02;
+  // --color-accent-600: #dc4401;
+  // --color-accent-700: #b73901;
+  // --color-accent-800: #7f2802;
+  // --color-accent-900: #5f1d00;
+  // --color-accent-950: #180302;
+
+  --color-gray-900: #161312;
+  --color-gray-800: #352f2e;
+  // --color-gray-700: #66605f;
+  --color-gray-600: #746e6d;
+  --color-gray-500: #968e8e;
+  // --color-gray-400: #ccc5c5;
+  --color-gray-300: #e1dcdb;
+  // --color-gray-200: #ece4e4;
+  // --color-gray-100: #f3eded;
+  // --color-gray-75: #f8efef;
+  --color-gray-50: #fbf8f8;
+
+  --color-white-opacity-10: #ffffff34;
+  --color-white-opacity-35: #ffffffa8;
+  // --color-white-opacity-90: #ffffffe6;
+  // --color-white-opacity: #ffffff8d;
+  // --color-black-opacity: #00000066;
+  --color-black-opacity-80: #00000033;
+  // --color-black-opacity-60: #00000066;
+  // --color-black-opacity-40: #00000099;
+
+  --color-red: #ba1414;
+  --color-green: #139128;
+  --color-green-light: #31ba49;
+  --color-blue: #2c94ea;
+  --color-blue-light: #2cabea;
+  // ================ //
+  --color-light: #ffffff;
+
+  --text-color-light: var(--color-gray-50);
+  --text-color-dark: var(--color-gray-900);
+  --text-color-secondary: var(--color-gray-600);
+  --text-color-secondary-light: var(--color-gray-600);
+
+  --color-accent: var(--color-accent-500);
+
+  --color-error: var(--color-red);
+  --color-success: var(--color-green);
+
+  --color-border: var(--color-gray-500);
+  --color-border-light: var(--color-gray-300);
+  --color-border-active: var(--color-accent);
+
+  --border-light: #{rem(1)} solid var(--color-border-light);
+
+  --border-radius-extra-small: #{rem(4)};
+  --border-radius-small: #{rem(7)};
+  --border-radius: #{rem(10)};
+
+  --font-family: "Open Sans", sans-serif;
+
+  --letter-spacing: 0.01em;
+  --container-width: #{rem(1260)};
+  --container-padding-x: #{rem(20)};
+
+  --button-height-small: #{rem(34)};
+  --button-height: #{rem(42)};
+  --button-height-big: #{rem(46)};
+
+  --transition-duration: 0.3s;
+
+  @include desktop-media {
+    --container-padding-x: 9.375vw;
+  }
+  @include tablet-media {
+    --container-padding-x: #{rem(20)};
+  }
+}
+/*  ===================================  */
+/*  ===================================  */

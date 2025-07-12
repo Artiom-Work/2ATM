@@ -1,0 +1,100 @@
+@use "../healpers" as *;
+/* GLobal styles from all site */
+body {
+  @include fluid-text(18, 16);
+
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family);
+  line-height: 1.27;
+  color: var(--text-color-dark);
+  background-color: var(--color-light);
+
+  &.is-lock {
+    overflow: hidden;
+  }
+}
+
+main {
+  flex-grow: 1;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+h1,
+.h1 {
+  @include fluid-text(64, 40);
+}
+h2,
+.h2 {
+  @include fluid-text(48, 30);
+}
+h3,
+.h3 {
+  @include fluid-text(32, 24);
+}
+h4,
+.h4 {
+  @include fluid-text(24, 20);
+}
+h5,
+.h5 {
+  @include fluid-text(20, 17);
+}
+h5,
+.h5 {
+  @include fluid-text(18, 15);
+}
+
+a,
+button,
+input,
+textarea,
+label,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  @include hover {
+    filter: opacity(0.6);
+  }
+
+  @include active {
+    filter: opacity(0.4);
+    will-change: transform;
+    scale: 0.98;
+  }
+}
+// focus elements
+// :focus {
+//   outline-offset: rem(4);
+//   transition-duration: 0s !important;
+// }
+
+a,
+button {
+  &[aria-label] {
+    position: relative;
+
+    &::before {
+      @include abs-center;
+      @include square(rem(44));
+
+      content: "";
+    }
+  }
+}
+/*  ===================================  */
+/*  ===================================  */

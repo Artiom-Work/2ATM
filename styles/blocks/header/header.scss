@@ -1,0 +1,105 @@
+@use "../../healpers" as *;
+@use "call-up";
+@use "header-menu";
+@use "header-top-menu";
+@use "mobile-menu";
+/* General block header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  animation-name: scrolling-header;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: rem(200) rem(300);
+
+  background-color: var(--color-accent-50);
+
+  &__general {
+    @include flex-space-between;
+
+    column-gap: rem(24);
+    padding-block: fluid(11, 2) rem(12);
+
+    &--to-scroll {
+      /* Временно , заменить на display none , через JS */
+      position: absolute;
+      translate: 0 rem(-1000);
+      height: rem(1);
+      overflow: hidden;
+
+      animation-name: visible-to-scroll;
+      animation-fill-mode: both;
+      animation-timeline: scroll();
+      animation-range: rem(400) rem(400);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    column-gap: rem(59);
+  }
+}
+@include tablet-media-above {
+  .header {
+    &__general--not-to-scroll {
+      /* Временно , заменить на display block , через JS */
+      animation-name: hidden-to-scroll;
+      animation-fill-mode: both;
+      animation-timeline: scroll();
+      animation-range: rem(400) rem(400);
+    }
+  }
+}
+@include laptop-media {
+  .header {
+    &__buttons {
+      column-gap: rem(24);
+    }
+  }
+}
+@include mobile-media {
+  .header {
+    background-color: var(--color-light);
+
+    &__logo {
+      grid-area: logo;
+    }
+
+    &__general {
+      padding-inline: rem(10) rem(8);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "logo burger"
+        "buttons buttons";
+      row-gap: rem(16);
+    }
+
+    &__buttons {
+      justify-content: center;
+      column-gap: rem(16);
+      grid-area: buttons;
+    }
+
+    &__mobile-menu {
+      grid-area: burger;
+      justify-self: end;
+    }
+  }
+}
+@include mobile-s-media {
+  .header {
+    &__button {
+      padding-inline: rem(10);
+      max-width: rem(160);
+      width: 100%;
+    }
+  }
+}
+
+/*  ===================================  */
+/*  ===================================  */
