@@ -4,6 +4,11 @@
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
+
+  &-big {
+    max-width: var(--container-width-big);
+    margin-inline: auto;
+  }
 }
 
 .visually-hidden {
@@ -20,6 +25,11 @@
     display: none !important;
   }
 }
+.hidden-laptop {
+  @include laptop-media {
+    display: none !important;
+  }
+}
 
 .visible-mobile {
   @include mobile-media-above {
@@ -28,6 +38,11 @@
 }
 .visible-tablet {
   @include tablet-media-above {
+    display: none !important;
+  }
+}
+.visible-laptop {
+  @include laptop-media-above {
     display: none !important;
   }
 }

@@ -61,7 +61,7 @@
   .header-menu__list {
     max-width: 60rem;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.0625rem;
   }
 }
 @media (width <= 63.99875rem) {

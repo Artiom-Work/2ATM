@@ -116,28 +116,28 @@ svg * {
 /* Fonts */
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Regular.woff2") format("woff2");
+  src: url("../../fonts/OpenSans-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2");
+  src: url("../../fonts/OpenSans-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Bold.woff2") format("woff2");
+  src: url("../../fonts/OpenSans-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../fonts/OpenSans-ExtraBold.woff2") format("woff2");
+  src: url("../../fonts/OpenSans-ExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -155,6 +155,16 @@ svg * {
   --color-gray-500: #968e8e;
   --color-gray-300: #e1dcdb;
   --color-gray-50: #fbf8f8;
+  --color-grad-1: linear-gradient(
+    180deg,
+    #363130 0%,
+    #363433 25.96%,
+    #352f2e 49.04%,
+    #413d3c 66.66%,
+    #474342 76.95%,
+    #514d4c 86.12%,
+    #524d4c 100%
+  );
   --color-white-opacity-10: #ffffff34;
   --color-white-opacity-35: #ffffffa8;
   --color-black-opacity-80: #00000033;
@@ -164,6 +174,7 @@ svg * {
   --color-blue: #2c94ea;
   --color-blue-light: #2cabea;
   --color-light: #ffffff;
+  --color-black-light: #363535;
   --text-color-light: var(--color-gray-50);
   --text-color-dark: var(--color-gray-900);
   --text-color-secondary: var(--color-gray-600);
@@ -181,6 +192,7 @@ svg * {
   --font-family: "Open Sans", sans-serif;
   --letter-spacing: 0.01em;
   --container-width: 78.75rem;
+  --container-width-big: 120rem;
   --container-padding-x: 1.25rem;
   --button-height-small: 2.125rem;
   --button-height: 2.625rem;
@@ -205,6 +217,10 @@ svg * {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
+}
+.container-big {
+  max-width: var(--container-width-big);
+  margin-inline: auto;
 }
 
 .visually-hidden {
@@ -232,6 +248,12 @@ svg * {
   }
 }
 
+@media (width <= 81.31125rem) {
+  .hidden-laptop {
+    display: none !important;
+  }
+}
+
 @media (width > 47.99875rem) {
   .visible-mobile {
     display: none !important;
@@ -240,6 +262,12 @@ svg * {
 
 @media (width > 63.99875rem) {
   .visible-tablet {
+    display: none !important;
+  }
+}
+
+@media (width > 81.31125rem) {
+  .visible-laptop {
     display: none !important;
   }
 }
@@ -257,6 +285,7 @@ body {
   flex-direction: column;
   font-family: var(--font-family);
   line-height: 1.27;
+  font-weight: 400;
   color: var(--text-color-dark);
   background-color: var(--color-light);
 }
@@ -280,7 +309,7 @@ main {
 
 h1,
 .h1 {
-  font-size: clamp(2.5rem, 1.8023255814rem + 2.7906976744vw, 4rem);
+  font-size: clamp(1.5rem, 0.8023255814rem + 2.7906976744vw, 3rem);
 }
 
 h2,
@@ -530,7 +559,7 @@ button[aria-label]::before {
   .header-menu__list {
     max-width: 60rem;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.0625rem;
   }
 }
 @media (width <= 63.99875rem) {
@@ -747,6 +776,157 @@ button[aria-label]::before {
     padding-inline: 0.625rem;
     max-width: 10rem;
     width: 100%;
+  }
+}
+/*  ===================================  */
+/*  ===================================  */
+/* File with styles for promo block in the main page */
+.promo {
+  --promoBackgroundHeight: 31.25rem;
+  --promoMainImageWidth: rem(500);
+  --promoMainImageHeight: rem(500);
+  --promoMinHeight: var(--promoBackgroundHeight);
+  --promoPaddingBlock: clamp(3.125rem, 1.6715116279rem + 5.8139534884vw, 6.25rem);
+  color: var(--text-color-light);
+  min-height: var(--promoMinHeight);
+  overflow: hidden;
+}
+.promo__background {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  min-height: var(--promoBackgroundHeight);
+  background: var(--color-grad-1);
+  overflow: hidden;
+}
+.promo__background-wrapper {
+  position: relative;
+  min-height: inherit;
+}
+.promo__inner {
+  padding-block: var(--promoPaddingBlock);
+}
+.promo__body {
+  position: relative;
+}
+.promo__title {
+  max-width: 54.6875rem;
+  line-height: 1.27;
+  margin-bottom: 2.5rem;
+}
+.promo__subtitle {
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+  max-width: 32.1875rem;
+}
+.promo__buttons {
+  display: flex;
+  gap: clamp(1rem, 0.7674418605rem + 0.9302325581vw, 1.5rem);
+}
+.promo__main-image {
+  width: var(--promoMainImageWidth);
+  height: var(--promoMainImageHeight);
+}
+.promo__main-image-wrapper {
+  position: absolute;
+  z-index: -1;
+  right: -5.625rem;
+  bottom: calc(var(--promoPaddingBlock) * -1);
+  width: var(--promoMainImageWidth);
+  height: var(--promoMainImageHeight);
+}
+.promo__main-image-wrapper::after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  border-radius: 50%;
+  bottom: 5%;
+  right: 0;
+  width: 95%;
+  height: 3.8125rem;
+  background-color: var(--color-black-light);
+  filter: blur(1rem);
+}
+.promo__decor-image {
+  position: absolute;
+}
+.promo__decor-image--left {
+  top: 4.0625rem;
+  left: 2rem;
+}
+.promo__decor-image--right {
+  right: 0;
+  bottom: -50%;
+  translate: 0 -50%;
+}
+
+@media (width <= 112.56125rem) {
+  .promo__decor-image--left {
+    top: -50%;
+    translate: -50% 50%;
+  }
+}
+@media (width <= 100.06125rem) {
+  .promo__decor-image--right {
+    translate: 50% -50%;
+  }
+}
+@media (width <= 81.31125rem) {
+  .promo__title {
+    max-width: 51.0625rem;
+  }
+}
+@media (width <= 63.99875rem) {
+  .promo__main-image-wrapper {
+    bottom: calc(var(--promoPaddingBlock) * -3);
+  }
+}
+@media (width <= 47.99875rem) {
+  .promo {
+    --promoMinHeight: rem(720);
+    --promoMainImageWidth: rem(316);
+    --promoMainImageHeight: rem(316);
+  }
+  .promo__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .promo__title {
+    order: -2;
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 1.1875rem;
+  }
+  .promo__subtitle {
+    margin-bottom: 0.625rem;
+    color: var(--text-color-dark);
+    font-weight: 600;
+  }
+  .promo__main-image {
+    width: 19.75rem;
+    height: 19.75rem;
+  }
+  .promo__main-image-wrapper {
+    position: relative;
+    right: unset;
+    bottom: unset;
+    order: -1;
+    margin-inline: auto;
+    margin-bottom: clamp(1.625rem, 0.9273255814rem + 2.7906976744vw, 3.125rem);
+  }
+  .promo__main-image-wrapper::after {
+    height: 2.5rem;
+  }
+  .promo__button {
+    width: 100%;
+  }
+}
+@media (width <= 30.06125rem) {
+  .promo {
+    --promoMinHeight: rem(660);
+    --promoBackgroundHeight: 30.25rem;
+    --promoPaddingBlock: 2.5rem;
   }
 }
 /*  ===================================  */
