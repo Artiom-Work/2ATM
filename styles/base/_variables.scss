@@ -10,7 +10,7 @@
   // --color-accent-300: #dfc4be;
   // --color-accent-400: #feb59d;
   --color-accent-500: #fe4f02;
-  // --color-accent-600: #dc4401;
+  --color-accent-600: #dc4401;
   // --color-accent-700: #b73901;
   // --color-accent-800: #7f2802;
   // --color-accent-900: #5f1d00;
@@ -18,7 +18,7 @@
 
   --color-gray-900: #161312;
   --color-gray-800: #352f2e;
-  // --color-gray-700: #66605f;
+  --color-gray-700: #66605f;
   --color-gray-600: #746e6d;
   --color-gray-500: #968e8e;
   // --color-gray-400: #ccc5c5;
@@ -38,7 +38,7 @@
     #514d4c 86.12%,
     #524d4c 100%
   );
-
+  --color-grad-2: linear-gradient(90deg, #44362e75 35.45%, #beb19f12 78.09%);
   --color-white-opacity-10: #ffffff34;
   --color-white-opacity-35: #ffffffa8;
   // --color-white-opacity-90: #ffffffe6;
@@ -59,8 +59,8 @@
 
   --text-color-light: var(--color-gray-50);
   --text-color-dark: var(--color-gray-900);
-  --text-color-secondary: var(--color-gray-600);
-  --text-color-secondary-light: var(--color-gray-600);
+  --text-color-dark-secondary: var(--color-gray-700);
+  --text-color-medium: var(--color-gray-600);
 
   --color-accent: var(--color-accent-500);
 
@@ -80,9 +80,11 @@
   --font-family: "Open Sans", sans-serif;
 
   --letter-spacing: 0.01em;
+
   --container-width: #{rem(1260)};
   --container-width-big: #{rem(1920)};
   --container-padding-x: #{rem(20)};
+  --section-margin-y: #{fluid(80, 40)};
 
   --button-height-small: #{rem(34)};
   --button-height: #{rem(42)};
@@ -95,6 +97,9 @@
   }
   @include tablet-media {
     --container-padding-x: #{rem(20)};
+  }
+  @include mobile-media {
+    --container-padding-x: #{rem(10)};
   }
 }
 /*  ===================================  */

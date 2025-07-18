@@ -1,0 +1,262 @@
+@charset "UTF-8";
+/* Style for accent red link from common blocks */
+.accent-color-link {
+  font-weight: 700;
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  letter-spacing: var(--letter-spacing);
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--color-accent-600);
+}
+
+/*  ===================================  */
+/*  ===================================  */
+/* Styles for common block service */
+.service__name {
+  display: flex;
+  align-items: center;
+  column-gap: 0.625rem;
+  line-height: 1.2;
+  min-height: 4.75rem;
+  padding-inline: 0.625rem;
+}
+.service__name-icon {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+.service__link {
+  font-weight: 700;
+  line-height: 1.4;
+}
+.service__link--name {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+.service__link--name-small {
+  font-size: 1.25rem;
+}
+.service__link--arrow {
+  font-size: 0.9375rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  width: 100%;
+}
+.service__link--arrow::after {
+  content: "➜";
+  width: 1.125rem;
+  height: 1.125rem;
+  color: currentColor;
+  font-size: inherit;
+}
+.service__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.service__list-item {
+  display: inline-flex;
+  width: 100%;
+  min-height: 3.125rem;
+  padding-inline: 0.625rem 0.25rem;
+}
+
+/*  ===================================  */
+/*  ===================================  */
+/* Styles for common block services-menu . ( it's third block in the home page )*/
+.services-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.services-menu__item {
+  width: 100%;
+  border: var(--border-light);
+  border-radius: var(--border-radius-small);
+  padding: 1.5rem 0.625rem 1.875rem;
+}
+.services-menu__name {
+  align-self: start;
+}
+.services-menu__service {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-self: start;
+  row-gap: 1.875rem;
+  width: 100%;
+}
+.services-menu__service-list {
+  width: 100%;
+}
+.services-menu__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+.services-menu__buttons-note {
+  max-width: 16.0625rem;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: var(--text-color-dark-secondary);
+}
+
+@media (width <= 63.99875rem) {
+  .services-menu {
+    gap: 1.25rem;
+  }
+}
+/*  ===================================  */
+/*  ===================================  */
+/* That's styles for services promotion. General component is overview-services on the home page */
+.services-promotion {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.services-promotion__image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 6.25rem;
+  height: 6.25rem;
+}
+.services-promotion__list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.services-promotion__list-item {
+  width: 100%;
+}
+.services-promotion__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  max-width: 18.5625rem;
+  width: 100%;
+  min-height: 10.625rem;
+  padding-inline: 1.5rem;
+  background-color: var(--color-black-light);
+  color: var(--color-light);
+  border-radius: var(--border-radius-small);
+}
+.services-promotion__card-title {
+  font-size: 1.125rem;
+  margin-bottom: 1rem;
+}
+.services-promotion__card-text {
+  position: relative;
+  z-index: 1;
+  max-width: 12.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+@media (width <= 100.06125rem) {
+  .services-promotion {
+    gap: 1.25rem;
+  }
+  .services-promotion__list {
+    align-items: center;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+  .services-promotion__card {
+    max-width: 100%;
+  }
+}
+@media (width <= 81.31125rem) {
+  .services-promotion__list {
+    flex-direction: column;
+    gap: 1.25rem;
+    max-width: 31.875rem;
+    width: 100%;
+  }
+  .services-promotion__image {
+    right: 32px;
+  }
+}
+@media (width <= 47.99875rem) {
+  .services-promotion {
+    gap: 0.625rem;
+  }
+  .services-promotion__list {
+    gap: 0.625rem;
+  }
+  .services-promotion__image {
+    right: 16px;
+  }
+}
+/*  ===================================  */
+/*  ===================================  */
+/* Styles for block overview-services on the home page */
+.overview-services {
+  display: flex;
+  gap: 1.5rem;
+  margin-block: 0 var(--section-margin-y);
+}
+.overview-services__services-menu .services-menu__list {
+  max-width: 58.75rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "tire-fitting car-wash сar-rapair" "tire-fitting car-wash сar-rapair" "tire-fitting car-wash сar-rapair";
+  gap: 1.5rem;
+}
+.overview-services__services-menu .services-menu__list .services-menu__item--grid-cell-1 {
+  grid-area: tire-fitting;
+}
+.overview-services__services-menu .services-menu__list .services-menu__item--grid-cell-2 {
+  grid-area: car-wash;
+}
+.overview-services__services-menu .services-menu__list .services-menu__item--grid-cell-3 {
+  grid-area: сar-rapair;
+}
+.overview-services__services-menu .services-menu__list .services-menu__item--grid-cell-4 {
+  padding-inline: 1.5rem;
+  grid-area: technical-inspection;
+}
+.overview-services__services-menu .services-menu__list .services-menu__item--grid-cell-5 {
+  padding-inline: 1.5rem;
+  grid-area: refill-conditioning;
+}
+.overview-services__services-menu .services-menu__list .services-menu__item--grid-cell-6 {
+  padding-inline: 1.5rem;
+  grid-area: wheel-alignment;
+}
+
+@media (width <= 100.06125rem) {
+  .overview-services {
+    flex-direction: column;
+  }
+  .overview-services__services-menu .services-menu__list {
+    max-width: unset;
+  }
+}
+@media (width <= 81.31125rem) {
+  .overview-services__services-menu .services-menu__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "tire-fitting car-wash" "сar-rapair technical-inspection" "сar-rapair refill-conditioning" "сar-rapair wheel-alignment";
+  }
+}
+@media (width <= 63.99875rem) {
+  .overview-services {
+    gap: 2.5rem;
+  }
+  .overview-services__services-menu .services-menu__list {
+    gap: 1.25rem;
+  }
+}
+/*  ===================================  */
+/*  ===================================  */
+
+/*# sourceMappingURL=overview-services.css.map */

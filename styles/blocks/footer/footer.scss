@@ -9,14 +9,15 @@
   &__inner {
     padding-block: fluid(25, 15) fluid(62, 22);
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto auto;
     grid-template-rows: repeat(2, auto);
     row-gap: fluid(49, 31);
     column-gap: rem(26);
   }
 
   &__heading {
-    max-width: rem(331);
+    max-width: rem(350);
+    width: 100%;
 
     &-text {
       font-size: rem(13);
@@ -69,7 +70,7 @@
     &-text {
       font-size: rem(15);
       line-height: 1.3;
-      max-width: rem(230);
+      max-width: rem(235);
     }
   }
 
@@ -100,7 +101,7 @@
     &-list {
       display: flex;
       flex-direction: column;
-      gap: rem(30) rem(30);
+      gap: rem(31) rem(30);
     }
 
     &-link {
@@ -138,50 +139,81 @@
 }
 @include tablet-media {
   .footer {
+    .container {
+      --container-padding-x: #{rem(30)};
+    }
+
     &__inner {
+      padding-block: rem(25) rem(63);
       grid-template-areas:
-        "heading heading"
-        "buttons buttons"
-        "links-list svc";
+        "heading buttons"
+        "links-list links-list"
+        "svc svc";
+      column-gap: rem(34);
     }
 
     &__heading {
       grid-area: heading;
       justify-self: center;
-      max-width: unset;
       text-align: center;
-    }
+      margin-left: rem(-10);
 
-    &__buttons {
-      grid-area: buttons;
+      &-text {
+        font-size: rem(12);
+        letter-spacing: 0;
+      }
     }
 
     &__links {
       grid-area: links-list;
+      margin-bottom: rem(22);
+
+      &-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: rem(20) rem(24);
+      }
     }
 
     &__svc-links {
       grid-area: svc;
+      max-width: unset;
     }
 
     &__buttons {
+      grid-area: buttons;
       margin-inline: auto;
-      grid-template-columns: 1fr 1fr auto;
+      grid-template-columns: auto 1fr;
+      grid-template-rows: auto 1fr;
       max-width: unset;
       width: 100%;
-      grid-template-rows: 1fr;
-      grid-template-areas: "yandex button qs";
-      row-gap: rem(36);
+      grid-template-areas:
+        "yandex button"
+        ". qs";
+      row-gap: rem(16);
+    }
+
+    &__button {
+      align-self: start;
+    }
+
+    &__yandex-button {
+      width: rem(54);
+      height: rem(69);
+      align-self: start;
     }
   }
 }
 @include mobile-media {
   .footer {
-    .conteiner {
+    .container {
       --container-padding-x: #{rem(16)};
     }
 
     &__inner {
+      padding-block: rem(11) rem(22);
+
+      grid-template-columns: 1fr;
       grid-template-areas:
         "heading"
         "buttons"
@@ -191,27 +223,29 @@
     }
 
     &__heading {
+      max-width: unset;
       width: 100%;
       margin-bottom: rem(16);
-
-      &-text {
-        font-size: rem(12);
-        letter-spacing: 0.03em;
-      }
+      margin-left: unset;
     }
 
     &__logo {
-      margin-bottom: rem(14);
+      margin-bottom: rem(18);
     }
 
     &__buttons {
       grid-template-rows: 1fr minmax(rem(92), auto);
-      grid-template-columns: 1fr auto;
+      grid-template-columns: 1fr 1fr;
       grid-template-areas:
         "button button"
         "yandex qs";
-      column-gap: rem(30);
+      column-gap: rem(27);
+      row-gap: rem(37);
       margin-bottom: rem(24);
+    }
+
+    &__qs-line {
+      min-width: rem(239);
     }
 
     &__yandex-button {
@@ -233,10 +267,6 @@
 
 @include mobile-s-media {
   .footer {
-    &__heading {
-      margin-left: rem(-10);
-    }
-
     &__yandex-button {
       margin-top: rem(7);
     }

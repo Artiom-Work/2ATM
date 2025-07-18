@@ -1,0 +1,90 @@
+@use "../../healpers" as *;
+@use "../сommon-blocks/services-menu";
+@use "services-promotion";
+/* Styles for block overview-services on the home page */
+.overview-services {
+  display: flex;
+  gap: rem(24);
+  margin-block: 0 var(--section-margin-y);
+
+  &__services-menu {
+    .services-menu__list {
+      max-width: rem(940);
+      width: 100%;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "tire-fitting car-wash сar-rapair"
+        "tire-fitting car-wash сar-rapair"
+        "tire-fitting car-wash сar-rapair";
+
+      gap: rem(24);
+
+      .services-menu__item {
+        &--grid-cell-1 {
+          grid-area: tire-fitting;
+        }
+        &--grid-cell-2 {
+          grid-area: car-wash;
+        }
+        &--grid-cell-3 {
+          grid-area: сar-rapair;
+        }
+        &--grid-cell-4 {
+          padding-inline: rem(24);
+          grid-area: technical-inspection;
+        }
+        &--grid-cell-5 {
+          padding-inline: rem(24);
+          grid-area: refill-conditioning;
+        }
+        &--grid-cell-6 {
+          padding-inline: rem(24);
+          grid-area: wheel-alignment;
+        }
+      }
+    }
+  }
+}
+
+@include desktop-media {
+  .overview-services {
+    flex-direction: column;
+
+    &__services-menu {
+      .services-menu__list {
+        max-width: unset;
+      }
+    }
+  }
+}
+
+@include laptop-media {
+  .overview-services {
+    &__services-menu {
+      .services-menu__list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+          "tire-fitting car-wash"
+          "сar-rapair technical-inspection"
+          "сar-rapair refill-conditioning"
+          "сar-rapair wheel-alignment";
+      }
+    }
+  }
+}
+
+@include tablet-media {
+  .overview-services {
+    gap: rem(40);
+
+    &__services-menu {
+      .services-menu__list {
+        gap: rem(20);
+      }
+    }
+  }
+}
+/*  ===================================  */
+/*  ===================================  */

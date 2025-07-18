@@ -1,0 +1,13 @@
+@use "../../healpers" as *;
+/* Style for accent red link from common blocks */
+.accent-color-link {
+  font-weight: 700;
+  font-size: rem(13);
+  line-height: 1.7;
+  letter-spacing: var(--letter-spacing);
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--color-accent-600);
+}
+/*  ===================================  */
+/*  ===================================  */

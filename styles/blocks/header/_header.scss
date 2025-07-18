@@ -54,6 +54,7 @@
     }
   }
 }
+
 @include laptop-media {
   .header {
     &__buttons {
@@ -61,28 +62,23 @@
     }
   }
 }
-@include mobile-media {
-  .header {
-    background-color: var(--color-light);
 
+@include tablet-media {
+  .header {
     &__logo {
       grid-area: logo;
     }
 
     &__general {
-      padding-inline: rem(10) rem(8);
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-areas:
-        "logo burger"
-        "buttons buttons";
+      grid-template-columns: 1fr auto auto;
+      grid-template-areas: "logo buttons burger";
       row-gap: rem(16);
     }
 
     &__buttons {
-      justify-content: center;
-      column-gap: rem(16);
       grid-area: buttons;
+      justify-content: center;
     }
 
     &__mobile-menu {
@@ -91,6 +87,25 @@
     }
   }
 }
+
+@include mobile-media {
+  .header {
+    background-color: var(--color-light);
+
+    &__general {
+      padding-inline: rem(10) rem(8);
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:
+        "logo burger"
+        "buttons buttons";
+    }
+
+    &__buttons {
+      column-gap: rem(16);
+    }
+  }
+}
+
 @include mobile-s-media {
   .header {
     &__button {

@@ -9,18 +9,16 @@
 	<link rel="icon" type="image/svg+xml" sizes="32x32" href="./images/icons/favicon.svg">
 	<link rel="icon" type="image/svg+xml" sizes="48x48" href="./images/icons/favicon.svg">
 	<link rel="apple-touch-icon" sizes="180x180" href="./images/icons/favicon.svg">
-	<!-- <meta name="description"
-		content=""> -->
-
+	<!-- <meta name="description" content=""> -->
 	<link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css">
-	<title>2ATM</title>
+	<title>2ATM | HOME</title>
 	<link rel="stylesheet" href="./styles/index-page/index.css ">
 </head>
 
 
 <body>
 	<header class="header">
-		<nav class="header-top-menu hidden-mobile">
+		<nav class="header-top-menu hidden-tablet">
 			<ul class="header-top-menu__list container">
 				<li>
 					<a class="header-top-menu__link header-top-menu__link--color-accent" href="#!">
@@ -54,7 +52,7 @@
 				</picture>
 			</a>
 
-			<div class="header__mobile-menu mobile-menu visible-mobile">
+			<div class="header__mobile-menu mobile-menu visible-tablet">
 				<input id="menu-switch" type="checkbox">
 				<label class="mobile-menu__burger" for="menu-switch">
 					<span class="mobile-menu__burger-line"></span>
@@ -91,7 +89,7 @@
 			</div>
 
 			<nav class="header__buttons">
-				<address class="call-up hidden-mobile">
+				<address class="call-up hidden-tablet">
 					<svg viewBox="0 0 32 32" width="32" height="32">
 						<use xlink:href="./images/icons/sprite-icons.svg#call-up"></use>
 					</svg>
@@ -102,16 +100,16 @@
 					</a>
 				</address>
 
-				<a class="header__button button button--accent-bg visible-mobile" href="#!">
+				<a class="header__button button button--accent-bg visible-tablet" href="#!">
 					Запись&nbsp;на&nbsp;сайте
 				</a>
 
 				<a class="header__button button" href="#!">
-					<span class="header-buttons__link-text hidden-mobile">
+					<span class="header-buttons__link-text hidden-tablet">
 						Записаться&nbsp;в&nbsp;Telegram
 					</span>
 
-					<span class="header-buttons__link-text visible-mobile">
+					<span class="header-buttons__link-text visible-tablet">
 						Запись&nbsp;в&nbsp;Telegram
 					</span>
 				</a>
@@ -188,7 +186,6 @@
 				</div>
 			</div>
 
-
 			<div class="promo__inner container">
 				<div class="promo__body">
 					<h2 class="promo__title h1" id="promo-title">
@@ -224,7 +221,8 @@
 					</div>
 
 					<picture class="promo__main-image-wrapper">
-						<source srcset="./images/promo/robot-tire-fitting-mobile.webp" media="(max-width: 768px)" type="image/webp">
+						<source srcset="./images/promo/robot-tire-fitting-mobile.webp" media="(max-width: 1024px)"
+							type="image/webp">
 						<source srcset="./images/promo/robot-tire-fitting.webp 1x , ./images/promo/robot-tire-fitting@2x.webp 2x"
 							type="image/webp">
 						<img class="promo__main-image" src="./images/promo/robot-tire-fitting-mobile.webp" alt="Робот с колесом"
@@ -234,13 +232,273 @@
 			</div>
 		</section>
 
+		<section class="overview-services container" aria-labelledby="services-title-home-page">
+			<h2 class="visually-hidden" id="services-title-home-page">Актуальные услуги на сайте две атмосферы</h2>
+			<section class="overview-services__services-menu services-menu hidden-mobile">
+				<h3 class="visually-hidden">Навигация по услугам сайта две атмосферы</h3>
+
+				<ul class="services-menu__list">
+					<li class="services-menu__item services-menu__item--grid-cell-1 ">
+						<nav class="services-menu__service service">
+							<h4 class="services-menu__name service__name h4">
+								<img class="service__name-icon" src="./images/icons/icon-tire-fitting.webp" width="60" height="60"
+									alt="Колесо" loading="lazy">
+
+								<a class="service__link service__link--name" href="#!">Шиномонтаж</a>
+							</h4>
+
+							<ul class="services-menu__service-list service__list">
+								<li class="service__list-item">
+									<a class="service__link service__link--arrow" href="#!">
+										<span>Сезонная смена резины</span>
+									</a>
+
+								</li>
+								<li class="service__list-item">
+									<a class="service__link service__link--arrow" href="#!">
+										<span>Хранение шин</span>
+									</a>
+								</li>
+								<li class="service__list-item">
+									<a class="service__link service__link--arrow" href="#!">
+										<span>Ремонт дисков</span>
+									</a>
+								</li>
+								<li class="service__list-item">
+									<a class="service__link service__link--arrow" href="#!">
+										<span>Ремонт шин</span>
+									</a>
+								</li>
+								<li class="service__list-item">
+									<a class="service__link service__link--arrow" href="#!">
+										<span>Ошиповка шин</span>
+									</a>
+								</li>
+							</ul>
+
+							<a class="service__link accent-color-link" href="#!">
+								Смотреть все услуги шиномонтажа
+							</a>
+						</nav>
+					</li>
+
+					<li class="services-menu__item services-menu__item--grid-cell-2 ">
+						<nav class="services-menu__service service">
+							<h4 class="services-menu__name service__name h4">
+								<img class="service__name-icon" src="./images/icons/icon-car-wash.webp" width="60" height="60"
+									alt="Мокрый автомобиль" loading="lazy">
+
+								<a class="service__link service__link--name" href="#!">Автомойка</a>
+							</h4>
+
+							<ul class="services-menu__service-list service__list">
+								<li class="service__list-item">
+									<a class="service__link service__link--arrow" href="#!">
+										<span>Бесконтактная мойка</span>
+									</a>
+								</li>
+								<li class="service__list-item">
+									<a class="service__link service__link--arrow" href="#!">
+										<span>Защитные погрытия</span>
+									</a>
+								</li>
+								<li class="service__list-item">
+									<a class="service__link service__link--arrow" href="#!">
+										<span>химчистка</span>
+									</a>
+								</li>
+								<li class="service__list-item">
+									<a class="service__link service__link--arrow" href="#!">
+										<span>предпродажная подготовка</span>
+									</a>
+								</li>
+								<li class="service__list-item">
+									<a class="service__link service__link--arrow" href="#!">
+										<span>мойка двигателя</span>
+									</a>
+								</li>
+							</ul>
+
+							<a class="service__link accent-color-link" href="#!">
+								Смотреть все услуги автомойки
+							</a>
+						</nav>
+					</li>
+
+					<li class="services-menu__item services-menu__item--grid-cell-3 ">
+						<nav class="services-menu__service service">
+							<h4 class="services-menu__name service__name h4">
+								<img class="service__name-icon" src="./images/icons/icon-сar-rapair.webp" width="60" height="60"
+									alt="Шестерёнка" loading="lazy">
+
+								<a class="service__link service__link--name" href="#!">
+									СТО ремонт&nbsp;авто
+								</a>
+							</h4>
+
+							<ul class="services-menu__service-list service__list">
+								<li class="service__list-item">
+									<a class="service__link service__link--arrow" href="#!">
+										<span>замена масла</span>
+									</a>
+								</li>
+								<li class="service__list-item">
+									<a class="service__link service__link--arrow" href="#!">
+										<span>диагностика</span>
+									</a>
+								</li>
+								<li class="service__list-item">
+									<a class="service__link service__link--arrow" href="#!">
+										<span>электрика</span>
+									</a>
+								</li>
+								<li class="service__list-item">
+									<a class="service__link service__link--arrow" href="#!">
+										<span>тормозная система</span>
+									</a>
+								</li>
+								<li class="service__list-item hidden-laptop">
+									<a class="service__link service__link--arrow" href="#!">
+										<span>Подвеска</span>
+									</a>
+								</li>
+							</ul>
+
+							<a class="service__link accent-color-link" href="#!">
+								Смотреть все услуги СТО
+							</a>
+						</nav>
+					</li>
+
+					<li class="services-menu__item services-menu__item--grid-cell-4  visible-laptop">
+						<nav class="services-menu__service service">
+							<h4 class="services-menu__name service__name h4">
+								<img class="service__name-icon" src="./images/icons/icon-technical-inspection.webp" width="60"
+									height="60" alt="Технический осмотр автомобиля" loading="lazy">
+
+								<a class="service__link service__link--name service__link--name-small" href="#!">
+									Техосмотр
+								</a>
+							</h4>
+						</nav>
+					</li>
+
+					<li class="services-menu__item services-menu__item--grid-cell-5  visible-laptop">
+						<nav class="services-menu__service service">
+							<h4 class="services-menu__name service__name h4">
+								<img class="service__name-icon" src="./images/icons/icon-refill-conditioning.webp" width="60"
+									height="60" alt="Заправка кондиционера" loading="lazy">
+
+								<a class="service__link service__link--name service__link--name-small" href="#!">
+									Заправка кондиционера
+								</a>
+							</h4>
+						</nav>
+					</li>
+
+					<li class="services-menu__item services-menu__item--grid-cell-6  visible-laptop">
+						<nav class="services-menu__service service">
+							<h4 class="services-menu__name service__name h4">
+								<img class="service__name-icon" src="./images/icons/icon-wheel-alignment.webp" width="60" height="60"
+									alt="Развал-схождение" loading="lazy">
+
+								<a class="service__link service__link--name service__link--name-small" href="#!">
+									Развал-схождение
+								</a>
+							</h4>
+						</nav>
+					</li>
+				</ul>
+
+				<nav class="services-menu__buttons">
+					<button class="button button--accent-bg " type="button">
+						Записаться на&nbsp;сайте
+					</button>
+
+					<a class="button" href="#!" target="_blank">
+						Записаться в&nbsp;Telegram
+					</a>
+
+					<div class="services-menu__buttons-note">
+						<p>
+							Быстрее через Telegram. Всего 5&nbsp;простых шагов&nbsp;&mdash; займёт меньше минуты.
+						</p>
+					</div>
+				</nav>
+			</section>
+
+			<section class="services-promotion">
+				<h3 class="visually-hidden">Акции на услуги 2АТМ</h3>
+				<ul class="services-promotion__list">
+					<li class="services-promotion__list-item">
+						<a href="#!" aria-label="aкция" title="Акция">
+							<article class="services-promotion__card">
+								<h4 class="services-promotion__card-title">
+									СКИДКА 11% ПО&nbsp;БУДНЯМ!
+								</h4>
+								<div class="services-promotion__card-text">
+									<p>
+										Запишись прямо сейчас!<br>
+										Скидка&nbsp;11% на&nbsp;все услуги по&nbsp;будням. Промокод:&nbsp;&laquo;Сайт&raquo;.
+									</p>
+								</div>
+
+								<img class="services-promotion__image" src="./images/services-promotion/calendar.webp" width="100"
+									height="100" alt="Изображение календаря" loading="lazy">
+							</article>
+						</a>
+					</li>
+
+					<li class="services-promotion__list-item">
+						<a href="#!" aria-label="aкция" title="Акция">
+							<article class="services-promotion__card">
+								<h4 class="services-promotion__card-title">
+									АРГОНОВАЯ СВАРКА + ШИНОМОНТАЖ
+								</h4>
+								<div class="services-promotion__card-text">
+									<p>
+										Аргоновая сварка диска со скидкой&nbsp;20%*&nbsp;на&nbsp;услуги шиномонтажа.
+										Промокод:&nbsp;&laquo;АРГОН&raquo;.
+									</p>
+								</div>
+
+								<img class="services-promotion__image" src="./images/services-promotion/welding.webp" width="100"
+									height="100" alt="Изображение сварочного держателя" loading="lazy">
+							</article>
+						</a>
+					</li>
+
+					<li class="services-promotion__list-item">
+						<a href="#!" aria-label="aкция" title="Акция">
+							<article class="services-promotion__card">
+								<h4 class="services-promotion__card-title">
+									СКИДКА 25% НА&nbsp;ВСЕ УСЛУГИ
+								</h4>
+								<div class="services-promotion__card-text">
+									<p>
+										При заключении договора сезонного хранения впервые! Промокод: &laquo;ХРАНЕНИЕ&raquo;.
+									</p>
+								</div>
+
+								<img class="services-promotion__image" src="./images/services-promotion/wheel.webp" width="100"
+									height="100" alt="Колесо" loading="lazy">
+							</article>
+						</a>
+					</li>
+				</ul>
+
+				<a class="accent-color-link" href="#!">
+					Смотреть все акции
+				</a>
+			</section>
+		</section>
 	</main>
 
 	<footer class="footer">
 		<div class="footer__inner container">
 			<div class="footer__heading">
 				<a class="footer__logo logo" href="./index.html" aria-label="Логотип 2ATM">
-					<img class="logo__image" src="./images/logo/logo-footer.svg" width="331" height="78" alt="Логотип 2ATM">
+					<img class="logo__image" src="./images/logo/logo-light.svg" width="331" height="78" alt="Логотип 2ATM">
 				</a>
 
 				<div class="footer__heading-text">

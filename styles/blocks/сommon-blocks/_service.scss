@@ -1,0 +1,65 @@
+@use "../../healpers" as *;
+@use "../сommon-blocks/accent-link";
+/* Styles for common block service */
+.service {
+  &__name {
+    display: flex;
+    align-items: center;
+    column-gap: rem(10);
+
+    line-height: 1.2;
+    min-height: rem(76);
+    padding-inline: rem(10);
+
+    &-icon {
+      width: rem(60);
+      height: rem(60);
+    }
+  }
+
+  &__link {
+    font-weight: 700;
+    line-height: 1.4;
+
+    &--name {
+      font-size: rem(24);
+      line-height: 1.2;
+      &-small {
+        font-size: rem(20);
+      }
+    }
+
+    &--arrow {
+      font-size: rem(15);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-transform: uppercase;
+      width: 100%;
+
+      &::after {
+        content: "\279C";
+        width: rem(18);
+        height: rem(18);
+        color: currentColor;
+        font-size: inherit;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    gap: rem(10);
+
+    &-item {
+      display: inline-flex;
+      width: 100%;
+      min-height: rem(50);
+      padding-inline: rem(10) rem(4);
+    }
+  }
+}
+/*  ===================================  */
+/*  ===================================  */

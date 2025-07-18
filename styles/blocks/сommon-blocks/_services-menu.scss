@@ -1,0 +1,55 @@
+@use "../../healpers" as *;
+@use "../сommon-blocks/service";
+/* Styles for common block services-menu . ( it's third block in the home page )*/
+
+.services-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(24);
+
+  &__item {
+    width: 100%;
+    border: var(--border-light);
+    border-radius: var(--border-radius-small);
+    padding: rem(24) rem(10) rem(30);
+  }
+
+  &__name {
+    align-self: start;
+  }
+
+  &__service {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-self: start;
+    row-gap: rem(30);
+    width: 100%;
+
+    &-list {
+      width: 100%;
+    }
+  }
+
+  &__buttons {
+    @include flex-center;
+
+    column-gap: rem(24);
+
+    &-note {
+      max-width: rem(257);
+      font-size: rem(12);
+      line-height: 1.2;
+      color: var(--text-color-dark-secondary);
+    }
+  }
+}
+
+@include tablet-media {
+  .services-menu {
+    gap: rem(20);
+  }
+}
+/*  ===================================  */
+/*  ===================================  */

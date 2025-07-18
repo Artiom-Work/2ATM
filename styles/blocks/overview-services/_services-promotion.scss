@@ -1,0 +1,104 @@
+@use "../../healpers" as *;
+@use "../сommon-blocks/accent-link";
+
+/* That's styles for services promotion. General component is overview-services on the home page */
+
+.services-promotion {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: rem(24);
+
+  &__image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: rem(100);
+    height: rem(100);
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: rem(24);
+
+    &-item {
+      width: 100%;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    max-width: rem(297);
+    width: 100%;
+    min-height: rem(170);
+    padding-inline: rem(24);
+    background-color: var(--color-black-light);
+    color: var(--color-light);
+    border-radius: var(--border-radius-small);
+
+    &-title {
+      font-size: rem(18);
+      margin-bottom: rem(16);
+    }
+
+    &-text {
+      position: relative;
+      z-index: 1;
+      max-width: rem(200);
+      font-weight: 600;
+      font-size: rem(14);
+      line-height: 1.4;
+    }
+  }
+}
+
+@include desktop-media {
+  .services-promotion {
+    gap: rem(20);
+    &__list {
+      align-items: center;
+      flex-direction: row;
+      gap: rem(24);
+    }
+
+    &__card {
+      max-width: 100%;
+    }
+  }
+}
+
+@include laptop-media {
+  .services-promotion {
+    &__list {
+      flex-direction: column;
+      gap: rem(20);
+      max-width: rem(510);
+      width: 100%;
+    }
+
+    &__image {
+      right: 32px;
+    }
+  }
+}
+
+@include mobile-media {
+  .services-promotion {
+    gap: rem(10);
+
+    &__list {
+      gap: rem(10);
+    }
+
+    &__image {
+      right: 16px;
+    }
+  }
+}
+/*  ===================================  */
+/*  ===================================  */

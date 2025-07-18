@@ -31,6 +31,12 @@
   }
 }
 
+.hidden-desktop {
+  @include desktop-media {
+    display: none !important;
+  }
+}
+
 .visible-mobile {
   @include mobile-media-above {
     display: none !important;
@@ -43,6 +49,11 @@
 }
 .visible-laptop {
   @include laptop-media-above {
+    display: none !important;
+  }
+}
+.visible-desktop {
+  @include desktop-media-above {
     display: none !important;
   }
 }
