@@ -1248,6 +1248,49 @@ button[aria-label]::before {
 }
 /*  ===================================  */
 /*  ===================================  */
+/* Styles from section messenger-action. Main sourse is home page */
+.messenger-action__wrapper {
+  background: var(--color-grad-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  min-height: 22.25rem;
+  margin-bottom: var(--section-margin-y);
+  color: var(--text-color-light);
+}
+.messenger-action__image-wrapper {
+  flex-shrink: 0;
+  width: 21.8125rem;
+  height: 21.8125rem;
+}
+.messenger-action__image {
+  width: 21.8125rem;
+  height: 21.8125rem;
+}
+.messenger-action__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 42.0625rem;
+}
+.messenger-action__title {
+  line-height: 1.2;
+}
+.messenger-action__subtitle {
+  line-height: 1.5;
+}
+.messenger-action__button {
+  align-self: flex-start;
+}
+
+@media (width <= 81.31125rem) {
+  .messenger-action__body {
+    max-width: 28.75rem;
+  }
+}
+/*  ===================================  */
+/*  ===================================  */
 /* Navigation footer section */
 .footer-svc-links__heading {
   font-size: 1rem;

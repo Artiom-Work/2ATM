@@ -1,0 +1,54 @@
+@use "../../healpers" as *;
+/* Styles from section messenger-action. Main sourse is home page */
+.messenger-action {
+  &__wrapper {
+    background: var(--color-grad-1);
+    @include flex-center;
+    gap: rem(32);
+    min-height: rem(356);
+    margin-bottom: var(--section-margin-y);
+
+    color: var(--text-color-light);
+  }
+
+  &__image-wrapper {
+    flex-shrink: 0;
+    width: rem(349);
+    height: rem(349);
+  }
+
+  &__image {
+    width: rem(349);
+    height: rem(349);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    max-width: rem(673);
+  }
+
+  &__title {
+    line-height: 1.2;
+  }
+
+  &__subtitle {
+    line-height: 1.5;
+  }
+
+  &__button {
+    align-self: flex-start;
+  }
+}
+
+@include laptop-media {
+  .messenger-action {
+    &__body {
+      max-width: rem(460);
+    }
+  }
+}
+
+/*  ===================================  */
+/*  ===================================  */
