@@ -25,6 +25,7 @@
   --color-gray-300: #e1dcdb;
   // --color-gray-200: #ece4e4;
   // --color-gray-100: #f3eded;
+  --color-gray-90: #dcdcdc;
   // --color-gray-75: #f8efef;
   --color-gray-50: #fbf8f8;
 
@@ -70,9 +71,11 @@
 
   --color-border: var(--color-gray-500);
   --color-border-light: var(--color-gray-300);
+  --color-border-extra-light: var(--color-gray-90);
   --color-border-active: var(--color-accent);
 
   --border-light: #{rem(1)} solid var(--color-border-light);
+  --border-extra-light: #{rem(0.8)} solid var(--color-border-extra-light);
 
   --border-radius-extra-small: #{rem(4)};
   --border-radius-small: #{rem(7)};

@@ -156,6 +156,7 @@ svg * {
   --color-gray-600: #746e6d;
   --color-gray-500: #968e8e;
   --color-gray-300: #e1dcdb;
+  --color-gray-90: #dcdcdc;
   --color-gray-50: #fbf8f8;
   --color-grad-1: linear-gradient(
     180deg,
@@ -187,8 +188,10 @@ svg * {
   --color-success: var(--color-green);
   --color-border: var(--color-gray-500);
   --color-border-light: var(--color-gray-300);
+  --color-border-extra-light: var(--color-gray-90);
   --color-border-active: var(--color-accent);
   --border-light: 0.0625rem solid var(--color-border-light);
+  --border-extra-light: 0.05rem solid var(--color-border-extra-light);
   --border-radius-extra-small: 0.25rem;
   --border-radius-small: 0.4375rem;
   --border-radius: 0.625rem;
@@ -1395,6 +1398,57 @@ button[aria-label]::before {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+}
+/*  ===================================  */
+/*  ===================================  */
+/* Styles for section our clients( slider with companies logos ) . source -- home page */
+.our-clients {
+  overflow: hidden;
+}
+.our-clients__title {
+  line-height: 1.2;
+}
+.our-clients__slider {
+  --clientsSlideWidth: 11.875rem;
+  --clientsSlideHeight: 7.1875rem;
+  min-height: calc(var(--clientsSlideHeight) + 0.0625rem);
+}
+.our-clients__link {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: var(--clientsSlideWidth);
+  height: var(--clientsSlideHeight);
+  outline: var(--border-extra-light);
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-light);
+}
+@media (any-hover: hover) {
+  .our-clients__link:hover {
+    filter: opacity(100);
+  }
+  .our-clients__link:hover .our-clients__image {
+    filter: brightness(80%);
+  }
+}
+@media (any-hover: hover) and (any-hover: none) {
+  .our-clients__link:active {
+    filter: opacity(100);
+  }
+  .our-clients__link:active .our-clients__image {
+    filter: brightness(80%);
+  }
+}
+.our-clients__image {
+  transition-duration: var(--transition-duration);
+  width: var(--clientsSlideWidth);
+  height: var(--clientsSlideHeight);
+}
+
+@media (width <= 63.99875rem) {
+  .our-clients__title {
+    line-height: 1.3;
   }
 }
 /*  ===================================  */

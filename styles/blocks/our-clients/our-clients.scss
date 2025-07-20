@@ -1,0 +1,51 @@
+@use "../../healpers" as *;
+/* Styles for section our clients( slider with companies logos ) . source -- home page */
+.our-clients {
+  overflow: hidden;
+
+  &__title {
+    line-height: 1.2;
+  }
+
+  &__slider {
+    --clientsSlideWidth: #{rem(190)};
+    --clientsSlideHeight: #{rem(115)};
+
+    min-height: calc(var(--clientsSlideHeight) + #{rem(1)});
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: var(--clientsSlideWidth);
+    height: var(--clientsSlideHeight);
+    outline: var(--border-extra-light);
+    border-radius: var(--border-radius-small);
+    background-color: var(--color-light);
+
+    @include hover {
+      filter: opacity(100);
+
+      .our-clients__image {
+        filter: brightness(80%);
+      }
+    }
+  }
+
+  &__image {
+    transition-duration: var(--transition-duration);
+    width: var(--clientsSlideWidth);
+    height: var(--clientsSlideHeight);
+  }
+}
+
+@include tablet-media {
+  .our-clients {
+    &__title {
+      line-height: 1.3;
+    }
+  }
+}
+/*  ===================================  */
+/*  ===================================  */
