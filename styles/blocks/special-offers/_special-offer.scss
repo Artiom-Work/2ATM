@@ -1,0 +1,94 @@
+@use "../../healpers" as *;
+/* Styles for single card of special offer. source -- block section special offers */
+.special-offer {
+  --specialOfferCardWidth: #{rem(618)};
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: rem(24);
+
+  border-radius: var(--border-radius-small);
+  border: var(--border-light);
+  max-width: var(--specialOfferCardWidth);
+  width: 100%;
+  height: 100%;
+
+  &__image {
+    &-wrapper {
+      display: block;
+      position: relative;
+      max-width: var(--specialOfferCardWidth);
+      width: 100%;
+      height: rem(220);
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
+        background-color: #3b060526;
+      }
+    }
+
+    object-fit: cover;
+    width: inherit;
+    height: inherit;
+    border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    row-gap: rem(20);
+    padding: 0 rem(24) rem(24) rem(24);
+    height: 100%;
+  }
+
+  &__heading {
+    min-height: rem(52);
+    line-height: 1.3;
+  }
+
+  &__text {
+    flex-grow: 1;
+    line-height: 1.5;
+    color: var(--text-color-dark-secondary);
+  }
+
+  &__button {
+    align-self: start;
+    font-size: rem(16);
+  }
+}
+
+@include tablet-media {
+  .special-offer {
+    --specialOfferCardWidth: #{rem(550)};
+
+    row-gap: rem(16);
+
+    &__body {
+      padding: 0 rem(16) rem(16) rem(16);
+      row-gap: rem(16);
+    }
+
+    &__heading {
+      line-height: 1.2;
+    }
+  }
+}
+
+@include mobile-media {
+  .special-offer {
+    --specialOfferCardWidth: #{rem(767)};
+  }
+}
+/*  ===================================  */
+/*  ===================================  */

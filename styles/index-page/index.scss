@@ -8,10 +8,11 @@
 //common-blocks
 @use "../blocks/сommon-blocks/button";
 @use "../blocks/сommon-blocks/logo";
-// @use "./blocks/сommon-blocks/section";
+@use "../blocks/сommon-blocks/section";
 //blocks
 @use "../blocks/header/_header.scss";
 @use "../blocks/promo/_promo-main-page.scss";
 @use "../blocks/overview-services/_overview-services.scss";
 @use "../blocks/messenger-action/_messenger-action.scss";
+@use "../blocks/special-offers/_special-offers.scss";
 @use "../blocks/footer/_footer.scss";
