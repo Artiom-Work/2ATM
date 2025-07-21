@@ -1,0 +1,55 @@
+@use "../../healpers" as *;
+/* Styles for section certificates ( slider with мasters' certificates ) . source -- home page */
+.certificates {
+  overflow: hidden;
+
+  &__title {
+    line-height: 1.2;
+  }
+
+  &__slider {
+    --certificateSlideWidth: #{rem(118)};
+    --certificateSlideHeight: #{rem(162)};
+    --certificateSlideImageWidth: #{rem(115)};
+    --certificateSlideImageHeight: var(--certificateSlideHeight);
+
+    min-height: calc(var(--certificateSlideHeight) + #{rem(1)});
+  }
+
+  &__link {
+    @include flex-center(true);
+
+    position: relative;
+    width: var(--certificateSlideWidth);
+    height: var(--certificateSlideHeight);
+
+    @include hover {
+      filter: opacity(100);
+
+      .certificates__image {
+        filter: brightness(80%);
+      }
+    }
+
+    @include active {
+      .certificates__image {
+        scale: 0.98;
+      }
+    }
+  }
+
+  &__image {
+    transition-duration: var(--transition-duration);
+    width: var(--certificateSlideImageWidth);
+    height: var(--certificateSlideHeight);
+  }
+}
+@include tablet-media {
+  .certificates {
+    &__title {
+      line-height: 1.3;
+    }
+  }
+}
+/*  ===================================  */
+/*  ===================================  */

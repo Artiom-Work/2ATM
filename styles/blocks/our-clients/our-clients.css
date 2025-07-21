@@ -17,8 +17,8 @@
   width: var(--clientsSlideWidth);
   height: var(--clientsSlideHeight);
   outline: var(--border-extra-light);
-  border-radius: var(--border-radius-small);
   background-color: var(--color-light);
+  border-radius: var(--border-radius-small);
 }
 @media (any-hover: hover) {
   .our-clients__link:hover {
@@ -36,10 +36,14 @@
     filter: brightness(80%);
   }
 }
+.our-clients__link:active .our-clients__image {
+  scale: 0.98;
+}
 .our-clients__image {
   transition-duration: var(--transition-duration);
   width: var(--clientsSlideWidth);
   height: var(--clientsSlideHeight);
+  border-radius: inherit;
 }
 
 @media (width <= 63.99875rem) {

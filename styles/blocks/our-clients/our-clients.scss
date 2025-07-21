@@ -21,8 +21,8 @@
     width: var(--clientsSlideWidth);
     height: var(--clientsSlideHeight);
     outline: var(--border-extra-light);
-    border-radius: var(--border-radius-small);
     background-color: var(--color-light);
+    border-radius: var(--border-radius-small);
 
     @include hover {
       filter: opacity(100);
@@ -31,12 +31,19 @@
         filter: brightness(80%);
       }
     }
+
+    @include active {
+      .our-clients__image {
+        scale: 0.98;
+      }
+    }
   }
 
   &__image {
     transition-duration: var(--transition-duration);
     width: var(--clientsSlideWidth);
     height: var(--clientsSlideHeight);
+    border-radius: inherit;
   }
 }
 

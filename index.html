@@ -628,6 +628,62 @@
 				</div>
 			</div>
 		</section>
+
+		<section class="certificates section container" aria-labelledby="certificates-title">
+			<h2 class="our-clients__title section__title h3" id="certificates-title">
+				Сертификаты наших мастеров
+			</h2>
+
+			<div class="certificates__slider">
+				<div class="swiper-wrapper">
+					<a class="certificates__link swiper-slide" href="#!" aria-label="Сертификат мастера 2АТМ" title="Имя мастера">
+						<img class="certificates__image" src="./images/certificates/tempe-of-certificate.webp" width="115"
+							height="162" alt="Пример сертификата мастера" loading="lazy">
+					</a>
+
+					<a class="certificates__link swiper-slide" href="#!" aria-label="Сертификат мастера 2АТМ" title="Имя мастера">
+						<img class="certificates__image" src="./images/certificates/tempe-of-certificate.webp" width="115"
+							height="162" alt="Пример сертификата мастера" loading="lazy">
+					</a>
+
+					<a class="certificates__link swiper-slide" href="#!" aria-label="Сертификат мастера 2АТМ" title="Имя мастера">
+						<img class="certificates__image" src="./images/certificates/tempe-of-certificate.webp" width="115"
+							height="162" alt="Пример сертификата мастера" loading="lazy">
+					</a>
+
+					<a class="certificates__link swiper-slide" href="#!" aria-label="Сертификат мастера 2АТМ" title="Имя мастера">
+						<img class="certificates__image" src="./images/certificates/tempe-of-certificate.webp" width="115"
+							height="162" alt="Пример сертификата мастера" loading="lazy">
+					</a>
+
+					<a class="certificates__link swiper-slide" href="#!" aria-label="Сертификат мастера 2АТМ" title="Имя мастера">
+						<img class="certificates__image" src="./images/certificates/tempe-of-certificate.webp" width="115"
+							height="162" alt="Пример сертификата мастера" loading="lazy">
+					</a>
+
+					<a class="certificates__link swiper-slide" href="#!" aria-label="Сертификат мастера 2АТМ" title="Имя мастера">
+						<img class="certificates__image" src="./images/certificates/tempe-of-certificate.webp" width="115"
+							height="162" alt="Пример сертификата мастера" loading="lazy">
+					</a>
+
+					<a class="certificates__link swiper-slide" href="#!" aria-label="Сертификат мастера 2АТМ" title="Имя мастера">
+						<img class="certificates__image" src="./images/certificates/tempe-of-certificate.webp" width="115"
+							height="162" alt="Пример сертификата мастера" loading="lazy">
+					</a>
+
+					<a class="certificates__link swiper-slide" href="#!" aria-label="Сертификат мастера 2АТМ" title="Имя мастера">
+						<img class="certificates__image" src="./images/certificates/tempe-of-certificate.webp" width="115"
+							height="162" alt="Пример сертификата мастера" loading="lazy">
+					</a>
+
+					<a class="certificates__link swiper-slide" href="#!" aria-label="Сертификат мастера 2АТМ" title="Имя мастера">
+						<img class="certificates__image" src="./images/certificates/tempe-of-certificate.webp" width="115"
+							height="162" alt="Пример сертификата мастера" loading="lazy">
+					</a>
+
+				</div>
+			</div>
+		</section>
 	</main>
 
 	<footer class="footer">
@@ -777,7 +833,17 @@
 
 	<script src="./libs/swiper/swiper-bundle.min.js"></script>
 	<script>
-		const swiper = new Swiper(".our-clients__slider", {
+		const clientsSlider = new Swiper(".our-clients__slider", {
+			loop: true,
+			slidesPerView: "auto",
+			spaceBetween: 24,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
+		});
+
+		const certificatesSlider = new Swiper(".certificates__slider", {
 			loop: true,
 			slidesPerView: "auto",
 			spaceBetween: 24,
