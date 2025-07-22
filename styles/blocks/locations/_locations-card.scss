@@ -1,0 +1,115 @@
+@use "../../healpers" as *;
+
+/* Styles for location-card . Source - block locations */
+
+.location-card {
+  --locationCardBg: var(--color-light);
+  --locationCardBgActive: var(--color-accent-200);
+  --locationCardHeight: #{rem(204)};
+
+  display: flex;
+
+  min-height: var(--locationCardHeight);
+  transition-duration: var(--transition-duration);
+  outline: var(--border-light);
+  border-radius: var(--border-radius-small);
+  background-color: var(--locationCardBg);
+
+  &.is-active {
+    background-color: var(--locationCardBgActive);
+  }
+
+  @include hover {
+    background-color: var(--locationCardBgActive);
+  }
+
+  &__image {
+    &-wrapper {
+      width: rem(140);
+      min-height: 100%;
+      flex-shrink: 0;
+    }
+
+    width: inherit;
+    min-height: inherit;
+    border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(4);
+    justify-content: end;
+    padding: rem(20);
+    color: var(--text-color-dark-secondary);
+  }
+
+  &__address {
+    @include reset-button;
+
+    display: inline-flex;
+    flex-grow: 1;
+    text-align: start;
+    letter-spacing: var(--letter-spacing);
+    transition-duration: var(--transition-duration) !important;
+
+    @include hover {
+      filter: opacity(0.6);
+    }
+
+    @include active {
+      filter: opacity(0.3);
+    }
+  }
+
+  &__text-block {
+    font-size: rem(16);
+    line-height: 1.4;
+    word-spacing: 0.1em;
+
+    p:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__register-time {
+    &--today {
+      color: var(--color-green-light);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+  }
+}
+
+@include mobile-media {
+  .location-card {
+    --locationCardHeight: #{rem(158)};
+
+    row-gap: rem(10);
+
+    &__image {
+      &-wrapper {
+        width: rem(100);
+      }
+    }
+
+    &__body {
+      padding: rem(10);
+    }
+
+    &__address {
+      letter-spacing: -0.02em;
+    }
+
+    &__text-block {
+      font-size: rem(15);
+      word-spacing: 0.2em;
+    }
+  }
+}
+/*  ===================================  */
+/*  ===================================  */

@@ -79,10 +79,10 @@ a {
   }
 }
 // focus elements
-// :focus {
-//   outline-offset: rem(4);
-//   transition-duration: 0s !important;
-// }
+:focus {
+  // outline-offset: rem(4);
+  transition-duration: 0s !important;
+}
 
 a,
 button {

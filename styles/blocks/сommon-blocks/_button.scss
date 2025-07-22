@@ -32,19 +32,26 @@
   }
 
   &--light {
+    font-size: rem(13);
     line-height: 1.69;
     background-color: var(--color-light);
     color: var(--text-color-medium);
     border: rem(1) solid currentColor;
 
     &-accent {
-      background-color: var(--color-accent);
+      color: var(--color-accent);
+      background-color: var(--color-light);
     }
   }
 }
 @include mobile-media {
   .button {
     --buttonColor: var(--color-blue-light);
+
+    &--light {
+      min-height: var(--button-height-small);
+      padding: rem(5) rem(11);
+    }
   }
 }
 /*  ===================================  */

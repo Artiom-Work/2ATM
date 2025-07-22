@@ -1,0 +1,61 @@
+@use "../../healpers" as *;
+/* Filter services in the block location. ( form and input type ratios*/
+.locations-filter {
+  &__border {
+    display: flex;
+    align-items: center;
+    column-gap: rem(24);
+    outline: none;
+  }
+
+  &__element {
+    display: flex;
+    align-items: center;
+    column-gap: rem(11);
+    outline: var(--border-light);
+    border-radius: var(--border-radius-small);
+    padding: rem(14) rem(11) rem(12) rem(11);
+
+    font-weight: 700;
+    font-size: rem(15);
+    line-height: 1.1;
+    text-transform: uppercase;
+    transition-duration: var(--transition-duration) !important;
+    will-change: transform;
+
+    @include hover {
+      filter: opacity(70%);
+      outline: var(--border);
+    }
+
+    @include active {
+      scale: 0.98;
+    }
+  }
+
+  &__input {
+    position: relative;
+
+    width: rem(20);
+    height: rem(20);
+
+    &::before {
+      @include flex-center(true);
+
+      content: "";
+      position: absolute;
+      width: inherit;
+      height: inherit;
+      outline: var(--border);
+      border-radius: rem(2);
+      background-color: var(--color-light);
+      cursor: pointer;
+    }
+
+    &:checked::before {
+      content: "✔";
+    }
+  }
+}
+/*  ===================================  */
+/*  ===================================  */

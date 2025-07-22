@@ -1,0 +1,19 @@
+/* Error: It's not clear which file to import. Found:
+ *   styles\blocks\locations\_locations.scss
+ *   styles\blocks\locations\locations.scss
+ *   ,
+ * 2 | @use "../locations/locations";
+ *   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   styles\blocks\online-registration\online-registration.scss 2:1  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: It's not clear which file to import. Found:\a   styles\\blocks\\locations\\_locations.scss\a   styles\\blocks\\locations\\locations.scss\a   \2577 \a 2 \2502  @use \"../locations/locations\";\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   styles\\blocks\\online-registration\\online-registration.scss 2:1  root stylesheet";
+}

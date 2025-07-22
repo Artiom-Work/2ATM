@@ -1,0 +1,25 @@
+@use "../../healpers" as *;
+@use "../locations/locations";
+
+/* Styles for section online-registration.( home page. block containing cervices map */
+.online-registration {
+  --section-margin-y: #{rem(80)};
+
+  &__subtitle {
+    max-width: rem(778);
+    color: var(--text-color-dark-secondary);
+    text-align: center;
+    line-height: 1.5;
+    font-weight: 600;
+    margin-inline: auto;
+    margin-block: 0 fluid(50, 20);
+  }
+
+  &__buttons {
+    @include flex-center;
+
+    column-gap: rem(30);
+  }
+}
+/*  ===================================  */
+/*  ===================================  */

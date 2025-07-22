@@ -9,7 +9,7 @@
   top: 0;
   z-index: 100;
 
-  animation-name: scrolling-header;
+  animation-name: scrolling-sticky;
   animation-fill-mode: both;
   animation-timeline: scroll();
   animation-range: rem(200) rem(300);

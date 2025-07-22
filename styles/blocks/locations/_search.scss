@@ -1,0 +1,61 @@
+@use "../../healpers" as *;
+/* Search block. ( form + input + button*/
+
+.search {
+  --searchBlockHeight: #{rem(38)};
+  --searchBgColor: var(--color-light);
+  --searchBgColorHover: var(--color-gray-100);
+  --searchBorder: var(--border-light);
+  --searchIconColor: var(--color-border-medium);
+
+  position: relative;
+  display: block;
+
+  &__input {
+    min-height: var(--searchBlockHeight);
+    width: 100%;
+    padding-inline: rem(20) calc(var(--searchBlockHeight) + rem(20));
+    padding-block: rem(3);
+    border: none;
+    outline: var(--searchBorder);
+    border-radius: var(--border-radius-small);
+    background-color: var(--searchBgColor);
+    transition-duration: var(--transition-duration) !important;
+
+    &:focus {
+      background-color: var(--searchBgColor) !important;
+      outline: var(--border);
+    }
+
+    @include hover {
+      background-color: var(--searchBgColorHover);
+    }
+  }
+
+  &__button {
+    @include reset-button;
+    @include flex-center(true);
+
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    border-radius: var(--border-radius-small);
+    min-height: var(--searchBlockHeight);
+    width: var(--searchBlockHeight);
+
+    @include hover {
+      filter: opacity(0.6);
+    }
+
+    @include active {
+      filter: opacity(0.3);
+    }
+  }
+
+  &__icon {
+    fill: transparent;
+    stroke: var(--searchIconColor);
+  }
+}
+/*  ===================================  */
+/*  ===================================  */

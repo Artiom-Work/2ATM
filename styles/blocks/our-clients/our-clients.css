@@ -1,14 +1,11 @@
 /* Styles for section our clients( slider with companies logos ) . source -- home page */
 .our-clients {
-  overflow: hidden;
-}
-.our-clients__title {
-  line-height: 1.2;
+  overflow-x: hidden;
 }
 .our-clients__slider {
   --clientsSlideWidth: 11.875rem;
   --clientsSlideHeight: 7.1875rem;
-  min-height: calc(var(--clientsSlideHeight) + 0.0625rem);
+  min-height: calc(var(--clientsSlideHeight) + 0.125rem);
 }
 .our-clients__link {
   display: block;
@@ -46,11 +43,6 @@
   border-radius: inherit;
 }
 
-@media (width <= 63.99875rem) {
-  .our-clients__title {
-    line-height: 1.3;
-  }
-}
 /*  ===================================  */
 /*  ===================================  */
 

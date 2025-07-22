@@ -521,6 +521,383 @@
 			</div>
 		</section>
 
+
+
+
+
+		<section class="online-registration section container" aria-labelledby="online-registration-title">
+			<h2 class="section__title h3" id="online-registration-title">
+				Онлайн-запись
+			</h2>
+
+			<div class="online-registration__subtitle hidden-laptop">
+				<p>
+					Наши шиномонтажи расположены рядом с&nbsp;крупными жилыми комплексами и&nbsp;магазинами, чтобы вы&nbsp;могли
+					поменять резину или сделать ремонт не&nbsp;меняя ваших планов. <br>
+					Выберите удобную точку&nbsp;&mdash; ближайшее свободное время сегодня!
+				</p>
+			</div>
+
+			<div class="locations">
+				<form class="locations__filter locations-filter hidden-laptop" id="home-page-location-filter">
+					<fieldset class="locations-filter__border">
+						<legend class="visually-hidden">
+							Фильтр для выбора шиномантажа по его характеристикам
+						</legend>
+
+						<div class="locations-filter__element">
+							<input class="locations-filter__input" type="radio" id="refresh-conditioners" name="filter-feature"
+								value="refresh-conditioners">
+							<label for="refresh-conditioners">Заправка кондиционера</label>
+						</div>
+
+						<div class="locations-filter__element">
+							<input class="locations-filter__input" type="radio" id="service-station" name="filter-feature"
+								value="service-station">
+							<label for="service-station">Сервис</label>
+						</div>
+
+						<div class="locations-filter__element">
+							<input class="locations-filter__input" type="radio" id="washing" name="filter-feature" value="washing">
+							<label for="washing">Мойка</label>
+						</div>
+
+						<div class="locations-filter__element">
+							<input class="locations-filter__input" type="radio" id="tire-fitting" name="filter-feature"
+								value="tire-fitting">
+							<label for="tire-fitting">Шиномонтаж</label>
+						</div>
+					</fieldset>
+
+				</form>
+
+				<div class="locations__body">
+
+					<ul class="locations__list">
+						<li class="locations__list-item locations__list-item--search">
+							<form class="search" id="location-search">
+								<label class="visually-hidden" for="location-search-input">
+									поле ввода для поиска сервиса на карте по названеию
+								</label>
+								<input class="search__input" type="text" id="location-search-input">
+
+								<button class="search__button" aria-label="кнопка поиска из списка" title="Найти">
+									<svg class="search__icon" width="19" height="19" viewBox="0 0 19 19">
+										<use xlink:href="./images/icons/sprite-icons.svg#search-icon"></use>
+									</svg>
+								</button>
+							</form>
+						</li>
+
+						<li class="locations__list-item">
+							<article class="location-card is-active" id="location-card-1">
+								<h3 class="visually-hidden">Карточка с адресом сервиса</h3>
+
+								<div class="location-card__image-wrapper">
+									<img class="location-card__image" src="./images/locations/location-card-image-1.webp" width="140"
+										height="204" alt="Фото шиномантажа" loading="lazy">
+								</div>
+
+								<div class="location-card__body">
+									<button class="location-card__address" type="button">
+										<h4 class="h5" data-js-location-card-address>
+											Муринская дорога, д. 24
+										</h4>
+									</button>
+
+									<div class="location-card__text-block">
+										<p data-js-location-card-name>
+											Автомойка в&nbsp;Пулково
+										</p>
+
+										<p>
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span data-js-location-card-rating>4,7</span>
+											<span data-js-location-card-set-services>
+												СТО, Мойка<span class="hidden-mobile">, Шиномонтаж, ТО</span>
+											</span>
+										</p>
+
+										<p>
+											Ближайшая запись
+											<span class="location-card__register-time location-card__register-time--today"
+												data-js-location-card-register-time>
+												сегодня
+											</span>
+										</p>
+									</div>
+
+									<div class="location-card__buttons">
+										<a class="button button--light button--light-accent" href="#!">
+											Записаться
+										</a>
+										<a class="button button--light" href="#!">
+											Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="locations__list-item">
+							<article class="location-card" id="location-card-2">
+								<h3 class="visually-hidden">Карточка с адресом сервиса</h3>
+
+								<div class="location-card__image-wrapper">
+									<img class="location-card__image" src="./images/locations/location-card-image-1.webp" width="140"
+										height="204" alt="Фото шиномантажа" loading="lazy">
+								</div>
+
+								<div class="location-card__body">
+									<button class="location-card__address" type="button">
+										<h4 class="h5" data-js-location-card-address>
+											Муринская дорога, д. 24
+										</h4>
+									</button>
+
+									<div class="location-card__text-block">
+										<p data-js-location-card-name>
+											Автомойка в&nbsp;Пулково
+										</p>
+
+										<p>
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span data-js-location-card-rating>4,7</span>
+											<span data-js-location-card-set-services>
+												СТО, Мойка<span class="hidden-mobile">, Шиномонтаж, ТО</span>
+											</span>
+										</p>
+
+										<p>
+											Ближайшая запись
+											<span class="location-card__register-time location-card__register-time--today"
+												data-js-location-card-register-time>
+												сегодня
+											</span>
+										</p>
+									</div>
+
+									<div class="location-card__buttons">
+										<a class="button button--light button--light-accent" href="#!">
+											Записаться
+										</a>
+										<a class="button button--light" href="#!">
+											Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="locations__list-item">
+							<article class="location-card" id="location-card-3">
+								<h3 class="visually-hidden">Карточка с адресом сервиса</h3>
+
+								<div class="location-card__image-wrapper">
+									<img class="location-card__image" src="./images/locations/location-card-image-1.webp" width="140"
+										height="204" alt="Фото шиномантажа" loading="lazy">
+								</div>
+
+								<div class="location-card__body">
+									<button class="location-card__address" type="button">
+										<h4 class="h5" data-js-location-card-address>
+											Муринская дорога, д. 24
+										</h4>
+									</button>
+
+									<div class="location-card__text-block">
+										<p data-js-location-card-name>
+											Автомойка в&nbsp;Пулково
+										</p>
+
+										<p>
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span data-js-location-card-rating>4,7</span>
+											<span data-js-location-card-set-services>
+												СТО, Мойка<span class="hidden-mobile">, Шиномонтаж, ТО</span>
+											</span>
+										</p>
+
+										<p>
+											Ближайшая запись
+											<span class="location-card__register-time location-card__register-time--today"
+												data-js-location-card-register-time>
+												сегодня
+											</span>
+										</p>
+									</div>
+
+									<div class="location-card__buttons">
+										<a class="button button--light button--light-accent" href="#!">
+											Записаться
+										</a>
+										<a class="button button--light" href="#!">
+											Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="locations__list-item">
+							<article class="location-card" id="location-card-4">
+								<h3 class="visually-hidden">Карточка с адресом сервиса</h3>
+
+								<div class="location-card__image-wrapper">
+									<img class="location-card__image" src="./images/locations/location-card-image-1.webp" width="140"
+										height="204" alt="Фото шиномантажа" loading="lazy">
+								</div>
+
+								<div class="location-card__body">
+									<button class="location-card__address" type="button">
+										<h4 class="h5" data-js-location-card-address>
+											Муринская дорога, д. 24
+										</h4>
+									</button>
+
+									<div class="location-card__text-block">
+										<p data-js-location-card-name>
+											Автомойка в&nbsp;Пулково
+										</p>
+
+										<p>
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span data-js-location-card-rating>4,7</span>
+											<span data-js-location-card-set-services>
+												СТО, Мойка<span class="hidden-mobile">, Шиномонтаж, ТО</span>
+											</span>
+										</p>
+
+										<p>
+											Ближайшая запись
+											<span class="location-card__register-time location-card__register-time--today"
+												data-js-location-card-register-time>
+												сегодня
+											</span>
+										</p>
+									</div>
+
+									<div class="location-card__buttons">
+										<a class="button button--light button--light-accent" href="#!">
+											Записаться
+										</a>
+										<a class="button button--light" href="#!">
+											Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="locations__list-item">
+							<article class="location-card" id="location-card-5">
+								<h3 class="visually-hidden">Карточка с адресом сервиса</h3>
+
+								<div class="location-card__image-wrapper">
+									<img class="location-card__image" src="./images/locations/location-card-image-1.webp" width="140"
+										height="204" alt="Фото шиномантажа" loading="lazy">
+								</div>
+
+								<div class="location-card__body">
+									<button class="location-card__address" type="button">
+										<h4 class="h5" data-js-location-card-address>
+											Муринская дорога, д. 24
+										</h4>
+									</button>
+
+									<div class="location-card__text-block">
+										<p data-js-location-card-name>
+											Автомойка в&nbsp;Пулково
+										</p>
+
+										<p>
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span data-js-location-card-rating>4,7</span>
+											<span data-js-location-card-set-services>
+												СТО, Мойка<span class="hidden-mobile">, Шиномонтаж, ТО</span>
+											</span>
+										</p>
+
+										<p>
+											Ближайшая запись
+											<span class="location-card__register-time location-card__register-time--today"
+												data-js-location-card-register-time>
+												сегодня
+											</span>
+										</p>
+									</div>
+
+									<div class="location-card__buttons">
+										<a class="button button--light button--light-accent" href="#!">
+											Записаться
+										</a>
+										<a class="button button--light" href="#!">
+											Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+					</ul>
+
+					<div class="locations__map-block map-block">
+						<img class="map-block__iframe" src="./images/locations/map.webp" width="737" height="720" alt="Карта"
+							loading="lazy">
+
+						<svg class="map-block__marker" width="44" height="58" viewBox="0 0 44 58">
+							<use xlink:href="./images/icons/sprite-icons.svg#map-marker"></use>
+						</svg>
+
+						<svg class="map-block__marker map-block__marker--active" width="44" height="58" viewBox="0 0 44 58">
+							<use xlink:href="./images/icons/sprite-icons.svg#map-marker-active"></use>
+						</svg>
+					</div>
+				</div>
+			</div>
+
+			<div class="online-registration__buttons hidden-laptop">
+				<a class="button button" href="#!" target="_blank">
+					В&nbsp;Telegram
+				</a>
+
+				<a class="button button--accent-bg" href="#!" target="_blank">
+					Записаться онлайн
+				</a>
+			</div>
+		</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		<section class="special-offers section container" aria-labelledby="special-offers-title">
 			<h2 class="section__title h3" id="special-offers-title">
 				Специальные предложения
@@ -590,7 +967,7 @@
 		</section>
 
 		<section class="our-clients section container" aria-labelledby="our-clients-title">
-			<h2 class="our-clients__title section__title h3" id="our-clients-title">
+			<h2 class="section__title h3" id="our-clients-title">
 				Наши клиенты
 			</h2>
 
@@ -630,7 +1007,7 @@
 		</section>
 
 		<section class="certificates section container" aria-labelledby="certificates-title">
-			<h2 class="certificates__title section__title h3" id="certificates-title">
+			<h2 class="section__title h3" id="certificates-title">
 				Сертификаты наших мастеров
 			</h2>
 

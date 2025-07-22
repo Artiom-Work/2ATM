@@ -1,17 +1,14 @@
 @charset "UTF-8";
 /* Styles for section certificates ( slider with мasters' certificates ) . source -- home page */
 .certificates {
-  overflow: hidden;
-}
-.certificates__title {
-  line-height: 1.2;
+  overflow-x: hidden;
 }
 .certificates__slider {
   --certificateSlideWidth: 7.375rem;
   --certificateSlideHeight: 10.125rem;
   --certificateSlideImageWidth: 7.1875rem;
   --certificateSlideImageHeight: var(--certificateSlideHeight);
-  min-height: calc(var(--certificateSlideHeight) + 0.0625rem);
+  min-height: calc(var(--certificateSlideHeight) + 0.125rem);
 }
 .certificates__link {
   display: inline-flex;
@@ -46,11 +43,6 @@
   height: var(--certificateSlideHeight);
 }
 
-@media (width <= 63.99875rem) {
-  .certificates__title {
-    line-height: 1.3;
-  }
-}
 /*  ===================================  */
 /*  ===================================  */
 
