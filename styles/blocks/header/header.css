@@ -211,6 +211,10 @@
   animation-range: 12.5rem 18.75rem;
   background-color: var(--color-accent-50);
 }
+.header__logo {
+  width: 20.625rem;
+  height: 4.375rem;
+}
 .header__general {
   display: flex;
   justify-content: space-between;
@@ -272,6 +276,10 @@
 @media (width <= 47.99875rem) {
   .header {
     background-color: var(--color-light);
+  }
+  .header__logo {
+    width: 17.0625rem;
+    height: 3.625rem;
   }
   .header__general {
     padding-inline: 0.625rem 0.5rem;

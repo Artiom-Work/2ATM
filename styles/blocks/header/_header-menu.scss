@@ -4,8 +4,6 @@
 .header-menu {
   &--not-to-scroll {
     /* Временно , заменить на display none , через JS */
-    // min-height: rem(50);
-    // height: auto;
     animation-name: hidden-to-scroll;
     animation-fill-mode: both;
     animation-timeline: scroll();

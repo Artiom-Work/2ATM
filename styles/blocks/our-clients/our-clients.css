@@ -1,6 +1,7 @@
 /* Styles for section our clients( slider with companies logos ) . source -- home page */
 .our-clients {
   overflow-x: hidden;
+  margin-block: 0 clamp(5rem, 3.5465116279rem + 5.8139534884vw, 8.125rem);
 }
 .our-clients__slider {
   --clientsSlideWidth: 11.875rem;
@@ -43,6 +44,11 @@
   border-radius: inherit;
 }
 
+@media (width <= 63.99875rem) {
+  .our-clients {
+    margin-block: 0 5rem;
+  }
+}
 /*  ===================================  */
 /*  ===================================  */
 

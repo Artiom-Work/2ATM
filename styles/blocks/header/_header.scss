@@ -15,6 +15,10 @@
   animation-range: rem(200) rem(300);
 
   background-color: var(--color-accent-50);
+  &__logo {
+    width: rem(330);
+    height: rem(70);
+  }
 
   &__general {
     @include flex-space-between;
@@ -91,6 +95,11 @@
 @include mobile-media {
   .header {
     background-color: var(--color-light);
+
+    &__logo {
+      width: rem(273);
+      height: rem(58);
+    }
 
     &__general {
       padding-inline: rem(10) rem(8);

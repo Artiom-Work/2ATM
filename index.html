@@ -48,7 +48,7 @@
 				<picture>
 					<source srcset="./images/logo/logo-mobile.svg" media="(max-width: 767px)" type="image/svg+xml">
 					<source srcset="./images/logo/logo.svg" type="image/svg+xml">
-					<img class="logo__image" src="./images/logo/logo-mobile.svg" width="263" height="54" alt="Логотип 2ATM">
+					<img class="logo__image" src="./images/logo/logo-mobile.svg" width="273" height="58" alt="Логотип 2ATM">
 				</picture>
 			</a>
 
@@ -493,7 +493,6 @@
 			</section>
 		</section>
 
-
 		<section class="messenger-action container hidden-tablet" aria-labelledby="messenger-action-title">
 			<h2 class="visually-hidden">Быстрая запись в Telegram-боте</h2>
 
@@ -520,10 +519,6 @@
 				</div>
 			</div>
 		</section>
-
-
-
-
 
 		<section class="online-registration section container" aria-labelledby="online-registration-title">
 			<h2 class="section__title h3" id="online-registration-title">
@@ -871,32 +866,15 @@
 			</div>
 
 			<div class="online-registration__buttons hidden-laptop">
-				<a class="button button" href="#!" target="_blank">
+				<a class="button" href="#!" target="_blank">
 					В&nbsp;Telegram
 				</a>
 
-				<a class="button button--accent-bg" href="#!" target="_blank">
+				<a class="button--accent-bg" href="#!" target="_blank">
 					Записаться онлайн
 				</a>
 			</div>
 		</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 		<section class="special-offers section container" aria-labelledby="special-offers-title">
 			<h2 class="section__title h3" id="special-offers-title">
@@ -1005,6 +983,94 @@
 				</div>
 			</div>
 		</section>
+
+
+		<section class="advantages section container" aria-labelledby="advantages-title">
+			<h2 class="section__title h3" id="advantages-title">
+				Почему клиенты выбирают именно нас?
+			</h2>
+
+			<div class="advantages__slider">
+				<div class="swiper-wrapper advantages__slider-wrapper" style="grid-template-rows: auto !important;">
+					<article class="swiper-slide advantage-card">
+						<img class="advantage-card__image" src="./images/advantages/clock.webp" width="60" height="60" alt="Часы"
+							loading="lazy">
+
+						<h3 class="advantage-card__heading">
+							Ценим ваше время
+						</h3>
+
+						<div class="advantage-card__text">
+							<p>
+								Мы&nbsp;внедрили роботы для накачки колес, современные станки и&nbsp;быстрые кассовые аппараты, чтобы
+								минимизировать ваше ожидание. Все работы начинаются точно в&nbsp;срок и&nbsp;не&nbsp;затягиваются.
+							</p>
+						</div>
+					</article>
+
+					<article class="swiper-slide advantage-card">
+						<img class="advantage-card__image" src="./images/advantages/car-over-hand.webp" width="60" height="60"
+							alt="Машина на руке" loading="lazy">
+
+						<h3 class="advantage-card__heading">
+							Бережное отношение к&nbsp;деталям
+						</h3>
+
+						<div class="advantage-card__text">
+							<p>
+								Мы&nbsp;не&nbsp;бросаем болты и&nbsp;гайки на&nbsp;землю&nbsp;&mdash; используем магнитные тарелочки для
+								их&nbsp;хранения. Это мелочь, но&nbsp;именно в&nbsp;таких деталях проявляется наша забота о&nbsp;вашем
+								авто и&nbsp;уважение к&nbsp;клиентам.
+							</p>
+						</div>
+					</article>
+
+					<article class="swiper-slide advantage-card">
+						<img class="advantage-card__image" src="./images/advantages/convenience.webp" width="60" height="60"
+							alt="Удобвтво" loading="lazy">
+
+						<h3 class="advantage-card__heading">
+							Удобство в&nbsp;каждом шаге
+						</h3>
+
+						<div class="advantage-card__text">
+							<p>
+								Наша обновленная система записи позволяет выбрать ближайшую точку и&nbsp;выполнить все необходимые
+								работы в&nbsp;одном месте: мойка, ТО, шиномонтаж и&nbsp;многое другое.
+							</p>
+						</div>
+					</article>
+
+					<article class="swiper-slide advantage-card">
+						<img class="advantage-card__image" src="./images/advantages/loupe.webp" width="60" height="60"
+							alt="Удобвтво" loading="lazy">
+
+						<h3 class="advantage-card__heading">
+							Прозрачность на&nbsp;всех этапах
+						</h3>
+
+						<div class="advantage-card__text">
+							<p>
+								Все работы фиксируются камерами. Вы&nbsp;можете быть уверены в&nbsp;безопасности вашего имущества,
+								честности и&nbsp;качестве обслуживания, потому что процесс полностью открыт для вас.
+							</p>
+						</div>
+					</article>
+				</div>
+			</div>
+
+			<div class="advantages__buttons">
+				<a class="advantages__button button" href="#!" target="_blank">
+					В&nbsp;Telegram
+				</a>
+
+				<a class="advantages__button button button--accent-bg" href="#!" target="_blank">
+					На&nbsp;сайте
+				</a>
+			</div>
+
+		</section>
+
 
 		<section class="certificates section container" aria-labelledby="certificates-title">
 			<h2 class="section__title h3" id="certificates-title">
@@ -1209,6 +1275,7 @@
 	</footer>
 
 	<script src="./libs/swiper/swiper-bundle.min.js"></script>
+
 	<script>
 		const clientsSlider = new Swiper(".our-clients__slider", {
 			loop: true,
@@ -1220,6 +1287,14 @@
 			},
 		});
 
+		const advantagesSlider = new Swiper(".advantages__slider", {
+			slidesPerView: "auto",
+			grid: {
+				rows: 1,
+			},
+			spaceBetween: 24,
+		});
+
 		const certificatesSlider = new Swiper(".certificates__slider", {
 			loop: true,
 			slidesPerView: "auto",
@@ -1229,6 +1304,7 @@
 				disableOnInteraction: false,
 			},
 		});
+
 	</script>
 	<!-- <script type="module" src="./js/develop/index.js"></script> -->
 
