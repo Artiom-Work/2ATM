@@ -1,5 +1,5 @@
 @use "../../healpers" as *;
-
+/* Styles for mobile menu. part of header */
 .mobile-menu {
   --mobileMenuBackgroundColor: var(--color-gray-900);
 
@@ -83,5 +83,3 @@
     overflow: hidden; // временно , правльно - нужно  добавить к body в JS
   }
 }
-/*  ===================================  */
-/*  ===================================  */

@@ -1,0 +1,52 @@
+@use "../../healpers" as *;
+@use "review-card";
+@use "reviews-controls";
+/* Section reviews. sourse -- home page */
+.reviews {
+  overflow: hidden;
+  padding-block: 0 rem(1);
+
+  &__title {
+    @include flex-center;
+
+    column-gap: rem(10);
+
+    &-icon {
+      width: 36;
+      height: 36;
+    }
+  }
+
+  &__slider {
+    min-height: rem(333);
+    margin-block: 0 fluid(50, 20);
+  }
+  &__slider-item {
+    max-width: rem(404);
+  }
+}
+
+@include tablet-media {
+  .reviews {
+    &__slider {
+      margin-block: 0 rem(20);
+
+      &-item {
+        max-width: rem(340);
+      }
+    }
+  }
+}
+
+@include mobile-media {
+  .reviews {
+    &__slider {
+      &-item {
+        max-width: unset;
+      }
+    }
+  }
+}
+/*  ===================================  */
+/*  ========END section reviews========  */
+/*  ===================================  */

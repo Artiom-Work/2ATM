@@ -1,5 +1,6 @@
 @charset "UTF-8";
-/* Search block. ( form + input + button*/
+/* Section locations. Component for the user to select a suitable service on the map. sourse home page */
+/* Search block. ( form + input + button) .part of block locations */
 .search {
   --searchBlockHeight: 2.375rem;
   --searchBgColor: var(--color-light);
@@ -66,9 +67,7 @@
   stroke: var(--searchIconColor);
 }
 
-/*  ===================================  */
-/*  ===================================  */
-/* Filter services in the block location. ( form and input type ratios*/
+/* Filter services in the block locations. ( form and input type ratios )*/
 .locations-filter__border {
   display: flex;
   align-items: center;
@@ -126,8 +125,6 @@
   content: "✔";
 }
 
-/*  ===================================  */
-/*  ===================================  */
 /* Styles for location-card . Source - block locations */
 .location-card {
   --locationCardBg: var(--color-light);
@@ -230,9 +227,7 @@
     word-spacing: 0.2em;
   }
 }
-/*  ===================================  */
-/*  ===================================  */
-/* Styles for the map. Current, will need to be added...*/
+/* Styles for the map. part of block locations .Current, will need to be added...*/
 .map-block {
   position: relative;
 }
@@ -252,9 +247,6 @@
   left: 40%;
 }
 
-/*  ===================================  */
-/*  ===================================  */
-/* Component for the user to select a suitable service on the map */
 .locations {
   --locationScrollThumbColor: var(--color-gray-400);
   --locationScrollThumbColorHover: var(--color-gray-500);
@@ -350,6 +342,7 @@
   }
 }
 /*  ===================================  */
+/*  =======END section locations=======  */
 /*  ===================================  */
 
 /*# sourceMappingURL=locations.css.map */

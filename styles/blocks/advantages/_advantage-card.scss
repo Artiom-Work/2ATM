@@ -1,5 +1,5 @@
 @use "../../healpers" as *;
-/* Block-card for advantage slider*/
+/* Block-card for advantage slider.Part of Section advantages*/
 .advantage-card {
   --advantageCardTextColor: var(--color-gray-750);
   --advantageCardTitleTextColor: var(--color-gray-800);
@@ -39,5 +39,3 @@
     }
   }
 }
-/*  ===================================  */
-/*  ===================================  */

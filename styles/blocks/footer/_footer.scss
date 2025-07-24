@@ -1,6 +1,6 @@
 @use "../../healpers" as *;
 @use "footer-svc-links";
-/* Block footer */
+/* Block footer . For all pages.*/
 .footer {
   background-color: var(--color-gray-800);
   color: var(--color-white-opacity-35);
@@ -273,4 +273,5 @@
   }
 }
 /*  ===================================  */
+/*  =============END footer============  */
 /*  ===================================  */

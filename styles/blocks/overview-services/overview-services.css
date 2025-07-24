@@ -112,7 +112,7 @@
 }
 /*  ===================================  */
 /*  ===================================  */
-/* That's styles for services promotion. General component is overview-services on the home page */
+/* That's styles for services promotion. General component for section overview-services on the home page */
 .services-promotion {
   display: flex;
   align-items: center;
@@ -196,9 +196,7 @@
     right: 16px;
   }
 }
-/*  ===================================  */
-/*  ===================================  */
-/* Styles for block overview-services on the home page */
+/* Styles for section overview-services on the home page */
 .overview-services {
   display: flex;
   gap: 1.5rem;
@@ -257,6 +255,7 @@
   }
 }
 /*  ===================================  */
+/*  ===END section overview-services===  */
 /*  ===================================  */
 
 /*# sourceMappingURL=overview-services.css.map */

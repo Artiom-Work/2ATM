@@ -1,0 +1,281 @@
+/* Styles for block-card reviews 
+(reviews-slider). Part of section reviews. source -- home page */
+.review-card {
+  --reviewCardBorderColor: var(--color-gray-90);
+  --reviewCardTitleColor: black;
+  --reviewCardTextColor: var(--color-gray-550);
+  --reviewCardTextLight: var(--color-gray-450);
+  position: relative;
+  width: 100%;
+  min-height: 20.6875rem;
+  outline: 0.0625rem solid var(--reviewCardBorderColor);
+  border-radius: var(--border-radius-extra-small);
+}
+.review-card__button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  bottom: 0.625rem;
+  right: 0.625rem;
+  font-size: 1.125rem;
+  white-space: nowrap;
+  color: var(--reviewCardTextLight);
+  transition-duration: var(--transition-duration) !important;
+}
+.review-card__button::before {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  translate: 0 30%;
+  height: 2.75rem;
+  width: 6.25rem;
+  content: "";
+}
+@media (any-hover: hover) {
+  .review-card__button:hover {
+    filter: brightness(80%);
+  }
+}
+@media (any-hover: hover) and (any-hover: none) {
+  .review-card__button:active {
+    filter: brightness(80%);
+  }
+}
+.review-card__button:active {
+  scale: 0.96;
+}
+.review-card__button-switcher[type=checkbox] {
+  display: none;
+}
+.review-card__button-switcher[type=checkbox]:checked ~ .review-card__body > .review-card__review {
+  -webkit-line-clamp: unset;
+}
+.review-card__button-switcher[type=checkbox]:checked ~ .review-card__button > .review-card__button-text.is-active {
+  opacity: 0;
+}
+.review-card__button-switcher[type=checkbox]:checked ~ .review-card__button > .review-card__button-text {
+  opacity: 1;
+}
+.review-card__button-text {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.review-card__button-text.is-active {
+  opacity: 1;
+}
+.review-card__header {
+  padding-inline: 1.5rem;
+  padding-block: 1rem 1.5rem;
+  border-bottom: 0.0625rem solid var(--reviewCardBorderColor);
+}
+.review-card__header-title {
+  font-size: 0.9375rem;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: var(--reviewCardTitleColor);
+  margin-bottom: 0.875rem;
+}
+.review-card__header-content {
+  display: flex;
+  align-items: center;
+  column-gap: 1.125rem;
+}
+.review-card__image {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.review-card__description {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.4375rem;
+}
+.review-card__text {
+  color: var(--reviewCardTextColor);
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+.review-card__text--small {
+  font-size: 1rem;
+  color: var(--reviewCardTextLight);
+}
+.review-card__text--color-dark {
+  color: var(--reviewCardTitleColor);
+}
+.review-card__body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.4375rem;
+  padding-inline: 1.5rem;
+  padding-block: 0.8125rem 2.1875rem;
+}
+.review-card__user-name {
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--reviewCardTitleColor);
+}
+.review-card__feature {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.review-card__rating-icon {
+  fill: var(--color-rating-star);
+}
+.review-card__rating-icon.is-active {
+  fill: var(--color-rating-star-active);
+}
+.review-card__date {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--reviewCardTextLight);
+}
+.review-card__review {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+@media (width <= 63.99875rem) {
+  .review-card {
+    min-height: 21.3125rem;
+  }
+  .review-card__user-name {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .review-card__text {
+    font-size: 1rem;
+  }
+  .review-card__text--small {
+    font-size: 0.9375rem;
+  }
+  .review-card__date {
+    font-size: 0.75rem;
+    line-height: 1.66;
+  }
+  .review-card__button {
+    font-size: 1rem;
+  }
+  .review-card__body {
+    row-gap: 0.5625rem;
+  }
+}
+/* Styles for block reviews-controls (reviews-slider). Part of section reviews. source -- home page */
+.reviews-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  max-width: 8.625rem;
+  width: 100%;
+  margin-inline: auto;
+  color: var(--text-color-dark-secondary) !important;
+}
+.reviews-controls span {
+  color: var(--text-color-dark-secondary) !important;
+}
+.reviews-controls__pagination {
+  text-align: center;
+}
+.reviews-controls__next, .reviews-controls__prev {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+  border-radius: 0.125rem;
+  transition-duration: var(--transition-duration) !important;
+  color: currentColor;
+  background-color: var(--color-light);
+}
+@media (any-hover: hover) {
+  .reviews-controls__next:hover, .reviews-controls__prev:hover {
+    filter: brightness(90%);
+  }
+}
+@media (any-hover: hover) and (any-hover: none) {
+  .reviews-controls__next:active, .reviews-controls__prev:active {
+    filter: brightness(90%);
+  }
+}
+.reviews-controls__next:active, .reviews-controls__prev:active {
+  scale: 0.9;
+  filter: brightness(90%);
+}
+.reviews-controls__next::before, .reviews-controls__prev::before {
+  width: 0.625rem;
+  height: 0.625rem;
+  position: absolute;
+  content: "";
+  border-left: 0.125rem solid currentColor;
+  border-bottom: 0.125rem solid currentColor;
+}
+.reviews-controls__next::after, .reviews-controls__prev::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 2.75rem;
+  height: 2.75rem;
+  content: "";
+}
+.reviews-controls__prev::before {
+  rotate: 45deg;
+  translate: 25% 0;
+}
+.reviews-controls__next::before {
+  rotate: 225deg;
+  translate: -25% 0;
+}
+
+/* Section reviews. sourse -- home page */
+.reviews {
+  overflow: hidden;
+  padding-block: 0 0.0625rem;
+}
+.reviews__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.625rem;
+}
+.reviews__title-icon {
+  width: 36;
+  height: 36;
+}
+.reviews__slider {
+  min-height: 20.8125rem;
+  margin-block: 0 clamp(1.25rem, 0.3779069767rem + 3.488372093vw, 3.125rem);
+}
+.reviews__slider-item {
+  max-width: 25.25rem;
+}
+
+@media (width <= 63.99875rem) {
+  .reviews__slider {
+    margin-block: 0 1.25rem;
+  }
+  .reviews__slider-item {
+    max-width: 21.25rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .reviews__slider-item {
+    max-width: unset;
+  }
+}
+/*  ===================================  */
+/*  ========END section reviews========  */
+/*  ===================================  */
+
+/*# sourceMappingURL=reviews.css.map */

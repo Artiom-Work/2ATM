@@ -1,5 +1,5 @@
 @use "../../healpers" as *;
-/* Search block. ( form + input + button*/
+/* Search block. ( form + input + button) .part of block locations */
 
 .search {
   --searchBlockHeight: #{rem(38)};
@@ -57,5 +57,3 @@
     stroke: var(--searchIconColor);
   }
 }
-/*  ===================================  */
-/*  ===================================  */

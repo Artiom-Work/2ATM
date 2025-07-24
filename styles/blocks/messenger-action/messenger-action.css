@@ -1,4 +1,4 @@
-/* Styles from section messenger-action. Main sourse is home page */
+/* Styles from section messenger-action. sourse is home page */
 .messenger-action__wrapper {
   background: var(--color-grad-1);
   display: flex;
@@ -40,6 +40,7 @@
   }
 }
 /*  ===================================  */
+/*  ====END section messenger-action===  */
 /*  ===================================  */
 
 /*# sourceMappingURL=messenger-action.css.map */

@@ -1,4 +1,4 @@
-/* Block-card for advantage slider*/
+/* Block-card for advantage slider.Part of Section advantages*/
 .advantage-card {
   --advantageCardTextColor: var(--color-gray-750);
   --advantageCardTitleTextColor: var(--color-gray-800);
@@ -32,8 +32,6 @@
     font-size: 0.9375rem;
   }
 }
-/*  ===================================  */
-/*  ===================================  */
 /* Section advantages.Slider. source --home-page*/
 .advantages {
   --advantagesSlidesQuantity: 4;
@@ -68,6 +66,7 @@
   }
 }
 /*  ===================================  */
+/*  =======END section advantages======  */
 /*  ===================================  */
 
 /*# sourceMappingURL=advantages.css.map */

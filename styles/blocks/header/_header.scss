@@ -3,7 +3,7 @@
 @use "header-menu";
 @use "header-top-menu";
 @use "mobile-menu";
-/* General block header */
+/* General block header.For all pages. */
 .header {
   position: sticky;
   top: 0;
@@ -126,4 +126,5 @@
 }
 
 /*  ===================================  */
+/*  =============END header============  */
 /*  ===================================  */

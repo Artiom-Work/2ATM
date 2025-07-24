@@ -499,8 +499,8 @@
 			<div class="messenger-action__wrapper">
 				<div class="messenger-action__image-wrapper">
 					<img class="messenger-action__image" src="./images/messenger-action/moblile-robot.webp"
-						srcset="./images/messenger-action/moblile-robot.webp@2x.webp 2x" alt="Робот с мобильным телефоном"
-						width="350" height="350" loading="lazy">
+						srcset="./images/messenger-action/moblile-robot@2x.webp 2x" alt="Робот с мобильным телефоном" width="350"
+						height="350" loading="lazy">
 				</div>
 
 				<div class="messenger-action__body">
@@ -525,7 +525,7 @@
 				Онлайн-запись
 			</h2>
 
-			<div class="online-registration__subtitle hidden-laptop">
+			<div class="online-registration__subtitle section__subtitle hidden-laptop">
 				<p>
 					Наши шиномонтажи расположены рядом с&nbsp;крупными жилыми комплексами и&nbsp;магазинами, чтобы вы&nbsp;могли
 					поменять резину или сделать ремонт не&nbsp;меняя ваших планов. <br>
@@ -870,7 +870,7 @@
 					В&nbsp;Telegram
 				</a>
 
-				<a class="button--accent-bg" href="#!" target="_blank">
+				<a class="button button--accent-bg" href="#!" target="_blank">
 					Записаться онлайн
 				</a>
 			</div>
@@ -944,6 +944,544 @@
 			</ul>
 		</section>
 
+		<section class="reviews section container" aria-labelledby="reviews-title">
+			<h2 class="reviews__title section__title h3" id="reviews-title">
+				<svg class="reviews__title-icon" width="37" height="36" viewBox="0 0 37 36">
+					<use xlink:href="./images/icons/sprite-icons.svg#yandex-icon"></use>
+				</svg>
+				<span>Отзывы</span>
+			</h2>
+
+			<div class="section__subtitle hidden-laptop">
+				<p>
+					Наш средний рейтинг 4,8&nbsp;на Яндекс.Картах&nbsp;&mdash; почитайте, что говорят клиенты:
+				</p>
+			</div>
+
+			<div class="reviews__slider">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide reviews__slider-item">
+						<article class="review-card" id="review-1">
+							<h3 class="visually-hidden">Отзыв клиента</h3>
+
+							<input class="review-card__button-switcher" id="rewiew-switcher-1" type="checkbox">
+							<label class="review-card__button" for="rewiew-switcher-1" aria-label="Кнопка просмотра текста отзыва">
+								<span class="review-card__button-text is-active">Читать дальше</span>
+								<span class="review-card__button-text">Скрыть</span>
+							</label>
+							<!-- <button class="review-card__button" type="button">
+									Читать дальше
+								</button> -->
+
+							<header class="review-card__header">
+								<h4 class="review-card__header-title" data-js-review-locattion>
+									пр. Просвещения, д.&nbsp;74&nbsp;корп.&nbsp;2&nbsp;лит. А
+								</h4>
+
+								<div class="review-card__header-content">
+									<img class="review-card__image" src="./images/reviews/temple-of-review-image.webp" width="56"
+										height="56" alt="Фото СТО" loading="lazy" data-js-review-image>
+
+									<div class="review-card__description">
+										<p class="review-card__text" data-js-review-set-services>
+											Шиномонтаж, СТО, Мойка
+										</p>
+
+										<p class="review-card__text review-card__text--small">
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span class="review-card__text review-card__text--color-dark" data-js-review-rating>
+												4,7
+											</span>
+											<span data-js-review-quantity>
+												65 отзывов
+											</span>
+										</p>
+									</div>
+								</div>
+							</header>
+
+							<div class="review-card__body">
+								<h4 class="review-card__user-name" data-js-review-user-name>
+									Александр
+								</h4>
+
+								<div class="review-card__feature">
+									<div data-js-review-rating-stars>
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+									</div>
+
+									<time class="review-card__date" datetime="2022-02-11" data-js-review-date>11.02.2022</time>
+								</div>
+
+								<div class="review-card__review review-card__text">
+									<p data-js-review-user-text>
+										Вчера по&nbsp;записи попал к&nbsp;своему проверенному и&nbsp;опытному мастеру &mdash; Алиму
+										Ганиеву. Всё быстро
+										<br>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ut ad molestiae ipsum sapiente
+										earum rem illo nihil doloribus, laudantium vitae architecto nulla enim tempora minima, eveniet,
+										blanditiis harum dolorem. arum dolorem.arum
+									</p>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="swiper-slide reviews__slider-item">
+						<article class="review-card" id="review-2">
+							<h3 class="visually-hidden">Отзыв клиента</h3>
+
+							<input class="review-card__button-switcher" id="rewiew-switcher-2" type="checkbox">
+							<label class="review-card__button" for="rewiew-switcher-2" aria-label="Кнопка просмотра текста отзыва">
+								<span class="review-card__button-text is-active">Читать дальше</span>
+								<span class="review-card__button-text">Скрыть</span>
+							</label>
+
+							<header class="review-card__header">
+								<h4 class="review-card__header-title" data-js-review-locattion>
+									пр. Просвещения, д.&nbsp;74&nbsp;корп.&nbsp;2&nbsp;лит. А
+								</h4>
+
+								<div class="review-card__header-content">
+									<img class="review-card__image" src="./images/reviews/temple-of-review-image.webp" width="56"
+										height="56" alt="Фото СТО" loading="lazy" data-js-review-image>
+
+									<div class="review-card__description">
+										<p class="review-card__text" data-js-review-set-services>
+											Шиномонтаж, СТО, Мойка
+										</p>
+
+										<p class="review-card__text review-card__text--small">
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span class="review-card__text review-card__text--color-dark" data-js-review-rating>
+												4,7
+											</span>
+											<span data-js-review-quantity>
+												65 отзывов
+											</span>
+										</p>
+									</div>
+								</div>
+							</header>
+
+							<div class="review-card__body">
+								<h4 class="review-card__user-name" data-js-review-user-name>
+									Александр
+								</h4>
+
+								<div class="review-card__feature">
+									<div data-js-review-rating-stars>
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+									</div>
+
+									<time class="review-card__date" datetime="2022-02-11" data-js-review-date>11.02.2022</time>
+								</div>
+
+								<div class="review-card__review review-card__text">
+									<p data-js-review-user-text>
+										Вчера по&nbsp;записи попал к&nbsp;своему проверенному и&nbsp;опытному мастеру &mdash; Алиму
+										Ганиеву. Всё быстро
+										<br>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ut ad molestiae ipsum sapiente
+										earum rem illo nihil doloribus, laudantium vitae architecto nulla enim tempora minima, eveniet,
+										blanditiis harum dolorem. arum dolorem.arum
+									</p>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="swiper-slide reviews__slider-item">
+						<article class="review-card" id="review-3">
+							<h3 class="visually-hidden">Отзыв клиента</h3>
+
+							<input class="review-card__button-switcher" id="rewiew-switcher-3" type="checkbox">
+							<label class="review-card__button" for="rewiew-switcher-3" aria-label="Кнопка просмотра текста отзыва">
+								<span class="review-card__button-text is-active">Читать дальше</span>
+								<span class="review-card__button-text">Скрыть</span>
+							</label>
+
+							<header class="review-card__header">
+								<h4 class="review-card__header-title" data-js-review-locattion>
+									пр. Просвещения, д.&nbsp;74&nbsp;корп.&nbsp;2&nbsp;лит. А
+								</h4>
+
+								<div class="review-card__header-content">
+									<img class="review-card__image" src="./images/reviews/temple-of-review-image.webp" width="56"
+										height="56" alt="Фото СТО" loading="lazy" data-js-review-image>
+
+									<div class="review-card__description">
+										<p class="review-card__text" data-js-review-set-services>
+											Шиномонтаж, СТО, Мойка
+										</p>
+
+										<p class="review-card__text review-card__text--small">
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span class="review-card__text review-card__text--color-dark" data-js-review-rating>
+												4,7
+											</span>
+											<span data-js-review-quantity>
+												65 отзывов
+											</span>
+										</p>
+									</div>
+								</div>
+							</header>
+
+							<div class="review-card__body">
+								<h4 class="review-card__user-name" data-js-review-user-name>
+									Александр
+								</h4>
+
+								<div class="review-card__feature">
+									<div data-js-review-rating-stars>
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+									</div>
+
+									<time class="review-card__date" datetime="2022-02-11" data-js-review-date>11.02.2022</time>
+								</div>
+
+								<div class="review-card__review review-card__text">
+									<p data-js-review-user-text>
+										Вчера по&nbsp;записи попал к&nbsp;своему проверенному и&nbsp;опытному мастеру &mdash; Алиму
+										Ганиеву. Всё быстро
+										<br>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ut ad molestiae ipsum sapiente
+										earum rem illo nihil doloribus, laudantium vitae architecto nulla enim tempora minima, eveniet,
+										blanditiis harum dolorem. arum dolorem.arum
+									</p>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="swiper-slide reviews__slider-item">
+						<article class="review-card" id="review-4">
+							<h3 class="visually-hidden">Отзыв клиента</h3>
+
+							<input class="review-card__button-switcher" id="rewiew-switcher-4" type="checkbox">
+							<label class="review-card__button" for="rewiew-switcher-4" aria-label="Кнопка просмотра текста отзыва">
+								<span class="review-card__button-text is-active">Читать дальше</span>
+								<span class="review-card__button-text">Скрыть</span>
+							</label>
+
+							<header class="review-card__header">
+								<h4 class="review-card__header-title" data-js-review-locattion>
+									пр. Просвещения, д.&nbsp;74&nbsp;корп.&nbsp;2&nbsp;лит. А
+								</h4>
+
+								<div class="review-card__header-content">
+									<img class="review-card__image" src="./images/reviews/temple-of-review-image.webp" width="56"
+										height="56" alt="Фото СТО" loading="lazy" data-js-review-image>
+
+									<div class="review-card__description">
+										<p class="review-card__text" data-js-review-set-services>
+											Шиномонтаж, СТО, Мойка
+										</p>
+
+										<p class="review-card__text review-card__text--small">
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span class="review-card__text review-card__text--color-dark" data-js-review-rating>
+												4,7
+											</span>
+											<span data-js-review-quantity>
+												65 отзывов
+											</span>
+										</p>
+									</div>
+								</div>
+							</header>
+
+							<div class="review-card__body">
+								<h4 class="review-card__user-name" data-js-review-user-name>
+									Александр
+								</h4>
+
+								<div class="review-card__feature">
+									<div data-js-review-rating-stars>
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+									</div>
+
+									<time class="review-card__date" datetime="2022-02-11" data-js-review-date>11.02.2022</time>
+								</div>
+
+								<div class="review-card__review review-card__text">
+									<p data-js-review-user-text>
+										Вчера по&nbsp;записи попал к&nbsp;своему проверенному и&nbsp;опытному мастеру &mdash; Алиму
+										Ганиеву. Всё быстро
+										<br>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ut ad molestiae ipsum sapiente
+										earum rem illo nihil doloribus, laudantium vitae architecto nulla enim tempora minima, eveniet,
+										blanditiis harum dolorem. arum dolorem.arum
+									</p>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="swiper-slide reviews__slider-item">
+						<article class="review-card" id="review-5">
+							<h3 class="visually-hidden">Отзыв клиента</h3>
+
+							<input class="review-card__button-switcher" id="rewiew-switcher-5" type="checkbox">
+							<label class="review-card__button" for="rewiew-switcher-5" aria-label="Кнопка просмотра текста отзыва">
+								<span class="review-card__button-text is-active">Читать дальше</span>
+								<span class="review-card__button-text">Скрыть</span>
+							</label>
+
+							<header class="review-card__header">
+								<h4 class="review-card__header-title" data-js-review-locattion>
+									пр. Просвещения, д.&nbsp;74&nbsp;корп.&nbsp;2&nbsp;лит. А
+								</h4>
+
+								<div class="review-card__header-content">
+									<img class="review-card__image" src="./images/reviews/temple-of-review-image.webp" width="56"
+										height="56" alt="Фото СТО" loading="lazy" data-js-review-image>
+
+									<div class="review-card__description">
+										<p class="review-card__text" data-js-review-set-services>
+											Шиномонтаж, СТО, Мойка
+										</p>
+
+										<p class="review-card__text review-card__text--small">
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span class="review-card__text review-card__text--color-dark" data-js-review-rating>
+												4,7
+											</span>
+											<span data-js-review-quantity>
+												65 отзывов
+											</span>
+										</p>
+									</div>
+								</div>
+							</header>
+
+							<div class="review-card__body">
+								<h4 class="review-card__user-name" data-js-review-user-name>
+									Александр
+								</h4>
+
+								<div class="review-card__feature">
+									<div data-js-review-rating-stars>
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+									</div>
+
+									<time class="review-card__date" datetime="2022-02-11" data-js-review-date>11.02.2022</time>
+								</div>
+
+								<div class="review-card__review review-card__text">
+									<p data-js-review-user-text>
+										Вчера по&nbsp;записи попал к&nbsp;своему проверенному и&nbsp;опытному мастеру &mdash; Алиму
+										Ганиеву. Всё быстро
+										<br>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ut ad molestiae ipsum sapiente
+										earum rem illo nihil doloribus, laudantium vitae architecto nulla enim tempora minima, eveniet,
+										blanditiis harum dolorem. arum dolorem.arum
+									</p>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="swiper-slide reviews__slider-item">
+						<article class="review-card" id="review-6">
+							<h3 class="visually-hidden">Отзыв клиента</h3>
+
+							<input class="review-card__button-switcher" id="rewiew-switcher-6" type="checkbox">
+							<label class="review-card__button" for="rewiew-switcher-6" aria-label="Кнопка просмотра текста отзыва">
+								<span class="review-card__button-text is-active">Читать дальше</span>
+								<span class="review-card__button-text">Скрыть</span>
+							</label>
+
+							<header class="review-card__header">
+								<h4 class="review-card__header-title" data-js-review-locattion>
+									пр. Просвещения, д.&nbsp;74&nbsp;корп.&nbsp;2&nbsp;лит. А
+								</h4>
+
+								<div class="review-card__header-content">
+									<img class="review-card__image" src="./images/reviews/temple-of-review-image.webp" width="56"
+										height="56" alt="Фото СТО" loading="lazy" data-js-review-image>
+
+									<div class="review-card__description">
+										<p class="review-card__text" data-js-review-set-services>
+											Шиномонтаж, СТО, Мойка
+										</p>
+
+										<p class="review-card__text review-card__text--small">
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span class="review-card__text review-card__text--color-dark" data-js-review-rating>
+												4,7
+											</span>
+											<span data-js-review-quantity>
+												65 отзывов
+											</span>
+										</p>
+									</div>
+								</div>
+							</header>
+
+							<div class="review-card__body">
+								<h4 class="review-card__user-name" data-js-review-user-name>
+									Александр
+								</h4>
+
+								<div class="review-card__feature">
+									<div data-js-review-rating-stars>
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon is-active" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+
+										<svg class="review-card__rating-icon" width="14" height="15" viewBox="0 0 14 15">
+											<use xlink:href="./images/icons/sprite-icons.svg#star-rating-empty"></use>
+										</svg>
+									</div>
+
+									<time class="review-card__date" datetime="2022-02-11" data-js-review-date>11.02.2022</time>
+								</div>
+
+								<div class="review-card__review review-card__text">
+									<p data-js-review-user-text>
+										Вчера по&nbsp;записи попал к&nbsp;своему проверенному и&nbsp;опытному мастеру &mdash; Алиму
+										Ганиеву. Всё быстро
+										<br>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ut ad molestiae ipsum sapiente
+										earum rem illo nihil doloribus, laudantium vitae architecto nulla enim tempora minima, eveniet,
+										blanditiis harum dolorem. arum dolorem.arum
+									</p>
+								</div>
+							</div>
+						</article>
+					</li>
+				</ul>
+			</div>
+
+			<div class="reviews-controls">
+				<div class="reviews-controls__prev"></div>
+				<div class="reviews-controls__pagination"></div>
+				<div class="reviews-controls__next"></div>
+			</div>
+		</section>
+
 		<section class="our-clients section container" aria-labelledby="our-clients-title">
 			<h2 class="section__title h3" id="our-clients-title">
 				Наши клиенты
@@ -983,7 +1521,6 @@
 				</div>
 			</div>
 		</section>
-
 
 		<section class="advantages section container" aria-labelledby="advantages-title">
 			<h2 class="section__title h3" id="advantages-title">
@@ -1070,7 +1607,6 @@
 			</div>
 
 		</section>
-
 
 		<section class="certificates section container" aria-labelledby="certificates-title">
 			<h2 class="section__title h3" id="certificates-title">
@@ -1277,6 +1813,32 @@
 	<script src="./libs/swiper/swiper-bundle.min.js"></script>
 
 	<script>
+		const reviewsSlider = new Swiper(".reviews__slider", {
+			loop: true,
+			centeredSlides: true,
+			spaceBetween: 10,
+			slidesPerView: 1,
+			pagination: {
+				el: ".reviews-controls__pagination",
+				type: "fraction",
+			},
+			navigation: {
+				nextEl: ".reviews-controls__next",
+				prevEl: ".reviews-controls__prev",
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: "auto",
+					simulateTouch: false,
+				},
+				1024: {
+					slidesPerView: "auto",
+					simulateTouch: false,
+					spaceBetween: 24,
+				}
+			}
+		});
+
 		const clientsSlider = new Swiper(".our-clients__slider", {
 			loop: true,
 			slidesPerView: "auto",

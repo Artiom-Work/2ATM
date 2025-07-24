@@ -1,0 +1,73 @@
+@use "../../healpers" as *;
+/* Styles for block reviews-controls (reviews-slider). Part of section reviews. source -- home page */
+.reviews-controls {
+  @include flex-space-between;
+
+  position: relative;
+  max-width: rem(138);
+  width: 100%;
+  margin-inline: auto;
+  color: var(--text-color-dark-secondary) !important;
+
+  span {
+    color: var(--text-color-dark-secondary) !important;
+  }
+
+  &__pagination {
+    text-align: center;
+  }
+
+  &__next,
+  &__prev {
+    @include square(rem(24));
+    @include flex-center(true);
+
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    border-radius: rem(2);
+    transition-duration: var(--transition-duration) !important;
+    color: currentColor;
+    background-color: var(--color-light);
+
+    @include hover {
+      filter: brightness(90%);
+    }
+
+    @include active {
+      scale: 0.9;
+      filter: brightness(90%);
+    }
+
+    &::before {
+      @include square(rem(10));
+
+      position: absolute;
+      content: "";
+      border-left: rem(2) solid currentColor;
+      border-bottom: rem(2) solid currentColor;
+    }
+
+    &::after {
+      @include abs-center;
+      @include square(rem(44));
+
+      content: "";
+    }
+  }
+
+  &__prev {
+    &::before {
+      rotate: 45deg;
+      translate: 25% 0;
+    }
+  }
+
+  &__next {
+    &::before {
+      rotate: 225deg;
+      translate: -25% 0;
+    }
+  }
+}

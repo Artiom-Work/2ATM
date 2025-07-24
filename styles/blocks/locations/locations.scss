@@ -1,9 +1,9 @@
 @use "../../healpers" as *;
+/* Section locations. Component for the user to select a suitable service on the map. sourse home page */
 @use "search";
 @use "locations-filter";
 @use "locations-card";
 @use "map-block";
-/* Component for the user to select a suitable service on the map */
 .locations {
   --locationScrollThumbColor: var(--color-gray-400);
   --locationScrollThumbColorHover: var(--color-gray-500);
@@ -124,4 +124,5 @@
   }
 }
 /*  ===================================  */
+/*  =======END section locations=======  */
 /*  ===================================  */
