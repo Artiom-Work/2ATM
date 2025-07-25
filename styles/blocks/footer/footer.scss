@@ -1,6 +1,6 @@
 @use "../../healpers" as *;
 @use "footer-svc-links";
-/* Block footer */
+/* Block footer . For all pages.*/
 .footer {
   background-color: var(--color-gray-800);
   color: var(--color-white-opacity-35);
@@ -12,7 +12,7 @@
     grid-template-columns: auto auto;
     grid-template-rows: repeat(2, auto);
     row-gap: fluid(49, 31);
-    column-gap: rem(26);
+    column-gap: rem(74);
   }
 
   &__heading {

@@ -2343,6 +2343,85 @@ button[aria-label]::before {
 /*  ===================================  */
 /*  =========END section faq===========  */
 /*  ===================================  */
+/* Section appointment-choose */
+.appointment-choose {
+  color: var(--text-color-light);
+}
+.appointment-choose__wrapper {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-gray-800);
+  width: 100%;
+  min-height: 8.625rem;
+  padding-block: 0.625rem;
+  padding-inline: 10.4375rem 14.125rem;
+  border-radius: var(--border-radius-small);
+}
+.appointment-choose__title {
+  font-size: clamp(1.25rem, 1.0174418605rem + 0.9302325581vw, 1.75rem);
+  line-height: 1.35;
+  margin-right: 4.375rem;
+}
+.appointment-choose__image {
+  width: 5.375rem;
+  height: 6.75rem;
+}
+.appointment-choose__image-wrapper {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: end;
+  width: 5.375rem;
+  height: 7.375rem;
+  margin-right: 1.375rem;
+}
+.appointment-choose__buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+@media (width <= 100.06125rem) {
+  .appointment-choose__wrapper {
+    padding-inline: 1.25rem;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .appointment-choose__image-wrapper {
+    margin-right: 0;
+  }
+  .appointment-choose__title {
+    margin-right: 0;
+  }
+}
+@media (width <= 63.99875rem) {
+  .appointment-choose__wrapper {
+    padding-block: 1.875rem;
+    flex-direction: column;
+    max-width: 34.375rem;
+    margin-inline: auto;
+    gap: 2.125rem;
+  }
+  .appointment-choose__title {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    text-align: center;
+    max-width: 15.625rem;
+    text-transform: uppercase;
+  }
+  .appointment-choose__image-wrapper {
+    align-items: start;
+  }
+  .appointment-choose__buttons {
+    max-width: 11.6875rem;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.625rem;
+  }
+}
+/*  ===================================  */
+/*  ======END appointment-choose=======  */
+/*  ===================================  */
 /* Navigation footer section. part of footer */
 .footer-svc-links__heading {
   font-size: 1rem;
@@ -2396,7 +2475,7 @@ button[aria-label]::before {
   grid-template-columns: auto auto;
   grid-template-rows: repeat(2, auto);
   row-gap: clamp(1.9375rem, 1.414244186rem + 2.0930232558vw, 3.0625rem);
-  column-gap: 1.625rem;
+  column-gap: 4.625rem;
 }
 .footer__heading {
   max-width: 21.875rem;

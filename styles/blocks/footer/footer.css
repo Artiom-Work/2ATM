@@ -39,7 +39,7 @@
     gap: 0.875rem 1.5rem;
   }
 }
-/* Block footer */
+/* Block footer . For all pages.*/
 .footer {
   background-color: var(--color-gray-800);
   color: var(--color-white-opacity-35);
@@ -51,7 +51,7 @@
   grid-template-columns: auto auto;
   grid-template-rows: repeat(2, auto);
   row-gap: clamp(1.9375rem, 1.414244186rem + 2.0930232558vw, 3.0625rem);
-  column-gap: 1.625rem;
+  column-gap: 4.625rem;
 }
 .footer__heading {
   max-width: 21.875rem;
