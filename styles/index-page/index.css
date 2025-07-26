@@ -482,6 +482,23 @@ button[aria-label]::before {
   will-change: transform;
   scale: 0.97;
 }
+.button__icon--tg {
+  width: 1.75rem;
+  height: 1.4375rem;
+  fill: currentColor;
+}
+.button--entry-tg {
+  display: flex;
+  align-items: center;
+  column-gap: 1.375rem;
+  min-height: clamp(3.125rem, 2.2529069767rem + 3.488372093vw, 5rem);
+  padding-inline: 0.96875rem 0.84375rem;
+  font-size: clamp(0.9375rem, 0.7921511628rem + 0.5813953488vw, 1.25rem);
+  line-height: 1.3;
+  border-radius: var(--border-radius-small);
+  color: var(--color-light);
+  background-color: var(--color-blue-light);
+}
 .button--accent-bg {
   background-color: var(--color-accent);
 }

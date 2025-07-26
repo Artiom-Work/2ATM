@@ -1,0 +1,138 @@
+@use "../../healpers" as *;
+/* Section app-entry */
+.app-entry {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    row-gap: rem(34);
+  }
+
+  &__title {
+    font-size: rem(24);
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__image {
+    &-wrapper {
+      @include flex-center(true);
+
+      width: rem(308);
+      height: rem(308);
+    }
+    width: rem(308);
+    height: rem(308);
+  }
+
+  &__text {
+    font-size: rem(18);
+    line-height: 1.5;
+
+    p:not(:last-child) {
+      margin-bottom: rem(16);
+    }
+  }
+
+  &__button {
+    width: 100%;
+  }
+}
+@include mobile-s-media-above {
+  .app-entry {
+    &__button {
+      justify-self: center;
+      width: unset;
+      text-transform: uppercase;
+    }
+  }
+}
+@include mobile-media-above {
+  .app-entry {
+    &__title {
+      max-width: rem(410);
+    }
+
+    &__text {
+      max-width: rem(510);
+      text-align: center;
+    }
+
+    &_button {
+      grid-area: button;
+    }
+  }
+}
+@include tablet-media-above {
+  .app-entry {
+    &__wrapper {
+      display: grid;
+      grid-template-columns: 1fr minmax(auto, rem(308));
+      grid-template-rows: repeat(3, auto);
+      grid-template-areas:
+        "title image"
+        "text image"
+        "button image";
+      border: var(--border-light);
+      border-radius: var(--border-radius-small);
+    }
+
+    &__title {
+      justify-self: end;
+      grid-area: title;
+      justify-self: center;
+      max-width: rem(410);
+      padding-block: rem(20) 0;
+    }
+
+    &__image {
+      &-wrapper {
+        grid-area: image;
+        justify-self: center;
+      }
+    }
+
+    &__text {
+      grid-area: text;
+      justify-self: center;
+      max-width: rem(550);
+      padding-inline: rem(20);
+    }
+
+    &__button {
+      grid-area: button;
+      margin-block: 0 rem(20);
+    }
+  }
+}
+@include laptop-media-above {
+  .app-entry {
+    &__image {
+      &-wrapper {
+        width: rem(535);
+        height: rem(480);
+      }
+
+      width: rem(511);
+      height: rem(440);
+    }
+
+    &__title {
+      padding-block: rem(40) 0;
+    }
+
+    &__text {
+      text-align: start;
+    }
+
+    &__button {
+      margin-block: 0 rem(40);
+    }
+  }
+}
+
+/*  ===================================  */
+/*  =============END app-entry=========  */
+/*  ===================================  */

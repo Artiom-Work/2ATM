@@ -27,6 +27,31 @@
     scale: 0.97;
   }
 
+  &__text {
+    &--tg {
+    }
+  }
+
+  &__icon {
+    &--tg {
+      width: rem(28);
+      height: rem(23);
+      fill: currentColor;
+    }
+  }
+
+  &--entry-tg {
+    display: flex;
+    align-items: center;
+    column-gap: rem(22);
+    min-height: fluid(80, 50);
+    padding-inline: rem(15.5) rem(13.5);
+    font-size: fluid(20, 15);
+    line-height: 1.3;
+    border-radius: var(--border-radius-small);
+    color: var(--color-light);
+    background-color: var(--color-blue-light);
+  }
   &--accent-bg {
     background-color: var(--color-accent);
   }
@@ -56,3 +81,6 @@
 }
 /*  ===================================  */
 /*  ===================================  */
+
+.button--entry-tg {
+}

@@ -1,0 +1,109 @@
+/* Section app-entry */
+.app-entry__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2.125rem;
+}
+.app-entry__title {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+}
+.app-entry__image {
+  width: 19.25rem;
+  height: 19.25rem;
+}
+.app-entry__image-wrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 19.25rem;
+  height: 19.25rem;
+}
+.app-entry__text {
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+.app-entry__text p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.app-entry__button {
+  width: 100%;
+}
+
+@media (width > 30.06125rem) {
+  .app-entry__button {
+    justify-self: center;
+    width: unset;
+    text-transform: uppercase;
+  }
+}
+@media (width > 47.99875rem) {
+  .app-entry__title {
+    max-width: 25.625rem;
+  }
+  .app-entry__text {
+    max-width: 31.875rem;
+    text-align: center;
+  }
+  .app-entry_button {
+    grid-area: button;
+  }
+}
+@media (width > 63.99875rem) {
+  .app-entry__wrapper {
+    display: grid;
+    grid-template-columns: 1fr minmax(auto, 19.25rem);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "title image" "text image" "button image";
+    border: var(--border-light);
+    border-radius: var(--border-radius-small);
+  }
+  .app-entry__title {
+    justify-self: end;
+    grid-area: title;
+    justify-self: center;
+    max-width: 25.625rem;
+    padding-block: 1.25rem 0;
+  }
+  .app-entry__image-wrapper {
+    grid-area: image;
+    justify-self: center;
+  }
+  .app-entry__text {
+    grid-area: text;
+    justify-self: center;
+    max-width: 34.375rem;
+    padding-inline: 1.25rem;
+  }
+  .app-entry__button {
+    grid-area: button;
+    margin-block: 0 1.25rem;
+  }
+}
+@media (width > 81.31125rem) {
+  .app-entry__image {
+    width: 31.9375rem;
+    height: 27.5rem;
+  }
+  .app-entry__image-wrapper {
+    width: 33.4375rem;
+    height: 30rem;
+  }
+  .app-entry__title {
+    padding-block: 2.5rem 0;
+  }
+  .app-entry__text {
+    text-align: start;
+  }
+  .app-entry__button {
+    margin-block: 0 2.5rem;
+  }
+}
+/*  ===================================  */
+/*  =============END app-entry=========  */
+/*  ===================================  */
+
+/*# sourceMappingURL=app-entry.css.map */
