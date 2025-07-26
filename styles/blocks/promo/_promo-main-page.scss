@@ -2,8 +2,8 @@
 /* File with styles for promo block in the main page */
 .promo {
   --promoBackgroundHeight: #{rem(500)};
-  --promoMainImageWidth: rem(500);
-  --promoMainImageHeight: rem(500);
+  --promoMainImageWidth: #{rem(500)};
+  --promoMainImageHeight: #{rem(500)};
   --promoMinHeight: var(--promoBackgroundHeight);
   --promoPaddingBlock: #{fluid(100, 50)};
 
@@ -157,7 +157,7 @@
 @include mobile-media {
   .promo {
     --promoBackgroundHeight: #{rem(500)};
-    --promoMinHeight: rem(720);
+    --promoMinHeight: #{rem(720)};
 
     .container {
       --container-padding-x: #{rem(12)};
@@ -209,7 +209,7 @@
 }
 @include mobile-s-media {
   .promo {
-    --promoMinHeight: rem(660);
+    --promoMinHeight: #{rem(660)};
     --promoBackgroundHeight: #{rem(484)};
     --promoPaddingBlock: #{rem(40)};
   }

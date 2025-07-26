@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Search block. ( form + input + button) .part of block locations */
 .search {
   --searchBlockHeight: 2.375rem;
@@ -64,64 +63,6 @@
 .search__icon {
   fill: transparent;
   stroke: var(--searchIconColor);
-}
-
-/* Filter services in the block locations. ( form and input type ratios )*/
-.locations-filter__border {
-  display: flex;
-  align-items: center;
-  column-gap: 1.5rem;
-  outline: none;
-}
-.locations-filter__element {
-  display: flex;
-  align-items: center;
-  column-gap: 0.6875rem;
-  outline: var(--border-light);
-  border-radius: var(--border-radius-small);
-  padding: 0.875rem 0.6875rem 0.75rem 0.6875rem;
-  font-weight: 700;
-  font-size: 0.9375rem;
-  line-height: 1.1;
-  text-transform: uppercase;
-  transition-duration: var(--transition-duration) !important;
-  will-change: transform;
-}
-@media (any-hover: hover) {
-  .locations-filter__element:hover {
-    filter: opacity(70%);
-    outline: var(--border);
-  }
-}
-@media (any-hover: hover) and (any-hover: none) {
-  .locations-filter__element:active {
-    filter: opacity(70%);
-    outline: var(--border);
-  }
-}
-.locations-filter__element:active {
-  scale: 0.98;
-}
-.locations-filter__input {
-  position: relative;
-  width: 1.25rem;
-  height: 1.25rem;
-}
-.locations-filter__input::before {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  content: "";
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  outline: var(--border);
-  border-radius: 0.125rem;
-  background-color: var(--color-light);
-  cursor: pointer;
-}
-.locations-filter__input:checked::before {
-  content: "✔";
 }
 
 /* Styles for location-card . Source - block locations */
@@ -250,15 +191,12 @@
   left: 40%;
 }
 
-/* Section locations. Component for the user to select a suitable service on the map. sourse home page */
+/* Section locations-short. Small version block locations. */
 .locations {
   --locationScrollThumbColor: var(--color-gray-400);
   --locationScrollThumbColorHover: var(--color-gray-500);
   --locationScrollBgColor: var(--color-gray-90);
   --locationListHeight: 45rem;
-}
-.locations__filter {
-  margin-block: 0 clamp(0.625rem, 0.0436046512rem + 2.3255813953vw, 1.875rem);
 }
 .locations__body {
   height: var(--locationListHeight);
@@ -330,11 +268,6 @@
     overflow: hidden;
   }
 }
-@media (width <= 63.99875rem) {
-  .locations__filter {
-    margin-block: 0 0.625rem;
-  }
-}
 @media (width <= 47.99875rem) {
   .locations {
     --locationListHeight: 41.875rem;
@@ -346,24 +279,7 @@
   }
 }
 /*  ===================================  */
-/*  =======END section locations=======  */
-/*  ===================================  */
-/* Styles for section online-registration.( home page. block containing cervices map )*/
-.online-registration {
-  --section-margin-y: 5rem;
-}
-.online-registration__subtitle {
-  max-width: 48.625rem;
-}
-.online-registration__buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 1.875rem;
-}
-
-/*  ===================================  */
-/*  ==END section online-registration==  */
+/*  ====END section-short locations====  */
 /*  ===================================  */
 
-/*# sourceMappingURL=online-registration.css.map */
+/*# sourceMappingURL=locations-short.css.map */

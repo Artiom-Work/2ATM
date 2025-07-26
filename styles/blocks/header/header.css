@@ -257,7 +257,7 @@
     display: grid;
     grid-template-columns: 1fr auto auto;
     grid-template-areas: "logo buttons burger";
-    row-gap: 1rem;
+    row-gap: 0.75rem;
   }
   .header__buttons {
     grid-area: buttons;

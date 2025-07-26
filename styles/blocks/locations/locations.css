@@ -169,27 +169,31 @@
   color: var(--text-color-dark-secondary);
 }
 .location-card__address {
+  flex-grow: 1;
+}
+.location-card__address-button {
   padding: 0;
   background-color: transparent;
   border: none;
-  display: inline-flex;
-  flex-grow: 1;
-  text-align: start;
+  color: var(--text-color-dark);
+  cursor: pointer;
   letter-spacing: var(--letter-spacing);
+  line-height: 1.3;
   transition-duration: var(--transition-duration) !important;
 }
 @media (any-hover: hover) {
-  .location-card__address:hover {
+  .location-card__address-button:hover {
     filter: opacity(0.6);
   }
 }
 @media (any-hover: hover) and (any-hover: none) {
-  .location-card__address:active {
+  .location-card__address-button:active {
     filter: opacity(0.6);
   }
 }
-.location-card__address:active {
+.location-card__address-button:active {
   filter: opacity(0.3);
+  will-change: transform;
 }
 .location-card__text-block {
   font-size: 1rem;

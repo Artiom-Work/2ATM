@@ -1,0 +1,63 @@
+@use "../../healpers" as *;
+/* Section page-heading */
+.page-heading {
+  --breadcrumbsColor: var(--color-gray-500);
+  --breadcrumbsGap: #{fluid(50, 28)};
+
+  padding-block: rem(24) rem(47);
+  color: var(--breadcrumbsColor);
+  &__breadcrumbs {
+    margin-bottom: rem(18);
+
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: var(--breadcrumbsGap);
+    }
+
+    &-item {
+      position: relative;
+
+      &:not(:last-child) {
+        &::after {
+          position: absolute;
+          content: "−";
+          right: calc((var(--breadcrumbsGap) / 2) * -1 - rem(5));
+          top: 0.06em;
+        }
+      }
+
+      &:last-child {
+        a {
+          opacity: 0.7;
+          pointer-events: none;
+        }
+      }
+    }
+
+    &-link {
+      font-size: fluid(18, 15);
+      color: currentColor;
+      line-height: 1.5;
+    }
+  }
+
+  &__page-name {
+    color: var(--color-dark);
+  }
+}
+@include tablet-media {
+  .page-heading {
+    padding-block: rem(20) rem(40);
+
+    &__breadcrumbs {
+      margin-bottom: rem(10);
+      &-link {
+        line-height: 1.4;
+      }
+    }
+  }
+}
+/*  ===================================  */
+/*  ==========END page-heading=========  */
+/*  ===================================  */

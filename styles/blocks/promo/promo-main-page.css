@@ -1,8 +1,8 @@
 /* File with styles for promo block in the main page */
 .promo {
   --promoBackgroundHeight: 31.25rem;
-  --promoMainImageWidth: rem(500);
-  --promoMainImageHeight: rem(500);
+  --promoMainImageWidth: 31.25rem;
+  --promoMainImageHeight: 31.25rem;
   --promoMinHeight: var(--promoBackgroundHeight);
   --promoPaddingBlock: clamp(3.125rem, 1.6715116279rem + 5.8139534884vw, 6.25rem);
   color: var(--text-color-light);
@@ -125,7 +125,7 @@
 @media (width <= 47.99875rem) {
   .promo {
     --promoBackgroundHeight: 31.25rem;
-    --promoMinHeight: rem(720);
+    --promoMinHeight: 45rem;
   }
   .promo .container {
     --container-padding-x: 0.75rem;
@@ -170,7 +170,7 @@
 }
 @media (width <= 30.06125rem) {
   .promo {
-    --promoMinHeight: rem(660);
+    --promoMinHeight: 41.25rem;
     --promoBackgroundHeight: 30.25rem;
     --promoPaddingBlock: 2.5rem;
   }

@@ -15,11 +15,14 @@
       opacity: 0;
       pointer-events: none;
 
-      &:checked + .faq-accordion__question .faq-accordion__question-icon {
+      &:checked
+        + .faq-accordion__content
+        .faq-accordion__question
+        .faq-accordion__question-icon {
         rotate: 135deg;
       }
 
-      &:checked ~ .faq-accordion__answer {
+      &:checked + .faq-accordion__content .faq-accordion__answer {
         max-height: var(--faqAccordionAnswerMaxHeight);
         padding-top: 0;
       }
