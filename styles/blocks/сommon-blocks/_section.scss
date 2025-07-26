@@ -4,6 +4,12 @@
 .section {
   margin-bottom: var(--section-margin-y);
 
+  &--big-margin {
+    margin-bottom: var(--section-margin-y-big);
+  }
+  &--big-to-small-margin {
+    margin-bottom: var(--section-margin-y-big-to-small);
+  }
   &__title {
     margin-block: 0 fluid(50, 20);
     text-align: center;

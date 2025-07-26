@@ -1534,8 +1534,8 @@
 			</h2>
 
 			<div class="advantages__slider">
-				<div class="swiper-wrapper advantages__slider-wrapper" style="grid-template-rows: auto !important;">
-					<article class="swiper-slide advantage-card">
+				<ul class="swiper-wrapper advantages__slider-wrapper">
+					<li class="swiper-slide advantage-card">
 						<img class="advantage-card__image" src="./images/advantages/clock.webp" width="60" height="60" alt="Часы"
 							loading="lazy">
 
@@ -1549,9 +1549,9 @@
 								минимизировать ваше ожидание. Все работы начинаются точно в&nbsp;срок и&nbsp;не&nbsp;затягиваются.
 							</p>
 						</div>
-					</article>
+					</li>
 
-					<article class="swiper-slide advantage-card">
+					<li class="swiper-slide advantage-card">
 						<img class="advantage-card__image" src="./images/advantages/car-over-hand.webp" width="60" height="60"
 							alt="Машина на руке" loading="lazy">
 
@@ -1566,9 +1566,9 @@
 								авто и&nbsp;уважение к&nbsp;клиентам.
 							</p>
 						</div>
-					</article>
+					</li>
 
-					<article class="swiper-slide advantage-card">
+					<li class="swiper-slide advantage-card">
 						<img class="advantage-card__image" src="./images/advantages/convenience.webp" width="60" height="60"
 							alt="Удобвтво" loading="lazy">
 
@@ -1582,11 +1582,11 @@
 								работы в&nbsp;одном месте: мойка, ТО, шиномонтаж и&nbsp;многое другое.
 							</p>
 						</div>
-					</article>
+					</li>
 
-					<article class="swiper-slide advantage-card">
-						<img class="advantage-card__image" src="./images/advantages/loupe.webp" width="60" height="60"
-							alt="Удобвтво" loading="lazy">
+					<li class="swiper-slide advantage-card">
+						<img class="advantage-card__image" src="./images/advantages/loupe.webp" width="60" height="60" alt="Лупа"
+							loading="lazy">
 
 						<h3 class="advantage-card__heading">
 							Прозрачность на&nbsp;всех этапах
@@ -1598,8 +1598,8 @@
 								честности и&nbsp;качестве обслуживания, потому что процесс полностью открыт для вас.
 							</p>
 						</div>
-					</article>
-				</div>
+					</li>
+				</ul>
 			</div>
 
 			<div class="advantages__buttons">
@@ -2043,6 +2043,7 @@
 
 		const advantagesSlider = new Swiper(".advantages__slider", {
 			slidesPerView: "auto",
+			grabCursor: true,
 			grid: {
 				rows: 1,
 			},

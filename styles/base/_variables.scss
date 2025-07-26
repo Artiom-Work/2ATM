@@ -100,6 +100,8 @@
   --container-width-big: #{rem(1920)};
   --container-padding-x: #{rem(20)};
   --section-margin-y: #{fluid(80, 40)};
+  --section-margin-y-big: #{fluid(120, 80)};
+  --section-margin-y-big-to-small: #{fluid(120, 40)};
 
   --button-height-small: #{rem(34)};
   --button-height: #{rem(42)};

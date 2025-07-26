@@ -532,7 +532,7 @@
 			</div>
 		</section>
 
-		<section class="app-entry container section" aria-labelledby="app-entry-title">
+		<section class="app-entry container section section--big-margin" aria-labelledby="app-entry-title">
 			<h2 class="visually-hidden">Новый формат записи через приложение Telegram</h2>
 
 			<div class="app-entry__wrapper">
@@ -575,6 +575,77 @@
 			</div>
 		</section>
 
+		<section class="advantages section section--big-to-small-margin container" aria-labelledby="advantages-title">
+			<h2 class="advantages__title section__title h3" id="advantages-title">
+				Наши преимущества
+			</h2>
+
+			<div class="advantages__slider">
+				<ul class="swiper-wrapper advantages__slider-wrapper">
+					<li class="swiper-slide advantage-card">
+						<img class="advantage-card__image" src="./images/advantages/marker.webp" width="60" height="60"
+							alt="Иконка отметки на карте" loading="lazy">
+
+						<h3 class="advantage-card__heading">
+							Расположение
+						</h3>
+
+						<div class="advantage-card__text">
+							<p>
+								Сеть наших шиномонтажей и&nbsp;мастерских расположена по&nbsp;всему городу и&nbsp;имеет удобные заезды,
+								парковку и&nbsp;зоны ожидания
+							</p>
+						</div>
+					</li>
+
+					<li class="swiper-slide advantage-card">
+						<img class="advantage-card__image" src="./images/advantages/price-tag.webp" width="60" height="60"
+							alt="Иконка с валютой" loading="lazy">
+
+						<h3 class="advantage-card__heading">
+							Приятная цена
+						</h3>
+
+						<div class="advantage-card__text">
+							<p>
+								Прозрачные цены без скрытых платежей. Первоклассный сервис по&nbsp;выгодным ценам.
+							</p>
+						</div>
+					</li>
+
+					<li class="swiper-slide advantage-card">
+						<img class="advantage-card__image" src="./images/advantages/clock-2.webp" width="60" height="60" alt="Часы"
+							loading="lazy">
+
+						<h3 class="advantage-card__heading">
+							Скорость
+						</h3>
+
+						<div class="advantage-card__text">
+							<p>
+								Удобная запись через Telegram. Мы&nbsp;ценим ваше время и&nbsp;отдаем автомобиль точно в&nbsp;обещанное
+								время.
+							</p>
+						</div>
+					</li>
+
+					<li class="swiper-slide advantage-card">
+						<img class="advantage-card__image" src="./images/advantages/car-over-hand.webp" width="60" height="60"
+							alt="Машина на руке" loading="lazy">
+
+						<h3 class="advantage-card__heading">
+							Качество
+						</h3>
+
+						<div class="advantage-card__text">
+							<p>
+								Современное оборудование и&nbsp;опытные мастера гарантируют быстрый и&nbsp;качественный сервис.
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
 
 		<section class="appointment-choose section container" aria-labelledby="appointment-choose-title">
 			<h2 class="visually-hidden">Выбор способа записи в мастерскую 2АТМ</h2>
@@ -753,6 +824,24 @@
 	</footer>
 
 	<script src="./libs/swiper/swiper-bundle.min.js"></script>
+
+	<script>
+
+		const ourAdvantagesSlider = new Swiper(".advantages__slider", {
+			slidesPerView: "auto",
+			grid: {
+				rows: 1,
+			},
+			spaceBetween: 10,
+			breakpoints: {
+				768: {
+					spaceBetween: 24,
+				},
+			},
+			grabCursor: true
+		});
+
+	</script>
 
 	<!-- <script type="module" src="./js/develop/index.js"></script> -->
 

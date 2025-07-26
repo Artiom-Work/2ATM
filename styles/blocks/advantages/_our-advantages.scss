@@ -1,0 +1,54 @@
+@use "../../healpers" as *;
+@use "our-advantage-card";
+/* Section advantages.Slider(our-advantage). Differences from the advantages section, in the cards.*/
+.advantages {
+  --advantagesSlidesQuantity: 4;
+  overflow-x: hidden;
+
+  &__title {
+    margin-block: 0 rem(50);
+  }
+
+  &__slider {
+    &-wrapper {
+      display: grid;
+      grid-template-rows: auto !important;
+      grid-template-columns: repeat(var(--advantagesSlidesQuantity), rem(297));
+      column-gap: rem(24);
+    }
+  }
+
+  &__buttons {
+    @include flex-center;
+
+    column-gap: rem(20);
+  }
+  &__button {
+    font-size: rem(16);
+  }
+}
+
+@include tablet-media {
+  .advantages {
+    &__slider {
+      margin-block: 0 rem(20);
+    }
+
+    &__buttons {
+      column-gap: rem(16);
+      justify-content: start;
+    }
+  }
+}
+@include mobile-media {
+  .advantages {
+    &__slider {
+      &-wrapper {
+        column-gap: rem(10);
+      }
+    }
+  }
+}
+/*  ===================================  */
+/*  =======END section advantages======  */
+/*  ===================================  */
