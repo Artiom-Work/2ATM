@@ -1,8 +1,6 @@
 @use "../../healpers" as *;
 /* Section appointment-choose */
 .appointment-choose {
-  color: var(--text-color-light);
-
   &__wrapper {
     display: flex;
     align-items: center;
@@ -15,6 +13,7 @@
   }
 
   &__title {
+    color: var(--text-color-light);
     font-size: fluid(28, 20);
     line-height: 1.35;
     margin-right: rem(70);

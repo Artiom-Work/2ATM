@@ -1482,9 +1482,6 @@ button[aria-label]::before {
 /*  =======END section advantages======  */
 /*  ===================================  */
 /* Section appointment-choose */
-.appointment-choose {
-  color: var(--text-color-light);
-}
 .appointment-choose__wrapper {
   display: flex;
   align-items: center;
@@ -1496,6 +1493,7 @@ button[aria-label]::before {
   border-radius: var(--border-radius-small);
 }
 .appointment-choose__title {
+  color: var(--text-color-light);
   font-size: clamp(1.25rem, 1.0174418605rem + 0.9302325581vw, 1.75rem);
   line-height: 1.35;
   margin-right: 4.375rem;

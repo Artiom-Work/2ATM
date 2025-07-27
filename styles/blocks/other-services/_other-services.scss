@@ -1,0 +1,34 @@
+@use "../../healpers" as *;
+@use "other-service-card";
+/* Section other-services.*/
+.other-services {
+  &__list {
+    max-width: rem(708);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: fluid(24, 10);
+  }
+}
+
+@include mobile-media {
+  .other-services {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto auto auto;
+      gap: fluid(100, 10);
+
+      &-item {
+        justify-self: end;
+
+        &:nth-child(even) {
+          justify-self: start;
+        }
+      }
+    }
+  }
+}
+/*  ===================================  */
+/*  =======END section other-services======  */
+/*  ===================================  */
