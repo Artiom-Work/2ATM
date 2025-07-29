@@ -5,7 +5,6 @@
 .overview-services {
   display: flex;
   gap: rem(24);
-  margin-block: 0 var(--section-margin-y);
 
   &__services-menu {
     .services-menu__list {

@@ -252,6 +252,8 @@
 @media (width <= 63.99875rem) {
   .header__logo {
     grid-area: logo;
+    width: 16.4375rem;
+    height: 3.375rem;
   }
   .header__general {
     display: grid;

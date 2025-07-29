@@ -1,0 +1,64 @@
+@use "../../healpers" as *;
+
+/* Styles for address-section svc-contacts.part of conponent address-info. */
+.svc-contacts {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(19);
+
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(15);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    column-gap: rem(10);
+    flex-shrink: 0;
+    width: 100%;
+    min-height: rem(48);
+
+    &-icon {
+      @include square(rem(24));
+
+      fill: var(--color-light);
+      flex-shrink: 0;
+    }
+
+    &-label {
+      max-width: rem(101);
+      width: 100%;
+      font-weight: 400;
+      font-size: rem(12);
+
+      line-height: 1.17;
+      color: var(--text-color-dark-secondary);
+    }
+
+    &-text {
+      font-size: rem(18);
+      font-weight: 600;
+      line-height: 1.5;
+      transition-duration: var(--transition-duration) !important;
+
+      &--phone-number {
+        white-space: nowrap;
+      }
+
+      &--underline {
+        cursor: pointer;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+      }
+    }
+  }
+}
+
+@include mobile-media {
+  .svc-contacts {
+    row-gap: 0;
+  }
+}

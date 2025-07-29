@@ -2,7 +2,8 @@
 
 /* Styles for buttons */
 .button {
-  --buttonColor: var(--color-blue);
+  --buttonColorBg: var(--color-blue);
+  --buttonColorBgLight: var(--color-blue-light);
 
   @include flex-center(true);
   @include fluid-text(16, 13);
@@ -11,7 +12,7 @@
   letter-spacing: var(--letter-spacing);
   font-weight: 700;
   color: var(--text-color-light);
-  background-color: var(--buttonColor);
+  background-color: var(--buttonColorBg);
   border: none;
   border-radius: var(--border-radius);
   min-height: var(--button-height);
@@ -25,6 +26,10 @@
     filter: brightness(90%);
     will-change: transform;
     scale: 0.97;
+  }
+
+  &--light-bg-color {
+    background-color: var(--buttonColorBgLight);
   }
 
   &__icon {
@@ -66,7 +71,7 @@
 }
 @include mobile-media {
   .button {
-    --buttonColor: var(--color-blue-light);
+    --buttonColorBg: var(--color-blue-light);
 
     &--light {
       min-height: var(--button-height-small);

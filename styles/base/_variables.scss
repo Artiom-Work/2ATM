@@ -28,7 +28,7 @@
   --color-gray-400: #ccc5c5;
   --color-gray-350: #c8c8c8;
   --color-gray-300: #e1dcdb;
-  // --color-gray-200: #ece4e4;
+  --color-gray-200: #ece4e4;
   --color-gray-100: #f3eded;
   --color-gray-90: #dcdcdc;
   // --color-gray-75: #f8efef;
@@ -99,8 +99,11 @@
   --container-width: #{rem(1260)};
   --container-width-big: #{rem(1920)};
   --container-padding-x: #{rem(20)};
+
   --section-margin-y: #{fluid(80, 40)};
+  --section-margin-y-to-medium: #{fluid(80, 60)};
   --section-margin-y-big: #{fluid(120, 80)};
+  --section-margin-y-big-to-medium: #{fluid(120, 60)};
   --section-margin-y-big-to-small: #{fluid(120, 40)};
 
   --button-height-small: #{rem(34)};

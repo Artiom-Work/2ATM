@@ -162,6 +162,7 @@ svg * {
   --color-gray-400: #ccc5c5;
   --color-gray-350: #c8c8c8;
   --color-gray-300: #e1dcdb;
+  --color-gray-200: #ece4e4;
   --color-gray-100: #f3eded;
   --color-gray-90: #dcdcdc;
   --color-gray-50: #fbf8f8;
@@ -215,7 +216,9 @@ svg * {
   --container-width-big: 120rem;
   --container-padding-x: 1.25rem;
   --section-margin-y: clamp(2.5rem, 1.3372093023rem + 4.6511627907vw, 5rem);
+  --section-margin-y-to-medium: clamp(3.75rem, 3.1686046512rem + 2.3255813953vw, 5rem);
   --section-margin-y-big: clamp(5rem, 3.8372093023rem + 4.6511627907vw, 7.5rem);
+  --section-margin-y-big-to-medium: clamp(3.75rem, 2.0058139535rem + 6.976744186vw, 7.5rem);
   --section-margin-y-big-to-small: clamp(2.5rem, 0.1744186047rem + 9.3023255814vw, 7.5rem);
   --button-height-small: 2.125rem;
   --button-height: 2.625rem;
@@ -454,7 +457,8 @@ button[aria-label]::before {
 /*  ===================================  */
 /* Styles for buttons */
 .button {
-  --buttonColor: var(--color-blue);
+  --buttonColorBg: var(--color-blue);
+  --buttonColorBgLight: var(--color-blue-light);
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -463,7 +467,7 @@ button[aria-label]::before {
   letter-spacing: var(--letter-spacing);
   font-weight: 700;
   color: var(--text-color-light);
-  background-color: var(--buttonColor);
+  background-color: var(--buttonColorBg);
   border: none;
   border-radius: var(--border-radius);
   min-height: var(--button-height);
@@ -483,6 +487,9 @@ button[aria-label]::before {
   filter: brightness(90%);
   will-change: transform;
   scale: 0.97;
+}
+.button--light-bg-color {
+  background-color: var(--buttonColorBgLight);
 }
 .button__icon--tg {
   width: 1.75rem;
@@ -518,7 +525,7 @@ button[aria-label]::before {
 
 @media (width <= 47.99875rem) {
   .button {
-    --buttonColor: var(--color-blue-light);
+    --buttonColorBg: var(--color-blue-light);
   }
   .button--light {
     min-height: var(--button-height-small);
@@ -556,12 +563,6 @@ button[aria-label]::before {
   height: inherit;
 }
 
-@media (width <= 63.99875rem) {
-  .logo {
-    width: 16.4375rem;
-    height: 3.375rem;
-  }
-}
 /*  ===================================  */
 /*  ===================================  */
 /* Styles for common block section */
@@ -570,6 +571,12 @@ button[aria-label]::before {
 }
 .section--big-margin {
   margin-bottom: var(--section-margin-y-big);
+}
+.section--margin-to-medium {
+  margin-bottom: var(--section-margin-y-to-medium);
+}
+.section--big-to-medium-margin {
+  margin-bottom: var(--section-margin-y-big-to-medium);
 }
 .section--big-to-small-margin {
   margin-bottom: var(--section-margin-y-big-to-small);
@@ -850,6 +857,8 @@ button[aria-label]::before {
 @media (width <= 63.99875rem) {
   .header__logo {
     grid-area: logo;
+    width: 16.4375rem;
+    height: 3.375rem;
   }
   .header__general {
     display: grid;
@@ -1115,6 +1124,7 @@ button[aria-label]::before {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  column-gap: 0.25rem;
   text-transform: uppercase;
   width: 100%;
 }
@@ -1274,7 +1284,6 @@ button[aria-label]::before {
 .overview-services {
   display: flex;
   gap: 1.5rem;
-  margin-block: 0 var(--section-margin-y);
 }
 .overview-services__services-menu .services-menu__list {
   max-width: 58.75rem;
@@ -1333,14 +1342,13 @@ button[aria-label]::before {
 /*  ===================================  */
 /* Styles from section messenger-action. sourse is home page */
 .messenger-action__wrapper {
-  background: var(--color-grad-1);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
   min-height: 22.25rem;
-  margin-bottom: var(--section-margin-y);
   color: var(--text-color-light);
+  background: var(--color-grad-1);
 }
 .messenger-action__image-wrapper {
   flex-shrink: 0;
@@ -2120,7 +2128,6 @@ button[aria-label]::before {
 /* Styles for section our clients( slider with companies logos ) . source -- home page */
 .our-clients {
   overflow-x: hidden;
-  margin-block: 0 clamp(5rem, 3.5465116279rem + 5.8139534884vw, 8.125rem);
 }
 .our-clients__slider {
   --clientsSlideWidth: 11.875rem;
@@ -2163,11 +2170,6 @@ button[aria-label]::before {
   border-radius: inherit;
 }
 
-@media (width <= 63.99875rem) {
-  .our-clients {
-    margin-block: 0 5rem;
-  }
-}
 /*  ===================================  */
 /*  =======END section our clients=====  */
 /*  ===================================  */
@@ -2286,7 +2288,7 @@ button[aria-label]::before {
 }
 
 /*  ===================================  */
-/*  =======END section certificates======  */
+/*  =======END section certificates====  */
 /*  ===================================  */
 /* Section faq and faq-accordion. sourse -- home page */
 .faq-accordion {

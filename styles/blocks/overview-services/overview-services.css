@@ -41,6 +41,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  column-gap: 0.25rem;
   text-transform: uppercase;
   width: 100%;
 }
@@ -200,7 +201,6 @@
 .overview-services {
   display: flex;
   gap: 1.5rem;
-  margin-block: 0 var(--section-margin-y);
 }
 .overview-services__services-menu .services-menu__list {
   max-width: 58.75rem;

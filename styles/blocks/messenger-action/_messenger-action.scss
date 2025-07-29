@@ -2,13 +2,12 @@
 /* Styles from section messenger-action. sourse is home page */
 .messenger-action {
   &__wrapper {
-    background: var(--color-grad-1);
     @include flex-center;
+
     gap: rem(32);
     min-height: rem(356);
-    margin-bottom: var(--section-margin-y);
-
     color: var(--text-color-light);
+    background: var(--color-grad-1);
   }
 
   &__image-wrapper {

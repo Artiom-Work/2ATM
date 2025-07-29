@@ -1,0 +1,95 @@
+@use "../../healpers" as *;
+/* Styles for block address-info-gallery. Slider with images. */
+
+.address-info-gallery {
+  --addressInfoGalleryControlsColor: var(--color-gray-500);
+  --addressInfoGalleryControlsBgColor: var(--color-gray-200);
+
+  padding-inline: rem(82);
+
+  &__slider {
+    overflow: hidden;
+    max-width: rem(1096);
+  }
+
+  &__image {
+    &-wrapper {
+      width: rem(200);
+      height: rem(130);
+    }
+
+    width: inherit;
+    height: inherit;
+  }
+
+  &__prev-slide,
+  &__next-slide {
+    @include square(rem(24));
+    @include flex-center(true);
+
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    border-radius: rem(2);
+    transition-duration: var(--transition-duration) !important;
+    color: var(--addressInfoGalleryControlsColor);
+    background-color: var(--addressInfoGalleryControlsBgColor);
+
+    &.swiper-button-disabled {
+      filter: opacity(0.5);
+      pointer-events: none;
+    }
+
+    @include hover {
+      filter: brightness(90%);
+    }
+
+    @include active {
+      scale: 0.9;
+      filter: brightness(90%);
+    }
+
+    &::before {
+      @include square(rem(10));
+
+      position: absolute;
+      content: "";
+      border-left: rem(2) solid currentColor;
+      border-bottom: rem(2) solid currentColor;
+    }
+
+    &::after {
+      @include abs-center;
+      @include square(rem(44));
+
+      content: "";
+    }
+  }
+
+  &__prev-slide {
+    right: 95%;
+
+    &::before {
+      rotate: 45deg;
+      translate: 25% 0;
+    }
+  }
+
+  &__next-slide {
+    left: 95%;
+
+    &::before {
+      rotate: 225deg;
+      translate: -25% 0;
+    }
+  }
+}
+
+@include mobile-media {
+  .address-info-gallery {
+    padding-inline: 0;
+  }
+}

@@ -71,6 +71,8 @@
   .header {
     &__logo {
       grid-area: logo;
+      width: rem(263);
+      height: rem(54);
     }
 
     &__general {
