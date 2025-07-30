@@ -2,15 +2,19 @@
 @use "svc-contacts";
 @use "svc-catalog";
 @use "address-info-gallery";
+@use "../locations/map-block";
 /* Styles for conponent address-info. Descriprion of current service card. */
 
 .address-info {
   --addressInfoBlockNameColor: var(--color-gray-850);
 
-  &__title {
-    @include fluid-text(32, 20);
-
-    margin-bottom: fluid(70, 20);
+  &__map-block {
+    max-width: rem(1260);
+    width: 100%;
+    height: rem(250);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-block: 0 fluid(70, 44);
   }
 
   &__body {
@@ -170,10 +174,10 @@
 
 @include mobile-media {
   .address-info {
-    &__title {
-      line-height: 1.4;
+    &__map-block {
+      border-radius: unset;
+      margin-block: 0 rem(44);
     }
-
     &__body {
       display: flex;
       flex-direction: column;

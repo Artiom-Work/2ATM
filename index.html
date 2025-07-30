@@ -176,61 +176,60 @@
 	<main class="content">
 		<h1 class="visually-hidden">Главная страница сайта две атмосферы</h1>
 
-		<section class="promo" aria-labelledby="promo-title">
+		<section class="promo section" aria-labelledby="promo-title">
 			<h2 class="visually-hidden">Быстрый шиномонтаж, сервис и мойка без очередей</h2>
-			<div class="promo__background">
-				<div class="promo__background-wrapper container-big">
-					<img class="promo__decor-image promo__decor-image--left hidden-tablet" src="./images/promo/wheel.webp"
-						srcset="./images/promo/wheel@2x.webp 2x" alt="Колесо" width="269" height="269" loading="lazy">
 
-					<img class="promo__decor-image promo__decor-image--right hidden-tablet" src="./images/promo/gear.webp"
-						srcset="./images/promo/gear@2x.webp 2x" alt="Шестерёнка" width="269" height="269" loading="lazy">
-				</div>
+			<div class="promo__background">
+				<img class="promo__decor-image promo__decor-image--left hidden-tablet" src="./images/promo/wheel.webp"
+					srcset="./images/promo/wheel@2x.webp 2x" alt="Колесо" width="269" height="269" loading="lazy">
+
+				<picture class="promo__main-image-wrapper">
+					<source srcset="./images/promo/robot-tire-fitting-mobile.webp" media="(max-width: 1024px)" type="image/webp">
+					<source srcset="./images/promo/robot-tire-fitting.webp 1x , ./images/promo/robot-tire-fitting@2x.webp 2x"
+						type="image/webp">
+					<img class="promo__main-image" src="./images/promo/robot-tire-fitting-mobile.webp" alt="Робот с колесом"
+						width="316" height="316" loading="lazy">
+				</picture>
+
+				<img class="promo__decor-image promo__decor-image--right hidden-tablet" src="./images/promo/gear.webp"
+					srcset="./images/promo/gear@2x.webp 2x" alt="Шестерёнка" width="269" height="269" loading="lazy">
 			</div>
 
-			<div class="promo__inner container">
-				<div class="promo__body">
-					<h3 class="promo__title h1" id="promo-title">
-						Быстрый шиномонтаж, сервис и&nbsp;мойка без очередей
-					</h3>
+			<div class="promo__content container">
+				<h3 class="promo__title h1" id="promo-title">
+					Быстрый шиномонтаж, сервис и&nbsp;мойка без очередей
+				</h3>
 
-					<div class="promo__subtitle">
-						<p>
-							16 филиалов рядом с домом или по пути. Запишитесь онлайн за 1 минуту и сэкономьте своё время
-						</p>
-					</div>
-
-					<div class="promo__buttons">
-						<a class="promo__button button button--accent-bg" href="#!">
-							<span class="hidden-mobile">
-								Записаться
-							</span>
-
-							<span class="visible-mobile">
-								На&nbsp;сайте
-							</span>
-						</a>
-
-						<a class="promo__button button" href="#!">
-							<span class="hidden-mobile">
-								Быстрее через Telegram
-							</span>
-
-							<span class="visible-mobile">
-								В&nbsp;Telegram
-							</span>
-						</a>
-					</div>
-
-					<picture class="promo__main-image-wrapper">
-						<source srcset="./images/promo/robot-tire-fitting-mobile.webp" media="(max-width: 1024px)"
-							type="image/webp">
-						<source srcset="./images/promo/robot-tire-fitting.webp 1x , ./images/promo/robot-tire-fitting@2x.webp 2x"
-							type="image/webp">
-						<img class="promo__main-image" src="./images/promo/robot-tire-fitting-mobile.webp" alt="Робот с колесом"
-							width="316" height="316" loading="lazy">
-					</picture>
+				<div class="promo__subtitle">
+					<p>
+						16 филиалов рядом с домом или по пути.
+						<br class="hidden-mobile">
+						Запишитесь онлайн за 1 минуту и сэкономьте своё время
+					</p>
 				</div>
+
+				<div class="promo__buttons">
+					<a class="promo__button button button--accent-bg" href="#!">
+						<span class="hidden-tablet">
+							Записаться
+						</span>
+
+						<span class="visible-tablet">
+							На&nbsp;сайте
+						</span>
+					</a>
+
+					<a class="promo__button button" href="#!">
+						<span class="hidden-tablet">
+							Быстрее через Telegram
+						</span>
+
+						<span class="visible-tablet">
+							В&nbsp;Telegram
+						</span>
+					</a>
+				</div>
+
 			</div>
 		</section>
 

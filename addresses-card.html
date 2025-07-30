@@ -191,14 +191,279 @@
 				</ul>
 			</nav>
 
-			<h2 class="page-heading__page-name h3" id="page-title">
-				Наши адреса
+			<h2 class="page-heading__page-name page-heading__page-name--small-mobile h3" id="page-title">
+				Шиномонтаж и автомойка 24/7 в Кудрово
 			</h2>
 		</section>
 
-		<section class="locations container section section--margin-to-medium">
-			<h2 class="visually-hidden">
-				Карта с адресами мастерских 2АТМ
+		<section class="address-info container section section--margin-to-medium">
+			<h2 class="visually-hidden">Информация о сервисе</h2>
+
+			<div class="address-info__map-block map-block">
+				<img class="map-block__iframe" src="./images/locations/map-low.webp" width="1260" height="250" alt="Карта"
+					loading="lazy">
+
+				<svg class="map-block__marker" width="44" height="58" viewBox="0 0 44 58">
+					<use xlink:href="./images/icons/sprite-icons.svg#map-marker"></use>
+				</svg>
+
+				<svg class="map-block__marker map-block__marker--active" width="44" height="58" viewBox="0 0 44 58">
+					<use xlink:href="./images/icons/sprite-icons.svg#map-marker-active"></use>
+				</svg>
+			</div>
+
+			<div class="address-info__body">
+				<section class="address-info__svc-contacts svc-contacts">
+					<h3 class="address-info__block-name">
+						<img class="address-info__block-name-icon" src="./images/icons/icon-repairer.webp" width="60" height="60"
+							alt="Колесо" loading="lazy">
+
+						<span>Контакты</span>
+					</h3>
+
+					<address>
+						<ul class="svc-contacts__list">
+							<li class="svc-contacts__item">
+								<svg class="svc-contacts__item-icon" width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="./images/icons/sprite-icons.svg#address-icon-marker"></use>
+								</svg>
+
+								<span class="svc-contacts__item-label">адрес</span>
+								<span class="svc-contacts__item-text">
+									Кудрово, Ленинградская ул., д. 9/8
+								</span>
+							</li>
+
+							<li class="svc-contacts__item">
+								<svg class="svc-contacts__item-icon" width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="./images/icons/sprite-icons.svg#address-icon-phone"></use>
+								</svg>
+
+								<span class="svc-contacts__item-label">телефон</span>
+								<a class="svc-contacts__item-text svc-contacts__item-text--phone-number" href="tel:78123855054"
+									target="_blank">
+									+7 (812) 385-50-54
+								</a>
+							</li>
+
+							<li class="svc-contacts__item">
+								<svg class="svc-contacts__item-icon" width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="./images/icons/sprite-icons.svg#address-icon-phone"></use>
+								</svg>
+
+								<span class="svc-contacts__item-label">телефон мастерской</span>
+
+								<p
+									onclick="this.firstElementChild.style.display = 'none';this.children[1].classList.remove('visually-hidden');">
+									<span class="svc-contacts__item-text svc-contacts__item-text--underline">Показать</span>
+									<span class="visually-hidden svc-contacts__item-text svc-contacts__item-text--phone-number">+7 (812)
+										385-50-54</span>
+								</p>
+							</li>
+
+							<li class="svc-contacts__item">
+								<svg class="svc-contacts__item-icon" width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="./images/icons/sprite-icons.svg#address-icon-clock"></use>
+								</svg>
+
+								<span class="svc-contacts__item-label">режим работы</span>
+								<span class="svc-contacts__item-text">круглосуточно</span>
+							</li>
+
+							<li class="svc-contacts__item">
+								<svg class="svc-contacts__item-icon" width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="./images/icons/sprite-icons.svg#address-icon-map"></use>
+								</svg>
+
+								<span class="svc-contacts__item-label">как добраться</span>
+								<a class="svc-contacts__item-text svc-contacts__item-text--underline" href="#!">
+									Посмотреть схему
+								</a>
+							</li>
+
+							<li class="svc-contacts__item">
+								<svg class="svc-contacts__item-icon" width="24" height="24" viewBox="0 0 24 24">
+									<use xlink:href="./images/icons/sprite-icons.svg#address-icon-navigate"></use>
+								</svg>
+
+								<span class="svc-contacts__item-label">построить маршрут</span>
+								<a class="svc-contacts__item-text svc-contacts__item-text--underline" href="#!">
+									Яндекс.Навигатор
+								</a>
+							</li>
+						</ul>
+					</address>
+				</section>
+
+				<section class="address-info__svc-catalog svc-catalog">
+					<h3 class="address-info__block-name svc-catalog__title">
+						<img class="address-info__block-name-icon" src="./images/icons/icon-сar-rapair.webp" width="60" height="60"
+							alt="Колесо" loading="lazy">
+
+						<span>Услуги</span>
+					</h3>
+
+					<nav class="service">
+						<ul class="svc-catalog__list service__list">
+							<li class="service__list-item">
+								<a class="service__link service__link--arrow" href="#!">
+									<span>Шиномонтаж 24&nbsp;часа</span>
+								</a>
+							</li>
+							<li class="service__list-item">
+								<a class="service__link service__link--arrow" href="#!">
+									<span>Ремонт шин</span>
+								</a>
+							</li>
+							<li class="service__list-item">
+								<a class="service__link service__link--arrow" href="#!">
+									<span>Покраска дисков</span>
+								</a>
+							</li>
+							<li class="service__list-item">
+								<a class="service__link service__link--arrow" href="#!">
+									<span>Ремонт дисков</span>
+								</a>
+							</li>
+
+							<li class="service__list-item">
+								<a class="service__link service__link--arrow" href="#!">
+									<span>Балансировка колес</span>
+								</a>
+							</li>
+
+							<li class="service__list-item">
+								<a class="service__link service__link--arrow" href="#!">
+									<span>Аргоновая сварка</span>
+								</a>
+							</li>
+
+							<li class="service__list-item">
+								<a class="service__link service__link--arrow" href="#!">
+									<span>Ошиповка шин</span>
+								</a>
+							</li>
+
+							<li class="service__list-item">
+								<a class="service__link service__link--arrow" href="#!">
+									<span>Сезонное хранение шин</span>
+								</a>
+							</li>
+
+							<li class="service__list-item">
+								<a class="service__link service__link--arrow" href="#!">
+									<span>Автомойка</span>
+								</a>
+							</li>
+
+							<li class="service__list-item">
+								<a class="service__link service__link--arrow" href="#!">
+									<span>Заправка<br>кондиционеров</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</section>
+
+				<address class="address-info__qs-line">
+					<a class="address-info__qs-line-link" href="tel:88126482248" target="_blank"
+						title="Связаться с линией контроля качества">
+						<span class="address-info__qs-line-phone">8&nbsp;812 648-22-48</span>
+						<span class="address-info__qs-line-text">линия контроля качества обслуживания клиентов</span>
+					</a>
+				</address>
+
+				<div class="address-info__buttons">
+					<button class="address-info__button button button--accent-bg " type="button">
+						Записаться на сайте
+					</button>
+
+					<a class="address-info__button button button--light-bg-color " href="#!" target="_blank">
+						Записаться через Telegram
+					</a>
+
+					<div class="address-info__buttons-note">
+						<p>
+							Быстрее через Telegram.<br> Всего 5&nbsp;простых шагов&nbsp;&mdash; займёт меньше минуты.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="address-info__gallery address-info-gallery">
+				<div class="address-info-gallery__prev-slide hidden-mobile" title="Предыдущий слайд"></div>
+
+				<div class="address-info-gallery__slider">
+					<ul class="swiper-wrapper">
+						<li class="address-info-gallery__image-wrapper swiper-slide">
+							<img class="address-info-gallery__image"
+								src="./images/address-info-gallery/address-info-gallery-image-1.webp" width="200" height="130"
+								alt="Ремонт шины" loading="lazy">
+						</li>
+
+						<li class="address-info-gallery__image-wrapper swiper-slide">
+							<img class="address-info-gallery__image"
+								src="./images/address-info-gallery/address-info-gallery-image-2.webp" width="200" height="130"
+								alt="Инструменты шиномантажа" loading="lazy">
+						</li>
+
+						<li class="address-info-gallery__image-wrapper swiper-slide">
+							<img class="address-info-gallery__image"
+								src="./images/address-info-gallery/address-info-gallery-image-3.webp" width="200" height="130"
+								alt="Планшет с возможностью онлайн записи" loading="lazy">
+						</li>
+
+						<li class="address-info-gallery__image-wrapper swiper-slide">
+							<img class="address-info-gallery__image"
+								src="./images/address-info-gallery/address-info-gallery-image-4.webp" width="200" height="130"
+								alt="Балансировка" loading="lazy">
+						</li>
+
+						<li class="address-info-gallery__image-wrapper swiper-slide">
+							<img class="address-info-gallery__image"
+								src="./images/address-info-gallery/address-info-gallery-image-5.webp" width="200" height="130"
+								alt="Установка колеса" loading="lazy">
+						</li>
+
+						<li class="address-info-gallery__image-wrapper swiper-slide">
+							<img class="address-info-gallery__image"
+								src="./images/address-info-gallery/address-info-gallery-image-1.webp" width="200" height="130"
+								alt="Ремонт шины" loading="lazy">
+						</li>
+
+						<li class="address-info-gallery__image-wrapper swiper-slide">
+							<img class="address-info-gallery__image"
+								src="./images/address-info-gallery/address-info-gallery-image-2.webp" width="200" height="130"
+								alt="Инструменты шиномантажа" loading="lazy">
+						</li>
+
+						<li class="address-info-gallery__image-wrapper swiper-slide">
+							<img class="address-info-gallery__image"
+								src="./images/address-info-gallery/address-info-gallery-image-3.webp" width="200" height="130"
+								alt="Планшет с возможностью онлайн записи" loading="lazy">
+						</li>
+
+						<li class="address-info-gallery__image-wrapper swiper-slide">
+							<img class="address-info-gallery__image"
+								src="./images/address-info-gallery/address-info-gallery-image-4.webp" width="200" height="130"
+								alt="Балансировка" loading="lazy">
+						</li>
+
+						<li class="address-info-gallery__image-wrapper swiper-slide">
+							<img class="address-info-gallery__image"
+								src="./images/address-info-gallery/address-info-gallery-image-5.webp" width="200" height="130"
+								alt="Установка колеса" loading="lazy">
+						</li>
+					</ul>
+				</div>
+
+				<div class="address-info-gallery__next-slide hidden-mobile" title="Следующий слайд"></div>
+			</div>
+		</section>
+
+		<section class="locations container section section--big-to-medium-margin" aria-labelledby="location-title">
+			<h2 class="section__title section__title--center h3" id="location-title">
+				Наши адреса
 			</h2>
 
 			<div class="locations__body">
@@ -499,261 +764,7 @@
 			</div>
 		</section>
 
-		<section class="address-info container section section--margin-to-medium" aria-labelledby="address-info-title">
-			<h2 class="address-info__title section__title h3" id="address-info-title">
-				Шиномонтаж и автомойка 24/7 в Кудрово
-			</h2>
-
-			<div class="address-info__body">
-				<section class="address-info__svc-contacts svc-contacts">
-					<h3 class="address-info__block-name">
-						<img class="address-info__block-name-icon" src="./images/icons/icon-repairer.webp" width="60" height="60"
-							alt="Колесо" loading="lazy">
-
-						<span>Контакты</span>
-					</h3>
-
-					<address>
-						<ul class="svc-contacts__list">
-							<li class="svc-contacts__item">
-								<svg class="svc-contacts__item-icon" width="24" height="24" viewBox="0 0 24 24">
-									<use xlink:href="./images/icons/sprite-icons.svg#address-icon-marker"></use>
-								</svg>
-
-								<span class="svc-contacts__item-label">адрес</span>
-								<span class="svc-contacts__item-text">
-									Кудрово, Ленинградская ул., д. 9/8
-								</span>
-							</li>
-
-							<li class="svc-contacts__item">
-								<svg class="svc-contacts__item-icon" width="24" height="24" viewBox="0 0 24 24">
-									<use xlink:href="./images/icons/sprite-icons.svg#address-icon-phone"></use>
-								</svg>
-
-								<span class="svc-contacts__item-label">телефон</span>
-								<a class="svc-contacts__item-text svc-contacts__item-text--phone-number" href="tel:78123855054"
-									target="_blank">
-									+7 (812) 385-50-54
-								</a>
-							</li>
-
-							<li class="svc-contacts__item">
-								<svg class="svc-contacts__item-icon" width="24" height="24" viewBox="0 0 24 24">
-									<use xlink:href="./images/icons/sprite-icons.svg#address-icon-phone"></use>
-								</svg>
-
-								<span class="svc-contacts__item-label">телефон мастерской</span>
-
-								<p
-									onclick="this.firstElementChild.style.display = 'none';this.children[1].classList.remove('visually-hidden');">
-									<span class="svc-contacts__item-text svc-contacts__item-text--underline">Показать</span>
-									<span class="visually-hidden svc-contacts__item-text svc-contacts__item-text--phone-number">+7 (812)
-										385-50-54</span>
-								</p>
-							</li>
-
-							<li class="svc-contacts__item">
-								<svg class="svc-contacts__item-icon" width="24" height="24" viewBox="0 0 24 24">
-									<use xlink:href="./images/icons/sprite-icons.svg#address-icon-clock"></use>
-								</svg>
-
-								<span class="svc-contacts__item-label">режим работы</span>
-								<span class="svc-contacts__item-text">круглосуточно</span>
-							</li>
-
-							<li class="svc-contacts__item">
-								<svg class="svc-contacts__item-icon" width="24" height="24" viewBox="0 0 24 24">
-									<use xlink:href="./images/icons/sprite-icons.svg#address-icon-map"></use>
-								</svg>
-
-								<span class="svc-contacts__item-label">как добраться</span>
-								<a class="svc-contacts__item-text svc-contacts__item-text--underline" href="#!">
-									Посмотреть схему
-								</a>
-							</li>
-
-							<li class="svc-contacts__item">
-								<svg class="svc-contacts__item-icon" width="24" height="24" viewBox="0 0 24 24">
-									<use xlink:href="./images/icons/sprite-icons.svg#address-icon-navigate"></use>
-								</svg>
-
-								<span class="svc-contacts__item-label">построить маршрут</span>
-								<a class="svc-contacts__item-text svc-contacts__item-text--underline" href="#!">
-									Яндекс.Навигатор
-								</a>
-							</li>
-						</ul>
-					</address>
-				</section>
-
-				<section class="address-info__svc-catalog svc-catalog">
-					<h3 class="address-info__block-name svc-catalog__title">
-						<img class="address-info__block-name-icon" src="./images/icons/icon-сar-rapair.webp" width="60" height="60"
-							alt="Колесо" loading="lazy">
-
-						<span>Услуги</span>
-					</h3>
-
-					<nav class="service">
-						<ul class="svc-catalog__list service__list">
-							<li class="service__list-item">
-								<a class="service__link service__link--arrow" href="#!">
-									<span>Шиномонтаж 24&nbsp;часа</span>
-								</a>
-							</li>
-							<li class="service__list-item">
-								<a class="service__link service__link--arrow" href="#!">
-									<span>Ремонт шин</span>
-								</a>
-							</li>
-							<li class="service__list-item">
-								<a class="service__link service__link--arrow" href="#!">
-									<span>Покраска дисков</span>
-								</a>
-							</li>
-							<li class="service__list-item">
-								<a class="service__link service__link--arrow" href="#!">
-									<span>Ремонт дисков</span>
-								</a>
-							</li>
-
-							<li class="service__list-item">
-								<a class="service__link service__link--arrow" href="#!">
-									<span>Балансировка колес</span>
-								</a>
-							</li>
-
-							<li class="service__list-item">
-								<a class="service__link service__link--arrow" href="#!">
-									<span>Аргоновая сварка</span>
-								</a>
-							</li>
-
-							<li class="service__list-item">
-								<a class="service__link service__link--arrow" href="#!">
-									<span>Ошиповка шин</span>
-								</a>
-							</li>
-
-							<li class="service__list-item">
-								<a class="service__link service__link--arrow" href="#!">
-									<span>Сезонное хранение шин</span>
-								</a>
-							</li>
-
-							<li class="service__list-item">
-								<a class="service__link service__link--arrow" href="#!">
-									<span>Автомойка</span>
-								</a>
-							</li>
-
-							<li class="service__list-item">
-								<a class="service__link service__link--arrow" href="#!">
-									<span>Заправка<br>кондиционеров</span>
-								</a>
-							</li>
-						</ul>
-					</nav>
-				</section>
-
-				<address class="address-info__qs-line">
-					<a class="address-info__qs-line-link" href="tel:88126482248" target="_blank"
-						title="Связаться с линией контроля качества">
-						<span class="address-info__qs-line-phone">8&nbsp;812 648-22-48</span>
-						<span class="address-info__qs-line-text">линия контроля качества обслуживания клиентов</span>
-					</a>
-				</address>
-
-				<div class="address-info__buttons">
-					<button class="address-info__button button button--accent-bg " type="button">
-						Записаться на сайте
-					</button>
-
-					<a class="address-info__button button button--light-bg-color " href="#!" target="_blank">
-						Записаться через Telegram
-					</a>
-
-					<div class="address-info__buttons-note">
-						<p>
-							Быстрее через Telegram.<br> Всего 5&nbsp;простых шагов&nbsp;&mdash; займёт меньше минуты.
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="address-info__gallery address-info-gallery">
-				<div class="address-info-gallery__prev-slide hidden-mobile" title="Предыдущий слайд"></div>
-
-				<div class="address-info-gallery__slider">
-					<ul class="swiper-wrapper">
-						<li class="address-info-gallery__image-wrapper swiper-slide">
-							<img class="address-info-gallery__image"
-								src="./images/address-info-gallery/address-info-gallery-image-1.webp" width="200" height="130"
-								alt="Ремонт шины" loading="lazy">
-						</li>
-
-						<li class="address-info-gallery__image-wrapper swiper-slide">
-							<img class="address-info-gallery__image"
-								src="./images/address-info-gallery/address-info-gallery-image-2.webp" width="200" height="130"
-								alt="Инструменты шиномантажа" loading="lazy">
-						</li>
-
-						<li class="address-info-gallery__image-wrapper swiper-slide">
-							<img class="address-info-gallery__image"
-								src="./images/address-info-gallery/address-info-gallery-image-3.webp" width="200" height="130"
-								alt="Планшет с возможностью онлайн записи" loading="lazy">
-						</li>
-
-						<li class="address-info-gallery__image-wrapper swiper-slide">
-							<img class="address-info-gallery__image"
-								src="./images/address-info-gallery/address-info-gallery-image-4.webp" width="200" height="130"
-								alt="Балансировка" loading="lazy">
-						</li>
-
-						<li class="address-info-gallery__image-wrapper swiper-slide">
-							<img class="address-info-gallery__image"
-								src="./images/address-info-gallery/address-info-gallery-image-5.webp" width="200" height="130"
-								alt="Установка колеса" loading="lazy">
-						</li>
-
-						<li class="address-info-gallery__image-wrapper swiper-slide">
-							<img class="address-info-gallery__image"
-								src="./images/address-info-gallery/address-info-gallery-image-1.webp" width="200" height="130"
-								alt="Ремонт шины" loading="lazy">
-						</li>
-
-						<li class="address-info-gallery__image-wrapper swiper-slide">
-							<img class="address-info-gallery__image"
-								src="./images/address-info-gallery/address-info-gallery-image-2.webp" width="200" height="130"
-								alt="Инструменты шиномантажа" loading="lazy">
-						</li>
-
-						<li class="address-info-gallery__image-wrapper swiper-slide">
-							<img class="address-info-gallery__image"
-								src="./images/address-info-gallery/address-info-gallery-image-3.webp" width="200" height="130"
-								alt="Планшет с возможностью онлайн записи" loading="lazy">
-						</li>
-
-						<li class="address-info-gallery__image-wrapper swiper-slide">
-							<img class="address-info-gallery__image"
-								src="./images/address-info-gallery/address-info-gallery-image-4.webp" width="200" height="130"
-								alt="Балансировка" loading="lazy">
-						</li>
-
-						<li class="address-info-gallery__image-wrapper swiper-slide">
-							<img class="address-info-gallery__image"
-								src="./images/address-info-gallery/address-info-gallery-image-5.webp" width="200" height="130"
-								alt="Установка колеса" loading="lazy">
-						</li>
-					</ul>
-				</div>
-
-				<div class="address-info-gallery__next-slide hidden-mobile" title="Следующий слайд"></div>
-			</div>
-		</section>
-
-		<section class="advantages section section--big-to-small-margin container" aria-labelledby="advantages-title">
+		<section class="advantages section section--big-to-medium-margin container" aria-labelledby="advantages-title">
 			<h2 class="advantages__title section__title h3" id="advantages-title">
 				Наши преимущества
 			</h2>
@@ -825,7 +836,8 @@
 			</div>
 		</section>
 
-		<section class="other-services section section--big-margin container" aria-labelledby="other-services-title">
+		<section class="other-services section section--big-to-medium-margin container"
+			aria-labelledby="other-services-title">
 			<h2 class="section__title h3" id="other-services-title">
 				Другие услуги
 			</h2>

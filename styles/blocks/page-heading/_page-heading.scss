@@ -44,6 +44,12 @@
 
   &__page-name {
     color: var(--color-dark);
+
+    &--small-mobile {
+      @include fluid-text(32, 20);
+
+      line-height: 1.5;
+    }
   }
 }
 @include tablet-media {
