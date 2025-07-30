@@ -6,6 +6,10 @@
   flex-direction: column;
   row-gap: rem(19);
 
+  address {
+    font-style: normal;
+  }
+
   &__list {
     width: 100%;
     display: flex;

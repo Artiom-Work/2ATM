@@ -38,7 +38,7 @@ body,
 }
 
 p {
-  --paragraphMarginBottom: 24px;
+  --paragraphMarginBottom: 20px;
   margin-block: 0;
 }
 
@@ -902,486 +902,56 @@ button[aria-label]::before {
 /*  ===================================  */
 /*  =============END header============  */
 /*  ===================================  */
-/* File with styles for promo block in the main page */
-.promo {
-  --promoBackgroundHeight: 31.25rem;
-  --promoMainImageWidth: 31.25rem;
-  --promoMainImageHeight: 31.25rem;
-  --promoMinHeight: var(--promoBackgroundHeight);
-  --promoPaddingBlock: clamp(3.125rem, 1.6715116279rem + 5.8139534884vw, 6.25rem);
-  color: var(--text-color-light);
-  min-height: var(--promoMinHeight);
-  overflow: hidden;
-  margin-block: 0 var(--section-margin-y);
+/* Section page-heading */
+.page-heading {
+  --breadcrumbsColor: var(--color-gray-500);
+  --breadcrumbsGap: clamp(1.75rem, 1.1104651163rem + 2.5581395349vw, 3.125rem);
+  padding-block: 1.5rem 2.9375rem;
+  color: var(--breadcrumbsColor);
 }
-.promo__background {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  min-height: var(--promoBackgroundHeight);
-  background: var(--color-grad-1);
-  overflow: hidden;
+.page-heading__breadcrumbs {
+  margin-bottom: 1.125rem;
 }
-.promo__background-wrapper {
-  position: relative;
-  min-height: inherit;
-}
-.promo__inner {
-  padding-block: var(--promoPaddingBlock) 0;
-}
-.promo__body {
-  position: relative;
-}
-.promo__title {
-  max-width: 54.6875rem;
-  line-height: 1.27;
-  margin-bottom: 2.5rem;
-}
-.promo__subtitle {
-  margin-bottom: 2.5rem;
-  line-height: 1.5;
-  max-width: 32.1875rem;
-}
-.promo__buttons {
-  display: flex;
-  gap: clamp(1rem, 0.7674418605rem + 0.9302325581vw, 1.5rem);
-}
-.promo__main-image {
-  width: var(--promoMainImageWidth);
-  height: var(--promoMainImageHeight);
-}
-.promo__main-image-wrapper {
-  position: absolute;
-  z-index: -1;
-  right: -5.625rem;
-  bottom: calc(var(--promoPaddingBlock) * -1);
-  width: var(--promoMainImageWidth);
-  height: var(--promoMainImageHeight);
-}
-.promo__main-image-wrapper::after {
-  content: "";
-  position: absolute;
-  z-index: -2;
-  border-radius: 50%;
-  bottom: 5%;
-  right: 0;
-  width: 95%;
-  height: 3.8125rem;
-  background-color: var(--color-black-light);
-  filter: blur(1rem);
-}
-.promo__decor-image {
-  position: absolute;
-}
-.promo__decor-image--left {
-  top: 4.0625rem;
-  left: 2rem;
-}
-.promo__decor-image--right {
-  right: 0;
-  bottom: -50%;
-  translate: 0 -50%;
-}
-
-@media (width <= 112.56125rem) {
-  .promo__decor-image--left {
-    top: -50%;
-    translate: -50% 50%;
-  }
-}
-@media (width <= 100.06125rem) {
-  .promo__decor-image--right {
-    translate: 50% -50%;
-  }
-}
-@media (width <= 81.31125rem) {
-  .promo__title {
-    max-width: 51.0625rem;
-  }
-}
-@media (width <= 63.99875rem) {
-  .promo {
-    --promoBackgroundHeight: 24.625rem;
-    --promoMainImageWidth: 19.75rem;
-    --promoMainImageHeight: 19.75rem;
-  }
-  .promo .container {
-    --container-padding-x: 2.6875rem;
-  }
-  .promo__main-image-wrapper {
-    bottom: -3.125rem;
-    right: 1.5rem;
-  }
-  .promo__main-image-wrapper::after {
-    height: 2.5rem;
-  }
-  .promo__title {
-    max-width: 28.875rem;
-    font-size: 1.5rem;
-    margin-bottom: 1.9375rem;
-  }
-  .promo__subtitle {
-    max-width: 21rem;
-    font-size: 1rem;
-    margin-bottom: 1.9375rem;
-  }
-}
-@media (width <= 47.99875rem) {
-  .promo {
-    --promoBackgroundHeight: 31.25rem;
-    --promoMinHeight: 45rem;
-  }
-  .promo .container {
-    --container-padding-x: 0.75rem;
-  }
-  .promo__background {
-    background: var(--color-grad-2), var(--color-grad-1);
-  }
-  .promo__body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .promo__title {
-    max-width: 20rem;
-    margin-inline: auto;
-    order: -2;
-    text-align: center;
-    line-height: 1.3;
-    margin-bottom: 1.1875rem;
-  }
-  .promo__subtitle {
-    max-width: unset;
-    margin-bottom: 0.625rem;
-    color: var(--text-color-dark);
-    font-weight: 600;
-  }
-  .promo__main-image {
-    width: 19.75rem;
-    height: 19.75rem;
-  }
-  .promo__main-image-wrapper {
-    position: relative;
-    right: unset;
-    bottom: unset;
-    order: -1;
-    margin-inline: auto;
-    margin-bottom: clamp(1.625rem, 0.9273255814rem + 2.7906976744vw, 3.125rem);
-  }
-  .promo__button {
-    width: 100%;
-  }
-}
-@media (width <= 30.06125rem) {
-  .promo {
-    --promoMinHeight: 41.25rem;
-    --promoBackgroundHeight: 30.25rem;
-    --promoPaddingBlock: 2.5rem;
-  }
-}
-/*  ===================================  */
-/*  =====END promo block(home page)====  */
-/*  ===================================  */
-/* Style for accent red link from common blocks */
-.accent-color-link {
-  font-weight: 700;
-  font-size: 0.8125rem;
-  line-height: 1.7;
-  letter-spacing: var(--letter-spacing);
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-  color: var(--color-accent-600);
-}
-
-/*  ===================================  */
-/*  ===================================  */
-/* Styles for common block service */
-.service__name {
+.page-heading__breadcrumbs-list {
   display: flex;
   align-items: center;
-  column-gap: 0.625rem;
-  line-height: 1.2;
-  min-height: 4.75rem;
-  padding-inline: 0.625rem;
+  column-gap: var(--breadcrumbsGap);
 }
-.service__name-icon {
-  width: 3.75rem;
-  height: 3.75rem;
+.page-heading__breadcrumbs-item {
+  position: relative;
 }
-.service__link {
-  font-weight: 700;
-  line-height: 1.4;
+.page-heading__breadcrumbs-item:not(:last-child)::after {
+  position: absolute;
+  content: "−";
+  right: calc(var(--breadcrumbsGap) / 2 * -1 - 0.3125rem);
+  top: 0.06em;
 }
-.service__link--name {
-  font-size: 1.5rem;
-  line-height: 1.2;
+.page-heading__breadcrumbs-item:last-child a {
+  opacity: 0.7;
+  pointer-events: none;
 }
-.service__link--name-small {
-  font-size: 1.25rem;
-}
-.service__link--arrow {
-  font-size: 0.9375rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  column-gap: 0.25rem;
-  text-transform: uppercase;
-  width: 100%;
-}
-.service__link--arrow::after {
-  content: "➜";
-  width: 1.125rem;
-  height: 1.125rem;
+.page-heading__breadcrumbs-link {
+  font-size: clamp(0.9375rem, 0.8502906977rem + 0.3488372093vw, 1.125rem);
   color: currentColor;
-  font-size: inherit;
-}
-.service__list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.625rem;
-}
-.service__list-item {
-  display: inline-flex;
-  width: 100%;
-  min-height: 3.125rem;
-  padding-inline: 0.625rem 0.25rem;
-}
-
-/*  ===================================  */
-/*  ===================================  */
-/* Styles for common block services-menu . ( it's third block in the home page )*/
-.services-menu {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-}
-.services-menu__item {
-  width: 100%;
-  border: var(--border-light);
-  border-radius: var(--border-radius-small);
-  padding: 1.5rem 0.625rem 1.875rem;
-}
-.services-menu__name {
-  align-self: start;
-}
-.services-menu__service {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-self: start;
-  row-gap: 1.875rem;
-  width: 100%;
-}
-.services-menu__service-list {
-  width: 100%;
-}
-.services-menu__buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 1.5rem;
-}
-.services-menu__buttons-note {
-  max-width: 16.0625rem;
-  font-size: 0.75rem;
-  line-height: 1.2;
-  color: var(--text-color-dark-secondary);
-}
-
-@media (width <= 63.99875rem) {
-  .services-menu {
-    gap: 1.25rem;
-  }
-}
-/*  ===================================  */
-/*  ===================================  */
-/* That's styles for services promotion. General component for section overview-services on the home page */
-.services-promotion {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.services-promotion__image {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 6.25rem;
-  height: 6.25rem;
-}
-.services-promotion__list {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-.services-promotion__list-item {
-  width: 100%;
-}
-.services-promotion__card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  max-width: 18.5625rem;
-  width: 100%;
-  min-height: 10.625rem;
-  padding-inline: 1.5rem;
-  background-color: var(--color-black-light);
-  color: var(--color-light);
-  border-radius: var(--border-radius-small);
-}
-.services-promotion__card-title {
-  font-size: 1.125rem;
-  margin-bottom: 1rem;
-}
-.services-promotion__card-text {
-  position: relative;
-  z-index: 1;
-  max-width: 12.5rem;
-  font-weight: 600;
-  font-size: 0.875rem;
-  line-height: 1.4;
-}
-
-@media (width <= 100.06125rem) {
-  .services-promotion {
-    gap: 1.25rem;
-  }
-  .services-promotion__list {
-    align-items: center;
-    flex-direction: row;
-    gap: 1.5rem;
-  }
-  .services-promotion__card {
-    max-width: 100%;
-  }
-}
-@media (width <= 81.31125rem) {
-  .services-promotion__list {
-    flex-direction: column;
-    gap: 1.25rem;
-    max-width: 31.875rem;
-    width: 100%;
-  }
-  .services-promotion__image {
-    right: 32px;
-  }
-}
-@media (width <= 47.99875rem) {
-  .services-promotion {
-    gap: 0.625rem;
-  }
-  .services-promotion__list {
-    gap: 0.625rem;
-  }
-  .services-promotion__image {
-    right: 16px;
-  }
-}
-/* Styles for section overview-services on the home page */
-.overview-services {
-  display: flex;
-  gap: 1.5rem;
-}
-.overview-services__services-menu .services-menu__list {
-  max-width: 58.75rem;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "tire-fitting car-wash сar-rapair" "tire-fitting car-wash сar-rapair" "tire-fitting car-wash сar-rapair";
-  gap: 1.5rem;
-}
-.overview-services__services-menu .services-menu__list .services-menu__item--grid-cell-1 {
-  grid-area: tire-fitting;
-}
-.overview-services__services-menu .services-menu__list .services-menu__item--grid-cell-2 {
-  grid-area: car-wash;
-}
-.overview-services__services-menu .services-menu__list .services-menu__item--grid-cell-3 {
-  grid-area: сar-rapair;
-}
-.overview-services__services-menu .services-menu__list .services-menu__item--grid-cell-4 {
-  padding-inline: 1.5rem;
-  grid-area: technical-inspection;
-}
-.overview-services__services-menu .services-menu__list .services-menu__item--grid-cell-5 {
-  padding-inline: 1.5rem;
-  grid-area: refill-conditioning;
-}
-.overview-services__services-menu .services-menu__list .services-menu__item--grid-cell-6 {
-  padding-inline: 1.5rem;
-  grid-area: wheel-alignment;
-}
-
-@media (width <= 100.06125rem) {
-  .overview-services {
-    flex-direction: column;
-  }
-  .overview-services__services-menu .services-menu__list {
-    max-width: unset;
-  }
-}
-@media (width <= 81.31125rem) {
-  .overview-services__services-menu .services-menu__list {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "tire-fitting car-wash" "сar-rapair technical-inspection" "сar-rapair refill-conditioning" "сar-rapair wheel-alignment";
-  }
-}
-@media (width <= 63.99875rem) {
-  .overview-services {
-    gap: 2.5rem;
-  }
-  .overview-services__services-menu .services-menu__list {
-    gap: 1.25rem;
-  }
-}
-/*  ===================================  */
-/*  ===END section overview-services===  */
-/*  ===================================  */
-/* Styles from section messenger-action. sourse is home page */
-.messenger-action__wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  min-height: 22.25rem;
-  color: var(--text-color-light);
-  background: var(--color-grad-1);
-}
-.messenger-action__image-wrapper {
-  flex-shrink: 0;
-  width: 21.8125rem;
-  height: 21.8125rem;
-}
-.messenger-action__image {
-  width: 21.8125rem;
-  height: 21.8125rem;
-}
-.messenger-action__body {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  max-width: 42.0625rem;
-}
-.messenger-action__title {
-  line-height: 1.2;
-}
-.messenger-action__subtitle {
   line-height: 1.5;
 }
-.messenger-action__button {
-  align-self: flex-start;
+.page-heading__page-name {
+  color: var(--color-dark);
 }
 
-@media (width <= 81.31125rem) {
-  .messenger-action__body {
-    max-width: 28.75rem;
+@media (width <= 63.99875rem) {
+  .page-heading {
+    padding-block: 1.25rem 2.5rem;
+  }
+  .page-heading__breadcrumbs {
+    margin-bottom: 0.625rem;
+  }
+  .page-heading__breadcrumbs-link {
+    line-height: 1.4;
   }
 }
 /*  ===================================  */
-/*  ====END section messenger-action===  */
+/*  ==========END page-heading=========  */
 /*  ===================================  */
 /* Search block. ( form + input + button) .part of block locations */
 .search {
@@ -1448,64 +1018,6 @@ button[aria-label]::before {
 .search__icon {
   fill: transparent;
   stroke: var(--searchIconColor);
-}
-
-/* Filter services in the block locations. ( form and input type ratios )*/
-.locations-filter__border {
-  display: flex;
-  align-items: center;
-  column-gap: 1.5rem;
-  outline: none;
-}
-.locations-filter__element {
-  display: flex;
-  align-items: center;
-  column-gap: 0.6875rem;
-  outline: var(--border-light);
-  border-radius: var(--border-radius-small);
-  padding: 0.875rem 0.6875rem 0.75rem 0.6875rem;
-  font-weight: 700;
-  font-size: 0.9375rem;
-  line-height: 1.1;
-  text-transform: uppercase;
-  transition-duration: var(--transition-duration) !important;
-  will-change: transform;
-}
-@media (any-hover: hover) {
-  .locations-filter__element:hover {
-    filter: opacity(70%);
-    outline: var(--border);
-  }
-}
-@media (any-hover: hover) and (any-hover: none) {
-  .locations-filter__element:active {
-    filter: opacity(70%);
-    outline: var(--border);
-  }
-}
-.locations-filter__element:active {
-  scale: 0.98;
-}
-.locations-filter__input {
-  position: relative;
-  width: 1.25rem;
-  height: 1.25rem;
-}
-.locations-filter__input::before {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  content: "";
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  outline: var(--border);
-  border-radius: 0.125rem;
-  background-color: var(--color-light);
-  cursor: pointer;
-}
-.locations-filter__input:checked::before {
-  content: "✔";
 }
 
 /* Styles for location-card . Source - block locations */
@@ -1634,15 +1146,12 @@ button[aria-label]::before {
   left: 40%;
 }
 
-/* Section locations. Component for the user to select a suitable service on the map. sourse home page */
+/* Section locations-short. Small version block locations. */
 .locations {
   --locationScrollThumbColor: var(--color-gray-400);
   --locationScrollThumbColorHover: var(--color-gray-500);
   --locationScrollBgColor: var(--color-gray-90);
   --locationListHeight: 45rem;
-}
-.locations__filter {
-  margin-block: 0 clamp(0.625rem, 0.0436046512rem + 2.3255813953vw, 1.875rem);
 }
 .locations__body {
   height: var(--locationListHeight);
@@ -1714,11 +1223,6 @@ button[aria-label]::before {
     overflow: hidden;
   }
 }
-@media (width <= 63.99875rem) {
-  .locations__filter {
-    margin-block: 0 0.625rem;
-  }
-}
 @media (width <= 47.99875rem) {
   .locations {
     --locationListHeight: 41.875rem;
@@ -1730,337 +1234,221 @@ button[aria-label]::before {
   }
 }
 /*  ===================================  */
-/*  =======END section locations=======  */
+/*  ====END section-short locations====  */
 /*  ===================================  */
-/* Styles for section online-registration.( home page. block containing cervices map )*/
-.online-registration {
-  --section-margin-y: 5rem;
-}
-.online-registration__subtitle {
-  max-width: 48.625rem;
-}
-.online-registration__buttons {
+/* Styles for address-section svc-contacts.part of conponent address-info. */
+.svc-contacts {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  row-gap: 1.1875rem;
+}
+.svc-contacts address {
+  font-style: normal;
+}
+.svc-contacts__list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.9375rem;
+}
+.svc-contacts__item {
+  display: flex;
   align-items: center;
-  column-gap: 1.875rem;
-}
-
-/*  ===================================  */
-/*  ==END section online-registration==  */
-/*  ===================================  */
-/* Styles for single card of special offer. source -- block section special offers */
-.special-offer {
-  --specialOfferCardWidth: 38.625rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  row-gap: 1.5rem;
-  border-radius: var(--border-radius-small);
-  border: var(--border-light);
-  max-width: var(--specialOfferCardWidth);
+  column-gap: 0.625rem;
+  flex-shrink: 0;
   width: 100%;
-  height: 100%;
+  min-height: 3rem;
 }
-.special-offer__image {
-  object-fit: cover;
-  width: inherit;
-  height: inherit;
-  border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
+.svc-contacts__item-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: var(--color-light);
+  flex-shrink: 0;
 }
-.special-offer__image-wrapper {
-  display: block;
-  position: relative;
-  max-width: var(--specialOfferCardWidth);
+.svc-contacts__item-label {
+  max-width: 6.3125rem;
   width: 100%;
-  height: 13.75rem;
-}
-.special-offer__image-wrapper::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
-  background-color: rgba(59, 6, 5, 0.1490196078);
-}
-.special-offer__body {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  row-gap: 1.25rem;
-  padding: 0 1.5rem 1.5rem 1.5rem;
-  height: 100%;
-}
-.special-offer__heading {
-  min-height: 3.25rem;
-  line-height: 1.3;
-}
-.special-offer__text {
-  flex-grow: 1;
-  line-height: 1.5;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.17;
   color: var(--text-color-dark-secondary);
 }
-.special-offer__button {
-  align-self: start;
-  font-size: 1rem;
+.svc-contacts__item-text {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5;
+  transition-duration: var(--transition-duration) !important;
+}
+.svc-contacts__item-text--phone-number {
+  white-space: nowrap;
+}
+.svc-contacts__item-text--underline {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
 }
 
-@media (width <= 63.99875rem) {
-  .special-offer {
-    --specialOfferCardWidth: 34.375rem;
-    row-gap: 1rem;
+@media (width <= 47.99875rem) {
+  .svc-contacts {
+    row-gap: 0;
   }
-  .special-offer__body {
-    padding: 0 1rem 1rem 1rem;
-    row-gap: 1rem;
-  }
-  .special-offer__heading {
-    line-height: 1.2;
+}
+/* Style for accent red link from common blocks */
+.accent-color-link {
+  font-weight: 700;
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  letter-spacing: var(--letter-spacing);
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--color-accent-600);
+}
+
+/*  ===================================  */
+/*  ===================================  */
+/* Styles for common block service */
+.service__name {
+  display: flex;
+  align-items: center;
+  column-gap: 0.625rem;
+  line-height: 1.2;
+  min-height: 4.75rem;
+  padding-inline: 0.625rem;
+}
+.service__name-icon {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+.service__link {
+  font-weight: 700;
+  line-height: 1.4;
+}
+.service__link--name {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+.service__link--name-small {
+  font-size: 1.25rem;
+}
+.service__link--arrow {
+  font-size: 0.9375rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 0.25rem;
+  text-transform: uppercase;
+  width: 100%;
+}
+.service__link--arrow::after {
+  content: "➜";
+  width: 1.125rem;
+  height: 1.125rem;
+  color: currentColor;
+  font-size: inherit;
+}
+.service__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.service__list-item {
+  display: inline-flex;
+  width: 100%;
+  min-height: 3.125rem;
+  padding-inline: 0.625rem 0.25rem;
+}
+
+/*  ===================================  */
+/*  ===================================  */
+/* Styles for nav-section svc-catalog.part of conponent address-info. */
+.svc-catalog {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.125rem;
+}
+.svc-catalog__list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1875rem;
+  margin-bottom: 0.625rem;
+}
+.svc-catalog__list-title {
+  grid-column: 1/3;
+}
+
+@media (width <= 81.31125rem) {
+  .svc-catalog__list {
+    grid-template-columns: auto;
+    gap: 0;
+    margin-block: 0;
   }
 }
 @media (width <= 47.99875rem) {
-  .special-offer {
-    --specialOfferCardWidth: 47.9375rem;
+  .svc-catalog {
+    row-gap: 0;
+  }
+  .svc-catalog__title {
+    margin-bottom: 1.1875rem;
+  }
+  .svc-catalog__list {
+    gap: 0.9375rem;
+    padding-inline: 0 1.875rem;
   }
 }
-/*  ===================================  */
-/*  ===================================  */
-/* Styles for section special offers. source -- main page */
-.special-offers__list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+/* Styles for block address-info-gallery. Slider with images. */
+.address-info-gallery {
+  --addressInfoGalleryControlsColor: var(--color-gray-500);
+  --addressInfoGalleryControlsBgColor: var(--color-gray-200);
+  padding-inline: 5.125rem;
 }
-
-@media (width <= 63.99875rem) {
-  .special-offers__list {
-    gap: 1.25rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-/*  ===================================  */
-/*  ===================================  */
-/* Styles for block-card reviews 
-(reviews-slider). Part of section reviews. source -- home page */
-.review-card {
-  --reviewCardBorderColor: var(--color-gray-90);
-  --reviewCardTitleColor: black;
-  --reviewCardTextColor: var(--color-gray-550);
-  --reviewCardTextLight: var(--color-gray-450);
-  position: relative;
-  width: 100%;
-  min-height: 20.6875rem;
-  outline: 0.0625rem solid var(--reviewCardBorderColor);
-  border-radius: var(--border-radius-extra-small);
-}
-.review-card__button {
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  position: absolute;
-  bottom: 0.625rem;
-  right: 0.625rem;
-  font-size: 1.125rem;
-  white-space: nowrap;
-  color: var(--reviewCardTextLight);
-  transition-duration: var(--transition-duration) !important;
-}
-.review-card__button::before {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  translate: 0 30%;
-  height: 2.75rem;
-  width: 6.25rem;
-  content: "";
-}
-@media (any-hover: hover) {
-  .review-card__button:hover {
-    filter: brightness(80%);
-  }
-}
-@media (any-hover: hover) and (any-hover: none) {
-  .review-card__button:active {
-    filter: brightness(80%);
-  }
-}
-.review-card__button:active {
-  scale: 0.96;
-}
-.review-card__button-switcher[type=checkbox] {
-  display: none;
-}
-.review-card__button-switcher[type=checkbox]:checked ~ .review-card__body > .review-card__review {
-  -webkit-line-clamp: unset;
-}
-.review-card__button-switcher[type=checkbox]:checked ~ .review-card__button > .review-card__button-text.is-active {
-  opacity: 0;
-}
-.review-card__button-switcher[type=checkbox]:checked ~ .review-card__button > .review-card__button-text {
-  opacity: 1;
-}
-.review-card__button-text {
-  opacity: 0;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-.review-card__button-text.is-active {
-  opacity: 1;
-}
-.review-card__header {
-  padding-inline: 1.5rem;
-  padding-block: 1rem 1.5rem;
-  border-bottom: 0.0625rem solid var(--reviewCardBorderColor);
-}
-.review-card__header-title {
-  font-size: 0.9375rem;
-  line-height: 1.3;
-  text-transform: uppercase;
-  color: var(--reviewCardTitleColor);
-  margin-bottom: 0.875rem;
-}
-.review-card__header-content {
-  display: flex;
-  align-items: center;
-  column-gap: 1.125rem;
-}
-.review-card__image {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-.review-card__description {
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.4375rem;
-}
-.review-card__text {
-  color: var(--reviewCardTextColor);
-  font-size: 1.125rem;
-  line-height: 1.5;
-}
-.review-card__text--small {
-  font-size: 1rem;
-  color: var(--reviewCardTextLight);
-}
-.review-card__text--color-dark {
-  color: var(--reviewCardTitleColor);
-}
-.review-card__body {
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.4375rem;
-  padding-inline: 1.5rem;
-  padding-block: 0.8125rem 2.1875rem;
-}
-.review-card__user-name {
-  font-weight: 600;
-  font-size: 0.875rem;
-  line-height: 1.4;
-  color: var(--reviewCardTitleColor);
-}
-.review-card__feature {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.review-card__rating-icon {
-  fill: var(--color-rating-star);
-}
-.review-card__rating-icon.is-active {
-  fill: var(--color-rating-star-active);
-}
-.review-card__date {
-  font-size: 0.9375rem;
-  font-weight: 700;
-  line-height: 1.1;
-  text-transform: uppercase;
-  color: var(--reviewCardTextLight);
-}
-.review-card__review {
+.address-info-gallery__slider {
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
+  max-width: 68.5rem;
 }
-
-@media (width <= 63.99875rem) {
-  .review-card {
-    min-height: 21.3125rem;
-  }
-  .review-card__user-name {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-  .review-card__text {
-    font-size: 1rem;
-  }
-  .review-card__text--small {
-    font-size: 0.9375rem;
-  }
-  .review-card__date {
-    font-size: 0.75rem;
-    line-height: 1.66;
-  }
-  .review-card__button {
-    font-size: 1rem;
-  }
-  .review-card__body {
-    row-gap: 0.5625rem;
-  }
+.address-info-gallery__image {
+  width: inherit;
+  height: inherit;
 }
-/* Styles for block reviews-controls (reviews-slider). Part of section reviews. source -- home page */
-.reviews-controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  max-width: 8.625rem;
-  width: 100%;
-  margin-inline: auto;
-  color: var(--text-color-dark-secondary) !important;
+.address-info-gallery__image-wrapper {
+  width: 12.5rem;
+  height: 8.125rem;
 }
-.reviews-controls span {
-  color: var(--text-color-dark-secondary) !important;
-}
-.reviews-controls__pagination {
-  text-align: center;
-}
-.reviews-controls__next, .reviews-controls__prev {
+.address-info-gallery__prev-slide, .address-info-gallery__next-slide {
   width: 1.5rem;
   height: 1.5rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
   cursor: pointer;
   flex-shrink: 0;
   border-radius: 0.125rem;
   transition-duration: var(--transition-duration) !important;
-  color: currentColor;
-  background-color: var(--color-light);
+  color: var(--addressInfoGalleryControlsColor);
+  background-color: var(--addressInfoGalleryControlsBgColor);
+}
+.address-info-gallery__prev-slide.swiper-button-disabled, .address-info-gallery__next-slide.swiper-button-disabled {
+  filter: opacity(0.5);
+  pointer-events: none;
 }
 @media (any-hover: hover) {
-  .reviews-controls__next:hover, .reviews-controls__prev:hover {
+  .address-info-gallery__prev-slide:hover, .address-info-gallery__next-slide:hover {
     filter: brightness(90%);
   }
 }
 @media (any-hover: hover) and (any-hover: none) {
-  .reviews-controls__next:active, .reviews-controls__prev:active {
+  .address-info-gallery__prev-slide:active, .address-info-gallery__next-slide:active {
     filter: brightness(90%);
   }
 }
-.reviews-controls__next:active, .reviews-controls__prev:active {
+.address-info-gallery__prev-slide:active, .address-info-gallery__next-slide:active {
   scale: 0.9;
   filter: brightness(90%);
 }
-.reviews-controls__next::before, .reviews-controls__prev::before {
+.address-info-gallery__prev-slide::before, .address-info-gallery__next-slide::before {
   width: 0.625rem;
   height: 0.625rem;
   position: absolute;
@@ -2068,7 +1456,7 @@ button[aria-label]::before {
   border-left: 0.125rem solid currentColor;
   border-bottom: 0.125rem solid currentColor;
 }
-.reviews-controls__next::after, .reviews-controls__prev::after {
+.address-info-gallery__prev-slide::after, .address-info-gallery__next-slide::after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2077,119 +1465,210 @@ button[aria-label]::before {
   height: 2.75rem;
   content: "";
 }
-.reviews-controls__prev::before {
+.address-info-gallery__prev-slide {
+  right: 95%;
+}
+.address-info-gallery__prev-slide::before {
   rotate: 45deg;
   translate: 25% 0;
 }
-.reviews-controls__next::before {
+.address-info-gallery__next-slide {
+  left: 95%;
+}
+.address-info-gallery__next-slide::before {
   rotate: 225deg;
   translate: -25% 0;
 }
 
-/* Section reviews. sourse -- home page */
-.reviews {
-  overflow: hidden;
-  padding-block: 0 0.0625rem;
+@media (width <= 47.99875rem) {
+  .address-info-gallery {
+    padding-inline: 0;
+  }
 }
-.reviews__title {
+/* Styles for conponent address-info. Descriprion of current service card. */
+.address-info {
+  --addressInfoBlockNameColor: var(--color-gray-850);
+}
+.address-info__title {
+  font-size: clamp(1.25rem, 0.9011627907rem + 1.3953488372vw, 2rem);
+  margin-bottom: clamp(1.25rem, -0.2034883721rem + 5.8139534884vw, 4.375rem);
+}
+.address-info__body {
+  display: grid;
+  grid-template-columns: minmax(31.9375rem, auto) 1fr;
+  grid-template-areas: "contacts services" "contacts buttons" "qs buttons";
+  column-gap: 1.5rem;
+  margin-bottom: 3.75rem;
+}
+.address-info__block-name {
   display: flex;
-  justify-content: center;
   align-items: center;
-  column-gap: 0.625rem;
+  column-gap: 1.25rem;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: var(--addressInfoBlockNameColor);
 }
-.reviews__title-icon {
-  width: 36;
-  height: 36;
+.address-info__block-name-icon {
+  width: 3.75rem;
+  height: 3.75rem;
 }
-.reviews__slider {
-  min-height: 20.8125rem;
-  margin-block: 0 clamp(1.25rem, 0.3779069767rem + 3.488372093vw, 3.125rem);
+.address-info__svc-contacts {
+  grid-area: contacts;
+  width: 100%;
+  padding-inline: clamp(0.625rem, 0.3343023256rem + 1.1627906977vw, 1.25rem);
 }
-.reviews__slider-item {
-  max-width: 25.25rem;
+.address-info__svc-catalog {
+  grid-area: services;
+  max-width: 45.3125rem;
+  width: 100%;
+  padding-inline: clamp(0.625rem, 0.3343023256rem + 1.1627906977vw, 1.25rem);
+  margin-bottom: 1.4375rem;
+}
+.address-info__qs-line {
+  grid-area: qs;
+  margin-block: 1.25rem 0;
+  justify-self: center;
+  max-width: 29.4375rem;
+  width: 100%;
+}
+.address-info__qs-line-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 0.9375rem;
+  padding-block: 0.875rem;
+  padding-inline: 1.875rem;
+  border: var(--border-light);
+  border-radius: var(--border-radius-small);
+  color: var(--color-green-light);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+  transition-duration: var(--transition-duration) !important;
+}
+.address-info__qs-line-phone {
+  white-space: nowrap;
+}
+.address-info__qs-line-text {
+  font-size: 0.9375rem;
+  line-height: 1.3;
+  max-width: 14.6875rem;
+}
+.address-info__buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-self: start;
+  column-gap: clamp(0.625rem, 0.2180232558rem + 1.6279069767vw, 1.5rem);
+  row-gap: 0.625rem;
+  grid-area: buttons;
+}
+.address-info__buttons-note {
+  grid-column: 1/3;
+  text-align: center;
+  justify-self: center;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: var(--text-color-dark-secondary);
+}
+.address-info__button {
+  justify-self: end;
+  flex-shrink: 0;
+  order: 2;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+.address-info__button:nth-child(even) {
+  justify-self: start;
+}
+.address-info__gallery {
+  position: relative;
 }
 
-@media (width <= 63.99875rem) {
-  .reviews__slider {
-    margin-block: 0 1.25rem;
+@media (width <= 100.06125rem) {
+  .address-info__body {
+    grid-template-columns: auto auto;
   }
-  .reviews__slider-item {
-    max-width: 21.25rem;
+}
+@media (width <= 81.31125rem) {
+  .address-info__body {
+    grid-template-areas: "contacts services" "qs services" "buttons buttons";
+  }
+  .address-info__svc-catalog {
+    max-width: 31.25rem;
+  }
+  .address-info__qs-line {
+    margin-block: 0 1.5rem;
+  }
+  .address-info__qs-line-link {
+    flex-direction: column;
+  }
+  .address-info__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/3;
+  }
+  .address-info__button {
+    align-self: center;
+    order: 0;
   }
 }
 @media (width <= 47.99875rem) {
-  .reviews__slider-item {
+  .address-info__title {
+    line-height: 1.4;
+  }
+  .address-info__body {
+    display: flex;
+    flex-direction: column;
+  }
+  .address-info__svc-contacts {
+    margin-bottom: 1.125rem;
+  }
+  .address-info__svc-catalog {
+    order: 1;
     max-width: unset;
   }
-}
-/*  ===================================  */
-/*  ========END section reviews========  */
-/*  ===================================  */
-/* Styles for section our clients( slider with companies logos ) . source -- home page */
-.our-clients {
-  overflow-x: hidden;
-}
-.our-clients__slider {
-  --clientsSlideWidth: 11.875rem;
-  --clientsSlideHeight: 7.1875rem;
-  min-height: calc(var(--clientsSlideHeight) + 0.125rem);
-}
-.our-clients__link {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  width: var(--clientsSlideWidth);
-  height: var(--clientsSlideHeight);
-  outline: var(--border-extra-light);
-  background-color: var(--color-light);
-  border-radius: var(--border-radius-small);
-}
-@media (any-hover: hover) {
-  .our-clients__link:hover {
-    filter: opacity(100);
+  .address-info__qs-line {
+    align-self: center;
+    margin-bottom: 3.75rem;
   }
-  .our-clients__link:hover .our-clients__image {
-    filter: brightness(80%);
+  .address-info__qs-line-link {
+    padding-block: 0;
+    line-height: 1.4;
+  }
+  .address-info__buttons {
+    order: 1;
+    flex-direction: column;
+    width: 100%;
   }
 }
-@media (any-hover: hover) and (any-hover: none) {
-  .our-clients__link:active {
-    filter: opacity(100);
-  }
-  .our-clients__link:active .our-clients__image {
-    filter: brightness(80%);
-  }
-}
-.our-clients__link:active .our-clients__image {
-  scale: 0.98;
-}
-.our-clients__image {
-  transition-duration: var(--transition-duration);
-  width: var(--clientsSlideWidth);
-  height: var(--clientsSlideHeight);
-  border-radius: inherit;
-}
-
 /*  ===================================  */
-/*  =======END section our clients=====  */
+/*  =====END address-info component====  */
 /*  ===================================  */
-/* Block-card for advantage slider.Part of Section advantages*/
+/* Block-card for advantage slider( our-advantage ).Part of Section advantages. Differences from blocks advantages in background color and positioning of the card*/
 .advantage-card {
-  --advantageCardTextColor: var(--color-gray-750);
+  --advantageCardTextColor: var(--color-gray-700);
   --advantageCardTitleTextColor: var(--color-gray-800);
+  --ourAdvantageCardBgColor: var(--color-accent-200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.1875rem;
   max-width: 18.5625rem;
   width: 100%;
-  padding: 1.25rem;
+  padding: 1.1875rem 1.25rem 1.5625rem;
   border: var(--border-light);
   border-radius: var(--border-radius-small);
+  background-color: var(--ourAdvantageCardBgColor);
 }
 .advantage-card__image {
   width: 3.75rem;
   height: 3.75rem;
-  margin-bottom: 1.5rem;
 }
 .advantage-card__heading {
-  margin-bottom: 0.625rem;
   font-weight: 700;
   font-size: 1.125rem;
   line-height: 1.3;
@@ -2198,22 +1677,21 @@ button[aria-label]::before {
 }
 .advantage-card__text {
   color: var(--advantagesCardextColor);
-  font-size: 1rem;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 @media (width <= 47.99875rem) {
-  .advantage-card__text {
+  .advantage-card {
+    padding: 1.25rem 1.25rem 1.125rem;
+  }
+  .advantage-card__heading {
     font-size: 0.9375rem;
   }
 }
-/* Section advantages.Slider. source --home-page*/
+/* Section advantages.Slider(our-advantage). Differences from the advantages section, in the cards.*/
 .advantages {
   --advantagesSlidesQuantity: 4;
   overflow-x: hidden;
-}
-.advantages__slider {
-  margin-block: 0 clamp(1.25rem, 0.3779069767rem + 3.488372093vw, 3.125rem);
 }
 .advantages__slider-wrapper {
   display: grid;
@@ -2240,139 +1718,107 @@ button[aria-label]::before {
     justify-content: start;
   }
 }
+@media (width <= 47.99875rem) {
+  .advantages__slider-wrapper {
+    column-gap: 0.625rem;
+  }
+}
 /*  ===================================  */
 /*  =======END section advantages======  */
 /*  ===================================  */
-/* Styles for section certificates ( slider with мasters' certificates ) . source -- home page */
-.certificates {
-  overflow-x: hidden;
+/* Blok-card other-services-card. Part of component other-services */
+.other-service-card {
+  --otherServiceCardBgColor: var(--color-gray-800);
+  max-width: 13.75rem;
+  min-height: 10.75rem;
+  width: 100%;
+  will-change: transform;
 }
-.certificates__slider {
-  --certificateSlideWidth: 7.375rem;
-  --certificateSlideHeight: 10.125rem;
-  --certificateSlideImageWidth: 7.1875rem;
-  --certificateSlideImageHeight: var(--certificateSlideHeight);
-  min-height: calc(var(--certificateSlideHeight) + 0.125rem);
-}
-.certificates__link {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: var(--certificateSlideWidth);
-  height: var(--certificateSlideHeight);
-}
-@media (any-hover: hover) {
-  .certificates__link:hover {
-    filter: opacity(100);
-  }
-  .certificates__link:hover .certificates__image {
-    filter: brightness(80%);
-  }
-}
-@media (any-hover: hover) and (any-hover: none) {
-  .certificates__link:active {
-    filter: opacity(100);
-  }
-  .certificates__link:active .certificates__image {
-    filter: brightness(80%);
-  }
-}
-.certificates__link:active .certificates__image {
-  scale: 0.98;
-}
-.certificates__image {
-  transition-duration: var(--transition-duration);
-  width: var(--certificateSlideImageWidth);
-  height: var(--certificateSlideHeight);
-}
-
-/*  ===================================  */
-/*  =======END section certificates====  */
-/*  ===================================  */
-/* Section faq and faq-accordion. sourse -- home page */
-.faq-accordion {
-  --faqAccordionQuestionColor: var(--color-gray-850);
-  --faqAccordionAnswerColor: var(--color-gray-750);
-  --faqAccordionAnswerMaxHeight: 62.5rem;
-}
-.faq-accordion__element:not(:last-child) {
-  margin-bottom: 2.5rem;
-}
-.faq-accordion__element-switcher {
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-.faq-accordion__element-switcher:checked + .faq-accordion__content .faq-accordion__question .faq-accordion__question-icon {
-  rotate: 135deg;
-}
-.faq-accordion__element-switcher:checked + .faq-accordion__content .faq-accordion__answer {
-  max-height: var(--faqAccordionAnswerMaxHeight);
-  padding-top: 0;
-}
-.faq-accordion__question-button {
+.other-service-card__link {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  font-size: 1.125rem;
-  line-height: 1.3;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--faqAccordionQuestionColor);
-  transition-duration: var(--transition-duration);
+  justify-content: center;
+  min-height: inherit;
+  width: 100%;
+  padding: 0.5rem clamp(0.625rem, 0.3343023256rem + 1.1627906977vw, 1.25rem) 0.875rem;
+  color: var(--text-color-light);
+  background-color: var(--otherServiceCardBgColor);
+  border-radius: var(--border-radius);
+  transition-duration: var(--transition-duration) !important;
 }
 @media (any-hover: hover) {
-  .faq-accordion__question-button:hover {
-    filter: opacity(0.6);
+  .other-service-card__link:hover {
+    filter: opacity(1);
+  }
+  .other-service-card__link:hover .other-service-card__link-text {
+    filter: brightness(70%);
   }
 }
 @media (any-hover: hover) and (any-hover: none) {
-  .faq-accordion__question-button:active {
-    filter: opacity(0.6);
+  .other-service-card__link:active {
+    filter: opacity(1);
+  }
+  .other-service-card__link:active .other-service-card__link-text {
+    filter: brightness(70%);
   }
 }
-.faq-accordion__question-button:active {
-  filter: opacity(0.4);
+.other-service-card__link:active {
+  filter: brightness(90%);
 }
-.faq-accordion__question-icon {
-  display: inline-flex;
-  width: 1.25rem;
-  height: 1.25rem;
-  position: relative;
-  color: var(--color-blue-extra-dark);
-  border: 0.125rem solid currentColor;
-  border-radius: 50%;
+.other-service-card__link-text {
+  font-weight: 700;
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  letter-spacing: var(--letter-spacing);
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
   transition-duration: var(--transition-duration);
 }
-.faq-accordion__question-icon::before, .faq-accordion__question-icon::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  content: "";
-  height: 0.125rem;
-  width: 0.5rem;
-  background-color: currentColor;
-  border-radius: 0.125rem;
+.other-service-card__image {
+  width: 3.75rem;
+  height: 3.75rem;
+  margin-bottom: 0.625rem;
 }
-.faq-accordion__question-icon::after {
-  rotate: 90deg;
-}
-.faq-accordion__answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1), padding var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
-}
-.faq-accordion__answer-text {
-  color: var(--faqAccordionAnswerColor);
-  font-size: 16px;
-  line-height: 1.4;
-  padding: 0.625rem 1.5rem 0 0;
+.other-service-card__name {
+  font-size: clamp(0.9375rem, 0.7921511628rem + 0.5813953488vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0.375rem;
 }
 
+@media (width <= 30.06125rem) {
+  .other-service-card__link {
+    padding: 0.9375rem 0.625rem 1.3125rem;
+  }
+}
+/* Section other-services.*/
+.other-services__list {
+  max-width: 44.25rem;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: clamp(0.625rem, 0.2180232558rem + 1.6279069767vw, 1.5rem);
+}
+
+@media (width <= 47.99875rem) {
+  .other-services__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: clamp(0.625rem, -1.9912790698rem + 10.4651162791vw, 6.25rem);
+  }
+  .other-services__list-item {
+    justify-self: end;
+  }
+  .other-services__list-item:nth-child(even) {
+    justify-self: start;
+  }
+}
 /*  ===================================  */
-/*  =========END section faq===========  */
+/*  =======END section other-services======  */
 /*  ===================================  */
 /* Section appointment-choose */
 .appointment-choose__wrapper {
@@ -2711,4 +2157,4 @@ button[aria-label]::before {
 /*  =============END footer============  */
 /*  ===================================  */
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=addresses-card.css.map */

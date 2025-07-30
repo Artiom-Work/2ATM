@@ -1,0 +1,25 @@
+// connecting general scss files
+@use "../../base/normolize";
+@use "../../base/fonts";
+@use "../../base/variables";
+@use "../../base/utils";
+@use "../../base/globals";
+@use "../../base/animation";
+//common-blocks
+@use "../../blocks/сommon-blocks/button";
+@use "../../blocks/сommon-blocks/logo";
+@use "../../blocks/сommon-blocks/section";
+//blocks
+@use "../../blocks/header/_header.scss";
+@use "../../blocks/promo/_promo-main-page.scss";
+@use "../../blocks/overview-services/_overview-services.scss";
+@use "../../blocks/messenger-action/_messenger-action.scss";
+@use "../../blocks/online-registration/_online-registration.scss";
+@use "../../blocks/special-offers/_special-offers.scss";
+@use "../../blocks/reviews/_reviews.scss";
+@use "../../blocks/our-clients/_our-clients.scss";
+@use "../../blocks/advantages/_advantages.scss";
+@use "../../blocks/certificates/_certificates.scss";
+@use "../../blocks/faq/_faq.scss";
+@use "../../blocks/appointment-choose/_appointment-choose.scss";
+@use "../../blocks/footer/_footer.scss";
