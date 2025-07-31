@@ -9,8 +9,8 @@
 	<link rel="icon" type="image/svg+xml" sizes="32x32" href="./images/icons/favicon.svg">
 	<link rel="icon" type="image/svg+xml" sizes="48x48" href="./images/icons/favicon.svg">
 	<link rel="apple-touch-icon" sizes="180x180" href="./images/icons/favicon.svg">
-	<!-- <meta name="description"
-		content=""> -->
+	<meta name="description"
+		content="Специальные условия для корпоративных клиентов 2ATM: обслуживание автопарков, выгодные тарифы, безналичная оплата. Свяжитесь с нами для подбора индивидуальных условий!">
 	<link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css">
 	<title>2ATM | Корпоративным клиентам</title>
 	<link rel="stylesheet" href="./styles/pages/corporate/corporate.css">
@@ -198,6 +198,7 @@
 
 		<section class="promo section" aria-labelledby="promo-title">
 			<h2 class="visually-hidden">Корпоративным клиентам 2АТМ</h2>
+
 			<picture class="promo__background">
 				<source srcset="./images/promo/corporate-promo-bg-mobile.webp" media="(max-width: 768px)" type="image/webp">
 				<source srcset="./images/promo/corporate-promo-bg-tablet.webp" media="(max-width: 1024px)" type="image/webp">
@@ -226,6 +227,109 @@
 				<a class="promo__button button button--accent-bg" href="#!">
 					Связаться
 				</a>
+			</div>
+		</section>
+
+		<section class="possobilities section" aria-labelledby="possobilities-title">
+			<h2 class="visually-hidden">Возможности для корпоративных клиентов 2АТМ</h2>
+
+			<div class="possobilities__slider possobilities__slider--small-max-width">
+				<ul class="possobilities__list swiper-wrapper">
+					<li class="swiper-slide possobility-card">
+						<img class="possobility-card__image" src="./images/icons/true-gear.webp" width="60" height="60"
+							alt="Шестерёнка" loading="lazy">
+
+						<h3 class="possobility-card__name h5">
+							Индивидуальные условия
+						</h3>
+
+						<div class="possobility-card__text">
+							<p>
+								Гибкие тарифы в&nbsp;зависимости от&nbsp;объемов работ и&nbsp;количества автомобилей в&nbsp;вашем
+								парке.
+							</p>
+						</div>
+					</li>
+
+					<li class="swiper-slide possobility-card">
+						<img class="possobility-card__image" src="./images/icons/true-gear.webp" width="60" height="60"
+							alt="Шестерёнка" loading="lazy">
+
+						<h3 class="possobility-card__name h5">
+							Удобная безналичная оплата
+						</h3>
+
+						<div class="possobility-card__text">
+							<p>
+								Все расчеты проводятся безналично, с&nbsp;подготовкой полного пакета документов для бухгалтерии.
+							</p>
+						</div>
+					</li>
+
+					<li class="swiper-slide possobility-card">
+
+						<img class="possobility-card__image" src="./images/icons/true-gear.webp" width="60" height="60"
+							alt="Шестерёнка" loading="lazy">
+
+						<h3 class="possobility-card__name h5">
+							Комплексное обслуживание
+						</h3>
+
+						<div class="possobility-card__text">
+							<p>
+								Шиномонтаж, мойка, ремонт, ТО&nbsp;&mdash; все услуги в&nbsp;одном месте.
+							</p>
+						</div>
+					</li>
+
+					<li class="swiper-slide possobility-card">
+
+						<img class="possobility-card__image" src="./images/icons/true-gear.webp" width="60" height="60"
+							alt="Шестерёнка" loading="lazy">
+
+						<h3 class="possobility-card__name h5">
+							Оптимизация затрат
+						</h3>
+
+						<div class="possobility-card__text">
+							<p>
+								Мы&nbsp;помогаем снизить расходы на&nbsp;обслуживание автопарка без потери качества.
+							</p>
+						</div>
+					</li>
+
+					<li class="swiper-slide possobility-card">
+
+						<img class="possobility-card__image" src="./images/icons/true-gear.webp" width="60" height="60"
+							alt="Шестерёнка" loading="lazy">
+
+						<h3 class="possobility-card__name h5">
+							Собственное ПО&nbsp;учета автопарка и&nbsp;работ
+						</h3>
+
+						<div class="possobility-card__text">
+							<p>
+								Мы&nbsp;ведем учет всех работ по&nbsp;каждому автомобилю и&nbsp;предоставляем детальные отчеты
+							</p>
+						</div>
+					</li>
+
+					<li class="swiper-slide possobility-card">
+
+						<img class="possobility-card__image" src="./images/icons/true-gear.webp" width="60" height="60"
+							alt="Шестерёнка" loading="lazy">
+
+						<h3 class="possobility-card__name h5">
+							Отлаженный процесс
+						</h3>
+
+						<div class="possobility-card__text">
+							<p>
+								Отлаженный процесс работы наших специалистов гарантирует минимальный простой автомобилей.
+							</p>
+						</div>
+					</li>
+				</ul>
 			</div>
 		</section>
 
@@ -560,6 +664,53 @@
 	<script src="./libs/swiper/swiper-bundle.min.js"></script>
 
 	<script>
+		// const possobilitiesSlider = new Swiper(".possobilities__slider", {
+		// 	/* Настройки только для слайдера на странице "Аренда и развитие" */
+		// 	slidesPerView: "auto",
+		// 	grid: {
+		// 		rows: 1,
+		// 		fill: "row",
+		// 	},
+		// 	spaceBetween: 10,
+		// 	breakpoints: {
+		// 		1024: {
+		// 			spaceBetween: 24,
+		// 		},
+		// 		1600: {
+		// 			grid: {
+		// 				rows: 2,
+		// 			},
+		// 		},
+		// 	},
+		// 	grabCursor: true
+		// });
+
+		const possobilitiesSlider = new Swiper(".possobilities__slider", {
+			slidesPerView: "auto",
+			grid: {
+				rows: 1,
+				fill: 'row',
+			},
+			spaceBetween: 10,
+			breakpoints: {
+				1024: {
+					spaceBetween: 10,
+					grid: {
+						rows: 1,
+						fill: 'row',
+					},
+				},
+				1224: {
+					spaceBetween: 24,
+					grid: {
+						rows: 2,
+					},
+				},
+
+			},
+			grabCursor: true
+		});
+
 
 		const ourAdvantagesSlider = new Swiper(".advantages__slider", {
 			slidesPerView: "auto",

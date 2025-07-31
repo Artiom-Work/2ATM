@@ -1,0 +1,39 @@
+@use "../../healpers" as *;
+@use "possobility-card";
+
+/* Styles for section possobilities. */
+
+.possobilities {
+  padding-block: rem(2);
+  display: flex;
+  justify-content: center;
+
+  &__slider {
+    overflow: hidden;
+    padding: rem(4) rem(10);
+
+    &--small-max-width {
+      max-width: rem(965);
+    }
+  }
+}
+@include desktop-media-above {
+  .possobilities {
+    &__list {
+      &:has(li:nth-child(7n)) {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@include tablet-media {
+  .possobilities {
+    &__slider {
+      padding-block: rem(23);
+    }
+  }
+}
+/*  ===================================  */
+/*  =====END section possobilities ====  */
+/*  ===================================  */

@@ -1,0 +1,49 @@
+@use "../../healpers" as *;
+/* Styles for section possobility-card. Part of section possobilities */
+.possobility-card {
+  min-height: rem(294);
+  max-width: rem(297);
+  width: 100%;
+  padding: rem(20) rem(20) rem(8) rem(20);
+  outline: var(--border-light);
+  border-radius: var(--border-radius-small);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  row-gap: rem(20);
+  background-color: var(--color-accent-axtra-light);
+
+  &__image {
+    @include square(rem(60));
+
+    flex-shrink: 0;
+  }
+
+  &__name {
+    line-height: 1.3;
+    text-align: center;
+    min-height: rem(58);
+
+    @include tablet-media {
+      min-height: rem(44);
+      line-height: 1.2;
+    }
+  }
+
+  &__text {
+    line-height: 1.5;
+    color: var(--text-color-dark-secondary);
+    flex-grow: 1;
+  }
+}
+@include tablet-media {
+  .possobility-card {
+    min-height: rem(280);
+
+    &__name {
+      min-height: rem(44);
+      line-height: 1.2;
+    }
+  }
+}
