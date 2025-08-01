@@ -333,6 +333,111 @@
 			</div>
 		</section>
 
+		<section class="callback section" aria-labelledby="callback-title">
+			<h2 class="visually-hidden">Связаться с 2АТМ чтобы подобрать услугу</h2>
+
+			<div class="callback__wrapper container">
+				<div class="callback__body">
+					<h3 class="callback__title h4" id="callback-title">
+						Свяжитесь с&nbsp;нами и&nbsp;мы подберем вам
+						наиболее&nbsp;выгодные условия!
+					</h3>
+
+					<form class="callback__form callback-form" id="callback-form">
+						<div class="callback-form__fields">
+							<div class="callback-form__field">
+								<label for="name" class="visually-hidden">Имя клиента</label>
+								<input class="callback-form__field-input" id="name" name="name" placeholder="Имя" required
+									autocomplete="on">
+							</div>
+
+							<div class="callback-form__field">
+								<label class="visually-hidden" for="phone">Телефон клиента</label>
+								<input class="callback-form__field-input" type="tel" id="phone" name="phone" placeholder="Телефон"
+									pattern="[0-9+()\-\s]{10,20}" required title="Только цифры, +, скобки и дефисы">
+							</div>
+
+							<div class="callback-form__field">
+								<label class="visually-hidden" for="email">Почта пользователя</label>
+								<input class="callback-form__field-input" type="email" id="email" name="email"
+									placeholder="Электронная почта">
+							</div>
+
+							<div class="callback-form__field">
+								<label class="visually-hidden" for="message">Сообщение пользователя</label>
+								<input class="callback-form__field-input" id="message" name="message" placeholder="Сообщение"
+									autocomplete="on">
+							</div>
+						</div>
+
+						<button class="callback-form__button button button--accent-bg" type="submit">
+							Отправить
+						</button>
+
+					</form>
+
+					<div class="callback__policy">
+						<p>
+							Отправляя сообщение вы&nbsp;соглашаетесь c&nbsp;
+							<a class="callback__policy-link" href="#!" target="_blank">
+								политикой обработки персональных
+								данных
+							</a>
+						</p>
+					</div>
+				</div>
+
+				<picture class="callback__image-wrapper">
+					<source srcset="./images/callback/callback-mobile.webp" media="(max-width: 1024px) " type="image/webp">
+
+					<source srcset="./images/callback/callback.webp 1x , ./images/callback/callback@2x.webp 2x" type="image/webp">
+					<img class="callback__image" src="./images/callback/callback-mobile.webp" alt="Девушка с планшетом"
+						width="360" height="360" loading="lazy">
+				</picture>
+			</div>
+		</section>
+
+		<section class="our-clients section section--big-to-medium-margin container" aria-labelledby="our-clients-title">
+			<h2 class="section__title h3" id="our-clients-title">
+				Наши клиенты
+			</h2>
+
+			<div class="our-clients__slider">
+				<div class="swiper-wrapper">
+					<a class="our-clients__link swiper-slide" href="#!" aria-label="Клиент 2ATM" title="AN-SECURITY DIRECT">
+						<img class="our-clients__image" src="./images/our-clients/our-client-1.webp" width="190" height="115"
+							alt="an-secuity direct" loading="lazy">
+					</a>
+
+					<a class="our-clients__link swiper-slide" href="#!" aria-label="Клиент 2ATM" title="STÄUBLI">
+						<img class="our-clients__image" src="./images/our-clients/our-client-2.webp" width="190" height="115"
+							alt="StÄubli" loading="lazy">
+					</a>
+
+					<a class="our-clients__link swiper-slide" href="#!" aria-label="Клиент 2ATM" title="StarLine">
+						<img class="our-clients__image" src="./images/our-clients/our-client-3.webp" width="190" height="115"
+							alt="Starline" loading="lazy">
+					</a>
+
+					<a class="our-clients__link swiper-slide" href="#!" aria-label="Клиент 2ATM" title="UniRent">
+						<img class="our-clients__image" src="./images/our-clients/our-client-4.webp" width="190" height="115"
+							alt="Unirent" loading="lazy">
+					</a>
+
+					<a class="our-clients__link swiper-slide" href="#!" aria-label="Клиент 2ATM" title="ТИТАН">
+						<img class="our-clients__image" src="./images/our-clients/our-client-5.webp" width="190" height="115"
+							alt="Титан" loading="lazy">
+					</a>
+
+					<a class="our-clients__link swiper-slide" href="#!" aria-label="Клиент 2ATM" title="АТОМПРОЕКТ">
+						<img class="our-clients__image" src="./images/our-clients/our-client-6.webp" width="190" height="115"
+							alt="Атомпроект" loading="lazy">
+					</a>
+				</div>
+			</div>
+		</section>
+
+
 		<section class="advantages section section--big-to-medium-margin container" aria-labelledby="advantages-title">
 			<h2 class="section__title h3" id="advantages-title">
 				Наши преимущества
@@ -525,7 +630,7 @@
 
 				<div class="footer__heading-text">
 					<p>
-						Сеть шиномонтажей, автомоек и&nbsp;автосервисов  с&nbsp;качественным обслуживанием в&nbsp;Санкт-Петербурге
+						Сеть шиномонтажей, автомоек и&nbsp;автосервисов с&nbsp;качественным обслуживанием в&nbsp;Санкт-Петербурге
 					</p>
 				</div>
 			</div>
@@ -711,6 +816,15 @@
 			grabCursor: true
 		});
 
+		const clientsSlider = new Swiper(".our-clients__slider", {
+			loop: true,
+			slidesPerView: "auto",
+			spaceBetween: 24,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
+		});
 
 		const ourAdvantagesSlider = new Swiper(".advantages__slider", {
 			slidesPerView: "auto",
