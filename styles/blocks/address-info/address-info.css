@@ -50,6 +50,21 @@
   text-decoration: underline;
   text-decoration-skip-ink: none;
 }
+@media (any-hover: hover) {
+  .svc-contacts__item-text--underline:hover {
+    filter: opacity(0.6);
+  }
+}
+@media (any-hover: hover) and (any-hover: none) {
+  .svc-contacts__item-text--underline:active {
+    filter: opacity(0.6);
+  }
+}
+.svc-contacts__item-text--underline:active {
+  filter: opacity(0.4);
+  will-change: transform;
+  scale: 0.98;
+}
 
 @media (width <= 47.99875rem) {
   .svc-contacts {

@@ -56,6 +56,16 @@
         cursor: pointer;
         text-decoration: underline;
         text-decoration-skip-ink: none;
+
+        @include hover {
+          filter: opacity(0.6);
+        }
+
+        @include active {
+          filter: opacity(0.4);
+          will-change: transform;
+          scale: 0.98;
+        }
       }
     }
   }

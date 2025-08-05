@@ -1,0 +1,134 @@
+/* Styles for block offer-card.Part of offers-list */
+.offer-card {
+  --offerCardTextColor: var(--text-color-dark);
+  color: var(--offerCardTextColor);
+  display: flex;
+  column-gap: 1.5rem;
+}
+.offer-card__image {
+  width: inherit;
+  height: inherit;
+}
+.offer-card__image-wrapper {
+  width: 25.25rem;
+  height: 15.0625rem;
+  flex-shrink: 0;
+}
+.offer-card__heading {
+  min-height: 3.25rem;
+  line-height: 1.3;
+  text-transform: uppercase;
+  margin-bottom: clamp(1rem, 0.9127906977rem + 0.3488372093vw, 1.1875rem);
+  color: inherit;
+}
+.offer-card__text {
+  font-size: clamp(0.75rem, 0.5755813953rem + 0.6976744186vw, 1.125rem);
+  margin-bottom: clamp(1rem, 0.9127906977rem + 0.3488372093vw, 1.1875rem);
+  flex-grow: 1;
+  min-height: 5.0625rem;
+  line-height: 1.5;
+  color: inherit;
+}
+.offer-card__link {
+  font-size: clamp(1rem, 0.9418604651rem + 0.2325581395vw, 1.125rem);
+  margin-bottom: 0;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  transition-duration: var(--transition-duration) !important;
+  color: inherit;
+}
+.offer-card__button {
+  display: block;
+  justify-self: start;
+  transition-duration: var(--transition-duration) !important;
+  will-change: transform;
+}
+
+@media (width <= 47.99875rem) {
+  .offer-card {
+    --offerCardTextColor: var(--color-light);
+    position: relative;
+  }
+  .offer-card__image {
+    border-radius: inherit;
+    min-width: inherit;
+    object-fit: cover;
+  }
+  .offer-card__image-wrapper {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-width: 21.25rem;
+    height: 10.625rem;
+    border-radius: var(--border-radius-small);
+  }
+  .offer-card__image-wrapper::before {
+    content: "";
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-red-opcity-40);
+    border-radius: inherit;
+  }
+  .offer-card__content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 1.625rem 1.5rem;
+    z-index: 1;
+  }
+  .offer-card__heading {
+    line-height: 1.2;
+  }
+  .offer-card__text {
+    line-height: 1.16667;
+  }
+  .offer-card__heading, .offer-card__text {
+    min-height: unset;
+  }
+}
+/* Style for accent red link from common blocks */
+.accent-color-link {
+  font-weight: 700;
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  letter-spacing: var(--letter-spacing);
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--color-accent-600);
+}
+
+/*  ===================================  */
+/*  ===================================  */
+/* Styles for section offers.(special-offers page) */
+.offers {
+  margin-block: 0 2.5rem;
+}
+.offers__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(0.625rem, -0.8284883721rem + 5.8139534884vw, 3.75rem);
+}
+
+@media (width <= 47.99875rem) {
+  .offers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.625rem;
+  }
+  .offers__list {
+    width: 100%;
+  }
+}
+/*  ===================================  */
+/*  ========END section offers=======  */
+/*  ===================================  */
+
+/*# sourceMappingURL=offers.css.map */

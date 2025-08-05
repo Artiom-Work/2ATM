@@ -1,0 +1,113 @@
+@use "../../healpers" as *;
+/* Styles for block offer-card.Part of offers-list */
+.offer-card {
+  --offerCardTextColor: var(--text-color-dark);
+
+  color: var(--offerCardTextColor);
+  display: flex;
+  column-gap: rem(24);
+
+  &__image {
+    &-wrapper {
+      width: rem(404);
+      height: rem(241);
+      flex-shrink: 0;
+    }
+
+    width: inherit;
+    height: inherit;
+  }
+
+  &__heading {
+    min-height: rem(52);
+    line-height: 1.3;
+    text-transform: uppercase;
+    margin-bottom: fluid(19, 16);
+    color: inherit;
+  }
+
+  &__text {
+    @include fluid-text(18, 12);
+
+    margin-bottom: fluid(19, 16);
+    flex-grow: 1;
+    min-height: rem(81);
+    line-height: 1.5;
+    color: inherit;
+  }
+
+  &__link {
+    @include fluid-text(18, 16);
+
+    margin-bottom: 0;
+    font-weight: 600;
+    line-height: 1.5;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    transition-duration: var(--transition-duration) !important;
+    color: inherit;
+  }
+
+  &__button {
+    display: block;
+    justify-self: start;
+    transition-duration: var(--transition-duration) !important;
+    will-change: transform;
+  }
+}
+
+@include mobile-media {
+  .offer-card {
+    --offerCardTextColor: var(--color-light);
+
+    position: relative;
+
+    &__image {
+      &-wrapper {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        min-width: rem(340);
+        height: rem(170);
+        border-radius: var(--border-radius-small);
+
+        &::before {
+          content: "";
+          width: inherit;
+          height: inherit;
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          background: var(--color-red-opcity-40);
+          border-radius: inherit;
+        }
+      }
+      border-radius: inherit;
+      min-width: inherit;
+      object-fit: cover;
+    }
+
+    &__content {
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: rem(26) rem(24);
+      z-index: 1;
+    }
+
+    &__heading {
+      line-height: 1.2;
+    }
+
+    &__text {
+      line-height: 1.16667;
+    }
+
+    &__heading,
+    &__text {
+      min-height: unset;
+    }
+  }
+}

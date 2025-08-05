@@ -1,0 +1,30 @@
+@use "../../healpers" as *;
+@use "offer-card";
+@use "../сommon-blocks/accent-link";
+/* Styles for section offers.(special-offers page) */
+.offers {
+  margin-block: 0 rem(40);
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(60, 10);
+  }
+}
+
+@include mobile-media {
+  .offers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: rem(10);
+
+    &__list {
+      width: 100%;
+    }
+  }
+}
+
+/*  ===================================  */
+/*  ========END section offers=======  */
+/*  ===================================  */

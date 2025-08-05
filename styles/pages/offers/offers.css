@@ -902,110 +902,6 @@ button[aria-label]::before {
 /*  ===================================  */
 /*  =============END header============  */
 /*  ===================================  */
-/* Section promo in the corporate page */
-.promo {
-  position: relative;
-  color: var(--text-color-light);
-  min-height: 37.5rem;
-  max-width: 120rem;
-  margin-inline: auto;
-}
-.promo__background {
-  min-height: 37.5rem;
-  position: absolute;
-  z-index: -1;
-  max-width: 120rem;
-}
-.promo__background-image {
-  height: 37.5rem;
-  width: 120rem;
-  object-fit: cover;
-  object-position: right;
-}
-.promo__body {
-  padding-block: clamp(4rem, 2.125rem + 7.5vw, 8.03125rem) 0;
-}
-.promo__title {
-  max-width: 64.375rem;
-  line-height: 1.27;
-  margin-bottom: 2.5rem;
-}
-.promo__subtitle {
-  margin-bottom: 2.5rem;
-  line-height: 1.5;
-  max-width: 43.75rem;
-}
-.promo__subtitle p:first-child {
-  max-width: 31.25rem;
-}
-
-@media (width <= 63.99875rem) {
-  .promo {
-    min-height: 30.1875rem;
-  }
-  .promo .container {
-    --container-padding-x: 2.6875rem;
-  }
-  .promo__background {
-    min-height: 30.1875rem;
-  }
-  .promo__background-image {
-    height: 30.1875rem;
-    width: 63.9375rem;
-  }
-  .promo__body {
-    padding-block: 4.375rem 0;
-  }
-  .promo__title {
-    margin-bottom: 1.25rem;
-  }
-  .promo__subtitle {
-    max-width: 21rem;
-    font-size: 1rem;
-    margin-bottom: 1.25rem;
-  }
-}
-@media (width <= 47.99875rem) {
-  .promo .container {
-    --container-padding-x: 0.75rem;
-  }
-  .promo__background {
-    position: static;
-  }
-  .promo__background-image {
-    width: 47.9375rem;
-    margin-bottom: 0.625rem;
-  }
-  .promo__body {
-    display: flex;
-    flex-direction: column;
-    padding-block: 0;
-  }
-  .promo__title {
-    position: absolute;
-    top: 2.75rem;
-    font-size: 1.5rem;
-    max-width: unset;
-    text-align: center;
-    line-height: 1.3;
-    padding-inline: 0.5rem;
-  }
-  .promo__subtitle {
-    max-width: unset;
-    margin-bottom: 0.625rem;
-    color: var(--text-color-dark);
-    font-weight: 600;
-  }
-  .promo__subtitle p {
-    margin-bottom: 0;
-  }
-  .promo__button {
-    align-self: center;
-  }
-}
-/*  ========================================  */
-/*  =====END promo block(corporate page)====  */
-/*  ========================================  */
 /* Section page-heading */
 .page-heading {
   --breadcrumbsColor: var(--color-gray-500);
@@ -1061,443 +957,137 @@ button[aria-label]::before {
 /*  ===================================  */
 /*  ==========END page-heading=========  */
 /*  ===================================  */
-/* Styles for section possobility-card. Part of section possobilities */
-.possobility-card {
-  min-height: 18.375rem;
-  max-width: 18.5625rem;
-  width: 100%;
-  padding: 1.25rem 1.25rem 0.5rem 1.25rem;
-  outline: var(--border-light);
-  border-radius: var(--border-radius-small);
+/* Styles for block offer-card.Part of offers-list */
+.offer-card {
+  --offerCardTextColor: var(--text-color-dark);
+  color: var(--offerCardTextColor);
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: end;
-  row-gap: 1.25rem;
-  background-color: var(--color-accent-axtra-light);
-}
-.possobility-card__image {
-  width: 3.75rem;
-  height: 3.75rem;
-  flex-shrink: 0;
-}
-.possobility-card__name {
-  line-height: 1.3;
-  text-align: center;
-  min-height: 3.625rem;
-}
-@media (width <= 63.99875rem) {
-  .possobility-card__name {
-    min-height: 2.75rem;
-    line-height: 1.2;
-  }
-}
-.possobility-card__text {
-  line-height: 1.5;
-  color: var(--text-color-dark-secondary);
-  flex-grow: 1;
-}
-
-@media (width <= 63.99875rem) {
-  .possobility-card {
-    min-height: 17.5rem;
-  }
-  .possobility-card__name {
-    min-height: 2.75rem;
-    line-height: 1.2;
-  }
-}
-/* Styles for section possobilities. */
-.possobilities {
-  padding-block: 0.125rem;
-  display: flex;
-  justify-content: center;
-}
-.possobilities__slider {
-  overflow: hidden;
-  padding: 0.25rem 0.625rem;
-}
-.possobilities__slider--small-max-width {
-  max-width: 60.3125rem;
-}
-
-@media (width > 100.06125rem) {
-  .possobilities__list:has(li:nth-child(7n)) {
-    justify-content: center;
-  }
-}
-@media (width <= 63.99875rem) {
-  .possobilities__slider {
-    padding-block: 1.4375rem;
-  }
-}
-/*  ===================================  */
-/*  =====END section possobilities ====  */
-/*  ===================================  */
-/* Styles for block-form callback-form.Part of section callback */
-.callback-form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.9375rem;
-}
-.callback-form__fields {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1.0625rem;
-}
-.callback-form__field {
-  height: 2.9375rem;
-  width: 100%;
-}
-.callback-form__field-input {
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  border-bottom: var(--border-light);
-  height: inherit;
-  width: inherit;
-  padding-block: 0.75rem;
-  padding-inline: 0.625rem;
-  transition-duration: var(--transition-duration);
-}
-.callback-form__field-input:focus {
-  outline: var(--border-light);
-  border-bottom: transparent;
-}
-.callback-form__field-input:focus::placeholder {
-  color: transparent;
-}
-.callback-form__field-input::placeholder {
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.3;
-  position: relative;
-  left: -0.625rem;
-}
-.callback-form__button {
-  align-self: center;
-}
-
-@media (width <= 47.99875rem) {
-  .callback-form__fields {
-    row-gap: 1rem;
-  }
-  .callback-form__button {
-    font-size: 0.9375rem;
-    line-height: 1.7;
-  }
-}
-/* Styles for section callback. Block with a form for client contact */
-.callback__wrapper {
-  display: flex;
-  gap: 1.5rem;
-}
-.callback__body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 45.1875rem;
-  width: 100%;
-  padding-block: 3.125rem;
-  padding-inline: 1.25rem;
-}
-.callback__title {
-  max-width: 34.1875rem;
-  line-height: 1.2;
-  text-transform: uppercase;
-  text-align: center;
-  margin-block: 0 0.5rem;
-}
-.callback__form {
-  max-width: 34.1875rem;
-  margin-block: 0 0.5rem;
-}
-.callback__policy {
-  text-align: center;
-  width: 100%;
-  color: var(--text-color-dark-secondary);
-}
-.callback__policy-link {
-  display: inline;
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-}
-.callback__image {
-  width: inherit;
-  height: inherit;
-}
-.callback__image-wrapper {
-  border-radius: var(--border-radius-small);
-  width: 32.0625rem;
-  height: 32rem;
-  flex-shrink: 0;
-}
-
-@media (width <= 81.31125rem) {
-  .callback__wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-  .callback__body {
-    max-width: 100%;
-  }
-  .callback__form {
-    max-width: 100%;
-  }
-}
-@media (width <= 63.99875rem) {
-  .callback__wrapper {
-    flex-direction: row;
-  }
-  .callback__body {
-    padding-inline: 0;
-  }
-  .callback__title {
-    text-align: start;
-  }
-  .callback__image-wrapper {
-    width: 22.5rem;
-    height: 22.5rem;
-  }
-}
-@media (width <= 47.99875rem) {
-  .callback__wrapper {
-    padding-inline: 1.25rem;
-    flex-direction: column;
-  }
-  .callback__title {
-    text-align: center;
-    line-height: 1.5;
-  }
-  .callback__body {
-    padding-block: 3.125rem 0;
-  }
-}
-/*  ===================================  */
-/*  ========END section callback=======  */
-/*  ===================================  */
-/* Styles for section our clients( slider with companies logos ) . source -- home page */
-.our-clients {
-  overflow-x: hidden;
-}
-.our-clients__slider {
-  --clientsSlideWidth: 11.875rem;
-  --clientsSlideHeight: 7.1875rem;
-  min-height: calc(var(--clientsSlideHeight) + 0.125rem);
-}
-.our-clients__link {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  width: var(--clientsSlideWidth);
-  height: var(--clientsSlideHeight);
-  outline: var(--border-extra-light);
-  background-color: var(--color-light);
-  border-radius: var(--border-radius-small);
-}
-@media (any-hover: hover) {
-  .our-clients__link:hover {
-    filter: opacity(100);
-  }
-  .our-clients__link:hover .our-clients__image {
-    filter: brightness(80%);
-  }
-}
-@media (any-hover: hover) and (any-hover: none) {
-  .our-clients__link:active {
-    filter: opacity(100);
-  }
-  .our-clients__link:active .our-clients__image {
-    filter: brightness(80%);
-  }
-}
-.our-clients__link:active .our-clients__image {
-  scale: 0.98;
-}
-.our-clients__image {
-  transition-duration: var(--transition-duration);
-  width: var(--clientsSlideWidth);
-  height: var(--clientsSlideHeight);
-  border-radius: inherit;
-}
-
-/*  ===================================  */
-/*  =======END section our clients=====  */
-/*  ===================================  */
-/* Block-card for advantage slider( our-advantage ).Part of Section advantages. Differences from blocks advantages in background color and positioning of the card*/
-.advantage-card {
-  --advantageCardTextColor: var(--color-gray-700);
-  --advantageCardTitleTextColor: var(--color-gray-800);
-  --ourAdvantageCardBgColor: var(--color-accent-200);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 1.1875rem;
-  max-width: 18.5625rem;
-  width: 100%;
-  padding: 1.1875rem 1.25rem 1.5625rem;
-  border: var(--border-light);
-  border-radius: var(--border-radius-small);
-  background-color: var(--ourAdvantageCardBgColor);
-}
-.advantage-card__image {
-  width: 3.75rem;
-  height: 3.75rem;
-}
-.advantage-card__heading {
-  font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.3;
-  text-transform: uppercase;
-  color: var(--advantageCardTitleTextColor);
-}
-.advantage-card__text {
-  color: var(--advantagesCardextColor);
-  line-height: 1.5;
-}
-
-@media (width <= 47.99875rem) {
-  .advantage-card {
-    padding: 1.25rem 1.25rem 1.125rem;
-  }
-  .advantage-card__heading {
-    font-size: 0.9375rem;
-  }
-}
-/* Section advantages.Slider(our-advantage). Differences from the advantages section, in the cards.*/
-.advantages {
-  --advantagesSlidesQuantity: 4;
-  overflow-x: hidden;
-}
-.advantages__slider-wrapper {
-  display: grid;
-  grid-template-rows: auto !important;
-  grid-template-columns: repeat(var(--advantagesSlidesQuantity), 18.5625rem);
   column-gap: 1.5rem;
 }
-.advantages__buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 1.25rem;
+.offer-card__image {
+  width: inherit;
+  height: inherit;
 }
-.advantages__button {
-  font-size: 1rem;
+.offer-card__image-wrapper {
+  width: 25.25rem;
+  height: 15.0625rem;
+  flex-shrink: 0;
 }
-
-@media (width <= 63.99875rem) {
-  .advantages__slider {
-    margin-block: 0 1.25rem;
-  }
-  .advantages__buttons {
-    column-gap: 1rem;
-    justify-content: start;
-  }
+.offer-card__heading {
+  min-height: 3.25rem;
+  line-height: 1.3;
+  text-transform: uppercase;
+  margin-bottom: clamp(1rem, 0.9127906977rem + 0.3488372093vw, 1.1875rem);
+  color: inherit;
 }
-@media (width <= 47.99875rem) {
-  .advantages__slider-wrapper {
-    column-gap: 0.625rem;
-  }
+.offer-card__text {
+  font-size: clamp(0.75rem, 0.5755813953rem + 0.6976744186vw, 1.125rem);
+  margin-bottom: clamp(1rem, 0.9127906977rem + 0.3488372093vw, 1.1875rem);
+  flex-grow: 1;
+  min-height: 5.0625rem;
+  line-height: 1.5;
+  color: inherit;
 }
-/*  ===================================  */
-/*  =======END section advantages======  */
-/*  ===================================  */
-/* Blok-card other-services-card. Part of component other-services */
-.other-service-card {
-  --otherServiceCardBgColor: var(--color-gray-800);
-  max-width: 13.75rem;
-  min-height: 10.75rem;
-  width: 100%;
+.offer-card__link {
+  font-size: clamp(1rem, 0.9418604651rem + 0.2325581395vw, 1.125rem);
+  margin-bottom: 0;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  transition-duration: var(--transition-duration) !important;
+  color: inherit;
+}
+.offer-card__button {
+  display: block;
+  justify-self: start;
+  transition-duration: var(--transition-duration) !important;
   will-change: transform;
 }
-.other-service-card__link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: inherit;
-  width: 100%;
-  padding: 0.5rem clamp(0.625rem, 0.3343023256rem + 1.1627906977vw, 1.25rem) 0.875rem;
-  color: var(--text-color-light);
-  background-color: var(--otherServiceCardBgColor);
-  border-radius: var(--border-radius);
-  transition-duration: var(--transition-duration) !important;
-}
-@media (any-hover: hover) {
-  .other-service-card__link:hover {
-    filter: opacity(1);
+
+@media (width <= 47.99875rem) {
+  .offer-card {
+    --offerCardTextColor: var(--color-light);
+    position: relative;
   }
-  .other-service-card__link:hover .other-service-card__link-text {
-    filter: brightness(70%);
+  .offer-card__image {
+    border-radius: inherit;
+    min-width: inherit;
+    object-fit: cover;
+  }
+  .offer-card__image-wrapper {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-width: 21.25rem;
+    height: 10.625rem;
+    border-radius: var(--border-radius-small);
+  }
+  .offer-card__image-wrapper::before {
+    content: "";
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-red-opcity-40);
+    border-radius: inherit;
+  }
+  .offer-card__content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 1.625rem 1.5rem;
+    z-index: 1;
+  }
+  .offer-card__heading {
+    line-height: 1.2;
+  }
+  .offer-card__text {
+    line-height: 1.16667;
+  }
+  .offer-card__heading, .offer-card__text {
+    min-height: unset;
   }
 }
-@media (any-hover: hover) and (any-hover: none) {
-  .other-service-card__link:active {
-    filter: opacity(1);
-  }
-  .other-service-card__link:active .other-service-card__link-text {
-    filter: brightness(70%);
-  }
-}
-.other-service-card__link:active {
-  filter: brightness(90%);
-}
-.other-service-card__link-text {
+/* Style for accent red link from common blocks */
+.accent-color-link {
   font-weight: 700;
   font-size: 0.8125rem;
   line-height: 1.7;
   letter-spacing: var(--letter-spacing);
   text-decoration: underline;
   text-decoration-skip-ink: none;
-  transition-duration: var(--transition-duration);
-}
-.other-service-card__image {
-  width: 3.75rem;
-  height: 3.75rem;
-  margin-bottom: 0.625rem;
-}
-.other-service-card__name {
-  font-size: clamp(0.9375rem, 0.7921511628rem + 0.5813953488vw, 1.25rem);
-  font-weight: 700;
-  line-height: 1.3;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 0.375rem;
+  color: var(--color-accent-600);
 }
 
-@media (width <= 30.06125rem) {
-  .other-service-card__link {
-    padding: 0.9375rem 0.625rem 1.3125rem;
-  }
+/*  ===================================  */
+/*  ===================================  */
+/* Styles for section offers.(special-offers page) */
+.offers {
+  margin-block: 0 2.5rem;
 }
-/* Section other-services.*/
-.other-services__list {
-  max-width: 44.25rem;
-  margin-inline: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto auto;
-  gap: clamp(0.625rem, 0.2180232558rem + 1.6279069767vw, 1.5rem);
+.offers__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(0.625rem, -0.8284883721rem + 5.8139534884vw, 3.75rem);
 }
 
 @media (width <= 47.99875rem) {
-  .other-services__list {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto auto;
-    gap: clamp(0.625rem, -1.9912790698rem + 10.4651162791vw, 6.25rem);
+  .offers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.625rem;
   }
-  .other-services__list-item {
-    justify-self: end;
-  }
-  .other-services__list-item:nth-child(even) {
-    justify-self: start;
+  .offers__list {
+    width: 100%;
   }
 }
 /*  ===================================  */
-/*  =======END section other-services======  */
+/*  ========END section offers=======  */
 /*  ===================================  */
 /* Navigation footer section. part of footer */
 .footer-svc-links__heading {
@@ -1759,4 +1349,4 @@ button[aria-label]::before {
 /*  =============END footer============  */
 /*  ===================================  */
 
-/*# sourceMappingURL=corporate.css.map */
+/*# sourceMappingURL=offers.css.map */
