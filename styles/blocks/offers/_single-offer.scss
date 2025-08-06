@@ -1,0 +1,45 @@
+@use "../../healpers" as *;
+@use "offer-description";
+
+/* Styles for section single-offer.(offer page) */
+.single-offer {
+  display: flex;
+  gap: fluid(24, 10);
+  margin-block: 0 rem(40);
+
+  &__image {
+    &-wrapper {
+      width: rem(404);
+      height: rem(241);
+      flex-shrink: 0;
+    }
+
+    width: inherit;
+    height: inherit;
+  }
+}
+@include tablet-media {
+  .single-offer {
+    flex-direction: column;
+  }
+}
+@include mobile-media {
+  .single-offer {
+    gap: 0;
+
+    &__image {
+      &-wrapper {
+        margin-inline: calc(var(--container-padding-x) * -1);
+        width: calc(100% + (var(--container-padding-x) * 2));
+        height: rem(215);
+
+        margin-bottom: rem(40);
+      }
+
+      object-fit: cover;
+    }
+  }
+}
+/*  =================================  */
+/*  =====END section single-offer====  */
+/*  =================================  */

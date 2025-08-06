@@ -49,6 +49,7 @@
   }
   .page-heading__breadcrumbs-link {
     line-height: 1.4;
+    letter-spacing: 0.03em;
   }
 }
 /*  ===================================  */
