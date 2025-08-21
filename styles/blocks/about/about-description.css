@@ -1,0 +1,84 @@
+/* Styles for section about-description.*/
+.about-description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4.25rem;
+  margin-bottom: 5rem;
+}
+.about-description__image {
+  width: inherit;
+  height: inherit;
+}
+.about-description__image-wrapper {
+  flex-shrink: 0;
+  width: 38.625rem;
+  height: 33.125rem;
+}
+.about-description__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 2.5rem;
+}
+.about-description__title {
+  line-height: 1.2;
+}
+.about-description__text {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--text-color-dark-secondary);
+}
+.about-description__text ul {
+  padding-left: 1.375rem;
+  list-style: circle;
+}
+.about-description__text ul:not(:last-child),
+.about-description__text p:not(:last-child) {
+  margin-bottom: 0.9375rem;
+  margin-top: 0;
+}
+.about-description__button {
+  align-self: start;
+  font-size: 1rem !important;
+}
+
+@media (width <= 81.31125rem) {
+  .about-description {
+    flex-direction: column;
+  }
+  .about-description__title {
+    text-align: center;
+  }
+  .about-description__button {
+    align-self: center;
+  }
+}
+@media (width <= 47.99875rem) {
+  .about-description {
+    margin-bottom: 8.125rem;
+  }
+  .about-description__image-wrapper {
+    width: 22.5rem;
+    height: 22.5rem;
+  }
+  .about-description__body {
+    row-gap: 2.375rem;
+  }
+  .about-description__title {
+    text-align: left;
+    line-height: 1.5;
+  }
+  .about-description__text ul {
+    padding-left: 1.0625rem;
+  }
+  .about-description__text ul:not(:last-child),
+  .about-description__text p:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+/*  ======================================  */
+/*  =====END section about-description====  */
+/*  ======================================  */
+
+/*# sourceMappingURL=about-description.css.map */

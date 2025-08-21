@@ -1,7 +1,6 @@
 @use "../../healpers" as *;
 /* Block-card for advantage slider( our-advantage ).Part of Section advantages. Differences from blocks advantages in background color and positioning of the card*/
 .advantage-card {
-  --advantageCardTextColor: var(--color-gray-700);
   --advantageCardTitleTextColor: var(--color-gray-800);
   --ourAdvantageCardBgColor: var(--color-accent-200);
 
@@ -25,13 +24,15 @@
     font-weight: 700;
     font-size: rem(18);
     line-height: 1.3;
+    text-align: center;
     text-transform: uppercase;
     color: var(--advantageCardTitleTextColor);
   }
 
   &__text {
-    color: var(--advantagesCardextColor);
+    color: var(--text-color-dark-secondary);
     line-height: 1.5;
+    letter-spacing: 0.02em;
   }
 }
 
@@ -41,6 +42,7 @@
 
     &__heading {
       font-size: rem(15);
+      line-height: 1.5;
     }
   }
 }

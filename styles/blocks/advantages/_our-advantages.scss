@@ -5,6 +5,10 @@
   --advantagesSlidesQuantity: 4;
   overflow-x: hidden;
 
+  &__title {
+    margin-bottom: rem(50);
+  }
+
   &__slider {
     &-wrapper {
       display: grid;

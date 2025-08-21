@@ -1,0 +1,72 @@
+/* Styles for section about-gallery.*/
+.about-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-gallery__subtitle {
+  max-width: 52rem;
+  font-size: 1.125rem;
+  letter-spacing: 0.02em;
+  text-align: start;
+}
+.about-gallery__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 75.1875rem;
+  margin-inline: auto;
+  margin-bottom: 3.125rem;
+}
+.about-gallery__list-item {
+  flex-shrink: 0;
+}
+.about-gallery__image {
+  width: inherit;
+  height: inherit;
+}
+.about-gallery__image-wrapper {
+  width: 23.5rem;
+  height: 18.8125rem;
+}
+.about-gallery__image-wrapper--big-width {
+  width: 25.375rem;
+}
+.about-gallery__button {
+  font-size: 1rem;
+}
+
+@media (width <= 100.06125rem) {
+  .about-gallery__list {
+    flex-wrap: wrap;
+  }
+}
+@media (width <= 63.99875rem) {
+  .about-gallery__list {
+    justify-content: center;
+  }
+}
+@media (width <= 47.99875rem) {
+  .about-gallery {
+    gap: 3.125rem;
+  }
+  .about-gallery__title {
+    margin-bottom: 0;
+  }
+  .about-gallery__subtitle {
+    margin-bottom: 0;
+  }
+  .about-gallery__list {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .about-gallery__image-wrapper--small-height {
+    height: 15.75rem;
+  }
+}
+/*  ==================================  */
+/*  =====END section about-gallery====  */
+/*  ==================================  */
+
+/*# sourceMappingURL=about-gallery.css.map */

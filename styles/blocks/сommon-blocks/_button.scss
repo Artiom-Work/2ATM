@@ -68,6 +68,10 @@
       background-color: var(--color-light);
     }
   }
+
+  &--medium-padding {
+    padding-inline: rem(34.5);
+  }
 }
 @include mobile-media {
   .button {
