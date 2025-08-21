@@ -4,12 +4,20 @@
 /* Styles for section possobilities. */
 
 .possobilities {
-  padding-block: rem(2);
-  display: flex;
-  justify-content: center;
+  @include flex-center;
+
+  flex-direction: column;
+  overflow: hidden;
+
+  &--small-margin-mobile {
+    margin-bottom: fluid(77, 0);
+  }
+
+  &__title {
+    margin-bottom: fluid(77, 0);
+  }
 
   &__slider {
-    overflow: hidden;
     padding: rem(4) rem(10);
 
     &--small-max-width {
@@ -30,7 +38,11 @@
 @include tablet-media {
   .possobilities {
     &__slider {
-      padding-block: rem(23);
+      padding-block: rem(20);
+    }
+
+    &__list {
+      margin-left: calc(var(--container-padding-x) * -1);
     }
   }
 }

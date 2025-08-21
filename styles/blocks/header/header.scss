@@ -46,6 +46,10 @@
     justify-content: end;
     column-gap: rem(59);
   }
+
+  &__button {
+    letter-spacing: 0.03em;
+  }
 }
 @include tablet-media-above {
   .header {

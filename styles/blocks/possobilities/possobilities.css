@@ -1,17 +1,19 @@
 /* Styles for section possobility-card. Part of section possobilities */
 .possobility-card {
-  min-height: 18.375rem;
   max-width: 18.5625rem;
   width: 100%;
-  padding: 1.25rem 1.25rem 0.5rem 1.25rem;
+  height: auto !important;
+  padding: 1.25rem 1.25rem 0 1.25rem;
   outline: var(--border-light);
   border-radius: var(--border-radius-small);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: end;
   row-gap: 1.25rem;
   background-color: var(--color-accent-axtra-light);
+}
+.possobility-card--small-indent {
+  row-gap: 0.625rem;
 }
 .possobility-card__image {
   width: 3.75rem;
@@ -23,35 +25,49 @@
   text-align: center;
   min-height: 3.625rem;
 }
-@media (width <= 63.99875rem) {
-  .possobility-card__name {
-    min-height: 2.75rem;
-    line-height: 1.2;
-  }
-}
 .possobility-card__text {
   line-height: 1.5;
   color: var(--text-color-dark-secondary);
   flex-grow: 1;
+  margin-block: 0 0.5rem;
+}
+.possobility-card__text--static-font-size {
+  font-size: 1.125rem;
+}
+.possobility-card__list {
+  padding-block: 0 0.1875rem;
 }
 
 @media (width <= 63.99875rem) {
   .possobility-card {
-    min-height: 17.5rem;
+    min-height: 17.0625rem;
+  }
+  .possobility-card--big-width-mobile {
+    max-width: 20rem;
   }
   .possobility-card__name {
     min-height: 2.75rem;
     line-height: 1.2;
   }
+  .possobility-card__name--small-height-mobile {
+    min-height: 1.25rem;
+  }
 }
 /* Styles for section possobilities. */
 .possobilities {
-  padding-block: 0.125rem;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.possobilities--small-margin-mobile {
+  margin-bottom: clamp(0rem, -2.238372093rem + 8.9534883721vw, 4.8125rem);
+}
+.possobilities__title {
+  margin-bottom: clamp(0rem, -2.238372093rem + 8.9534883721vw, 4.8125rem);
 }
 .possobilities__slider {
-  overflow: hidden;
   padding: 0.25rem 0.625rem;
 }
 .possobilities__slider--small-max-width {
@@ -65,7 +81,10 @@
 }
 @media (width <= 63.99875rem) {
   .possobilities__slider {
-    padding-block: 1.4375rem;
+    padding-block: 1.25rem;
+  }
+  .possobilities__list {
+    margin-left: calc(var(--container-padding-x) * -1);
   }
 }
 /*  ===================================  */

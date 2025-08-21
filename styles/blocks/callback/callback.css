@@ -13,15 +13,16 @@
 .callback-form__field {
   height: 2.9375rem;
   width: 100%;
+  padding-block: 0 0.5rem;
 }
 .callback-form__field-input {
   padding: 0;
   background-color: transparent;
   border: none;
   border-bottom: var(--border-light);
-  height: inherit;
+  height: 100%;
   width: inherit;
-  padding-block: 0.75rem;
+  padding-block: 0.625rem;
   padding-inline: 0.625rem;
   transition-duration: var(--transition-duration);
 }
@@ -42,6 +43,10 @@
 }
 .callback-form__button {
   align-self: center;
+  padding-inline: 3.3125rem;
+}
+.callback-form__button--big-padding {
+  padding-inline: 3.875rem;
 }
 
 @media (width <= 47.99875rem) {

@@ -15,15 +15,16 @@
   &__field {
     height: rem(47);
     width: 100%;
+    padding-block: 0 rem(8);
   }
 
   &__field-input {
     @include reset-button;
 
     border-bottom: var(--border-light);
-    height: inherit;
+    height: 100%;
     width: inherit;
-    padding-block: rem(12);
+    padding-block: rem(10);
     padding-inline: rem(10);
     transition-duration: var(--transition-duration);
 
@@ -48,6 +49,11 @@
 
   &__button {
     align-self: center;
+    padding-inline: rem(53);
+
+    &--big-padding {
+      padding-inline: rem(62);
+    }
   }
 }
 

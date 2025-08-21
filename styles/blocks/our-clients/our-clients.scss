@@ -9,13 +9,16 @@
 
     min-height: calc(var(--clientsSlideHeight) + #{rem(2)});
   }
-
+  &__slide {
+    width: var(--clientsSlideWidth);
+    height: var(--clientsSlideHeight);
+  }
   &__link {
     display: block;
     position: relative;
     overflow: hidden;
-    width: var(--clientsSlideWidth);
-    height: var(--clientsSlideHeight);
+    width: 100%;
+    height: 100%;
     outline: var(--border-extra-light);
     background-color: var(--color-light);
     border-radius: var(--border-radius-small);

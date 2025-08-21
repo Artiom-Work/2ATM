@@ -1,0 +1,101 @@
+@use "../../healpers" as *;
+/* Styles for section about-description.*/
+.about-description {
+  @include flex-space-between;
+
+  gap: rem(68);
+  margin-bottom: rem(80);
+
+  &__image {
+    &-wrapper {
+      flex-shrink: 0;
+      width: rem(618);
+      height: rem(530);
+    }
+
+    width: inherit;
+    height: inherit;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: rem(40);
+  }
+
+  &__title {
+    line-height: 1.2;
+  }
+
+  &__text {
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--text-color-dark-secondary);
+
+    ul {
+      padding-left: rem(22);
+      list-style: circle;
+    }
+
+    ul:not(:last-child),
+    p:not(:last-child) {
+      margin-bottom: rem(15);
+      margin-top: 0;
+    }
+  }
+
+  &__button {
+    align-self: start;
+    padding-inline: rem(34.5);
+    font-size: rem(16) !important;
+  }
+}
+@include laptop-media {
+  .about-description {
+    flex-direction: column;
+
+    &__title {
+      text-align: center;
+    }
+
+    &__button {
+      align-self: center;
+    }
+  }
+}
+@include mobile-media {
+  .about-description {
+    margin-bottom: rem(130);
+
+    &__image {
+      &-wrapper {
+        width: rem(360);
+        height: rem(360);
+      }
+    }
+
+    &__body {
+      row-gap: rem(38);
+    }
+
+    &__title {
+      text-align: left;
+      line-height: 1.5;
+    }
+
+    &__text {
+      ul {
+        padding-left: rem(17);
+      }
+
+      ul:not(:last-child),
+      p:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+/*  ======================================  */
+/*  =====END section about-description====  */
+/*  ======================================  */

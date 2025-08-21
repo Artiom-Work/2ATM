@@ -1,0 +1,49 @@
+/* Section pride-slogan. ( small text banner )*/
+.pride-slogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.875rem;
+}
+.pride-slogan--accent-bg {
+  background-color: var(--color-accent-200);
+  padding-block: 1.25rem;
+  max-width: 78.75rem;
+}
+.pride-slogan__image {
+  width: 3.75rem;
+  height: 3.75rem;
+  flex-shrink: 0;
+}
+.pride-slogan__text {
+  max-width: 52rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--text-color-dark-secondary);
+  letter-spacing: var(--letter-spacing);
+}
+.pride-slogan__text--big {
+  line-height: 1.2;
+}
+
+@media (width <= 100.06125rem) {
+  .pride-slogan--accent-bg {
+    margin-inline: var(--container-padding-x);
+  }
+}
+@media (width <= 47.99875rem) {
+  .pride-slogan {
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 5rem;
+  }
+  .pride-slogan__text--big {
+    line-height: 1.5;
+    text-align: center;
+  }
+}
+/*================================*/
+/*====END section pride-slogan====*/
+/*================================*/
+
+/*# sourceMappingURL=pride-slogan.css.map */

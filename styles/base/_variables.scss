@@ -70,7 +70,7 @@
   --text-color-light: var(--color-gray-50);
   --text-color-dark: var(--color-gray-900);
   --text-color-dark-secondary: var(--color-gray-700);
-  --text-color-medium: var(--color-gray-600);
+  --text-color-medium: var(--color-gray-500);
 
   --color-accent-extra-light: var(--color-accent-50);
   --color-accent: var(--color-accent-500);
@@ -109,7 +109,7 @@
   --section-margin-y-big-to-small: #{fluid(120, 40)};
 
   --button-height-small: #{rem(34)};
-  --button-height: #{rem(42)};
+  --button-height: #{rem(44)};
   --button-height-big: #{rem(46)};
 
   --transition-duration: 0.3s;

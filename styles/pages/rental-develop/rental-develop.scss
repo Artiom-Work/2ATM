@@ -1,0 +1,22 @@
+// connecting general scss files
+@use "../../base/normolize";
+@use "../../base/fonts";
+@use "../../base/variables";
+@use "../../base/utils";
+@use "../../base/globals";
+@use "../../base/animation";
+//common-blocks
+@use "../../blocks/сommon-blocks/button";
+@use "../../blocks/сommon-blocks/logo";
+@use "../../blocks/сommon-blocks/section";
+//blocks
+@use "../../blocks/header/_header.scss";
+@use "../../blocks/page-heading/_page-heading.scss";
+@use "../../blocks/promo/_promo-rental-develop-page.scss";
+@use "../../blocks/pride-slogan/_pride-slogan.scss";
+@use "../../blocks/possobilities/_possobilities.scss";
+@use "../../blocks/callback/_callback.scss";
+@use "../../blocks/our-clients/_our-clients.scss";
+@use "../../blocks/about/_about-description.scss";
+// @use "../../blocks/advantages/_our-advantages.scss";
+@use "../../blocks/footer/_footer.scss";

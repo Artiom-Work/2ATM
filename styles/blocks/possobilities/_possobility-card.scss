@@ -1,19 +1,21 @@
 @use "../../healpers" as *;
 /* Styles for section possobility-card. Part of section possobilities */
 .possobility-card {
-  min-height: rem(294);
   max-width: rem(297);
   width: 100%;
-  padding: rem(20) rem(20) rem(8) rem(20);
+  height: auto !important;
+  padding: rem(20) rem(20) 0 rem(20);
   outline: var(--border-light);
   border-radius: var(--border-radius-small);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: end;
   row-gap: rem(20);
   background-color: var(--color-accent-axtra-light);
 
+  &--small-indent {
+    row-gap: rem(10);
+  }
   &__image {
     @include square(rem(60));
 
@@ -24,26 +26,38 @@
     line-height: 1.3;
     text-align: center;
     min-height: rem(58);
-
-    @include tablet-media {
-      min-height: rem(44);
-      line-height: 1.2;
-    }
   }
 
   &__text {
     line-height: 1.5;
     color: var(--text-color-dark-secondary);
     flex-grow: 1;
+    margin-block: 0 rem(8);
+
+    &--static-font-size {
+      font-size: rem(18);
+    }
+  }
+
+  &__list {
+    padding-block: 0 rem(3);
   }
 }
 @include tablet-media {
   .possobility-card {
-    min-height: rem(280);
+    min-height: rem(273);
+
+    &--big-width-mobile {
+      max-width: rem(320);
+    }
 
     &__name {
       min-height: rem(44);
       line-height: 1.2;
+
+      &--small-height-mobile {
+        min-height: rem(20);
+      }
     }
   }
 }

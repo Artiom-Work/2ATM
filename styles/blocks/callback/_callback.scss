@@ -26,6 +26,15 @@
     text-align: center;
 
     margin-block: 0 rem(8);
+
+    &--width-100 {
+      max-width: unset;
+      width: 100%;
+    }
+
+    &--rental-page {
+      margin-block: 0 rem(27);
+    }
   }
 
   &__form {
@@ -34,7 +43,9 @@
   }
 
   &__policy {
+    font-size: rem(16);
     text-align: center;
+    letter-spacing: 0.026em;
     width: 100%;
     color: var(--text-color-dark-secondary);
 
@@ -51,6 +62,10 @@
       width: rem(513);
       height: rem(512);
       flex-shrink: 0;
+
+      &--rental-page {
+        height: rem(552);
+      }
     }
 
     width: inherit;
@@ -107,10 +122,18 @@
     &__title {
       text-align: center;
       line-height: 1.5;
+
+      &--rental-page {
+        margin-block: 0 rem(10);
+      }
     }
 
     &__body {
       padding-block: rem(50) 0;
+    }
+
+    &__policy {
+      font-size: rem(15);
     }
   }
 }
