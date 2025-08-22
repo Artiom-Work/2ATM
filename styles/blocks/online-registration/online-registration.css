@@ -276,7 +276,7 @@
   width: 100%;
   height: inherit;
   padding-inline: 0.0625rem 0.25rem;
-  padding-block: 0.0625rem 0;
+  padding-block: 0.125rem 0;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -348,7 +348,7 @@
 /*  ===================================  */
 /*  =======END section locations=======  */
 /*  ===================================  */
-/* Styles for section online-registration.( home page. block containing cervices map )*/
+/* Styles for block online-registration.( home page. block containing cervices map )*/
 .online-registration {
   --section-margin-y: 5rem;
 }
@@ -361,9 +361,12 @@
   align-items: center;
   column-gap: 1.875rem;
 }
+.online-registration__button {
+  min-width: 12.875rem;
+}
 
 /*  ===================================  */
-/*  ==END section online-registration==  */
+/*  ==END block online-registration==  */
 /*  ===================================  */
 
 /*# sourceMappingURL=online-registration.css.map */

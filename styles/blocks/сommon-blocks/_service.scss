@@ -11,6 +11,10 @@
     min-height: rem(76);
     padding-inline: rem(10);
 
+    &--large-gap {
+      column-gap: rem(16);
+    }
+
     &-icon {
       width: rem(60);
       height: rem(60);
@@ -24,6 +28,7 @@
     &--name {
       font-size: rem(24);
       line-height: 1.2;
+
       &-small {
         font-size: rem(20);
       }
@@ -37,6 +42,10 @@
       column-gap: rem(4);
       text-transform: uppercase;
       width: 100%;
+
+      span {
+        width: 95%;
+      }
 
       &::after {
         content: "\279C";
@@ -54,11 +63,29 @@
 
     gap: rem(10);
 
+    &--services-page {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: rem(24);
+      row-gap: rem(10);
+    }
+
     &-item {
       display: inline-flex;
       width: 100%;
       min-height: rem(50);
       padding-inline: rem(10) rem(4);
+    }
+  }
+}
+
+@include laptop-media {
+  .service {
+    &__list {
+      &--services-page {
+        display: flex;
+        flex-direction: column;
+      }
     }
   }
 }

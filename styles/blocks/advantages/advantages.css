@@ -53,6 +53,7 @@
 }
 .advantages__button {
   font-size: 1rem;
+  min-width: 11.875rem;
 }
 
 @media (width <= 63.99875rem) {
@@ -62,6 +63,9 @@
   .advantages__buttons {
     column-gap: 1rem;
     justify-content: start;
+  }
+  .advantages__button {
+    min-width: 8.75rem;
   }
 }
 /*  ===================================  */

@@ -21,6 +21,9 @@
   min-height: 4.75rem;
   padding-inline: 0.625rem;
 }
+.service__name--large-gap {
+  column-gap: 1rem;
+}
 .service__name-icon {
   width: 3.75rem;
   height: 3.75rem;
@@ -45,6 +48,9 @@
   text-transform: uppercase;
   width: 100%;
 }
+.service__link--arrow span {
+  width: 95%;
+}
 .service__link--arrow::after {
   content: "➜";
   width: 1.125rem;
@@ -57,6 +63,12 @@
   flex-direction: column;
   gap: 0.625rem;
 }
+.service__list--services-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.5rem;
+  row-gap: 0.625rem;
+}
 .service__list-item {
   display: inline-flex;
   width: 100%;
@@ -64,6 +76,12 @@
   padding-inline: 0.625rem 0.25rem;
 }
 
+@media (width <= 81.31125rem) {
+  .service__list--services-page {
+    display: flex;
+    flex-direction: column;
+  }
+}
 /*  ===================================  */
 /*  ===================================  */
 /* Styles for common block services-menu . ( it's third block in the home page )*/
@@ -220,14 +238,14 @@
   grid-area: сar-rapair;
 }
 .overview-services__services-menu .services-menu__list .services-menu__item--grid-cell-4 {
-  padding-inline: 1.5rem;
-  grid-area: technical-inspection;
-}
-.overview-services__services-menu .services-menu__list .services-menu__item--grid-cell-5 {
+  display: inline-flex;
+  align-items: center;
   padding-inline: 1.5rem;
   grid-area: refill-conditioning;
 }
-.overview-services__services-menu .services-menu__list .services-menu__item--grid-cell-6 {
+.overview-services__services-menu .services-menu__list .services-menu__item--grid-cell-5 {
+  display: inline-flex;
+  align-items: center;
   padding-inline: 1.5rem;
   grid-area: wheel-alignment;
 }
@@ -243,7 +261,7 @@
 @media (width <= 81.31125rem) {
   .overview-services__services-menu .services-menu__list {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "tire-fitting car-wash" "сar-rapair technical-inspection" "сar-rapair refill-conditioning" "сar-rapair wheel-alignment";
+    grid-template-areas: "tire-fitting car-wash" "сar-rapair refill-conditioning" "сar-rapair wheel-alignment";
   }
 }
 @media (width <= 63.99875rem) {

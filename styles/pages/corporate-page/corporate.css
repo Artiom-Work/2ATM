@@ -665,7 +665,6 @@ button[aria-label]::before {
   justify-content: space-between;
   align-items: center;
   font-size: clamp(0.9375rem, 0.8502906977rem + 0.3488372093vw, 1.125rem);
-  flex-wrap: wrap;
   column-gap: clamp(1rem, 0.3023255814rem + 2.7906976744vw, 2.5rem);
   row-gap: 1.0625rem;
   padding-block: 0.84375rem;
@@ -674,14 +673,12 @@ button[aria-label]::before {
   text-transform: uppercase;
 }
 
-@media (width <= 91.31125rem) {
+@media (width <= 81.31125rem) {
   .header-menu__list {
-    justify-content: center;
+    flex-wrap: wrap;
   }
-}
-@media (width <= 85.68625rem) {
-  .header-menu__list {
-    max-width: 60rem;
+  .header-menu__item {
+    margin-inline: auto;
   }
 }
 @media (width <= 63.99875rem) {
@@ -912,13 +909,6 @@ button[aria-label]::before {
     column-gap: 1rem;
   }
 }
-@media (width <= 30.06125rem) {
-  .header__button {
-    padding-inline: 0.625rem;
-    max-width: 10rem;
-    width: 100%;
-  }
-}
 /*  ===================================  */
 /*  =============END header============  */
 /*  ===================================  */
@@ -978,7 +968,7 @@ button[aria-label]::before {
 /*  ===================================  */
 /*  ==========END page-heading=========  */
 /*  ===================================  */
-/* Section promo in the rental-develop-page*/
+/* Section promo in the corporate page */
 .promo {
   position: relative;
   color: var(--text-color-light);
@@ -999,31 +989,34 @@ button[aria-label]::before {
   object-position: right;
 }
 .promo__body {
-  padding-block: clamp(4rem, 2.2848837209rem + 6.8604651163vw, 7.6875rem) 0;
+  padding-block: clamp(4rem, 2.125rem + 7.5vw, 8.03125rem) 0;
 }
 .promo__title {
-  max-width: 34.375rem;
+  max-width: 64.375rem;
   line-height: 1.27;
   margin-bottom: 2.5rem;
 }
 .promo__subtitle {
   margin-bottom: 2.5rem;
   line-height: 1.5;
-  max-width: 28.8125rem;
+  max-width: 43.75rem;
+}
+.promo__subtitle p:first-child {
+  max-width: 31.25rem;
 }
 
 @media (width <= 63.99875rem) {
   .promo {
-    min-height: 30.125rem;
+    min-height: 30.1875rem;
   }
   .promo .container {
     --container-padding-x: 2.6875rem;
   }
   .promo__background {
-    min-height: 30.125rem;
+    min-height: 30.1875rem;
   }
   .promo__background-image {
-    height: 30.125rem;
+    height: 30.1875rem;
     width: 63.9375rem;
   }
   .promo__body {
@@ -1047,8 +1040,7 @@ button[aria-label]::before {
   }
   .promo__background-image {
     width: 47.9375rem;
-    margin-bottom: 0.6875rem;
-    object-position: left;
+    margin-bottom: 0.625rem;
   }
   .promo__body {
     display: flex;
@@ -1056,15 +1048,13 @@ button[aria-label]::before {
     padding-block: 0;
   }
   .promo__title {
-    max-width: unset;
-    width: 100%;
     position: absolute;
     top: 2.75rem;
-    left: calc(var(--container-padding-x) * -1);
-    padding-inline: calc(var(--container-padding-x) * 2) 0;
     font-size: 1.5rem;
+    max-width: unset;
     text-align: center;
     line-height: 1.3;
+    padding-inline: 0.5rem;
   }
   .promo__subtitle {
     max-width: unset;
@@ -1079,56 +1069,9 @@ button[aria-label]::before {
     align-self: center;
   }
 }
-/*  ============================================  */
-/*  ====END promo block(rental-develop-page)====  */
-/*  ============================================  */
-/* Section pride-slogan. ( small text banner )*/
-.pride-slogan {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.875rem;
-}
-.pride-slogan--accent-bg {
-  background-color: var(--color-accent-200);
-  padding-block: 1.25rem;
-  max-width: 78.75rem;
-}
-.pride-slogan__image {
-  width: 3.75rem;
-  height: 3.75rem;
-  flex-shrink: 0;
-}
-.pride-slogan__text {
-  max-width: 52rem;
-  font-weight: 600;
-  line-height: 1.5;
-  color: var(--text-color-dark-secondary);
-  letter-spacing: var(--letter-spacing);
-}
-.pride-slogan__text--big {
-  line-height: 1.2;
-}
-
-@media (width <= 100.06125rem) {
-  .pride-slogan--accent-bg {
-    margin-inline: var(--container-padding-x);
-  }
-}
-@media (width <= 47.99875rem) {
-  .pride-slogan {
-    flex-direction: column;
-    gap: 2rem;
-    margin-bottom: 5rem;
-  }
-  .pride-slogan__text--big {
-    line-height: 1.5;
-    text-align: center;
-  }
-}
-/*================================*/
-/*====END section pride-slogan====*/
-/*================================*/
+/*  ========================================  */
+/*  =====END promo block(corporate page)====  */
+/*  ========================================  */
 /* Styles for section possobility-card. Part of section possobilities */
 .possobility-card {
   max-width: 18.5625rem;
@@ -1441,88 +1384,6 @@ button[aria-label]::before {
 /*  ===================================  */
 /*  =======END section our clients=====  */
 /*  ===================================  */
-/* Styles for section about-description.*/
-.about-description {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 4.25rem;
-  margin-bottom: 5rem;
-}
-.about-description__image {
-  width: inherit;
-  height: inherit;
-}
-.about-description__image-wrapper {
-  flex-shrink: 0;
-  width: 38.625rem;
-  height: 33.125rem;
-}
-.about-description__body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  row-gap: 2.5rem;
-}
-.about-description__title {
-  line-height: 1.2;
-}
-.about-description__text {
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--text-color-dark-secondary);
-}
-.about-description__text ul {
-  padding-left: 1.375rem;
-  list-style: circle;
-}
-.about-description__text ul:not(:last-child),
-.about-description__text p:not(:last-child) {
-  margin-bottom: 0.9375rem;
-  margin-top: 0;
-}
-.about-description__button {
-  align-self: start;
-  font-size: 1rem !important;
-}
-
-@media (width <= 81.31125rem) {
-  .about-description {
-    flex-direction: column;
-  }
-  .about-description__title {
-    text-align: center;
-  }
-  .about-description__button {
-    align-self: center;
-  }
-}
-@media (width <= 47.99875rem) {
-  .about-description {
-    margin-bottom: 8.125rem;
-  }
-  .about-description__image-wrapper {
-    width: 22.5rem;
-    height: 22.5rem;
-  }
-  .about-description__body {
-    row-gap: 2.375rem;
-  }
-  .about-description__title {
-    text-align: left;
-    line-height: 1.5;
-  }
-  .about-description__text ul {
-    padding-left: 1.0625rem;
-  }
-  .about-description__text ul:not(:last-child),
-  .about-description__text p:not(:last-child) {
-    margin-bottom: 0;
-  }
-}
-/*  ======================================  */
-/*  =====END section about-description====  */
-/*  ======================================  */
 /* Block-card for advantage slider( our-advantage ).Part of Section advantages. Differences from blocks advantages in background color and positioning of the card*/
 .advantage-card {
   --advantageCardTitleTextColor: var(--color-gray-800);
@@ -1606,76 +1467,100 @@ button[aria-label]::before {
 /*  ===================================  */
 /*  =======END section advantages======  */
 /*  ===================================  */
-/* Styles for section about-gallery.*/
-.about-gallery {
+/* Blok-card other-services-card. Part of component other-services */
+.other-service-card {
+  --otherServiceCardBgColor: var(--color-gray-800);
+  max-width: 13.75rem;
+  min-height: 10.75rem;
+  width: 100%;
+  will-change: transform;
+}
+.other-service-card__link {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.about-gallery__subtitle {
-  max-width: 52rem;
-  font-size: 1.125rem;
-  letter-spacing: 0.02em;
-  text-align: start;
-}
-.about-gallery__list {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  max-width: 75.1875rem;
-  margin-inline: auto;
-  margin-bottom: 3.125rem;
+  min-height: inherit;
+  width: 100%;
+  padding: 0.5rem clamp(0.625rem, 0.3343023256rem + 1.1627906977vw, 1.25rem) 0.875rem;
+  color: var(--text-color-light);
+  background-color: var(--otherServiceCardBgColor);
+  border-radius: var(--border-radius);
+  transition-duration: var(--transition-duration) !important;
 }
-.about-gallery__list-item {
-  flex-shrink: 0;
+@media (any-hover: hover) {
+  .other-service-card__link:hover {
+    filter: opacity(1);
+  }
+  .other-service-card__link:hover .other-service-card__link-text {
+    filter: brightness(70%);
+  }
 }
-.about-gallery__image {
-  width: inherit;
-  height: inherit;
+@media (any-hover: hover) and (any-hover: none) {
+  .other-service-card__link:active {
+    filter: opacity(1);
+  }
+  .other-service-card__link:active .other-service-card__link-text {
+    filter: brightness(70%);
+  }
 }
-.about-gallery__image-wrapper {
-  width: 23.5rem;
-  height: 18.8125rem;
+.other-service-card__link:active {
+  filter: brightness(90%);
 }
-.about-gallery__image-wrapper--big-width {
-  width: 25.375rem;
+.other-service-card__link-text {
+  font-weight: 700;
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  letter-spacing: var(--letter-spacing);
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  transition-duration: var(--transition-duration);
 }
-.about-gallery__button {
-  font-size: 1rem;
+.other-service-card__image {
+  width: 3.75rem;
+  height: 3.75rem;
+  margin-bottom: 0.625rem;
+}
+.other-service-card__name {
+  font-size: clamp(0.9375rem, 0.7921511628rem + 0.5813953488vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0.375rem;
 }
 
-@media (width <= 100.06125rem) {
-  .about-gallery__list {
-    flex-wrap: wrap;
+@media (width <= 30.06125rem) {
+  .other-service-card__link {
+    padding: 0.9375rem 0.625rem 1.3125rem;
   }
 }
+/* Section other-services.*/
+.other-services__list {
+  max-width: 59.5rem;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: clamp(0.625rem, 0.2180232558rem + 1.6279069767vw, 1.5rem);
+}
+
 @media (width <= 63.99875rem) {
-  .about-gallery__list {
-    justify-content: center;
+  .other-services__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    column-gap: clamp(0.625rem, -3.7354651163rem + 17.4418604651vw, 10rem);
+  }
+  .other-services__list-item {
+    justify-self: end;
+  }
+  .other-services__list-item:nth-child(even) {
+    justify-self: start;
   }
 }
-@media (width <= 47.99875rem) {
-  .about-gallery {
-    gap: 3.125rem;
-  }
-  .about-gallery__title {
-    margin-bottom: 0;
-  }
-  .about-gallery__subtitle {
-    margin-bottom: 0;
-  }
-  .about-gallery__list {
-    flex-direction: column;
-    margin-bottom: 0;
-  }
-  .about-gallery__image-wrapper--small-height {
-    height: 15.75rem;
-  }
-}
-/*  ==================================  */
-/*  =====END section about-gallery====  */
-/*  ==================================  */
+/*  ===================================  */
+/*  =======END section other-services======  */
+/*  ===================================  */
 /* Navigation footer section. part of footer */
 .footer-svc-links__heading {
   font-size: 1rem;
@@ -1936,4 +1821,4 @@ button[aria-label]::before {
 /*  =============END footer============  */
 /*  ===================================  */
 
-/*# sourceMappingURL=rental-develop.css.map */
+/*# sourceMappingURL=corporate.css.map */

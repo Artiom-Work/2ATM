@@ -92,6 +92,17 @@
     }
   }
 }
+@include mobile-medium-media {
+  .appointment-choose {
+    &__wrapper {
+      padding-inline: rem(16);
+    }
+
+    &__buttons {
+      max-width: unset;
+    }
+  }
+}
 /*  ===================================  */
 /*  ======END appointment-choose=======  */
 /*  ===================================  */

@@ -31,14 +31,14 @@
           grid-area: сar-rapair;
         }
         &--grid-cell-4 {
-          padding-inline: rem(24);
-          grid-area: technical-inspection;
-        }
-        &--grid-cell-5 {
+          display: inline-flex;
+          align-items: center;
           padding-inline: rem(24);
           grid-area: refill-conditioning;
         }
-        &--grid-cell-6 {
+        &--grid-cell-5 {
+          display: inline-flex;
+          align-items: center;
           padding-inline: rem(24);
           grid-area: wheel-alignment;
         }
@@ -66,7 +66,6 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
           "tire-fitting car-wash"
-          "сar-rapair technical-inspection"
           "сar-rapair refill-conditioning"
           "сar-rapair wheel-alignment";
       }

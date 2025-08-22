@@ -1,7 +1,7 @@
 @use "../../healpers" as *;
 @use "../locations/_locations.scss";
 
-/* Styles for section online-registration.( home page. block containing cervices map )*/
+/* Styles for block online-registration.( home page. block containing cervices map )*/
 .online-registration {
   --section-margin-y: #{rem(80)};
 
@@ -14,7 +14,11 @@
 
     column-gap: rem(30);
   }
+
+  &__button {
+    min-width: rem(206);
+  }
 }
 /*  ===================================  */
-/*  ==END section online-registration==  */
+/*  ==END block online-registration==  */
 /*  ===================================  */

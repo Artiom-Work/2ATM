@@ -1,0 +1,135 @@
+@use "../../healpers" as *;
+/* section when-work*/
+.when-work {
+  &__wrapper {
+    @include flex-space-between;
+
+    gap: rem(20);
+    outline: var(--border-light);
+    padding-inline: rem(100) 0;
+    border-radius: var(--border-radius-small);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(30);
+    max-width: rem(591);
+  }
+
+  &__title {
+    line-height: 1.2;
+  }
+
+  &__subtitle {
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--text-color-dark-secondary);
+  }
+
+  &__buttons {
+    display: flex;
+
+    gap: rem(24);
+  }
+
+  &__button {
+    @include fluid-text(16, 15);
+
+    font-weight: 700;
+    min-width: rem(140);
+    letter-spacing: 0.04em;
+
+    &:not(.button--accent-bg) {
+      background: var(--color-blue-light);
+    }
+  }
+
+  &__image {
+    &-wrapper {
+      width: rem(469);
+      height: rem(308);
+      flex-shrink: 0;
+    }
+
+    width: inherit;
+    height: inherit;
+  }
+}
+
+@include laptop-media {
+  .when-work {
+    &__wrapper {
+      padding-inline: rem(40) 0;
+    }
+  }
+}
+@include tablet-media {
+  .when-work {
+    &__wrapper {
+      padding-inline: rem(20) 0;
+      padding: rem(20);
+    }
+
+    &__body {
+      row-gap: rem(20);
+    }
+
+    &__buttons {
+      gap: rem(10);
+    }
+
+    &__image {
+      &-wrapper {
+        width: rem(320);
+        height: rem(195);
+      }
+    }
+  }
+}
+@include mobile-media {
+  .when-work {
+    &__wrapper {
+      flex-direction: column;
+    }
+
+    &__title,
+    &__subtitle {
+      text-align: center;
+    }
+
+    &__button {
+      width: 100%;
+    }
+
+    &__image {
+      &-wrapper {
+        order: -1;
+      }
+    }
+  }
+}
+@include mobile-medium-media {
+  .when-work {
+    &__wrapper {
+      padding-inline: 0;
+    }
+
+    &__body {
+      row-gap: rem(30);
+    }
+
+    &__title {
+      padding-inline: rem(30);
+      line-height: 1.5;
+    }
+
+    &__buttons {
+      flex-direction: column;
+      padding-inline: rem(10);
+    }
+  }
+}
+/*  ==================================  */
+/*  =======END section when-work======  */
+/*  ==================================  */

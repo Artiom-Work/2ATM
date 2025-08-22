@@ -17,7 +17,7 @@
   &__list {
     @include flex-space-between;
     @include fluid-text(18, 15);
-    flex-wrap: wrap;
+
     column-gap: fluid(40, 16);
     row-gap: rem(17);
     padding-block: rem(13.5);
@@ -26,17 +26,14 @@
     text-transform: uppercase;
   }
 }
-@media (width <= rem(1460.98)) {
+@include laptop-media {
   .header-menu {
     &__list {
-      justify-content: center;
+      flex-wrap: wrap;
     }
-  }
-}
-@media (width <= rem(1370.98)) {
-  .header-menu {
-    &__list {
-      max-width: rem(960);
+
+    &__item {
+      margin-inline: auto;
     }
   }
 }

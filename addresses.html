@@ -131,9 +131,7 @@
 				<li class="header-menu__item">
 					<a href="#!">Заправка кондиционеров</a>
 				</li>
-				<li class="header-menu__item">
-					<a href="#!">Техосмотр</a>
-				</li>
+
 				<li class="header-menu__item">
 					<a href="#!">Развал-схождение</a>
 				</li>
@@ -147,20 +145,17 @@
 
 			<nav class="header__menu header-menu">
 				<ul class="header-menu__list">
-					<li>
+					<li class="header-menu__item">
 						<a href="#!">Шиномонтаж</a>
 					</li>
-					<li>
+					<li class="header-menu__item">
 						<a href="#!">Автомойка</a>
 					</li>
-					<li>
+					<li class="header-menu__item">
 						<a href="#!">Заправка кондиционеров</a>
 					</li>
-					<li>
+					<li class="header-menu__item">
 						<a href="#!">Автосервис</a>
-					</li>
-					<li>
-						<a href="#!">Техосмотр</a>
 					</li>
 				</ul>
 			</nav>
@@ -172,6 +167,7 @@
 			</a>
 		</div>
 	</header>
+
 	<main class="content">
 		<h1 class="visually-hidden">Адреса мастерских 2АТМ</h1>
 
@@ -207,24 +203,24 @@
 					</legend>
 
 					<div class="locations-filter__element">
-						<input class="locations-filter__input" type="radio" id="refresh-conditioners" name="filter-feature"
+						<input class="locations-filter__input" type="checkbox" id="refresh-conditioners" name="refresh-conditioners"
 							value="refresh-conditioners">
 						<label for="refresh-conditioners">Заправка кондиционера</label>
 					</div>
 
 					<div class="locations-filter__element">
-						<input class="locations-filter__input" type="radio" id="service-station" name="filter-feature"
+						<input class="locations-filter__input" type="checkbox" id="service-station" name="service-station"
 							value="service-station">
-						<label for="service-station">Сервис</label>
+						<label for="service-station">АвтоСервис</label>
 					</div>
 
 					<div class="locations-filter__element">
-						<input class="locations-filter__input" type="radio" id="washing" name="filter-feature" value="washing">
+						<input class="locations-filter__input" type="checkbox" id="washing" name="washing" value="washing">
 						<label for="washing">Мойка</label>
 					</div>
 
 					<div class="locations-filter__element">
-						<input class="locations-filter__input" type="radio" id="tire-fitting" name="filter-feature"
+						<input class="locations-filter__input" type="checkbox" id="tire-fitting" name="tire-fitting"
 							value="tire-fitting">
 						<label for="tire-fitting">Шиномонтаж</label>
 					</div>
@@ -587,7 +583,7 @@
 			<div class="advantages__slider">
 				<ul class="swiper-wrapper advantages__slider-wrapper">
 					<li class="swiper-slide advantage-card">
-						<img class="advantage-card__image" src="./images/advantages/marker.webp" width="60" height="60"
+						<img class="advantage-card__image" src="./images/icons/icon-marker.webp" width="60" height="60"
 							alt="Иконка отметки на карте" loading="lazy">
 
 						<h3 class="advantage-card__heading">
@@ -603,7 +599,7 @@
 					</li>
 
 					<li class="swiper-slide advantage-card">
-						<img class="advantage-card__image" src="./images/advantages/price-tag.webp" width="60" height="60"
+						<img class="advantage-card__image" src="./images/icons/icon-ruble.webp" width="60" height="60"
 							alt="Иконка с валютой" loading="lazy">
 
 						<h3 class="advantage-card__heading">
@@ -618,7 +614,7 @@
 					</li>
 
 					<li class="swiper-slide advantage-card">
-						<img class="advantage-card__image" src="./images/advantages/clock-2.webp" width="60" height="60" alt="Часы"
+						<img class="advantage-card__image" src="./images/icons/icon-clock-2.webp" width="60" height="60" alt="Часы"
 							loading="lazy">
 
 						<h3 class="advantage-card__heading">
@@ -805,10 +801,6 @@
 
 						<li>
 							<ul>
-								<li class="footer-svc-links__item">
-									<a class="footer-svc-links__link" href="#!">Технический осмотр</a>
-								</li>
-
 								<li class="footer-svc-links__item">
 									<a class="footer-svc-links__link" href="#!">Развал-схождение</a>
 								</li>

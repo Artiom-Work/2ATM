@@ -21,8 +21,10 @@
 
     column-gap: rem(20);
   }
+
   &__button {
     font-size: rem(16);
+    min-width: rem(190);
   }
 }
 
@@ -35,6 +37,10 @@
     &__buttons {
       column-gap: rem(16);
       justify-content: start;
+    }
+
+    &__button {
+      min-width: rem(140);
     }
   }
 }

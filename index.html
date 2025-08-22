@@ -131,9 +131,7 @@
 				<li class="header-menu__item">
 					<a href="#!">Заправка кондиционеров</a>
 				</li>
-				<li class="header-menu__item">
-					<a href="#!">Техосмотр</a>
-				</li>
+
 				<li class="header-menu__item">
 					<a href="#!">Развал-схождение</a>
 				</li>
@@ -147,20 +145,17 @@
 
 			<nav class="header__menu header-menu">
 				<ul class="header-menu__list">
-					<li>
+					<li class="header-menu__item">
 						<a href="#!">Шиномонтаж</a>
 					</li>
-					<li>
+					<li class="header-menu__item">
 						<a href="#!">Автомойка</a>
 					</li>
-					<li>
+					<li class="header-menu__item">
 						<a href="#!">Заправка кондиционеров</a>
 					</li>
-					<li>
+					<li class="header-menu__item">
 						<a href="#!">Автосервис</a>
-					</li>
-					<li>
-						<a href="#!">Техосмотр</a>
 					</li>
 				</ul>
 			</nav>
@@ -277,8 +272,8 @@
 								</li>
 							</ul>
 
-							<a class="service__link accent-color-link" href="#!">
-								Смотреть все услуги шиномонтажа
+							<a class="service__link accent-color-link" href="./services.html#service-tire-fitting">
+								Смотреть все услуги
 							</a>
 						</nav>
 					</li>
@@ -320,8 +315,8 @@
 								</li>
 							</ul>
 
-							<a class="service__link accent-color-link" href="#!">
-								Смотреть все услуги автомойки
+							<a class="service__link accent-color-link" href="./services.html#service-car-wash">
+								Смотреть все услуги
 							</a>
 						</nav>
 					</li>
@@ -333,7 +328,7 @@
 									alt="Шестерёнка" loading="lazy">
 
 								<a class="service__link service__link--name" href="#!">
-									СТО ремонт&nbsp;авто
+									Автосервис
 								</a>
 							</h4>
 
@@ -365,26 +360,13 @@
 								</li>
 							</ul>
 
-							<a class="service__link accent-color-link" href="#!">
-								Смотреть все услуги СТО
+							<a class="service__link accent-color-link" href="./services.html#service-сar-rapair">
+								Смотреть все услуги
 							</a>
 						</nav>
 					</li>
 
 					<li class="services-menu__item services-menu__item--grid-cell-4  visible-laptop">
-						<nav class="services-menu__service service">
-							<h4 class="services-menu__name service__name h4">
-								<img class="service__name-icon" src="./images/icons/icon-technical-inspection.webp" width="60"
-									height="60" alt="Технический осмотр автомобиля" loading="lazy">
-
-								<a class="service__link service__link--name service__link--name-small" href="#!">
-									Техосмотр
-								</a>
-							</h4>
-						</nav>
-					</li>
-
-					<li class="services-menu__item services-menu__item--grid-cell-5  visible-laptop">
 						<nav class="services-menu__service service">
 							<h4 class="services-menu__name service__name h4">
 								<img class="service__name-icon" src="./images/icons/icon-refill-conditioning.webp" width="60"
@@ -397,7 +379,7 @@
 						</nav>
 					</li>
 
-					<li class="services-menu__item services-menu__item--grid-cell-6  visible-laptop">
+					<li class="services-menu__item services-menu__item--grid-cell-5  visible-laptop">
 						<nav class="services-menu__service service">
 							<h4 class="services-menu__name service__name h4">
 								<img class="service__name-icon" src="./images/icons/icon-wheel-alignment.webp" width="60" height="60"
@@ -542,24 +524,24 @@
 						</legend>
 
 						<div class="locations-filter__element">
-							<input class="locations-filter__input" type="radio" id="refresh-conditioners" name="filter-feature"
-								value="refresh-conditioners">
+							<input class="locations-filter__input" type="checkbox" id="refresh-conditioners"
+								name="refresh-conditioners" value="refresh-conditioners">
 							<label for="refresh-conditioners">Заправка кондиционера</label>
 						</div>
 
 						<div class="locations-filter__element">
-							<input class="locations-filter__input" type="radio" id="service-station" name="filter-feature"
+							<input class="locations-filter__input" type="checkbox" id="service-station" name="service-station"
 								value="service-station">
-							<label for="service-station">Сервис</label>
+							<label for="service-station">АвтоСервис</label>
 						</div>
 
 						<div class="locations-filter__element">
-							<input class="locations-filter__input" type="radio" id="washing" name="filter-feature" value="washing">
+							<input class="locations-filter__input" type="checkbox" id="washing" name="washing" value="washing">
 							<label for="washing">Мойка</label>
 						</div>
 
 						<div class="locations-filter__element">
-							<input class="locations-filter__input" type="radio" id="tire-fitting" name="filter-feature"
+							<input class="locations-filter__input" type="checkbox" id="tire-fitting" name="tire-fitting"
 								value="tire-fitting">
 							<label for="tire-fitting">Шиномонтаж</label>
 						</div>
@@ -872,11 +854,11 @@
 			</div>
 
 			<div class="online-registration__buttons hidden-laptop">
-				<a class="button" href="#!" target="_blank">
+				<a class="online-registration__button button" href="#!" target="_blank">
 					В&nbsp;Telegram
 				</a>
 
-				<a class="button button--accent-bg" href="#!" target="_blank">
+				<a class="online-registration__button button button--accent-bg" href="#!" target="_blank">
 					Записаться онлайн
 				</a>
 			</div>
@@ -890,7 +872,7 @@
 			<ul class="special-offers__list">
 				<li>
 					<article class="special-offer">
-						<picture class="special-offer__image-wrapper">
+						<picture class="special-offer__image-wrapper special-offer__image-wrapper--dark-filter">
 							<source srcset="./images/special-offers/offer-image-1-mobile.webp" media="(max-width: 767px)"
 								type="image/webp">
 							<source srcset="./images/special-offers/offer-image-1.webp" type="image/webp">
@@ -920,7 +902,7 @@
 
 				<li>
 					<article class="special-offer">
-						<picture class="special-offer__image-wrapper">
+						<picture class="special-offer__image-wrapper special-offer__image-wrapper--dark-filter">
 							<source srcset="./images/special-offers/offer-image-2-mobile.webp" media="(max-width: 767px)"
 								type="image/webp">
 							<source srcset="./images/special-offers/offer-image-2.webp" type="image/webp">
@@ -975,9 +957,7 @@
 								<span class="review-card__button-text is-active">Читать дальше</span>
 								<span class="review-card__button-text">Скрыть</span>
 							</label>
-							<!-- <button class="review-card__button" type="button">
-									Читать дальше
-								</button> -->
+
 
 							<header class="review-card__header">
 								<h4 class="review-card__header-title" data-js-review-locattion>
@@ -1543,8 +1523,8 @@
 			<div class="advantages__slider">
 				<ul class="swiper-wrapper advantages__slider-wrapper">
 					<li class="swiper-slide advantage-card">
-						<img class="advantage-card__image" src="./images/advantages/clock.webp" width="60" height="60" alt="Часы"
-							loading="lazy">
+						<img class="advantage-card__image" src="./images/icons/icon-clock-calendar.webp" width="60" height="60"
+							alt="Часы" loading="lazy">
 
 						<h3 class="advantage-card__heading">
 							Ценим ваше время
@@ -1576,7 +1556,7 @@
 					</li>
 
 					<li class="swiper-slide advantage-card">
-						<img class="advantage-card__image" src="./images/advantages/convenience.webp" width="60" height="60"
+						<img class="advantage-card__image" src="./images/icons/icon-convenience.webp" width="60" height="60"
 							alt="Удобвтво" loading="lazy">
 
 						<h3 class="advantage-card__heading">
@@ -1592,7 +1572,7 @@
 					</li>
 
 					<li class="swiper-slide advantage-card">
-						<img class="advantage-card__image" src="./images/advantages/loupe.webp" width="60" height="60" alt="Лупа"
+						<img class="advantage-card__image" src="./images/icons/icon-loupe.webp" width="60" height="60" alt="Лупа"
 							loading="lazy">
 
 						<h3 class="advantage-card__heading">
@@ -1987,10 +1967,6 @@
 
 						<li>
 							<ul>
-								<li class="footer-svc-links__item">
-									<a class="footer-svc-links__link" href="#!">Технический осмотр</a>
-								</li>
-
 								<li class="footer-svc-links__item">
 									<a class="footer-svc-links__link" href="#!">Развал-схождение</a>
 								</li>

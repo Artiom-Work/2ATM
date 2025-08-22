@@ -665,7 +665,6 @@ button[aria-label]::before {
   justify-content: space-between;
   align-items: center;
   font-size: clamp(0.9375rem, 0.8502906977rem + 0.3488372093vw, 1.125rem);
-  flex-wrap: wrap;
   column-gap: clamp(1rem, 0.3023255814rem + 2.7906976744vw, 2.5rem);
   row-gap: 1.0625rem;
   padding-block: 0.84375rem;
@@ -674,14 +673,12 @@ button[aria-label]::before {
   text-transform: uppercase;
 }
 
-@media (width <= 91.31125rem) {
+@media (width <= 81.31125rem) {
   .header-menu__list {
-    justify-content: center;
+    flex-wrap: wrap;
   }
-}
-@media (width <= 85.68625rem) {
-  .header-menu__list {
-    max-width: 60rem;
+  .header-menu__item {
+    margin-inline: auto;
   }
 }
 @media (width <= 63.99875rem) {
@@ -912,13 +909,6 @@ button[aria-label]::before {
     column-gap: 1rem;
   }
 }
-@media (width <= 30.06125rem) {
-  .header__button {
-    padding-inline: 0.625rem;
-    max-width: 10rem;
-    width: 100%;
-  }
-}
 /*  ===================================  */
 /*  =============END header============  */
 /*  ===================================  */
@@ -1147,6 +1137,9 @@ button[aria-label]::before {
   min-height: 4.75rem;
   padding-inline: 0.625rem;
 }
+.service__name--large-gap {
+  column-gap: 1rem;
+}
 .service__name-icon {
   width: 3.75rem;
   height: 3.75rem;
@@ -1171,6 +1164,9 @@ button[aria-label]::before {
   text-transform: uppercase;
   width: 100%;
 }
+.service__link--arrow span {
+  width: 95%;
+}
 .service__link--arrow::after {
   content: "➜";
   width: 1.125rem;
@@ -1183,6 +1179,12 @@ button[aria-label]::before {
   flex-direction: column;
   gap: 0.625rem;
 }
+.service__list--services-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.5rem;
+  row-gap: 0.625rem;
+}
 .service__list-item {
   display: inline-flex;
   width: 100%;
@@ -1190,6 +1192,12 @@ button[aria-label]::before {
   padding-inline: 0.625rem 0.25rem;
 }
 
+@media (width <= 81.31125rem) {
+  .service__list--services-page {
+    display: flex;
+    flex-direction: column;
+  }
+}
 /*  ===================================  */
 /*  ===================================  */
 /* Styles for common block services-menu . ( it's third block in the home page )*/
@@ -1346,14 +1354,14 @@ button[aria-label]::before {
   grid-area: сar-rapair;
 }
 .overview-services__services-menu .services-menu__list .services-menu__item--grid-cell-4 {
-  padding-inline: 1.5rem;
-  grid-area: technical-inspection;
-}
-.overview-services__services-menu .services-menu__list .services-menu__item--grid-cell-5 {
+  display: inline-flex;
+  align-items: center;
   padding-inline: 1.5rem;
   grid-area: refill-conditioning;
 }
-.overview-services__services-menu .services-menu__list .services-menu__item--grid-cell-6 {
+.overview-services__services-menu .services-menu__list .services-menu__item--grid-cell-5 {
+  display: inline-flex;
+  align-items: center;
   padding-inline: 1.5rem;
   grid-area: wheel-alignment;
 }
@@ -1369,7 +1377,7 @@ button[aria-label]::before {
 @media (width <= 81.31125rem) {
   .overview-services__services-menu .services-menu__list {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "tire-fitting car-wash" "сar-rapair technical-inspection" "сar-rapair refill-conditioning" "сar-rapair wheel-alignment";
+    grid-template-areas: "tire-fitting car-wash" "сar-rapair refill-conditioning" "сar-rapair wheel-alignment";
   }
 }
 @media (width <= 63.99875rem) {
@@ -1703,7 +1711,7 @@ button[aria-label]::before {
   width: 100%;
   height: inherit;
   padding-inline: 0.0625rem 0.25rem;
-  padding-block: 0.0625rem 0;
+  padding-block: 0.125rem 0;
   overflow-y: auto;
   overflow-x: hidden;
 }
@@ -1775,7 +1783,7 @@ button[aria-label]::before {
 /*  ===================================  */
 /*  =======END section locations=======  */
 /*  ===================================  */
-/* Styles for section online-registration.( home page. block containing cervices map )*/
+/* Styles for block online-registration.( home page. block containing cervices map )*/
 .online-registration {
   --section-margin-y: 5rem;
 }
@@ -1788,9 +1796,12 @@ button[aria-label]::before {
   align-items: center;
   column-gap: 1.875rem;
 }
+.online-registration__button {
+  min-width: 12.875rem;
+}
 
 /*  ===================================  */
-/*  ==END section online-registration==  */
+/*  ==END block online-registration==  */
 /*  ===================================  */
 /* Styles for single card of special offer. source -- block section special offers */
 .special-offer {
@@ -1818,7 +1829,7 @@ button[aria-label]::before {
   width: 100%;
   height: 13.75rem;
 }
-.special-offer__image-wrapper::after {
+.special-offer__image-wrapper--dark-filter::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -2275,6 +2286,7 @@ button[aria-label]::before {
 }
 .advantages__button {
   font-size: 1rem;
+  min-width: 11.875rem;
 }
 
 @media (width <= 63.99875rem) {
@@ -2284,6 +2296,9 @@ button[aria-label]::before {
   .advantages__buttons {
     column-gap: 1rem;
     justify-content: start;
+  }
+  .advantages__button {
+    min-width: 8.75rem;
   }
 }
 /*  ===================================  */
@@ -2492,6 +2507,14 @@ button[aria-label]::before {
     flex-direction: column;
     align-items: stretch;
     gap: 0.625rem;
+  }
+}
+@media (width <= 35.93625rem) {
+  .appointment-choose__wrapper {
+    padding-inline: 1rem;
+  }
+  .appointment-choose__buttons {
+    max-width: unset;
   }
 }
 /*  ===================================  */

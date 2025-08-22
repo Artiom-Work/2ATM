@@ -68,19 +68,19 @@
 }
 /* Section other-services.*/
 .other-services__list {
-  max-width: 44.25rem;
+  max-width: 59.5rem;
   margin-inline: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto auto;
   gap: clamp(0.625rem, 0.2180232558rem + 1.6279069767vw, 1.5rem);
 }
 
-@media (width <= 47.99875rem) {
+@media (width <= 63.99875rem) {
   .other-services__list {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto auto auto;
-    gap: clamp(0.625rem, -1.9912790698rem + 10.4651162791vw, 6.25rem);
+    column-gap: clamp(0.625rem, -3.7354651163rem + 17.4418604651vw, 10rem);
   }
   .other-services__list-item {
     justify-self: end;

@@ -1,0 +1,104 @@
+@use "../../healpers" as *;
+@use "../сommon-blocks/service";
+/* Styles for common block all-services-menu . ( it's third block in the servaces page )*/
+
+.services-menu {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "tire-fitting car-wash"
+      "tire-fitting сar-rapair"
+      "refill-conditioning wheel-alignment";
+    gap: rem(24);
+  }
+
+  &__item {
+    width: 100%;
+    border: var(--border-light);
+    border-radius: var(--border-radius-small);
+    padding: rem(24);
+
+    &--grid-cell-1 {
+      grid-area: tire-fitting;
+    }
+    &--grid-cell-2 {
+      grid-area: car-wash;
+    }
+    &--grid-cell-3 {
+      grid-area: сar-rapair;
+    }
+    &--grid-cell-4 {
+      display: inline-flex;
+      align-items: center;
+      grid-area: refill-conditioning;
+    }
+    &--grid-cell-5 {
+      display: inline-flex;
+      align-items: center;
+      grid-area: wheel-alignment;
+    }
+  }
+
+  &__name {
+    align-self: start;
+  }
+
+  &__service {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-self: start;
+    row-gap: rem(24);
+    width: 100%;
+
+    &-list {
+      width: 100%;
+    }
+  }
+}
+
+@include laptop-media {
+  .services-menu {
+    &__list {
+      grid-template-areas:
+        "tire-fitting car-wash"
+        "tire-fitting refill-conditioning"
+        "tire-fitting сar-rapair"
+        "wheel-alignment wheel-alignment";
+    }
+
+    &__item:last-child .services-menu__name {
+      align-self: center;
+    }
+  }
+}
+@include tablet-media {
+  .services-menu {
+    gap: rem(20);
+  }
+}
+@include mobile-media {
+  .services-menu {
+    &__list {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "tire-fitting"
+        "car-wash"
+        "refill-conditioning"
+        " сar-rapair"
+        " wheel-alignment";
+      gap: rem(10);
+    }
+
+    &__item:last-child .services-menu__name {
+      align-self: start;
+    }
+
+    &__item {
+      padding: rem(24) rem(40) rem(22.5) rem(24);
+    }
+  }
+}
+/*  ===================================  */
+/*  ===================================  */

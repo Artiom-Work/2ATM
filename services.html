@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/svg+xml" sizes="16x16" href="./images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="32x32" href="./images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="48x48" href="./images/icons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./images/icons/favicon.svg">
+	<meta name="description"
+		content="Полный спектр услуг для авто в СПб: шиномонтаж, химчистка, развал-схождение и многое другое. Удобная онлайн-запись, выгодные акции и круглосуточная работа сети 2АТМ.">
+	<link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css">
+	<title>2ATM | Услуги</title>
+	<link rel="stylesheet" href="./styles/pages/services-page/services.css ">
+</head>
+
+
+<body>
+	<header class="header">
+		<nav class="header-top-menu hidden-tablet">
+			<ul class="header-top-menu__list container">
+				<li>
+					<a class="header-top-menu__link header-top-menu__link--color-accent" href="#!">
+						Услуги
+					</a>
+				</li>
+				<li>
+					<a class="header-top-menu__link" href="./addresses.html">
+						Адреса
+					</a>
+				</li>
+				<li>
+					<a class="header-top-menu__link" href="./corporate.html">
+						Корпоративным клиентам
+					</a>
+				</li>
+				<li>
+					<a class="header-top-menu__link header-top-menu__link--color-green" href="./offers.html">
+						Спецпредложения
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="header__general header__general--not-to-scroll container">
+			<a class="header__logo logo" href="./index.html" aria-label="Логотип 2ATM">
+				<picture>
+					<source srcset="./images/logo/logo-mobile.svg" media="(max-width: 1024px)" type="image/svg+xml">
+					<source srcset="./images/logo/logo.svg" type="image/svg+xml">
+					<img class="logo__image" src="./images/logo/logo-mobile.svg" width="273" height="58" alt="Логотип 2ATM">
+				</picture>
+			</a>
+
+			<div class="header__mobile-menu mobile-menu visible-tablet">
+				<input id="menu-switch" type="checkbox">
+				<label class="mobile-menu__burger" for="menu-switch">
+					<span class="mobile-menu__burger-line"></span>
+					<span class="mobile-menu__burger-line"></span>
+					<span class="mobile-menu__burger-line"></span>
+				</label>
+
+				<div class="mobile-menu__wrapper">
+					<nav class="mobile-menu__box header-top-menu">
+						<ul class="header-top-menu__list">
+							<li>
+								<a class="mobile-menu__link mobile-menu__link--color-accent" href="#!">
+									Услуги
+								</a>
+							</li>
+							<li>
+								<a class="mobile-menu__link" href="./addresses.html">
+									Адреса
+								</a>
+							</li>
+							<li>
+								<a class="mobile-menu__link" href="./corporate.html">
+									Корпоративным клиентам
+								</a>
+							</li>
+							<li>
+								<a class="mobile-menu__link mobile-menu__link--color-green" href="./offers.html">
+									Спецпредложения
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<nav class="header__buttons">
+				<address class="call-up hidden-tablet">
+					<svg viewBox="0 0 32 32" width="32" height="32">
+						<use xlink:href="./images/icons/sprite-icons.svg#call-up"></use>
+					</svg>
+
+					<a class="call-up__link" href="tel:78123855054" target="_blank" title="Позвонить нам">
+						<span>+7&nbsp;812 385-50-54</span>
+						<span class="call-up__text">круглосуточно</span>
+					</a>
+				</address>
+
+				<a class="header__button button button--accent-bg visible-tablet" href="#!">
+					Запись&nbsp;на&nbsp;сайте
+				</a>
+
+				<a class="header__button button" href="#!">
+					<span class="header-buttons__link-text hidden-tablet">
+						Записаться&nbsp;в&nbsp;Telegram
+					</span>
+
+					<span class="header-buttons__link-text visible-tablet">
+						Запись&nbsp;в&nbsp;Telegram
+					</span>
+				</a>
+			</nav>
+		</div>
+
+		<nav class="header-menu header-menu--not-to-scroll header-menu--color-accent">
+			<ul class="header-menu__list container">
+				<li class="header-menu__item">
+					<a href="#!">Шиномонтаж</a>
+				</li>
+				<li class="header-menu__item">
+					<a href="#!">Автомойка</a>
+				</li>
+				<li class="header-menu__item">
+					<a href="#!">Автосервис</a>
+				</li>
+				<li class="header-menu__item">
+					<a href="#!">Заправка кондиционеров</a>
+				</li>
+
+				<li class="header-menu__item">
+					<a href="#!">Развал-схождение</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="header__general header__general--to-scroll container hidden-tablet">
+			<a class="logo logo--short" href="./index.html" aria-label="Логотип 2ATM">
+				<img class="logo__image" src="./images/logo/logo-short.svg" width="45" height="45" alt="Логотип 2ATM">
+			</a>
+
+			<nav class="header__menu header-menu">
+				<ul class="header-menu__list">
+					<li class="header-menu__item">
+						<a href="#!">Шиномонтаж</a>
+					</li>
+					<li class="header-menu__item">
+						<a href="#!">Автомойка</a>
+					</li>
+					<li class="header-menu__item">
+						<a href="#!">Заправка кондиционеров</a>
+					</li>
+					<li class="header-menu__item">
+						<a href="#!">Автосервис</a>
+					</li>
+				</ul>
+			</nav>
+
+			<a class="header__button button" href="#!">
+				<span class="header-buttons__link-text">
+					Запись&nbsp;в&nbsp;Telegram
+				</span>
+			</a>
+		</div>
+	</header>
+
+	<main class="content">
+		<h1 class="visually-hidden">Страница услуг 2АТМ</h1>
+
+		<section class="page-heading container" aria-labelledby="page-title">
+			<nav class="page-heading__breadcrumbs">
+				<ul class="page-heading__breadcrumbs-list">
+					<li class="page-heading__breadcrumbs-item">
+						<a class="page-heading__breadcrumbs-link" href="./index.html">Главная</a>
+					</li>
+
+					<li class="page-heading__breadcrumbs-item">
+						<a class="page-heading__breadcrumbs-link" href="./corporate.html" tabindex="-1">
+							Услуги
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<h2 class="page-heading__page-name h3" id="page-title">
+				Услуги
+			</h2>
+		</section>
+
+		<section class="services-menu section container">
+			<h2 class="visually-hidden">Навигация по услугам сайта две атмосферы</h2>
+
+			<ul class="services-menu__list">
+				<li class="services-menu__item services-menu__item--grid-cell-1">
+					<nav class="services-menu__service service">
+						<h3 class="services-menu__name service__name service__name--large-gap h4" id="service-tire-fitting">
+							<img class="service__name-icon" src="./images/icons/icon-tire-fitting.webp" width="60" height="60"
+								alt="Колесо" loading="lazy">
+
+							<a class="service__link service__link--name service__link--name-small" href="#!">Шиномонтаж</a>
+						</h3>
+
+						<ul class="services-menu__service-list service__list service__list--services-page">
+							<li class="service__list-item">
+								<a class="service__link service__link--arrow" href="#!">
+									<span>Шиномонтаж</span>
+								</a>
+							</li>
+
+							<li class="service__list-item">
+								<a class="service__link service__link--arrow" href="#!">
+									<span>Балансировка колес</span>
+								</a>
+							</li>
+
+							<li class="service__list-item">
+								<a class="service__link service__link--arrow" href="#!">
+									<span>Ремонт шин</span>
+								</a>
+							</li>
+
+							<li class="service__list-item">
+								<a class="service__link service__link--arrow" href="#!">
+									<span>Установка системы контроля давления</span>
+								</a>
+							</li>
+
+							<li class="service__list-item">
+								<a class="service__link service__link--arrow" href="#!">
+									<span>Сезонное хранение шин</span>
+								</a>
+							</li>
+
+							<li class="service__list-item">
+								<a class="service__link service__link--arrow" href="#!">
+									<span>Ошиповка покрышек</span>
+								</a>
+							</li>
+
+							<li class="service__list-item">
+								<a class="service__link service__link--arrow" href="#!">
+									<span>Покраска дисков</span>
+								</a>
+							</li>
+
+							<li class="service__list-item">
+								<a class="service__link service__link--arrow" href="#!">
+									<span>Аргоновая сварка</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</li>
+
+				<li class="services-menu__item services-menu__item--grid-cell-2">
+					<nav class="services-menu__service service">
+						<h3 class="services-menu__name service__name service__name--large-gap h4" id="service-car-wash">
+							<img class="service__name-icon" src="./images/icons/icon-car-wash.webp" width="60" height="60"
+								alt="Мокрый автомобиль" loading="lazy">
+
+							<a class="service__link service__link--name service__link--name-small" href="#!">Автомойка</a>
+						</h3>
+
+						<ul class="services-menu__service-list service__list service__list--services-page">
+							<li class="service__list-item">
+								<a class="service__link service__link--arrow" href="#!">
+									<span>Бесконтактная мойка</span>
+								</a>
+							</li>
+							<li class="service__list-item">
+								<a class="service__link service__link--arrow" href="#!">
+									<span>химчистка</span>
+								</a>
+							</li>
+							<li class="service__list-item">
+								<a class="service__link service__link--arrow" href="#!">
+									<span>Защитные погрытия</span>
+								</a>
+							</li>
+
+							<li class="service__list-item">
+								<a class="service__link service__link--arrow" href="#!">
+									<span>Полировка и бронирование&nbsp;фар</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</li>
+
+				<li class="services-menu__item services-menu__item--grid-cell-3">
+					<nav class="services-menu__service service">
+						<h3 class="services-menu__name service__name service__name--large-gap h4" id="service-сar-rapair">
+							<img class="service__name-icon" src="./images/icons/icon-сar-rapair.webp" width="60" height="60"
+								alt="Шестерёнка" loading="lazy">
+
+							<a class="service__link service__link--name service__link--name-small" href="#!">
+								СТО ремонт автомобилей
+							</a>
+						</h3>
+					</nav>
+				</li>
+
+				<li class="services-menu__item services-menu__item--grid-cell-4">
+					<nav class="services-menu__service service">
+						<h3 class="services-menu__name service__name service__name--large-gap h4">
+							<img class="service__name-icon" src="./images/icons/icon-refill-conditioning.webp" width="60" height="60"
+								alt="Заправка кондиционера" loading="lazy">
+
+							<a class="service__link service__link--name service__link--name-small" href="#!">
+								Заправка кондиционера
+							</a>
+						</h3>
+					</nav>
+				</li>
+
+				<li class="services-menu__item services-menu__item--grid-cell-5">
+					<nav class="services-menu__service service">
+						<h3 class="services-menu__name service__name service__name--large-gap h4">
+							<img class="service__name-icon" src="./images/icons/icon-wheel-alignment.webp" width="60" height="60"
+								alt="Развал-схождение" loading="lazy">
+
+							<a class="service__link service__link--name service__link--name-small" href="#!">
+								Развал-схождение
+							</a>
+						</h3>
+					</nav>
+				</li>
+			</ul>
+		</section>
+
+		<section class="special-offers section section--big-margin container">
+			<h2 class="visually-hidden">
+				Специальные предложения
+			</h2>
+
+			<ul class="special-offers__list">
+				<li>
+					<article class="special-offer">
+						<picture class="special-offer__image-wrapper special-offer__image-wrapper--dark-filter">
+							<source srcset="./images/special-offers/offer-image-1-mobile.webp" media="(max-width: 767px)"
+								type="image/webp">
+							<source srcset="./images/special-offers/offer-image-1.webp" type="image/webp">
+							<img class="special-offer__image" src="./images/special-offers/offer-image-1-mobile.webp"
+								alt="Карта Bonus 2ATM" width="340" height="220" loading="lazy">
+						</picture>
+
+						<div class="special-offer__body">
+							<h3 class="special-offer__heading h5">
+								Ваша скидка растет с&nbsp;каждым визитом!
+							</h3>
+
+							<div class="special-offer__text">
+								<p>
+									Заполните анкету и&nbsp;получите постоянную скидку уже сегодня! Чем больше вы&nbsp;пользуетесь нашими
+									услугами, тем выше ваша выгода. Присоединяйтесь к&nbsp;программе лояльности и&nbsp;экономьте
+									с&nbsp;каждым визитом!
+								</p>
+							</div>
+
+							<a class="special-offer__button button button--accent-bg" href="#!">
+								Узнать подробнее
+							</a>
+						</div>
+					</article>
+				</li>
+
+				<li>
+					<article class="special-offer">
+						<picture class="special-offer__image-wrapper">
+							<source srcset="./images/special-offers/offer-image-3-mobile.webp" media="(max-width: 767px)"
+								type="image/webp">
+							<source srcset="./images/special-offers/offer-image-3.webp" type="image/webp">
+							<img class="special-offer__image" src="./images/special-offers/offer-image-2-mobile.webp"
+								alt="Карта Bonus 2ATM" width="340" height="220" loading="lazy">
+						</picture>
+
+						<div class="special-offer__body">
+							<h3 class="special-offer__heading h5">
+								Хотите дешевле? Загляните&nbsp;в&nbsp;раздел&nbsp;с&nbsp;нашими спецпредложениями
+							</h3>
+
+							<div class="special-offer__text">
+								<p>
+									Не&nbsp;пропустите сезонные акции на&nbsp;отдельные виды услуг с выгодой&nbsp;до 15%.
+								</p>
+							</div>
+
+							<a class="special-offer__button button button--accent-bg" href="#!">
+								Узнать подробнее
+							</a>
+						</div>
+					</article>
+				</li>
+			</ul>
+		</section>
+
+		<section class="appointment-choose section container" aria-labelledby="appointment-choose-title">
+			<h2 class="visually-hidden">Выбор способа записи в мастерскую 2АТМ</h2>
+
+			<div class="appointment-choose__wrapper">
+				<div class="appointment-choose__image-wrapper">
+					<img class="appointment-choose__image" src="./images/gifes/car-service-icon-1.gif" width="228" height="285"
+						alt="Иконка сервиса ремонта авто" loading="lazy">
+				</div>
+
+				<h3 class="appointment-choose__title" id="appointment-choose-title">
+					Хотите записаться?<br>
+					Выбирайте удобный способ!
+				</h3>
+
+				<div class="appointment-choose__buttons">
+					<a class="button" href="#!" target="_blank">
+						В&nbsp;Telegram
+					</a>
+
+					<a class="button button--accent-bg" href="#!">
+						На&nbsp;сайте
+					</a>
+				</div>
+			</div>
+
+		</section>
+
+		<section class="advantages section container" aria-labelledby="advantages-title">
+			<h2 class="advantages__title section__title h3" id="advantages-title">
+				Наши преимущества
+			</h2>
+
+			<div class="advantages__slider">
+				<ul class="swiper-wrapper advantages__slider-wrapper">
+					<li class="swiper-slide advantage-card">
+						<img class="advantage-card__image" src="./images/icons/icon-marker.webp" width="60" height="60"
+							alt="Иконка отметки на карте" loading="lazy">
+
+						<h3 class="advantage-card__heading">
+							Расположение
+						</h3>
+
+						<div class="advantage-card__text">
+							<p>
+								Сеть наших шиномонтажей и&nbsp;мастерских расположена по&nbsp;всему городу и&nbsp;имеет удобные заезды,
+								парковку и&nbsp;зоны ожидания
+							</p>
+						</div>
+					</li>
+
+					<li class="swiper-slide advantage-card">
+						<img class="advantage-card__image" src="./images/icons/icon-ruble.webp" width="60" height="60"
+							alt="Иконка с валютой" loading="lazy">
+
+						<h3 class="advantage-card__heading">
+							Приятная цена
+						</h3>
+
+						<div class="advantage-card__text">
+							<p>
+								Прозрачные цены без скрытых платежей. Первоклассный сервис по&nbsp;выгодным ценам.
+							</p>
+						</div>
+					</li>
+
+					<li class="swiper-slide advantage-card">
+						<img class="advantage-card__image" src="./images/icons/icon-clock-2.webp" width="60" height="60" alt="Часы"
+							loading="lazy">
+
+						<h3 class="advantage-card__heading">
+							Скорость
+						</h3>
+
+						<div class="advantage-card__text">
+							<p>
+								Удобная запись через Telegram. Мы&nbsp;ценим ваше время и&nbsp;отдаем автомобиль точно в&nbsp;обещанное
+								время.
+							</p>
+						</div>
+					</li>
+
+					<li class="swiper-slide advantage-card">
+						<img class="advantage-card__image" src="./images/icons/icon-car-over-hand.webp" width="60" height="60"
+							alt="Машина на руке" loading="lazy">
+
+						<h3 class="advantage-card__heading">
+							Качество
+						</h3>
+
+						<div class="advantage-card__text">
+							<p>
+								Современное оборудование и&nbsp;опытные мастера гарантируют быстрый и&nbsp;качественный сервис.
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="when-work section container" aria-labelledby="when-work-title">
+			<h2 class="visually-hidden">Когда можно записаться в 2АТМ</h2>
+			<div class="when-work__wrapper">
+				<div class="when-work__body">
+					<h3 class="when-work__title h4" id="when-work-title">
+						Мы&nbsp;работаем 24&nbsp;часа в сутки 7&nbsp;дней в неделю
+					</h3>
+
+					<div class="when-work__subtitle">
+						<p>
+							Запишитесь в&nbsp;удобное для вас время
+						</p>
+					</div>
+
+					<div class="when-work__buttons">
+						<a class="when-work__button button" href="#!" target="_blank">
+							В&nbsp;Telegram
+						</a>
+
+						<a class="when-work__button button button--accent-bg" href="#!">
+							На&nbsp;сайте
+						</a>
+					</div>
+				</div>
+
+				<picture class="when-work__image-wrapper">
+					<source srcset="./images/when-work/when-work-mobile.webp" media="(max-width: 1024px)" type="image/webp">
+					<source srcset="./images/when-work/when-work.webp" type="image/webp">
+					<img class="when-work__image" src="./images/when-work/when-work-mobile.webp" alt="Автомобиль" width="320"
+						height="195" loading="lazy">
+				</picture>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="footer__inner container">
+			<div class="footer__heading">
+				<a class="footer__logo logo" href="./index.html" aria-label="Логотип 2ATM">
+					<img class="logo__image" src="./images/logo/logo-light.svg" width="331" height="78" alt="Логотип 2ATM">
+				</a>
+
+				<div class="footer__heading-text">
+					<p>
+						Сеть шиномонтажей, автомоек и&nbsp;автосервисов с&nbsp;качественным обслуживанием в&nbsp;Санкт-Петербурге
+					</p>
+				</div>
+			</div>
+
+			<nav class="footer__buttons">
+				<address class="footer__qs-line">
+					<a class="footer__qs-line-link" href="tel:88126482248" target="_blank"
+						title="Связаться с линией контроля качества">
+						<span class="footer__qs-line-phone">8&nbsp;812 648-22-48</span>
+						<span class="footer__qs-line-text">линия контроля качества обслуживания клиентов</span>
+					</a>
+				</address>
+
+				<a class="footer__yandex-button" href="" aria-label="yandex-button" title="Перейти в Яндекс">
+					<svg width="72" height="92" viewBox="0 0 72 92">
+						<use xlink:href="./images/icons/sprite-icons.svg#yandex-plate"></use>
+					</svg>
+				</a>
+
+				<a class="footer__button button button--accent-bg" href="#!">
+					Записаться&nbsp;в&nbsp;Telegram
+				</a>
+			</nav>
+
+			<nav class="footer__links">
+				<ul class="footer__links-list">
+					<li>
+						<a class="footer__links-link" href="./addresses.html">Адреса</a>
+					</li>
+
+					<li>
+						<a class="footer__links-link" href="./offers.html">Cпецпредложения</a>
+					</li>
+
+					<li>
+						<a class="footer__links-link" href="./corporate.html">Корпоративным клиентам</a>
+					</li>
+
+					<li>
+						<a class="footer__links-link" href="#!">Контакты</a>
+					</li>
+
+					<li>
+						<a class="footer__links-link" href="#!">Аренда и&nbsp;развитие</a>
+					</li>
+				</ul>
+			</nav>
+
+			<section class="footer__svc-links footer-svc-links">
+				<h2 class="footer-svc-links__heading">Услуги</h2>
+
+				<nav class="footer-svc-links__nemu">
+					<ul class="footer-svc-links__list">
+						<li>
+							<ul>
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">Автомойка</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">Химчистка</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">Защитные покрытия</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">Полировка&nbsp;и бронирование фар</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<ul>
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">Шиномонтаж</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">Ремонт шин и&nbsp;дисков</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">Ошиповка колес</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">Реставрация дисков</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">Аргоновая сварка</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<ul>
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">Автосервис</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">
+										Установка системы контроля давления в&nbsp;шинах
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<ul>
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">Развал-схождение</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="#!">
+										Заправка кондиционеров
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</section>
+
+		</div>
+	</footer>
+
+	<script src="./libs/swiper/swiper-bundle.min.js"></script>
+
+	<script>
+		const reviewsSlider = new Swiper(".reviews__slider", {
+			loop: true,
+			centeredSlides: true,
+			spaceBetween: 10,
+			slidesPerView: 1,
+			pagination: {
+				el: ".reviews-controls__pagination",
+				type: "fraction",
+			},
+			navigation: {
+				nextEl: ".reviews-controls__next",
+				prevEl: ".reviews-controls__prev",
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: "auto",
+					simulateTouch: false,
+				},
+				1024: {
+					slidesPerView: "auto",
+					simulateTouch: false,
+					spaceBetween: 24,
+				}
+			}
+		});
+
+		const clientsSlider = new Swiper(".our-clients__slider", {
+			loop: true,
+			slidesPerView: "auto",
+			spaceBetween: 24,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
+		});
+
+		const advantagesSlider = new Swiper(".advantages__slider", {
+			slidesPerView: "auto",
+			grabCursor: true,
+			grid: {
+				rows: 1,
+			},
+			spaceBetween: 24,
+		});
+
+		const certificatesSlider = new Swiper(".certificates__slider", {
+			loop: true,
+			slidesPerView: "auto",
+			spaceBetween: 24,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
+		});
+
+	</script>
+
+</body>
+
+</html>

@@ -131,9 +131,7 @@
 				<li class="header-menu__item">
 					<a href="#!">Заправка кондиционеров</a>
 				</li>
-				<li class="header-menu__item">
-					<a href="#!">Техосмотр</a>
-				</li>
+
 				<li class="header-menu__item">
 					<a href="#!">Развал-схождение</a>
 				</li>
@@ -147,20 +145,17 @@
 
 			<nav class="header__menu header-menu">
 				<ul class="header-menu__list">
-					<li>
+					<li class="header-menu__item">
 						<a href="#!">Шиномонтаж</a>
 					</li>
-					<li>
+					<li class="header-menu__item">
 						<a href="#!">Автомойка</a>
 					</li>
-					<li>
+					<li class="header-menu__item">
 						<a href="#!">Заправка кондиционеров</a>
 					</li>
-					<li>
+					<li class="header-menu__item">
 						<a href="#!">Автосервис</a>
-					</li>
-					<li>
-						<a href="#!">Техосмотр</a>
 					</li>
 				</ul>
 			</nav>
@@ -773,7 +768,7 @@
 			<div class="advantages__slider">
 				<ul class="swiper-wrapper advantages__slider-wrapper">
 					<li class="swiper-slide advantage-card">
-						<img class="advantage-card__image" src="./images/advantages/marker.webp" width="60" height="60"
+						<img class="advantage-card__image" src="./images/icons/icon-marker.webp" width="60" height="60"
 							alt="Иконка отметки на карте" loading="lazy">
 
 						<h3 class="advantage-card__heading">
@@ -789,7 +784,7 @@
 					</li>
 
 					<li class="swiper-slide advantage-card">
-						<img class="advantage-card__image" src="./images/advantages/price-tag.webp" width="60" height="60"
+						<img class="advantage-card__image" src="./images/icons/icon-ruble.webp" width="60" height="60"
 							alt="Иконка с валютой" loading="lazy">
 
 						<h3 class="advantage-card__heading">
@@ -804,7 +799,7 @@
 					</li>
 
 					<li class="swiper-slide advantage-card">
-						<img class="advantage-card__image" src="./images/advantages/clock-2.webp" width="60" height="60" alt="Часы"
+						<img class="advantage-card__image" src="./images/icons/icon-clock-2.webp" width="60" height="60" alt="Часы"
 							loading="lazy">
 
 						<h3 class="advantage-card__heading">
@@ -886,7 +881,7 @@
 							alt="Шестерёнка" loading="lazy">
 
 						<h3 class="other-service-card__name">
-							СТО ремонт
+							Автосервис
 						</h3>
 
 						<span class="other-service-card__link-text">
@@ -897,13 +892,30 @@
 
 				<li class="other-services__list-item other-service-card">
 					<a class="other-service-card__link" href="#!" aria-label="Перейти к описанию услуги"
-						title="Подробее о техосмотре">
+						title="Подробее о СТО ремонте">
 
-						<img class="other-service-card__image" src="./images/icons/icon-technical-inspection.webp" width="60"
-							height="60" alt="Технический осмотр автомобиля" loading="lazy">
+						<img class="other-service-card__image" src="./images/icons/icon-dry-cleaning.webp" width="60" height="60"
+							alt="Щётка" loading="lazy">
 
 						<h3 class="other-service-card__name">
-							Техосмотр
+							Химчистка
+						</h3>
+
+						<span class="other-service-card__link-text">
+							Подробнее
+						</span>
+					</a>
+				</li>
+
+				<li class="other-services__list-item other-service-card">
+					<a class="other-service-card__link" href="#!" aria-label="Перейти к описанию услуги"
+						title="Подробее о СТО ремонте">
+
+						<img class="other-service-card__image" src="./images/icons/icon-studding.webp" width="60" height="60"
+							alt="Ошиповка шины" loading="lazy">
+
+						<h3 class="other-service-card__name">
+							Ошиповка шин
 						</h3>
 
 						<span class="other-service-card__link-text">
@@ -945,10 +957,27 @@
 						</span>
 					</a>
 				</li>
+
+				<li class="other-services__list-item other-service-card">
+					<a class="other-service-card__link" href="#!" aria-label="Перейти к описанию услуги"
+						title="Подробее о развале-схождении">
+
+						<img class="other-service-card__image" src="./images/icons/icon-welding.webp" width="60" height="60"
+							alt="Сварка" loading="lazy">
+
+						<h3 class="other-service-card__name">
+							Сварка аргоном
+						</h3>
+
+						<span class="other-service-card__link-text">
+							Подробнее
+						</span>
+					</a>
+				</li>
 			</ul>
 		</section>
 
-		<section class="other-services section container" aria-labelledby="other-services-title">
+		<section class="appointment-choose section container" aria-labelledby="appointment-choose-title">
 			<h2 class="visually-hidden">Выбор способа записи в мастерскую 2АТМ</h2>
 
 			<div class="appointment-choose__wrapper">
@@ -961,9 +990,6 @@
 					Хотите записаться?<br>
 					Выбирайте удобный способ!
 				</h3>
-
-
-
 
 				<div class="appointment-choose__buttons">
 					<a class="button" href="#!" target="_blank">
@@ -1102,10 +1128,6 @@
 
 						<li>
 							<ul>
-								<li class="footer-svc-links__item">
-									<a class="footer-svc-links__link" href="#!">Технический осмотр</a>
-								</li>
-
 								<li class="footer-svc-links__item">
 									<a class="footer-svc-links__link" href="#!">Развал-схождение</a>
 								</li>

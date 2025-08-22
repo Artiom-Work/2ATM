@@ -665,7 +665,6 @@ button[aria-label]::before {
   justify-content: space-between;
   align-items: center;
   font-size: clamp(0.9375rem, 0.8502906977rem + 0.3488372093vw, 1.125rem);
-  flex-wrap: wrap;
   column-gap: clamp(1rem, 0.3023255814rem + 2.7906976744vw, 2.5rem);
   row-gap: 1.0625rem;
   padding-block: 0.84375rem;
@@ -674,14 +673,12 @@ button[aria-label]::before {
   text-transform: uppercase;
 }
 
-@media (width <= 91.31125rem) {
+@media (width <= 81.31125rem) {
   .header-menu__list {
-    justify-content: center;
+    flex-wrap: wrap;
   }
-}
-@media (width <= 85.68625rem) {
-  .header-menu__list {
-    max-width: 60rem;
+  .header-menu__item {
+    margin-inline: auto;
   }
 }
 @media (width <= 63.99875rem) {
@@ -910,13 +907,6 @@ button[aria-label]::before {
   }
   .header__buttons {
     column-gap: 1rem;
-  }
-}
-@media (width <= 30.06125rem) {
-  .header__button {
-    padding-inline: 0.625rem;
-    max-width: 10rem;
-    width: 100%;
   }
 }
 /*  ===================================  */
@@ -1355,6 +1345,9 @@ button[aria-label]::before {
   min-height: 4.75rem;
   padding-inline: 0.625rem;
 }
+.service__name--large-gap {
+  column-gap: 1rem;
+}
 .service__name-icon {
   width: 3.75rem;
   height: 3.75rem;
@@ -1379,6 +1372,9 @@ button[aria-label]::before {
   text-transform: uppercase;
   width: 100%;
 }
+.service__link--arrow span {
+  width: 95%;
+}
 .service__link--arrow::after {
   content: "➜";
   width: 1.125rem;
@@ -1391,6 +1387,12 @@ button[aria-label]::before {
   flex-direction: column;
   gap: 0.625rem;
 }
+.service__list--services-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.5rem;
+  row-gap: 0.625rem;
+}
 .service__list-item {
   display: inline-flex;
   width: 100%;
@@ -1398,6 +1400,12 @@ button[aria-label]::before {
   padding-inline: 0.625rem 0.25rem;
 }
 
+@media (width <= 81.31125rem) {
+  .service__list--services-page {
+    display: flex;
+    flex-direction: column;
+  }
+}
 /*  ===================================  */
 /*  ===================================  */
 /* Styles for nav-section svc-catalog.part of conponent address-info. */
@@ -1846,19 +1854,19 @@ button[aria-label]::before {
 }
 /* Section other-services.*/
 .other-services__list {
-  max-width: 44.25rem;
+  max-width: 59.5rem;
   margin-inline: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto auto;
   gap: clamp(0.625rem, 0.2180232558rem + 1.6279069767vw, 1.5rem);
 }
 
-@media (width <= 47.99875rem) {
+@media (width <= 63.99875rem) {
   .other-services__list {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto auto auto;
-    gap: clamp(0.625rem, -1.9912790698rem + 10.4651162791vw, 6.25rem);
+    column-gap: clamp(0.625rem, -3.7354651163rem + 17.4418604651vw, 10rem);
   }
   .other-services__list-item {
     justify-self: end;
@@ -1942,6 +1950,14 @@ button[aria-label]::before {
     flex-direction: column;
     align-items: stretch;
     gap: 0.625rem;
+  }
+}
+@media (width <= 35.93625rem) {
+  .appointment-choose__wrapper {
+    padding-inline: 1rem;
+  }
+  .appointment-choose__buttons {
+    max-width: unset;
   }
 }
 /*  ===================================  */

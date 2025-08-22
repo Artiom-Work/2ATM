@@ -72,6 +72,14 @@
     gap: 0.625rem;
   }
 }
+@media (width <= 35.93625rem) {
+  .appointment-choose__wrapper {
+    padding-inline: 1rem;
+  }
+  .appointment-choose__buttons {
+    max-width: unset;
+  }
+}
 /*  ===================================  */
 /*  ======END appointment-choose=======  */
 /*  ===================================  */
