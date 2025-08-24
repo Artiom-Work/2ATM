@@ -1,0 +1,207 @@
+/* Section promo. Styles for main page */
+.promo {
+  position: relative;
+  min-height: 37.5rem;
+  color: var(--text-color-light);
+  overflow: hidden;
+  background: var(--color-grad-1);
+}
+.promo__background {
+  max-width: 120rem;
+  width: 100%;
+  height: 37.5rem;
+  position: absolute;
+  left: 50%;
+  translate: -50% 0;
+}
+.promo__decor-image {
+  width: 16.8125rem;
+  height: 16.8125rem;
+  position: absolute;
+}
+.promo__decor-image--left {
+  top: 4.0625rem;
+  left: 2rem;
+}
+.promo__decor-image--right {
+  right: 0;
+  bottom: -3%;
+}
+.promo__main-image {
+  width: inherit;
+  height: inherit;
+}
+.promo__main-image-wrapper {
+  width: 31.25rem;
+  height: 31.25rem;
+  position: absolute;
+  right: 15rem;
+  top: 50%;
+  translate: 0 -50%;
+}
+.promo__main-image-wrapper::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  bottom: 5%;
+  right: 0;
+  width: 95%;
+  height: 3.8125rem;
+  background-color: var(--color-black-light);
+  filter: blur(1rem);
+}
+.promo__content {
+  padding-block: clamp(3.125rem, 0.8720930233rem + 9.011627907vw, 7.96875rem) 0;
+}
+.promo__title {
+  position: relative;
+  max-width: 54.6875rem;
+  line-height: 1.27;
+  margin-bottom: 2.5rem;
+}
+.promo__subtitle {
+  position: relative;
+  max-width: 49rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+}
+.promo__buttons {
+  display: flex;
+  gap: clamp(1rem, 0.7674418605rem + 0.9302325581vw, 1.5rem);
+}
+.promo__button {
+  position: relative;
+  font-size: 1rem;
+  letter-spacing: 0.028em;
+}
+
+@media (width <= 112.56125rem) {
+  .promo__main-image-wrapper {
+    right: 9.375vw;
+  }
+  .promo__decor-image--left {
+    top: -40%;
+    translate: -50% 50%;
+  }
+  .promo__decor-image--right {
+    bottom: -40%;
+    translate: 40% -50%;
+  }
+}
+@media (width <= 81.31125rem) {
+  .promo__main-image-wrapper {
+    right: 5.375vw;
+  }
+  .promo__title {
+    max-width: 44.0625rem;
+    margin-bottom: 1.9375rem;
+  }
+  .promo__subtitle {
+    margin-bottom: 1.9375rem;
+  }
+}
+@media (width <= 63.99875rem) {
+  .promo {
+    min-height: 30.25rem;
+    background: var(--color-grad-2), var(--color-grad-1);
+  }
+  .promo .container {
+    --container-padding-x: 2.6875rem;
+  }
+  .promo__main-image-wrapper {
+    width: 19.75rem;
+    height: 19.75rem;
+    top: 25%;
+    translate: 0 -25%;
+  }
+  .promo__main-image-wrapper::after {
+    height: 2.5rem;
+    max-width: 21.25rem;
+    left: 50%;
+    bottom: 2%;
+    translate: -50% 0;
+  }
+  .promo__content {
+    padding-block: 4.375rem 0;
+  }
+  .promo__title {
+    max-width: 28.875rem;
+    font-size: 1.5rem;
+  }
+  .promo__subtitle {
+    max-width: 21.25rem;
+    font-size: 1rem;
+    margin-bottom: 1.9375rem;
+  }
+  .promo__button {
+    font-size: 0.8125rem;
+    min-width: 10rem;
+    line-height: 1.69231;
+  }
+}
+@media (width <= 47.99875rem) {
+  .promo {
+    background: inherit;
+  }
+  .promo__background {
+    position: static;
+    top: unset;
+    left: unset;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    height: 30.25rem;
+    translate: 0;
+    max-width: unset;
+    width: 100%;
+    background: var(--color-grad-2), var(--color-grad-1);
+    padding-inline: var(--container-padding-x);
+    padding-block: 0 1rem;
+    margin-bottom: 0.625rem;
+  }
+  .promo__main-image {
+    width: 19.75rem;
+    height: 19.75rem;
+  }
+  .promo__main-image-wrapper {
+    position: relative;
+    right: unset;
+    top: 17%;
+  }
+  .promo__content {
+    padding-block: unset;
+    padding-inline: 0.75rem;
+  }
+  .promo__title {
+    position: absolute;
+    top: 2.5rem;
+    left: 50%;
+    translate: -50% 0;
+    width: 100%;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .promo__subtitle {
+    max-width: unset;
+    margin-bottom: 0.625rem;
+    color: var(--text-color-dark);
+    font-weight: 600;
+  }
+  .promo__subtitle p {
+    margin-bottom: 0;
+  }
+  .promo__buttons {
+    justify-content: center;
+  }
+}
+@media (width <= 30.06125rem) {
+  .promo__title {
+    max-width: 20rem;
+  }
+}
+/*  ===================================  */
+/*  =====END promo block(home page)====  */
+/*  ===================================  */
+
+/*# sourceMappingURL=promo-tire-fitting-page.css.map */

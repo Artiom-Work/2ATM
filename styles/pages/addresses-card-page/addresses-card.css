@@ -181,7 +181,7 @@ svg * {
   --color-white-opacity-35: #ffffffa8;
   --color-black-opacity-80: #00000033;
   --color-red: #ba1414;
-  --color-red-opcity-40: rgba(59, 6, 5, 0.4);
+  --color-red-opcity-40: #3b060566;
   --color-green: #139128;
   --color-green-light: #31ba49;
   --color-blue-extra-dark: #243746;
@@ -214,6 +214,8 @@ svg * {
   --border-radius: 0.625rem;
   --font-family: "Open Sans", sans-serif;
   --letter-spacing: 0.01em;
+  --letter-spacing-medium: 0.02em;
+  --letter-spacing-big: 0.04em;
   --container-width: 78.75rem;
   --container-width-big: 120rem;
   --container-padding-x: 1.25rem;
@@ -226,6 +228,7 @@ svg * {
   --button-height-small: 2.125rem;
   --button-height: 2.75rem;
   --button-height-big: 2.875rem;
+  --auth-portal-button-height: 2.25rem;
   --transition-duration: 0.3s;
 }
 @media (width <= 100.06125rem) {
@@ -266,6 +269,12 @@ svg * {
   overflow: hidden !important;
 }
 
+@media (width <= 35.93625rem) {
+  .hidden-mobile-medium {
+    display: none !important;
+  }
+}
+
 @media (width <= 47.99875rem) {
   .hidden-mobile {
     display: none !important;
@@ -286,6 +295,12 @@ svg * {
 
 @media (width <= 100.06125rem) {
   .hidden-desktop {
+    display: none !important;
+  }
+}
+
+@media (width > 35.93625rem) {
+  .visible-mobile-medium {
     display: none !important;
   }
 }
@@ -951,6 +966,9 @@ button[aria-label]::before {
 .page-heading__page-name--small-mobile {
   font-size: clamp(1.25rem, 0.9011627907rem + 1.3953488372vw, 2rem);
   line-height: 1.5;
+}
+.page-heading__page-name--letter-spacing {
+  letter-spacing: var(--letter-spacing-big);
 }
 
 @media (width <= 63.99875rem) {
@@ -1731,7 +1749,7 @@ button[aria-label]::before {
 .advantage-card__text {
   color: var(--text-color-dark-secondary);
   line-height: 1.5;
-  letter-spacing: 0.02em;
+  letter-spacing: var(--letter-spacing-medium);
 }
 
 @media (width <= 47.99875rem) {
@@ -1989,7 +2007,7 @@ button[aria-label]::before {
 }
 .footer-svc-links__link {
   line-height: 1.44;
-  letter-spacing: 0.02em;
+  letter-spacing: var(--letter-spacing-medium);
 }
 
 @media (width <= 81.31125rem) {
@@ -2008,7 +2026,7 @@ button[aria-label]::before {
 .footer {
   background-color: var(--color-gray-800);
   color: var(--color-white-opacity-35);
-  letter-spacing: 0.02em;
+  letter-spacing: var(--letter-spacing-medium);
 }
 .footer__inner {
   padding-block: clamp(0.9375rem, 0.6468023256rem + 1.1627906977vw, 1.5625rem) clamp(1.375rem, 0.2122093023rem + 4.6511627907vw, 3.875rem);
@@ -2025,7 +2043,7 @@ button[aria-label]::before {
 .footer__heading-text {
   font-size: 0.8125rem;
   line-height: 1.4;
-  letter-spacing: 0.02em;
+  letter-spacing: var(--letter-spacing-medium);
 }
 .footer__logo {
   width: 20.6875rem;

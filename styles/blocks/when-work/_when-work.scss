@@ -23,7 +23,7 @@
 
   &__subtitle {
     line-height: 1.5;
-    letter-spacing: 0.02em;
+    letter-spacing: var(--letter-spacing-medium);
     color: var(--text-color-dark-secondary);
   }
 
@@ -38,7 +38,7 @@
 
     font-weight: 700;
     min-width: rem(140);
-    letter-spacing: 0.04em;
+    letter-spacing: var(--letter-spacing-big);
 
     &:not(.button--accent-bg) {
       background: var(--color-blue-light);

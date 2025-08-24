@@ -4,7 +4,7 @@
 .footer {
   background-color: var(--color-gray-800);
   color: var(--color-white-opacity-35);
-  letter-spacing: 0.02em;
+  letter-spacing: var(--letter-spacing-medium);
 
   &__inner {
     padding-block: fluid(25, 15) fluid(62, 22);
@@ -22,7 +22,7 @@
     &-text {
       font-size: rem(13);
       line-height: 1.4;
-      letter-spacing: 0.02em;
+      letter-spacing: var(--letter-spacing-medium);
     }
   }
 

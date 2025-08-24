@@ -13,7 +13,7 @@
 .offer-description__text {
   margin-bottom: 1.875rem;
   line-height: 1.5;
-  letter-spacing: 0.02em;
+  letter-spacing: var(--letter-spacing-medium);
 }
 .offer-description__text p:not(:last-child) {
   margin-bottom: clamp(0rem, -0.4651162791rem + 1.8604651163vw, 1rem);

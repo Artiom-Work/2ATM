@@ -1,0 +1,43 @@
+@use "../../healpers" as *;
+@use "../сommon-blocks/auth-portal";
+@use "../promotions/promotion-tire-fitting-page";
+@use "cost-service-banner";
+@use "services-tabs";
+/* Section cost-service. Styles for page tire-fitting */
+
+.cost-service {
+  &__title {
+    text-align: center;
+    margin-bottom: fluid(60, 20);
+  }
+
+  &__banner {
+    margin-bottom: fluid(60, 20);
+  }
+
+  &__tabs {
+    margin-bottom: rem(30);
+  }
+
+  &__buttons {
+    @include flex-center;
+
+    gap: fluid(20, 10);
+  }
+
+  &__button {
+    font-size: rem(16);
+  }
+}
+
+@include mobile-medium-media {
+  .cost-service {
+    &__buttons {
+      flex-direction: column;
+      padding-inline: rem(40);
+    }
+  }
+}
+/*  =========================  */
+/*  =====END cost-service====  */
+/*  =========================  */

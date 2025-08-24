@@ -19,7 +19,7 @@
 }
 .when-work__subtitle {
   line-height: 1.5;
-  letter-spacing: 0.02em;
+  letter-spacing: var(--letter-spacing-medium);
   color: var(--text-color-dark-secondary);
 }
 .when-work__buttons {
@@ -30,7 +30,7 @@
   font-size: clamp(0.9375rem, 0.9084302326rem + 0.1162790698vw, 1rem);
   font-weight: 700;
   min-width: 8.75rem;
-  letter-spacing: 0.04em;
+  letter-spacing: var(--letter-spacing-big);
 }
 .when-work__button:not(.button--accent-bg) {
   background: var(--color-blue-light);

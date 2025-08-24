@@ -1,6 +1,6 @@
 @use "../../healpers" as *;
 @use "../сommon-blocks/services-menu";
-@use "services-promotion";
+@use "../promotions/services-promotion";
 /* Styles for section overview-services on the home page */
 .overview-services {
   display: flex;

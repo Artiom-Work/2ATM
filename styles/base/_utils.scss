@@ -10,6 +10,11 @@
   @include visually-hidden;
 }
 
+.hidden-mobile-medium {
+  @include mobile-medium-media {
+    display: none !important;
+  }
+}
 .hidden-mobile {
   @include mobile-media {
     display: none !important;
@@ -31,7 +36,11 @@
     display: none !important;
   }
 }
-
+.visible-mobile-medium {
+  @include mobile-medium-media-above {
+    display: none !important;
+  }
+}
 .visible-mobile {
   @include mobile-media-above {
     display: none !important;

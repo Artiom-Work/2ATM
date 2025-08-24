@@ -55,7 +55,7 @@
   // --color-black-opacity-60: #00000066;
   // --color-black-opacity-40: #00000099;
   --color-red: #ba1414;
-  --color-red-opcity-40: rgba(59, 6, 5, 0.4);
+  --color-red-opcity-40: #3b060566;
   --color-green: #139128;
   --color-green-light: #31ba49;
   --color-blue-extra-dark: #243746;
@@ -97,6 +97,8 @@
   --font-family: "Open Sans", sans-serif;
 
   --letter-spacing: 0.01em;
+  --letter-spacing-medium: 0.02em;
+  --letter-spacing-big: 0.04em;
 
   --container-width: #{rem(1260)};
   --container-width-big: #{rem(1920)};
@@ -112,6 +114,7 @@
   --button-height-small: #{rem(34)};
   --button-height: #{rem(44)};
   --button-height-big: #{rem(46)};
+  --auth-portal-button-height: #{rem(36)};
 
   --transition-duration: 0.3s;
 

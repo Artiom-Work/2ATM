@@ -28,7 +28,7 @@
 .advantage-card__text {
   color: var(--text-color-dark-secondary);
   line-height: 1.5;
-  letter-spacing: 0.02em;
+  letter-spacing: var(--letter-spacing-medium);
 }
 
 @media (width <= 47.99875rem) {

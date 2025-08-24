@@ -1,0 +1,24 @@
+@use "../../healpers" as *;
+/* Styles for section cost-service-banner. Part of section cort-service. source tire-fitting-page */
+.cost-service-banner {
+  --costServiceBannerBackground: var(--color-accent-200);
+
+  max-width: rem(1340);
+  padding-inline: rem(20);
+  background-color: var(--color-accent-200);
+  padding-block: fluid(50, 0) fluid(40, 0);
+  margin-inline: auto;
+  border-radius: var(--border-radius-small);
+
+  &__auth-portal {
+    margin-bottom: fluid(24, 10);
+  }
+}
+@include mobile-medium-media {
+  .cost-service-banner {
+    background-color: transparent;
+    padding-inline: 0;
+  }
+}
+/* =============================== */
+/* =============================== */

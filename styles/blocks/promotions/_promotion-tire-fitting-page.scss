@@ -1,0 +1,134 @@
+@use "../../healpers" as *;
+/* Styles for block promotion for banner in tire-fitting page*/
+
+.promotion {
+  --promotionCardBackgroundColor: #363231;
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: stretch;
+    padding-inline: rem(36);
+    gap: fluid(24, 10);
+    width: 100%;
+  }
+}
+
+.promotion__card {
+  position: relative;
+  min-height: rem(170);
+  height: 100%;
+  border-radius: var(--border-radius-small);
+  background-color: var(--promotionCardBackgroundColor);
+  color: var(--color-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: fluid(30, 16);
+  padding-inline: fluid(30, 24);
+
+  &-image {
+    &-wrapper {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      min-width: rem(340);
+      width: 100%;
+      height: 100%;
+      border-radius: var(--border-radius-small);
+      overflow: hidden;
+    }
+
+    object-fit: cover;
+    width: inherit;
+    min-width: inherit;
+    height: inherit;
+  }
+
+  &-name {
+    @include fluid-text(18, 17);
+
+    text-transform: uppercase;
+    line-height: 1.3;
+    margin-bottom: rem(16);
+  }
+
+  &-taxt {
+    @include fluid-text(14, 12);
+
+    letter-spacing: var(--letter-spacing-large);
+    line-height: 1.4;
+    &--uppercase {
+      text-transform: uppercase;
+    }
+
+    &--underline {
+      font-weight: 600;
+      line-height: 1.4;
+      text-decoration: underline;
+      text-decoration-skip-ink: none;
+
+      &::before {
+        width: 100% !important;
+      }
+    }
+
+    &:not(.promotion__card-taxt--underline) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &-promocode {
+    text-transform: none;
+  }
+
+  &__icon {
+    position: absolute;
+    right: rem(45);
+    bottom: rem(30);
+  }
+}
+@include tablet-media {
+  .promotion {
+    .promotion__list {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .promotion__card {
+    &-taxt {
+      line-height: 1.16;
+    }
+  }
+}
+@include mobile-media {
+  .promotion {
+    &__list {
+      padding-inline: unset;
+    }
+  }
+  .promotion__card {
+    &-name {
+      line-height: 1.2;
+    }
+
+    &-taxt {
+      &--underline {
+        line-height: 1.4;
+        font-size: rem(16);
+      }
+    }
+  }
+}
+@include mobile-medium-media {
+  .promotion__card {
+    background: var(--color-red-opcity-40);
+  }
+}
+/* =============================== */
+/* =============================== */
