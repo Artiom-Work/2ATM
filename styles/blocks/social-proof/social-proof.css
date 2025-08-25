@@ -1,0 +1,206 @@
+/* Styles for block-card review. Part of slider soc1al-proof-slider. */
+.review-card {
+  --reviewCardBorderColor: var(--color-gray-90);
+  --reviewCardTitleColor: black;
+  --reviewCardTextColor: var(--color-gray-550);
+  --reviewCardTextLight: var(--color-gray-450);
+  width: 100%;
+  min-height: 7.875rem;
+  outline: 0.125rem solid var(--reviewCardBorderColor);
+  border-radius: var(--border-radius-extra-small);
+  padding-inline: clamp(0.625rem, 0.3343023256rem + 1.1627906977vw, 1.25rem);
+  padding-block: clamp(0.625rem, 0.4215116279rem + 0.8139534884vw, 1.0625rem) clamp(0.5rem, 0.238372093rem + 1.0465116279vw, 1.0625rem);
+  background-color: var(--color-light);
+  will-change: transform;
+}
+.review-card__title {
+  font-size: clamp(0.9375rem, 0.9084302326rem + 0.1162790698vw, 1rem);
+  font-weight: 600;
+  line-height: 1;
+  color: var(--reviewCardTitleColor);
+  margin-bottom: 0.875rem;
+}
+.review-card__content {
+  display: flex;
+  align-items: center;
+  column-gap: 1.125rem;
+}
+.review-card__image {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.review-card__description {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.125rem;
+  padding-block: 0.1875rem 0;
+}
+.review-card__text {
+  color: var(--reviewCardTextColor);
+  font-size: clamp(0.875rem, 0.8168604651rem + 0.2325581395vw, 1rem);
+  line-height: 1.5;
+  letter-spacing: var(--letter-spacing);
+}
+.review-card__text--color-light {
+  color: var(--reviewCardTextLight);
+}
+.review-card__text--color-dark {
+  color: var(--reviewCardTitleColor);
+}
+
+@media (width <= 63.99875rem) {
+  .review-card {
+    min-height: 6.5rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .review-card__description {
+    padding-block: 0 0.55rem;
+  }
+  .review-card__title {
+    margin-bottom: 1.0625rem;
+  }
+}
+/* Block-slider soc1al-proof-slider(swiper). Part of section soc1al-proof. */
+.soc1al-proof-slider {
+  max-width: 70.75rem;
+  overflow: hidden;
+  margin-inline: auto;
+}
+.soc1al-proof-slider__wrapper {
+  padding-block: 0.15625rem;
+  padding-inline: 0.0625rem;
+}
+.soc1al-proof-slider__slide {
+  flex-shrink: 0;
+  max-width: 22.5rem;
+  width: 100%;
+}
+.soc1al-proof-slider__slide-link {
+  width: inherit;
+}
+.soc1al-proof-slider__prev-slide, .soc1al-proof-slider__next-slide {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-color: var(--color-light);
+  transition-duration: var(--transition-duration) !important;
+}
+@media (any-hover: hover) {
+  .soc1al-proof-slider__prev-slide:hover, .soc1al-proof-slider__next-slide:hover {
+    filter: brightness(90%);
+  }
+}
+@media (any-hover: hover) and (any-hover: none) {
+  .soc1al-proof-slider__prev-slide:active, .soc1al-proof-slider__next-slide:active {
+    filter: brightness(90%);
+  }
+}
+.soc1al-proof-slider__prev-slide:active, .soc1al-proof-slider__next-slide:active {
+  filter: brightness(90%);
+  will-change: transform;
+  scale: 0.92;
+}
+.soc1al-proof-slider__prev-slide {
+  rotate: 180deg;
+}
+.soc1al-proof-slider__switch-icon {
+  flex-shrink: 0;
+  stroke: #000;
+  fill: none;
+  translate: 0.0625rem 0;
+}
+
+@media (width <= 30.06125rem) {
+  .soc1al-proof-slider__slide {
+    max-width: 21.25rem;
+  }
+}
+/* Section soc1al-proof. Source -- tire-fitting page. */
+.soc1al-proof {
+  min-height: 66.8125rem;
+  background-image: url(../../../images/social-proof/social-proof-bg.webp);
+  background-image: image-set("../../../images/social-proof/social-proof-bg.webp" 1x, "../../../images/social-proof/social-proof-bg@2x.webp" 2x);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-block: clamp(2.5rem, 1.3372093023rem + 4.6511627907vw, 5rem) clamp(1.875rem, 0.4796511628rem + 5.5813953488vw, 4.875rem);
+  margin-bottom: var(--section-margin-y-big);
+  /* ==== */
+}
+.soc1al-proof__inner {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.5rem, 2.2093023256rem + 1.1627906977vw, 3.125rem);
+  max-width: calc(52rem + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+  color: var(--text-color-light);
+  margin-block: 0 clamp(1.9375rem, 1.4723837209rem + 1.8604651163vw, 2.9375rem);
+}
+.soc1al-proof__title {
+  text-align: center;
+}
+.soc1al-proof__text {
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+.soc1al-proof__text--advantage {
+  max-width: 19.375rem;
+}
+.soc1al-proof__advantages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 49.25rem;
+  width: 100%;
+  margin-inline: auto;
+  margin-block: 0 clamp(0.625rem, 0.3343023256rem + 1.1627906977vw, 1.25rem);
+}
+.soc1al-proof__advantages ul {
+  padding-left: 1.5625rem;
+  margin-block: 0;
+}
+.soc1al-proof__advantage {
+  max-width: 22.5rem;
+  width: 100%;
+  padding-block: clamp(0.625rem, -0.5377906977rem + 4.6511627907vw, 3.125rem) clamp(0rem, -0.9011627907rem + 3.6046511628vw, 1.9375rem);
+}
+.soc1al-proof__advantage-name {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-block: 0 clamp(1.1875rem, 0.5770348837rem + 2.4418604651vw, 2.5rem);
+}
+.soc1al-proof__rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 1.5rem;
+  max-width: calc(76.5rem + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+  min-height: 8rem;
+}
+
+@media (width <= 35.93625rem) {
+  .soc1al-proof__advantages {
+    flex-direction: column;
+  }
+  .soc1al-proof__advantage-name {
+    line-height: 1.4;
+  }
+}
+/*  ================================  */
+/*  ====END section soc1al-proof====  */
+/*  ================================  */
+
+/*# sourceMappingURL=social-proof.css.map */

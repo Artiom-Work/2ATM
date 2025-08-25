@@ -116,28 +116,28 @@ svg * {
 /* Fonts */
 @font-face {
   font-family: "Open Sans";
-  src: url("../../fonts/OpenSans-Regular.woff2") format("woff2");
+  src: url("/fonts/OpenSans-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../../fonts/OpenSans-SemiBold.woff2") format("woff2");
+  src: url("/fonts/OpenSans-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../../fonts/OpenSans-Bold.woff2") format("woff2");
+  src: url("/fonts/OpenSans-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Open Sans";
-  src: url("../../fonts/OpenSans-ExtraBold.woff2") format("woff2");
+  src: url("/fonts/OpenSans-ExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -222,6 +222,7 @@ svg * {
   --section-margin-y: clamp(2.5rem, 1.3372093023rem + 4.6511627907vw, 5rem);
   --section-margin-y-static: 5rem;
   --section-margin-y-to-medium: clamp(3.75rem, 3.1686046512rem + 2.3255813953vw, 5rem);
+  --section-margin-y-extra-big: clamp(5rem, 3.5465116279rem + 5.8139534884vw, 8.125rem);
   --section-margin-y-big: clamp(5rem, 3.8372093023rem + 4.6511627907vw, 7.5rem);
   --section-margin-y-big-to-medium: clamp(3.75rem, 2.0058139535rem + 6.976744186vw, 7.5rem);
   --section-margin-y-big-to-small: clamp(2.5rem, 0.1744186047rem + 9.3023255814vw, 7.5rem);
@@ -591,6 +592,9 @@ button[aria-label]::before {
 .section {
   margin-bottom: var(--section-margin-y);
 }
+.section--extra-big-margin {
+  margin-bottom: var(--section-margin-y-extra-big);
+}
 .section--big-margin {
   margin-bottom: var(--section-margin-y-big);
 }
@@ -618,6 +622,9 @@ button[aria-label]::before {
   font-weight: 600;
   margin-inline: auto;
   margin-block: 0 clamp(1.25rem, 0.3779069767rem + 3.488372093vw, 3.125rem);
+}
+.section__subtitle--tire-fitting-page {
+  max-width: 50rem;
 }
 
 @media (width <= 63.99875rem) {
@@ -868,9 +875,6 @@ button[aria-label]::before {
   justify-content: end;
   column-gap: 3.6875rem;
 }
-.header__button {
-  letter-spacing: 0.03em;
-}
 
 @media (width > 63.99875rem) {
   .header__general--not-to-scroll {
@@ -966,9 +970,6 @@ button[aria-label]::before {
 .page-heading__page-name--small-mobile {
   font-size: clamp(1.25rem, 0.9011627907rem + 1.3953488372vw, 2rem);
   line-height: 1.5;
-}
-.page-heading__page-name--letter-spacing {
-  letter-spacing: var(--letter-spacing-big);
 }
 
 @media (width <= 63.99875rem) {
@@ -1144,7 +1145,6 @@ button[aria-label]::before {
 }
 .footer-svc-links__link {
   line-height: 1.44;
-  letter-spacing: var(--letter-spacing-medium);
 }
 
 @media (width <= 81.31125rem) {
@@ -1163,7 +1163,6 @@ button[aria-label]::before {
 .footer {
   background-color: var(--color-gray-800);
   color: var(--color-white-opacity-35);
-  letter-spacing: var(--letter-spacing-medium);
 }
 .footer__inner {
   padding-block: clamp(0.9375rem, 0.6468023256rem + 1.1627906977vw, 1.5625rem) clamp(1.375rem, 0.2122093023rem + 4.6511627907vw, 3.875rem);
@@ -1180,12 +1179,12 @@ button[aria-label]::before {
 .footer__heading-text {
   font-size: 0.8125rem;
   line-height: 1.4;
-  letter-spacing: var(--letter-spacing-medium);
 }
 .footer__logo {
   width: 20.6875rem;
   height: 4.875rem;
   margin-bottom: 1rem;
+  margin-left: -0.625rem;
 }
 .footer__buttons {
   display: flex;
@@ -1235,7 +1234,6 @@ button[aria-label]::before {
 .footer__button {
   grid-area: button;
   font-size: 1rem;
-  letter-spacing: 0.03em;
 }
 .footer__svc-links {
   max-width: 52rem;
@@ -1250,9 +1248,7 @@ button[aria-label]::before {
   display: flex;
   flex-direction: column;
   gap: 1.9375rem 1.875rem;
-}
-.footer__links-link {
-  letter-spacing: 0.06em;
+  letter-spacing: var(--letter-spacing);
 }
 .footer ul {
   list-style: none;
@@ -1292,7 +1288,6 @@ button[aria-label]::before {
   }
   .footer__heading-text {
     font-size: 0.75rem;
-    letter-spacing: 0;
   }
   .footer__links {
     grid-area: links-list;
@@ -1344,6 +1339,7 @@ button[aria-label]::before {
   }
   .footer__logo {
     margin-bottom: 1.125rem;
+    margin-left: unset;
   }
   .footer__buttons {
     grid-template-rows: 1fr minmax(5.75rem, auto);
@@ -1351,7 +1347,7 @@ button[aria-label]::before {
     grid-template-areas: "button button" "yandex qs";
     column-gap: 1.6875rem;
     row-gap: 2.3125rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.3125rem;
   }
   .footer__qs-line {
     min-width: 14.9375rem;
@@ -1366,7 +1362,7 @@ button[aria-label]::before {
   .footer__links-list {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 1.25rem 1.5rem;
+    gap: 1.25rem 2rem;
   }
 }
 @media (width <= 30.06125rem) {

@@ -6,6 +6,7 @@
 
   padding-block: rem(24) rem(47);
   color: var(--breadcrumbsColor);
+
   &__breadcrumbs {
     margin-bottom: rem(18);
 
@@ -50,10 +51,6 @@
 
       line-height: 1.5;
     }
-
-    &--letter-spacing {
-      letter-spacing: var(--letter-spacing-big);
-    }
   }
 }
 @include tablet-media {
@@ -62,6 +59,7 @@
 
     &__breadcrumbs {
       margin-bottom: rem(10);
+
       &-link {
         line-height: 1.4;
         letter-spacing: 0.03em;

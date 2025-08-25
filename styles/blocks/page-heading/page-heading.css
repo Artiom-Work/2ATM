@@ -39,9 +39,6 @@
   font-size: clamp(1.25rem, 0.9011627907rem + 1.3953488372vw, 2rem);
   line-height: 1.5;
 }
-.page-heading__page-name--letter-spacing {
-  letter-spacing: var(--letter-spacing-big);
-}
 
 @media (width <= 63.99875rem) {
   .page-heading {

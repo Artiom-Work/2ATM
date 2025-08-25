@@ -4,7 +4,6 @@
 .footer {
   background-color: var(--color-gray-800);
   color: var(--color-white-opacity-35);
-  letter-spacing: var(--letter-spacing-medium);
 
   &__inner {
     padding-block: fluid(25, 15) fluid(62, 22);
@@ -22,7 +21,6 @@
     &-text {
       font-size: rem(13);
       line-height: 1.4;
-      letter-spacing: var(--letter-spacing-medium);
     }
   }
 
@@ -30,6 +28,7 @@
     width: rem(331);
     height: rem(78);
     margin-bottom: rem(16);
+    margin-left: rem(-10);
   }
 
   &__buttons {
@@ -85,7 +84,6 @@
   &__button {
     grid-area: button;
     font-size: rem(16);
-    letter-spacing: 0.03em;
   }
 
   &__svc-links {
@@ -102,10 +100,7 @@
       display: flex;
       flex-direction: column;
       gap: rem(31) rem(30);
-    }
-
-    &-link {
-      letter-spacing: 0.06em;
+      letter-spacing: var(--letter-spacing);
     }
   }
 
@@ -160,7 +155,6 @@
 
       &-text {
         font-size: rem(12);
-        letter-spacing: 0;
       }
     }
 
@@ -231,6 +225,7 @@
 
     &__logo {
       margin-bottom: rem(18);
+      margin-left: unset;
     }
 
     &__buttons {
@@ -241,7 +236,7 @@
         "yandex qs";
       column-gap: rem(27);
       row-gap: rem(37);
-      margin-bottom: rem(24);
+      margin-bottom: rem(21);
     }
 
     &__qs-line {
@@ -259,7 +254,7 @@
       &-list {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: rem(20) rem(24);
+        gap: rem(20) rem(32);
       }
     }
   }

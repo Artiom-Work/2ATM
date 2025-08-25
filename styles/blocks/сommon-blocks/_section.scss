@@ -3,7 +3,9 @@
 /* Styles for common block section */
 .section {
   margin-bottom: var(--section-margin-y);
-
+  &--extra-big-margin {
+    margin-bottom: var(--section-margin-y-extra-big);
+  }
   &--big-margin {
     margin-bottom: var(--section-margin-y-big);
   }
@@ -33,6 +35,10 @@
     font-weight: 600;
     margin-inline: auto;
     margin-block: 0 fluid(50, 20);
+
+    &--tire-fitting-page {
+      max-width: rem(800);
+    }
   }
 }
 @include tablet-media {

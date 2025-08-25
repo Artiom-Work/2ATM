@@ -1,0 +1,64 @@
+@use "../../healpers" as *;
+@use "review-card";
+/* Block-slider soc1al-proof-slider(swiper). Part of section soc1al-proof. */
+.soc1al-proof-slider {
+  max-width: rem(1132);
+  overflow: hidden;
+  margin-inline: auto;
+
+  &__wrapper {
+    padding-block: rem(2.5);
+    padding-inline: rem(1);
+  }
+
+  &__slide {
+    flex-shrink: 0;
+    max-width: rem(360);
+    width: 100%;
+
+    &-link {
+      width: inherit;
+    }
+  }
+
+  &__prev-slide,
+  &__next-slide {
+    @include reset-button;
+    @include square(rem(24));
+    @include flex-center(true);
+
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-color: var(--color-light);
+    transition-duration: var(--transition-duration) !important;
+
+    @include hover {
+      filter: brightness(90%);
+    }
+
+    @include active {
+      filter: brightness(90%);
+      will-change: transform;
+      scale: 0.92;
+    }
+  }
+
+  &__prev-slide {
+    rotate: 180deg;
+  }
+
+  &__switch-icon {
+    flex-shrink: 0;
+    stroke: #000;
+    fill: none;
+    translate: rem(1) 0;
+  }
+}
+
+@include mobile-s-media {
+  .soc1al-proof-slider {
+    &__slide {
+      max-width: rem(340);
+    }
+  }
+}

@@ -6,7 +6,7 @@
   width: 100%;
   min-height: 8.625rem;
   padding-block: 0.625rem;
-  padding-inline: 10.4375rem 14.125rem;
+  padding-inline: 10.4375rem;
   border-radius: var(--border-radius-small);
 }
 .appointment-choose__title {
@@ -31,6 +31,9 @@
   display: flex;
   align-items: center;
   gap: 1.25rem;
+}
+.appointment-choose__button {
+  min-width: 8.75rem;
 }
 
 @media (width <= 100.06125rem) {
@@ -65,7 +68,7 @@
     align-items: start;
   }
   .appointment-choose__buttons {
-    max-width: 11.6875rem;
+    max-width: 18.75rem;
     width: 100%;
     flex-direction: column;
     align-items: stretch;

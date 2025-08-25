@@ -1,0 +1,75 @@
+@use "../../healpers" as *;
+/* Styles for block-card review. Part of slider soc1al-proof-slider. */
+.review-card {
+  --reviewCardBorderColor: var(--color-gray-90);
+  --reviewCardTitleColor: black;
+  --reviewCardTextColor: var(--color-gray-550);
+  --reviewCardTextLight: var(--color-gray-450);
+
+  width: 100%;
+  min-height: rem(126);
+  outline: rem(2) solid var(--reviewCardBorderColor);
+  border-radius: var(--border-radius-extra-small);
+  padding-inline: fluid(20, 10);
+  padding-block: fluid(17, 10) fluid(17, 8);
+  background-color: var(--color-light);
+  will-change: transform;
+
+  &__title {
+    font-size: fluid(16, 15);
+    font-weight: 600;
+    line-height: 1;
+    color: var(--reviewCardTitleColor);
+    margin-bottom: rem(14);
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    column-gap: rem(18);
+  }
+
+  &__image {
+    @include square(rem(56));
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(2);
+    padding-block: rem(3) 0;
+  }
+
+  &__text {
+    color: var(--reviewCardTextColor);
+    font-size: fluid(16, 14);
+    line-height: 1.5;
+    letter-spacing: var(--letter-spacing);
+
+    &--color-light {
+      color: var(--reviewCardTextLight);
+    }
+
+    &--color-dark {
+      color: var(--reviewCardTitleColor);
+    }
+  }
+}
+
+@include tablet-media {
+  .review-card {
+    min-height: rem(104);
+  }
+}
+
+@include mobile-media {
+  .review-card {
+    &__description {
+      padding-block: 0 rem(8.8);
+    }
+
+    &__title {
+      margin-bottom: rem(17);
+    }
+  }
+}

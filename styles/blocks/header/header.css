@@ -238,9 +238,6 @@
   justify-content: end;
   column-gap: 3.6875rem;
 }
-.header__button {
-  letter-spacing: 0.03em;
-}
 
 @media (width > 63.99875rem) {
   .header__general--not-to-scroll {

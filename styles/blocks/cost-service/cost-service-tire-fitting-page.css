@@ -275,7 +275,7 @@
 .services-tabs__table th:first-child,
 .services-tabs__table td:first-child {
   text-align: start;
-  padding-inline: 0 1.5625rem;
+  padding-inline: 0 1.875rem;
 }
 
 @media (width <= 100.06125rem) {
