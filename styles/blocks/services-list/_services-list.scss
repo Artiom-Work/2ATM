@@ -1,0 +1,98 @@
+@use "../../healpers" as *;
+/* Styles for section services-list */
+.services-list {
+  max-width: calc(rem(1170) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+
+  &__title {
+    margin-bottom: rem(50);
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: rem(24);
+    }
+  }
+
+  &__item {
+    @include flex-center;
+
+    min-height: rem(50);
+    flex-shrink: 0;
+    padding-inline: rem(38) rem(26);
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    font-weight: 700;
+    font-size: rem(15);
+    line-height: 1.1;
+    text-transform: uppercase;
+
+    &::before {
+      @include square(rem(8));
+
+      content: "";
+      position: absolute;
+      left: rem(-20);
+      top: 50%;
+      translate: 0 -50%;
+      background-color: var(--text-color-medium);
+      border-radius: 50%;
+    }
+
+    &::after {
+      @include square(rem(18));
+
+      position: absolute;
+      content: "\279C";
+      color: currentColor;
+      font-size: inherit;
+      margin-left: rem(8);
+    }
+  }
+}
+@include mobile-medium-media {
+  .services-list {
+    &__title {
+      line-height: 1.3;
+    }
+
+    &__nav {
+      &-list {
+        flex-direction: column;
+        padding-inline: rem(32) rem(26);
+      }
+    }
+
+    &__item {
+      position: relative;
+      justify-content: start;
+      padding-inline: 0 rem(26);
+    }
+
+    &__link {
+      position: static;
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        right: 0;
+        top: 50%;
+        translate: 0 -50%;
+      }
+    }
+  }
+}
+/*  =================================  */
+/*  ====END section services-list====  */
+/*  =================================  */
