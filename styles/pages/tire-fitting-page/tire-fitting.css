@@ -224,6 +224,7 @@ svg * {
   --section-margin-y-to-medium: clamp(3.75rem, 3.1686046512rem + 2.3255813953vw, 5rem);
   --section-margin-y-extra-big: clamp(5rem, 3.5465116279rem + 5.8139534884vw, 8.125rem);
   --section-margin-y-big: clamp(5rem, 3.8372093023rem + 4.6511627907vw, 7.5rem);
+  --section-margin-y-extra-big-to-medium: clamp(3.75rem, 1.7151162791rem + 8.1395348837vw, 8.125rem);
   --section-margin-y-big-to-medium: clamp(3.75rem, 2.0058139535rem + 6.976744186vw, 7.5rem);
   --section-margin-y-big-to-small: clamp(2.5rem, 0.1744186047rem + 9.3023255814vw, 7.5rem);
   --button-height-small: 2.125rem;
@@ -603,6 +604,9 @@ button[aria-label]::before {
 }
 .section--margin-to-medium {
   margin-bottom: var(--section-margin-y-to-medium);
+}
+.section--extra-big-to-medium-margin {
+  margin-bottom: var(--section-margin-y-extra-big-to-medium);
 }
 .section--big-to-medium-margin {
   margin-bottom: var(--section-margin-y-big-to-medium);
@@ -2179,6 +2183,78 @@ button[aria-label]::before {
 /*  ===================================  */
 /*  ======END appointment-choose=======  */
 /*  ===================================  */
+/* Section service-situation. Source -- tire-fitting page. */
+.service-situation {
+  max-width: calc(52.125rem + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+.service-situation__title {
+  text-align: center;
+  margin-bottom: 3.125rem;
+  line-height: 1.2;
+}
+.service-situation__icon {
+  width: 2.375rem;
+  height: 2.375rem;
+}
+.service-situation__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1.5rem;
+  margin-bottom: 3.125rem;
+}
+.service-situation__list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: start;
+  column-gap: 1.5rem;
+  padding: 1.25rem;
+}
+.service-situation__stuation {
+  min-height: 3.0625rem;
+  width: 100%;
+}
+.service-situation__stuation-name {
+  font-size: 0.9375rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-bottom: 0.625rem;
+}
+.service-situation__stuation-deskription {
+  max-width: 19.25rem;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.service-situation__subtitle {
+  text-align: start;
+  margin-block: 0;
+}
+
+@media (width <= 47.99875rem) {
+  .service-situation__title {
+    line-height: 1.3;
+  }
+  .service-situation__list {
+    gap: 0.625rem;
+  }
+}
+@media (width <= 35.93625rem) {
+  .service-situation__list {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .service-situation__list-item {
+    max-width: 25.25rem;
+    width: 100%;
+    justify-self: center;
+  }
+}
+/*  =====================================  */
+/*  ====END section service-situation====  */
+/*  =====================================  */
 /* section when-work*/
 .when-work__wrapper {
   display: flex;

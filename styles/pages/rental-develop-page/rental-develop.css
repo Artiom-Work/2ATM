@@ -224,6 +224,7 @@ svg * {
   --section-margin-y-to-medium: clamp(3.75rem, 3.1686046512rem + 2.3255813953vw, 5rem);
   --section-margin-y-extra-big: clamp(5rem, 3.5465116279rem + 5.8139534884vw, 8.125rem);
   --section-margin-y-big: clamp(5rem, 3.8372093023rem + 4.6511627907vw, 7.5rem);
+  --section-margin-y-extra-big-to-medium: clamp(3.75rem, 1.7151162791rem + 8.1395348837vw, 8.125rem);
   --section-margin-y-big-to-medium: clamp(3.75rem, 2.0058139535rem + 6.976744186vw, 7.5rem);
   --section-margin-y-big-to-small: clamp(2.5rem, 0.1744186047rem + 9.3023255814vw, 7.5rem);
   --button-height-small: 2.125rem;
@@ -603,6 +604,9 @@ button[aria-label]::before {
 }
 .section--margin-to-medium {
   margin-bottom: var(--section-margin-y-to-medium);
+}
+.section--extra-big-to-medium-margin {
+  margin-bottom: var(--section-margin-y-extra-big-to-medium);
 }
 .section--big-to-medium-margin {
   margin-bottom: var(--section-margin-y-big-to-medium);
