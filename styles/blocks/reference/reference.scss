@@ -1,0 +1,33 @@
+@use "../../healpers" as *;
+/* Styles for text block-section reference */
+.reference {
+  @include flex-center;
+
+  gap: rem(30);
+
+  &__icon {
+    @include square(rem(60));
+
+    flex-shrink: 0;
+  }
+
+  &__text {
+    max-width: rem(832);
+    font-size: rem(18);
+    line-height: 1.5;
+    font-weight: 600;
+
+    p:not(:last-child) {
+      margin-bottom: rem(16);
+    }
+  }
+}
+
+@include mobile-medium-media {
+  .reference {
+    flex-direction: column;
+  }
+}
+/*  ====================================  */
+/*  =====END block-section reference====  */
+/*  ====================================  */

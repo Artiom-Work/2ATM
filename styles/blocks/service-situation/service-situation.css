@@ -4,11 +4,6 @@
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
 }
-.service-situation__title {
-  text-align: center;
-  margin-bottom: 3.125rem;
-  line-height: 1.2;
-}
 .service-situation__icon {
   width: 2.375rem;
   height: 2.375rem;
@@ -17,8 +12,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
-  gap: 1.5rem;
-  margin-bottom: 3.125rem;
+  gap: clamp(0.625rem, 0.2180232558rem + 1.6279069767vw, 1.5rem);
+  margin-bottom: clamp(1.25rem, 0.3779069767rem + 3.488372093vw, 3.125rem);
 }
 .service-situation__list-item {
   display: flex;
@@ -59,7 +54,6 @@
 @media (width <= 35.93625rem) {
   .service-situation__list {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
   }
   .service-situation__list-item {
     max-width: 25.25rem;

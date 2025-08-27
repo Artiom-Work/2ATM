@@ -1,0 +1,45 @@
+@use "../../healpers" as *;
+@use "../сommon-blocks/auth-portal";
+@use "service-cost-card";
+/* Section cost-service. */
+.cost-service {
+  &__banner {
+    margin-bottom: fluid(24, 10);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: rem(24);
+    margin-bottom: fluid(50, 20);
+  }
+
+  &__buttons {
+    @include flex-center;
+
+    gap: fluid(20, 10);
+  }
+
+  &__button {
+    font-size: rem(16);
+  }
+}
+@include mobile-media {
+  .cost-service {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+@include mobile-medium-media {
+  .cost-service {
+    &__buttons {
+      flex-direction: column;
+      padding-inline: rem(32);
+    }
+  }
+}
+/*  =========================  */
+/*  =====END cost-service====  */
+/*  =========================  */

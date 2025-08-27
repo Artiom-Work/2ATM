@@ -1,103 +1,17 @@
-/* section when-work*/
-.when-work__wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1.25rem;
-  outline: var(--border-light);
-  padding-inline: 6.25rem 0;
-  border-radius: var(--border-radius-small);
-}
-.when-work__body {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1.875rem;
-  max-width: 36.9375rem;
-}
-.when-work__title {
-  line-height: 1.2;
-}
-.when-work__subtitle {
-  line-height: 1.5;
-  letter-spacing: var(--letter-spacing-medium);
-  color: var(--text-color-dark-secondary);
-}
-.when-work__buttons {
-  display: flex;
-  gap: 1.5rem;
-}
-.when-work__button {
-  font-size: clamp(0.9375rem, 0.9084302326rem + 0.1162790698vw, 1rem);
-  font-weight: 700;
-  min-width: 8.75rem;
-  letter-spacing: var(--letter-spacing-big);
-}
-.when-work__button:not(.button--accent-bg) {
-  background: var(--color-blue-light);
-}
-.when-work__image {
-  width: inherit;
-  height: inherit;
-}
-.when-work__image-wrapper {
-  width: 29.3125rem;
-  height: 19.25rem;
-  flex-shrink: 0;
-}
+/* Error: This at-rule is not allowed here.
+ *     ,
+ * 120 |     @use "../../healpers" as *;
+ *     |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *     '
+ *   styles\blocks\when-work\when-work.scss 120:5  root stylesheet */
 
-@media (width <= 81.31125rem) {
-  .when-work__wrapper {
-    padding-inline: 2.5rem 0;
-  }
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: This at-rule is not allowed here.\a     \2577 \a 120 \2502      @use "../../healpers" as *;\d\a     \2502      ^^^^^^^^^^^^^^^^^^^^^^^^^^\a     \2575 \a   styles\\blocks\\when-work\\when-work.scss 120:5  root stylesheet';
 }
-@media (width <= 63.99875rem) {
-  .when-work__wrapper {
-    padding-inline: 1.25rem 0;
-    padding: 1.25rem;
-  }
-  .when-work__body {
-    row-gap: 1.25rem;
-  }
-  .when-work__buttons {
-    gap: 0.625rem;
-  }
-  .when-work__image-wrapper {
-    width: 20rem;
-    height: 12.1875rem;
-  }
-}
-@media (width <= 47.99875rem) {
-  .when-work__wrapper {
-    flex-direction: column;
-  }
-  .when-work__title, .when-work__subtitle {
-    text-align: center;
-  }
-  .when-work__button {
-    width: 100%;
-  }
-  .when-work__image-wrapper {
-    order: -1;
-  }
-}
-@media (width <= 35.93625rem) {
-  .when-work__wrapper {
-    padding-inline: 0;
-  }
-  .when-work__body {
-    row-gap: 1.875rem;
-  }
-  .when-work__title {
-    padding-inline: 1.875rem;
-    line-height: 1.5;
-  }
-  .when-work__buttons {
-    flex-direction: column;
-    padding-inline: 0.625rem;
-  }
-}
-/*  ==================================  */
-/*  =======END section when-work======  */
-/*  ==================================  */
-
-/*# sourceMappingURL=when-work.css.map */

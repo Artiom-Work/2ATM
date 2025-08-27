@@ -17,6 +17,8 @@
   border-radius: var(--border-radius);
   min-height: var(--button-height);
   padding: rem(9) rem(20);
+  transition-duration: var(--transition-duration) !important;
+  will-change: transform;
 
   @include hover {
     filter: brightness(90%);
@@ -24,7 +26,6 @@
 
   @include active {
     filter: brightness(90%);
-    will-change: transform;
     scale: 0.97;
   }
 

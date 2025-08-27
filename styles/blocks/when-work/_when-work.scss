@@ -23,14 +23,13 @@
 
   &__subtitle {
     line-height: 1.5;
-    letter-spacing: var(--letter-spacing-medium);
     color: var(--text-color-dark-secondary);
   }
 
   &__buttons {
     display: flex;
 
-    gap: rem(24);
+    gap: rem(20);
   }
 
   &__button {

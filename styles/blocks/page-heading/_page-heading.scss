@@ -60,6 +60,17 @@
     &__breadcrumbs {
       margin-bottom: rem(10);
 
+      &-item {
+        padding-inline: rem(10);
+
+        &:first-child {
+          padding-inline: 0 rem(10);
+        }
+        &:last-child {
+          padding-inline: rem(10) 0;
+        }
+      }
+
       &-link {
         line-height: 1.4;
         letter-spacing: 0.03em;

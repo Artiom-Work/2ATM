@@ -31,10 +31,14 @@
   &__link {
     position: relative;
     display: inline-block;
+    width: 100%;
     font-weight: 700;
     font-size: rem(15);
     line-height: 1.1;
     text-transform: uppercase;
+    transition-duration: var(--transition-duration) !important;
+    will-change: transform;
+    padding-inline: 0 rem(26);
 
     &::before {
       @include square(rem(8));
@@ -42,8 +46,8 @@
       content: "";
       position: absolute;
       left: rem(-20);
-      top: 50%;
-      translate: 0 -50%;
+      top: 45%;
+      translate: 0 -45%;
       background-color: var(--text-color-medium);
       border-radius: 50%;
     }

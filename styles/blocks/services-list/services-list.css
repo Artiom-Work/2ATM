@@ -27,10 +27,14 @@
 .services-list__link {
   position: relative;
   display: inline-block;
+  width: 100%;
   font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.1;
   text-transform: uppercase;
+  transition-duration: var(--transition-duration) !important;
+  will-change: transform;
+  padding-inline: 0 1.625rem;
 }
 .services-list__link::before {
   width: 0.5rem;
@@ -38,8 +42,8 @@
   content: "";
   position: absolute;
   left: -1.25rem;
-  top: 50%;
-  translate: 0 -50%;
+  top: 45%;
+  translate: 0 -45%;
   background-color: var(--text-color-medium);
   border-radius: 50%;
 }

@@ -1,0 +1,43 @@
+@use "../../healpers" as *;
+/* Styles for service-cost-card. Part of cost-service list */
+.service-cost-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(20);
+
+  height: 100%;
+  outline: var(--border-light);
+  border-radius: var(--border-radius-small);
+  padding: rem(30) rem(20);
+
+  &--accent-bg {
+    background-color: var(--color-gray-75);
+  }
+
+  &__text {
+    font-size: rem(18);
+    line-height: 1.47;
+    text-align: center;
+    color: var(--color);
+
+    &-big {
+      @include fluid-text(20, 17);
+
+      font-weight: 700;
+      line-height: 1.3;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+}
+
+@include mobile-media {
+  .service-cost-card {
+    &__text {
+      &-big {
+        line-height: 1.2;
+      }
+    }
+  }
+}

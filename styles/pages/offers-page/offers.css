@@ -165,6 +165,7 @@ svg * {
   --color-gray-200: #ece4e4;
   --color-gray-100: #f3eded;
   --color-gray-90: #dcdcdc;
+  --color-gray-75: #f8efef;
   --color-gray-50: #fbf8f8;
   --color-grad-1: linear-gradient(
     180deg,
@@ -488,6 +489,8 @@ button[aria-label]::before {
   border-radius: var(--border-radius);
   min-height: var(--button-height);
   padding: 0.5625rem 1.25rem;
+  transition-duration: var(--transition-duration) !important;
+  will-change: transform;
 }
 @media (any-hover: hover) {
   .button:hover {
@@ -501,7 +504,6 @@ button[aria-label]::before {
 }
 .button:active {
   filter: brightness(90%);
-  will-change: transform;
   scale: 0.97;
 }
 .button--light-bg-color {
@@ -982,6 +984,15 @@ button[aria-label]::before {
   }
   .page-heading__breadcrumbs {
     margin-bottom: 0.625rem;
+  }
+  .page-heading__breadcrumbs-item {
+    padding-inline: 0.625rem;
+  }
+  .page-heading__breadcrumbs-item:first-child {
+    padding-inline: 0 0.625rem;
+  }
+  .page-heading__breadcrumbs-item:last-child {
+    padding-inline: 0.625rem 0;
   }
   .page-heading__breadcrumbs-link {
     line-height: 1.4;

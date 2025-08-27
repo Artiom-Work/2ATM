@@ -1,0 +1,32 @@
+/* Styles for text block-section reference */
+.reference {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.875rem;
+}
+.reference__icon {
+  width: 3.75rem;
+  height: 3.75rem;
+  flex-shrink: 0;
+}
+.reference__text {
+  max-width: 52rem;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+.reference__text p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+@media (width <= 35.93625rem) {
+  .reference {
+    flex-direction: column;
+  }
+}
+/*  ====================================  */
+/*  =====END block-section reference====  */
+/*  ====================================  */
+
+/*# sourceMappingURL=reference.css.map */
