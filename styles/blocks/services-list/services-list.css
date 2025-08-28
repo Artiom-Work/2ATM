@@ -22,7 +22,7 @@
   align-items: center;
   min-height: 3.125rem;
   flex-shrink: 0;
-  padding-inline: 2.375rem 1.625rem;
+  padding-inline: 2.375rem 0;
 }
 .services-list__link {
   position: relative;
@@ -63,7 +63,7 @@
   }
   .services-list__nav-list {
     flex-direction: column;
-    padding-inline: 2rem 1.625rem;
+    padding-inline: 2rem 0;
   }
   .services-list__item {
     position: relative;

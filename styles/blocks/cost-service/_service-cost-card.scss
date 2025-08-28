@@ -16,11 +16,13 @@
   }
 
   &__text {
-    font-size: rem(18);
     line-height: 1.47;
     text-align: center;
     color: var(--color);
 
+    &--static-fs {
+      font-size: rem(18);
+    }
     &-big {
       @include fluid-text(20, 17);
 

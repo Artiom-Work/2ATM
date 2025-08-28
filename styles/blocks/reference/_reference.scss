@@ -15,14 +15,33 @@
     max-width: rem(832);
     font-size: rem(18);
     line-height: 1.5;
-    font-weight: 600;
+
+    &--semi-bold {
+      font-weight: 600;
+    }
+
+    &--small-text-mobile {
+      @include fluid-text(18, 16);
+    }
 
     p:not(:last-child) {
       margin-bottom: rem(16);
     }
   }
 }
+@include mobile-media {
+  .reference {
+    &--padding-mobile {
+      padding-block: rem(20);
+    }
 
+    &__text {
+      p:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
 @include mobile-medium-media {
   .reference {
     flex-direction: column;

@@ -1,0 +1,259 @@
+@use "../../healpers" as *;
+/* Section promo. Styles for tire-repair page */
+.promo {
+  position: relative;
+  min-height: rem(600);
+
+  color: var(--text-color-light);
+  overflow: hidden;
+  background: var(--color-grad-1);
+
+  &__background {
+    max-width: rem(1920);
+    width: 100%;
+    height: rem(600);
+    position: absolute;
+    left: 50%;
+    translate: -50% 0;
+  }
+
+  &__decor-image {
+    @include square(rem(269));
+
+    position: absolute;
+
+    &--left {
+      top: rem(65);
+      left: rem(32);
+    }
+
+    &--right {
+      right: 0;
+      bottom: -3%;
+    }
+  }
+
+  &__main-image {
+    &-wrapper {
+      width: rem(786);
+      height: rem(524);
+
+      position: absolute;
+      right: rem(95);
+      top: 52%;
+      translate: 0 -50%;
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        border-radius: 50%;
+        bottom: 2%;
+        right: 17%;
+        width: 60%;
+        height: rem(61);
+        background-color: var(--color-black-light);
+        filter: blur(rem(16));
+      }
+    }
+
+    width: inherit;
+    height: inherit;
+  }
+
+  &__content {
+    padding-block: fluid(162, 50) 0;
+  }
+
+  &__title {
+    position: relative;
+    line-height: 1.27;
+    margin-bottom: rem(41);
+  }
+
+  &__subtitle {
+    position: relative;
+    max-width: rem(801);
+    margin-bottom: rem(40);
+    font-size: rem(16);
+    line-height: 1.5;
+
+    p:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: fluid(24, 16);
+  }
+
+  &__button {
+    position: relative;
+    font-size: rem(16);
+  }
+}
+
+@media (width <= rem(1800.98)) {
+  .promo {
+    &__main-image {
+      &-wrapper {
+        right: rem(-75);
+      }
+    }
+
+    &__decor-image {
+      &--left {
+        top: -40%;
+        translate: -50% 50%;
+      }
+    }
+
+    &__decor-image {
+      &--right {
+        bottom: -40%;
+        translate: 40% -50%;
+      }
+    }
+  }
+}
+@include desktop-media {
+  .promo {
+    &__subtitle {
+      max-width: rem(650);
+    }
+  }
+}
+@include laptop-media {
+  .promo {
+    &__title {
+      margin-bottom: rem(31);
+    }
+
+    &__subtitle {
+      margin-bottom: rem(31);
+    }
+  }
+}
+@include tablet-media {
+  .promo {
+    min-height: rem(484);
+    .container {
+      --container-padding-x: #{rem(43)};
+    }
+
+    &__main-image {
+      &-wrapper {
+        width: rem(360);
+        height: rem(340);
+        top: 25%;
+        translate: 0 -25%;
+        right: 0;
+
+        &::after {
+          height: rem(40);
+          max-width: rem(140);
+          left: 55%;
+          bottom: 0;
+          translate: -50% 0;
+          filter: blur(rem(12));
+        }
+      }
+    }
+
+    &__content {
+      padding-block: rem(70) 0;
+    }
+
+    &__subtitle {
+      max-width: rem(340);
+      margin-bottom: rem(31);
+    }
+
+    &__button {
+      font-size: rem(13);
+      min-width: rem(160);
+      line-height: 1.69231;
+    }
+  }
+}
+@include mobile-media {
+  .promo {
+    background: inherit;
+
+    &__background {
+      position: static;
+      top: unset;
+      left: unset;
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      height: rem(484);
+      translate: 0;
+      max-width: unset;
+      width: 100%;
+      background: var(--color-grad-2), var(--color-grad-1);
+      padding-inline: var(--container-padding-x);
+      padding-block: 0 rem(16);
+      margin-bottom: rem(10);
+    }
+
+    &__main-image {
+      &-wrapper {
+        position: relative;
+        right: unset;
+        top: 15%;
+      }
+    }
+
+    &__content {
+      padding-block: unset;
+      padding-inline: rem(12);
+    }
+
+    &__title {
+      position: absolute;
+      top: rem(40);
+      left: 50%;
+      translate: -50% 0;
+      width: 100%;
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    &__subtitle {
+      max-width: unset;
+      margin-bottom: rem(10);
+      color: var(--text-color-dark);
+      font-weight: 600;
+
+      p {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    &__buttons {
+      justify-content: center;
+    }
+  }
+}
+@include mobile-s-media {
+  .promo {
+    &__title {
+      max-width: rem(320);
+    }
+
+    &__main-image {
+      &-wrapper {
+        margin-inline: calc(var(--container-padding-x) * -1);
+      }
+    }
+
+    &__button {
+      padding-inline: rem(14);
+    }
+  }
+}
+/*  ======================================  */
+/*  =====END promo block(tire-repair)====  */
+/*  ======================================  */

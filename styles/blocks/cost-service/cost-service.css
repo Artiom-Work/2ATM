@@ -70,10 +70,12 @@
   background-color: var(--color-gray-75);
 }
 .service-cost-card__text {
-  font-size: 1.125rem;
   line-height: 1.47;
   text-align: center;
   color: var(--color);
+}
+.service-cost-card__text--static-fs {
+  font-size: 1.125rem;
 }
 .service-cost-card__text-big {
   font-size: clamp(1.0625rem, 0.9752906977rem + 0.3488372093vw, 1.25rem);

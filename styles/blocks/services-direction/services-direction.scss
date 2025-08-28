@@ -1,0 +1,46 @@
+@use "../../healpers" as *;
+@use "service-direction-card";
+/* Syles for section services-direction  */
+.services-direction {
+  &__list {
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: rem(24);
+      }
+    }
+  }
+}
+
+@include mobile-media-above {
+  .services-direction {
+    &__list {
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      flex-wrap: wrap;
+      gap: rem(24);
+
+      &-item {
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+@include laptop-media-above {
+  .services-direction {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+
+      &-item {
+        height: 100%;
+      }
+    }
+  }
+}
+/* ================================== */
+/* ======END services-direction====== */
+/* ================================== */

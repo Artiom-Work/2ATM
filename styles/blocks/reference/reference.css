@@ -14,6 +14,8 @@
   max-width: 52rem;
   font-size: 1.125rem;
   line-height: 1.5;
+}
+.reference__text--semi-bold {
   font-weight: 600;
 }
 .reference__text p:not(:last-child) {

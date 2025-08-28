@@ -1002,7 +1002,7 @@ button[aria-label]::before {
 /*  ===================================  */
 /*  ==========END page-heading=========  */
 /*  ===================================  */
-/* Section promo. Styles for tire-fitting page */
+/* Section promo. Styles for tire-repair page */
 .promo {
   position: relative;
   min-height: 37.5rem;
@@ -1036,11 +1036,11 @@ button[aria-label]::before {
   height: inherit;
 }
 .promo__main-image-wrapper {
-  width: 31.25rem;
-  height: 31.25rem;
+  width: 49.125rem;
+  height: 32.75rem;
   position: absolute;
-  right: 15rem;
-  top: 50%;
+  right: 5.9375rem;
+  top: 52%;
   translate: 0 -50%;
 }
 .promo__main-image-wrapper::after {
@@ -1048,27 +1048,30 @@ button[aria-label]::before {
   position: absolute;
   z-index: -1;
   border-radius: 50%;
-  bottom: 5%;
-  right: 0;
-  width: 95%;
+  bottom: 2%;
+  right: 17%;
+  width: 60%;
   height: 3.8125rem;
   background-color: var(--color-black-light);
   filter: blur(1rem);
 }
 .promo__content {
-  padding-block: clamp(3.125rem, 0.8720930233rem + 9.011627907vw, 7.96875rem) 0;
+  padding-block: clamp(3.125rem, -0.1308139535rem + 13.023255814vw, 10.125rem) 0;
 }
 .promo__title {
   position: relative;
-  max-width: 54.6875rem;
   line-height: 1.27;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.5625rem;
 }
 .promo__subtitle {
   position: relative;
-  max-width: 49rem;
+  max-width: 50.0625rem;
   margin-bottom: 2.5rem;
+  font-size: 1rem;
   line-height: 1.5;
+}
+.promo__subtitle p:not(:last-child) {
+  margin-bottom: 0.9375rem;
 }
 .promo__buttons {
   display: flex;
@@ -1081,7 +1084,7 @@ button[aria-label]::before {
 
 @media (width <= 112.56125rem) {
   .promo__main-image-wrapper {
-    right: 9.375vw;
+    right: -4.6875rem;
   }
   .promo__decor-image--left {
     top: -40%;
@@ -1092,12 +1095,13 @@ button[aria-label]::before {
     translate: 40% -50%;
   }
 }
-@media (width <= 81.31125rem) {
-  .promo__main-image-wrapper {
-    right: 5.375vw;
+@media (width <= 100.06125rem) {
+  .promo__subtitle {
+    max-width: 40.625rem;
   }
+}
+@media (width <= 81.31125rem) {
   .promo__title {
-    max-width: 44.0625rem;
     margin-bottom: 1.9375rem;
   }
   .promo__subtitle {
@@ -1107,34 +1111,30 @@ button[aria-label]::before {
 @media (width <= 63.99875rem) {
   .promo {
     min-height: 30.25rem;
-    background: var(--color-grad-2), var(--color-grad-1);
   }
   .promo .container {
     --container-padding-x: 2.6875rem;
   }
   .promo__main-image-wrapper {
-    width: 19.75rem;
-    height: 19.75rem;
+    width: 22.5rem;
+    height: 21.25rem;
     top: 25%;
     translate: 0 -25%;
+    right: 0;
   }
   .promo__main-image-wrapper::after {
     height: 2.5rem;
-    max-width: 21.25rem;
-    left: 50%;
-    bottom: 2%;
+    max-width: 8.75rem;
+    left: 55%;
+    bottom: 0;
     translate: -50% 0;
+    filter: blur(0.75rem);
   }
   .promo__content {
     padding-block: 4.375rem 0;
   }
-  .promo__title {
-    max-width: 28.875rem;
-    font-size: 1.5rem;
-  }
   .promo__subtitle {
     max-width: 21.25rem;
-    font-size: 1rem;
     margin-bottom: 1.9375rem;
   }
   .promo__button {
@@ -1163,14 +1163,10 @@ button[aria-label]::before {
     padding-block: 0 1rem;
     margin-bottom: 0.625rem;
   }
-  .promo__main-image {
-    width: 19.75rem;
-    height: 19.75rem;
-  }
   .promo__main-image-wrapper {
     position: relative;
     right: unset;
-    top: 17%;
+    top: 15%;
   }
   .promo__content {
     padding-block: unset;
@@ -1192,7 +1188,7 @@ button[aria-label]::before {
     font-weight: 600;
   }
   .promo__subtitle p {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
   }
   .promo__buttons {
     justify-content: center;
@@ -1202,293 +1198,16 @@ button[aria-label]::before {
   .promo__title {
     max-width: 20rem;
   }
+  .promo__main-image-wrapper {
+    margin-inline: calc(var(--container-padding-x) * -1);
+  }
+  .promo__button {
+    padding-inline: 0.875rem;
+  }
 }
 /*  ======================================  */
-/*  =====END promo block(tire-fitting)====  */
+/*  =====END promo block(tire-repair)====  */
 /*  ======================================  */
-/* Search block. ( form + input + button) .part of block locations */
-.search {
-  --searchBlockHeight: 2.375rem;
-  --searchBgColor: var(--color-light);
-  --searchBgColorHover: var(--color-gray-100);
-  --searchBorder: var(--border-light);
-  --searchIconColor: var(--color-border-medium);
-  position: relative;
-  display: block;
-}
-.search__input {
-  min-height: var(--searchBlockHeight);
-  width: 100%;
-  padding-inline: 1.25rem calc(var(--searchBlockHeight) + 1.25rem);
-  padding-block: 0.1875rem;
-  border: none;
-  outline: var(--searchBorder);
-  border-radius: var(--border-radius-small);
-  background-color: var(--searchBgColor);
-  transition-duration: var(--transition-duration) !important;
-}
-.search__input:focus {
-  background-color: var(--searchBgColor) !important;
-  outline: var(--border);
-}
-@media (any-hover: hover) {
-  .search__input:hover {
-    background-color: var(--searchBgColorHover);
-  }
-}
-@media (any-hover: hover) and (any-hover: none) {
-  .search__input:active {
-    background-color: var(--searchBgColorHover);
-  }
-}
-.search__button {
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute !important;
-  top: 0;
-  right: 0;
-  border-radius: var(--border-radius-small);
-  min-height: var(--searchBlockHeight);
-  width: var(--searchBlockHeight);
-}
-@media (any-hover: hover) {
-  .search__button:hover {
-    filter: opacity(0.6);
-  }
-}
-@media (any-hover: hover) and (any-hover: none) {
-  .search__button:active {
-    filter: opacity(0.6);
-  }
-}
-.search__button:active {
-  filter: opacity(0.3);
-}
-.search__icon {
-  fill: transparent;
-  stroke: var(--searchIconColor);
-}
-
-/* Styles for location-card . Source - block locations */
-.location-card {
-  --locationCardBg: var(--color-light);
-  --locationCardBgActive: var(--color-accent-200);
-  --locationCardHeight: 12.75rem;
-  display: flex;
-  min-height: var(--locationCardHeight);
-  transition-duration: var(--transition-duration);
-  outline: var(--border-light);
-  border-radius: var(--border-radius-small);
-  background-color: var(--locationCardBg);
-}
-.location-card.is-active {
-  background-color: var(--locationCardBgActive);
-}
-@media (any-hover: hover) {
-  .location-card:hover {
-    background-color: var(--locationCardBgActive);
-  }
-}
-@media (any-hover: hover) and (any-hover: none) {
-  .location-card:active {
-    background-color: var(--locationCardBgActive);
-  }
-}
-.location-card__image {
-  width: inherit;
-  min-height: inherit;
-  border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
-}
-.location-card__image-wrapper {
-  width: 8.75rem;
-  min-height: 100%;
-  flex-shrink: 0;
-}
-.location-card__body {
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.25rem;
-  justify-content: end;
-  padding: 1.25rem;
-  color: var(--text-color-dark-secondary);
-}
-.location-card__address {
-  flex-grow: 1;
-}
-.location-card__address-button {
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  color: var(--text-color-dark);
-  cursor: pointer;
-  letter-spacing: var(--letter-spacing);
-  line-height: 1.3;
-  transition-duration: var(--transition-duration) !important;
-}
-@media (any-hover: hover) {
-  .location-card__address-button:hover {
-    filter: opacity(0.6);
-  }
-}
-@media (any-hover: hover) and (any-hover: none) {
-  .location-card__address-button:active {
-    filter: opacity(0.6);
-  }
-}
-.location-card__address-button:active {
-  filter: opacity(0.3);
-  will-change: transform;
-}
-.location-card__text-block {
-  font-size: 1rem;
-  line-height: 1.4;
-  word-spacing: 0.1em;
-}
-.location-card__text-block p:not(:last-child) {
-  margin-bottom: 0;
-}
-.location-card__register-time--today {
-  color: var(--color-green-light);
-}
-.location-card__buttons {
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
-}
-
-@media (width <= 47.99875rem) {
-  .location-card {
-    --locationCardHeight: 9.875rem;
-    row-gap: 0.625rem;
-  }
-  .location-card__image-wrapper {
-    width: 6.25rem;
-  }
-  .location-card__body {
-    padding: 0.625rem;
-  }
-  .location-card__address {
-    letter-spacing: -0.02em;
-  }
-  .location-card__text-block {
-    font-size: 0.9375rem;
-    word-spacing: 0.2em;
-  }
-}
-/* Styles for the map. part of block locations .Current, will need to be added...*/
-.map-block {
-  position: relative;
-}
-.map-block__iframe {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.map-block__marker {
-  position: absolute;
-  top: 50%;
-  left: 30%;
-  width: clamp(1.125rem, 0.3691860465rem + 3.023255814vw, 2.75rem);
-  height: clamp(1.5rem, 0.511627907rem + 3.9534883721vw, 3.625rem);
-}
-.map-block__marker--active {
-  left: 40%;
-}
-
-/* Section locations-short. Small version block locations. */
-.locations {
-  --locationScrollThumbColor: var(--color-gray-400);
-  --locationScrollThumbColorHover: var(--color-gray-500);
-  --locationScrollBgColor: var(--color-gray-90);
-  --locationListHeight: 45rem;
-}
-.locations__body {
-  height: var(--locationListHeight);
-  display: flex;
-  justify-content: space-between;
-  gap: 0.5rem;
-  margin-block: 0 clamp(0.625rem, 0.0436046512rem + 2.3255813953vw, 1.875rem);
-}
-.locations__list {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.25rem;
-  max-width: 31.6875rem;
-  width: 100%;
-  height: inherit;
-  padding-inline: 0.0625rem 0.25rem;
-  padding-block: 0.0625rem 0;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-.locations__list::-webkit-scrollbar {
-  width: 0.275rem;
-  height: 0.275rem;
-}
-.locations__list::-webkit-scrollbar-track {
-  background: var(--locationScrollBgColor);
-}
-.locations__list::-webkit-scrollbar-thumb {
-  background: var(--locationScrollThumbColor);
-}
-.locations__list::-webkit-scrollbar-thumb:hover {
-  background: var(--locationScrollThumbColorHover);
-}
-.locations__list::-webkit-scrollbar-button {
-  display: none;
-}
-.locations__list-item--search {
-  position: sticky;
-  top: 0;
-  animation-name: scrolling-sticky;
-  animation-fill-mode: both;
-  animation-timeline: scroll();
-  animation-range: 1.25rem 2.5rem;
-}
-.locations__map-block {
-  max-width: 46.0625rem;
-  width: 100%;
-}
-
-@media (width <= 81.31125rem) {
-  .locations {
-    --locationListHeight: 55.875rem;
-  }
-  .locations__body {
-    flex-direction: column-reverse;
-    height: auto;
-    gap: 1.25rem;
-  }
-  .locations__list {
-    height: var(--locationListHeight);
-    max-width: unset;
-    row-gap: 0.625rem;
-  }
-  .locations__map-block {
-    height: 19.5rem;
-    max-width: unset;
-    border-radius: var(--border-radius-small);
-    overflow: hidden;
-  }
-}
-@media (width <= 47.99875rem) {
-  .locations {
-    --locationListHeight: 41.875rem;
-  }
-}
-@media (width <= 30.06125rem) {
-  .locations__list {
-    padding-inline: 0.0625rem 0.125rem;
-  }
-}
-/*  ===================================  */
-/*  ====END section-short locations====  */
-/*  ===================================  */
 /* common-block auth-portal. */
 .auth-portal__wrapper {
   display: flex;
@@ -1546,566 +1265,226 @@ button[aria-label]::before {
 /*  ==============================  */
 /*  =====END block auth-portal====  */
 /*  ==============================  */
-/* Styles for block promotion for banner in tire-fitting page*/
-.promotion {
-  --promotionCardBackgroundColor: #363231;
+/* Syles for text-block attention-info */
+.attention-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.625rem;
+  border: var(--border-light);
+  border-radius: var(--border-radius-small);
 }
-.promotion__list {
+.attention-info__icon {
+  flex-shrink: 0;
+}
+.attention-info__text {
+  color: var(--text-color-dark-secondary);
+  line-height: 1.47;
+}
+
+@media (width <= 47.99875rem) {
+  .attention-info {
+    flex-direction: column;
+  }
+  .attention-info__text {
+    line-height: 1.49;
+  }
+}
+/* ===================================== */
+/* ===================================== */
+/* Styles for service-cost-card. Part of cost-service list */
+.service-cost-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  height: 100%;
+  outline: var(--border-light);
+  border-radius: var(--border-radius-small);
+  padding: 1.875rem 1.25rem;
+}
+.service-cost-card--accent-bg {
+  background-color: var(--color-gray-75);
+}
+.service-cost-card__text {
+  line-height: 1.47;
+  text-align: center;
+  color: var(--color);
+}
+.service-cost-card__text--static-fs {
+  font-size: 1.125rem;
+}
+.service-cost-card__text-big {
+  font-size: clamp(1.0625rem, 0.9752906977rem + 0.3488372093vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media (width <= 47.99875rem) {
+  .service-cost-card__text-big {
+    line-height: 1.2;
+  }
+}
+/* Section cost-service + attention-info block. */
+.cost-service__banner {
+  margin-bottom: clamp(0.625rem, 0.2180232558rem + 1.6279069767vw, 1.5rem);
+}
+.cost-service__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
-  align-items: stretch;
-  padding-inline: 2.25rem;
-  gap: clamp(0.625rem, 0.2180232558rem + 1.6279069767vw, 1.5rem);
-  width: 100%;
-}
-
-.promotion__card {
-  position: relative;
-  min-height: 10.625rem;
-  height: 100%;
-  border-radius: var(--border-radius-small);
-  background-color: var(--promotionCardBackgroundColor);
-  color: var(--color-light);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-block: clamp(1rem, 0.5930232558rem + 1.6279069767vw, 1.875rem);
-  padding-inline: clamp(1.5rem, 1.3255813953rem + 0.6976744186vw, 1.875rem);
-}
-.promotion__card-image {
-  object-fit: cover;
-  width: inherit;
-  min-width: inherit;
-  height: inherit;
-}
-.promotion__card-image-wrapper {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
-  min-width: 21.25rem;
-  width: 100%;
-  height: 100%;
-  border-radius: var(--border-radius-small);
-  overflow: hidden;
-}
-.promotion__card-name {
-  font-size: clamp(1.0625rem, 1.0334302326rem + 0.1162790698vw, 1.125rem);
-  text-transform: uppercase;
-  line-height: 1.3;
-  margin-bottom: 1rem;
-}
-.promotion__card-taxt {
-  font-size: clamp(0.75rem, 0.6918604651rem + 0.2325581395vw, 0.875rem);
-  letter-spacing: var(--letter-spacing-large);
-  line-height: 1.4;
-}
-.promotion__card-taxt--uppercase {
-  text-transform: uppercase;
-}
-.promotion__card-taxt--underline {
-  font-weight: 600;
-  line-height: 1.4;
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-}
-.promotion__card-taxt--underline::before {
-  width: 100% !important;
-}
-.promotion__card-taxt:not(.promotion__card-taxt--underline) {
-  margin-bottom: 1.25rem;
-}
-.promotion__card-promocode {
-  text-transform: none;
-}
-.promotion__card__icon {
-  position: absolute;
-  right: 2.8125rem;
-  bottom: 1.875rem;
-}
-
-@media (width <= 63.99875rem) {
-  .promotion .promotion__list {
-    display: flex;
-    flex-direction: column;
-  }
-  .promotion__card-taxt {
-    line-height: 1.16;
-  }
-}
-@media (width <= 47.99875rem) {
-  .promotion__list {
-    padding-inline: unset;
-  }
-  .promotion__card-name {
-    line-height: 1.2;
-  }
-  .promotion__card-taxt--underline {
-    line-height: 1.4;
-    font-size: 1rem;
-  }
-}
-@media (width <= 35.93625rem) {
-  .promotion__card {
-    background: var(--color-red-opcity-40);
-  }
-}
-/* =============================== */
-/* =============================== */
-/* Styles for section cost-service-banner. Part of section cort-service. source tire-fitting-page */
-.cost-service-banner {
-  --costServiceBannerBackground: var(--color-accent-200);
-  max-width: 83.75rem;
-  padding-inline: 1.25rem;
-  background-color: var(--color-accent-200);
-  padding-block: clamp(0rem, -1.4534883721rem + 5.8139534884vw, 3.125rem) clamp(0rem, -1.1627906977rem + 4.6511627907vw, 2.5rem);
-  margin-inline: auto;
-  border-radius: var(--border-radius-small);
-}
-.cost-service-banner__auth-portal {
-  margin-bottom: clamp(0.625rem, 0.2180232558rem + 1.6279069767vw, 1.5rem);
-}
-
-@media (width <= 35.93625rem) {
-  .cost-service-banner {
-    background-color: transparent;
-    padding-inline: 0;
-  }
-}
-/* =============================== */
-/* =============================== */
-/* Styles for block-tabs services-tabs. Part of section cort-service. source tire-fitting-page */
-.services-tabs {
-  --serviceTabsButtonBg: var(--color-accent-extra-light);
-  --serviceTabsActiveButtonBg: var(--color-gray-800);
-}
-.services-tabs__header {
-  margin-bottom: 1.875rem;
-}
-.services-tabs__buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: clamp(0.625rem, 0.2180232558rem + 1.6279069767vw, 1.5rem);
-}
-.services-tabs__button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  height: 3.125rem;
-  font-size: 0.9375rem;
-  font-weight: 700;
-  line-height: 1.1;
-  text-transform: uppercase;
-  text-align: center;
-  padding-inline: 1.25rem;
-  padding-block: 0.78125rem;
-  border: none;
-  outline: var(--border-light);
-  background-color: var(--serviceTabsButtonBg);
-  border-radius: var(--border-radius-small);
-  transition-duration: var(--transition-duration) !important;
-}
-.services-tabs__button.is-active {
-  background-color: var(--serviceTabsActiveButtonBg);
-  color: var(--color-light);
-}
-@media (any-hover: hover) {
-  .services-tabs__button:hover {
-    background-color: var(--serviceTabsActiveButtonBg);
-    color: var(--color-light);
-  }
-}
-@media (any-hover: hover) and (any-hover: none) {
-  .services-tabs__button:active {
-    background-color: var(--serviceTabsActiveButtonBg);
-    color: var(--color-light);
-  }
-}
-.services-tabs__button:active {
-  scale: 0.98;
-  will-change: transform;
-  filter: brightness(80%);
-}
-.services-tabs__body {
-  display: flex;
-  max-width: 78.75rem;
-  width: 100%;
-  margin-inline: auto;
-  overflow: hidden;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-}
-.services-tabs__content {
-  display: none;
-  flex-shrink: 0;
-}
-.services-tabs__content.is-active {
-  display: block;
-}
-.services-tabs__table {
-  font-size: clamp(0.9375rem, 0.7921511628rem + 0.5813953488vw, 1.25rem);
-  font-weight: 700;
-  line-height: 1.3;
-  text-transform: uppercase;
-}
-.services-tabs__table thead {
-  color: var(--text-color-medium);
-}
-.services-tabs__table th,
-.services-tabs__table td {
-  height: 3.125rem;
-  min-width: 5rem;
-}
-.services-tabs__table th:not(:first-child),
-.services-tabs__table td:not(:first-child) {
-  text-align: center;
-}
-.services-tabs__table th:first-child,
-.services-tabs__table td:first-child {
-  text-align: start;
-  padding-inline: 0 1.875rem;
-}
-
-@media (width <= 100.06125rem) {
-  .services-tabs__body {
-    padding-left: 1.25rem;
-  }
-}
-@media (width <= 63.99875rem) {
-  .services-tabs__body {
-    padding-left: 0.625rem;
-  }
-}
-@media (width <= 47.99875rem) {
-  .services-tabs__button {
-    height: 2rem;
-    font-size: 0.75rem;
-    line-height: 1.66;
-    padding-inline: 0.75rem;
-    padding-block: 0.375rem;
-  }
-}
-/* =============================== */
-/* =============================== */
-/* Section cost-service. Styles for page tire-fitting */
-.cost-service__title {
-  text-align: center;
-  margin-bottom: clamp(1.25rem, 0.0872093023rem + 4.6511627907vw, 3.75rem);
-}
-.cost-service__banner {
-  margin-bottom: clamp(1.25rem, 0.0872093023rem + 4.6511627907vw, 3.75rem);
-}
-.cost-service__tabs {
-  margin-bottom: 1.875rem;
+  gap: 1.5rem;
+  margin-bottom: clamp(1.25rem, 0.3779069767rem + 3.488372093vw, 3.125rem);
 }
 .cost-service__buttons {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: clamp(0.625rem, 0.3343023256rem + 1.1627906977vw, 1.25rem);
+  margin-bottom: clamp(1.25rem, 0.3779069767rem + 3.488372093vw, 3.125rem);
 }
 .cost-service__button {
   font-size: 1rem;
 }
 
+@media (width <= 47.99875rem) {
+  .cost-service__list {
+    grid-template-columns: 1fr;
+  }
+}
 @media (width <= 35.93625rem) {
   .cost-service__buttons {
     flex-direction: column;
-    padding-inline: 2.5rem;
+    padding-inline: 2rem;
   }
 }
 /*  =========================  */
 /*  =====END cost-service====  */
 /*  =========================  */
-/* Styles for block-card review. Part of slider soc1al-proof-slider. */
-.review-card {
-  --reviewCardBorderColor: var(--color-gray-90);
-  --reviewCardTitleColor: black;
-  --reviewCardTextColor: var(--color-gray-550);
-  --reviewCardTextLight: var(--color-gray-450);
+/* Syles for card services-direction-card. Part of section services-direction  */
+.service-direction-card {
+  outline: var(--border-light);
+  border-radius: var(--border-radius-small);
+}
+.service-direction-card__image {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+.service-direction-card__image-wrapper {
   width: 100%;
-  min-height: 7.875rem;
-  outline: 0.125rem solid var(--reviewCardBorderColor);
-  border-radius: var(--border-radius-extra-small);
-  padding-inline: clamp(0.625rem, 0.3343023256rem + 1.1627906977vw, 1.25rem);
-  padding-block: clamp(0.625rem, 0.4215116279rem + 0.8139534884vw, 1.0625rem) clamp(0.5rem, 0.238372093rem + 1.0465116279vw, 1.0625rem);
-  background-color: var(--color-light);
-  will-change: transform;
+  height: 12.5rem;
 }
-.review-card__title {
-  font-size: clamp(0.9375rem, 0.9084302326rem + 0.1162790698vw, 1rem);
-  font-weight: 600;
-  line-height: 1;
-  color: var(--reviewCardTitleColor);
-  margin-bottom: 0.875rem;
+.service-direction-card__content {
+  padding: 1.25rem;
 }
-.review-card__content {
-  display: flex;
-  align-items: center;
-  column-gap: 1.125rem;
+.service-direction-card__name {
+  font-size: clamp(0.9375rem, 0.8502906977rem + 0.3488372093vw, 1.125rem);
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: var(--color-gray-850);
+  margin-block: 0 0.625rem !important;
 }
-.review-card__image {
-  width: 3.5rem;
-  height: 3.5rem;
-}
-.review-card__description {
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.125rem;
-  padding-block: 0.1875rem 0;
-}
-.review-card__text {
-  color: var(--reviewCardTextColor);
-  font-size: clamp(0.875rem, 0.8168604651rem + 0.2325581395vw, 1rem);
-  line-height: 1.5;
-  letter-spacing: var(--letter-spacing);
-}
-.review-card__text--color-light {
-  color: var(--reviewCardTextLight);
-}
-.review-card__text--color-dark {
-  color: var(--reviewCardTitleColor);
+.service-direction-card__text {
+  font-size: 1rem;
+  line-height: 1.51;
+  color: var(--text-color-dark-secondary);
 }
 
-@media (width <= 63.99875rem) {
-  .review-card {
-    min-height: 6.5rem;
+@media (width > 47.99875rem) {
+  .service-direction-card {
+    max-width: 25.25rem;
+  }
+  .service-direction-card__image-wrapper {
+    width: 25.3125rem;
+  }
+  .service-direction-card__name {
+    min-height: 3rem;
   }
 }
-@media (width <= 47.99875rem) {
-  .review-card__description {
-    padding-block: 0 0.55rem;
-  }
-  .review-card__title {
-    margin-bottom: 1.0625rem;
+@media (width > 81.31125rem) {
+  .service-direction-card {
+    height: 100%;
   }
 }
-/* Block-slider soc1al-proof-slider(swiper). Part of section soc1al-proof. */
-.soc1al-proof-slider {
-  max-width: 70.75rem;
-  overflow: hidden;
-  margin-inline: auto;
+/* ================================== */
+/* ================================== */
+/* Syles for section services-direction  */
+.services-direction__list-item:not(:last-child) {
+  margin-bottom: 1.5rem;
 }
-.soc1al-proof-slider__wrapper {
-  padding-block: 0.15625rem;
-  padding-inline: 0.0625rem;
+
+@media (width > 47.99875rem) {
+  .services-direction__list {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .services-direction__list-item:not(:last-child) {
+    margin-bottom: 0;
+  }
 }
-.soc1al-proof-slider__slide {
-  flex-shrink: 0;
-  max-width: 22.5rem;
-  width: 100%;
+@media (width > 81.31125rem) {
+  .services-direction__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+  .services-direction__list-item {
+    height: 100%;
+  }
 }
-.soc1al-proof-slider__slide-link {
-  width: inherit;
-}
-.soc1al-proof-slider__prev-slide, .soc1al-proof-slider__next-slide {
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  width: 1.5rem;
-  height: 1.5rem;
-  display: inline-flex;
+/* ================================== */
+/* ======END services-direction====== */
+/* ================================== */
+/* Styles for text block-section reference */
+.reference {
+  display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  flex-shrink: 0;
-  background-color: var(--color-light);
-  transition-duration: var(--transition-duration) !important;
+  gap: 1.875rem;
 }
-@media (any-hover: hover) {
-  .soc1al-proof-slider__prev-slide:hover, .soc1al-proof-slider__next-slide:hover {
-    filter: brightness(90%);
-  }
-}
-@media (any-hover: hover) and (any-hover: none) {
-  .soc1al-proof-slider__prev-slide:active, .soc1al-proof-slider__next-slide:active {
-    filter: brightness(90%);
-  }
-}
-.soc1al-proof-slider__prev-slide:active, .soc1al-proof-slider__next-slide:active {
-  filter: brightness(90%);
-  will-change: transform;
-  scale: 0.92;
-}
-.soc1al-proof-slider__prev-slide {
-  rotate: 180deg;
-}
-.soc1al-proof-slider__switch-icon {
-  flex-shrink: 0;
-  stroke: #000;
-  fill: none;
-  translate: 0.0625rem 0;
-}
-
-@media (width <= 30.06125rem) {
-  .soc1al-proof-slider__slide {
-    max-width: 21.25rem;
-  }
-}
-/* Section soc1al-proof. Source -- tire-fitting page. */
-.soc1al-proof {
-  min-height: 66.8125rem;
-  background-image: url(../../../images/social-proof/social-proof-bg.webp);
-  background-image: image-set("../../../images/social-proof/social-proof-bg.webp" 1x, "../../../images/social-proof/social-proof-bg@2x.webp" 2x);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  padding-block: clamp(2.5rem, 1.3372093023rem + 4.6511627907vw, 5rem) clamp(1.875rem, 0.4796511628rem + 5.5813953488vw, 4.875rem);
-  margin-bottom: var(--section-margin-y-big);
-  /* ==== */
-}
-.soc1al-proof__inner {
-  display: flex;
-  flex-direction: column;
-  gap: clamp(2.5rem, 2.2093023256rem + 1.1627906977vw, 3.125rem);
-  max-width: calc(52rem + var(--container-padding-x) * 2);
-  margin-inline: auto;
-  padding-inline: var(--container-padding-x);
-  color: var(--text-color-light);
-  margin-block: 0 clamp(1.9375rem, 1.4723837209rem + 1.8604651163vw, 2.9375rem);
-}
-.soc1al-proof__title {
-  text-align: center;
-}
-.soc1al-proof__text {
-  font-size: 1.125rem;
-  line-height: 1.5;
-}
-.soc1al-proof__text--advantage {
-  max-width: 19.375rem;
-}
-.soc1al-proof__advantages {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2.5rem;
-  max-width: 49.25rem;
-  width: 100%;
-  margin-inline: auto;
-  margin-block: 0 clamp(0.625rem, 0.3343023256rem + 1.1627906977vw, 1.25rem);
-}
-.soc1al-proof__advantages ul {
-  padding-left: 1.5625rem;
-  margin-block: 0;
-}
-.soc1al-proof__advantage {
-  max-width: 22.5rem;
-  width: 100%;
-  padding-block: clamp(0.625rem, -0.5377906977rem + 4.6511627907vw, 3.125rem) clamp(0rem, -0.9011627907rem + 3.6046511628vw, 1.9375rem);
-}
-.soc1al-proof__advantage-name {
-  font-size: 1.25rem;
-  line-height: 1.2;
-  text-transform: uppercase;
-  margin-block: 0 clamp(1.1875rem, 0.5770348837rem + 2.4418604651vw, 2.5rem);
-}
-.soc1al-proof__rating {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  column-gap: 1.5rem;
-  max-width: calc(76.5rem + var(--container-padding-x) * 2);
-  margin-inline: auto;
-  padding-inline: var(--container-padding-x);
-  min-height: 8rem;
-}
-
-@media (width <= 35.93625rem) {
-  .soc1al-proof__advantages {
-    flex-direction: column;
-  }
-  .soc1al-proof__advantage-name {
-    line-height: 1.4;
-  }
-}
-/*  ================================  */
-/*  ====END section soc1al-proof====  */
-/*  ================================  */
-/* Block-card for advantage slider( our-advantage ).Part of Section advantages. Differences from blocks advantages in background color and positioning of the card*/
-.advantage-card {
-  --advantageCardTitleTextColor: var(--color-gray-800);
-  --ourAdvantageCardBgColor: var(--color-accent-200);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 1.1875rem;
-  max-width: 18.5625rem;
-  width: 100%;
-  padding: 1.1875rem 1.25rem 1.5625rem;
-  border: var(--border-light);
-  border-radius: var(--border-radius-small);
-  background-color: var(--ourAdvantageCardBgColor);
-}
-.advantage-card__image {
+.reference__icon {
   width: 3.75rem;
   height: 3.75rem;
+  flex-shrink: 0;
 }
-.advantage-card__heading {
-  font-weight: 700;
+.reference__text {
+  max-width: 52rem;
   font-size: 1.125rem;
-  line-height: 1.3;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--advantageCardTitleTextColor);
-}
-.advantage-card__text {
-  color: var(--text-color-dark-secondary);
   line-height: 1.5;
 }
-
-@media (width <= 47.99875rem) {
-  .advantage-card {
-    padding: 1.25rem 1.25rem 1.125rem;
-  }
-  .advantage-card__heading {
-    font-size: 0.9375rem;
-    line-height: 1.5;
-  }
+.reference__text--semi-bold {
+  font-weight: 600;
 }
-/* Section advantages.Slider(our-advantage). Differences from the advantages section, in the cards.*/
-.advantages {
-  --advantagesSlidesQuantity: 4;
-  overflow-x: hidden;
+.reference__text--small-text-mobile {
+  font-size: clamp(1rem, 0.9418604651rem + 0.2325581395vw, 1.125rem);
 }
-.advantages__title {
-  margin-bottom: 3.125rem;
-}
-.advantages__slider-wrapper {
-  display: grid;
-  grid-template-rows: auto !important;
-  grid-template-columns: repeat(var(--advantagesSlidesQuantity), 18.5625rem);
-  column-gap: 1.5rem;
-}
-.advantages__buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 1.25rem;
-}
-.advantages__button {
-  font-size: 1rem;
+.reference__text p:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
-@media (width <= 63.99875rem) {
-  .advantages__slider {
-    margin-block: 0 1.25rem;
-  }
-  .advantages__buttons {
-    column-gap: 1rem;
-    justify-content: start;
-  }
-}
 @media (width <= 47.99875rem) {
-  .advantages__slider-wrapper {
-    column-gap: 0.625rem;
+  .reference--padding-mobile {
+    padding-block: 1.25rem;
+  }
+  .reference__text p:not(:last-child) {
+    margin-bottom: 0;
   }
 }
-/*  ===================================  */
-/*  =======END section advantages======  */
-/*  ===================================  */
+@media (width <= 35.93625rem) {
+  .reference {
+    flex-direction: column;
+  }
+}
+/*  ====================================  */
+/*  =====END block-section reference====  */
+/*  ====================================  */
 /* Section appointment-choose */
 .appointment-choose__wrapper {
   display: flex;
@@ -2194,72 +1573,92 @@ button[aria-label]::before {
 /*  ===================================  */
 /*  ======END appointment-choose=======  */
 /*  ===================================  */
-/* Section service-situation. Source -- tire-fitting page. */
-.service-situation {
-  max-width: calc(52.125rem + var(--container-padding-x) * 2);
+/* Styles for section services-list */
+.services-list {
+  max-width: calc(73.125rem + var(--container-padding-x) * 2);
   margin-inline: auto;
   padding-inline: var(--container-padding-x);
 }
-.service-situation__icon {
-  width: 2.375rem;
-  height: 2.375rem;
+.services-list__title {
+  margin-bottom: 3.125rem;
+  text-align: center;
+  line-height: 1.2;
 }
-.service-situation__list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: clamp(0.625rem, 0.2180232558rem + 1.6279069767vw, 1.5rem);
-  margin-bottom: clamp(1.25rem, 0.3779069767rem + 3.488372093vw, 3.125rem);
+.services-list__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
 }
-.service-situation__list-item {
+.services-list__item {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-self: start;
-  column-gap: 1.5rem;
-  padding: 1.25rem;
+  min-height: 3.125rem;
+  flex-shrink: 0;
+  padding-inline: 2.375rem 0;
 }
-.service-situation__stuation {
-  min-height: 3.0625rem;
+.services-list__link {
+  position: relative;
+  display: inline-block;
   width: 100%;
-}
-.service-situation__stuation-name {
+  font-weight: 700;
   font-size: 0.9375rem;
   line-height: 1.1;
   text-transform: uppercase;
-  margin-bottom: 0.625rem;
+  transition-duration: var(--transition-duration) !important;
+  will-change: transform;
+  padding-inline: 0 1.625rem;
 }
-.service-situation__stuation-deskription {
-  max-width: 19.25rem;
-  font-size: 1rem;
-  line-height: 1.4;
+.services-list__link::before {
+  width: 0.5rem;
+  height: 0.5rem;
+  content: "";
+  position: absolute;
+  left: -1.25rem;
+  top: 45%;
+  translate: 0 -45%;
+  background-color: var(--text-color-medium);
+  border-radius: 50%;
 }
-.service-situation__subtitle {
-  text-align: start;
-  margin-block: 0;
+.services-list__link::after {
+  width: 1.125rem;
+  height: 1.125rem;
+  position: absolute;
+  content: "➜";
+  color: currentColor;
+  font-size: inherit;
+  margin-left: 0.5rem;
 }
 
-@media (width <= 47.99875rem) {
-  .service-situation__title {
+@media (width <= 35.93625rem) {
+  .services-list__title {
     line-height: 1.3;
   }
-  .service-situation__list {
-    gap: 0.625rem;
+  .services-list__nav-list {
+    flex-direction: column;
+    padding-inline: 2rem 0;
+  }
+  .services-list__item {
+    position: relative;
+    justify-content: start;
+    padding-inline: 0 1.625rem;
+  }
+  .services-list__link {
+    position: static;
+  }
+  .services-list__link::before {
+    display: none;
+  }
+  .services-list__link::after {
+    right: 0;
+    top: 50%;
+    translate: 0 -50%;
   }
 }
-@media (width <= 35.93625rem) {
-  .service-situation__list {
-    grid-template-columns: 1fr;
-  }
-  .service-situation__list-item {
-    max-width: 25.25rem;
-    width: 100%;
-    justify-self: center;
-  }
-}
-/*  =====================================  */
-/*  ====END section service-situation====  */
-/*  =====================================  */
+/*  =================================  */
+/*  ====END section services-list====  */
+/*  =================================  */
 /* section when-work*/
 .when-work__wrapper {
   display: flex;
@@ -2360,92 +1759,6 @@ button[aria-label]::before {
 /*  ==================================  */
 /*  =======END section when-work======  */
 /*  ==================================  */
-/* Styles for section services-list */
-.services-list {
-  max-width: calc(73.125rem + var(--container-padding-x) * 2);
-  margin-inline: auto;
-  padding-inline: var(--container-padding-x);
-}
-.services-list__title {
-  margin-bottom: 3.125rem;
-  text-align: center;
-  line-height: 1.2;
-}
-.services-list__nav-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-}
-.services-list__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 3.125rem;
-  flex-shrink: 0;
-  padding-inline: 2.375rem 0;
-}
-.services-list__link {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  font-weight: 700;
-  font-size: 0.9375rem;
-  line-height: 1.1;
-  text-transform: uppercase;
-  transition-duration: var(--transition-duration) !important;
-  will-change: transform;
-  padding-inline: 0 1.625rem;
-}
-.services-list__link::before {
-  width: 0.5rem;
-  height: 0.5rem;
-  content: "";
-  position: absolute;
-  left: -1.25rem;
-  top: 45%;
-  translate: 0 -45%;
-  background-color: var(--text-color-medium);
-  border-radius: 50%;
-}
-.services-list__link::after {
-  width: 1.125rem;
-  height: 1.125rem;
-  position: absolute;
-  content: "➜";
-  color: currentColor;
-  font-size: inherit;
-  margin-left: 0.5rem;
-}
-
-@media (width <= 35.93625rem) {
-  .services-list__title {
-    line-height: 1.3;
-  }
-  .services-list__nav-list {
-    flex-direction: column;
-    padding-inline: 2rem 0;
-  }
-  .services-list__item {
-    position: relative;
-    justify-content: start;
-    padding-inline: 0 1.625rem;
-  }
-  .services-list__link {
-    position: static;
-  }
-  .services-list__link::before {
-    display: none;
-  }
-  .services-list__link::after {
-    right: 0;
-    top: 50%;
-    translate: 0 -50%;
-  }
-}
-/*  =================================  */
-/*  ====END section services-list====  */
-/*  =================================  */
 /* Blok-card other-services-card. Part of component other-services */
 .other-service-card {
   --otherServiceCardBgColor: var(--color-gray-800);
@@ -2795,4 +2108,4 @@ button[aria-label]::before {
 /*  =============END footer============  */
 /*  ===================================  */
 
-/*# sourceMappingURL=tire-fitting.css.map */
+/*# sourceMappingURL=tire-repair.css.map */
