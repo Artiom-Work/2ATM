@@ -2,7 +2,7 @@
 /* Section page-heading */
 .page-heading {
   --breadcrumbsColor: var(--color-gray-500);
-  --breadcrumbsGap: #{fluid(50, 28)};
+  --breadcrumbsGap: #{fluid(50, 48)};
 
   padding-block: rem(24) rem(47);
   color: var(--breadcrumbsColor);
@@ -24,7 +24,7 @@
           position: absolute;
           content: "−";
           right: calc((var(--breadcrumbsGap) / 2) * -1 - rem(5));
-          top: 0.06em;
+          top: 10%;
         }
       }
 
@@ -60,9 +60,28 @@
     &__breadcrumbs {
       margin-bottom: rem(10);
 
+      &-item {
+        &:not(:last-child) {
+          &::after {
+            top: 5%;
+          }
+        }
+      }
+
       &-link {
         line-height: 1.4;
         letter-spacing: 0.03em;
+      }
+    }
+  }
+}
+@include mobile-media {
+  .page-heading {
+    &__breadcrumbs {
+      &-list {
+        flex-wrap: wrap;
+        column-gap: var(--breadcrumbsGap);
+        row-gap: rem(15);
       }
     }
   }

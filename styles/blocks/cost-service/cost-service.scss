@@ -4,7 +4,7 @@
 /* Section cost-service. */
 .cost-service {
   &__banner {
-    margin-bottom: fluid(24, 10);
+    margin-bottom: rem(24);
   }
 
   &__list {
@@ -13,6 +13,10 @@
     grid-template-rows: auto;
     gap: rem(24);
     margin-bottom: fluid(50, 20);
+
+    &--static-margin {
+      margin-bottom: rem(50);
+    }
   }
 
   &__buttons {

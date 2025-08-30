@@ -178,8 +178,19 @@ svg * {
     #524d4c 100%
   );
   --color-grad-2: linear-gradient(90deg, #44362e75 35.45%, #beb19f12 78.09%);
+  --color-grad-3: linear-gradient(
+    180deg,
+    #27211e 0%,
+    #24272c 25.96%,
+    #1a1c1e 49.04%,
+    #19191c 66.66%,
+    #321d17 80.64%,
+    #19171a 89.34%,
+    #111215 100%
+  );
   --color-white-opacity-10: #ffffff34;
   --color-white-opacity-35: #ffffffa8;
+  --color-black-opacity-48: #3332327a;
   --color-black-opacity-80: #00000033;
   --color-red: #ba1414;
   --color-red-opcity-40: #3b060566;
@@ -189,6 +200,7 @@ svg * {
   --color-blue: #2c94ea;
   --color-blue-light: #2cabea;
   --color-gold: #f8981c;
+  --color-orange: #f97b06;
   --color-light: #ffffff;
   --color-dark: #000000;
   --color-black-light: #363535;
@@ -620,6 +632,9 @@ button[aria-label]::before {
   margin-block: 0 clamp(1.25rem, 0.3779069767rem + 3.488372093vw, 3.125rem);
   text-align: center;
   line-height: 1.2;
+}
+.section__title--static-margin {
+  margin-block: 0 3.125rem !important;
 }
 .section__subtitle {
   color: var(--text-color-dark-secondary);

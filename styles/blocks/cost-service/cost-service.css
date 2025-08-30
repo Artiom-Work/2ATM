@@ -84,15 +84,29 @@
   text-transform: uppercase;
   text-align: center;
 }
+.service-cost-card__text:has(.service-cost-card__asside-tag) {
+  width: 100%;
+  display: flex;
+  gap: 1.25rem;
+  text-align: start;
+}
+.service-cost-card__text:has(.service-cost-card__asside-tag) .service-cost-card__asside-tag {
+  min-width: 6.25rem;
+}
 
 @media (width <= 47.99875rem) {
   .service-cost-card__text-big {
     line-height: 1.2;
   }
+  .service-cost-card__text:has(.service-cost-card__asside-tag) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 /* Section cost-service. */
 .cost-service__banner {
-  margin-bottom: clamp(0.625rem, 0.2180232558rem + 1.6279069767vw, 1.5rem);
+  margin-bottom: 1.5rem;
 }
 .cost-service__list {
   display: grid;
@@ -100,6 +114,9 @@
   grid-template-rows: auto;
   gap: 1.5rem;
   margin-bottom: clamp(1.25rem, 0.3779069767rem + 3.488372093vw, 3.125rem);
+}
+.cost-service__list--static-margin {
+  margin-bottom: 3.125rem;
 }
 .cost-service__buttons {
   display: flex;

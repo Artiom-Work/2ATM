@@ -1,0 +1,59 @@
+@use "../../healpers" as *;
+/* Block about-service-list. part of section about-service */
+.about-service-list {
+  max-width: rem(466);
+
+  &__item {
+    display: flex;
+    align-items: center;
+    min-height: rem(111);
+    gap: rem(24);
+    padding: rem(20);
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+
+      .about-service-list__icon-wrapper {
+        &::after {
+          content: "";
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          width: rem(1);
+          height: rem(40);
+          background-color: var(--color-orange);
+        }
+
+        &--tall-decor {
+          &::after {
+            height: rem(80);
+          }
+        }
+      }
+    }
+  }
+
+  &__icon {
+    &-wrapper {
+      flex-shrink: 0;
+      position: relative;
+    }
+  }
+
+  &__heading {
+    font-size: rem(15);
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: rem(10);
+  }
+
+  &__text {
+    font-size: rem(16);
+    line-height: 1.4;
+  }
+}
+@include laptop-media {
+  .about-service-list {
+    max-width: unset;
+  }
+}

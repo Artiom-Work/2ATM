@@ -178,8 +178,19 @@ svg * {
     #524d4c 100%
   );
   --color-grad-2: linear-gradient(90deg, #44362e75 35.45%, #beb19f12 78.09%);
+  --color-grad-3: linear-gradient(
+    180deg,
+    #27211e 0%,
+    #24272c 25.96%,
+    #1a1c1e 49.04%,
+    #19191c 66.66%,
+    #321d17 80.64%,
+    #19171a 89.34%,
+    #111215 100%
+  );
   --color-white-opacity-10: #ffffff34;
   --color-white-opacity-35: #ffffffa8;
+  --color-black-opacity-48: #3332327a;
   --color-black-opacity-80: #00000033;
   --color-red: #ba1414;
   --color-red-opcity-40: #3b060566;
@@ -189,6 +200,7 @@ svg * {
   --color-blue: #2c94ea;
   --color-blue-light: #2cabea;
   --color-gold: #f8981c;
+  --color-orange: #f97b06;
   --color-light: #ffffff;
   --color-dark: #000000;
   --color-black-light: #363535;
@@ -621,6 +633,9 @@ button[aria-label]::before {
   text-align: center;
   line-height: 1.2;
 }
+.section__title--static-margin {
+  margin-block: 0 3.125rem !important;
+}
 .section__subtitle {
   color: var(--text-color-dark-secondary);
   text-align: center;
@@ -940,7 +955,7 @@ button[aria-label]::before {
 /* Section page-heading */
 .page-heading {
   --breadcrumbsColor: var(--color-gray-500);
-  --breadcrumbsGap: clamp(1.75rem, 1.1104651163rem + 2.5581395349vw, 3.125rem);
+  --breadcrumbsGap: clamp(3rem, 2.9418604651rem + 0.2325581395vw, 3.125rem);
   padding-block: 1.5rem 2.9375rem;
   color: var(--breadcrumbsColor);
 }
@@ -959,7 +974,7 @@ button[aria-label]::before {
   position: absolute;
   content: "−";
   right: calc(var(--breadcrumbsGap) / 2 * -1 - 0.3125rem);
-  top: 0.06em;
+  top: 10%;
 }
 .page-heading__breadcrumbs-item:last-child a {
   opacity: 0.7;
@@ -985,18 +1000,19 @@ button[aria-label]::before {
   .page-heading__breadcrumbs {
     margin-bottom: 0.625rem;
   }
-  .page-heading__breadcrumbs-item {
-    padding-inline: 0.625rem;
-  }
-  .page-heading__breadcrumbs-item:first-child {
-    padding-inline: 0 0.625rem;
-  }
-  .page-heading__breadcrumbs-item:last-child {
-    padding-inline: 0.625rem 0;
+  .page-heading__breadcrumbs-item:not(:last-child)::after {
+    top: 5%;
   }
   .page-heading__breadcrumbs-link {
     line-height: 1.4;
     letter-spacing: 0.03em;
+  }
+}
+@media (width <= 47.99875rem) {
+  .page-heading__breadcrumbs-list {
+    flex-wrap: wrap;
+    column-gap: var(--breadcrumbsGap);
+    row-gap: 0.9375rem;
   }
 }
 /*  ===================================  */
@@ -1318,15 +1334,29 @@ button[aria-label]::before {
   text-transform: uppercase;
   text-align: center;
 }
+.service-cost-card__text:has(.service-cost-card__asside-tag) {
+  width: 100%;
+  display: flex;
+  gap: 1.25rem;
+  text-align: start;
+}
+.service-cost-card__text:has(.service-cost-card__asside-tag) .service-cost-card__asside-tag {
+  min-width: 6.25rem;
+}
 
 @media (width <= 47.99875rem) {
   .service-cost-card__text-big {
     line-height: 1.2;
   }
+  .service-cost-card__text:has(.service-cost-card__asside-tag) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 /* Section cost-service. */
 .cost-service__banner {
-  margin-bottom: clamp(0.625rem, 0.2180232558rem + 1.6279069767vw, 1.5rem);
+  margin-bottom: 1.5rem;
 }
 .cost-service__list {
   display: grid;
@@ -1334,6 +1364,9 @@ button[aria-label]::before {
   grid-template-rows: auto;
   gap: 1.5rem;
   margin-bottom: clamp(1.25rem, 0.3779069767rem + 3.488372093vw, 3.125rem);
+}
+.cost-service__list--static-margin {
+  margin-bottom: 3.125rem;
 }
 .cost-service__buttons {
   display: flex;

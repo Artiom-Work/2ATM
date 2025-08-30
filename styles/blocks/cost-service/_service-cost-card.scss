@@ -23,6 +23,7 @@
     &--static-fs {
       font-size: rem(18);
     }
+
     &-big {
       @include fluid-text(20, 17);
 
@@ -30,6 +31,17 @@
       line-height: 1.3;
       text-transform: uppercase;
       text-align: center;
+    }
+
+    &:has(.service-cost-card__asside-tag) {
+      width: 100%;
+      display: flex;
+      gap: rem(20);
+      text-align: start;
+
+      .service-cost-card__asside-tag {
+        min-width: rem(100);
+      }
     }
   }
 }
@@ -39,6 +51,12 @@
     &__text {
       &-big {
         line-height: 1.2;
+      }
+
+      &:has(.service-cost-card__asside-tag) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
     }
   }

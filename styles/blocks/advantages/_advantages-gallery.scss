@@ -1,0 +1,18 @@
+@use "../../healpers" as *;
+@use "advantage-card-gallery";
+/* Section advantages-gallery.*/
+.advantages {
+  &__list {
+    @include flex-center;
+    flex-wrap: wrap;
+    gap: fluid(24, 10);
+
+    &-item {
+      align-self: stretch;
+      flex-shrink: 0;
+    }
+  }
+}
+/*  ===========================================  */
+/*  =======END section advantages-gallery======  */
+/*  ===========================================  */
