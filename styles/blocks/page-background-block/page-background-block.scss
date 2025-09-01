@@ -1,0 +1,15 @@
+@use "../../healpers" as *;
+/* Styles for page-background-block */
+.page-background-block {
+  height: rem(250);
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/*  =================================  */
+/*  =====END page-background-block====  */
+/*  =================================  */

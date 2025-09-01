@@ -1,0 +1,60 @@
+/* Section about-tech*/
+.about-tech__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+  padding-inline: 0 2.75rem;
+}
+.about-tech__image {
+  width: 100%;
+}
+.about-tech__image-wrapper {
+  max-width: 38.625rem;
+}
+.about-tech__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(1.25rem, 0.6686046512rem + 2.3255813953vw, 2.5rem);
+  padding-block: clamp(1.25rem, 0.3779069767rem + 3.488372093vw, 3.125rem);
+  max-width: 33.125rem;
+}
+.about-tech__heading {
+  line-height: 1.2;
+}
+.about-tech__text {
+  line-height: 1.5;
+  color: var(--text-color-dark-secondary);
+}
+
+@media (width <= 100.06125rem) {
+  .about-tech__body {
+    padding-inline: unset;
+  }
+}
+@media (width <= 63.99875rem) {
+  .about-tech__body {
+    flex-direction: column;
+  }
+  .about-tech__image-wrapper {
+    flex-shrink: 0;
+  }
+  .about-tech__content {
+    max-width: unset;
+  }
+  .about-tech__heading {
+    line-height: 1.5;
+    text-align: center;
+  }
+}
+@media (width <= 35.93625rem) {
+  .about-tech__image-wrapper {
+    max-width: 21.25rem;
+  }
+}
+/*  =======================  */
+/*  =====END about-tech====  */
+/*  =======================  */
+
+/*# sourceMappingURL=about-tech.css.map */

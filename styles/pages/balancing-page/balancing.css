@@ -234,6 +234,7 @@ svg * {
   --container-padding-x: 1.25rem;
   --section-margin-y: clamp(2.5rem, 1.3372093023rem + 4.6511627907vw, 5rem);
   --section-margin-y-static: 5rem;
+  --section-margin-y-medium-static: 3.75rem;
   --section-margin-y-to-medium: clamp(3.75rem, 3.1686046512rem + 2.3255813953vw, 5rem);
   --section-margin-y-extra-big: clamp(5rem, 3.5465116279rem + 5.8139534884vw, 8.125rem);
   --section-margin-y-big: clamp(5rem, 3.8372093023rem + 4.6511627907vw, 7.5rem);
@@ -615,6 +616,9 @@ button[aria-label]::before {
 }
 .section--static-margin {
   margin-bottom: var(--section-margin-y-static);
+}
+.section--static-medium-margin {
+  margin-bottom: var(--section-margin-y-medium-static);
 }
 .section--margin-to-medium {
   margin-bottom: var(--section-margin-y-to-medium);
@@ -1310,7 +1314,8 @@ button[aria-label]::before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.25rem;
+  justify-content: center;
+  gap: 1.0625rem;
   height: 100%;
   outline: var(--border-light);
   border-radius: var(--border-radius-small);
@@ -1319,18 +1324,36 @@ button[aria-label]::before {
 .service-cost-card--accent-bg {
   background-color: var(--color-gray-75);
 }
+.service-cost-card--big-padding {
+  padding-block: 3.125rem;
+  gap: 0.625rem;
+}
 .service-cost-card__text {
   line-height: 1.47;
   text-align: center;
-  color: var(--color);
+  color: var(--text-color-dark-secondary);
 }
 .service-cost-card__text--static-fs {
   font-size: 1.125rem;
+}
+.service-cost-card__text--semi-bold {
+  font-weight: 600;
+  color: var(--text-color-dark);
+}
+.service-cost-card__text--width-300 {
+  max-width: 18.75rem;
 }
 .service-cost-card__text-big {
   font-size: clamp(1.0625rem, 0.9752906977rem + 0.3488372093vw, 1.25rem);
   font-weight: 700;
   line-height: 1.3;
+  text-transform: uppercase;
+  text-align: center;
+}
+.service-cost-card__text-extra-big {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
   text-transform: uppercase;
   text-align: center;
 }
@@ -1347,6 +1370,9 @@ button[aria-label]::before {
 @media (width <= 47.99875rem) {
   .service-cost-card__text-big {
     line-height: 1.2;
+  }
+  .service-cost-card__text-extra-big {
+    color: var(--color-accent-600);
   }
   .service-cost-card__text:has(.service-cost-card__asside-tag) {
     flex-direction: column;

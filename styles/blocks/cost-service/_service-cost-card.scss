@@ -4,7 +4,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: rem(20);
+  justify-content: center;
+  gap: rem(17);
 
   height: 100%;
   outline: var(--border-light);
@@ -15,13 +16,27 @@
     background-color: var(--color-gray-75);
   }
 
+  &--big-padding {
+    padding-block: rem(50);
+    gap: rem(10);
+  }
+
   &__text {
     line-height: 1.47;
     text-align: center;
-    color: var(--color);
+    color: var(--text-color-dark-secondary);
 
     &--static-fs {
       font-size: rem(18);
+    }
+
+    &--semi-bold {
+      font-weight: 600;
+      color: var(--text-color-dark);
+    }
+
+    &--width-300 {
+      max-width: rem(300);
     }
 
     &-big {
@@ -29,6 +44,14 @@
 
       font-weight: 700;
       line-height: 1.3;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    &-extra-big {
+      font-size: rem(64);
+      font-weight: 700;
+      line-height: 1.1;
       text-transform: uppercase;
       text-align: center;
     }
@@ -51,6 +74,10 @@
     &__text {
       &-big {
         line-height: 1.2;
+      }
+
+      &-extra-big {
+        color: var(--color-accent-600);
       }
 
       &:has(.service-cost-card__asside-tag) {

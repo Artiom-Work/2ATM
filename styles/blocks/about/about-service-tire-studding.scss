@@ -1,18 +1,20 @@
 @use "../../healpers" as *;
 @use "about-service-list";
-/* Section about-service. */
+/* Section about-service.tire-stydding page only */
 .about-service {
   &__body {
-    @include flex-space-between;
+    display: flex;
+    justify-content: space-between;
 
     gap: fluid(24, 10);
     width: 100%;
+    padding-inline: 0 rem(44);
   }
 
   &__image {
     &-wrapper {
       width: rem(618);
-      height: rem(547);
+      height: rem(476);
       flex-shrink: 0;
     }
 
@@ -22,8 +24,8 @@
   }
 
   &__content {
-    max-width: rem(574);
-    padding-block: rem(50);
+    max-width: rem(530);
+    padding-block: 0 rem(50);
   }
 
   &__list {
@@ -31,9 +33,10 @@
   }
 
   &__text {
+    line-height: 1.5;
+
     &--colot-light {
       color: var(--text-color-dark-secondary);
-      line-height: 1.5;
     }
   }
 }
@@ -47,10 +50,17 @@
     &__body {
       flex-direction: column;
       align-items: start;
+      padding-inline: unset;
     }
 
     &__content {
       max-width: unset;
+      align-self: center;
+    }
+
+    &__list {
+      max-width: rem(500);
+      margin-inline: auto;
     }
   }
 }
@@ -59,13 +69,17 @@
   .about-service {
     &__image {
       &-wrapper {
-        width: rem(340);
-        height: rem(282);
+        width: rem(360);
+        height: rem(257);
       }
+    }
+
+    &__list {
+      max-width: unset;
     }
   }
 }
 
-/*  ===========================  */
+/*  ==========================  */
 /*  =====END about-service====  */
-/*  ===========================  */
+/*  ==========================  */

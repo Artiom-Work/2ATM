@@ -234,6 +234,7 @@ svg * {
   --container-padding-x: 1.25rem;
   --section-margin-y: clamp(2.5rem, 1.3372093023rem + 4.6511627907vw, 5rem);
   --section-margin-y-static: 5rem;
+  --section-margin-y-medium-static: 3.75rem;
   --section-margin-y-to-medium: clamp(3.75rem, 3.1686046512rem + 2.3255813953vw, 5rem);
   --section-margin-y-extra-big: clamp(5rem, 3.5465116279rem + 5.8139534884vw, 8.125rem);
   --section-margin-y-big: clamp(5rem, 3.8372093023rem + 4.6511627907vw, 7.5rem);
@@ -615,6 +616,9 @@ button[aria-label]::before {
 }
 .section--static-margin {
   margin-bottom: var(--section-margin-y-static);
+}
+.section--static-medium-margin {
+  margin-bottom: var(--section-margin-y-medium-static);
 }
 .section--margin-to-medium {
   margin-bottom: var(--section-margin-y-to-medium);

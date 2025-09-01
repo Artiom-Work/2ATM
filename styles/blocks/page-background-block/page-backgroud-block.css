@@ -1,0 +1,15 @@
+/* Styles for page-backgroud-block */
+.page-backgroud-block {
+  height: 15.625rem;
+}
+.page-backgroud-block__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*  =================================  */
+/*  =====END page-backgroud-block====  */
+/*  =================================  */
+
+/*# sourceMappingURL=page-backgroud-block.css.map */

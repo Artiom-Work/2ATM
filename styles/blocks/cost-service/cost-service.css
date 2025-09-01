@@ -60,7 +60,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.25rem;
+  justify-content: center;
+  gap: 1.0625rem;
   height: 100%;
   outline: var(--border-light);
   border-radius: var(--border-radius-small);
@@ -69,18 +70,36 @@
 .service-cost-card--accent-bg {
   background-color: var(--color-gray-75);
 }
+.service-cost-card--big-padding {
+  padding-block: 3.125rem;
+  gap: 0.625rem;
+}
 .service-cost-card__text {
   line-height: 1.47;
   text-align: center;
-  color: var(--color);
+  color: var(--text-color-dark-secondary);
 }
 .service-cost-card__text--static-fs {
   font-size: 1.125rem;
+}
+.service-cost-card__text--semi-bold {
+  font-weight: 600;
+  color: var(--text-color-dark);
+}
+.service-cost-card__text--width-300 {
+  max-width: 18.75rem;
 }
 .service-cost-card__text-big {
   font-size: clamp(1.0625rem, 0.9752906977rem + 0.3488372093vw, 1.25rem);
   font-weight: 700;
   line-height: 1.3;
+  text-transform: uppercase;
+  text-align: center;
+}
+.service-cost-card__text-extra-big {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
   text-transform: uppercase;
   text-align: center;
 }
@@ -97,6 +116,9 @@
 @media (width <= 47.99875rem) {
   .service-cost-card__text-big {
     line-height: 1.2;
+  }
+  .service-cost-card__text-extra-big {
+    color: var(--color-accent-600);
   }
   .service-cost-card__text:has(.service-cost-card__asside-tag) {
     flex-direction: column;

@@ -5,7 +5,6 @@
 .about-service-list__item {
   display: flex;
   align-items: center;
-  min-height: 6.9375rem;
   gap: 1.5rem;
   padding: 1.25rem;
 }
@@ -15,7 +14,7 @@
 .about-service-list__item:not(:last-child) .about-service-list__icon-wrapper::after {
   content: "";
   position: absolute;
-  top: 100%;
+  top: calc(100% + 0.625rem);
   left: 50%;
   width: 0.0625rem;
   height: 2.5rem;
@@ -25,6 +24,8 @@
   height: 5rem;
 }
 .about-service-list__icon-wrapper {
+  width: 2rem;
+  height: 2rem;
   flex-shrink: 0;
   position: relative;
 }
@@ -32,6 +33,8 @@
   font-size: 0.9375rem;
   line-height: 1.1;
   text-transform: uppercase;
+}
+.about-service-list__heading:not(:last-child) {
   margin-bottom: 0.625rem;
 }
 .about-service-list__text {
@@ -44,13 +47,13 @@
     max-width: unset;
   }
 }
-/* Section about-service. */
+/* Section about-service.tire-stydding page only */
 .about-service__body {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   gap: clamp(0.625rem, 0.2180232558rem + 1.6279069767vw, 1.5rem);
   width: 100%;
+  padding-inline: 0 2.75rem;
 }
 .about-service__image {
   border-radius: var(--border-radius-small);
@@ -59,19 +62,21 @@
 }
 .about-service__image-wrapper {
   width: 38.625rem;
-  height: 34.1875rem;
+  height: 29.75rem;
   flex-shrink: 0;
 }
 .about-service__content {
-  max-width: 35.875rem;
-  padding-block: 3.125rem;
+  max-width: 33.125rem;
+  padding-block: 0 3.125rem;
 }
 .about-service__list {
   margin-bottom: 1.25rem;
 }
+.about-service__text {
+  line-height: 1.5;
+}
 .about-service__text--colot-light {
   color: var(--text-color-dark-secondary);
-  line-height: 1.5;
 }
 
 @media (width <= 81.31125rem) {
@@ -81,19 +86,28 @@
   .about-service__body {
     flex-direction: column;
     align-items: start;
+    padding-inline: unset;
   }
   .about-service__content {
     max-width: unset;
+    align-self: center;
+  }
+  .about-service__list {
+    max-width: 31.25rem;
+    margin-inline: auto;
   }
 }
 @media (width <= 47.99875rem) {
   .about-service__image-wrapper {
-    width: 21.25rem;
-    height: 17.625rem;
+    width: 22.5rem;
+    height: 16.0625rem;
+  }
+  .about-service__list {
+    max-width: unset;
   }
 }
-/*  ===========================  */
+/*  ==========================  */
 /*  =====END about-service====  */
-/*  ===========================  */
+/*  ==========================  */
 
-/*# sourceMappingURL=about-service.css.map */
+/*# sourceMappingURL=about-service-tire-studding.css.map */
