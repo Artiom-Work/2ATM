@@ -1,0 +1,39 @@
+@use "../../healpers" as *;
+@use "../сommon-blocks/auth-portal";
+@use "cost-service-table-1";
+/* Section cost-service(with table). Block in the disk-paintig page  */
+.cost-service {
+  &__banner {
+    margin-bottom: fluid(50, 36);
+  }
+
+  &__table-block {
+    margin-bottom: rem(40);
+    overflow: hidden;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-block: 0 rem(10);
+  }
+
+  &__buttons {
+    @include flex-center;
+
+    gap: fluid(20, 10);
+  }
+
+  &__button {
+    font-size: rem(16);
+  }
+}
+
+@include mobile-medium-media {
+  .cost-service {
+    &__buttons {
+      flex-direction: column;
+      padding-inline: rem(32);
+    }
+  }
+}
+/*  ================================  */
+/*  =====END cost-service(table)====  */
+/*  ================================  */

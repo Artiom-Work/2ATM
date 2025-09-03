@@ -1,0 +1,30 @@
+@use "../../healpers" as *;
+@use "service-advantage-card";
+/* Section service-advantages.*/
+.service-advantages {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: rem(24);
+  }
+}
+@include desktop-media {
+  .service-advantages {
+    &__list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+@include mobile-media {
+  .service-advantages {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}
+
+/*  ===========================================  */
+/*  =======END section service-advantages======  */
+/*  ===========================================  */

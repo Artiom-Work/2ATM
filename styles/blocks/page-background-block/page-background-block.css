@@ -1,0 +1,27 @@
+/* Styles for page-background-block */
+.page-background-block {
+  height: 15.625rem;
+}
+.page-background-block--blockout-15 {
+  position: relative;
+}
+.page-background-block--blockout-15::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--color-red-opcity-15);
+}
+.page-background-block__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*  =================================  */
+/*  =====END page-background-block====  */
+/*  =================================  */
+
+/*# sourceMappingURL=page-background-block.css.map */

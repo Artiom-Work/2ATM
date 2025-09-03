@@ -1,0 +1,137 @@
+/* common-block auth-portal. */
+.auth-portal__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.90625rem;
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius-small);
+}
+.auth-portal__text {
+  font-weight: 700;
+  font-size: 1.0625rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--text-color-light);
+}
+.auth-portal__image {
+  width: inherit;
+  height: inherit;
+}
+.auth-portal__image-wrapper {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+.auth-portal__button {
+  background-color: var(--color-light);
+  color: var(--text-color-dark);
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  letter-spacing: var(--letter-spacing);
+  min-height: var(--auth-portal-button-height);
+  padding-block: 0.375rem;
+}
+
+@media (width <= 63.99875rem) {
+  .auth-portal__wrapper {
+    gap: 0.75rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .auth-portal__wrapper {
+    flex-direction: column;
+    padding-inline: 0.71875rem;
+    padding-block: 1.25rem;
+  }
+  .auth-portal__text {
+    text-align: center;
+    line-height: 1.2;
+  }
+  .auth-portal__image-wrapper {
+    rotate: 90deg;
+  }
+}
+/*  ==============================  */
+/*  =====END block auth-portal====  */
+/*  ==============================  */
+/* Styles for block cost-service-table. Part of section cort-service. Table verstion 1 */
+.cost-service-table {
+  font-size: clamp(1rem, 0.9418604651rem + 0.2325581395vw, 1.125rem);
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.cost-service-table__small-text {
+  font-weight: 600;
+  font-size: clamp(0.8125rem, 0.7834302326rem + 0.1162790698vw, 0.875rem);
+  line-height: 1.4;
+  text-transform: none;
+}
+.cost-service-table thead {
+  color: var(--text-color-medium);
+}
+.cost-service-table th,
+.cost-service-table td {
+  height: 3.75rem;
+  min-width: 4.375rem;
+}
+.cost-service-table th:not(:first-child),
+.cost-service-table td:not(:first-child) {
+  text-align: center;
+}
+.cost-service-table th:first-child,
+.cost-service-table td:first-child {
+  min-width: 22.5rem;
+  text-align: start;
+  padding-inline: 0 1.875rem;
+}
+
+@media (width <= 35.93625rem) {
+  .cost-service-table th,
+  .cost-service-table td {
+    height: 3.75rem;
+    min-width: 3.75rem;
+  }
+  .cost-service-table th:not(:first-child),
+  .cost-service-table td:not(:first-child) {
+    text-align: center;
+  }
+  .cost-service-table th:first-child,
+  .cost-service-table td:first-child {
+    min-width: 15rem;
+    padding-inline: 0;
+  }
+}
+/* Section cost-service(with table). Block in the disk-paintig page  */
+.cost-service__banner {
+  margin-bottom: clamp(2.25rem, 1.8430232558rem + 1.6279069767vw, 3.125rem);
+}
+.cost-service__table-block {
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-block: 0 0.625rem;
+}
+.cost-service__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.625rem, 0.3343023256rem + 1.1627906977vw, 1.25rem);
+}
+.cost-service__button {
+  font-size: 1rem;
+}
+
+@media (width <= 35.93625rem) {
+  .cost-service__buttons {
+    flex-direction: column;
+    padding-inline: 2rem;
+  }
+}
+/*  ================================  */
+/*  =====END cost-service(table)====  */
+/*  ================================  */
+
+/*# sourceMappingURL=cost-service-table.css.map */

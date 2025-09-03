@@ -1,0 +1,86 @@
+@use "../../healpers" as *;
+/* Syles for section services-direction(short version).Disk painting page  */
+.services-direction {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(24);
+
+    &-item {
+      height: 100%;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(24);
+    max-width: rem(618);
+
+    &-image {
+      &-wrapper {
+        width: rem(340);
+        height: rem(226);
+        border-radius: var(--border-radius-small);
+      }
+
+      border-radius: var(--border-radius-small);
+      width: inherit;
+      height: inherit;
+    }
+
+    &-text {
+      line-height: 1.5;
+      color: var(--text-color-dark-secondary);
+    }
+  }
+}
+
+@include mobile-media-above {
+  .services-direction {
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      &-item {
+        justify-self: center;
+      }
+    }
+
+    &__card {
+      max-width: rem(340);
+    }
+  }
+}
+@include tablet-media-above {
+  .services-direction {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &__card {
+      max-width: unset;
+
+      &-image {
+        &-wrapper {
+          width: rem(618);
+          height: rem(244);
+        }
+      }
+    }
+  }
+}
+@include desktop-media-above {
+  .services-direction {
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+    }
+  }
+}
+/* ================================================= */
+/* ======END services-direction(short-version)====== */
+/* ================================================= */

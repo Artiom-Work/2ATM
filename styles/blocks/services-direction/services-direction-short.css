@@ -1,0 +1,68 @@
+/* Syles for section services-direction(short version).Disk painting page  */
+.services-direction__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.services-direction__list-item {
+  height: 100%;
+}
+.services-direction__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 38.625rem;
+}
+.services-direction__card-image {
+  border-radius: var(--border-radius-small);
+  width: inherit;
+  height: inherit;
+}
+.services-direction__card-image-wrapper {
+  width: 21.25rem;
+  height: 14.125rem;
+  border-radius: var(--border-radius-small);
+}
+.services-direction__card-text {
+  line-height: 1.5;
+  color: var(--text-color-dark-secondary);
+}
+
+@media (width > 47.99875rem) {
+  .services-direction__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .services-direction__list-item {
+    justify-self: center;
+  }
+  .services-direction__card {
+    max-width: 21.25rem;
+  }
+}
+@media (width > 63.99875rem) {
+  .services-direction__list {
+    grid-template-columns: 1fr;
+  }
+  .services-direction__card {
+    max-width: unset;
+  }
+  .services-direction__card-image-wrapper {
+    width: 38.625rem;
+    height: 15.25rem;
+  }
+}
+@media (width > 100.06125rem) {
+  .services-direction__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
+/* ================================================= */
+/* ======END services-direction(short-version)====== */
+/* ================================================= */
+
+/*# sourceMappingURL=services-direction-short.css.map */

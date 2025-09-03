@@ -1,0 +1,53 @@
+@use "../../healpers" as *;
+/* Styles for block cost-service-table. Part of section cort-service. Table verstion 1 */
+.cost-service-table {
+  font-size: fluid(18, 16);
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+
+  &__small-text {
+    font-weight: 600;
+    font-size: fluid(14, 13);
+    line-height: 1.4;
+    text-transform: none;
+  }
+
+  thead {
+    color: var(--text-color-medium);
+  }
+
+  th,
+  td {
+    height: rem(60);
+    min-width: rem(70);
+
+    &:not(:first-child) {
+      text-align: center;
+    }
+    &:first-child {
+      min-width: rem(360);
+      text-align: start;
+      padding-inline: 0 rem(30);
+    }
+  }
+}
+
+@include mobile-medium-media {
+  .cost-service-table {
+    th,
+    td {
+      height: rem(60);
+      min-width: rem(60);
+
+      &:not(:first-child) {
+        text-align: center;
+      }
+
+      &:first-child {
+        min-width: rem(240);
+        padding-inline: 0;
+      }
+    }
+  }
+}
