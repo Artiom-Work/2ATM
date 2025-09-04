@@ -1,0 +1,36 @@
+@use "../../healpers" as *;
+
+/* Styles for block-section cost-service-addresses. Part of section cost-service. */
+
+.cost-service-addresses {
+  @include flex-center;
+
+  gap: fluid(30, 20);
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: rem(21);
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: rem(18);
+    line-height: 1.3;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    list-style-type: disc;
+    padding-left: rem(27);
+
+    &-item {
+    }
+  }
+}
+@include mobile-media {
+  .cost-service-addresses {
+    flex-direction: column;
+    padding-block: rem(20);
+  }
+}

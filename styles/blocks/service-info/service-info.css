@@ -1,0 +1,42 @@
+/* Styles for block-section service-info */
+.service-info {
+  padding-block: 3.0625rem 0;
+}
+.service-info__list {
+  max-width: 46.5rem;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(0.625rem, 0.2180232558rem + 1.6279069767vw, 1.5rem);
+}
+.service-info__list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+  width: 100%;
+  height: 100%;
+  padding: 1.25rem 1.25rem 1.125rem;
+  background-color: var(--color-accent-200);
+  border: var(--border-light);
+  border-radius: var(--border-radius-small);
+}
+.service-info__text {
+  text-align: center;
+  color: var(--text-color-dark-secondary);
+  line-height: 1.5;
+}
+
+@media (width <= 35.93625rem) {
+  .service-info {
+    padding-block: 4.375rem 1.25rem;
+  }
+  .service-info__list {
+    grid-template-columns: 1fr;
+  }
+}
+/*  =========================  */
+/*  =====END service-info====  */
+/*  =========================  */
+
+/*# sourceMappingURL=service-info.css.map */

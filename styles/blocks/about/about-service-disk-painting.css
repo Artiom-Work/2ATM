@@ -61,9 +61,20 @@
   height: inherit;
 }
 .about-service__image-wrapper {
+  position: relative;
   width: 38.625rem;
   height: 33.625rem;
   flex-shrink: 0;
+}
+.about-service__image-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--border-radius-small);
+  background: var(--color-red-opcity-15);
 }
 .about-service__content {
   max-width: 33.125rem;
@@ -95,7 +106,7 @@
 }
 @media (width <= 47.99875rem) {
   .about-service__image-wrapper {
-    width: 20.625rem;
+    width: 21.25rem;
     height: 18.6875rem;
   }
   .about-service__list {

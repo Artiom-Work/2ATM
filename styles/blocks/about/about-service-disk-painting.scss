@@ -13,9 +13,21 @@
 
   &__image {
     &-wrapper {
+      position: relative;
       width: rem(618);
       height: rem(538);
       flex-shrink: 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: var(--border-radius-small);
+        background: var(--color-red-opcity-15);
+      }
     }
 
     border-radius: var(--border-radius-small);
@@ -60,12 +72,11 @@
     }
   }
 }
-
 @include mobile-media {
   .about-service {
     &__image {
       &-wrapper {
-        width: rem(330);
+        width: rem(340);
         height: rem(299);
       }
     }
@@ -76,7 +87,6 @@
     }
   }
 }
-
 /*  ==========================  */
 /*  =====END about-service====  */
 /*  ==========================  */

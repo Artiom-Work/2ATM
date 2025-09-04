@@ -193,7 +193,7 @@ svg * {
   --color-black-opacity-48: #3332327a;
   --color-black-opacity-80: #00000033;
   --color-red: #ba1414;
-  --color-red-opcity-15: rgba(59, 6, 5, 0.15);
+  --color-red-opcity-15: #3b060526;
   --color-red-opcity-40: #3b060566;
   --color-green: #139128;
   --color-green-light: #31ba49;
@@ -1590,9 +1590,20 @@ button[aria-label]::before {
   height: inherit;
 }
 .about-service__image-wrapper {
+  position: relative;
   width: 38.625rem;
   height: 33.625rem;
   flex-shrink: 0;
+}
+.about-service__image-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--border-radius-small);
+  background: var(--color-red-opcity-15);
 }
 .about-service__content {
   max-width: 33.125rem;
@@ -1624,7 +1635,7 @@ button[aria-label]::before {
 }
 @media (width <= 47.99875rem) {
   .about-service__image-wrapper {
-    width: 20.625rem;
+    width: 21.25rem;
     height: 18.6875rem;
   }
   .about-service__list {
@@ -1818,6 +1829,9 @@ button[aria-label]::before {
   outline: var(--border-light);
   padding-inline: 6.25rem 0;
   border-radius: var(--border-radius-small);
+}
+.when-work__wrapper--desktop-padding {
+  padding-block: clamp(0rem, -0.5087209302rem + 2.0348837209vw, 1.09375rem);
 }
 .when-work__body {
   display: flex;

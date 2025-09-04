@@ -1,0 +1,46 @@
+@use "../../healpers" as *;
+/* Styles for block-section service-info */
+.service-info {
+  padding-block: rem(49) 0;
+
+  &__list {
+    max-width: rem(744);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: fluid(24, 10);
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: rem(24);
+      width: 100%;
+      height: 100%;
+      padding: rem(20) rem(20) rem(18);
+      background-color: var(--color-accent-200);
+      border: var(--border-light);
+      border-radius: var(--border-radius-small);
+    }
+  }
+
+  &__text {
+    text-align: center;
+    color: var(--text-color-dark-secondary);
+    line-height: 1.5;
+  }
+}
+
+@include mobile-medium-media {
+  .service-info {
+    padding-block: rem(70) rem(20);
+
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+/*  =========================  */
+/*  =====END service-info====  */
+/*  =========================  */

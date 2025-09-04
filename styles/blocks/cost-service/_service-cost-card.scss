@@ -21,6 +21,12 @@
     gap: rem(10);
   }
 
+  &--medium-padding {
+    padding-block: rem(20);
+    gap: rem(24);
+    justify-content: start;
+  }
+
   &__text {
     line-height: 1.47;
     text-align: center;
@@ -64,6 +70,17 @@
 
       .service-cost-card__asside-tag {
         min-width: rem(100);
+      }
+    }
+  }
+
+  &:has(.service-cost-card__list) {
+    .service-cost-card__list {
+      line-height: 1.5;
+
+      &:has(:nth-child(2)) {
+        list-style-type: disc;
+        padding-left: rem(27);
       }
     }
   }

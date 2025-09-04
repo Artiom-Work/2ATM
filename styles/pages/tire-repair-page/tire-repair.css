@@ -193,7 +193,7 @@ svg * {
   --color-black-opacity-48: #3332327a;
   --color-black-opacity-80: #00000033;
   --color-red: #ba1414;
-  --color-red-opcity-15: rgba(59, 6, 5, 0.15);
+  --color-red-opcity-15: #3b060526;
   --color-red-opcity-40: #3b060566;
   --color-green: #139128;
   --color-green-light: #31ba49;
@@ -1333,6 +1333,11 @@ button[aria-label]::before {
   padding-block: 3.125rem;
   gap: 0.625rem;
 }
+.service-cost-card--medium-padding {
+  padding-block: 1.25rem;
+  gap: 1.5rem;
+  justify-content: start;
+}
 .service-cost-card__text {
   line-height: 1.47;
   text-align: center;
@@ -1370,6 +1375,13 @@ button[aria-label]::before {
 }
 .service-cost-card__text:has(.service-cost-card__asside-tag) .service-cost-card__asside-tag {
   min-width: 6.25rem;
+}
+.service-cost-card:has(.service-cost-card__list) .service-cost-card__list {
+  line-height: 1.5;
+}
+.service-cost-card:has(.service-cost-card__list) .service-cost-card__list:has(:nth-child(2)) {
+  list-style-type: disc;
+  padding-left: 1.6875rem;
 }
 
 @media (width <= 47.99875rem) {
@@ -1725,6 +1737,9 @@ button[aria-label]::before {
   outline: var(--border-light);
   padding-inline: 6.25rem 0;
   border-radius: var(--border-radius-small);
+}
+.when-work__wrapper--desktop-padding {
+  padding-block: clamp(0rem, -0.5087209302rem + 2.0348837209vw, 1.09375rem);
 }
 .when-work__body {
   display: flex;
