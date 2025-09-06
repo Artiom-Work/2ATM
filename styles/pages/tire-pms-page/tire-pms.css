@@ -1315,15 +1315,31 @@ button[aria-label]::before {
   padding-block: 3.125rem;
   gap: 0.625rem;
 }
+.service-cost-card--gap-24 {
+  gap: 1.5rem;
+}
+.service-cost-card--gap-20 {
+  gap: 1.25rem;
+}
+.service-cost-card--gap-20-to-0 {
+  gap: clamp(0rem, -0.5813953488rem + 2.3255813953vw, 1.25rem) !important;
+}
 .service-cost-card--medium-padding {
   padding-block: 1.25rem;
-  gap: 1.5rem;
   justify-content: start;
+}
+.service-cost-card--small-padding {
+  padding: 0.625rem;
+  align-items: start;
+  gap: 1.0625rem;
 }
 .service-cost-card__text {
   line-height: 1.47;
   text-align: center;
   color: var(--text-color-dark-secondary);
+}
+.service-cost-card__text--left {
+  text-align: start;
 }
 .service-cost-card__text--static-fs {
   font-size: 1.125rem;
@@ -1360,6 +1376,9 @@ button[aria-label]::before {
 }
 .service-cost-card:has(.service-cost-card__list) .service-cost-card__list {
   line-height: 1.5;
+}
+.service-cost-card:has(.service-cost-card__list) .service-cost-card__list--color-light {
+  color: var(--text-color-dark-secondary);
 }
 .service-cost-card:has(.service-cost-card__list) .service-cost-card__list:has(:nth-child(2)) {
   list-style-type: disc;
@@ -1401,6 +1420,7 @@ button[aria-label]::before {
   list-style-type: disc;
   padding-left: 1.6875rem;
 }
+
 @media (width <= 47.99875rem) {
   .cost-service-addresses {
     flex-direction: column;
@@ -1413,17 +1433,13 @@ button[aria-label]::before {
 }
 .cost-service__list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
-  gap: 1.5rem;
+  gap: clamp(0.53125rem, 0.0806686047rem + 1.8023255814vw, 1.5rem);
   margin-bottom: clamp(1.25rem, 0.3779069767rem + 3.488372093vw, 3.125rem);
 }
 .cost-service__list--static-margin {
   margin-bottom: 3.125rem;
-}
-.cost-service__list--three-col {
-  grid-template-columns: repeat(3, 1fr);
-  gap: clamp(0.53125rem, 0.0806686047rem + 1.8023255814vw, 1.5rem);
 }
 .cost-service__addresses {
   margin-bottom: 3.125rem;
@@ -1439,10 +1455,10 @@ button[aria-label]::before {
 }
 
 @media (width <= 81.31125rem) {
-  .cost-service__list--three-col {
+  .cost-service__list {
     grid-template-columns: repeat(2, 1fr);
   }
-  .cost-service__list--three-col li:last-child {
+  .cost-service__list li:last-child {
     grid-column: 1/3;
   }
 }
@@ -1450,7 +1466,7 @@ button[aria-label]::before {
   .cost-service__list {
     grid-template-columns: 1fr;
   }
-  .cost-service__list--three-col li:last-child {
+  .cost-service__list li:last-child {
     grid-column: 1;
   }
 }
@@ -1825,6 +1841,10 @@ button[aria-label]::before {
   line-height: 1.5;
   color: var(--text-color-dark-secondary);
 }
+.when-work__subtitle:has(ul) ul {
+  margin-block: 0;
+  text-align: start;
+}
 .when-work__buttons {
   display: flex;
   gap: 1.25rem;
@@ -1893,6 +1913,9 @@ button[aria-label]::before {
   .when-work__title {
     padding-inline: 1.875rem;
     line-height: 1.5;
+  }
+  .when-work__title--static-padding {
+    padding-inline: 0;
   }
   .when-work__buttons {
     flex-direction: column;

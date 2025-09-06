@@ -1,0 +1,174 @@
+/* Block about-service-list. part of section about-service */
+.about-service-list {
+  max-width: 29.125rem;
+}
+.about-service-list__item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem;
+}
+.about-service-list__item:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+.about-service-list__item:not(:last-child) .about-service-list__icon-wrapper::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 0.625rem);
+  left: 50%;
+  width: 0.0625rem;
+  height: 2.5rem;
+  background-color: var(--color-orange);
+}
+.about-service-list__item:not(:last-child) .about-service-list__icon-wrapper--tall-decor::after {
+  height: 5rem;
+}
+.about-service-list__icon-wrapper {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  position: relative;
+}
+.about-service-list__heading {
+  font-size: 0.9375rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.about-service-list__heading:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+.about-service-list__text {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+@media (width <= 81.31125rem) {
+  .about-service-list {
+    max-width: unset;
+  }
+}
+/* Section about-service.argon-welding page (2 sections) */
+.about-service__body {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+  padding-inline: 0 2.75rem;
+}
+.about-service__image {
+  border-radius: var(--border-radius-small);
+  width: inherit;
+  height: inherit;
+}
+.about-service__image-wrapper {
+  flex-shrink: 0;
+  width: 38.625rem;
+  height: 24.375rem;
+}
+.about-service__image-wrapper--features {
+  position: relative;
+  height: 28.5625rem;
+}
+.about-service__image-wrapper--features::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--border-radius-small);
+  background: var(--color-red-opcity-15);
+}
+.about-service__content {
+  max-width: 33.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: clamp(1.25rem, 0.6686046512rem + 2.3255813953vw, 2.5rem);
+}
+.about-service__heading {
+  line-height: 1.2;
+}
+.about-service__text {
+  line-height: 1.47;
+  color: var(--text-color-dark-secondary);
+}
+.about-service__text--list {
+  list-style: disc;
+  margin-left: -1.6875rem;
+}
+.about-service__buttons {
+  display: flex;
+  width: 100%;
+  gap: clamp(0.625rem, 0.3343023256rem + 1.1627906977vw, 1.25rem);
+}
+.about-service__button {
+  font-size: 1rem;
+}
+
+@media (width <= 100.06125rem) {
+  .about-service__body {
+    justify-content: start;
+    padding-inline: 0;
+  }
+  .about-service__text--list {
+    margin-left: 1.5625rem;
+  }
+}
+@media (width <= 81.31125rem) {
+  .about-service__image-wrapper {
+    align-self: center;
+  }
+  .about-service__body {
+    flex-direction: column;
+    align-items: start;
+    padding-inline: unset;
+  }
+  .about-service__content {
+    max-width: unset;
+    align-self: center;
+  }
+}
+@media (width <= 47.99875rem) {
+  .about-service {
+    padding-block: 0.625rem 1.25rem;
+  }
+  .about-service--advantages {
+    padding-block: 0 1.25rem;
+  }
+  .about-service__image-wrapper {
+    width: 21.25rem;
+    height: 13.0625rem;
+  }
+  .about-service__image-wrapper--features {
+    height: 14.875rem;
+  }
+  .about-service__body {
+    gap: 1.25rem;
+  }
+  .about-service__content {
+    padding-block: 1.25rem 0;
+  }
+  .about-service__heading {
+    text-align: center;
+    line-height: 1.5;
+  }
+  .about-service__text {
+    line-height: 1.5;
+  }
+  .about-service__text p {
+    margin-bottom: 0;
+  }
+}
+@media (width <= 35.93625rem) {
+  .about-service__buttons {
+    flex-direction: column;
+    padding-inline: 2rem;
+  }
+}
+/*  ==========================  */
+/*  =====END about-service====  */
+/*  ==========================  */
+
+/*# sourceMappingURL=about-service-argon-welding.css.map */

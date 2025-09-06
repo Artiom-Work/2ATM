@@ -1,0 +1,159 @@
+@use "../../healpers" as *;
+@use "about-service-list";
+/* Section about-service.argon-welding page (2 sections) */
+.about-service {
+  &__body {
+    display: flex;
+    justify-content: space-between;
+
+    gap: rem(24);
+    width: 100%;
+    padding-inline: 0 rem(44);
+  }
+
+  &__image {
+    &-wrapper {
+      flex-shrink: 0;
+      width: rem(618);
+      height: rem(390);
+
+      &--features {
+        position: relative;
+        height: rem(457);
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          border-radius: var(--border-radius-small);
+          background: var(--color-red-opcity-15);
+        }
+      }
+    }
+
+    border-radius: var(--border-radius-small);
+    width: inherit;
+    height: inherit;
+  }
+
+  &__content {
+    max-width: rem(530);
+    @include flex-center;
+
+    flex-direction: column;
+    row-gap: fluid(40, 20);
+  }
+
+  &__heading {
+    line-height: 1.2;
+  }
+
+  &__text {
+    line-height: 1.47;
+    color: var(--text-color-dark-secondary);
+
+    &--list {
+      list-style: disc;
+      margin-left: rem(-27);
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    width: 100%;
+    gap: fluid(20, 10);
+  }
+
+  &__button {
+    font-size: rem(16);
+  }
+}
+@include desktop-media {
+  .about-service {
+    &__body {
+      justify-content: start;
+      padding-inline: 0;
+    }
+
+    &__text {
+      &--list {
+        margin-left: rem(25);
+      }
+    }
+  }
+}
+@include laptop-media {
+  .about-service {
+    &__image {
+      &-wrapper {
+        align-self: center;
+      }
+    }
+
+    &__body {
+      flex-direction: column;
+      align-items: start;
+      padding-inline: unset;
+    }
+
+    &__content {
+      max-width: unset;
+      align-self: center;
+    }
+  }
+}
+@include mobile-media {
+  .about-service {
+    padding-block: rem(10) rem(20);
+
+    &--advantages {
+      padding-block: 0 rem(20);
+    }
+
+    &__image {
+      &-wrapper {
+        width: rem(340);
+        height: rem(209);
+
+        &--features {
+          height: rem(238);
+        }
+      }
+    }
+
+    &__body {
+      gap: rem(20);
+    }
+
+    &__content {
+      padding-block: rem(20) 0;
+    }
+
+    &__heading {
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    &__text {
+      line-height: 1.5;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+@include mobile-medium-media {
+  .about-service {
+    &__buttons {
+      flex-direction: column;
+      padding-inline: rem(32);
+    }
+  }
+}
+/*  ==========================  */
+/*  =====END about-service====  */
+/*  ==========================  */

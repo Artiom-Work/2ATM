@@ -21,16 +21,37 @@
     gap: rem(10);
   }
 
+  &--gap-24 {
+    gap: rem(24);
+  }
+
+  &--gap-20 {
+    gap: rem(20);
+  }
+
+  &--gap-20-to-0 {
+    gap: fluid(20, 0) !important;
+  }
+
   &--medium-padding {
     padding-block: rem(20);
-    gap: rem(24);
     justify-content: start;
+  }
+
+  &--small-padding {
+    padding: rem(10);
+    align-items: start;
+    gap: rem(17);
   }
 
   &__text {
     line-height: 1.47;
     text-align: center;
     color: var(--text-color-dark-secondary);
+
+    &--left {
+      text-align: start;
+    }
 
     &--static-fs {
       font-size: rem(18);
@@ -77,6 +98,10 @@
   &:has(.service-cost-card__list) {
     .service-cost-card__list {
       line-height: 1.5;
+
+      &--color-light {
+        color: var(--text-color-dark-secondary);
+      }
 
       &:has(:nth-child(2)) {
         list-style-type: disc;

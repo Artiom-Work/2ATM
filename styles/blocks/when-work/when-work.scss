@@ -28,6 +28,13 @@
   &__subtitle {
     line-height: 1.5;
     color: var(--text-color-dark-secondary);
+
+    &:has(ul) {
+      ul {
+        margin-block: 0;
+        text-align: start;
+      }
+    }
   }
 
   &__buttons {
@@ -125,6 +132,10 @@
     &__title {
       padding-inline: rem(30);
       line-height: 1.5;
+
+      &--static-padding {
+        padding-inline: 0;
+      }
     }
 
     &__buttons {

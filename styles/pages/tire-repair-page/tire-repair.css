@@ -1333,15 +1333,31 @@ button[aria-label]::before {
   padding-block: 3.125rem;
   gap: 0.625rem;
 }
+.service-cost-card--gap-24 {
+  gap: 1.5rem;
+}
+.service-cost-card--gap-20 {
+  gap: 1.25rem;
+}
+.service-cost-card--gap-20-to-0 {
+  gap: clamp(0rem, -0.5813953488rem + 2.3255813953vw, 1.25rem) !important;
+}
 .service-cost-card--medium-padding {
   padding-block: 1.25rem;
-  gap: 1.5rem;
   justify-content: start;
+}
+.service-cost-card--small-padding {
+  padding: 0.625rem;
+  align-items: start;
+  gap: 1.0625rem;
 }
 .service-cost-card__text {
   line-height: 1.47;
   text-align: center;
   color: var(--text-color-dark-secondary);
+}
+.service-cost-card__text--left {
+  text-align: start;
 }
 .service-cost-card__text--static-fs {
   font-size: 1.125rem;
@@ -1378,6 +1394,9 @@ button[aria-label]::before {
 }
 .service-cost-card:has(.service-cost-card__list) .service-cost-card__list {
   line-height: 1.5;
+}
+.service-cost-card:has(.service-cost-card__list) .service-cost-card__list--color-light {
+  color: var(--text-color-dark-secondary);
 }
 .service-cost-card:has(.service-cost-card__list) .service-cost-card__list:has(:nth-child(2)) {
   list-style-type: disc;
@@ -1754,6 +1773,10 @@ button[aria-label]::before {
   line-height: 1.5;
   color: var(--text-color-dark-secondary);
 }
+.when-work__subtitle:has(ul) ul {
+  margin-block: 0;
+  text-align: start;
+}
 .when-work__buttons {
   display: flex;
   gap: 1.25rem;
@@ -1822,6 +1845,9 @@ button[aria-label]::before {
   .when-work__title {
     padding-inline: 1.875rem;
     line-height: 1.5;
+  }
+  .when-work__title--static-padding {
+    padding-inline: 0;
   }
   .when-work__buttons {
     flex-direction: column;

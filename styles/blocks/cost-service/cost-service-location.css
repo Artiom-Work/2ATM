@@ -1,0 +1,242 @@
+/* common-block auth-portal. */
+.auth-portal__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.90625rem;
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius-small);
+}
+.auth-portal__text {
+  font-weight: 700;
+  font-size: 1.0625rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--text-color-light);
+}
+.auth-portal__image {
+  width: inherit;
+  height: inherit;
+}
+.auth-portal__image-wrapper {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+.auth-portal__button {
+  background-color: var(--color-light);
+  color: var(--text-color-dark);
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  letter-spacing: var(--letter-spacing);
+  min-height: var(--auth-portal-button-height);
+  padding-block: 0.375rem;
+}
+
+@media (width <= 63.99875rem) {
+  .auth-portal__wrapper {
+    gap: 0.75rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .auth-portal__wrapper {
+    flex-direction: column;
+    padding-inline: 0.71875rem;
+    padding-block: 1.25rem;
+  }
+  .auth-portal__text {
+    text-align: center;
+    line-height: 1.2;
+  }
+  .auth-portal__image-wrapper {
+    rotate: 90deg;
+  }
+}
+/*  ==============================  */
+/*  =====END block auth-portal====  */
+/*  ==============================  */
+/* Styles for service-cost-card. Part of cost-service list */
+.service-cost-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.0625rem;
+  height: 100%;
+  outline: var(--border-light);
+  border-radius: var(--border-radius-small);
+  padding: 1.875rem 1.25rem;
+}
+.service-cost-card--accent-bg {
+  background-color: var(--color-gray-75);
+}
+.service-cost-card--big-padding {
+  padding-block: 3.125rem;
+  gap: 0.625rem;
+}
+.service-cost-card--gap-24 {
+  gap: 1.5rem;
+}
+.service-cost-card--gap-20 {
+  gap: 1.25rem;
+}
+.service-cost-card--gap-20-to-0 {
+  gap: clamp(0rem, -0.5813953488rem + 2.3255813953vw, 1.25rem) !important;
+}
+.service-cost-card--medium-padding {
+  padding-block: 1.25rem;
+  justify-content: start;
+}
+.service-cost-card--small-padding {
+  padding: 0.625rem;
+  align-items: start;
+  gap: 1.0625rem;
+}
+.service-cost-card__text {
+  line-height: 1.47;
+  text-align: center;
+  color: var(--text-color-dark-secondary);
+}
+.service-cost-card__text--left {
+  text-align: start;
+}
+.service-cost-card__text--static-fs {
+  font-size: 1.125rem;
+}
+.service-cost-card__text--semi-bold {
+  font-weight: 600;
+  color: var(--text-color-dark);
+}
+.service-cost-card__text--width-300 {
+  max-width: 18.75rem;
+}
+.service-cost-card__text-big {
+  font-size: clamp(1.0625rem, 0.9752906977rem + 0.3488372093vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+  text-align: center;
+}
+.service-cost-card__text-extra-big {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-align: center;
+}
+.service-cost-card__text:has(.service-cost-card__asside-tag) {
+  width: 100%;
+  display: flex;
+  gap: 1.25rem;
+  text-align: start;
+}
+.service-cost-card__text:has(.service-cost-card__asside-tag) .service-cost-card__asside-tag {
+  min-width: 6.25rem;
+}
+.service-cost-card:has(.service-cost-card__list) .service-cost-card__list {
+  line-height: 1.5;
+}
+.service-cost-card:has(.service-cost-card__list) .service-cost-card__list--color-light {
+  color: var(--text-color-dark-secondary);
+}
+.service-cost-card:has(.service-cost-card__list) .service-cost-card__list:has(:nth-child(2)) {
+  list-style-type: disc;
+  padding-left: 1.6875rem;
+}
+
+@media (width <= 47.99875rem) {
+  .service-cost-card__text-big {
+    line-height: 1.2;
+  }
+  .service-cost-card__text-extra-big {
+    color: var(--color-accent-600);
+  }
+  .service-cost-card__text:has(.service-cost-card__asside-tag) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+/* Styles for block-section cost-service-addresses. Part of section cost-service. */
+.cost-service-addresses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1.25rem, 0.9593023256rem + 1.1627906977vw, 1.875rem);
+}
+.cost-service-addresses__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3125rem;
+}
+.cost-service-addresses__text {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+.cost-service-addresses__list {
+  list-style-type: disc;
+  padding-left: 1.6875rem;
+}
+
+@media (width <= 47.99875rem) {
+  .cost-service-addresses {
+    flex-direction: column;
+    padding-block: 1.25rem;
+  }
+}
+/* Section cost-service. */
+.cost-service__banner {
+  margin-bottom: 1.5rem;
+}
+.cost-service__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: clamp(0.53125rem, 0.0806686047rem + 1.8023255814vw, 1.5rem);
+  margin-bottom: clamp(1.25rem, 0.3779069767rem + 3.488372093vw, 3.125rem);
+}
+.cost-service__list--static-margin {
+  margin-bottom: 3.125rem;
+}
+.cost-service__addresses {
+  margin-bottom: 3.125rem;
+}
+.cost-service__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.625rem, 0.3343023256rem + 1.1627906977vw, 1.25rem);
+}
+.cost-service__button {
+  font-size: 1rem;
+}
+
+@media (width <= 81.31125rem) {
+  .cost-service__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cost-service__list li:last-child {
+    grid-column: 1/3;
+  }
+}
+@media (width <= 47.99875rem) {
+  .cost-service__list {
+    grid-template-columns: 1fr;
+  }
+  .cost-service__list li:last-child {
+    grid-column: 1;
+  }
+}
+@media (width <= 35.93625rem) {
+  .cost-service__buttons {
+    flex-direction: column;
+    padding-inline: 2rem;
+  }
+}
+/*  =========================  */
+/*  =====END cost-service====  */
+/*  =========================  */
+
+/*# sourceMappingURL=cost-service-location.css.map */

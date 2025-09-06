@@ -1,0 +1,68 @@
+@use "../../healpers" as *;
+@use "../сommon-blocks/auth-portal";
+@use "service-cost-card";
+@use "cost-service-addresses";
+/* Section cost-service. */
+.cost-service {
+  &__banner {
+    margin-bottom: rem(24);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: fluid(24, 8.5);
+    margin-bottom: fluid(50, 20);
+
+    &--static-margin {
+      margin-bottom: rem(50);
+    }
+  }
+
+  &__addresses {
+    margin-bottom: rem(50);
+  }
+
+  &__buttons {
+    @include flex-center;
+
+    gap: fluid(20, 10);
+  }
+
+  &__button {
+    font-size: rem(16);
+  }
+}
+@include laptop-media {
+  .cost-service {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      li:last-child {
+        grid-column: 1/3;
+      }
+    }
+  }
+}
+@include mobile-media {
+  .cost-service {
+    &__list {
+      grid-template-columns: 1fr;
+
+      li:last-child {
+        grid-column: 1;
+      }
+    }
+  }
+}
+@include mobile-medium-media {
+  .cost-service {
+    &__buttons {
+      flex-direction: column;
+      padding-inline: rem(32);
+    }
+  }
+}
+/*  =========================  */
+/*  =====END cost-service====  */
+/*  =========================  */

@@ -31,17 +31,22 @@
 
   &__text {
     color: var(--text-color-dark-secondary);
-    line-height: 1.5;
+    line-height: 1.52;
   }
 }
 
 @include mobile-media {
   .advantage-card {
     padding: rem(20) rem(20) rem(18);
+    row-gap: rem(18);
 
     &__heading {
       font-size: rem(15);
       line-height: 1.5;
+    }
+
+    &__text {
+      line-height: 1.47;
     }
   }
 }

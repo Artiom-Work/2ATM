@@ -1846,6 +1846,10 @@ button[aria-label]::before {
   line-height: 1.5;
   color: var(--text-color-dark-secondary);
 }
+.when-work__subtitle:has(ul) ul {
+  margin-block: 0;
+  text-align: start;
+}
 .when-work__buttons {
   display: flex;
   gap: 1.25rem;
@@ -1914,6 +1918,9 @@ button[aria-label]::before {
   .when-work__title {
     padding-inline: 1.875rem;
     line-height: 1.5;
+  }
+  .when-work__title--static-padding {
+    padding-inline: 0;
   }
   .when-work__buttons {
     flex-direction: column;

@@ -1508,16 +1508,20 @@ button[aria-label]::before {
 }
 .advantage-card__text {
   color: var(--text-color-dark-secondary);
-  line-height: 1.5;
+  line-height: 1.52;
 }
 
 @media (width <= 47.99875rem) {
   .advantage-card {
     padding: 1.25rem 1.25rem 1.125rem;
+    row-gap: 1.125rem;
   }
   .advantage-card__heading {
     font-size: 0.9375rem;
     line-height: 1.5;
+  }
+  .advantage-card__text {
+    line-height: 1.47;
   }
 }
 /* Section advantages.Slider(our-advantage). Differences from the advantages section, in the cards.*/

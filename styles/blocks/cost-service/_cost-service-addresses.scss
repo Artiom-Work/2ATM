@@ -23,9 +23,6 @@
   &__list {
     list-style-type: disc;
     padding-left: rem(27);
-
-    &-item {
-    }
   }
 }
 @include mobile-media {
