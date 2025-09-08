@@ -90,13 +90,24 @@
     translate: 50% -50%;
   }
 }
+@media (width <= 100.06125rem) {
+  .promo__main-image-wrapper {
+    right: 6.375vw;
+  }
+  .promo__content {
+    padding-block: 3.125rem 0;
+  }
+  .promo__title {
+    max-width: 43.75rem;
+    margin-bottom: 1.9375rem;
+  }
+  .promo__subtitle {
+    max-width: 23.75rem;
+  }
+}
 @media (width <= 81.31125rem) {
   .promo__main-image-wrapper {
     right: 5.375vw;
-  }
-  .promo__title {
-    max-width: 44.0625rem;
-    margin-bottom: 1.9375rem;
   }
   .promo__subtitle {
     margin-bottom: 1.9375rem;

@@ -1498,12 +1498,6 @@ button[aria-label]::before {
     grid-template-columns: 1fr;
   }
 }
-@media (width <= 35.93625rem) {
-  .cost-service__buttons {
-    flex-direction: column;
-    padding-inline: 2rem;
-  }
-}
 /*  =========================  */
 /*  =====END cost-service====  */
 /*  =========================  */

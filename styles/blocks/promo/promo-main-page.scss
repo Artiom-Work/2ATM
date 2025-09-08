@@ -112,17 +112,33 @@
     }
   }
 }
+@include desktop-media {
+  .promo {
+    &__main-image {
+      &-wrapper {
+        right: 6.375vw;
+      }
+    }
+    &__content {
+      padding-block: rem(50) 0;
+    }
+
+    &__title {
+      max-width: rem(700);
+      margin-bottom: rem(31);
+    }
+
+    &__subtitle {
+      max-width: rem(380);
+    }
+  }
+}
 @include laptop-media {
   .promo {
     &__main-image {
       &-wrapper {
         right: 5.375vw;
       }
-    }
-
-    &__title {
-      max-width: rem(705);
-      margin-bottom: rem(31);
     }
 
     &__subtitle {
