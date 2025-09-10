@@ -1,0 +1,151 @@
+@use "../../healpers" as *;
+@use "about-service-list";
+/* Section about-service.refill-conditioning page (2 sections) */
+.about-service {
+  &--material {
+    margin-bottom: fluid(170, 60);
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+
+    gap: rem(20);
+    width: 100%;
+    padding-inline: 0 rem(44);
+  }
+
+  &__image {
+    &-wrapper {
+      position: relative;
+      flex-shrink: 0;
+      width: rem(618);
+      height: rem(374);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: var(--border-radius-small);
+        background: var(--color-red-opcity-15);
+      }
+
+      &--material {
+        height: rem(371);
+      }
+    }
+
+    border-radius: var(--border-radius-small);
+    width: inherit;
+    height: inherit;
+  }
+
+  &__content {
+    max-width: rem(530);
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(40, 20);
+
+    &--justify-center {
+      justify-content: center;
+    }
+  }
+
+  &__heading {
+    line-height: 1.2;
+  }
+
+  &__text {
+    line-height: 1.47;
+    color: var(--text-color-dark-secondary);
+
+    p:not(:last-child) {
+      margin-bottom: rem(18);
+    }
+  }
+}
+@include desktop-media {
+  .about-service {
+    &__body {
+      justify-content: start;
+      padding-inline: 0;
+    }
+  }
+}
+@include laptop-media {
+  .about-service {
+    &__image {
+      &-wrapper {
+        align-self: center;
+      }
+    }
+
+    &__body {
+      flex-direction: column;
+      align-items: start;
+      padding-inline: unset;
+    }
+
+    &__content {
+      max-width: unset;
+      align-self: center;
+    }
+
+    &__heading {
+      text-align: center;
+    }
+  }
+}
+@include mobile-media {
+  .about-service {
+    padding-block: 0 rem(20);
+
+    // &--advantages {
+    //   padding-block: 0 rem(20);
+    // }
+
+    &__image {
+      &-wrapper {
+        width: rem(340);
+        height: rem(183);
+
+        &--material {
+          height: rem(204);
+        }
+      }
+    }
+
+    &__body {
+      gap: rem(20);
+    }
+
+    &__content {
+      padding-block: rem(20) 0;
+    }
+
+    &__heading {
+      line-height: 1.5;
+    }
+
+    &__text {
+      line-height: 1.5;
+
+      p {
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}
+@include mobile-s-media {
+  .about-service {
+    &__heading {
+      text-align: start;
+    }
+  }
+}
+/*  ==========================  */
+/*  =====END about-service====  */
+/*  ==========================  */

@@ -27,6 +27,9 @@
   &--big-to-small-margin {
     margin-bottom: var(--section-margin-y-big-to-small);
   }
+  &--extra-big-to-small-margin {
+    margin-bottom: var(--section-margin-y-extra-big-to-small);
+  }
 
   &__title {
     margin-block: 0 fluid(50, 20);

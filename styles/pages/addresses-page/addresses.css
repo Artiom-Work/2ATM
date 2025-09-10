@@ -242,6 +242,7 @@ svg * {
   --section-margin-y-extra-big-to-medium: clamp(3.75rem, 1.7151162791rem + 8.1395348837vw, 8.125rem);
   --section-margin-y-big-to-medium: clamp(3.75rem, 2.0058139535rem + 6.976744186vw, 7.5rem);
   --section-margin-y-big-to-small: clamp(2.5rem, 0.1744186047rem + 9.3023255814vw, 7.5rem);
+  --section-margin-y-extra-big-to-small: clamp(2.5rem, -0.1162790698rem + 10.4651162791vw, 8.125rem);
   --button-height-small: 2.125rem;
   --button-height: 2.75rem;
   --button-height-big: 2.875rem;
@@ -632,6 +633,9 @@ button[aria-label]:not(.promotion__card-link)::before {
 }
 .section--big-to-small-margin {
   margin-bottom: var(--section-margin-y-big-to-small);
+}
+.section--extra-big-to-small-margin {
+  margin-bottom: var(--section-margin-y-extra-big-to-small);
 }
 .section__title {
   margin-block: 0 clamp(1.25rem, 0.3779069767rem + 3.488372093vw, 3.125rem);

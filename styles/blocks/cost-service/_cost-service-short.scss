@@ -1,0 +1,29 @@
+@use "../../healpers" as *;
+@use "../сommon-blocks/auth-portal";
+@use "service-cost-card";
+/* Section cost-service.(short verstion, without buttons) */
+.cost-service {
+  &__banner {
+    margin-bottom: fluid(24, 10);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: fluid(24, 10);
+    margin-bottom: fluid(50, 20);
+  }
+}
+
+@include mobile-media {
+  .cost-service {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+/*  =========================  */
+/*  =====END cost-service====  */
+/*  =========================  */

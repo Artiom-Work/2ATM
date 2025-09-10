@@ -21,6 +21,11 @@
     gap: rem(10);
   }
 
+  &--small-top-padding {
+    justify-content: start;
+    padding: rem(16) rem(20) rem(20);
+    gap: rem(21);
+  }
   &--gap-24 {
     gap: rem(24);
   }
