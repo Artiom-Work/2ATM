@@ -1,23 +1,29 @@
 /* Search block. ( form + input + button) .part of block locations */
 .search {
   --searchBlockHeight: 2.375rem;
+  --searchBlockHeightHigh: 3.125rem;
   --searchBgColor: var(--color-light);
   --searchBgColorHover: var(--color-gray-100);
   --searchBorder: var(--border-light);
   --searchIconColor: var(--color-border-medium);
   position: relative;
   display: block;
+  height: 100%;
 }
 .search__input {
   min-height: var(--searchBlockHeight);
+  height: 100%;
   width: 100%;
-  padding-inline: 1.25rem calc(var(--searchBlockHeight) + 1.25rem);
+  padding-inline: 0.625rem calc(var(--searchBlockHeight) + 1.25rem);
   padding-block: 0.1875rem;
   border: none;
   outline: var(--searchBorder);
   border-radius: var(--border-radius-small);
   background-color: var(--searchBgColor);
   transition-duration: var(--transition-duration) !important;
+}
+.search__input--high {
+  min-height: var(--searchBlockHeightHigh);
 }
 .search__input:focus {
   background-color: var(--searchBgColor) !important;
@@ -47,6 +53,9 @@
   min-height: var(--searchBlockHeight);
   width: var(--searchBlockHeight);
 }
+.search__button--high {
+  min-height: var(--searchBlockHeightHigh);
+}
 @media (any-hover: hover) {
   .search__button:hover {
     filter: opacity(0.6);
@@ -65,6 +74,11 @@
   stroke: var(--searchIconColor);
 }
 
+@media (width <= 47.99875rem) {
+  .search {
+    --searchBlockHeightHigh: 2.625rem;
+  }
+}
 /* Styles for location-card . Source - block locations */
 .location-card {
   --locationCardBg: var(--color-light);

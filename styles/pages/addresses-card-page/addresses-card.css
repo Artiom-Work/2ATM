@@ -445,12 +445,12 @@ a:active {
   transition-duration: 0s !important;
 }
 
-a[aria-label],
-button[aria-label] {
+a[aria-label]:not(.promotion__card-link),
+button[aria-label]:not(.promotion__card-link) {
   position: relative;
 }
-a[aria-label]::before,
-button[aria-label]::before {
+a[aria-label]:not(.promotion__card-link)::before,
+button[aria-label]:not(.promotion__card-link)::before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1026,23 +1026,29 @@ button[aria-label]::before {
 /* Search block. ( form + input + button) .part of block locations */
 .search {
   --searchBlockHeight: 2.375rem;
+  --searchBlockHeightHigh: 3.125rem;
   --searchBgColor: var(--color-light);
   --searchBgColorHover: var(--color-gray-100);
   --searchBorder: var(--border-light);
   --searchIconColor: var(--color-border-medium);
   position: relative;
   display: block;
+  height: 100%;
 }
 .search__input {
   min-height: var(--searchBlockHeight);
+  height: 100%;
   width: 100%;
-  padding-inline: 1.25rem calc(var(--searchBlockHeight) + 1.25rem);
+  padding-inline: 0.625rem calc(var(--searchBlockHeight) + 1.25rem);
   padding-block: 0.1875rem;
   border: none;
   outline: var(--searchBorder);
   border-radius: var(--border-radius-small);
   background-color: var(--searchBgColor);
   transition-duration: var(--transition-duration) !important;
+}
+.search__input--high {
+  min-height: var(--searchBlockHeightHigh);
 }
 .search__input:focus {
   background-color: var(--searchBgColor) !important;
@@ -1072,6 +1078,9 @@ button[aria-label]::before {
   min-height: var(--searchBlockHeight);
   width: var(--searchBlockHeight);
 }
+.search__button--high {
+  min-height: var(--searchBlockHeightHigh);
+}
 @media (any-hover: hover) {
   .search__button:hover {
     filter: opacity(0.6);
@@ -1090,6 +1099,11 @@ button[aria-label]::before {
   stroke: var(--searchIconColor);
 }
 
+@media (width <= 47.99875rem) {
+  .search {
+    --searchBlockHeightHigh: 2.625rem;
+  }
+}
 /* Styles for location-card . Source - block locations */
 .location-card {
   --locationCardBg: var(--color-light);

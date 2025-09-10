@@ -445,12 +445,12 @@ a:active {
   transition-duration: 0s !important;
 }
 
-a[aria-label],
-button[aria-label] {
+a[aria-label]:not(.promotion__card-link),
+button[aria-label]:not(.promotion__card-link) {
   position: relative;
 }
-a[aria-label]::before,
-button[aria-label]::before {
+a[aria-label]:not(.promotion__card-link)::before,
+button[aria-label]:not(.promotion__card-link)::before {
   position: absolute;
   top: 50%;
   left: 50%;

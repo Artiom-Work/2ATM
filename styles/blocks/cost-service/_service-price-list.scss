@@ -1,0 +1,57 @@
+@use "../../healpers" as *;
+
+/* Styles for service-price-list. Part of section cost-service */
+.service-price-list {
+  width: 100%;
+  padding-block: fluid(20, 0);
+
+  &__item {
+    @include flex-space-between;
+
+    gap: rem(10);
+    width: 100%;
+    font-weight: 700;
+    font-size: fluid(20, 17);
+    line-height: 1.3;
+    text-transform: uppercase;
+    min-height: rem(50);
+
+    span {
+      min-width: rem(212);
+    }
+
+    &--heading {
+      min-height: rem(40);
+      font-size: fluid(17, 15);
+      line-height: 1.3;
+      letter-spacing: var(--letter-spacing-big);
+      color: var(--text-color-dark-secondary);
+    }
+  }
+
+  &__icon-block {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@include mobile-media {
+  .service-price-list {
+    &__item {
+      line-height: 1.2;
+
+      span {
+        min-width: rem(81);
+      }
+
+      &--heading {
+        letter-spacing: 0;
+        min-height: rem(50);
+
+        span {
+          min-width: unset;
+        }
+      }
+    }
+  }
+}

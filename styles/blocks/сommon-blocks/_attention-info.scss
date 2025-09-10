@@ -15,15 +15,19 @@
   &__text {
     color: var(--text-color-dark-secondary);
     line-height: 1.47;
+
+    &--static-fs {
+      font-size: rem(18);
+    }
+
+    p:not(:last-child) {
+      margin-bottom: rem(17);
+    }
   }
 }
 @include mobile-media {
   .attention-info {
     flex-direction: column;
-
-    &__text {
-      line-height: 1.49;
-    }
   }
 }
 /* ===================================== */

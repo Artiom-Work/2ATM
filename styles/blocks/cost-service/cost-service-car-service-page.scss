@@ -1,0 +1,41 @@
+@use "../../healpers" as *;
+@use "cost-service-banner";
+@use "../сommon-blocks/auth-portal";
+@use "../сommon-blocks/search";
+@use "../сommon-blocks/attention-info";
+@use "services-tabs";
+@use "service-price-list";
+/* Section cost-service. Styles for page car-service */
+
+.cost-service {
+  &__banner {
+    margin-bottom: fluid(50, 10);
+  }
+
+  &__tabs {
+    margin-bottom: rem(30);
+  }
+
+  &__buttons {
+    @include flex-center;
+
+    gap: fluid(20, 10);
+    margin-bottom: rem(30);
+  }
+
+  &__button {
+    font-size: rem(16);
+  }
+}
+
+@include mobile-medium-media {
+  .cost-service {
+    &__buttons {
+      flex-direction: column;
+      padding-inline: rem(30);
+    }
+  }
+}
+/*  =========================  */
+/*  =====END cost-service====  */
+/*  =========================  */

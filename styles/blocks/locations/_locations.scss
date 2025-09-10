@@ -1,5 +1,5 @@
 @use "../../healpers" as *;
-@use "search";
+@use "../сommon-blocks/search";
 @use "locations-filter";
 @use "locations-card";
 @use "map-block";
@@ -62,6 +62,7 @@
       &--search {
         position: sticky;
         top: 0;
+        z-index: 3;
 
         animation-name: scrolling-sticky;
         animation-fill-mode: both;

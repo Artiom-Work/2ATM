@@ -86,7 +86,7 @@ a {
 
 a,
 button {
-  &[aria-label] {
+  &[aria-label]:not(.promotion__card-link) {
     position: relative;
 
     &::before {

@@ -60,7 +60,6 @@
   &-taxt {
     @include fluid-text(14, 12);
 
-    letter-spacing: var(--letter-spacing-large);
     line-height: 1.4;
     &--uppercase {
       text-transform: uppercase;
@@ -94,7 +93,7 @@
 }
 @include tablet-media {
   .promotion {
-    .promotion__list {
+    &__list {
       display: flex;
       flex-direction: column;
     }

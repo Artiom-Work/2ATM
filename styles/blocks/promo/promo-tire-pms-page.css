@@ -28,14 +28,14 @@
   height: inherit;
 }
 .promo__main-image-wrapper {
-  width: 54.75rem;
+  width: 45rem;
   height: 37.5rem;
   position: absolute;
   top: 0;
-  right: 10.1875rem;
+  right: 8.4375rem;
 }
 .promo__content {
-  padding-block: clamp(3.125rem, 1.7005813953rem + 5.6976744186vw, 6.1875rem) 0;
+  padding-block: clamp(3.125rem, -0.5087209302rem + 14.5348837209vw, 10.9375rem) 0;
 }
 .promo__title {
   position: relative;
@@ -90,8 +90,8 @@
     --container-padding-x: 2.6875rem;
   }
   .promo__main-image-wrapper {
-    width: 25.4375rem;
-    height: 19.625rem;
+    width: 26.1875rem;
+    height: 21rem;
     right: 1.875rem;
     top: unset;
     bottom: 7.25rem;
@@ -172,4 +172,4 @@
 /*  =====END promo block(tire-pms)====  */
 /*  ==================================  */
 
-/*# sourceMappingURL=promo-argon-welding.css.map */
+/*# sourceMappingURL=promo-tire-pms-page.css.map */

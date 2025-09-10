@@ -1,4 +1,4 @@
-/* Section promo. Styles for tire-pms page */
+/* Section promo. Styles for argon-wilding page */
 .promo {
   position: relative;
   min-height: 37.5rem;
@@ -28,14 +28,14 @@
   height: inherit;
 }
 .promo__main-image-wrapper {
-  width: 45rem;
+  width: 54.75rem;
   height: 37.5rem;
   position: absolute;
   top: 0;
-  right: 8.4375rem;
+  right: 10.1875rem;
 }
 .promo__content {
-  padding-block: clamp(3.125rem, -0.5087209302rem + 14.5348837209vw, 10.9375rem) 0;
+  padding-block: clamp(3.125rem, 1.7005813953rem + 5.6976744186vw, 6.1875rem) 0;
 }
 .promo__title {
   position: relative;
@@ -90,8 +90,8 @@
     --container-padding-x: 2.6875rem;
   }
   .promo__main-image-wrapper {
-    width: 26.1875rem;
-    height: 21rem;
+    width: 25.4375rem;
+    height: 19.625rem;
     right: 1.875rem;
     top: unset;
     bottom: 7.25rem;
@@ -168,8 +168,8 @@
     padding-inline: 0.875rem;
   }
 }
-/*  ==================================  */
-/*  =====END promo block(tire-pms)====  */
-/*  ==================================  */
+/*  ========================================  */
+/*  =====END promo block(argon-weilding)====  */
+/*  ========================================  */
 
-/*# sourceMappingURL=promo-tire-pms.css.map */
+/*# sourceMappingURL=promo-argon-welding-page.css.map */

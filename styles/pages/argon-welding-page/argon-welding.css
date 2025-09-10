@@ -445,12 +445,12 @@ a:active {
   transition-duration: 0s !important;
 }
 
-a[aria-label],
-button[aria-label] {
+a[aria-label]:not(.promotion__card-link),
+button[aria-label]:not(.promotion__card-link) {
   position: relative;
 }
-a[aria-label]::before,
-button[aria-label]::before {
+a[aria-label]:not(.promotion__card-link)::before,
+button[aria-label]:not(.promotion__card-link)::before {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1023,7 +1023,7 @@ button[aria-label]::before {
 /*  ===================================  */
 /*  ==========END page-heading=========  */
 /*  ===================================  */
-/* Section promo. Styles for tire-pms page */
+/* Section promo. Styles for argon-wilding page */
 .promo {
   position: relative;
   min-height: 37.5rem;
@@ -1193,9 +1193,9 @@ button[aria-label]::before {
     padding-inline: 0.875rem;
   }
 }
-/*  ==================================  */
-/*  =====END promo block(tire-pms)====  */
-/*  ==================================  */
+/*  ========================================  */
+/*  =====END promo block(argon-weilding)====  */
+/*  ========================================  */
 /* common-block auth-portal. */
 .auth-portal__wrapper {
   display: flex;
