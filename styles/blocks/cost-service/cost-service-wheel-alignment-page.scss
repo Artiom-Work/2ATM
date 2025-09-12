@@ -1,0 +1,85 @@
+@use "../../healpers" as *;
+@use "../сommon-blocks/auth-portal";
+@use "../сommon-blocks/attention-info";
+@use "service-cost-card";
+@use "cost-service-color-table";
+/* Section cost-service for wheel-alignment page */
+.cost-service {
+  &__banner,
+  &__table-wrapper,
+  &__text,
+  &__attentions {
+    margin-bottom: fluid(50, 20);
+  }
+
+  &__table-wrapper {
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x);
+  }
+
+  &__text {
+    line-height: 1.5;
+
+    p {
+      margin-bottom: rem(23);
+    }
+  }
+
+  &__attentions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: rem(24);
+  }
+}
+@include desktop-media {
+  .cost-service {
+    &__table-wrapper {
+      padding-inline: rem(10);
+    }
+  }
+}
+@media (width <= rem(1425.98)) {
+  .cost-service {
+    &__table-wrapper {
+      overflow: hidden;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-block: 0 rem(10);
+    }
+  }
+}
+@include laptop-media {
+  .cost-service {
+    &__table-wrapper {
+      justify-content: start;
+    }
+  }
+}
+@include tablet-media {
+  .cost-service {
+    &__attentions {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+  }
+}
+
+@include mobile-media {
+  .cost-service {
+    &__text {
+      padding-inline: rem(11) rem(40);
+
+      p {
+        margin-bottom: rem(10);
+      }
+    }
+  }
+}
+
+/*  =========================  */
+/*  =====END cost-service====  */
+/*  =========================  */

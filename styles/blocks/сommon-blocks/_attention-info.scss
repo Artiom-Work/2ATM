@@ -20,6 +20,13 @@
       font-size: rem(18);
     }
 
+    &--small {
+      @include fluid-text(16, 15);
+
+      line-height: 1.36;
+      padding-inline: rem(11);
+    }
+
     p:not(:last-child) {
       margin-bottom: rem(17);
     }

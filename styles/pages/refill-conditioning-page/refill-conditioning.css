@@ -1475,55 +1475,6 @@ button[aria-label]:not(.promotion__card-link)::before {
 /*  ===================================  */
 /*  ======END appointment-choose=======  */
 /*  ===================================  */
-/* Block about-service-list. part of section about-service */
-.about-service-list {
-  max-width: 29.125rem;
-}
-.about-service-list__item {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 1.25rem;
-}
-.about-service-list__item:not(:last-child) {
-  margin-bottom: 1.25rem;
-}
-.about-service-list__item:not(:last-child) .about-service-list__icon-wrapper::after {
-  content: "";
-  position: absolute;
-  top: calc(100% + 0.625rem);
-  left: 50%;
-  width: 0.0625rem;
-  height: 2.5rem;
-  background-color: var(--color-orange);
-}
-.about-service-list__item:not(:last-child) .about-service-list__icon-wrapper--tall-decor::after {
-  height: 5rem;
-}
-.about-service-list__icon-wrapper {
-  width: 2rem;
-  height: 2rem;
-  flex-shrink: 0;
-  position: relative;
-}
-.about-service-list__heading {
-  font-size: 0.9375rem;
-  line-height: 1.1;
-  text-transform: uppercase;
-}
-.about-service-list__heading:not(:last-child) {
-  margin-bottom: 0.625rem;
-}
-.about-service-list__text {
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
-@media (width <= 81.31125rem) {
-  .about-service-list {
-    max-width: unset;
-  }
-}
 /* Section about-service.refill-conditioning page (2 sections) */
 .about-service--material {
   margin-bottom: clamp(3.75rem, 0.5523255814rem + 12.7906976744vw, 10.625rem);

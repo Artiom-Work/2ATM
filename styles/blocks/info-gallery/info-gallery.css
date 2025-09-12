@@ -1,0 +1,68 @@
+/* Styles for section info-gallery ( Slider) . Sourse -- wheel-alignment page */
+.info-gallery {
+  --infoGalleryTextColor: var(--color-gray-850);
+  --infoGallerySlidesQuantity: 4;
+  --infoGalleryCardBg: 4;
+  overflow-x: hidden;
+}
+.info-gallery__slider {
+  margin-block: 0 clamp(1.25rem, 0.3779069767rem + 3.488372093vw, 3.125rem);
+}
+.info-gallery__slider-wrapper {
+  display: grid;
+  grid-template-rows: auto !important;
+  grid-template-columns: repeat(var(--infoGallerySlidesQuantity), 18.5625rem);
+  column-gap: 1.5rem;
+}
+.info-gallery__card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  height: 100%;
+  background-color: var(--infoGalleryCardBg);
+  border: var(--border-light);
+  border-radius: var(--border-radius-small);
+}
+.info-gallery__card-image {
+  width: 18.5625rem;
+  height: 8.75rem;
+  border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
+}
+.info-gallery__card-heading {
+  font-size: clamp(0.9375rem, 0.8502906977rem + 0.3488372093vw, 1.125rem);
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: var(--infoGalleryTextColor);
+  padding-inline: 1.25rem;
+}
+.info-gallery__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.625rem, 0.3343023256rem + 1.1627906977vw, 1.25rem);
+}
+.info-gallery__button {
+  font-size: 1rem;
+}
+
+@media (width <= 47.99875rem) {
+  .info-gallery__card {
+    padding-block: 0 1.8125rem;
+  }
+  .info-gallery__card-heading {
+    text-align: center;
+  }
+}
+@media (width <= 35.93625rem) {
+  .info-gallery__buttons {
+    flex-direction: column;
+    padding-inline: 1.875rem;
+    margin-bottom: unset;
+  }
+}
+/*  =========================  */
+/*  =====END info-gallery====  */
+/*  =========================  */
+
+/*# sourceMappingURL=info-gallery.css.map */

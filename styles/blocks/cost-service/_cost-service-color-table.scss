@@ -1,0 +1,68 @@
+@use "../../healpers" as *;
+/* Styles for block-table with cervice prices.Part of cost-service section */
+.cost-service-table {
+  --tableHeadingCellsBgColor: var(--color-gray-800);
+  --tableHeadingCellsColor: var(--color-light);
+  --tableCellsBgColor: var(--color-gray-75);
+
+  font-weight: 700;
+  font-size: rem(17);
+  line-height: 1.2;
+  text-transform: uppercase;
+  max-width: rem(1260);
+  width: 100%;
+
+  &__icon {
+    fill: var(--tableHeadingCellsColor);
+  }
+
+  &__text-small {
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: 1.4;
+    color: var(--text-color-dark-secondary);
+    text-transform: none;
+  }
+
+  tr {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: fluid(24, 10);
+    margin-bottom: fluid(24, 10);
+  }
+
+  tbody {
+    tr:last-child {
+      margin-bottom: unset;
+    }
+  }
+
+  th {
+    @include flex-center;
+
+    column-gap: rem(10);
+    background-color: var(--tableHeadingCellsBgColor);
+    color: var(--tableHeadingCellsColor);
+    min-width: rem(261);
+  }
+
+  td {
+    text-align: center;
+    background-color: var(--tableCellsBgColor);
+  }
+
+  th:first-child,
+  td:first-child {
+    min-width: rem(404);
+    justify-content: start;
+    text-align: start;
+  }
+
+  th,
+  td {
+    height: rem(76);
+    border-radius: var(--border-radius-small);
+    padding: rem(7) rem(10);
+    align-content: center;
+  }
+}

@@ -1,0 +1,115 @@
+/* Section about-service.refill-conditioning page (2 sections) */
+.about-service--material {
+  margin-bottom: clamp(3.75rem, 0.5523255814rem + 12.7906976744vw, 10.625rem);
+}
+.about-service__body {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem;
+  width: 100%;
+  padding-inline: 0 2.75rem;
+}
+.about-service__image {
+  border-radius: var(--border-radius-small);
+  width: inherit;
+  height: inherit;
+}
+.about-service__image-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: 38.625rem;
+  height: 23.375rem;
+}
+.about-service__image-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--border-radius-small);
+  background: var(--color-red-opcity-15);
+}
+.about-service__image-wrapper--material {
+  height: 23.1875rem;
+}
+.about-service__content {
+  max-width: 33.125rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(1.25rem, 0.6686046512rem + 2.3255813953vw, 2.5rem);
+}
+.about-service__content--justify-center {
+  justify-content: center;
+}
+.about-service__heading {
+  line-height: 1.2;
+}
+.about-service__text {
+  line-height: 1.47;
+  color: var(--text-color-dark-secondary);
+}
+.about-service__text p:not(:last-child) {
+  margin-bottom: 1.125rem;
+}
+
+@media (width <= 100.06125rem) {
+  .about-service__body {
+    justify-content: start;
+    padding-inline: 0;
+  }
+}
+@media (width <= 81.31125rem) {
+  .about-service__image-wrapper {
+    align-self: center;
+  }
+  .about-service__body {
+    flex-direction: column;
+    align-items: start;
+    padding-inline: unset;
+  }
+  .about-service__content {
+    max-width: unset;
+    align-self: center;
+  }
+  .about-service__heading {
+    text-align: center;
+  }
+}
+@media (width <= 47.99875rem) {
+  .about-service {
+    padding-block: 0 1.25rem;
+  }
+  .about-service__image-wrapper {
+    width: 21.25rem;
+    height: 11.4375rem;
+  }
+  .about-service__image-wrapper--material {
+    height: 12.75rem;
+  }
+  .about-service__body {
+    gap: 1.25rem;
+  }
+  .about-service__content {
+    padding-block: 1.25rem 0;
+  }
+  .about-service__heading {
+    line-height: 1.5;
+  }
+  .about-service__text {
+    line-height: 1.5;
+  }
+  .about-service__text p {
+    margin-bottom: 0 !important;
+  }
+}
+@media (width <= 30.06125rem) {
+  .about-service__heading {
+    text-align: start;
+  }
+}
+/*  ==========================  */
+/*  =====END about-service====  */
+/*  ==========================  */
+
+/*# sourceMappingURL=about-service-refill-conditioning.css.map */

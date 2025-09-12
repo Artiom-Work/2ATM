@@ -1,0 +1,82 @@
+@use "../../healpers" as *;
+
+/* Styles for section info-gallery ( Slider) . Sourse -- wheel-alignment page */
+.info-gallery {
+  --infoGalleryTextColor: var(--color-gray-850);
+  --infoGallerySlidesQuantity: 4;
+  --infoGalleryCardBg: 4;
+
+  overflow-x: hidden;
+
+  &__slider {
+    margin-block: 0 fluid(50, 20);
+
+    &-wrapper {
+      display: grid;
+      grid-template-rows: auto !important;
+      grid-template-columns: repeat(var(--infoGallerySlidesQuantity), rem(297));
+      column-gap: rem(24);
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+
+    gap: rem(20);
+    height: 100%;
+    background-color: var(--infoGalleryCardBg);
+    border: var(--border-light);
+    border-radius: var(--border-radius-small);
+
+    &-image {
+      width: rem(297);
+      height: rem(140);
+      border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
+    }
+
+    &-heading {
+      @include fluid-text(18, 15);
+
+      font-weight: 700;
+      line-height: 1.25;
+      text-transform: uppercase;
+      color: var(--infoGalleryTextColor);
+      padding-inline: rem(20);
+    }
+  }
+
+  &__buttons {
+    @include flex-center;
+
+    gap: fluid(20, 10);
+  }
+
+  &__button {
+    font-size: rem(16);
+  }
+}
+
+@include mobile-media {
+  .info-gallery {
+    &__card {
+      padding-block: 0 rem(29);
+
+      &-heading {
+        text-align: center;
+      }
+    }
+  }
+}
+@include mobile-medium-media {
+  .info-gallery {
+    &__buttons {
+      flex-direction: column;
+      padding-inline: rem(30);
+      margin-bottom: unset;
+    }
+  }
+}
+/*  =========================  */
+/*  =====END info-gallery====  */
+/*  =========================  */

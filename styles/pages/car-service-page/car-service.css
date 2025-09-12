@@ -1524,6 +1524,11 @@ button[aria-label]:not(.promotion__card-link)::before {
 .attention-info__text--static-fs {
   font-size: 1.125rem;
 }
+.attention-info__text--small {
+  font-size: clamp(0.9375rem, 0.9084302326rem + 0.1162790698vw, 1rem);
+  line-height: 1.36;
+  padding-inline: 0.6875rem;
+}
 .attention-info__text p:not(:last-child) {
   margin-bottom: 1.0625rem;
 }
