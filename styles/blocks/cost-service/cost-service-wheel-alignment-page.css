@@ -88,116 +88,12 @@
   .attention-info {
     flex-direction: column;
   }
+  .attention-info__text {
+    line-height: 1.49;
+  }
 }
 /* ===================================== */
 /* ===================================== */
-/* Styles for service-cost-card. Part of cost-service list */
-.service-cost-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.0625rem;
-  height: 100%;
-  outline: var(--border-light);
-  border-radius: var(--border-radius-small);
-  padding: 1.875rem 1.25rem;
-}
-.service-cost-card--accent-bg {
-  background-color: var(--color-gray-75);
-}
-.service-cost-card--big-padding {
-  padding-block: 3.125rem;
-  gap: 0.625rem;
-}
-.service-cost-card--small-top-padding {
-  justify-content: start;
-  padding: 1rem 1.25rem 1.25rem;
-  gap: 1.3125rem;
-}
-.service-cost-card--gap-24 {
-  gap: 1.5rem;
-}
-.service-cost-card--gap-20 {
-  gap: 1.25rem;
-}
-.service-cost-card--gap-20-to-0 {
-  gap: clamp(0rem, -0.5813953488rem + 2.3255813953vw, 1.25rem) !important;
-}
-.service-cost-card--medium-padding {
-  padding-block: 1.25rem;
-  justify-content: start;
-}
-.service-cost-card--small-padding {
-  padding: 0.625rem;
-  align-items: start;
-  gap: 1.0625rem;
-}
-.service-cost-card__text {
-  line-height: 1.47;
-  text-align: center;
-  color: var(--text-color-dark-secondary);
-}
-.service-cost-card__text--left {
-  text-align: start;
-}
-.service-cost-card__text--static-fs {
-  font-size: 1.125rem;
-}
-.service-cost-card__text--semi-bold {
-  font-weight: 600;
-  color: var(--text-color-dark);
-}
-.service-cost-card__text--width-300 {
-  max-width: 18.75rem;
-}
-.service-cost-card__text-big {
-  font-size: clamp(1.0625rem, 0.9752906977rem + 0.3488372093vw, 1.25rem);
-  font-weight: 700;
-  line-height: 1.3;
-  text-transform: uppercase;
-  text-align: center;
-}
-.service-cost-card__text-extra-big {
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 1.1;
-  text-transform: uppercase;
-  text-align: center;
-}
-.service-cost-card__text:has(.service-cost-card__asside-tag) {
-  width: 100%;
-  display: flex;
-  gap: 1.25rem;
-  text-align: start;
-}
-.service-cost-card__text:has(.service-cost-card__asside-tag) .service-cost-card__asside-tag {
-  min-width: 6.25rem;
-}
-.service-cost-card:has(.service-cost-card__list) .service-cost-card__list {
-  line-height: 1.5;
-}
-.service-cost-card:has(.service-cost-card__list) .service-cost-card__list--color-light {
-  color: var(--text-color-dark-secondary);
-}
-.service-cost-card:has(.service-cost-card__list) .service-cost-card__list:has(:nth-child(2)) {
-  list-style-type: disc;
-  padding-left: 1.6875rem;
-}
-
-@media (width <= 47.99875rem) {
-  .service-cost-card__text-big {
-    line-height: 1.2;
-  }
-  .service-cost-card__text-extra-big {
-    color: var(--color-accent-600);
-  }
-  .service-cost-card__text:has(.service-cost-card__asside-tag) {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
 /* Styles for block-table with cervice prices.Part of cost-service section */
 .cost-service-table {
   --tableHeadingCellsBgColor: var(--color-gray-800);

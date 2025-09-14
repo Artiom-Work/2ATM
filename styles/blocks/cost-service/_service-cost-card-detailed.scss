@@ -1,0 +1,135 @@
+@use "../../healpers" as *;
+/* Styles for service-cost-card.Detailed sevice-cost-card.( page car-wash )  */
+.service-cost-card {
+  height: 100%;
+  outline: var(--border-light);
+  border-radius: var(--border-radius-small);
+  padding: rem(13.5) rem(20) rem(13);
+  background-color: var(--color-gray-75);
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas:
+    "name name"
+    "text list"
+    "bonus bonus";
+  gap: rem(20);
+
+  &--big-padding-top {
+    padding: rem(35) rem(20) rem(13);
+  }
+
+  &__name {
+    grid-area: name;
+    font-weight: 700;
+    font-size: rem(20);
+    line-height: 1.5;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__text-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: text;
+    line-height: 1.5;
+    color: var(--text-color-dark-secondary);
+    list-style: disc;
+    margin-left: rem(25);
+    min-width: rem(333);
+  }
+
+  &__price-list {
+    grid-area: list;
+    min-width: rem(190);
+  }
+
+  &__price-list-item {
+    @include flex-space-between;
+
+    column-gap: rem(10);
+    min-height: rem(50);
+  }
+
+  &__icon {
+    fill: var(--color-accent);
+    flex-shrink: 0;
+  }
+
+  &__price {
+    @include fluid-text(20, 17);
+
+    font-weight: 700;
+    min-width: rem(120);
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__bonus {
+    grid-area: bonus;
+    @include fluid-text(18, 15);
+
+    font-weight: 700;
+    line-height: 1.25;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+@include desktop-media {
+  .service-cost-card {
+    &__text-list {
+      min-width: unset;
+    }
+
+    &__price-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
+@include laptop-media {
+  .service-cost-card {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name"
+      "list"
+      "text"
+      "bonus";
+  }
+}
+@include mobile-media {
+  .service-cost-card {
+    padding: rem(20) rem(20) 0;
+    max-width: rem(500);
+    margin-inline: auto;
+    gap: 0;
+
+    &--big-padding-top {
+      padding: rem(20) rem(20) 0;
+    }
+
+    &__name {
+      margin-bottom: rem(20);
+    }
+
+    &__text-list {
+      margin-bottom: rem(20);
+    }
+
+    &__price-list {
+      margin-bottom: rem(10);
+    }
+
+    &__price {
+      min-width: unset;
+      line-height: 1.2;
+    }
+
+    &__bonus {
+      margin-bottom: rem(20);
+    }
+  }
+}

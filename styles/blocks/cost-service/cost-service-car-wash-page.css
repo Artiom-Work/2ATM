@@ -1,0 +1,244 @@
+/* common-block auth-portal. */
+.auth-portal__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.90625rem;
+  background-color: var(--color-accent);
+  border-radius: var(--border-radius-small);
+}
+.auth-portal__text {
+  font-weight: 700;
+  font-size: 1.0625rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--text-color-light);
+}
+.auth-portal__image {
+  width: inherit;
+  height: inherit;
+}
+.auth-portal__image-wrapper {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+.auth-portal__button {
+  background-color: var(--color-light);
+  color: var(--text-color-dark);
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  letter-spacing: var(--letter-spacing);
+  min-height: var(--auth-portal-button-height);
+  padding-block: 0.375rem;
+}
+
+@media (width <= 63.99875rem) {
+  .auth-portal__wrapper {
+    gap: 0.75rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .auth-portal__wrapper {
+    flex-direction: column;
+    padding-inline: 0.71875rem;
+    padding-block: 1.25rem;
+  }
+  .auth-portal__text {
+    text-align: center;
+    line-height: 1.2;
+  }
+  .auth-portal__image-wrapper {
+    rotate: 90deg;
+  }
+}
+/*  ==============================  */
+/*  =====END block auth-portal====  */
+/*  ==============================  */
+/* Syles for text-block attention-info */
+.attention-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.625rem;
+  border: var(--border-light);
+  border-radius: var(--border-radius-small);
+}
+.attention-info__icon {
+  flex-shrink: 0;
+}
+.attention-info__text {
+  color: var(--text-color-dark-secondary);
+  line-height: 1.47;
+}
+.attention-info__text--static-fs {
+  font-size: 1.125rem;
+}
+.attention-info__text--small {
+  font-size: clamp(0.9375rem, 0.9084302326rem + 0.1162790698vw, 1rem);
+  line-height: 1.36;
+  padding-inline: 0.6875rem;
+}
+.attention-info__text p:not(:last-child) {
+  margin-bottom: 1.0625rem;
+}
+
+@media (width <= 47.99875rem) {
+  .attention-info {
+    flex-direction: column;
+  }
+  .attention-info__text {
+    line-height: 1.49;
+  }
+}
+/* ===================================== */
+/* ===================================== */
+/* Styles for service-cost-card.Detailed sevice-cost-card.( page car-wash )  */
+.service-cost-card {
+  height: 100%;
+  outline: var(--border-light);
+  border-radius: var(--border-radius-small);
+  padding: 0.84375rem 1.25rem 0.8125rem;
+  background-color: var(--color-gray-75);
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-areas: "name name" "text list" "bonus bonus";
+  gap: 1.25rem;
+}
+.service-cost-card--big-padding-top {
+  padding: 2.1875rem 1.25rem 0.8125rem;
+}
+.service-cost-card__name {
+  grid-area: name;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-align: center;
+}
+.service-cost-card__text-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-area: text;
+  line-height: 1.5;
+  color: var(--text-color-dark-secondary);
+  list-style: disc;
+  margin-left: 1.5625rem;
+  min-width: 20.8125rem;
+}
+.service-cost-card__price-list {
+  grid-area: list;
+  min-width: 11.875rem;
+}
+.service-cost-card__price-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 0.625rem;
+  min-height: 3.125rem;
+}
+.service-cost-card__icon {
+  fill: var(--color-accent);
+  flex-shrink: 0;
+}
+.service-cost-card__price {
+  font-size: clamp(1.0625rem, 0.9752906977rem + 0.3488372093vw, 1.25rem);
+  font-weight: 700;
+  min-width: 7.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+}
+.service-cost-card__bonus {
+  grid-area: bonus;
+  font-size: clamp(0.9375rem, 0.8502906977rem + 0.3488372093vw, 1.125rem);
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media (width <= 100.06125rem) {
+  .service-cost-card__text-list {
+    min-width: unset;
+  }
+  .service-cost-card__price-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (width <= 81.31125rem) {
+  .service-cost-card {
+    grid-template-columns: 1fr;
+    grid-template-areas: "name" "list" "text" "bonus";
+  }
+}
+@media (width <= 47.99875rem) {
+  .service-cost-card {
+    padding: 1.25rem 1.25rem 0;
+    max-width: 31.25rem;
+    margin-inline: auto;
+    gap: 0;
+  }
+  .service-cost-card--big-padding-top {
+    padding: 1.25rem 1.25rem 0;
+  }
+  .service-cost-card__name {
+    margin-bottom: 1.25rem;
+  }
+  .service-cost-card__text-list {
+    margin-bottom: 1.25rem;
+  }
+  .service-cost-card__price-list {
+    margin-bottom: 0.625rem;
+  }
+  .service-cost-card__price {
+    min-width: unset;
+    line-height: 1.2;
+  }
+  .service-cost-card__bonus {
+    margin-bottom: 1.25rem;
+  }
+}
+/* Section cost-service for car-wash page */
+.cost-service__banner {
+  margin-bottom: clamp(0.625rem, 0.2180232558rem + 1.6279069767vw, 1.5rem);
+}
+.cost-service__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: clamp(1.25rem, 0.3779069767rem + 3.488372093vw, 3.125rem);
+}
+.cost-service__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(0.625rem, 0.3343023256rem + 1.1627906977vw, 1.25rem);
+  margin-bottom: clamp(1.25rem, 0.3779069767rem + 3.488372093vw, 3.125rem);
+}
+.cost-service__button {
+  font-size: 1rem;
+}
+
+@media (width <= 47.99875rem) {
+  .cost-service__list {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+@media (width <= 35.93625rem) {
+  .cost-service__buttons {
+    flex-direction: column;
+    padding-inline: 1.875rem;
+  }
+}
+/*  =========================  */
+/*  =====END cost-service====  */
+/*  =========================  */
+
+/*# sourceMappingURL=cost-service-car-wash-page.css.map */

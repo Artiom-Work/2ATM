@@ -1,0 +1,148 @@
+@use "../../healpers" as *;
+@use "about-service-list";
+/* Section about-service.car-wash page  */
+.about-service {
+  &__body {
+    display: flex;
+    justify-content: space-between;
+
+    gap: rem(24);
+    width: 100%;
+    padding-inline: 0 rem(45);
+  }
+
+  &__image {
+    &-wrapper {
+      flex-shrink: 0;
+      width: rem(618);
+      height: rem(512);
+    }
+
+    border-radius: var(--border-radius-small);
+    width: inherit;
+    height: inherit;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: rem(530);
+  }
+
+  &__heading {
+    line-height: 1.2;
+    margin-bottom: rem(40);
+  }
+
+  &__text {
+    line-height: 1.47;
+    color: var(--text-color-dark-secondary);
+    margin-bottom: rem(40);
+
+    &--list {
+      list-style: decimal;
+      margin-left: rem(33);
+      margin-bottom: fluid(20, 0) !important;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    width: 100%;
+    gap: fluid(20, 10);
+  }
+
+  &__button {
+    font-size: rem(16);
+  }
+}
+@include desktop-media {
+  .about-service {
+    &__body {
+      justify-content: start;
+      padding-inline: 0;
+    }
+
+    &__heading,
+    &__text {
+      margin-bottom: rem(20);
+    }
+  }
+}
+@include laptop-media {
+  .about-service {
+    &__image {
+      &-wrapper {
+        align-self: center;
+      }
+    }
+
+    &__body {
+      flex-direction: column;
+      align-items: start;
+      padding-inline: unset;
+    }
+
+    &__content {
+      max-width: unset;
+      align-items: center;
+    }
+
+    &__buttons {
+      justify-content: center;
+    }
+  }
+}
+@include mobile-media {
+  .about-service {
+    padding-block: 0 rem(20);
+
+    &__image {
+      &-wrapper {
+        width: rem(340);
+        height: rem(268);
+      }
+    }
+
+    &__body {
+      gap: rem(20);
+    }
+
+    &__content {
+      padding-block: rem(20) 0;
+    }
+
+    &__heading {
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    &__text {
+      line-height: 1.5;
+
+      &--list {
+        margin-left: rem(25);
+      }
+    }
+  }
+}
+@include mobile-medium-media {
+  .about-service {
+    &__content {
+      align-items: start;
+    }
+
+    &__heading {
+      text-align: start;
+    }
+
+    &__buttons {
+      flex-direction: column;
+      padding-inline: rem(32);
+    }
+  }
+}
+/*  ==========================  */
+/*  =====END about-service====  */
+/*  ==========================  */

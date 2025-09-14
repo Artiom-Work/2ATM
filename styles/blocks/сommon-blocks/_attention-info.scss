@@ -35,6 +35,10 @@
 @include mobile-media {
   .attention-info {
     flex-direction: column;
+
+    &__text {
+      line-height: 1.49;
+    }
   }
 }
 /* ===================================== */

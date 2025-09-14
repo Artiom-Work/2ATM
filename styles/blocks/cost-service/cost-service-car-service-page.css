@@ -191,6 +191,9 @@
   .attention-info {
     flex-direction: column;
   }
+  .attention-info__text {
+    line-height: 1.49;
+  }
 }
 /* ===================================== */
 /* ===================================== */
