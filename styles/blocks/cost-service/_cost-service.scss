@@ -37,7 +37,14 @@
     }
   }
 }
-
+@include mobile-medium-media {
+  .cost-service {
+    &__buttons {
+      flex-direction: column;
+      padding-inline: rem(30);
+    }
+  }
+}
 /*  =========================  */
 /*  =====END cost-service====  */
 /*  =========================  */

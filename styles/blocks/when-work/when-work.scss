@@ -29,10 +29,20 @@
     line-height: 1.5;
     color: var(--text-color-dark-secondary);
 
+    &--bold {
+      @include fluid-text(20, 17);
+
+      font-weight: 700;
+      line-height: 1.3;
+      text-transform: uppercase;
+      color: var(--text-color-dar);
+    }
+
     &:has(ul) {
       ul {
         margin-block: 0;
         text-align: start;
+        padding-left: rem(27);
       }
     }
   }

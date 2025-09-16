@@ -194,6 +194,10 @@
   .attention-info__text {
     line-height: 1.49;
   }
+  .attention-info__text--centred-mobile {
+    text-align: center;
+    line-height: 1.47;
+  }
 }
 /* ===================================== */
 /* ===================================== */

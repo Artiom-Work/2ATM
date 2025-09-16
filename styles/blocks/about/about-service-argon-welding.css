@@ -47,6 +47,15 @@
     max-width: unset;
   }
 }
+@media (width <= 47.99875rem) {
+  .about-service-list__item--small-margin-mobile:not(:last-child) {
+    margin-bottom: 0.78125rem;
+  }
+  .about-service-list__heading--small-text-mobile {
+    font-size: 0.75rem;
+    line-height: 1.56;
+  }
+}
 /* Section about-service.argon-welding page (2 sections) */
 .about-service__body {
   display: flex;

@@ -1,0 +1,86 @@
+@use "../../healpers" as *;
+/* Styles for section svc-advantages. Sourse -- headlight-protection page. The section contains a slider */
+.svc-advantages {
+  --svcAdvantagesBgColor: var(--color-gray-800);
+  --svcAdvantagesTextColor: var(--text-color-light);
+  --svcAdvantagesCardBgColor: var(--color-accent-200);
+
+  background-color: var(--svcAdvantagesBgColor);
+  padding-block: fluid(50, 20);
+
+  &__title {
+    max-width: rem(600);
+    color: var(--svcAdvantagesTextColor);
+    margin-inline: auto;
+  }
+
+  &__subtitle {
+    font-size: rem(18);
+    max-width: rem(832);
+    color: var(--svcAdvantagesTextColor);
+    text-align: start;
+  }
+
+  &__slider {
+    overflow: hidden;
+
+    &-wrapper {
+      display: grid;
+      grid-template-rows: auto !important;
+      grid-template-columns: repeat(4, rem(297));
+      column-gap: rem(24);
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: rem(18);
+    border: var(--border-light);
+    border-radius: var(--border-radius-small);
+    background-color: var(--svcAdvantagesCardBgColor);
+    padding: rem(20) rem(20) rem(19);
+
+    &-icon {
+      @include square(rem(60));
+
+      flex-shrink: 0;
+    }
+
+    &-text {
+      font-weight: 700;
+      font-size: rem(18);
+      line-height: 1.3;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+}
+
+@include tablet-media {
+  .svc-advantages {
+    &__title,
+    &__subtitle {
+      padding-inline: var(--container-padding-x);
+    }
+  }
+}
+@include mobile-media {
+  .svc-advantages {
+    &__slider {
+      &-wrapper {
+        column-gap: rem(10);
+      }
+    }
+
+    &__card {
+      &-text {
+        font-size: rem(15);
+      }
+    }
+  }
+}
+/*  ===========================  */
+/*  =====END svc-advantages====  */
+/*  ===========================  */

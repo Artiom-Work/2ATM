@@ -74,6 +74,10 @@
   padding-block: 3.125rem;
   gap: 0.625rem;
 }
+.service-cost-card--extra-big-padding {
+  padding-block: 3.9375rem;
+  gap: 1rem;
+}
 .service-cost-card--small-top-padding {
   justify-content: start;
   padding: 1rem 1.25rem 1.25rem;
@@ -101,6 +105,9 @@
   line-height: 1.47;
   text-align: center;
   color: var(--text-color-dark-secondary);
+}
+.service-cost-card__text--color-accent {
+  color: var(--color-accent-600);
 }
 .service-cost-card__text--left {
   text-align: start;

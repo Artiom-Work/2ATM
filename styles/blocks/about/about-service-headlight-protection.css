@@ -1,0 +1,174 @@
+/* Syles for text-block attention-info */
+.attention-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.625rem;
+  border: var(--border-light);
+  border-radius: var(--border-radius-small);
+}
+.attention-info__icon {
+  flex-shrink: 0;
+}
+.attention-info__text {
+  color: var(--text-color-dark-secondary);
+  line-height: 1.47;
+}
+.attention-info__text--static-fs {
+  font-size: 1.125rem;
+}
+.attention-info__text--small {
+  font-size: clamp(0.9375rem, 0.9084302326rem + 0.1162790698vw, 1rem);
+  line-height: 1.36;
+  padding-inline: 0.6875rem;
+}
+.attention-info__text p:not(:last-child) {
+  margin-bottom: 1.0625rem;
+}
+
+@media (width <= 47.99875rem) {
+  .attention-info {
+    flex-direction: column;
+  }
+  .attention-info__text {
+    line-height: 1.49;
+  }
+  .attention-info__text--centred-mobile {
+    text-align: center;
+    line-height: 1.47;
+  }
+}
+/* ===================================== */
+/* ===================================== */
+/* Block about-service-list. part of section about-service */
+.about-service-list {
+  max-width: 29.125rem;
+}
+.about-service-list__item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem;
+}
+.about-service-list__item:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+.about-service-list__item:not(:last-child) .about-service-list__icon-wrapper::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 0.625rem);
+  left: 50%;
+  width: 0.0625rem;
+  height: 2.5rem;
+  background-color: var(--color-orange);
+}
+.about-service-list__item:not(:last-child) .about-service-list__icon-wrapper--tall-decor::after {
+  height: 5rem;
+}
+.about-service-list__icon-wrapper {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  position: relative;
+}
+.about-service-list__heading {
+  font-size: 0.9375rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.about-service-list__heading:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+.about-service-list__text {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+@media (width <= 81.31125rem) {
+  .about-service-list {
+    max-width: unset;
+  }
+}
+@media (width <= 47.99875rem) {
+  .about-service-list__item--small-margin-mobile:not(:last-child) {
+    margin-bottom: 0.78125rem;
+  }
+  .about-service-list__heading--small-text-mobile {
+    font-size: 0.75rem;
+    line-height: 1.56;
+  }
+}
+/* Section about-service.headlight-protection page only */
+.about-service__body {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(0.625rem, 0.2180232558rem + 1.6279069767vw, 1.5rem);
+  width: 100%;
+  padding-inline: 0 7.0625rem;
+  margin-bottom: clamp(1.25rem, 0.4069767442rem + 3.3720930233vw, 3.0625rem);
+}
+.about-service__image {
+  border-radius: var(--border-radius-small);
+  width: inherit;
+  height: inherit;
+}
+.about-service__image-wrapper {
+  position: relative;
+  width: 38.625rem;
+  height: 45.375rem;
+  flex-shrink: 0;
+}
+.about-service__image-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--border-radius-small);
+  background: var(--color-red-opcity-15);
+}
+.about-service__content {
+  max-width: 33.125rem;
+}
+
+@media (width <= 100.06125rem) {
+  .about-service__body {
+    justify-content: start;
+    padding-inline: 0;
+  }
+}
+@media (width <= 81.31125rem) {
+  .about-service__image-wrapper {
+    align-self: center;
+  }
+  .about-service__body {
+    flex-direction: column;
+    align-items: start;
+    padding-inline: unset;
+  }
+  .about-service__content {
+    max-width: unset;
+    align-self: center;
+  }
+  .about-service__list {
+    max-width: 31.25rem;
+    margin-inline: auto;
+  }
+}
+@media (width <= 47.99875rem) {
+  .about-service__image-wrapper {
+    width: 21.25rem;
+    height: 25.3125rem;
+  }
+  .about-service__list {
+    max-width: unset;
+    margin-bottom: 0;
+  }
+}
+/*  ==========================  */
+/*  =====END about-service====  */
+/*  ==========================  */
+
+/*# sourceMappingURL=about-service-headlight-protection.css.map */

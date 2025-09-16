@@ -38,6 +38,11 @@
 
     &__text {
       line-height: 1.49;
+
+      &--centred-mobile {
+        text-align: center;
+        line-height: 1.47;
+      }
     }
   }
 }

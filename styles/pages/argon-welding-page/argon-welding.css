@@ -1276,6 +1276,10 @@ button[aria-label]:not(.promotion__card-link)::before {
   padding-block: 3.125rem;
   gap: 0.625rem;
 }
+.service-cost-card--extra-big-padding {
+  padding-block: 3.9375rem;
+  gap: 1rem;
+}
 .service-cost-card--small-top-padding {
   justify-content: start;
   padding: 1rem 1.25rem 1.25rem;
@@ -1303,6 +1307,9 @@ button[aria-label]:not(.promotion__card-link)::before {
   line-height: 1.47;
   text-align: center;
   color: var(--text-color-dark-secondary);
+}
+.service-cost-card__text--color-accent {
+  color: var(--color-accent-600);
 }
 .service-cost-card__text--left {
   text-align: start;
@@ -1391,6 +1398,12 @@ button[aria-label]:not(.promotion__card-link)::before {
 @media (width <= 47.99875rem) {
   .cost-service__list {
     grid-template-columns: 1fr;
+  }
+}
+@media (width <= 35.93625rem) {
+  .cost-service__buttons {
+    flex-direction: column;
+    padding-inline: 1.875rem;
   }
 }
 /*  =========================  */
@@ -1654,6 +1667,15 @@ button[aria-label]:not(.promotion__card-link)::before {
     max-width: unset;
   }
 }
+@media (width <= 47.99875rem) {
+  .about-service-list__item--small-margin-mobile:not(:last-child) {
+    margin-bottom: 0.78125rem;
+  }
+  .about-service-list__heading--small-text-mobile {
+    font-size: 0.75rem;
+    line-height: 1.56;
+  }
+}
 /* Section about-service.argon-welding page (2 sections) */
 .about-service__body {
   display: flex;
@@ -1889,9 +1911,17 @@ button[aria-label]:not(.promotion__card-link)::before {
   line-height: 1.5;
   color: var(--text-color-dark-secondary);
 }
+.when-work__subtitle--bold {
+  font-size: clamp(1.0625rem, 0.9752906977rem + 0.3488372093vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: var(--text-color-dar);
+}
 .when-work__subtitle:has(ul) ul {
   margin-block: 0;
   text-align: start;
+  padding-left: 1.6875rem;
 }
 .when-work__buttons {
   display: flex;
