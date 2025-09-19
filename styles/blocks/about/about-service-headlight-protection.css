@@ -66,6 +66,9 @@
 .about-service-list__item:not(:last-child) .about-service-list__icon-wrapper--tall-decor::after {
   height: 5rem;
 }
+.about-service-list__item:not(:last-child) .about-service-list__icon-wrapper--position-decor::after {
+  top: calc(100% + 1.25rem);
+}
 .about-service-list__icon-wrapper {
   width: 2rem;
   height: 2rem;

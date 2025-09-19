@@ -1,0 +1,57 @@
+@use "../../healpers" as *;
+@use "../сommon-blocks/auth-portal";
+@use "service-cost-card-iconic";
+/* Section cost-service for dry-cleaning page */
+.cost-service {
+  &__banner {
+    margin-bottom: rem(24);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(24);
+    margin-bottom: rem(49);
+  }
+
+  &__buttons {
+    @include flex-center;
+
+    gap: fluid(20, 10);
+    margin-bottom: fluid(50, 20);
+  }
+
+  &__button {
+    font-size: rem(16);
+    line-height: 1.5;
+    min-height: rem(44);
+  }
+}
+
+@include mobile-media {
+  .cost-service {
+    &__list {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+  }
+}
+@include mobile-medium-media {
+  .cost-service {
+    &__buttons {
+      flex-direction: column;
+      gap: rem(22);
+    }
+
+    &__button {
+      max-width: rem(328);
+      width: unset;
+      margin-inline: auto;
+      padding: rem(5) rem(27);
+      white-space: nowrap;
+    }
+  }
+}
+/*  =========================  */
+/*  =====END cost-service====  */
+/*  =========================  */

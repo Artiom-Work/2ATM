@@ -188,6 +188,16 @@ svg * {
     #19171a 89.34%,
     #111215 100%
   );
+  --color-grad-4: linear-gradient(
+    180deg,
+    #060606 0%,
+    #040404 25.96%,
+    #050506 49.04%,
+    #060607 66.66%,
+    #060607 76.95%,
+    #070708 86.12%,
+    #0b0b0c 100%
+  );
   --color-white-opacity-10: #ffffff34;
   --color-white-opacity-35: #ffffffa8;
   --color-black-opacity-48: #3332327a;
@@ -1647,6 +1657,9 @@ button[aria-label]:not(.promotion__card-link)::before {
 }
 .about-service-list__item:not(:last-child) .about-service-list__icon-wrapper--tall-decor::after {
   height: 5rem;
+}
+.about-service-list__item:not(:last-child) .about-service-list__icon-wrapper--position-decor::after {
+  top: calc(100% + 1.25rem);
 }
 .about-service-list__icon-wrapper {
   width: 2rem;

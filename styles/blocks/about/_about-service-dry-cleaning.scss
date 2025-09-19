@@ -1,0 +1,153 @@
+@use "../../healpers" as *;
+@use "about-service-list";
+/* Section about-service.dry-cleaning page only */
+.about-service {
+  &__body {
+    display: flex;
+    justify-content: space-between;
+
+    gap: fluid(24, 0);
+    width: 100%;
+    margin-bottom: fluid(49, 20);
+
+    &--steps {
+      padding-inline: 0 rem(110);
+    }
+  }
+
+  &__image {
+    &-wrapper {
+      position: relative;
+      width: rem(618);
+      height: rem(485);
+      flex-shrink: 0;
+
+      &--steps {
+        height: rem(561);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: var(--border-radius-small);
+        background: var(--color-red-opcity-15);
+      }
+    }
+
+    border-radius: var(--border-radius-small);
+    width: inherit;
+    height: inherit;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: rem(575);
+
+    &--steps {
+      max-width: rem(530);
+    }
+  }
+
+  &__heading {
+    font-size: rem(24);
+    line-height: 1.2;
+    margin-bottom: fluid(40, 20);
+  }
+
+  &__text {
+    font-size: rem(18);
+    line-height: 1.47;
+    color: var(--text-color-dark-secondary);
+    margin-bottom: fluid(40, 20);
+
+    &--list {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(30);
+      font-size: rem(18);
+      list-style: disc;
+      margin-left: rem(27);
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__button {
+    font-size: rem(16);
+    background-color: var(--color-blue-light);
+    align-self: start;
+  }
+}
+@include desktop-media {
+  .about-service {
+    &__body {
+      justify-content: start;
+      padding-inline: 0;
+    }
+  }
+}
+@include laptop-media {
+  .about-service {
+    &__image {
+      &-wrapper {
+        align-self: center;
+        order: -1;
+      }
+    }
+
+    &__body {
+      flex-direction: column;
+      align-items: start;
+      padding-inline: unset;
+    }
+
+    &__content {
+      display: contents;
+      max-width: unset;
+      align-self: center;
+    }
+
+    &__heading {
+      text-align: center;
+      width: 100%;
+      order: -1;
+    }
+
+    &__list {
+      max-width: rem(500);
+      margin-inline: auto;
+    }
+
+    &__button {
+      max-width: rem(233);
+    }
+  }
+}
+@include mobile-media {
+  .about-service {
+    &__image {
+      &-wrapper {
+        width: rem(340);
+        height: rem(242);
+        margin-bottom: rem(20);
+
+        &--steps {
+          height: rem(255);
+          margin-bottom: rem(36);
+        }
+      }
+    }
+
+    &__list {
+      max-width: unset;
+    }
+  }
+}
+/*  ==========================  */
+/*  =====END about-service====  */
+/*  ==========================  */

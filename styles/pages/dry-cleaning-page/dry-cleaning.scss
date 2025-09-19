@@ -1,0 +1,23 @@
+// connecting general scss files
+@use "../../base/normolize";
+@use "../../base/fonts";
+@use "../../base/variables";
+@use "../../base/utils";
+@use "../../base/globals";
+@use "../../base/animation";
+//common-blocks
+@use "../../blocks/сommon-blocks/button";
+@use "../../blocks/сommon-blocks/logo";
+@use "../../blocks/сommon-blocks/section";
+//blocks
+@use "../../blocks/header/_header.scss";
+@use "../../blocks/page-heading/_page-heading.scss";
+@use "../../blocks/promo/_promo-dry-cleaning-page.scss";
+@use "../../blocks/cost-service/_cost-service-dry-cleaning-page.scss";
+@use "../../blocks/reference/_reference.scss";
+@use "../../blocks/about/_about-service-dry-cleaning.scss";
+@use "../../blocks/when-work/_when-work.scss";
+@use "../../blocks/appointment-choose/_appointment-choose.scss";
+@use "../../blocks/advantages/_our-advantages.scss";
+@use "../../blocks/other-services/_other-services.scss";
+@use "../../blocks/footer/_footer.scss";

@@ -188,6 +188,16 @@ svg * {
     #19171a 89.34%,
     #111215 100%
   );
+  --color-grad-4: linear-gradient(
+    180deg,
+    #060606 0%,
+    #040404 25.96%,
+    #050506 49.04%,
+    #060607 66.66%,
+    #060607 76.95%,
+    #070708 86.12%,
+    #0b0b0c 100%
+  );
   --color-white-opacity-10: #ffffff34;
   --color-white-opacity-35: #ffffffa8;
   --color-black-opacity-48: #3332327a;

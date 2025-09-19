@@ -1,0 +1,184 @@
+/* Block about-service-list. part of section about-service */
+.about-service-list {
+  max-width: 29.125rem;
+}
+.about-service-list__item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem;
+}
+.about-service-list__item:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+.about-service-list__item:not(:last-child) .about-service-list__icon-wrapper::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 0.625rem);
+  left: 50%;
+  width: 0.0625rem;
+  height: 2.5rem;
+  background-color: var(--color-orange);
+}
+.about-service-list__item:not(:last-child) .about-service-list__icon-wrapper--tall-decor::after {
+  height: 5rem;
+}
+.about-service-list__item:not(:last-child) .about-service-list__icon-wrapper--position-decor::after {
+  top: calc(100% + 1.25rem);
+}
+.about-service-list__icon-wrapper {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  position: relative;
+}
+.about-service-list__heading {
+  font-size: 0.9375rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.about-service-list__heading:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+.about-service-list__text {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+@media (width <= 81.31125rem) {
+  .about-service-list {
+    max-width: unset;
+  }
+}
+@media (width <= 47.99875rem) {
+  .about-service-list__item--small-margin-mobile:not(:last-child) {
+    margin-bottom: 0.78125rem;
+  }
+  .about-service-list__heading--small-text-mobile {
+    font-size: 0.75rem;
+    line-height: 1.56;
+  }
+}
+/* Section about-service.dry-cleaning page only */
+.about-service__body {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(0rem, -0.6976744186rem + 2.7906976744vw, 1.5rem);
+  width: 100%;
+  margin-bottom: clamp(1.25rem, 0.4069767442rem + 3.3720930233vw, 3.0625rem);
+}
+.about-service__body--steps {
+  padding-inline: 0 6.875rem;
+}
+.about-service__image {
+  border-radius: var(--border-radius-small);
+  width: inherit;
+  height: inherit;
+}
+.about-service__image-wrapper {
+  position: relative;
+  width: 38.625rem;
+  height: 30.3125rem;
+  flex-shrink: 0;
+}
+.about-service__image-wrapper--steps {
+  height: 35.0625rem;
+}
+.about-service__image-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--border-radius-small);
+  background: var(--color-red-opcity-15);
+}
+.about-service__content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 35.9375rem;
+}
+.about-service__content--steps {
+  max-width: 33.125rem;
+}
+.about-service__heading {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: clamp(1.25rem, 0.6686046512rem + 2.3255813953vw, 2.5rem);
+}
+.about-service__text {
+  font-size: 1.125rem;
+  line-height: 1.47;
+  color: var(--text-color-dark-secondary);
+  margin-bottom: clamp(1.25rem, 0.6686046512rem + 2.3255813953vw, 2.5rem);
+}
+.about-service__text--list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.875rem;
+  font-size: 1.125rem;
+  list-style: disc;
+  margin-left: 1.6875rem;
+  margin-bottom: 1.25rem;
+}
+.about-service__button {
+  font-size: 1rem;
+  background-color: var(--color-blue-light);
+  align-self: start;
+}
+
+@media (width <= 100.06125rem) {
+  .about-service__body {
+    justify-content: start;
+    padding-inline: 0;
+  }
+}
+@media (width <= 81.31125rem) {
+  .about-service__image-wrapper {
+    align-self: center;
+    order: -1;
+  }
+  .about-service__body {
+    flex-direction: column;
+    align-items: start;
+    padding-inline: unset;
+  }
+  .about-service__content {
+    display: contents;
+    max-width: unset;
+    align-self: center;
+  }
+  .about-service__heading {
+    text-align: center;
+    width: 100%;
+    order: -1;
+  }
+  .about-service__list {
+    max-width: 31.25rem;
+    margin-inline: auto;
+  }
+  .about-service__button {
+    max-width: 14.5625rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .about-service__image-wrapper {
+    width: 21.25rem;
+    height: 15.125rem;
+    margin-bottom: 1.25rem;
+  }
+  .about-service__image-wrapper--steps {
+    height: 15.9375rem;
+    margin-bottom: 2.25rem;
+  }
+  .about-service__list {
+    max-width: unset;
+  }
+}
+/*  ==========================  */
+/*  =====END about-service====  */
+/*  ==========================  */
+
+/*# sourceMappingURL=about-service-dry-cleaning.css.map */

@@ -28,6 +28,12 @@
             height: rem(80);
           }
         }
+
+        &--position-decor {
+          &::after {
+            top: calc(100% + rem(20));
+          }
+        }
       }
     }
   }
