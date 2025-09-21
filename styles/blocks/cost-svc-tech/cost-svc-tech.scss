@@ -1,0 +1,103 @@
+@use "../../healpers" as *;
+/* Section cost-svc-tech (contains a slider).Sourse - body-protection page. */
+.cost-svc-tech {
+  --costSvcTechCardBgColor: var(--color-gray-75);
+  overflow-x: hidden;
+
+  &__slider {
+    &-wrapper {
+      display: grid;
+      grid-template-rows: auto !important;
+      grid-template-columns: repeat(4, rem(297));
+      column-gap: rem(24);
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: rem(19.5);
+    max-width: rem(297);
+    width: 100%;
+    height: 100%;
+    padding: rem(20);
+    border: var(--border-light);
+    border-radius: var(--border-radius-small);
+    background-color: var(--costSvcTechCardBgColor);
+
+    &-icon {
+      @include square(rem(60));
+
+      flex-shrink: 0;
+    }
+
+    &-name {
+      font-size: rem(17);
+      line-height: 1.2;
+      text-transform: uppercase;
+      text-align: center;
+      min-height: rem(47);
+    }
+
+    &-text {
+      font-size: rem(16);
+      line-height: 1.4;
+      color: var(--text-color-dark-secondary);
+      flex-grow: 1;
+
+      ul {
+        list-style: disc;
+        padding-left: rem(24);
+        min-height: rem(212);
+
+        li:not(:last-child) {
+          margin-bottom: rem(9);
+        }
+      }
+    }
+
+    &-price {
+      font-size: rem(20);
+      font-weight: 700;
+      line-height: 1.3;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    &-button {
+      font-size: rem(16);
+    }
+  }
+}
+
+@include mobile-media {
+  .cost-svc-tech {
+    &__slider {
+      &-wrapper {
+        column-gap: rem(10);
+      }
+    }
+
+    &__card {
+      &-text {
+        font-size: rem(15);
+
+        ul {
+          min-height: rem(186);
+
+          li:not(:last-child) {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &-button {
+        width: unset;
+      }
+    }
+  }
+}
+/*  ============================  */
+/*  =====END cost-svc-tech ====  */
+/*  ============================  */

@@ -1,0 +1,103 @@
+@use "../../healpers" as *;
+/* Section about-service.body-protection page only */
+.about-service {
+  &__body {
+    display: flex;
+    justify-content: space-between;
+
+    gap: fluid(24, 0);
+    width: 100%;
+    padding-inline: 0 rem(44);
+  }
+
+  &__image {
+    &-wrapper {
+      position: relative;
+      width: rem(618);
+      height: rem(578);
+      flex-shrink: 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: var(--border-radius-small);
+        background: var(--color-red-opcity-15);
+      }
+    }
+
+    border-radius: var(--border-radius-small);
+    width: inherit;
+    height: inherit;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: rem(530);
+  }
+
+  &__text {
+    line-height: 1.5;
+    color: var(--text-color-dark-secondary);
+    margin-bottom: fluid(40, 20);
+  }
+
+  &__button {
+    font-size: rem(16);
+    background-color: var(--color-blue-light);
+    align-self: start;
+  }
+}
+@include desktop-media {
+  .about-service {
+    &__body {
+      padding-inline: 0;
+    }
+  }
+}
+@include laptop-media {
+  .about-service {
+    &__image {
+      &-wrapper {
+        align-self: center;
+      }
+    }
+
+    &__body {
+      flex-direction: column;
+      align-items: start;
+      padding-inline: unset;
+    }
+
+    &__content {
+      display: contents;
+      max-width: unset;
+      align-self: center;
+    }
+
+    &__button {
+      padding-inline: rem(30);
+      width: unset;
+      margin-inline: auto;
+    }
+  }
+}
+@include mobile-media {
+  .about-service {
+    &__image {
+      &-wrapper {
+        width: rem(340);
+        height: rem(318);
+        margin-bottom: rem(20);
+      }
+    }
+  }
+}
+/*  ==========================  */
+/*  =====END about-service====  */
+/*  ==========================  */
