@@ -117,13 +117,9 @@
 .location-card__body {
   display: flex;
   flex-direction: column;
-  row-gap: 0.25rem;
-  justify-content: end;
-  padding: 1.25rem;
+  justify-content: start;
+  padding: 0.625rem 1.25rem 1.25rem;
   color: var(--text-color-dark-secondary);
-}
-.location-card__address {
-  flex-grow: 1;
 }
 .location-card__address-button {
   padding: 0;
@@ -153,6 +149,7 @@
   font-size: 1rem;
   line-height: 1.4;
   word-spacing: 0.1em;
+  margin-bottom: 0.625rem;
 }
 .location-card__text-block p:not(:last-child) {
   margin-bottom: 0;
@@ -175,7 +172,7 @@
     width: 6.25rem;
   }
   .location-card__body {
-    padding: 0.625rem;
+    padding: 0.125rem 0.625rem 0rem;
   }
   .location-card__address {
     letter-spacing: -0.02em;
@@ -183,6 +180,7 @@
   .location-card__text-block {
     font-size: 0.9375rem;
     word-spacing: 0.2em;
+    margin-bottom: 0.25rem;
   }
 }
 /* Styles for the map. part of block locations .Current, will need to be added...*/

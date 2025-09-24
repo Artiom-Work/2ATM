@@ -1,20 +1,10 @@
 @use "../healpers" as *;
 /* Global variables */
 :root {
-  // --color-light-2atm-50: #fefdfd;
-  // --color-light-2atm-50: #323232;
-
   --color-accent-50: #fefdfd;
-  // --color-accent-100: #f9f3f2;
   --color-accent-200: #f2e5e1;
-  // --color-accent-300: #dfc4be;
-  // --color-accent-400: #feb59d;
   --color-accent-500: #fe4f02;
   --color-accent-600: #dc4401;
-  // --color-accent-700: #b73901;
-  // --color-accent-800: #7f2802;
-  // --color-accent-900: #5f1d00;
-  // --color-accent-950: #180302;
 
   --color-gray-900: #161312;
   --color-gray-850: #2b2b31;
@@ -76,11 +66,6 @@
   --color-white-opacity-35: #ffffffa8;
   --color-black-opacity-48: #3332327a;
   --color-black-opacity-80: #00000033;
-  // --color-white-opacity-90: #ffffffe6;
-  // --color-white-opacity: #ffffff8d;
-  // --color-black-opacity: #00000066;
-  // --color-black-opacity-60: #00000066;
-  // --color-black-opacity-40: #00000099;
   --color-red: #ba1414;
   --color-red-opcity-15: #3b060526;
   --color-red-opcity-40: #3b060566;

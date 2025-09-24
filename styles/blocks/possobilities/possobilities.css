@@ -34,9 +34,6 @@
 .possobility-card__text--static-font-size {
   font-size: 1.125rem;
 }
-.possobility-card__list {
-  padding-block: 0 0.1875rem;
-}
 
 @media (width <= 63.99875rem) {
   .possobility-card {

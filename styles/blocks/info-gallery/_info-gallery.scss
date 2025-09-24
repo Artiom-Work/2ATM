@@ -28,6 +28,7 @@
     background-color: var(--infoGalleryCardBg);
     border: var(--border-light);
     border-radius: var(--border-radius-small);
+    padding-block: 0 fluid(10, 5);
 
     &-image {
       width: rem(297);

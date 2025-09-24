@@ -11,15 +11,13 @@
   margin-bottom: 1.25rem;
 }
 .offer-description__text {
-  margin-bottom: 1.875rem;
+  margin-bottom: 1.25rem;
   line-height: 1.5;
-  letter-spacing: var(--letter-spacing-medium);
 }
 .offer-description__text p:not(:last-child) {
   margin-bottom: clamp(0rem, -0.4651162791rem + 1.8604651163vw, 1rem);
 }
 .offer-description__text ul {
-  letter-spacing: var(--letter-spacing);
   padding-inline: clamp(1.25rem, 1.1046511628rem + 0.5813953488vw, 1.5625rem);
 }
 .offer-description__text-address {
@@ -31,7 +29,7 @@
     line-height: 1.2;
   }
   .offer-description__text {
-    letter-spacing: 0;
+    margin-bottom: 1.875rem;
   }
   .offer-description__text ul {
     margin-block: 0;
@@ -40,6 +38,12 @@
     display: block;
     margin-inline: auto;
     font-size: 1rem;
+    width: unset;
+  }
+}
+@media (width <= 35.93625rem) {
+  .offer-description__button {
+    width: 100%;
   }
 }
 /* Styles for section single-offer.(offer page) */

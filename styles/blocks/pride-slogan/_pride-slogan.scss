@@ -22,10 +22,10 @@
     font-weight: 600;
     line-height: 1.5;
     color: var(--text-color-dark-secondary);
-    letter-spacing: var(--letter-spacing);
 
     &--big {
       line-height: 1.2;
+      font-weight: 700;
     }
   }
 }

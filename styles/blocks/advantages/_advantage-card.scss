@@ -23,9 +23,15 @@
     text-transform: uppercase;
     text-align: center;
     color: var(--advantageCardTitleTextColor);
+
+    &--left-position {
+      text-align: start;
+    }
   }
 
   &__text {
+    @include fluid-text(16, 15);
+
     color: var(--text-color-dark-secondary);
     line-height: 1.4;
   }

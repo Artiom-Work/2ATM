@@ -1075,6 +1075,9 @@ button[aria-label]:not(.promotion__card-link)::before {
   line-height: 1.5;
   max-width: 28.8125rem;
 }
+.promo__button {
+  padding-inline: 1.59375rem;
+}
 
 @media (width <= 63.99875rem) {
   .promo {
@@ -1168,10 +1171,10 @@ button[aria-label]:not(.promotion__card-link)::before {
   font-weight: 600;
   line-height: 1.5;
   color: var(--text-color-dark-secondary);
-  letter-spacing: var(--letter-spacing);
 }
 .pride-slogan__text--big {
   line-height: 1.2;
+  font-weight: 700;
 }
 
 @media (width <= 100.06125rem) {
@@ -1228,9 +1231,6 @@ button[aria-label]:not(.promotion__card-link)::before {
 }
 .possobility-card__text--static-font-size {
   font-size: 1.125rem;
-}
-.possobility-card__list {
-  padding-block: 0 0.1875rem;
 }
 
 @media (width <= 63.99875rem) {
@@ -1381,7 +1381,6 @@ button[aria-label]:not(.promotion__card-link)::before {
 .callback__policy {
   font-size: 1rem;
   text-align: center;
-  letter-spacing: 0.026em;
   width: 100%;
   color: var(--text-color-dark-secondary);
 }
@@ -1533,7 +1532,6 @@ button[aria-label]:not(.promotion__card-link)::before {
 }
 .about-description__text {
   line-height: 1.5;
-  letter-spacing: var(--letter-spacing-medium);
   color: var(--text-color-dark-secondary);
 }
 .about-description__text ul {
@@ -1682,7 +1680,6 @@ button[aria-label]:not(.promotion__card-link)::before {
 .about-gallery__subtitle {
   max-width: 52rem;
   font-size: 1.125rem;
-  letter-spacing: var(--letter-spacing-medium);
   text-align: start;
 }
 .about-gallery__list {
@@ -1736,6 +1733,9 @@ button[aria-label]:not(.promotion__card-link)::before {
     flex-direction: column;
     margin-bottom: 0;
   }
+  .about-gallery__image-wrapper {
+    height: 17rem;
+  }
   .about-gallery__image-wrapper--small-height {
     height: 15.75rem;
   }
@@ -1777,10 +1777,27 @@ button[aria-label]:not(.promotion__card-link)::before {
     gap: 2.75rem 1.5rem;
   }
 }
+@media (width <= 63.99875rem) {
+  .footer-svc-links__list {
+    gap: 1.5625rem 1.5rem;
+  }
+  .footer-svc-links__list li:nth-child(3n) {
+    order: 2;
+  }
+  .footer-svc-links__item:not(:last-child) {
+    margin-bottom: 1.4375rem;
+  }
+}
 @media (width <= 30.06125rem) {
   .footer-svc-links__list {
     grid-template-columns: 1fr;
     gap: 0.875rem 1.5rem;
+  }
+  .footer-svc-links__list li:nth-child(3n) {
+    order: 0;
+  }
+  .footer-svc-links__item:not(:last-child) {
+    margin-bottom: 0.85625rem;
   }
 }
 /* Block footer . For all pages.*/
@@ -1793,7 +1810,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: repeat(2, auto);
-  row-gap: clamp(1.9375rem, 1.414244186rem + 2.0930232558vw, 3.0625rem);
+  row-gap: 3.0625rem;
   column-gap: 4.625rem;
 }
 .footer__heading {
@@ -1874,13 +1891,24 @@ button[aria-label]:not(.promotion__card-link)::before {
   gap: 1.9375rem 1.875rem;
   letter-spacing: var(--letter-spacing);
 }
+.footer__copyright {
+  line-height: 1.16667;
+  font-size: 0.75rem;
+}
 .footer ul {
   list-style: none;
   margin-block: 0;
   padding: 0;
 }
+.footer a {
+  transition-duration: var(--transition-duration) !important;
+}
 
 @media (width <= 81.31125rem) {
+  .footer__inner {
+    grid-template-rows: repeat(3, auto);
+    row-gap: 1.25rem;
+  }
   .footer__buttons {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -1901,14 +1929,15 @@ button[aria-label]:not(.promotion__card-link)::before {
   }
   .footer__inner {
     padding-block: 1.5625rem 3.9375rem;
-    grid-template-areas: "heading buttons" "links-list links-list" "svc svc";
+    grid-template-areas: "heading buttons" "links-list links-list" "svc svc" "copyright copyright";
     column-gap: 2.125rem;
+    row-gap: 0;
   }
   .footer__heading {
     grid-area: heading;
     justify-self: center;
     text-align: center;
-    margin-left: -0.625rem;
+    margin-left: -0.3125rem;
   }
   .footer__heading-text {
     font-size: 0.75rem;
@@ -1925,6 +1954,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   .footer__svc-links {
     grid-area: svc;
     max-width: unset;
+    margin-bottom: 2.6875rem;
   }
   .footer__buttons {
     grid-area: buttons;
@@ -1935,6 +1965,7 @@ button[aria-label]:not(.promotion__card-link)::before {
     width: 100%;
     grid-template-areas: "yandex button" ". qs";
     row-gap: 1rem;
+    margin-bottom: 2.25rem;
   }
   .footer__button {
     align-self: start;
@@ -1944,6 +1975,9 @@ button[aria-label]:not(.promotion__card-link)::before {
     height: 4.3125rem;
     align-self: start;
   }
+  .footer__copyright {
+    grid-area: copyright;
+  }
 }
 @media (width <= 47.99875rem) {
   .footer .container {
@@ -1952,7 +1986,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   .footer__inner {
     padding-block: 0.6875rem 1.375rem;
     grid-template-columns: 1fr;
-    grid-template-areas: "heading" "buttons" "links-list" "svc";
+    grid-template-areas: "heading" "buttons" "links-list" "svc" "copyright";
     row-gap: 0;
   }
   .footer__heading {

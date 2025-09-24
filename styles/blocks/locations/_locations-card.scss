@@ -38,15 +38,12 @@
   &__body {
     display: flex;
     flex-direction: column;
-    row-gap: rem(4);
-    justify-content: end;
-    padding: rem(20);
+    justify-content: start;
+    padding: rem(10) rem(20) rem(20);
     color: var(--text-color-dark-secondary);
   }
 
   &__address {
-    flex-grow: 1;
-
     &-button {
       @include reset-button;
 
@@ -71,6 +68,7 @@
     font-size: rem(16);
     line-height: 1.4;
     word-spacing: 0.1em;
+    margin-bottom: rem(10);
 
     p:not(:last-child) {
       margin-bottom: 0;
@@ -103,7 +101,7 @@
     }
 
     &__body {
-      padding: rem(10);
+      padding: rem(2) rem(10) rem(0);
     }
 
     &__address {
@@ -113,6 +111,7 @@
     &__text-block {
       font-size: rem(15);
       word-spacing: 0.2em;
+      margin-bottom: rem(4);
     }
   }
 }

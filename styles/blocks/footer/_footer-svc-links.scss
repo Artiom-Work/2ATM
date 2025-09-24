@@ -44,11 +44,39 @@
   }
 }
 
+@include tablet-media {
+  .footer-svc-links {
+    &__list {
+      gap: rem(25) rem(24);
+
+      li:nth-child(3n) {
+        order: 2;
+      }
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: rem(23);
+      }
+    }
+  }
+}
+
 @include mobile-s-media {
   .footer-svc-links {
     &__list {
       grid-template-columns: 1fr;
       gap: rem(14) rem(24);
+
+      li:nth-child(3n) {
+        order: 0;
+      }
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: rem(13.7);
+      }
     }
   }
 }

@@ -1,0 +1,75 @@
+@use "../../healpers" as *;
+/* Section contacts. Block with contact info cards . sourse contacts page */
+.contacts {
+  --contactsCardColorBg: var(--color-accent-200);
+
+  &__list {
+    @include flex-center;
+
+    flex-wrap: wrap;
+    gap: fluid(24, 10);
+
+    &-item {
+      max-width: rem(297);
+      width: 100%;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(20);
+    background-color: var(--contactsCardColorBg);
+    border-radius: var(--border-radius-small);
+    padding: rem(20) rem(20) rem(5);
+    width: 100%;
+    min-height: rem(304);
+    height: 100%;
+
+    &-image {
+      @include square(rem(60));
+
+      align-self: center;
+      flex-shrink: 0;
+    }
+    &-name {
+      font-size: rem(18);
+      text-align: center;
+      text-transform: uppercase;
+      min-height: rem(66);
+    }
+    &-info {
+      padding-left: 0;
+    }
+    &-item {
+      display: flex;
+      column-gap: rem(20);
+      min-height: rem(31);
+
+      &:not(:last-child) {
+        margin-bottom: rem(10);
+      }
+    }
+    &-icon {
+      flex-shrink: 0;
+      fill: transparent;
+    }
+
+    &-text {
+      line-height: 1.4;
+      font-weight: 600;
+      color: var(--text-color-dark-secondary);
+    }
+  }
+
+  address {
+    font-style: normal;
+  }
+
+  a {
+    transition-duration: var(--transition-duration) !important;
+  }
+}
+/*  ==================================  */
+/*  =======END section contacts=======  */
+/*  ==================================  */

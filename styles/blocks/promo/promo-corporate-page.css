@@ -32,7 +32,16 @@
   max-width: 43.75rem;
 }
 .promo__subtitle p:first-child {
-  max-width: 31.25rem;
+  max-width: 33.125rem;
+}
+.promo__buttons {
+  display: flex;
+  gap: clamp(1rem, 0.7674418605rem + 0.9302325581vw, 1.5rem);
+}
+.promo__button {
+  position: relative;
+  font-size: 1rem;
+  padding-inline: 1.59375rem;
 }
 
 @media (width <= 63.99875rem) {
@@ -95,8 +104,16 @@
   .promo__subtitle p {
     margin-bottom: 0;
   }
+  .promo__buttons {
+    justify-content: center;
+  }
   .promo__button {
     align-self: center;
+  }
+}
+@media (width <= 30.06125rem) {
+  .promo__button {
+    font-size: 0.8125rem;
   }
 }
 /*  ========================================  */

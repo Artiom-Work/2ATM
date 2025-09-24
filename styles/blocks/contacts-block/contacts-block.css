@@ -1,0 +1,70 @@
+/* Section contacts. Block with contact info cards . sourse contacts page */
+.contacts {
+  --contactsCardColorBg: var(--color-accent-200);
+}
+.contacts__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(0.625rem, 0.2180232558rem + 1.6279069767vw, 1.5rem);
+}
+.contacts__list-item {
+  max-width: 18.5625rem;
+  width: 100%;
+}
+.contacts__card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25rem;
+  background-color: var(--contactsCardColorBg);
+  border-radius: var(--border-radius-small);
+  padding: 1.25rem 1.25rem 0.3125rem;
+  width: 100%;
+  min-height: 19rem;
+  height: 100%;
+}
+.contacts__card-image {
+  width: 3.75rem;
+  height: 3.75rem;
+  align-self: center;
+  flex-shrink: 0;
+}
+.contacts__card-name {
+  font-size: 1.125rem;
+  text-align: center;
+  text-transform: uppercase;
+  min-height: 4.125rem;
+}
+.contacts__card-info {
+  padding-left: 0;
+}
+.contacts__card-item {
+  display: flex;
+  column-gap: 1.25rem;
+  min-height: 1.9375rem;
+}
+.contacts__card-item:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+.contacts__card-icon {
+  flex-shrink: 0;
+  fill: transparent;
+}
+.contacts__card-text {
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--text-color-dark-secondary);
+}
+.contacts address {
+  font-style: normal;
+}
+.contacts a {
+  transition-duration: var(--transition-duration) !important;
+}
+
+/*  ==================================  */
+/*  =======END section contacts=======  */
+/*  ==================================  */
+
+/*# sourceMappingURL=contacts-block.css.map */

@@ -219,9 +219,21 @@
 					</p>
 				</div>
 
-				<a class="promo__button button button--accent-bg" href="#!">
-					Связаться
-				</a>
+				<div class="promo__buttons">
+					<a class="promo__button button button--accent-bg" href="#!">
+						<span class="hidden-mobile">
+							Связаться с&nbsp;нами
+						</span>
+
+						<span class="visible-mobile">
+							На&nbsp;сайте
+						</span>
+					</a>
+
+					<a class="promo__button button visible-mobile" href="#!">
+						В&nbsp;Telegram
+					</a>
+				</div>
 			</div>
 		</section>
 
@@ -438,7 +450,6 @@
 				</ul>
 			</div>
 		</section>
-
 
 		<section class="advantages section section--big-to-medium-margin container" aria-labelledby="advantages-title">
 			<h2 class="advantages__title section__title h3" id="advantages-title">
@@ -706,7 +717,7 @@
 					</li>
 
 					<li>
-						<a href="#!">Контакты</a>
+						<a href="./contacts.html">Контакты</a>
 					</li>
 
 					<li>
@@ -804,21 +815,20 @@
 	<script>
 		const possobilitiesSlider = new Swiper(".possobilities__slider", {
 			slidesPerView: "auto",
+			loop: true,
 			grid: {
 				rows: 1,
 				fill: 'row',
 			},
-			spaceBetween: 10,
+			spaceBetween: 24,
 			breakpoints: {
 				1024: {
-					spaceBetween: 10,
 					grid: {
 						rows: 1,
 						fill: 'row',
 					},
 				},
 				1224: {
-					spaceBetween: 24,
 					grid: {
 						rows: 2,
 					},

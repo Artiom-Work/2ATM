@@ -85,13 +85,13 @@
     &__body {
       flex-direction: column-reverse;
       height: auto;
-      gap: rem(20);
+      gap: rem(17);
     }
 
     &__list {
       height: var(--locationListHeight);
       max-width: unset;
-      row-gap: rem(10);
+      row-gap: rem(2);
     }
 
     &__map-block {

@@ -1055,15 +1055,13 @@ button[aria-label]:not(.promotion__card-link)::before {
   margin-bottom: 1.25rem;
 }
 .offer-description__text {
-  margin-bottom: 1.875rem;
+  margin-bottom: 1.25rem;
   line-height: 1.5;
-  letter-spacing: var(--letter-spacing-medium);
 }
 .offer-description__text p:not(:last-child) {
   margin-bottom: clamp(0rem, -0.4651162791rem + 1.8604651163vw, 1rem);
 }
 .offer-description__text ul {
-  letter-spacing: var(--letter-spacing);
   padding-inline: clamp(1.25rem, 1.1046511628rem + 0.5813953488vw, 1.5625rem);
 }
 .offer-description__text-address {
@@ -1075,7 +1073,7 @@ button[aria-label]:not(.promotion__card-link)::before {
     line-height: 1.2;
   }
   .offer-description__text {
-    letter-spacing: 0;
+    margin-bottom: 1.875rem;
   }
   .offer-description__text ul {
     margin-block: 0;
@@ -1084,6 +1082,12 @@ button[aria-label]:not(.promotion__card-link)::before {
     display: block;
     margin-inline: auto;
     font-size: 1rem;
+    width: unset;
+  }
+}
+@media (width <= 35.93625rem) {
+  .offer-description__button {
+    width: 100%;
   }
 }
 /* Styles for section single-offer.(offer page) */
@@ -1158,10 +1162,27 @@ button[aria-label]:not(.promotion__card-link)::before {
     gap: 2.75rem 1.5rem;
   }
 }
+@media (width <= 63.99875rem) {
+  .footer-svc-links__list {
+    gap: 1.5625rem 1.5rem;
+  }
+  .footer-svc-links__list li:nth-child(3n) {
+    order: 2;
+  }
+  .footer-svc-links__item:not(:last-child) {
+    margin-bottom: 1.4375rem;
+  }
+}
 @media (width <= 30.06125rem) {
   .footer-svc-links__list {
     grid-template-columns: 1fr;
     gap: 0.875rem 1.5rem;
+  }
+  .footer-svc-links__list li:nth-child(3n) {
+    order: 0;
+  }
+  .footer-svc-links__item:not(:last-child) {
+    margin-bottom: 0.85625rem;
   }
 }
 /* Block footer . For all pages.*/
@@ -1174,7 +1195,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: repeat(2, auto);
-  row-gap: clamp(1.9375rem, 1.414244186rem + 2.0930232558vw, 3.0625rem);
+  row-gap: 3.0625rem;
   column-gap: 4.625rem;
 }
 .footer__heading {
@@ -1255,13 +1276,24 @@ button[aria-label]:not(.promotion__card-link)::before {
   gap: 1.9375rem 1.875rem;
   letter-spacing: var(--letter-spacing);
 }
+.footer__copyright {
+  line-height: 1.16667;
+  font-size: 0.75rem;
+}
 .footer ul {
   list-style: none;
   margin-block: 0;
   padding: 0;
 }
+.footer a {
+  transition-duration: var(--transition-duration) !important;
+}
 
 @media (width <= 81.31125rem) {
+  .footer__inner {
+    grid-template-rows: repeat(3, auto);
+    row-gap: 1.25rem;
+  }
   .footer__buttons {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -1282,14 +1314,15 @@ button[aria-label]:not(.promotion__card-link)::before {
   }
   .footer__inner {
     padding-block: 1.5625rem 3.9375rem;
-    grid-template-areas: "heading buttons" "links-list links-list" "svc svc";
+    grid-template-areas: "heading buttons" "links-list links-list" "svc svc" "copyright copyright";
     column-gap: 2.125rem;
+    row-gap: 0;
   }
   .footer__heading {
     grid-area: heading;
     justify-self: center;
     text-align: center;
-    margin-left: -0.625rem;
+    margin-left: -0.3125rem;
   }
   .footer__heading-text {
     font-size: 0.75rem;
@@ -1306,6 +1339,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   .footer__svc-links {
     grid-area: svc;
     max-width: unset;
+    margin-bottom: 2.6875rem;
   }
   .footer__buttons {
     grid-area: buttons;
@@ -1316,6 +1350,7 @@ button[aria-label]:not(.promotion__card-link)::before {
     width: 100%;
     grid-template-areas: "yandex button" ". qs";
     row-gap: 1rem;
+    margin-bottom: 2.25rem;
   }
   .footer__button {
     align-self: start;
@@ -1325,6 +1360,9 @@ button[aria-label]:not(.promotion__card-link)::before {
     height: 4.3125rem;
     align-self: start;
   }
+  .footer__copyright {
+    grid-area: copyright;
+  }
 }
 @media (width <= 47.99875rem) {
   .footer .container {
@@ -1333,7 +1371,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   .footer__inner {
     padding-block: 0.6875rem 1.375rem;
     grid-template-columns: 1fr;
-    grid-template-areas: "heading" "buttons" "links-list" "svc";
+    grid-template-areas: "heading" "buttons" "links-list" "svc" "copyright";
     row-gap: 0;
   }
   .footer__heading {

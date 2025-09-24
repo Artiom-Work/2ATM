@@ -7,7 +7,6 @@
 .about-gallery__subtitle {
   max-width: 52rem;
   font-size: 1.125rem;
-  letter-spacing: var(--letter-spacing-medium);
   text-align: start;
 }
 .about-gallery__list {
@@ -60,6 +59,9 @@
   .about-gallery__list {
     flex-direction: column;
     margin-bottom: 0;
+  }
+  .about-gallery__image-wrapper {
+    height: 17rem;
   }
   .about-gallery__image-wrapper--small-height {
     height: 15.75rem;

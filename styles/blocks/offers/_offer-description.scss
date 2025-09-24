@@ -15,9 +15,8 @@
   }
 
   &__text {
-    margin-bottom: rem(30);
+    margin-bottom: rem(20);
     line-height: 1.5;
-    letter-spacing: var(--letter-spacing-medium);
 
     p {
       &:not(:last-child) {
@@ -26,7 +25,6 @@
     }
 
     ul {
-      letter-spacing: var(--letter-spacing);
       padding-inline: fluid(25, 20);
     }
 
@@ -43,7 +41,7 @@
     }
 
     &__text {
-      letter-spacing: 0;
+      margin-bottom: rem(30);
 
       ul {
         margin-block: 0;
@@ -54,6 +52,15 @@
       display: block;
       margin-inline: auto;
       font-size: rem(16);
+      width: unset;
+    }
+  }
+}
+
+@include mobile-medium-media {
+  .offer-description {
+    &__button {
+      width: 100%;
     }
   }
 }

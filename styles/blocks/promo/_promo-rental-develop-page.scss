@@ -36,6 +36,10 @@
     line-height: 1.5;
     max-width: rem(461);
   }
+
+  &__button {
+    padding-inline: rem(25.5);
+  }
 }
 
 @include tablet-media {

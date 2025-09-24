@@ -64,7 +64,6 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   align-items: stretch;
-  padding-inline: 2.25rem;
   gap: clamp(0.625rem, 0.2180232558rem + 1.6279069767vw, 1.5rem);
   width: 100%;
 }

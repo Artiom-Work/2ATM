@@ -1,0 +1,26 @@
+@use "../../healpers" as *;
+/* Section requisites. Block with conpany requisites . sourse contacts page */
+.requisites {
+  color: var(--text-color-light);
+  background-color: var(--color-gray-800);
+  padding-inline: var(--container-padding-x);
+  padding-block: fluid(50, 20);
+
+  &__body {
+    max-width: rem(832);
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(16);
+    line-height: 1.5;
+    font-weight: 600;
+  }
+}
+
+/*  ====================================  */
+/*  =======END section requisites=======  */
+/*  ====================================  */

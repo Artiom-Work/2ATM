@@ -1,0 +1,25 @@
+/* Section requisites. Block with conpany requisites . sourse contacts page */
+.requisites {
+  color: var(--text-color-light);
+  background-color: var(--color-gray-800);
+  padding-inline: var(--container-padding-x);
+  padding-block: clamp(1.25rem, 0.3779069767rem + 3.488372093vw, 3.125rem);
+}
+.requisites__body {
+  max-width: 52rem;
+  width: 100%;
+  margin-inline: auto;
+}
+.requisites__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+/*  ====================================  */
+/*  =======END section requisites=======  */
+/*  ====================================  */
+
+/*# sourceMappingURL=requisites.css.map */

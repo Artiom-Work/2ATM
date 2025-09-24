@@ -10,7 +10,7 @@
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: repeat(2, auto);
-    row-gap: fluid(49, 31);
+    row-gap: rem(49);
     column-gap: rem(74);
   }
 
@@ -104,15 +104,29 @@
     }
   }
 
+  &__copyright {
+    line-height: 1.16667;
+    font-size: rem(12);
+  }
+
   ul {
     list-style: none;
     margin-block: 0;
     padding: 0;
   }
+
+  a {
+    transition-duration: var(--transition-duration) !important;
+  }
 }
 
 @include laptop-media {
   .footer {
+    &__inner {
+      grid-template-rows: repeat(3, auto);
+      row-gap: rem(20);
+    }
+
     &__buttons {
       display: grid;
       grid-template-columns: 1fr auto;
@@ -143,15 +157,17 @@
       grid-template-areas:
         "heading buttons"
         "links-list links-list"
-        "svc svc";
+        "svc svc"
+        "copyright copyright";
       column-gap: rem(34);
+      row-gap: 0;
     }
 
     &__heading {
       grid-area: heading;
       justify-self: center;
       text-align: center;
-      margin-left: rem(-10);
+      margin-left: rem(-5);
 
       &-text {
         font-size: rem(12);
@@ -172,6 +188,7 @@
     &__svc-links {
       grid-area: svc;
       max-width: unset;
+      margin-bottom: rem(43);
     }
 
     &__buttons {
@@ -185,6 +202,7 @@
         "yandex button"
         ". qs";
       row-gap: rem(16);
+      margin-bottom: rem(36);
     }
 
     &__button {
@@ -195,6 +213,10 @@
       width: rem(54);
       height: rem(69);
       align-self: start;
+    }
+
+    &__copyright {
+      grid-area: copyright;
     }
   }
 }
@@ -212,7 +234,8 @@
         "heading"
         "buttons"
         "links-list"
-        "svc";
+        "svc"
+        "copyright";
       row-gap: 0;
     }
 

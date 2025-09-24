@@ -8,7 +8,6 @@
   &__subtitle {
     max-width: rem(832);
     font-size: rem(18);
-    letter-spacing: var(--letter-spacing-medium);
     text-align: start;
   }
 
@@ -77,6 +76,8 @@
 
     &__image {
       &-wrapper {
+        height: rem(272);
+
         &--small-height {
           height: rem(252);
         }

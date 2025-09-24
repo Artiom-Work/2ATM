@@ -3,15 +3,18 @@
   --offerCardTextColor: var(--text-color-dark);
   color: var(--offerCardTextColor);
   display: flex;
+  align-items: center;
   column-gap: 1.5rem;
 }
 .offer-card__image {
+  border-radius: inherit;
   width: inherit;
   height: inherit;
 }
 .offer-card__image-wrapper {
   width: 25.25rem;
   height: 15.0625rem;
+  border-radius: var(--border-radius-small);
   flex-shrink: 0;
 }
 .offer-card__heading {
@@ -38,6 +41,7 @@
   text-decoration-skip-ink: none;
   transition-duration: var(--transition-duration) !important;
   color: inherit;
+  margin-bottom: clamp(1rem, 0.9127906977rem + 0.3488372093vw, 1.1875rem);
 }
 .offer-card__button {
   display: block;
@@ -62,7 +66,6 @@
     width: 100%;
     min-width: 21.25rem;
     height: 10.625rem;
-    border-radius: var(--border-radius-small);
   }
   .offer-card__image-wrapper::before {
     content: "";

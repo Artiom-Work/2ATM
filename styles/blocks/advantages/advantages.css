@@ -21,7 +21,11 @@
   text-align: center;
   color: var(--advantageCardTitleTextColor);
 }
+.advantage-card__heading--left-position {
+  text-align: start;
+}
 .advantage-card__text {
+  font-size: clamp(0.9375rem, 0.9084302326rem + 0.1162790698vw, 1rem);
   color: var(--text-color-dark-secondary);
   line-height: 1.4;
 }

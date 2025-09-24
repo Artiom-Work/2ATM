@@ -38,10 +38,6 @@
       font-size: rem(18);
     }
   }
-
-  &__list {
-    padding-block: 0 rem(3);
-  }
 }
 @include tablet-media {
   .possobility-card {
