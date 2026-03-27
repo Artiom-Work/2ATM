@@ -11,6 +11,10 @@
   }
 
   &__image {
+    border-radius: var(--border-radius-small);
+    width: inherit;
+    height: inherit;
+
     &-wrapper {
       position: relative;
       width: rem(618);
@@ -28,10 +32,6 @@
         background: var(--color-red-opcity-15);
       }
     }
-
-    border-radius: var(--border-radius-small);
-    width: inherit;
-    height: inherit;
   }
 
   &__content {

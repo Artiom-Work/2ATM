@@ -29,6 +29,9 @@
   }
 
   &__main-image {
+    width: inherit;
+    height: inherit;
+
     &-wrapper {
       width: rem(942);
       height: rem(587);
@@ -37,9 +40,6 @@
       top: rem(6);
       right: 0;
     }
-
-    width: inherit;
-    height: inherit;
   }
 
   &__content {

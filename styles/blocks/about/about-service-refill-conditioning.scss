@@ -15,6 +15,10 @@
   }
 
   &__image {
+    border-radius: var(--border-radius-small);
+    width: inherit;
+    height: inherit;
+
     &-wrapper {
       position: relative;
       flex-shrink: 0;
@@ -36,10 +40,6 @@
         height: rem(371);
       }
     }
-
-    border-radius: var(--border-radius-small);
-    width: inherit;
-    height: inherit;
   }
 
   &__content {

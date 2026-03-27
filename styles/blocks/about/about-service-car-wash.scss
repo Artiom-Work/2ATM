@@ -12,15 +12,15 @@
   }
 
   &__image {
+    border-radius: var(--border-radius-small);
+    width: inherit;
+    height: inherit;
+
     &-wrapper {
       flex-shrink: 0;
       width: rem(618);
       height: rem(512);
     }
-
-    border-radius: var(--border-radius-small);
-    width: inherit;
-    height: inherit;
   }
 
   &__content {

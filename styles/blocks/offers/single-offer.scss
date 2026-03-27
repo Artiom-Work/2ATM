@@ -8,14 +8,14 @@
   margin-block: 0 rem(40);
 
   &__image {
+    width: inherit;
+    height: inherit;
+
     &-wrapper {
       width: rem(404);
       height: rem(241);
       flex-shrink: 0;
     }
-
-    width: inherit;
-    height: inherit;
   }
 }
 @include tablet-media {
@@ -28,6 +28,8 @@
     gap: 0;
 
     &__image {
+      object-fit: cover;
+
       &-wrapper {
         margin-inline: calc(var(--container-padding-x) * -1);
         width: calc(100% + (var(--container-padding-x) * 2));
@@ -35,8 +37,6 @@
 
         margin-bottom: rem(40);
       }
-
-      object-fit: cover;
     }
   }
 }

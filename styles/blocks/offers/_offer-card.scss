@@ -9,16 +9,16 @@
   column-gap: rem(24);
 
   &__image {
+    border-radius: inherit;
+    width: inherit;
+    height: inherit;
+
     &-wrapper {
       width: rem(404);
       height: rem(241);
       border-radius: var(--border-radius-small);
       flex-shrink: 0;
     }
-
-    border-radius: inherit;
-    width: inherit;
-    height: inherit;
   }
 
   &__heading {
@@ -67,6 +67,10 @@
     position: relative;
 
     &__image {
+      border-radius: inherit;
+      min-width: inherit;
+      object-fit: cover;
+
       &-wrapper {
         position: relative;
         z-index: 1;
@@ -87,10 +91,6 @@
           border-radius: inherit;
         }
       }
-
-      border-radius: inherit;
-      min-width: inherit;
-      object-fit: cover;
     }
 
     &__content {

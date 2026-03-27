@@ -29,6 +29,9 @@
   }
 
   &__main-image {
+    width: inherit;
+    height: inherit;
+
     &-wrapper {
       width: rem(1246);
       height: rem(521);
@@ -50,9 +53,6 @@
         filter: blur(rem(16));
       }
     }
-
-    width: inherit;
-    height: inherit;
   }
 
   &__content {

@@ -45,6 +45,9 @@
   }
 
   &__main-image {
+    width: inherit;
+    height: inherit;
+
     &-wrapper {
       width: rem(900);
       height: rem(600);
@@ -53,9 +56,6 @@
       right: rem(104);
       top: 0;
     }
-
-    width: inherit;
-    height: inherit;
   }
 
   &__content {
@@ -132,14 +132,14 @@
     }
 
     &__main-image {
+      object-position: rem(80) 0;
+
       &-wrapper {
         width: rem(767);
         height: rem(484);
         top: 0;
         right: 0;
       }
-
-      object-position: rem(80) 0;
     }
 
     &__content {
@@ -180,14 +180,14 @@
     }
 
     &__main-image {
+      object-position: center;
+      object-fit: cover;
+
       &-wrapper {
         position: relative;
         right: unset;
         top: 0;
       }
-
-      object-position: center;
-      object-fit: cover;
     }
 
     &__content {

@@ -19,12 +19,12 @@
   }
 
   &__image {
+    width: inherit;
+    height: inherit;
+
     &-wrapper {
       @include square(rem(60));
     }
-
-    width: inherit;
-    height: inherit;
   }
 
   &__button {

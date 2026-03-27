@@ -717,6 +717,13 @@ button[aria-label]:not(.promotion__card-link)::before {
 .header-menu {
   width: 100%;
 }
+.header-menu--not-to-scroll {
+  /* Временно , заменить на display none , через JS */
+  animation-name: hidden-to-scroll;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: 25rem 25rem;
+}
 .header-menu--color-accent {
   background-color: var(--color-accent-200);
 }
@@ -748,6 +755,10 @@ button[aria-label]:not(.promotion__card-link)::before {
   }
 }
 @media (width <= 47.99875rem) {
+  .header-menu--not-to-scroll {
+    /* Временно , заменить на display none , через JS */
+    animation-range: 3.125rem 3.125rem;
+  }
   .header-menu__list {
     padding-block: 0.9375rem;
     padding-inline: 0.625rem;
@@ -763,6 +774,10 @@ button[aria-label]:not(.promotion__card-link)::before {
   font-weight: 600;
   font-size: 0.875rem;
   /* Временно , заменить на display none , через JS */
+  animation-name: hidden-to-scroll;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: 25rem 25rem;
 }
 .header-top-menu__list {
   display: flex;
@@ -871,6 +886,10 @@ button[aria-label]:not(.promotion__card-link)::before {
   position: sticky;
   top: 0;
   z-index: 100;
+  animation-name: scrolling-sticky;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: 12.5rem 18.75rem;
   background-color: var(--color-accent-50);
 }
 .header__logo {
@@ -884,6 +903,17 @@ button[aria-label]:not(.promotion__card-link)::before {
   column-gap: 1.5rem;
   padding-block: clamp(0.125rem, -0.136627907rem + 1.0465116279vw, 0.6875rem) 0.75rem;
 }
+.header__general--to-scroll {
+  /* Временно , заменить на display none , через JS */
+  position: absolute;
+  translate: 0 -62.5rem;
+  height: 0.0625rem;
+  overflow: hidden;
+  animation-name: visible-to-scroll;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: 25rem 25rem;
+}
 .header__buttons {
   display: flex;
   align-items: center;
@@ -891,6 +921,15 @@ button[aria-label]:not(.promotion__card-link)::before {
   column-gap: 3.6875rem;
 }
 
+@media (width > 63.99875rem) {
+  .header__general--not-to-scroll {
+    /* Временно , заменить на display block , через JS */
+    animation-name: hidden-to-scroll;
+    animation-fill-mode: both;
+    animation-timeline: scroll();
+    animation-range: 25rem 25rem;
+  }
+}
 @media (width <= 81.31125rem) {
   .header__buttons {
     column-gap: 1.5rem;

@@ -7,14 +7,14 @@
   margin-bottom: rem(80);
 
   &__image {
+    width: inherit;
+    height: inherit;
+
     &-wrapper {
       flex-shrink: 0;
       width: rem(618);
       height: rem(530);
     }
-
-    width: inherit;
-    height: inherit;
   }
 
   &__body {

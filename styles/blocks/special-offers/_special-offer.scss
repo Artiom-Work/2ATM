@@ -15,6 +15,11 @@
   height: 100%;
 
   &__image {
+    object-fit: cover;
+    width: inherit;
+    height: inherit;
+    border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
+
     &-wrapper {
       display: block;
       position: relative;
@@ -38,11 +43,6 @@
         }
       }
     }
-
-    object-fit: cover;
-    width: inherit;
-    height: inherit;
-    border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
   }
 
   &__body {

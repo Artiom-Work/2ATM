@@ -28,6 +28,11 @@
   padding-inline: fluid(30, 24);
 
   &-image {
+    object-fit: cover;
+    width: inherit;
+    min-width: inherit;
+    height: inherit;
+
     &-wrapper {
       position: absolute;
       left: 0;
@@ -41,11 +46,6 @@
       border-radius: var(--border-radius-small);
       overflow: hidden;
     }
-
-    object-fit: cover;
-    width: inherit;
-    min-width: inherit;
-    height: inherit;
   }
 
   &-name {

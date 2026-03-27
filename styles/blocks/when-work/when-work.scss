@@ -66,14 +66,14 @@
   }
 
   &__image {
+    width: inherit;
+    height: inherit;
+
     &-wrapper {
       width: rem(469);
       height: rem(308);
       flex-shrink: 0;
     }
-
-    width: inherit;
-    height: inherit;
   }
 }
 

@@ -20,6 +20,9 @@
   }
 
   &__image {
+    width: rem(86);
+    height: rem(108);
+
     &-wrapper {
       flex-shrink: 0;
       display: inline-flex;
@@ -28,9 +31,6 @@
       height: rem(118);
       margin-right: rem(22);
     }
-
-    width: rem(86);
-    height: rem(108);
   }
 
   &__buttons {

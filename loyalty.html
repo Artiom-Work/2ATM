@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/svg+xml" sizes="16x16" href="./images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="32x32" href="./images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="48x48" href="./images/icons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./images/icons/favicon.svg">
+	<meta name="description"
+		content="Программа лояльности сети шиномонтажей и автомоек «Две атмосферы» в Санкт-Петербурге. Накопительные скидки, VIP-статус, удобная запись через сайт или мессенджер">
+	<title>2ATM | Программа лояльности</title>
+	<link rel="stylesheet" href="./styles/pages/loyalty-page/loyalty.css">
+</head>
+
+<body>
+	<header class="header">
+		<nav class="header-top-menu hidden-tablet">
+			<ul class="header-top-menu__list container">
+				<li>
+					<a class="header-top-menu__link header-top-menu__link--color-accent" href="./services.html">
+						Услуги
+					</a>
+				</li>
+				<li>
+					<a class="header-top-menu__link" href="./addresses.html">
+						Адреса
+					</a>
+				</li>
+				<li>
+					<a class="header-top-menu__link" href="./corporate.html">
+						Корпоративным клиентам
+					</a>
+				</li>
+				<li>
+					<a class="header-top-menu__link header-top-menu__link--color-green" href="./offers.html">
+						Спецпредложения
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="header__general header__general--not-to-scroll container">
+			<a class="header__logo logo" href="./index.html" aria-label="Логотип 2ATM">
+				<picture>
+					<source srcset="./images/logo/logo-mobile.svg" media="(max-width: 1024px)" type="image/svg+xml">
+					<source srcset="./images/logo/logo.svg" type="image/svg+xml">
+					<img class="logo__image" src="./images/logo/logo-mobile.svg" width="273" height="58" alt="Логотип 2ATM">
+				</picture>
+			</a>
+
+			<div class="header__mobile-menu mobile-menu visible-tablet">
+				<input id="menu-switch" type="checkbox">
+				<label class="mobile-menu__burger" for="menu-switch">
+					<span class="mobile-menu__burger-line"></span>
+					<span class="mobile-menu__burger-line"></span>
+					<span class="mobile-menu__burger-line"></span>
+				</label>
+
+				<div class="mobile-menu__wrapper">
+					<nav class="mobile-menu__box header-top-menu">
+						<ul class="header-top-menu__list">
+							<li>
+								<a class="mobile-menu__link mobile-menu__link--color-accent" href="./services.html">
+									Услуги
+								</a>
+							</li>
+							<li>
+								<a class="mobile-menu__link" href="./addresses.html">
+									Адреса
+								</a>
+							</li>
+							<li>
+								<a class="mobile-menu__link" href="./corporate.html">
+									Корпоративным клиентам
+								</a>
+							</li>
+							<li>
+								<a class="mobile-menu__link mobile-menu__link--color-green" href="./offers.html">
+									Спецпредложения
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<nav class="header__buttons">
+				<address class="call-up hidden-tablet">
+					<svg viewBox="0 0 32 32" width="32" height="32">
+						<use xlink:href="./images/icons/sprite-icons.svg#call-up"></use>
+					</svg>
+
+					<a class="call-up__link" href="tel:78123855054" target="_blank" title="Позвонить нам">
+						<span>+7&nbsp;812 385-50-54</span>
+						<span class="call-up__text">круглосуточно</span>
+					</a>
+				</address>
+
+				<a class="button button--accent-bg visible-tablet" href="#!">
+					Запись&nbsp;на&nbsp;сайте
+				</a>
+
+				<a class="button" href="#!">
+					<span class="header-buttons__link-text hidden-tablet">
+						Записаться&nbsp;в&nbsp;Telegram
+					</span>
+
+					<span class="header-buttons__link-text visible-tablet">
+						Запись&nbsp;в&nbsp;Telegram
+					</span>
+				</a>
+			</nav>
+		</div>
+
+		<nav class="header-menu header-menu--not-to-scroll header-menu--color-accent">
+			<ul class="header-menu__list container">
+				<li class="header-menu__item">
+					<a href="./tire-fitting.html">Шиномонтаж</a>
+				</li>
+				<li class="header-menu__item">
+					<a href="./car-wash.html">Автомойка</a>
+				</li>
+				<li class="header-menu__item">
+					<a href="./car-service.html">Автосервис</a>
+				</li>
+				<li class="header-menu__item">
+					<a href="./refill-conditioning.html">Заправка кондиционеров</a>
+				</li>
+
+				<li class="header-menu__item">
+					<a href="./wheel-alignment.html">Развал-схождение</a>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- <div class="header__general header__general--to-scroll container hidden-tablet">
+			<a class="logo logo--short" href="./index.html" aria-label="Логотип 2ATM">
+				<img class="logo__image" src="./images/logo/logo-short.svg" width="45" height="45" alt="Логотип 2ATM">
+			</a>
+
+			<nav class="header__menu header-menu">
+				<ul class="header-menu__list">
+					<li class="header-menu__item">
+						<a href="./tire-fitting.html">Шиномонтаж</a>
+					</li>
+					<li class="header-menu__item">
+						<a href="./car-wash.html">Автомойка</a>
+					</li>
+					<li class="header-menu__item">
+						<a href="./refill-conditioning.html">Заправка кондиционеров</a>
+					</li>
+					<li class="header-menu__item">
+						<a href="./car-service.html">Автосервис</a>
+					</li>
+				</ul>
+			</nav>
+
+			<a class="button" href="#!">
+				<span class="header-buttons__link-text">
+					Запись&nbsp;в&nbsp;Telegram
+				</span>
+			</a>
+		</div> -->
+	</header>
+
+	<main class="content">
+		<h1 class="visually-hidden">Программа лояльности в 2АТМ</h1>
+
+		<section class="page-heading container" aria-labelledby="page-title">
+			<nav class="page-heading__breadcrumbs">
+				<ul class="page-heading__breadcrumbs-list">
+					<li class="page-heading__breadcrumbs-item">
+						<a class="page-heading__breadcrumbs-link" href="./index.html">Главная</a>
+					</li>
+
+					<li class="page-heading__breadcrumbs-item">
+						<a class="page-heading__breadcrumbs-link" href="./loyalty.html" tabindex="-1">
+							Программа лояльности
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<h2 class="page-heading__page-name page-heading__page-name--letter-spacing h3" id="page-title">
+				Программа лояльности
+			</h2>
+		</section>
+
+		<section class="promo section" aria-labelledby="promo-title">
+			<h2 class="visually-hidden">Программа лояльности Две атмосферы</h2>
+
+			<div class="promo__background-wrapper">
+				<picture class="promo__background">
+					<source srcset="./images/promo/loyalty-promo-bg-mobile.webp" media="(max-width: 768px)" type="image/webp">
+					<source srcset="./images/promo/loyalty-promo-bg-tablet.webp" media="(max-width: 1023px)" type="image/webp">
+					<source srcset="./images/promo/loyalty-promo-bg.webp 1x , ./images/promo/loyalty-promo-bg@2x.webp 2x"
+						type="image/webp">
+					<img class="promo__background-image" src="./images/promo/loyalty-promo-bg-mobile.webp"
+						alt="Карта лояльности 2 АТМ" width="768" height="260" loading="lazy">
+				</picture>
+			</div>
+
+			<div class="promo__body container">
+				<h3 class="promo__title" id="promo-title">
+					программа лояльности <br>«Две атмосферы»
+				</h3>
+
+				<div class="promo__subtitle">
+					<p>
+						Вступайте в&nbsp;программу лояльности сети шиномонтажей и&nbsp;автомоек &laquo;Две атмосферы&raquo;
+						в&nbsp;Санкт-Петербурге и&nbsp;пользуйтесь накопительной системой скидок и&nbsp;специальными предложениями
+						для участников
+					</p>
+				</div>
+
+				<a class="promo__button button button--accent-bg" href="#!">
+					Связаться с&nbsp;нами
+				</a>
+			</div>
+		</section>
+
+		<section class="check-discount section" aria-labelledby="check-discount-title">
+			<h2 class="check-discount__title h4" id="check-discount-title">
+				Проверить размер скидки
+			</h2>
+
+			<div class="check-discount__subtitle">
+				<p>
+					Укажите номер телефона или номер карты лояльности.<br class="hidden-mobile-medium">
+					С&nbsp;2025 года мы&nbsp;перешли на&nbsp;идентификацию по&nbsp;номеру телефона. Новые пластиковые карты или
+					номера карт больше не&nbsp;выдаются.
+				</p>
+			</div>
+
+			<form class="check-discount__form" id="check-discount-form">
+				<div class="check-discount__field">
+					<label class="visually-hidden" for="phone">Телефон клиента</label>
+					<input class="check-discount__field-input" type="tel" id="phone" name="phone" placeholder="Телефон"
+						pattern="[0-9+()\-\s]{10,20}">
+				</div>
+
+				<div class="check-discount__field">
+					<label class="visually-hidden" for="loyalty-card-namber">Номер карты лояльности</label>
+					<input class="check-discount__field-input" type="number" id="loyalty-card-namber" name="loyalty-card-namber"
+						placeholder="Или номер карты лояльности">
+				</div>
+
+				<button class="check-discount__button button button--accent-bg" type="submit">
+					Проверить
+				</button>
+			</form>
+		</section>
+
+		<section class="about-loyalty section section--extra-big-to-small-margin container"
+			aria-labelledby="about-loyalty-title">
+			<h2 class="visually-hidden" id="about-loyalty-title">
+				О программе лояльности в 2АТМ
+			</h2>
+
+			<ul class="about-loyalty__list">
+				<li class="about-loyalty__card">
+					<img class="about-loyalty__card-image" src="./images/icons/icon-percent.webp" width="60" height="60"
+						alt="Знак прочента" loading="lazy">
+
+					<h3 class="about-loyalty__card-name h5">
+						скидка&nbsp;11%
+					</h3>
+
+					<div class="about-loyalty__card-text">
+						<p>
+							При выполнении работ на&nbsp;сумму от 5000&nbsp;рублей&nbsp;Вы получаете скидку&nbsp;11%!
+						</p>
+					</div>
+				</li>
+
+				<li class="about-loyalty__card">
+					<img class="about-loyalty__card-image" src="./images/icons/icon-plus.webp" width="60" height="60"
+						alt="Знак плюса" loading="lazy">
+
+					<h3 class="about-loyalty__card-name h5">
+						+1%&nbsp;за&nbsp;каждые 15000 рублей
+					</h3>
+
+					<div class="about-loyalty__card-text">
+						<p>
+							Ваша скидка будет увеличивается на&nbsp;1% за&nbsp;каждые потраченные 15&nbsp;000&nbsp;рублей.*
+						</p>
+					</div>
+				</li>
+
+				<li class="about-loyalty__card">
+					<img class="about-loyalty__card-image" src="./images/icons/icon-cristall.webp" width="60" height="60"
+						alt="Изображение бриллианта" loading="lazy">
+
+					<h3 class="about-loyalty__card-name h5">
+						VIP статус при достижении 20%
+					</h3>
+
+					<div class="about-loyalty__card-text">
+						<p>
+							При достижении скидки в&nbsp;20%, Вы становитесь VIP-клиентом нашей компании.
+						</p>
+					</div>
+				</li>
+
+				<li class="about-loyalty__card about-loyalty__card--long">
+					<svg class="about-loyalty__card-image about-loyalty__card-image--attantion" width="26" height="23"
+						viewBox="0 0 26 23">
+						<use xlink:href="./images/icons/sprite-icons.svg#attention-icon"></use>
+					</svg>
+					<div class="about-loyalty__card-text">
+						<p>
+							* Скидка предоставляется на&nbsp;все услуги, кроме покраски дисков, заправки/диагностики
+							автокондиционеров, сезонного хранения шин и&nbsp;дисков, услуг автосервиса, техосмотра, развал-схождения
+							и&nbsp;услуг автомойки.
+						</p>
+
+						<p>
+							Скидка не&nbsp;суммируется с&nbsp;другими промоакциями и&nbsp;скидками.
+						</p>
+
+						<p>
+							Услуги с&nbsp;ограничением максимальной скидки: ошиповка колес, сезонное хранение колес&nbsp;&mdash;
+							максимальная скидка&nbsp;15%
+						</p>
+					</div>
+				</li>
+			</ul>
+		</section>
+
+		<section class="join-loyalty section container" aria-labelledby="join-loyalty-title">
+			<h2 class="join-loyalty__title h3" id="join-loyalty-title">
+				Как стать участником программы
+			</h2>
+
+			<ul class="join-loyalty__list">
+				<li class="join-loyalty__card">
+					<img class="join-loyalty__card-image" src="./images/icons/icon-tire-fitting.webp" width="60" height="60"
+						alt="Колесо" loading="lazy">
+
+					<h3 class="join-loyalty__card-name h5">
+						Запишитесь на услуги в любую мастерскую сети
+					</h3>
+				</li>
+
+				<li class="join-loyalty__card">
+					<img class="join-loyalty__card-image" src="./images/icons/icon-car-over-hand.webp" width="60" height="60"
+						alt="Машина на руке" loading="lazy">
+
+					<h3 class="join-loyalty__card-name h5">
+						получите услуги и&nbsp;оплатите&nbsp;их
+					</h3>
+				</li>
+
+				<li class="join-loyalty__card">
+					<img class="join-loyalty__card-image" src="./images/icons/icon-technical-inspection.webp" width="60"
+						height="60" alt="Иконка анкеты" loading="lazy">
+
+					<h3 class="join-loyalty__card-name h5">
+						Заполните короткую анкету у&nbsp;администратора
+					</h3>
+				</li>
+			</ul>
+
+			<div class="join-loyalty__text">
+				<p>
+					Как только сумма оплаченных вами услуг превысит 5000&nbsp;рублей, система автоматически применит скидку
+					к&nbsp;вашим последующим заказам
+				</p>
+			</div>
+
+			<section class="appointment-choose" aria-labelledby="appointment-choose-title">
+				<h2 class="visually-hidden">Выбор способа записи в программу лояльности в 2АТМ</h2>
+
+				<div class="appointment-choose__wrapper">
+					<div class="appointment-choose__image-wrapper">
+						<img class="appointment-choose__image" src="./images/gifes/car-service-icon-1.gif" width="228" height="285"
+							alt="Иконка сервиса ремонта авто" loading="lazy">
+					</div>
+
+					<h3 class="appointment-choose__title" id="appointment-choose-title">
+						Хотите записаться?<br>
+						Выбирайте удобный способ!
+					</h3>
+
+					<div class="appointment-choose__buttons">
+						<a class="appointment-choose__button button" href="#!" target="_blank">
+							В&nbsp;Telegram
+						</a>
+
+						<a class="appointment-choose__button button button--accent-bg" href="#!">
+							На&nbsp;сайте
+						</a>
+					</div>
+				</div>
+
+			</section>
+		</section>
+
+		<section class="advantages section container" aria-labelledby="advantages-title">
+			<h2 class="advantages__title section__title h3" id="advantages-title">
+				Наши преимущества
+			</h2>
+
+			<div class="advantages__slider">
+				<ul class="swiper-wrapper advantages__slider-wrapper">
+					<li class="swiper-slide advantage-card">
+						<img class="advantage-card__image" src="./images/icons/icon-marker.webp" width="60" height="60"
+							alt="Иконка отметки на карте" loading="lazy">
+
+						<h3 class="advantage-card__heading">
+							Расположение
+						</h3>
+
+						<div class="advantage-card__text">
+							<p>
+								Сеть наших шиномонтажей и&nbsp;мастерских расположена по&nbsp;всему городу и&nbsp;имеет удобные
+								заезды,
+								парковку и&nbsp;зоны ожидания
+							</p>
+						</div>
+					</li>
+
+					<li class="swiper-slide advantage-card">
+						<img class="advantage-card__image" src="./images/icons/icon-ruble.webp" width="60" height="60"
+							alt="Иконка с валютой" loading="lazy">
+
+						<h3 class="advantage-card__heading">
+							Приятная цена
+						</h3>
+
+						<div class="advantage-card__text">
+							<p>
+								Прозрачные цены без скрытых платежей. Первоклассный сервис по&nbsp;выгодным ценам.
+							</p>
+						</div>
+					</li>
+
+					<li class="swiper-slide advantage-card">
+						<img class="advantage-card__image" src="./images/icons/icon-clock-2.webp" width="60" height="60" alt="Часы"
+							loading="lazy">
+
+						<h3 class="advantage-card__heading">
+							Скорость
+						</h3>
+
+						<div class="advantage-card__text">
+							<p>
+								Удобная запись через Telegram. Мы&nbsp;ценим ваше время и&nbsp;отдаем автомобиль точно
+								в&nbsp;обещанное
+								время.
+							</p>
+						</div>
+					</li>
+
+					<li class="swiper-slide advantage-card">
+						<img class="advantage-card__image" src="./images/icons/icon-car-over-hand.webp" width="60" height="60"
+							alt="Машина на руке" loading="lazy">
+
+						<h3 class="advantage-card__heading">
+							Качество
+						</h3>
+
+						<div class="advantage-card__text">
+							<p>
+								Современное оборудование и&nbsp;опытные мастера гарантируют быстрый и&nbsp;качественный сервис.
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="footer__inner container">
+			<div class="footer__heading">
+				<a class="footer__logo logo" href="./index.html" aria-label="Логотип 2ATM">
+					<img class="logo__image" src="./images/logo/logo-light.svg" width="331" height="78" alt="Логотип 2ATM">
+				</a>
+
+				<div class="footer__heading-text">
+					<p>
+						Сеть шиномонтажей, автомоек и&nbsp;автосервисов с&nbsp;качественным обслуживанием в&nbsp;Санкт-Петербурге
+					</p>
+				</div>
+			</div>
+
+			<nav class="footer__buttons">
+				<address class="footer__qs-line">
+					<a class="footer__qs-line-link" href="tel:88126482248" target="_blank"
+						title="Связаться с линией контроля качества">
+						<span class="footer__qs-line-phone">8&nbsp;812 648-22-48</span>
+						<span class="footer__qs-line-text">линия контроля качества обслуживания клиентов</span>
+					</a>
+				</address>
+
+				<a class="footer__yandex-button" href="" aria-label="yandex-button" title="Перейти в Яндекс">
+					<svg width="72" height="92" viewBox="0 0 72 92">
+						<use xlink:href="./images/icons/sprite-icons.svg#yandex-plate"></use>
+					</svg>
+				</a>
+
+				<a class="footer__button button button--accent-bg" href="#!">
+					Записаться&nbsp;в&nbsp;Telegram
+				</a>
+			</nav>
+
+			<nav class="footer__links">
+				<ul class="footer__links-list">
+					<li>
+						<a href="./addresses.html">Адреса</a>
+					</li>
+
+					<li>
+						<a href="./offers.html">Cпецпредложения</a>
+					</li>
+
+					<li>
+						<a href="./corporate.html">Корпоративным клиентам</a>
+					</li>
+
+					<li>
+						<a href="./contacts.html">Контакты</a>
+					</li>
+
+					<li>
+						<a href="./rental-develop.html">Аренда и&nbsp;развитие</a>
+					</li>
+				</ul>
+			</nav>
+
+			<section class="footer__svc-links footer-svc-links">
+				<h2 class="footer-svc-links__heading">Услуги</h2>
+
+				<nav class="footer-svc-links__nemu">
+					<ul class="footer-svc-links__list">
+						<li>
+							<ul>
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./car-wash.html">Автомойка</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./dry-cleaning.html">Химчистка</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./body-protection.html">Защитные покрытия</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./headlight-protection.html">Полировка&nbsp;и бронирование
+										фар</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<ul>
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./tire-fitting.html">Шиномонтаж</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./tire-repair.html">Ремонт шин</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./tire-studding.html">Ошиповка шин</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./disk-painting.html">Покраска дисков</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./argon-welding.html">Аргоновая сварка</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<ul>
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./tire-storage.html">
+										Сезонное хранение шин
+									</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./balancing.html">
+										Балансировка колес
+									</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./tire-pms.html">
+										Установка системы контроля давления в&nbsp;шинах
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<ul>
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./car-service.html">Автосервис</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./wheel-alignment.html">Развал-схождение</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./refill-conditioning.html">
+										Заправка кондиционеров
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</section>
+
+			<div class="footer__copyright">
+				<a href="#!">&copy;&nbsp;2025 Две атмосферы</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="./libs/swiper/swiper-bundle.min.js"></script>
+
+	<script>
+		const advantagesSlider = new Swiper(".advantages__slider", {
+			slidesPerView: "auto",
+			grabCursor: true,
+			grid: {
+				rows: 1,
+			},
+			spaceBetween: 24,
+		});
+	</script>
+</body>
+
+</html>

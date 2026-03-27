@@ -24,15 +24,15 @@
   }
 
   &__image {
+    width: inherit;
+    min-height: inherit;
+    border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
+
     &-wrapper {
       width: rem(140);
       min-height: 100%;
       flex-shrink: 0;
     }
-
-    width: inherit;
-    min-height: inherit;
-    border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
   }
 
   &__body {

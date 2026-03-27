@@ -13,13 +13,13 @@
   }
 
   &__image {
+    width: inherit;
+    height: inherit;
+
     &-wrapper {
       width: rem(200);
       height: rem(130);
     }
-
-    width: inherit;
-    height: inherit;
   }
 
   &__prev-slide,

@@ -5,14 +5,14 @@
   border-radius: var(--border-radius-small);
 
   &__image {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+
     &-wrapper {
       width: 100%;
       height: rem(200);
     }
-
-    width: inherit;
-    height: inherit;
-    object-fit: cover;
   }
 
   &__content {

@@ -11,15 +11,15 @@
   }
 
   &__image {
+    width: inherit;
+    height: inherit;
+
     &-wrapper {
       position: relative;
       flex-shrink: 0;
       width: rem(618);
       height: rem(495);
     }
-
-    width: inherit;
-    height: inherit;
   }
 
   &__content {

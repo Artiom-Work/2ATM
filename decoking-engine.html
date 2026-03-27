@@ -1,0 +1,1939 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/svg+xml" sizes="16x16" href="./images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="32x32" href="./images/icons/favicon.svg">
+	<link rel="icon" type="image/svg+xml" sizes="48x48" href="./images/icons/favicon.svg">
+	<link rel="apple-touch-icon" sizes="180x180" href="./images/icons/favicon.svg">
+	<meta name="description"
+		content="+15% к мощности, -15% к расходу топлива! Аппаратная водородная очистка двигателя в сети 2АТМ. Устраняем причины вибрации и тяжёлого запуска. Работаем на профессиональном оборудовании бзе разборки двигателя.">
+	<title>2ATM | Аппаратная раскоксовка двигателя</title>
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./styles/pages/decoking-engine-page/decoking-engine.css">
+</head>
+
+<body>
+	<header class="header">
+		<nav class="header-top-menu hidden-tablet">
+			<ul class="header-top-menu__list container">
+				<li>
+					<a class="header-top-menu__link header-top-menu__link--color-accent" href="./services.html">
+						Услуги
+					</a>
+				</li>
+				<li>
+					<a class="header-top-menu__link" href="./addresses.html">
+						Адреса
+					</a>
+				</li>
+				<li>
+					<a class="header-top-menu__link" href="./corporate.html">
+						Корпоративным клиентам
+					</a>
+				</li>
+				<li>
+					<a class="header-top-menu__link" href="#!">
+						Интернет-магазин
+					</a>
+				</li>
+				<li>
+					<a class="header-top-menu__link header-top-menu__link--color-green" href="./offers.html">
+						Спецпредложения
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="header__general header__general--not-to-scroll container">
+			<a class="header__logo logo" href="./index.html" aria-label="Логотип 2ATM">
+				<picture>
+					<source srcset="./images/logo/logo-mobile.svg" media="(max-width: 767px)" type="image/svg+xml">
+					<source srcset="./images/logo/logo-tablet.svg" media="(max-width: 1024px)" type="image/svg+xml">
+					<source srcset="./images/logo/logo.svg" type="image/svg+xml">
+					<img class="logo__image" src="./images/logo/logo-mobile.svg" width="208" height="45" alt="Логотип 2ATM">
+				</picture>
+			</a>
+
+			<div class="header__mobile-menu mobile-menu visible-tablet">
+				<input id="menu-switch" type="checkbox">
+				<label class="mobile-menu__burger" for="menu-switch">
+					<span class="mobile-menu__burger-line"></span>
+					<span class="mobile-menu__burger-line"></span>
+					<span class="mobile-menu__burger-line"></span>
+				</label>
+
+				<div class="mobile-menu__wrapper">
+					<nav class="mobile-menu__box header-top-menu">
+						<ul class="header-top-menu__list">
+							<li>
+								<a class="mobile-menu__link mobile-menu__link--color-accent" href="./services.html">
+									Услуги
+								</a>
+							</li>
+							<li>
+								<a class="mobile-menu__link" href="./addresses.html">
+									Адреса
+								</a>
+							</li>
+							<li>
+								<a class="mobile-menu__link" href="./corporate.html">
+									Корпоративным клиентам
+								</a>
+							</li>
+							<li>
+								<a class="header-top-menu__link" href="#!">
+									Интернет-магазин
+								</a>
+							</li>
+							<li>
+								<a class="mobile-menu__link mobile-menu__link--color-green" href="./offers.html">
+									Спецпредложения
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+			<nav class="header__buttons">
+				<address class="call-up">
+					<a class="call-up__link" href="tel:78123855054" target="_blank" title="Позвонить нам">
+						<svg class="call-up__link-icon" viewBox="0 0 32 32" width="32" height="32">
+							<use xlink:href="./images/icons/sprite-icons.svg#call-up"></use>
+						</svg>
+
+						<span class="hidden-tablet">+7&nbsp;812 385-50-54</span>
+						<span class="call-up__text hidden-tablet">круглосуточно</span>
+					</a>
+				</address>
+
+				<a class="button button--accent-bg" href="#!">
+					<span class="header__buttons-link-text hidden-mobile-medium">
+						Записаться
+					</span>
+					<span class="header__buttons-link-text visible-mobile-medium">
+						Запись&nbsp;на&nbsp;сайте
+					</span>
+				</a>
+
+				<a class="button button--light-bg-color" href="#!">
+					<svg class="header__buttons-link-icon hidden-mobile-medium" width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="./images/icons/sprite-icons.svg#telegram-transparent-icon"></use>
+					</svg>
+
+					<span class="header__buttons-link-text visible-mobile-medium">
+						Запись&nbsp;в&nbsp;Telegram
+					</span>
+				</a>
+			</nav>
+		</div>
+
+		<nav class="header-menu header-menu--not-to-scroll header-menu--color-accent">
+			<ul class="header-menu__list container">
+				<li class="header-menu__item visible-tablet">
+					<a href="./tire-fitting.html">Шиномонтаж</a>
+				</li>
+				<li class="header-menu__item hidden-tablet">
+					<a href="./car-wash.html">Мойка</a>
+				</li>
+				<!-- Шиномонтаж появляется только на меньших экранах а мойка исчезает , так в макете это не ошибка-->
+				<li class="header-menu__item">
+					<a href="./car-wash.html">Автомойка</a>
+				</li>
+				<li class="header-menu__item">
+					<a href="./refill-conditioning.html">Заправка кондиционеров</a>
+				</li>
+				<li class="header-menu__item">
+					<a href="./car-service.html">Автосервис</a>
+				</li>
+				<!-- Так же Автосервис меняется местами с кодиционерами . Это есть в стилях , тоже не ошибка -->
+				<li class="header-menu__item">
+					<a href="./wheel-alignment.html">Развал-схождение</a>
+				</li>
+				<li class="header-menu__item">
+					<a href="./decoking-engine.html">Аппаратная раскоксовка двигателя</a>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="header__general header__general--to-scroll container hidden-tablet">
+			<a class="logo logo--short" href="./index.html" aria-label="Логотип 2ATM">
+				<img class="logo__image" src="./images/logo/logo-short.svg" width="47" height="47" alt="Логотип 2ATM">
+			</a>
+
+			<nav class="header__menu header-menu">
+				<ul class="header-menu__list header-menu__list--scroll-version">
+					<li class="header-menu__item">
+						<a href="./tire-fitting.html">Шиномонтаж</a>
+					</li>
+					<li class="header-menu__item">
+						<a href="./car-wash.html">Автомойка</a>
+					</li>
+					<li class="header-menu__item">
+						<a href="./refill-conditioning.html">Заправка кондиционеров</a>
+					</li>
+					<li class="header-menu__item">
+						<a href="./car-service.html">Автосервис</a>
+					</li>
+				</ul>
+			</nav>
+
+			<nav class="header__buttons">
+				<a class="button button--accent-bg" href="#!">
+					<span class="header__buttons-link-text hidden-mobile-medium">
+						Записаться
+					</span>
+					<span class="header__buttons-link-text visible-mobile-medium">
+						Запись&nbsp;на&nbsp;сайте
+					</span>
+				</a>
+
+				<a class="button button--light-bg-color" href="#!">
+					<svg class="header__buttons-link-icon hidden-mobile-medium" width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="./images/icons/sprite-icons.svg#telegram-transparent-icon"></use>
+					</svg>
+
+					<span class="header__buttons-link-text visible-mobile-medium">
+						Запись&nbsp;в&nbsp;Telegram
+					</span>
+				</a>
+			</nav>
+		</div>
+	</header>
+
+	<main class="content">
+		<h1 class="visually-hidden">Аппаратная раскоксовка двигателя в 2АТМ</h1>
+
+		<section class="page-heading container" aria-labelledby="page-title">
+			<nav class="page-heading__breadcrumbs">
+				<ul class="page-heading__breadcrumbs-list">
+					<li class="page-heading__breadcrumbs-item">
+						<a class="page-heading__breadcrumbs-link" href="./index.html">Главная</a>
+					</li>
+
+					<li class="page-heading__breadcrumbs-item">
+						<a class="page-heading__breadcrumbs-link" href="./services.html">
+							Услуги
+						</a>
+					</li>
+
+					<li class="page-heading__breadcrumbs-item">
+						<a class="page-heading__breadcrumbs-link" href="./decoking-engine.html" tabindex="-1">
+							Аппаратная раскоксовка двигателя
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<h2 class="page-heading__page-name page-heading__page-name--letter-spacing h4" id="page-title">
+				Аппаратная раскоксовка двигателя
+			</h2>
+		</section>
+
+		<section class="promo" aria-labelledby="promo-title">
+			<h2 class="visually-hidden">Аппаратная раскоксовка двигателя в 2АТМ</h2>
+
+			<div class="promo__background">
+				<img class="promo__decor-image promo__decor-image--left hidden-tablet" src="./images/promo/wheel.webp"
+					srcset="./images/promo/wheel@2x.webp 2x" alt="Колесо" width="269" height="269" loading="lazy">
+
+				<picture class="promo__main-image-wrapper">
+					<source srcset="./images/promo/decoking-engine-promo-bg-mobile.webp" media="(max-width: 1301px)"
+						type="image/webp">
+					<source
+						srcset="./images/promo/decoking-engine-promo-bg.webp 1x , ./images/promo/decoking-engine-promo-bg@2x.webp 2x"
+						type="image/webp">
+					<img class="promo__main-image" src="./images/promo/decoking-engine-promo-bg-mobile.webp"
+						alt="Робот держит двигатель на ладони" width="360" height="362" loading="lazy">
+				</picture>
+			</div>
+
+			<div class="promo__content container">
+				<h3 class="promo__title h1" id="promo-title">
+					<span>
+						Профилактика поломки двигателя
+						Снижение расхода топлива и&nbsp;масла
+					</span>
+
+					<span class="promo__subtitle">
+						от&nbsp;2500 рублей*
+					</span>
+				</h3>
+
+				<div class="promo__buttons hidden-mobile">
+					<a class="promo__button button button--accent-bg" href="#!">
+						<span class="hidden-tablet">
+							Записаться на&nbsp;сайте
+						</span>
+
+						<span class="visible-tablet">
+							Записаться
+						</span>
+					</a>
+
+					<a class="promo__button button" href="#!">
+						<span class="hidden-tablet">
+							Записаться в&nbsp;Telegram
+						</span>
+
+						<span class="visible-tablet">
+							Запись в&nbsp;Telegram
+						</span>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="hot-offer-message" aria-labelledby="hot-offer-message-title">
+			<h3 class="visually-hidden" id="hot-offer-message-title">Горячее предложение от 2АТМ</h3>
+			<div class="hot-offer-message__text">
+				<p>
+					*Только до&nbsp;конца февраля цены по&nbsp;акции на&nbsp;услуги раскоксовки
+				</p>
+			</div>
+		</section>
+
+		<section class="why-svc" aria-labelledby="why-svc-title">
+			<h2 class="visually-hidden" id="why-svc-title">
+				Зачем нужна аппаратная раскоксовка двигателя в 2АТМ
+			</h2>
+
+			<div class="why-svc__body container">
+				<section class="why-svc__block why-svc__block--warnings">
+					<h3 class="why-svc__block-title h3">
+						К&nbsp;чему приводит нагар
+						в&nbsp;двигателе?
+					</h3>
+
+					<ul class="why-svc__block-list">
+						<li class="why-svc__item">
+							<img class="why-svc__item-icon" src="./images/icons/icon-attention.webp" width="60" height="60" alt=""
+								aria-hidden="true" loading="lazy">
+
+							<div class="why-svc__item-text">
+								<p>
+									Нестабильная компрессия и&nbsp;падение мощности
+								</p>
+							</div>
+						</li>
+
+						<li class="why-svc__item">
+							<img class="why-svc__item-icon" src="./images/icons/icon-attention.webp" width="60" height="60" alt=""
+								aria-hidden="true" loading="lazy">
+
+							<div class="why-svc__item-text">
+								<p>
+									Повышенный расход масла "Масложор" и&nbsp;расход топлива
+								</p>
+							</div>
+						</li>
+
+						<li class="why-svc__item">
+							<img class="why-svc__item-icon" src="./images/icons/icon-attention.webp" width="60" height="60" alt=""
+								aria-hidden="true" loading="lazy">
+
+							<div class="why-svc__item-text">
+								<p>
+									Провалы при разгоне, неотзывчивая педаль газа
+								</p>
+							</div>
+						</li>
+
+						<li class="why-svc__item">
+							<img class="why-svc__item-icon" src="./images/icons/icon-attention.webp" width="60" height="60" alt=""
+								aria-hidden="true" loading="lazy">
+
+							<div class="why-svc__item-text">
+								<p>
+									Неровный холостой ход, вибрации
+								</p>
+							</div>
+						</li>
+
+						<li class="why-svc__item">
+							<img class="why-svc__item-icon" src="./images/icons/icon-attention.webp" width="60" height="60" alt=""
+								aria-hidden="true" loading="lazy">
+
+							<div class="why-svc__item-text">
+								<p>
+									Ухудшение тяги на&nbsp;низких оборотах
+								</p>
+							</div>
+						</li>
+
+						<li class="why-svc__item">
+							<img class="why-svc__item-icon" src="./images/icons/icon-attention.webp" width="60" height="60" alt=""
+								aria-hidden="true" loading="lazy">
+
+							<div class="why-svc__item-text">
+								<p>
+									Тяжёлый запуск, особенно на&nbsp;холодную
+								</p>
+							</div>
+						</li>
+
+						<li class="why-svc__item">
+							<img class="why-svc__item-icon" src="./images/icons/icon-attention.webp" width="60" height="60" alt=""
+								aria-hidden="true" loading="lazy">
+
+							<div class="why-svc__item-text">
+								<p>
+									Заметный выхлоп СО2
+								</p>
+							</div>
+						</li>
+					</ul>
+				</section>
+
+				<section class="why-svc__block why-svc__block--advantages">
+					<h3 class="why-svc__block-title why-svc__block-title--advantages h3">
+						Эффект от&nbsp;аппаратной раскоксовки двигателя
+					</h3>
+
+					<ul class="why-svc__block-list">
+						<li class="why-svc__item">
+							<img class="why-svc__item-icon" src="./images/icons/icon-blue-check.webp" width="60" height="60" alt=""
+								aria-hidden="true" loading="lazy">
+
+							<div class="why-svc__item-text">
+								<p>
+									Восстанавливает производительность двигателя
+								</p>
+							</div>
+						</li>
+
+						<li class="why-svc__item">
+							<img class="why-svc__item-icon" src="./images/icons/icon-blue-check.webp" width="60" height="60" alt=""
+								aria-hidden="true" loading="lazy">
+
+							<div class="why-svc__item-text">
+								<p>
+									Снижает расхода топлива и&nbsp;масла
+								</p>
+							</div>
+						</li>
+
+						<li class="why-svc__item">
+							<img class="why-svc__item-icon" src="./images/icons/icon-blue-check.webp" width="60" height="60" alt=""
+								aria-hidden="true" loading="lazy">
+
+							<div class="why-svc__item-text">
+								<p>
+									Увеличивает мощность и&nbsp;стабилизирует компрессию
+								</p>
+							</div>
+						</li>
+
+						<li class="why-svc__item">
+							<img class="why-svc__item-icon" src="./images/icons/icon-blue-check.webp" width="60" height="60" alt=""
+								aria-hidden="true" loading="lazy">
+
+							<div class="why-svc__item-text">
+								<p>
+									Устраняет вибрацию двигателя, уменьшает уровень шума
+								</p>
+							</div>
+						</li>
+
+						<li class="why-svc__item">
+							<img class="why-svc__item-icon" src="./images/icons/icon-blue-check.webp" width="60" height="60" alt=""
+								aria-hidden="true" loading="lazy">
+
+							<div class="why-svc__item-text">
+								<p>
+									Увеличивает срок службы двигателя, предотвращает замену деталей
+								</p>
+							</div>
+						</li>
+
+						<li class="why-svc__item">
+							<img class="why-svc__item-icon" src="./images/icons/icon-blue-check.webp" width="60" height="60" alt=""
+								aria-hidden="true" loading="lazy">
+
+							<div class="why-svc__item-text">
+								<p>
+									Уверенный запуск даже зимой
+								</p>
+							</div>
+						</li>
+
+						<li class="why-svc__item">
+							<img class="why-svc__item-icon" src="./images/icons/icon-blue-check.webp" width="60" height="60" alt=""
+								aria-hidden="true" loading="lazy">
+
+							<div class="why-svc__item-text">
+								<p>
+									Уменьшает вредные выбросы СО2
+								</p>
+							</div>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</section>
+
+		<section class="steps-svc" aria-labelledby="steps-svc-title">
+			<h2 class="steps-svc__title h3" id="steps-svc-title">
+				Как это работает?
+			</h2>
+
+			<div class="steps-svc__slider swiper">
+				<button class="steps-svc__slider-button steps-svc__slider-button--prev hidden-tablet" type="button"
+					aria-label="switch-slide" title="Предыдущий этап">
+					<svg class="steps-svc__slider-button-icon" viewBox="0 0 24 24" width="24" height="24">
+						<use xlink:href="./images/icons/sprite-icons.svg#icon-arrow"></use>
+					</svg>
+				</button>
+
+				<button class="steps-svc__slider-button steps-svc__slider-button--next hidden-tablet" type="button"
+					aria-label="switch-slide" title="Следующий этап">
+					<svg class="steps-svc__slider-button-icon" viewBox="0 0 24 24" width="24" height="24">
+						<use xlink:href="./images/icons/sprite-icons.svg#icon-arrow"></use>
+					</svg>
+				</button>
+				<ul class="swiper-wrapper steps-svc__slider-wrapper">
+					<li class="swiper-slide">
+						<article class="step-svc-card">
+							<h3 class="visually-hidden">Первый этап аппаратной раскоксовки двигателя в 2АТМ</h3>
+
+							<picture class="step-svc-card__image-wrapper">
+								<source srcset="./images/steps-svc/step-svc-1-mobile.webp" media="(max-width: 1023px)"
+									type="image/webp">
+								<source srcset="./images/steps-svc/step-svc-1.webp" type="image/webp">
+								<img class="step-svc-card__image" src="./images/steps-svc/step-svc-1-mobile.webp"
+									alt="Подключение авто к аппарату раскоксовки" width="340" height="228" loading="lazy">
+							</picture>
+
+							<div class="step-svc-card__content">
+								<div class="step-svc-card__number">
+									<svg class="step-svc-card__number-bg" viewBox="0 0 103 103" width="103" height="103">
+										<use xlink:href="./images/icons/sprite-icons.svg#step-svc-counter-icon"></use>
+									</svg>
+
+									<span>1</span>
+								</div>
+
+								<div class="step-svc-card__text">
+									<p>
+										К&nbsp;автомобилю, работающему на холостых оборотах, через систему забора воздуха подключается
+										наше оборудование
+									</p>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="swiper-slide">
+						<article class="step-svc-card">
+							<h3 class="visually-hidden">Второй этап аппаратной раскоксовки двигателя в 2АТМ</h3>
+
+							<picture class="step-svc-card__image-wrapper">
+								<source srcset="./images/steps-svc/step-svc-2-mobile.webp" media="(max-width: 1023px)"
+									type="image/webp">
+								<source srcset="./images/steps-svc/step-svc-2.webp" type="image/webp">
+								<img class="step-svc-card__image" src="./images/steps-svc/step-svc-2-mobile.webp"
+									alt="Производство HHO газа" width="340" height="228" loading="lazy">
+							</picture>
+
+							<div class="step-svc-card__content">
+								<div class="step-svc-card__number">
+									<svg class="step-svc-card__number-bg" viewBox="0 0 103 103" width="103" height="103">
+										<use xlink:href="./images/icons/sprite-icons.svg#step-svc-counter-icon"></use>
+									</svg>
+
+									<span>2</span>
+								</div>
+
+								<div class="step-svc-card__text">
+									<p>
+										Профессиональное оборудование &laquo;Cleanengine&raquo; при помощи процесса электролиза производит
+										оксигидроген (1/3&nbsp;кислорода, 2/3&nbsp;водорода) известный еще как HHO газ или газ Брауна.
+									</p>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="swiper-slide">
+						<article class="step-svc-card">
+							<h3 class="visually-hidden">Третий этап аппаратной раскоксовки двигателя в 2АТМ</h3>
+
+							<picture class="step-svc-card__image-wrapper">
+								<source srcset="./images/steps-svc/step-svc-3-mobile.webp" media="(max-width: 1023px)"
+									type="image/webp">
+								<source srcset="./images/steps-svc/step-svc-3.webp" type="image/webp">
+								<img class="step-svc-card__image" src="./images/steps-svc/step-svc-3-mobile.webp"
+									alt="Подача HHO газа в камеру сгорания" width="340" height="228" loading="lazy">
+							</picture>
+
+							<div class="step-svc-card__content">
+								<div class="step-svc-card__number">
+									<svg class="step-svc-card__number-bg" viewBox="0 0 103 103" width="103" height="103">
+										<use xlink:href="./images/icons/sprite-icons.svg#step-svc-counter-icon"></use>
+									</svg>
+
+									<span>3</span>
+								</div>
+
+								<div class="step-svc-card__text">
+									<p>
+										Эксплуатация в&nbsp;городе в&nbsp;частых пробках и&nbsp;низких оборотах приводит к&nbsp;интенсивному
+										образованию нагара в&nbsp;камере сгорания и&nbsp;сопутствующих системах. Для очистки ННО-газ
+										подается в&nbsp;камеру сгорания и&nbsp;смешивается со&nbsp;штатной топливно-воздушной смесью.
+									</p>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="swiper-slide">
+						<article class="step-svc-card">
+							<h3 class="visually-hidden">Четвёртый этап аппаратной раскоксовки двигателя в 2АТМ</h3>
+
+							<picture class="step-svc-card__image-wrapper">
+								<source srcset="./images/steps-svc/step-svc-4-mobile.webp" media="(max-width: 1023px)"
+									type="image/webp">
+								<source srcset="./images/steps-svc/step-svc-4.webp" type="image/webp">
+								<img class="step-svc-card__image" src="./images/steps-svc/step-svc-4-mobile.webp"
+									alt="Направление мощного термического импульса" width="340" height="228" loading="lazy">
+							</picture>
+
+							<div class="step-svc-card__content">
+								<div class="step-svc-card__number">
+									<svg class="step-svc-card__number-bg" viewBox="0 0 103 103" width="103" height="103">
+										<use xlink:href="./images/icons/sprite-icons.svg#step-svc-counter-icon"></use>
+									</svg>
+
+									<span>4</span>
+								</div>
+
+								<div class="step-svc-card__text">
+									<p>
+										При сжимании топливно-воздушной смеси происходит кратковременный, но&nbsp;мощный термический импульс
+										(до&nbsp;3000 &deg;C). Он&nbsp;целенаправленно разрушает молекулярную структуру нагара, что приводит
+										к&nbsp;очищению камеры сгорания и&nbsp;всех связанных деталей.
+									</p>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="swiper-slide">
+						<article class="step-svc-card">
+							<h3 class="visually-hidden">Пятый этап аппаратной раскоксовки двигателя в 2АТМ</h3>
+
+							<picture class="step-svc-card__image-wrapper">
+								<source srcset="./images/steps-svc/step-svc-5-mobile.webp" media="(max-width: 1023px)"
+									type="image/webp">
+								<source srcset="./images/steps-svc/step-svc-5.webp" type="image/webp">
+								<img class="step-svc-card__image" src="./images/steps-svc/step-svc-5-mobile.webp"
+									alt="Процесс пиролиза в выпускном коллекторе" width="340" height="228" loading="lazy">
+							</picture>
+
+							<div class="step-svc-card__content">
+								<div class="step-svc-card__number">
+									<svg class="step-svc-card__number-bg" viewBox="0 0 103 103" width="103" height="103">
+										<use xlink:href="./images/icons/sprite-icons.svg#step-svc-counter-icon"></use>
+									</svg>
+
+									<span>5</span>
+								</div>
+
+								<div class="step-svc-card__text">
+									<p>
+										Продуктом горения водорода является перегретый пар (эффективный растворитель углерода) который,
+										в&nbsp;свою очередь, и&nbsp;запускает процесс пиролиза&nbsp;&mdash; термического разложения
+										неорганических углеродистых отложений в&nbsp;выпускном коллекторе.
+									</p>
+								</div>
+							</div>
+						</article>
+					</li>
+
+					<li class="swiper-slide">
+						<article class="step-svc-card">
+							<h3 class="visually-hidden">Шестой этап аппаратной раскоксовки двигателя в 2АТМ</h3>
+
+							<picture class="step-svc-card__image-wrapper">
+								<source srcset="./images/steps-svc/step-svc-6-mobile.webp" media="(max-width: 1023px)"
+									type="image/webp">
+								<source srcset="./images/steps-svc/step-svc-6.webp" type="image/webp">
+								<img class="step-svc-card__image" src="./images/steps-svc/step-svc-6-mobile.webp"
+									alt="Вымывание разрушенного нагара" width="340" height="228" loading="lazy">
+							</picture>
+
+							<div class="step-svc-card__content">
+								<div class="step-svc-card__number">
+									<svg class="step-svc-card__number-bg" viewBox="0 0 103 103" width="103" height="103">
+										<use xlink:href="./images/icons/sprite-icons.svg#step-svc-counter-icon"></use>
+									</svg>
+
+									<span>6</span>
+								</div>
+
+								<div class="step-svc-card__text">
+									<p>
+										В&nbsp;процессе пиролиза перегретый «Сухой пар» вымывает и&nbsp;выводит через выхлопную систему
+										разрушенные частички нагара
+									</p>
+								</div>
+							</div>
+						</article>
+					</li>
+				</ul>
+
+				<div class="steps-svc__slider-pagination visible-tablet"></div>
+			</div>
+		</section>
+
+		<section class="move-up" aria-labelledby="move-up-title">
+			<h2 class="move-up__title h3" id="move-up-title">
+				Что вы&nbsp;получаете?
+			</h2>
+
+			<div class="move-up__background">
+				<picture class="move-up__main-image-wrapper">
+					<source srcset="./images/move-up/move-up-bg-mobile.webp" media="(max-width: 767px)" type="image/webp">
+					<source srcset="./images/move-up/move-up-bg.webp 1x , ./images/move-up/move-up-bg@2x.webp 2x"
+						type="image/webp">
+					<img class="move-up__main-image" src="./images/move-up/move-up-bg-mobile.webp"
+						alt="Картинка чистого автомобиля" width="767" height="449" loading="lazy">
+				</picture>
+			</div>
+
+			<ul class="move-up__list container">
+				<li class="move-up__item">
+					<img class="move-up__item-icon" src="./images/icons/icon-coin-wallet.webp" width="60" height="60"
+						alt="Значёк кошелька с монетками" loading="lazy">
+
+					<span>Экономия на&nbsp;ремонте</span>
+				</li>
+
+				<li class="move-up__item">
+					<img class="move-up__item-icon" src="./images/icons/icon-clock-2.webp" width="60" height="60"
+						alt="Значёк чвсов" loading="lazy">
+
+					<span>Процедура до&nbsp;60&nbsp;минут</span>
+				</li>
+
+				<li class="move-up__item">
+					<img class="move-up__item-icon" src="./images/icons/icon-fuel.webp" width="60" height="60"
+						alt="Значёк авто-заправки" loading="lazy">
+
+					<span>Снижение расхода топлива до&nbsp;15%</span>
+				</li>
+
+				<li class="move-up__item">
+					<img class="move-up__item-icon" src="./images/icons/icon-stop-co2.webp" width="60" height="60"
+						alt="Иконка Остановите загрязнение" loading="lazy">
+
+					<span>Снижение вредных выбросов до&nbsp;40%</span>
+				</li>
+			</ul>
+
+			<section class="move-up__smart-choice smart-choice" aria-labelledby="smart-choice-title">
+				<h3 class="smart-choice__title h3" id="smart-choice-title">
+					Профилактика дешевле ремонта
+				</h3>
+
+				<div class="smart-choice__body container">
+
+
+					<div class="smart-choice__slider swiper">
+						<button class="smart-choice__slider-button smart-choice__slider-button--prev hidden-mobile" type="button"
+							aria-label="switch-slide" title="Предыдущий слайд">
+							<svg class="smart-choice__slider-button-icon" viewBox="0 0 24 24" width="24" height="24">
+								<use xlink:href="./images/icons/sprite-icons.svg#icon-arrow"></use>
+							</svg>
+						</button>
+
+						<button class="smart-choice__slider-button smart-choice__slider-button--next hidden-mobile" type="button"
+							aria-label="switch-slide" title="Следующий слайд">
+							<svg class="smart-choice__slider-button-icon" viewBox="0 0 24 24" width="24" height="24">
+								<use xlink:href="./images/icons/sprite-icons.svg#icon-arrow"></use>
+							</svg>
+						</button>
+
+						<ul class="swiper-wrapper smart-choice__slider-wrapper">
+							<li class="swiper-slide smart-choice__card">
+								<picture class="smart-choice__card-image-wrapper">
+									<source srcset="./images/smart-choice/clean-valves-mobile.webp" media="(max-width: 575px)"
+										type="image/webp">
+									<source srcset="./images/smart-choice/clean-valves.webp" type="image/webp">
+									<img class="smart-choice__card-image" src="./images/smart-choice/clean-valves-mobile.webp"
+										alt="Клапаны" width="300" height="300" loading="lazy">
+								</picture>
+
+								<span class="smart-choice__card-name">Клапаны</span>
+							</li>
+
+							<li class="swiper-slide smart-choice__card">
+								<picture class="smart-choice__card-image-wrapper">
+									<source srcset="./images/smart-choice/clean-injector-mobile.webp" media="(max-width: 575px)"
+										type="image/webp">
+									<source srcset="./images/smart-choice/clean-injector.webp" type="image/webp">
+									<img class="smart-choice__card-image" src="./images/smart-choice/clean-injector-mobile.webp"
+										alt="Форсунки" width="300" height="300" loading="lazy">
+								</picture>
+
+								<span class="smart-choice__card-name">Форсунки</span>
+							</li>
+
+							<li class="swiper-slide smart-choice__card">
+								<picture class="smart-choice__card-image-wrapper">
+									<source srcset="./images/smart-choice/clean-turbocharger-mobile.webp" media="(max-width: 575px)"
+										type="image/webp">
+									<source srcset="./images/smart-choice/clean-turbocharger.webp" type="image/webp">
+									<img class="smart-choice__card-image" src="./images/smart-choice/clean-turbocharger-mobile.webp"
+										alt="Турбокомпрессор" width="300" height="300" loading="lazy">
+								</picture>
+
+								<span class="smart-choice__card-name">Турбокомпрессор</span>
+							</li>
+
+							<li class="swiper-slide smart-choice__card">
+								<picture class="smart-choice__card-image-wrapper">
+									<source srcset="./images/smart-choice/clean-spark-plugs-mobile.webp" media="(max-width: 575px)"
+										type="image/webp">
+									<source srcset="./images/smart-choice/clean-spark-plugs.webp" type="image/webp">
+									<img class="smart-choice__card-image" src="./images/smart-choice/clean-spark-plugs-mobile.webp"
+										alt="Свечи зажигания" width="300" height="300" loading="lazy">
+								</picture>
+
+								<span class="smart-choice__card-name">Свечи зажигания</span>
+							</li>
+
+							<li class="swiper-slide smart-choice__card">
+								<picture class="step-smart-choice__card-image">
+									<source srcset="./images/smart-choice/clean-diesel-particulate-filter-mobile.webp"
+										media="(max-width: 575px)" type="image/webp">
+									<source srcset="./images/smart-choice/clean-diesel-particulate-filter.webp" type="image/webp">
+									<img class="step-svc-card__image"
+										src="./images/smart-choice/clean-diesel-particulate-filter-mobile.webp" alt="Сажевый фильтр"
+										width="300" height="300" loading="lazy">
+								</picture>
+
+								<span class="smart-choice__card-name">Сажевый фильтр</span>
+							</li>
+
+							<li class="swiper-slide smart-choice__card">
+								<picture class="smart-choice__card-image-wrapper">
+									<source srcset="./images/smart-choice/clean-pistons-mobile.webp" media="(max-width: 575px)"
+										type="image/webp">
+									<source srcset="./images/smart-choice/clean-pistons.webp" type="image/webp">
+									<img class="smart-choice__card-image" src="./images/smart-choice/clean-pistons-mobile.webp"
+										alt="Поршни" width="300" height="300" loading="lazy">
+								</picture>
+
+								<span class="smart-choice__card-name">Поршни</span>
+							</li>
+
+							<li class="swiper-slide smart-choice__card">
+								<picture class="smart-choice__card-image-wrapper">
+									<source srcset="./images/smart-choice/clean-throttle-mobile.webp" media="(max-width: 575px)"
+										type="image/webp">
+									<source srcset="./images/smart-choice/clean-throttle.webp" type="image/webp">
+									<img class="smart-choice__card-image" src="./images/smart-choice/clean-throttle-mobile.webp"
+										alt="Дроссель" width="300" height="300" loading="lazy">
+								</picture>
+
+								<span class="smart-choice__card-name">Дроссель</span>
+							</li>
+
+							<li class="swiper-slide smart-choice__card">
+								<picture class="smart-choice__card-image-wrapper">
+									<source srcset="./images/smart-choice/clean-egr-valve-mobile.webp" media="(max-width: 575px)"
+										type="image/webp">
+									<source srcset="./images/smart-choice/clean-egr-valve.webp" type="image/webp">
+									<img class="smart-choice__card-image" src="./images/smart-choice/clean-egr-valve-mobile.webp"
+										alt="Клапан ЕГР" width="300" height="300" loading="lazy">
+								</picture>
+
+								<span class="smart-choice__card-name">Клапан ЕГР</span>
+							</li>
+						</ul>
+
+					</div>
+					<div class="smart-choice__slider-pagination visible-mobile"></div>
+
+					<div class="smart-choice__text">
+						<p>
+							Делайте водородную очистку двигателя перед каждой заменой масла&nbsp;&mdash; это лучшая профилактика.
+							Процедура не&nbsp;просто удаляет нагар, а&nbsp;комплексно улучшает состояние мотора:
+						</p>
+
+						<p>
+							<img class="smart-choice__text-icon" src="./images/icons/icon-blue-check.webp" width="60" height="60"
+								alt="" aria-hidden="true" loading="lazy">
+
+							Восстанавливает герметичность и&nbsp;защищает: Убирает отложения в&nbsp;камере сгорания, на&nbsp;клапанах
+							и&nbsp;поршнях, снижая риск детонации и&nbsp;локальных перегревов.
+						</p>
+
+
+						<p>
+							<img class="smart-choice__text-icon" src="./images/icons/icon-blue-check.webp" width="60" height="60"
+								alt="" aria-hidden="true" loading="lazy">
+
+							Возвращает стабильность и&nbsp;экономию: Раскоксовывает кольца, помогая двигателю работать ровнее,
+							а&nbsp;расходу топлива и&nbsp;масла&nbsp;&mdash; прийти в&nbsp;норму.
+						</p>
+
+						<p>
+							<img class="smart-choice__text-icon" src="./images/icons/icon-blue-check.webp" width="60" height="60"
+								alt="" aria-hidden="true" loading="lazy">
+
+							Разгружает дорогие узлы:&nbsp;Обеспечивая чистое сгорание, защищает свечи, датчики (лямбда-зонд),
+							катализатор,
+							систему EGR и&nbsp;турбину от&nbsp;преждевременного износа.
+						</p>
+
+						<p>
+							Регулярная очистка позволит избежать дорогостоящего ремонта и&nbsp;лишних трат на&nbsp;топливо
+						</p>
+					</div>
+				</div>
+			</section>
+		</section>
+
+		<section class="svc-warnings section container" aria-labelledby="svc-warnings-title">
+			<h2 class="svc-warnings__title h3" id="svc-warnings-title">
+				К&nbsp;процедуре очистки не&nbsp;допускаются автомобили со&nbsp;следующими неисправностями:
+			</h2>
+
+			<div class="svc-warnings__body">
+				<picture class="svc-warnings__image-wrapper">
+					<source srcset="./images/svc-warnings/warning-robot-mobile.webp" media="(max-width: 480px)" type="image/webp">
+					<source srcset="./images/svc-warnings/warning-robot.webp" type="image/webp">
+					<img class="svc-warnings__image" src="./images/steps-svc/warning-robot-mobile.webp" alt="Робот предостерегает"
+						width="174" height="189" loading="lazy">
+				</picture>
+
+				<ul class="svc-warnings__list">
+					<li class="svc-warnings__list-item">
+						Крайне нестабильная работа ДВС
+					</li>
+					<li class="svc-warnings__list-item">
+						Критический износ и&nbsp;дефекты цилиндропоршневой группы
+					</li>
+					<li class="svc-warnings__list-item">
+						Недостаточный уровень моторного масла
+					</li>
+					<li class="svc-warnings__list-item">
+						Неисправность системы охлаждения
+					</li>
+					<li class="svc-warnings__list-item">
+						Неисправность системы зажигания или системы подачи топлива
+					</li>
+					<li class="svc-warnings__list-item">
+						Механическая неисправность каталитической или нейтрализующей систем (нарушение герметизации, оплавление или
+						разрушение сот)
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="biz-advant section section--margin-to-medium container" aria-labelledby="biz-advant-title">
+			<h2 class="visually-hidden">Преимущества шиномонтажей и автомастерских Две Атмосферы</h2>
+
+			<section class="biz-advant__desc">
+				<h3 class="visually-hidden">Что такое 2АТМ?</h3>
+
+				<a class="biz-advant__desc-logo" href="./index.html" aria-label="Логотип 2ATM">
+					<img class="biz-advant__desc-logo-image" src="./images/logo/logo.svg" width="330" height="70"
+						alt="Логотип 2ATM">
+				</a>
+
+				<div class="biz-advant__desc-text">
+					<p>
+						«Две атмосферы»&nbsp;&mdash; сеть автомастерских с&nbsp;высоким уровнем сервиса, где главное&nbsp;&mdash;
+						качество и&nbsp;выполнение обещаний. Мы&nbsp;поддерживаем чистоту в&nbsp;мастерской, обучаем
+						и&nbsp;сертифицируем мастеров, используем технологичное оборудование и&nbsp;работаем прозрачно.
+					</p>
+
+					<p>
+						Мы&nbsp;ценим время клиента: принимаем и&nbsp;выдаём автомобиль строго в&nbsp;согласованный срок. Записаться
+						можно быстро&nbsp;&mdash; по&nbsp;телефону, на&nbsp;сайте или в&nbsp;телеграм-боте, где легко отменить или
+						перенести визит.
+					</p>
+				</div>
+			</section>
+
+			<section class="biz-advant__banner advantages-banner">
+				<h3 class="advantages-banner__title h3" id="biz-advant-title">
+					Cеть шиномонтажей и&nbsp;автомастерских «Две&nbsp;Атмосферы»
+				</h3>
+
+				<ul class="advantages-banner__list">
+					<li class="advantages-banner__item">
+						<img class="advantages-banner__item-icon" src="./images/icons/icon-marker.webp" width="60" height="60"
+							alt="" aria-hidden="true" loading="lazy">
+
+						<h4 class="advantages-banner__item-name">
+							Удобное Расположение
+						</h4>
+					</li>
+
+					<li class="advantages-banner__item">
+						<img class="advantages-banner__item-icon" src="./images/icons/icon-cristall.webp" width="60" height="60"
+							alt="" aria-hidden="true" loading="lazy">
+
+						<h4 class="advantages-banner__item-name">
+							Высокое качество
+						</h4>
+
+					</li>
+
+					<li class="advantages-banner__item">
+						<img class="advantages-banner__item-icon" src="./images/icons/icon-clock-2.webp" width="60" height="60"
+							alt="" aria-hidden="true" loading="lazy">
+
+						<h4 class="advantages-banner__item-name">
+							Быстрое исполнение
+						</h4>
+					</li>
+
+				</ul>
+			</section>
+		</section>
+
+		<section class="svc-location" aria-labelledby="svc-location-title">
+			<h2 class="visually-hidden" id="svc-location-title">Где можно записаться на аппаратную раскоксовку двигателя?</h2>
+
+			<div class="svc-location__inner container">
+				<div class="svc-location__map-block map-block">
+					<img class="map-block__iframe" src="./images/locations/map-svc-location.webp" width="717" height="435"
+						alt="Карта" loading="lazy">
+
+					<svg class="map-block__marker" width="44" height="58" viewBox="0 0 44 58">
+						<use xlink:href="./images/icons/sprite-icons.svg#map-marker"></use>
+					</svg>
+
+					<svg class="map-block__marker map-block__marker--active" width="44" height="58" viewBox="0 0 44 58">
+						<use xlink:href="./images/icons/sprite-icons.svg#map-marker-active"></use>
+					</svg>
+				</div>
+
+				<section class="svc-location__info svc-location-info" aria-labelledby="svc-location-info-title">
+					<h3 class="svc-location-info__title" id="svc-location-info-title">
+						Запишитесь на водородную очистку уже сейчас
+					</h3>
+
+					<ul>
+						<li class="svc-location-info__item">
+							<img class="svc-location-info__icon" src="./images/icons/icon-marker.webp" width="60" height="60" alt=""
+								aria-hidden="true" loading="lazy">
+
+							<address>
+								<a href="#!">
+									Пулковское шоссе, 19
+								</a>
+							</address>
+						</li>
+
+						<li class="svc-location-info__item">
+							<img class="svc-location-info__icon" src="./images/icons/icon-clock-2.webp" width="60" height="60" alt=""
+								aria-hidden="true" loading="lazy">
+
+							<time datetime="P1D">
+								<!--  Если контент тега "Круглосуточно" тогда трибут datetime можно не устанавливать или оставить span вместо time  -->
+								Круглосуточно
+							</time>
+						</li>
+					</ul>
+
+					<div class="svc-location-info__buttons">
+						<a class="svc-location-info__button button button--light-bg-color" href="#!">
+							В&nbsp;Telegram
+						</a>
+
+						<a class="svc-location-info__button button button--accent-bg" href="#!">
+							На&nbsp;сайте
+						</a>
+					</div>
+				</section>
+			</div>
+		</section>
+
+		<section class="cost-service" aria-labelledby="cost-service-title">
+			<h2 class="cost-service__title  container" id="cost-service-title">
+				Только до&nbsp;конца февраля акционные цены на&nbsp;аппаратную раскоксовку двигателя
+			</h2>
+
+			<section class="cost-service__timer-counter timer-counter" aria-labelledby="timer-counter-heading">
+				<h3 class="timer-counter__heading" id="timer-counter-heading">
+					до окончания акции
+				</h3>
+
+				<ul class="timer-counter__list" aria-label="Время до окончания акции" aria-relevant="text">
+					<li class="timer-counter__item">
+						<time class="timer-counter__unit" datetime="P30D" role="timer" aria-atomic="false">
+							<span class="timer-counter__text-big">30</span>
+							<span class="timer-counter__text-small">дней</span>
+						</time>
+
+					</li>
+
+					<li class="timer-counter__item">
+						<time class="timer-counter__unit" datetime="PT14H" role="timer" aria-atomic="false">
+							<span class="timer-counter__text-big">14</span>
+							<span class="timer-counter__text-small">часов</span>
+						</time>
+					</li>
+
+					<li class="timer-counter__item">
+						<time class="timer-counter__unit" datetime="PT49M" role="timer" aria-atomic="false">
+							<span class="timer-counter__text-big">49</span>
+							<span class="timer-counter__text-small">минут</span>
+						</time>
+					</li>
+
+					<li class="timer-counter__item">
+						<time class="timer-counter__unit" datetime="PT18S" role="timer" aria-atomic="false">
+							<span class="timer-counter__text-big">18</span>
+							<span class="timer-counter__text-small">секунд</span>
+						</time>
+					</li>
+				</ul>
+			</section>
+
+			<section class="cost-service__prices prices-svc container"
+				aria-label="Актуальные цены на услугу аппаратной раскоксовки двигателя в 2АТМ">
+
+				<ul class="prices-svc__list">
+					<li class="prices-svc__card">
+						<img class="prices-svc__card-icon" src="./images/icons/icon-light-car.webp" width="80" height="80" alt=""
+							aria-hidden="true" loading="lazy">
+
+						<div class="prices-svc__card-text">
+							<p>
+								до 1.5 л. <span class="prices-svc__card-text-small">(30 мин)</span>
+							</p>
+
+							<span class="prices-svc__card-price">2 500 руб</span>
+
+							<span class="prices-svc__card-text-through">3 500 руб</span>
+						</div>
+					</li>
+
+					<li class="prices-svc__card">
+						<img class="prices-svc__card-icon" src="./images/icons/icon-light-car.webp" width="80" height="80" alt=""
+							aria-hidden="true" loading="lazy">
+
+						<div class="prices-svc__card-text">
+							<p>
+								от 1.6 л. до 2.5 л. <span class="prices-svc__card-text-small">(45 мин)</span>
+							</p>
+
+							<span class="prices-svc__card-price">3 000 руб</span>
+
+							<span class="prices-svc__card-text-through">4 000 руб</span>
+						</div>
+					</li>
+
+					<li class="prices-svc__card">
+						<img class="prices-svc__card-icon" src="./images/icons/icon-light-car.webp" width="80" height="80" alt=""
+							aria-hidden="true" loading="lazy">
+
+						<div class="prices-svc__card-text">
+							<p>
+								от 2.6 л. до 3.5 л. <span class="prices-svc__card-text-small">(60 мин)</span>
+							</p>
+
+							<span class="prices-svc__card-price">4 000 руб</span>
+
+							<span class="prices-svc__card-text-through">5 000 руб</span>
+						</div>
+					</li>
+
+					<li class="prices-svc__card">
+						<img class="prices-svc__card-icon" src="./images/icons/icon-medium-car.webp" width="80" height="80" alt=""
+							aria-hidden="true" loading="lazy">
+
+						<div class="prices-svc__card-text">
+							<p>
+								от 3.6 л. до 6.0 л. <span class="prices-svc__card-text-small">(90 мин)</span>
+							</p>
+
+							<span class="prices-svc__card-price">5 000 руб</span>
+
+							<span class="prices-svc__card-text-through">6 000 руб</span>
+						</div>
+					</li>
+
+					<li class="prices-svc__card">
+						<img class="prices-svc__card-icon" src="./images/icons/icon-sport-car.webp" width="80" height="80" alt=""
+							aria-hidden="true" loading="lazy">
+
+						<div class="prices-svc__card-text">
+							<p>
+								от 6.1 л. до 8.0 л. <span class="prices-svc__card-text-small">(120 мин)</span>
+							</p>
+
+							<span class="prices-svc__card-price">7 000 руб</span>
+
+							<span class="prices-svc__card-text-through">8 000 руб</span>
+						</div>
+					</li>
+
+					<li class="prices-svc__card">
+						<img class="prices-svc__card-icon" src="./images/icons/icon-heavy-car.webp" width="80" height="80" alt=""
+							aria-hidden="true" loading="lazy">
+
+						<div class="prices-svc__card-text">
+							<p>
+								от 8.1 л. до 14.0 л. <span class="prices-svc__card-text-small">(150 мин)</span>
+							</p>
+
+							<span class="prices-svc__card-price">11 000 руб</span>
+
+							<span class="prices-svc__card-text-through">12 000 руб</span>
+						</div>
+					</li>
+				</ul>
+
+				<h3 class="prices-svc__heading">Дополнительные услуги</h3>
+
+				<ul class="prices-svc__list">
+					<li class="prices-svc__card">
+						<div class="prices-svc__card-text">
+							<p>
+								Очистка впускного коллектора, дроссельной заслонки, турбины, впускных клапанов до&nbsp;3,5&nbsp;л.
+							</p>
+
+							<span class="prices-svc__card-price">1 500 руб</span>
+						</div>
+					</li>
+
+					<li class="prices-svc__card">
+						<div class="prices-svc__card-text">
+							<p>
+								Очистка впускного коллектора, дроссельной заслонки, турбины, впускных клапанов 3,6&nbsp;л.
+								&mdash;&nbsp;8,0&nbsp;л.
+							</p>
+
+							<span class="prices-svc__card-price">3 000 руб</span>
+						</div>
+					</li>
+
+					<li class="prices-svc__card">
+						<div class="prices-svc__card-text">
+							<p>
+								Очистка впускного коллектора, дроссельной заслонки, турбины, впускных клапанов 8,1&nbsp;л.
+								&mdash;&nbsp;14,0&nbsp;л.
+							</p>
+
+							<span class="prices-svc__card-price">4 500 руб</span>
+						</div>
+					</li>
+
+				</ul>
+			</section>
+
+			<div class="cost-service__buttons">
+				<a class="cost-service__button button button--light-bg-color" href="#!">
+					Записаться в&nbsp;Telegram
+				</a>
+
+				<a class="cost-service__button button button--accent-bg" href="#!">
+					Записаться на&nbsp;сайте
+				</a>
+			</div>
+
+			<section class="cost-service__location">
+				<h3 class="visually-hidden">Где в Санкт-Петербурге предоставляется услуга эффективной водородной очистки
+					двигателя</h3>
+
+				<img class="cost-service__location-icon hidden-mobile-medium" src="./images/icons/icon-marker.webp" width="60"
+					height="60" alt="" aria-hidden="true" loading="lazy">
+
+				<div class="cost-service__location-text">
+					<p>
+						Услуга эффективной водородной очистки двигателя предоставляется в&nbsp;Санкт-Петербурге по&nbsp;адресу:
+						Пулковское шоссе,&nbsp;19
+					</p>
+					<p>
+						Длительность процедуры: от&nbsp;30&nbsp;минут (зависит от&nbsp;объема двигателя)
+					</p>
+				</div>
+			</section>
+		</section>
+
+		<section class="about-service section container" aria-labelledby="about-service-title">
+			<h2 class="visually-hidden" id="about-service-title">
+				2АТМ об оборудовании для аппаратной раскоксовке двигателей
+			</h2>
+
+			<div class="about-service__body">
+				<div class="about-service__content">
+					<h3 class="about-service__heading h4">
+						Мы&nbsp;работаем на профессиональном оборудовании премиум-класса
+					</h3>
+
+					<div class="about-service__text">
+						<p>
+							Современная установка для водородной очистки постоянно контролирует ключевые параметры. Для клиента это
+							означает безопасность, стабильное качество и&nbsp;корректный режим именно для его двигателя,
+							а&nbsp;не&nbsp;на
+							глаз».
+						</p>
+
+						<p>
+							Во&nbsp;время работы оборудование в&nbsp;реальном времени отслеживает давление и&nbsp;температуру, чтобы
+							процесс проходил в&nbsp;допустимых пределах и&nbsp;без перегрузки двигателя.
+						</p>
+
+						<p>
+							Важный плюс&nbsp;&mdash; точная подача: фиксируется объём газа, подающегося в&nbsp;автомобиль и&nbsp;время
+							работы установки под конкретный объём и&nbsp;состояние двигателя.
+						</p>
+					</div>
+				</div>
+
+				<picture class="about-service__image-wrapper">
+					<source srcset="./images/about/about-decocking-engine-mobile.webp" media="(max-width: 767px)"
+						type="image/webp">
+					<source
+						srcset="./images/about/about-decocking-engine.webp 1x , ./images/about/about-decocking-engine@2x.webp 2x"
+						type="image/webp">
+					<img class="about-service__image" src="./images/about/about-decocking-engine-mobile.webp"
+						alt="Оборудование для аппратной раскоксовки двигателя" width="340" height="302" loading="lazy">
+				</picture>
+			</div>
+		</section>
+
+		<section class="faq section container" aria-labelledby="faq-title">
+			<h2 class="section__title h3" id="faq-title">
+				Часто задаваемые вопросы
+			</h2>
+
+			<ul class="faq-accordion" id="faq-accordion" aria-labelledby="faq-accordion">
+				<li class="faq-accordion__element">
+
+					<input class="faq-accordion__element-switcher" type="checkbox" id="accordion-element-1">
+					<dl class="faq-accordion__content">
+						<dt class="faq-accordion__question">
+							<label class="faq-accordion__question-button" for="accordion-element-1">
+								Водородная очистка&nbsp;&mdash; это безопасно?
+
+								<span class="faq-accordion__question-icon" role="img" aria-label="Открыть или закрыть"></span>
+							</label>
+						</dt>
+
+						<dd class="faq-accordion__answer" id="answer-1">
+							<div class="faq-accordion__answer-text">
+								<h3 class="visually-hidden">Информация о безопастности водородной очистки двигателя в 2АТМ</h3>
+
+								<p>
+									Да, при корректном подключении и&nbsp;соблюдении регламента. Важны дозировка, контроль режимов
+									двигателя и&nbsp;исправное оборудование.
+								</p>
+							</div>
+						</dd>
+					</dl>
+				</li>
+
+				<li class="faq-accordion__element">
+
+					<input class="faq-accordion__element-switcher" type="checkbox" id="accordion-element-2">
+					<dl class="faq-accordion__content">
+						<dt class="faq-accordion__question">
+							<label class="faq-accordion__question-button" for="accordion-element-2">
+								Нужно&nbsp;ли разбирать двигатель?
+
+								<span class="faq-accordion__question-icon" role="img" aria-label="Открыть или закрыть"></span>
+							</label>
+						</dt>
+
+						<dd class="faq-accordion__answer" id="answer-2">
+							<div class="faq-accordion__answer-text">
+								<h3 class="visually-hidden">Информация о разборе двигателя при водородной очистке двигателя в 2АТМ</h3>
+
+								<p>
+									Нет. Процедура выполняется без разборки: подключение идёт через впуск, очистка происходит
+									в процессе работы двигателя.
+								</p>
+							</div>
+						</dd>
+					</dl>
+				</li>
+
+				<li class="faq-accordion__element">
+					<input class="faq-accordion__element-switcher" type="checkbox" id="accordion-element-3">
+					<dl class="faq-accordion__content">
+						<dt class="faq-accordion__question">
+							<label class="faq-accordion__question-button" for="accordion-element-3">
+								Что именно очищается?
+
+								<span class="faq-accordion__question-icon" role="img" aria-label="Открыть или закрыть"></span>
+							</label>
+						</dt>
+
+						<dd class="faq-accordion__answer" id="answer-3">
+							<div class="faq-accordion__answer-text">
+								<h3 class="visually-hidden">Какие делали двигателя чистятся при водородной очистке в 2АТМ</h3>
+
+								<p>
+									В&nbsp;первую очередь зона камеры сгорания и&nbsp;поверхности, где накапливается нагар, который влияет
+									на&nbsp;эффективность двигателя и&nbsp;работу клапанов. Объём очищения зависит от&nbsp;степени
+									загрязнения и&nbsp;режима эксплуатации.
+							</div>
+						</dd>
+					</dl>
+				</li>
+
+				<li class="faq-accordion__element">
+
+					<input class="faq-accordion__element-switcher" type="checkbox" id="accordion-element-4">
+					<dl class="faq-accordion__content">
+						<dt class="faq-accordion__question">
+							<label class="faq-accordion__question-button" for="accordion-element-4">
+								Сколько времени занимает процедура?
+
+								<span class="faq-accordion__question-icon" role="img" aria-label="Открыть или закрыть"></span>
+							</label>
+						</dt>
+
+						<dd class="faq-accordion__answer" id="answer-4">
+							<div class="faq-accordion__answer-text">
+								<h3 class="visually-hidden">Информация о времени на процедуру очистки двигателя в 2АТМ</h3>
+
+								<p>
+									Процедура занимает примерно 60&nbsp;минут, после процедуры вы&nbsp;сразу можете пользоваться
+									автомобилем.
+							</div>
+						</dd>
+					</dl>
+				</li>
+
+				<li class="faq-accordion__element">
+
+					<input class="faq-accordion__element-switcher" type="checkbox" id="accordion-element-5">
+					<dl class="faq-accordion__content">
+						<dt class="faq-accordion__question">
+							<label class="faq-accordion__question-button" for="accordion-element-5">
+								Какие симптомы могут быть поводом сделать очистку?
+
+								<span class="faq-accordion__question-icon" role="img" aria-label="Открыть или закрыть"></span>
+							</label>
+						</dt>
+
+						<dd class="faq-accordion__answer" id="answer-5">
+							<div class="faq-accordion__answer-text">
+								<h3 class="visually-hidden">Информация о поводах и симптомах для процедуру очистки двигателя в 2АТМ</h3>
+
+								<p>
+									Падение тяги, нестабильный холостой ход, повышенный расход топлива/масла, склонность к&nbsp;перегреву,
+									детонация/перебои, &laquo;тяжёлый&raquo; запуск, ощущение, что двигатель работает грубее, чем раньше.
+							</div>
+						</dd>
+					</dl>
+				</li>
+
+				<li class="faq-accordion__element">
+					<input class="faq-accordion__element-switcher" type="checkbox" id="accordion-element-6">
+					<dl class="faq-accordion__content">
+						<dt class="faq-accordion__question">
+							<label class="faq-accordion__question-button" for="accordion-element-6">
+								Раскоксовка поможет при &laquo;масложоре&raquo;?
+
+								<span class="faq-accordion__question-icon" role="img" aria-label="Открыть или закрыть"></span>
+							</label>
+						</dt>
+
+						<dd class="faq-accordion__answer" id="answer-6">
+							<div class="faq-accordion__answer-text">
+								<h3 class="visually-hidden">Информация о раскоксовке при масложоре в двигателе автомобиля в 2АТМ</h3>
+
+								<p>
+									Если причина в&nbsp;нагаре и&nbsp;залегании/закоксовке, то&nbsp;очистка двигателя значительно уменьшит
+									потребление масла. Если причина в&nbsp;износе (кольца, цилиндры, колпачки, турбина и&nbsp;т.д.),
+									то&nbsp;нужна диагностика и&nbsp;ремонт.
+								</p>
+							</div>
+						</dd>
+					</dl>
+				</li>
+
+				<li class="faq-accordion__element">
+
+					<input class="faq-accordion__element-switcher" type="checkbox" id="accordion-element-7">
+					<dl class="faq-accordion__content">
+						<dt class="faq-accordion__question">
+							<label class="faq-accordion__question-button" for="accordion-element-7">
+								Может&nbsp;ли очистка &laquo;навредить&raquo;?
+
+								<span class="faq-accordion__question-icon" role="img" aria-label="Открыть или закрыть"></span>
+							</label>
+						</dt>
+
+						<dd class="faq-accordion__answer" id="answer-7">
+							<div class="faq-accordion__answer-text">
+								<h3 class="visually-hidden">Информация о риск и вред от водорожной очистки даигателя 2АТМ</h3>
+
+								<p>
+									Риски появляются при нарушении регламента или если у&nbsp;двигателя уже есть серьёзные неисправности.
+									Поэтому наши опытные механики начинают с&nbsp;короткой проверки и&nbsp;подбирают режим под конкретный
+									мотор.
+								</p>
+							</div>
+						</dd>
+					</dl>
+				</li>
+
+				<li class="faq-accordion__element">
+
+					<input class="faq-accordion__element-switcher" type="checkbox" id="accordion-element-8">
+					<dl class="faq-accordion__content">
+						<dt class="faq-accordion__question">
+							<label class="faq-accordion__question-button" for="accordion-element-8">
+								Нужно&nbsp;ли менять масло/свечи после процедуры?
+
+								<span class="faq-accordion__question-icon" role="img" aria-label="Открыть или закрыть"></span>
+							</label>
+						</dt>
+
+						<dd class="faq-accordion__answer" id="answer-8">
+							<div class="faq-accordion__answer-text">
+								<h3 class="visually-hidden">Информация о замене свечей и масла при услуге водорожной очистки двигателя в
+									2АТМ</h3>
+
+								<p>
+									Масло не&nbsp;загрязняется при процедуре. Но&nbsp;если подошел срок замены масла, то&nbsp;можно
+									совместить обе процедуры для максимальной эффективности
+								</p>
+							</div>
+						</dd>
+					</dl>
+				</li>
+
+				<li class="faq-accordion__element">
+
+					<input class="faq-accordion__element-switcher" type="checkbox" id="accordion-element-9">
+					<dl class="faq-accordion__content">
+						<dt class="faq-accordion__question">
+							<label class="faq-accordion__question-button" for="accordion-element-9">
+								Каким авто особенно полезна очистка?
+
+								<span class="faq-accordion__question-icon" role="img" aria-label="Открыть или закрыть"></span>
+							</label>
+						</dt>
+
+						<dd class="faq-accordion__answer" id="answer-9">
+							<div class="faq-accordion__answer-text">
+								<h3 class="visually-hidden">Информация о для каких автомобилей лучше использовать водородну очистку
+									двигателя в 2АТМ</h3>
+
+								<p>
+									Тем, кто много ездит в&nbsp;городе, часто стоит в&nbsp;пробках, делает короткие поездки, использует
+									топливо/масло переменного качества&nbsp;&mdash; то&nbsp;есть там, где нагар накапливается быстрее.
+								</p>
+							</div>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+		</section>
+
+		<section class="appointment-choose section container" aria-labelledby="appointment-choose-title">
+			<h2 class="visually-hidden">Выбор способа записи в мастерскую 2АТМ</h2>
+
+			<div class="appointment-choose__wrapper">
+				<div class="appointment-choose__image-wrapper">
+					<img class="appointment-choose__image" src="./images/gifes/car-service-icon-1.gif" width="228" height="285"
+						alt="Иконка сервиса ремонта авто" loading="lazy">
+				</div>
+
+				<h3 class="appointment-choose__title" id="appointment-choose-title">
+					Хотите записаться?<br>
+					Выбирайте удобный способ!
+				</h3>
+
+				<div class="appointment-choose__buttons">
+					<a class="appointment-choose__button button" href="#!" target="_blank">
+						В&nbsp;Telegram
+					</a>
+
+					<a class="appointment-choose__button button button--accent-bg" href="#!">
+						На&nbsp;сайте
+					</a>
+				</div>
+			</div>
+
+		</section>
+
+		<section class="other-services section container" aria-labelledby="other-services-title">
+			<h2 class="section__title h3" id="other-services-title">
+				Другие услуги сети автомастерских «Две&nbsp;Атмосферы»
+			</h2>
+
+			<ul class="other-services__list">
+				<li class="other-services__list-item other-service-card">
+					<a class="other-service-card__link" href="./tire-fitting.html" aria-label="Перейти к описанию услуги"
+						title="Подробее о шиномонтаже">
+
+						<img class="other-service-card__image" src="./images/icons/icon-tire-fitting.webp" width="60" height="60"
+							alt="Колесо" loading="lazy">
+
+						<h3 class="other-service-card__name">
+							Шиномонтаж
+						</h3>
+
+						<span class="other-service-card__link-text">
+							Подробнее
+						</span>
+					</a>
+				</li>
+
+				<li class="other-services__list-item other-service-card">
+					<a class="other-service-card__link" href="./car-wash.html" aria-label="Перейти к описанию услуги"
+						title="Подробее об автомойке">
+
+						<img class="other-service-card__image" src="./images/icons/icon-car-wash.webp" width="60" height="60"
+							alt="Машина с каплями" loading="lazy">
+
+						<h3 class="other-service-card__name">
+							Автомойка
+						</h3>
+
+						<span class="other-service-card__link-text">
+							Подробнее
+						</span>
+					</a>
+				</li>
+
+				<li class="other-services__list-item other-service-card">
+					<a class="other-service-card__link" href="./car-service.html" aria-label="Перейти к описанию услуги"
+						title="Подробее об услуге">
+
+						<img class="other-service-card__image" src="./images/icons/icon-car-repair.webp" width="60" height="60"
+							alt="Шестерёнка" loading="lazy">
+
+						<h3 class="other-service-card__name">
+							Автосервис
+						</h3>
+
+						<span class="other-service-card__link-text">
+							Подробнее
+						</span>
+					</a>
+				</li>
+
+				<li class="other-services__list-item other-service-card">
+					<a class="other-service-card__link" href="./dry-cleaning.html" aria-label="Перейти к описанию услуги"
+						title="Подробее об услуге">
+
+						<img class="other-service-card__image" src="./images/icons/icon-dry-cleaning.webp" width="60" height="60"
+							alt="Щётка" loading="lazy">
+
+						<h3 class="other-service-card__name">
+							Химчистка
+						</h3>
+
+						<span class="other-service-card__link-text">
+							Подробнее
+						</span>
+					</a>
+				</li>
+
+				<li class="other-services__list-item other-service-card">
+					<a class="other-service-card__link" href="./tire-studding.html" aria-label="Перейти к описанию услуги"
+						title="Подробее об услуге">
+
+						<img class="other-service-card__image" src="./images/icons/icon-studding.webp" width="60" height="60"
+							alt="Ошиповка шины" loading="lazy">
+
+						<h3 class="other-service-card__name">
+							Ошиповка шин
+						</h3>
+
+						<span class="other-service-card__link-text">
+							Подробнее
+						</span>
+					</a>
+				</li>
+
+				<li class="other-services__list-item other-service-card">
+					<a class="other-service-card__link" href="./decoking-engine.html" aria-label="Перейти к описанию услуги"
+						title="Подробее об услуге">
+
+						<img class="other-service-card__image" src="./images/icons/icon-h-engine.webp" width="69" height="69"
+							alt="Раскоксовка двигателя" loading="lazy">
+
+						<h3 class="other-service-card__name">
+							Раскоксовка двигателя
+						</h3>
+
+						<span class="other-service-card__link-text">
+							Подробнее
+						</span>
+					</a>
+				</li>
+
+				<li class="other-services__list-item other-service-card">
+					<a class="other-service-card__link" href="./refill-conditioning.html" aria-label="Перейти к описанию услуги"
+						title="Подробее о заправке кондиционеров">
+
+						<img class="other-service-card__image" src="./images/icons/icon-refill-conditioning.webp" width="60"
+							height="60" alt="Заправка кондиционера" loading="lazy">
+
+						<h3 class="other-service-card__name">
+							Заправка кондиционера
+						</h3>
+
+						<span class="other-service-card__link-text">
+							Подробнее
+						</span>
+					</a>
+				</li>
+
+				<li class="other-services__list-item other-service-card">
+					<a class="other-service-card__link" href="./wheel-alignment.html" aria-label="Перейти к описанию услуги"
+						title="Подробее о развале-схождении">
+
+						<img class="other-service-card__image" src="./images/icons/icon-wheel-alignment.webp" width="60" height="60"
+							alt="Развал-схождение" loading="lazy">
+
+						<h3 class="other-service-card__name">
+							Развал-схождение
+						</h3>
+
+						<span class="other-service-card__link-text">
+							Подробнее
+						</span>
+					</a>
+				</li>
+
+				<li class="other-services__list-item other-service-card">
+					<a class="other-service-card__link" href="./argon-welding.html" aria-label="Перейти к описанию услуги"
+						title="Подробее о развале-схождении">
+
+						<img class="other-service-card__image" src="./images/icons/icon-welding.webp" width="60" height="60"
+							alt="Сварка" loading="lazy">
+
+						<h3 class="other-service-card__name">
+							Сварка аргоном
+						</h3>
+
+						<span class="other-service-card__link-text">
+							Подробнее
+						</span>
+					</a>
+				</li>
+
+				<li class="other-services__list-item other-service-card">
+					<a class="other-service-card__link" href="body-protection.html" aria-label="Перейти к описанию услуги"
+						title="Подробее о развале-схождения">
+
+						<img class="other-service-card__image" src="./images/icons/icon-shield-brush.webp" width="60" height="60"
+							alt="Щётка и щит" loading="lazy">
+
+						<h3 class="other-service-card__name">
+							Полировка кузова
+						</h3>
+
+						<span class="other-service-card__link-text">
+							Подробнее
+						</span>
+					</a>
+				</li>
+			</ul>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="footer__inner container">
+			<div class="footer__heading">
+				<a class="footer__logo logo" href="./index.html" aria-label="Логотип 2ATM">
+					<img class="logo__image" src="./images/logo/logo-light.svg" width="331" height="78" alt="Логотип 2ATM">
+				</a>
+
+				<div class="footer__heading-text">
+					<p>
+						Сеть шиномонтажей, автомоек и&nbsp;автосервисов с&nbsp;качественным обслуживанием в&nbsp;Санкт-Петербурге
+					</p>
+				</div>
+			</div>
+
+			<nav class="footer__buttons">
+				<address class="footer__qs-line">
+					<a class="footer__qs-line-link" href="tel:88126482248" target="_blank"
+						title="Связаться с линией контроля качества">
+						<span class="footer__qs-line-phone">8&nbsp;812 648-22-48</span>
+						<span class="footer__qs-line-text">линия контроля качества обслуживания клиентов</span>
+					</a>
+				</address>
+
+				<a class="footer__yandex-button" href="" aria-label="yandex-button" title="Перейти в Яндекс">
+					<svg width="72" height="92" viewBox="0 0 72 92">
+						<use xlink:href="./images/icons/sprite-icons.svg#yandex-plate"></use>
+					</svg>
+				</a>
+
+				<a class="footer__button button button--accent-bg" href="#!">
+					Записаться&nbsp;в&nbsp;Telegram
+				</a>
+			</nav>
+
+			<nav class="footer__links">
+				<ul class="footer__links-list">
+					<li>
+						<a href="./addresses.html">Адреса</a>
+					</li>
+
+					<li>
+						<a href="./offers.html">Cпецпредложения</a>
+					</li>
+
+					<li>
+						<a href="./corporate.html">Корпоративным клиентам</a>
+					</li>
+
+					<li>
+						<a href="./contacts.html">Контакты</a>
+					</li>
+
+					<li>
+						<a href="./rental-develop.html">Аренда и&nbsp;развитие</a>
+					</li>
+				</ul>
+			</nav>
+
+			<section class="footer__svc-links footer-svc-links">
+				<h2 class="footer-svc-links__heading">Услуги</h2>
+
+				<nav class="footer-svc-links__nemu">
+					<ul class="footer-svc-links__list">
+						<li>
+							<ul>
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./car-wash.html">Автомойка</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./dry-cleaning.html">Химчистка</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./body-protection.html">Защитные покрытия</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./headlight-protection.html">Полировка&nbsp;и бронирование
+										фар</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<ul>
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./tire-fitting.html">Шиномонтаж</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./tire-repair.html">Ремонт шин</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./tire-studding.html">Ошиповка шин</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./disk-painting.html">Покраска дисков</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./argon-welding.html">Аргоновая сварка</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<ul>
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./tire-storage.html">
+										Сезонное хранение шин
+									</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./balancing.html">
+										Балансировка колес
+									</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./tire-pms.html">
+										Установка системы контроля давления в&nbsp;шинах
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<ul>
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./car-service.html">Автосервис</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./wheel-alignment.html">Развал-схождение</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./refill-conditioning.html">
+										Заправка кондиционеров
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</section>
+
+			<div class="footer__copyright">
+				<a href="#!">&copy;&nbsp;2025 Две атмосферы</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="./libs/swiper/swiper-bundle.min.js"></script>
+
+	<script>
+		const stepsSvcSlider = new Swiper(".steps-svc__slider", {
+			autoHeight: true,
+			loop: true,
+			navigation: {
+				nextEl: ".steps-svc__slider-button--next",
+				prevEl: ".steps-svc__slider-button--prev",
+			},
+			pagination: {
+				el: ".steps-svc__slider-pagination",
+				clickable: true,
+			},
+			mousewheel: true,
+			keyboard: true,
+		});
+
+		const smartChoiceSlider = new Swiper(".smart-choice__slider", {
+			loop: true,
+			navigation: {
+				nextEl: ".smart-choice__slider-button--next",
+				prevEl: ".smart-choice__slider-button--prev",
+			},
+			pagination: {
+				el: ".smart-choice__slider-pagination",
+				clickable: true,
+			},
+			mousewheel: true,
+			keyboard: true,
+		});
+	</script>
+</body>
+
+</html>

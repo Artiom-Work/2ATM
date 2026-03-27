@@ -17,14 +17,15 @@
   }
 
   &__image {
+    width: rem(308);
+    height: rem(308);
+
     &-wrapper {
       @include flex-center(true);
 
       width: rem(308);
       height: rem(308);
     }
-    width: rem(308);
-    height: rem(308);
   }
 
   &__text {
@@ -110,13 +111,13 @@
 @include laptop-media-above {
   .app-entry {
     &__image {
+      width: rem(511);
+      height: rem(440);
+
       &-wrapper {
         width: rem(535);
         height: rem(480);
       }
-
-      width: rem(511);
-      height: rem(440);
     }
 
     &__title {

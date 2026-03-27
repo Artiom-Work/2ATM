@@ -56,6 +56,9 @@
   }
 
   &__image {
+    width: inherit;
+    height: inherit;
+
     &-wrapper {
       border-radius: var(--border-radius-small);
       width: rem(513);
@@ -66,9 +69,6 @@
         height: rem(552);
       }
     }
-
-    width: inherit;
-    height: inherit;
   }
 }
 
