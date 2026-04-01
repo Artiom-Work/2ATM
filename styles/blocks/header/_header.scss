@@ -1,4 +1,5 @@
 @use "../../healpers" as *;
+@use "view-map";
 @use "call-up";
 @use "header-menu";
 @use "header-top-menu";
@@ -8,26 +9,33 @@
   position: sticky;
   top: 0;
   z-index: 100;
-
   animation-name: scrolling-sticky;
   animation-fill-mode: both;
   animation-timeline: scroll();
   animation-range: rem(200) rem(300);
 
   background-color: var(--color-accent-50);
+
   &__logo {
+    @include flex-center(true);
+
     width: rem(330);
     height: rem(70);
+    transform-origin: left;
+    animation-name: scale-up;
+    animation-fill-mode: forwards;
+    animation-timeline: scroll();
+    animation-range: rem(370) rem(400);
+    animation-timing-function: linear;
   }
 
   &__general {
     @include flex-space-between;
 
     column-gap: rem(24);
-    padding-block: fluid(11, 2) rem(12);
+    padding-block: fluid(11, 8) rem(13);
 
     &--to-scroll {
-      /* Временно , заменить на display none , через JS */
       position: absolute;
       translate: 0 rem(-1000);
       height: rem(1);
@@ -37,6 +45,20 @@
       animation-fill-mode: both;
       animation-timeline: scroll();
       animation-range: rem(400) rem(400);
+      animation-timing-function: linear;
+
+      padding-block: rem(4.5);
+
+      .logo,
+      .header-menu,
+      .header__buttons {
+        transform-origin: right;
+        animation-name: scale-off;
+        animation-fill-mode: forwards;
+        animation-timeline: scroll();
+        animation-range: rem(370) rem(440);
+        animation-timing-function: linear;
+      }
     }
   }
 
@@ -44,17 +66,51 @@
     display: flex;
     align-items: center;
     justify-content: end;
-    column-gap: rem(59);
+    column-gap: rem(10);
+    white-space: nowrap;
+
+    .view-map {
+      margin-right: rem(145);
+    }
+
+    .call-up {
+      margin-right: rem(49);
+    }
+
+    &-link {
+      &-icon {
+        @include square(rem(24));
+
+        stroke: var(--text-color-light);
+        fill: transparent;
+      }
+
+      &-text {
+        font-size: fluid(16, 13);
+      }
+    }
   }
 }
+
+@include desktop-media {
+  .header {
+    &__buttons {
+      .call-up,
+      .view-map {
+        margin-right: unset;
+      }
+    }
+  }
+}
+
 @include tablet-media-above {
   .header {
     &__general--not-to-scroll {
-      /* Временно , заменить на display block , через JS */
       animation-name: hidden-to-scroll;
       animation-fill-mode: both;
       animation-timeline: scroll();
       animation-range: rem(400) rem(400);
+      animation-timing-function: linear;
     }
   }
 }
@@ -62,7 +118,7 @@
 @include laptop-media {
   .header {
     &__buttons {
-      column-gap: rem(24);
+      column-gap: rem(16);
     }
   }
 }
@@ -71,20 +127,26 @@
   .header {
     &__logo {
       grid-area: logo;
-      width: rem(263);
-      height: rem(54);
+      width: rem(273);
+      height: rem(58);
+      animation: unset;
     }
 
     &__general {
       display: grid;
-      grid-template-columns: 1fr auto auto;
+      grid-template-columns: auto 1fr auto;
       grid-template-areas: "logo buttons burger";
-      row-gap: rem(12);
+      row-gap: rem(18);
     }
 
     &__buttons {
       grid-area: buttons;
       justify-content: center;
+
+      .call-up__link {
+        column-gap: unset;
+        display: none;
+      }
     }
 
     &__mobile-menu {
@@ -99,24 +161,54 @@
     background-color: var(--color-light);
 
     &__logo {
-      width: rem(273);
-      height: rem(58);
+      width: rem(208);
+      height: rem(45);
     }
 
     &__general {
       padding-inline: rem(10) rem(8);
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-areas:
-        "logo burger"
-        "buttons buttons";
-    }
-
-    &__buttons {
-      column-gap: rem(16);
     }
   }
 }
+@include mobile-medium-media {
+  .header {
+    &__general {
+      grid-template-columns: auto 1fr 1fr auto;
+      grid-template-areas:
+        "burger logo logo phone"
+        "button-left  button-left button-right button-right";
+      column-gap: rem(16);
+    }
 
+    &__logo {
+      justify-self: center;
+    }
+
+    &__buttons {
+      display: contents;
+
+      .call-up {
+        grid-area: phone;
+
+        &__link {
+          display: block;
+        }
+      }
+
+      & > .button:nth-of-type(1) {
+        grid-area: button-left;
+      }
+      & > .button:nth-of-type(2) {
+        grid-area: button-right;
+      }
+
+      &-link-text {
+        line-height: 1.69231;
+        letter-spacing: 0;
+      }
+    }
+  }
+}
 /*  ===================================  */
 /*  =============END header============  */
 /*  ===================================  */

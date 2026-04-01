@@ -107,6 +107,7 @@
 .location-card__image {
   width: inherit;
   min-height: inherit;
+  object-fit: cover;
   border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
 }
 .location-card__image-wrapper {
@@ -120,6 +121,9 @@
   justify-content: start;
   padding: 0.625rem 1.25rem 1.25rem;
   color: var(--text-color-dark-secondary);
+}
+.location-card__address {
+  flex-grow: 1;
 }
 .location-card__address-button {
   padding: 0;

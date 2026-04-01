@@ -14,6 +14,10 @@ body {
   &.is-lock {
     overflow: hidden;
   }
+
+  &:has(input[data-mobile-menu-switcher]:checked) {
+    overflow: hidden;
+  }
 }
 
 main {

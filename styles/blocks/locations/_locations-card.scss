@@ -26,6 +26,7 @@
   &__image {
     width: inherit;
     min-height: inherit;
+    object-fit: cover;
     border-radius: var(--border-radius-small) 0 0 var(--border-radius-small);
 
     &-wrapper {
@@ -44,6 +45,8 @@
   }
 
   &__address {
+    flex-grow: 1;
+
     &-button {
       @include reset-button;
 

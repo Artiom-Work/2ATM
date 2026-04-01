@@ -9,10 +9,12 @@
 
     min-height: calc(var(--clientsSlideHeight) + #{rem(2)});
   }
+
   &__slide {
     width: var(--clientsSlideWidth);
     height: var(--clientsSlideHeight);
   }
+
   &__link {
     display: block;
     position: relative;

@@ -1,7 +1,7 @@
 @use "../../healpers" as *;
 /* Styles for mobile menu. part of header */
 .mobile-menu {
-  --mobileMenuBackgroundColor: var(--color-gray-900);
+  --mobileMenuBackgroundColor: var(--color-gray-800);
 
   z-index: 4;
 
@@ -33,19 +33,118 @@
   }
 
   &__wrapper {
+    background-color: var(--mobileMenuBackgroundColor);
+    color: var(--color-light);
+    display: flex;
+    flex-direction: column;
+    font-size: rem(14);
+    font-weight: 600;
+    gap: rem(24);
+    height: 100vh;
+    left: 0;
+    overflow: hidden;
+    padding: rem(72) var(--container-padding-x) rem(24);
     position: absolute;
     right: 0;
     top: 0;
-    width: 100vw;
-    height: 100vh;
-    padding: var(--container-padding-x);
-    background-color: var(--mobileMenuBackgroundColor);
-    visibility: hidden;
-    transition-duration: var(--transition-duration);
     transform: translateY(-100%);
+    transition-duration: var(--transition-duration);
+    visibility: hidden;
+    width: 100vw;
+  }
+
+  &__nav {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    &--expandable {
+      flex-direction: column;
+    }
+  }
+
+  &__sublist {
+    display: flex;
+    flex-direction: column;
+    gap: rem(2);
+    list-style: none;
+    margin: 0 0 rem(8);
+    padding: 0 0 0 rem(16);
+    font-size: rem(13);
+    color: var(--color-white-opacity-35);
+    max-height: 0;
+    height: auto;
+    visibility: hidden;
+    overflow-y: auto;
+    transition: max-height var(--transition-duration) ease;
+
+    &.is-expanded {
+      visibility: visible;
+      max-height: rem(1000);
+    }
+  }
+
+  &__item,
+  &__subitem {
+    margin: 0;
+    display: flex;
+  }
+
+  &__trigger {
+    @include reset-button;
+
+    display: flex;
+    align-items: center;
+    column-gap: rem(20);
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: 1.25;
+    letter-spacing: var(--letter-spacing);
+    color: var(--color-light);
+    transition-duration: var(--transition-duration) !important;
+
+    &-icon {
+      transition-duration: var(--transition-duration) !important;
+    }
+
+    &.is-expanded {
+      margin-bottom: rem(20);
+
+      svg {
+        rotate: 180deg;
+      }
+    }
+
+    @include hover {
+      filter: opacity(0.6);
+    }
+
+    @include active {
+      filter: opacity(0.4);
+      will-change: transform;
+      scale: 0.98;
+    }
   }
 
   &__link {
+    color: inherit;
+    display: inline-block;
+    padding: rem(8) 0;
+    text-decoration: none;
+    transition: var(--transition-duration) !important;
+    will-change: trasform;
+
     &--color-accent {
       color: var(--color-accent);
     }
@@ -53,6 +152,43 @@
     &--color-green {
       color: var(--color-green-light);
     }
+  }
+
+  &__call {
+    align-items: center;
+    color: inherit;
+    display: flex;
+    flex-shrink: 0;
+    gap: 0.625rem;
+    justify-content: center;
+    margin-bottom: rem(22);
+    transition: var(--transition-duration) !important;
+
+    &-inner {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-num {
+      font-size: rem(16);
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    &-text {
+      color: var(--text-color-dark-medium);
+      font-size: rem(14);
+      letter-spacing: 0.07em;
+      opacity: 0.9;
+      text-align: center;
+      font-weight: 400;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(16);
   }
 }
 
@@ -65,7 +201,7 @@
     &:first-child {
       rotate: 45deg;
       transform-origin: 0;
-      translate: 0.25em -0.04em;
+      translate: 0.25em -0.01em;
     }
 
     &:nth-child(2) {
@@ -80,6 +216,6 @@
   &:checked ~ .mobile-menu__wrapper {
     visibility: visible;
     transform: translateY(0%);
-    overflow: hidden; // временно , правльно - нужно  добавить к body в JS
+    overflow: hidden;
   }
 }

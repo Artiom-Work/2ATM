@@ -1,27 +1,14 @@
 @use "../../healpers" as *;
 /* Navigation footer section. part of footer */
 .footer-svc-links {
-  &__heading {
+  &__menu {
     font-size: rem(16);
-    line-height: rem(42);
-    letter-spacing: var(--letter-spacing);
-    font-weight: 600;
-    text-align: center;
-    color: var(--color-light);
-    border-bottom: var(--border-light);
-    width: 100%;
-    margin-bottom: rem(36);
-  }
-
-  &__nemu {
-    font-weight: 600;
-    font-size: rem(14);
   }
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(4, minmax(auto, rem(190)));
-    gap: rem(24);
+    grid-template-columns: repeat(3, minmax(auto, rem(250)));
+    gap: rem(14) rem(41);
   }
 
   &__item {
@@ -32,6 +19,14 @@
 
   &__link {
     line-height: 1.44;
+    font-weight: 400;
+    color: var(--color-white-opacity-35);
+
+    &--frequent {
+      color: var(--color-white-opacity-20);
+      font-weight: 600;
+      line-height: 1.2;
+    }
   }
 }
 
@@ -39,7 +34,24 @@
   .footer-svc-links {
     &__list {
       grid-template-columns: repeat(2, 1fr);
-      gap: rem(44) rem(24);
+      gap: rem(24);
+
+      & > li:last-child {
+        grid-column: 1 / -1;
+        order: 2;
+
+        ul {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          column-gap: rem(24);
+        }
+      }
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: rem(24);
+      }
     }
   }
 }
@@ -48,10 +60,6 @@
   .footer-svc-links {
     &__list {
       gap: rem(25) rem(24);
-
-      li:nth-child(3n) {
-        order: 2;
-      }
     }
 
     &__item {
@@ -66,10 +74,12 @@
   .footer-svc-links {
     &__list {
       grid-template-columns: 1fr;
-      gap: rem(14) rem(24);
+      gap: rem(14);
 
-      li:nth-child(3n) {
-        order: 0;
+      & > li:last-child {
+        ul {
+          grid-template-columns: 1fr;
+        }
       }
     }
 

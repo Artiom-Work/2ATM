@@ -35,6 +35,11 @@
 					</a>
 				</li>
 				<li>
+					<a class="header-top-menu__link" href="#!">
+						Интернет-магазин
+					</a>
+				</li>
+				<li>
 					<a class="header-top-menu__link header-top-menu__link--color-green" href="./offers.html">
 						Спецпредложения
 					</a>
@@ -45,14 +50,15 @@
 		<div class="header__general header__general--not-to-scroll container">
 			<a class="header__logo logo" href="./index.html" aria-label="Логотип 2ATM">
 				<picture>
-					<source srcset="./images/logo/logo-mobile.svg" media="(max-width: 1024px)" type="image/svg+xml">
+					<source srcset="./images/logo/logo-mobile.svg" media="(max-width: 767px)" type="image/svg+xml">
+					<source srcset="./images/logo/logo-tablet.svg" media="(max-width: 1024px)" type="image/svg+xml">
 					<source srcset="./images/logo/logo.svg" type="image/svg+xml">
-					<img class="logo__image" src="./images/logo/logo-mobile.svg" width="273" height="58" alt="Логотип 2ATM">
+					<img class="logo__image" src="./images/logo/logo-mobile.svg" width="208" height="45" alt="Логотип 2ATM">
 				</picture>
 			</a>
 
 			<div class="header__mobile-menu mobile-menu visible-tablet">
-				<input id="menu-switch" type="checkbox">
+				<input id="menu-switch" type="checkbox" data-mobile-menu-switcher>
 				<label class="mobile-menu__burger" for="menu-switch">
 					<span class="mobile-menu__burger-line"></span>
 					<span class="mobile-menu__burger-line"></span>
@@ -60,55 +66,200 @@
 				</label>
 
 				<div class="mobile-menu__wrapper">
-					<nav class="mobile-menu__box header-top-menu">
-						<ul class="header-top-menu__list">
-							<li>
-								<a class="mobile-menu__link mobile-menu__link--color-accent" href="./services.html">
-									Услуги
-								</a>
+					<nav class="mobile-menu__nav scroll-y">
+						<ul class="mobile-menu__list">
+							<li class="mobile-menu__item mobile-menu__item--expandable">
+
+								<button class="mobile-menu__trigger" type="button" aria-expanded="false"
+									onclick="document.querySelector('[data-js-select-header-menu-sublist]').classList.toggle('is-expanded'), this.classList.toggle('is-expanded')">
+									<span>Услуги</span>
+
+									<svg class="mobile-menu__trigger-icon" width="12" height="8" viewBox="0 0 12 8">
+										<use xlink:href="./images/icons/sprite-icons.svg#icon-select-arrow"></use>
+									</svg>
+								</button>
+
+								<ul class="mobile-menu__sublist scroll-y" data-js-select-header-menu-sublist>
+									<li class="mobile-menu__subitem">
+										<a href="./tire-fitting.html" class="mobile-menu__link">Шиномонтаж</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./tire-repair.html" class="mobile-menu__link">Ремонт шин и&nbsp;дисков</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./tire-studding.html" class="mobile-menu__link">Ошиповка шин</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./disk-painting.html" class="mobile-menu__link">Покраска дисков</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./argon-welding.html" class="mobile-menu__link">Аргоновая сварка</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./tire-storage.html" class="mobile-menu__link">Сезонное хранение шин</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./balancing.html" class="mobile-menu__link">Балансировка колес</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./tire-pms.html" class="mobile-menu__link">Установка системы контроля давления
+											в&nbsp;шинах</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./decoking-engine.html" class="mobile-menu__link">Аппаратная раскоксовка двигателя</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./h-engine-cleaning.html" class="mobile-menu__link">Водородная очистка двигателя</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./car-wash.html" class="mobile-menu__link">Автомойка</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./dry-cleaning.html" class="mobile-menu__link">Химчистка</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./body-protection.html" class="mobile-menu__link">Защитные покрытия</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./headlight-protection.html" class="mobile-menu__link">Полировка и&nbsp;бронирование
+											фар</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./refill-conditioning.html" class="mobile-menu__link">Заправка кондиционеров</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./car-service.html" class="mobile-menu__link">Автосервис</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./wheel-alignment.html" class="mobile-menu__link">Развал-схождение</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./404-page.html" class="mobile-menu__link">Техническое обслуживание</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./404-page.html" class="mobile-menu__link">Диагностика автомобиля</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./404-page.html" class="mobile-menu__link">Ремонт ходовой и&nbsp;подвески</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./404-page.html" class="mobile-menu__link">Ремонт тормозной системы</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./404-page.html" class="mobile-menu__link">Автоэлектрика</a>
+									</li>
+								</ul>
 							</li>
-							<li>
-								<a class="mobile-menu__link" href="./addresses.html">
-									Адреса
-								</a>
+							<li class="mobile-menu__item">
+								<a href="./addresses.html" class="mobile-menu__link">Адреса</a>
 							</li>
-							<li>
-								<a class="mobile-menu__link" href="./corporate.html">
-									Корпоративным клиентам
-								</a>
+
+							<li class="mobile-menu__item">
+								<a href="./offers.html" class="mobile-menu__link">Спецпредложения</a>
 							</li>
-							<li>
-								<a class="mobile-menu__link mobile-menu__link--color-green" href="./offers.html">
-									Спецпредложения
-								</a>
+
+							<li class="mobile-menu__item">
+								<a href="./loyalty.html" class="mobile-menu__link">Программа лояльности</a>
+							</li>
+
+							<li class="mobile-menu__item">
+								<a href="./corporate.html" class="mobile-menu__link">Корпоративным клиентам</a>
+							</li>
+
+							<li class="mobile-menu__item">
+								<a href="./rental-develop.html" class="mobile-menu__link">Аренда и&nbsp;развитие</a>
+							</li>
+
+							<li class="mobile-menu__item">
+								<a href="./404-page.html" class="mobile-menu__link">Работа в&nbsp;2АТМ</a>
+							</li>
+
+							<li class="mobile-menu__item">
+								<a href="./contacts.html" class="mobile-menu__link">Контакты</a>
 							</li>
 						</ul>
 					</nav>
+
+					<a class="mobile-menu__call" href="tel:+78123855054">
+						<svg class="call-up__link-icon call-up__link-icon--mobile" viewBox="0 0 32 32" width="32" height="32">
+							<use xlink:href="./images/icons/sprite-icons.svg#call-up"></use>
+						</svg>
+
+						<span class="mobile-menu__call-inner">
+							<span class="mobile-menu__call-num">
+								+7 (812) 385-50-54
+							</span>
+							<span class="mobile-menu__call-text">круглосуточно</span>
+						</span>
+					</a>
+
+					<div class="mobile-menu__actions">
+						<a class="button button--accent-bg" href="https://artiom-work.github.io/entry-2ATM/first.html"
+							target="_blank" rel="noopener">Запись на сайте</a>
+
+						<a class="button" href="https://t.me/TG_2ATM_BOT" target="_blank" rel="noopener">Запись в Telegram</a>
+					</div>
 				</div>
 			</div>
 
 			<nav class="header__buttons">
-				<address class="call-up hidden-tablet">
-					<svg viewBox="0 0 32 32" width="32" height="32">
-						<use xlink:href="./images/icons/sprite-icons.svg#call-up"></use>
-					</svg>
+				<address class="view-map hidden-laptop">
+					<a class="view-map__link" href="./404-page.html" target="_blank" title="Посмотреть на карте">
+						<img class="view-map__link-icon" src="./images/icons/icon-marker.webp" width="50" height="50" alt=""
+							aria-hidden="true" loading="lazy">
 
-					<a class="call-up__link" href="tel:78123855054" target="_blank" title="Позвонить нам">
-						<span>+7&nbsp;812 385-50-54</span>
-						<span class="call-up__text">круглосуточно</span>
+						<span>Санкт-Петербург</span>
+						<span class="view-map__text">14 точек на&nbsp;карте</span>
 					</a>
 				</address>
 
-				<a class="button button--accent-bg visible-tablet" href="#!">
-					Запись&nbsp;на&nbsp;сайте
+				<address class="call-up">
+					<a class="call-up__link" href="tel:78123855054" target="_blank" title="Позвонить нам">
+						<img class="call-up__link-icon" src="./images/icons/icon-call-up.webp" width="50" height="50" alt=""
+							aria-hidden="true" loading="lazy">
+
+						<span class="hidden-tablet">+7&nbsp;812 385-50-54</span>
+						<span class="call-up__text hidden-tablet">круглосуточно</span>
+					</a>
+				</address>
+
+				<a class="button button--accent-bg" href="https://artiom-work.github.io/entry-2ATM/first.html">
+					<span class="header__buttons-link-text hidden-mobile-medium">
+						Записаться
+					</span>
+					<span class="header__buttons-link-text visible-mobile-medium">
+						Запись&nbsp;на&nbsp;сайте
+					</span>
 				</a>
 
-				<a class="button" href="#!">
-					<span class="header-buttons__link-text hidden-tablet">
-						Записаться&nbsp;в&nbsp;Telegram
-					</span>
+				<a class="button button--light-bg-color" href="https://t.me/TG_2ATM_BOT" target="_blank"
+					aria-label="Записаться в телеграм" title="Перейти в Telegram">
+					<svg class="header__buttons-link-icon hidden-mobile-medium" width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="./images/icons/sprite-icons.svg#telegram-transparent-icon"></use>
+					</svg>
 
-					<span class="header-buttons__link-text visible-tablet">
+					<span class="header__buttons-link-text visible-mobile-medium">
 						Запись&nbsp;в&nbsp;Telegram
 					</span>
 				</a>
@@ -117,52 +268,82 @@
 
 		<nav class="header-menu header-menu--not-to-scroll header-menu--color-accent">
 			<ul class="header-menu__list container">
-				<li class="header-menu__item">
+				<li class="header-menu__item visible-tablet">
 					<a href="./tire-fitting.html">Шиномонтаж</a>
 				</li>
+
+				<li class="header-menu__item hidden-tablet">
+					<a href="./car-wash.html">Мойка</a>
+				</li>
+
 				<li class="header-menu__item">
 					<a href="./car-wash.html">Автомойка</a>
 				</li>
-				<li class="header-menu__item">
-					<a href="./car-service.html">Автосервис</a>
-				</li>
+
 				<li class="header-menu__item">
 					<a href="./refill-conditioning.html">Заправка кондиционеров</a>
 				</li>
 
 				<li class="header-menu__item">
+					<a href="./car-service.html">Автосервис</a>
+				</li>
+
+				<li class="header-menu__item">
 					<a href="./wheel-alignment.html">Развал-схождение</a>
+				</li>
+
+				<li class="header-menu__item">
+					<a href="./decoking-engine.html">Аппаратная раскоксовка двигателя</a>
 				</li>
 			</ul>
 		</nav>
 
 		<div class="header__general header__general--to-scroll container hidden-tablet">
 			<a class="logo logo--short" href="./index.html" aria-label="Логотип 2ATM">
-				<img class="logo__image" src="./images/logo/logo-short.svg" width="45" height="45" alt="Логотип 2ATM">
+				<img class="logo__image" src="./images/logo/logo-short.svg" width="47" height="47" alt="Логотип 2ATM">
 			</a>
 
 			<nav class="header__menu header-menu">
-				<ul class="header-menu__list">
+				<ul class="header-menu__list header-menu__list--scroll-version">
 					<li class="header-menu__item">
 						<a href="./tire-fitting.html">Шиномонтаж</a>
 					</li>
+
 					<li class="header-menu__item">
 						<a href="./car-wash.html">Автомойка</a>
 					</li>
+
 					<li class="header-menu__item">
 						<a href="./refill-conditioning.html">Заправка кондиционеров</a>
 					</li>
+
 					<li class="header-menu__item">
 						<a href="./car-service.html">Автосервис</a>
 					</li>
 				</ul>
 			</nav>
 
-			<a class="button" href="#!">
-				<span class="header-buttons__link-text">
-					Запись&nbsp;в&nbsp;Telegram
-				</span>
-			</a>
+			<nav class="header__buttons">
+				<a class="button button--accent-bg" href="https://artiom-work.github.io/entry-2ATM/first.html">
+					<span class="header__buttons-link-text hidden-mobile-medium">
+						Записаться
+					</span>
+
+					<span class="header__buttons-link-text visible-mobile-medium">
+						Запись&nbsp;на&nbsp;сайте
+					</span>
+				</a>
+
+				<a class="button button--light-bg-color" href="https://t.me/TG_2ATM_BOT">
+					<svg class="header__buttons-link-icon hidden-mobile-medium" width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="./images/icons/sprite-icons.svg#telegram-transparent-icon"></use>
+					</svg>
+
+					<span class="header__buttons-link-text visible-mobile-medium">
+						Запись&nbsp;в&nbsp;Telegram
+					</span>
+				</a>
+			</nav>
 		</div>
 	</header>
 
@@ -724,6 +905,9 @@
 					<p>
 						Сеть шиномонтажей, автомоек и&nbsp;автосервисов с&nbsp;качественным обслуживанием в&nbsp;Санкт-Петербурге
 					</p>
+
+					<p class="visible-tablet">&copy;&nbsp;2009&nbsp;&mdash; 2026 &laquo;Две атмосферы&raquo;</p>
+
 				</div>
 			</div>
 
@@ -736,13 +920,14 @@
 					</a>
 				</address>
 
-				<a class="footer__yandex-button" href="" aria-label="yandex-button" title="Перейти в Яндекс">
+				<a class="footer__yandex-button" href="https://ya.ru" target="_blank" aria-label="yandex-button"
+					title="Перейти в Яндекс">
 					<svg width="72" height="92" viewBox="0 0 72 92">
 						<use xlink:href="./images/icons/sprite-icons.svg#yandex-plate"></use>
 					</svg>
 				</a>
 
-				<a class="footer__button button button--accent-bg" href="#!">
+				<a class="footer__button button button--accent-bg" href="https://t.me/TG_2ATM_BOT" target="_blank">
 					Записаться&nbsp;в&nbsp;Telegram
 				</a>
 			</nav>
@@ -758,6 +943,10 @@
 					</li>
 
 					<li>
+						<a href="./loyalty.html">Программа лояльности</a>
+					</li>
+
+					<li>
 						<a href="./corporate.html">Корпоративным клиентам</a>
 					</li>
 
@@ -768,43 +957,27 @@
 					<li>
 						<a href="./rental-develop.html">Аренда и&nbsp;развитие</a>
 					</li>
+
+					<li>
+						<a href="./404-page.html">Работа в&nbsp;2АТМ</a>
+					</li>
 				</ul>
 			</nav>
 
 			<section class="footer__svc-links footer-svc-links">
-				<h2 class="footer-svc-links__heading">Услуги</h2>
+				<h2 class="visually-hidden">Перечень ссылок на описание услуг в 2АТМ</h2>
 
-				<nav class="footer-svc-links__nemu">
+				<nav class="footer-svc-links__menu">
 					<ul class="footer-svc-links__list">
 						<li>
 							<ul>
 								<li class="footer-svc-links__item">
-									<a class="footer-svc-links__link" href="./car-wash.html">Автомойка</a>
+									<a class="footer-svc-links__link footer-svc-links__link--frequent"
+										href="./tire-fitting.html">Шиномонтаж</a>
 								</li>
 
 								<li class="footer-svc-links__item">
-									<a class="footer-svc-links__link" href="./dry-cleaning.html">Химчистка</a>
-								</li>
-
-								<li class="footer-svc-links__item">
-									<a class="footer-svc-links__link" href="./body-protection.html">Защитные покрытия</a>
-								</li>
-
-								<li class="footer-svc-links__item">
-									<a class="footer-svc-links__link" href="./headlight-protection.html">Полировка&nbsp;и бронирование
-										фар</a>
-								</li>
-							</ul>
-						</li>
-
-						<li>
-							<ul>
-								<li class="footer-svc-links__item">
-									<a class="footer-svc-links__link" href="./tire-fitting.html">Шиномонтаж</a>
-								</li>
-
-								<li class="footer-svc-links__item">
-									<a class="footer-svc-links__link" href="./tire-repair.html">Ремонт шин</a>
+									<a class="footer-svc-links__link" href="./tire-repair.html">Ремонт шин и&nbsp;дисков</a>
 								</li>
 
 								<li class="footer-svc-links__item">
@@ -818,11 +991,7 @@
 								<li class="footer-svc-links__item">
 									<a class="footer-svc-links__link" href="./argon-welding.html">Аргоновая сварка</a>
 								</li>
-							</ul>
-						</li>
 
-						<li>
-							<ul>
 								<li class="footer-svc-links__item">
 									<a class="footer-svc-links__link" href="./tire-storage.html">
 										Сезонное хранение шин
@@ -846,7 +1015,50 @@
 						<li>
 							<ul>
 								<li class="footer-svc-links__item">
-									<a class="footer-svc-links__link" href="./car-service.html">Автосервис</a>
+									<a class="footer-svc-links__link footer-svc-links__link--frequent" href="./decoking-engine.html">
+										Аппаратная раскоксовка двигателя
+									</a>
+								</li>
+
+
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link footer-svc-links__link--frequent"
+										href="./car-wash.html">Автомойка</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link footer-svc-links__link--frequent" href="./refill-conditioning.html">
+										Заправка кондиционеров
+									</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./dry-cleaning.html">Химчистка</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./body-protection.html">Защитные покрытия</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./headlight-protection.html">Полировка&nbsp;и бронирование
+										фар</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./h-engine-cleaning.html">
+										Водородная очистка двигателя
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<ul>
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link footer-svc-links__link--frequent"
+										href="./car-service.html">Автосервис</a>
 								</li>
 
 								<li class="footer-svc-links__item">
@@ -854,8 +1066,32 @@
 								</li>
 
 								<li class="footer-svc-links__item">
-									<a class="footer-svc-links__link" href="./refill-conditioning.html">
-										Заправка кондиционеров
+									<a class="footer-svc-links__link" href="./404-page.html">
+										Техническое обслуживание
+									</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./404-page.html">
+										Диагностика автомобиля
+									</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./404-page.html">
+										Ремонт ходовой и&nbsp;подвески
+									</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./404-page.html">
+										Ремонт торомозной системы
+									</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./404-page.html">
+										Автоэлектрика
 									</a>
 								</li>
 							</ul>
@@ -865,7 +1101,13 @@
 			</section>
 
 			<div class="footer__copyright">
-				<a href="#!">&copy;&nbsp;2025 Две атмосферы</a>
+				<p class="hidden-tablet">&copy;&nbsp;2009&nbsp;&mdash; 2026 &laquo;Две атмосферы&raquo;</p>
+
+				<nav class="footer__legal">
+					<a href="./404-page.html" target="_blank">Согласие на&nbsp;обработку&nbsp;ПД</a>
+					<a href="./404-page.html" target="_blank">Политика обработки персональных данных</a>
+					<a href="./404-page.html">Карта сайта</a>
+				</nav>
 			</div>
 		</div>
 	</footer>

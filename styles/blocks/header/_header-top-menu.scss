@@ -9,7 +9,7 @@
   color: var(--mobileMenuTextColor);
   font-weight: 600;
   font-size: rem(14);
-  /* Временно , заменить на display none , через JS */
+  /* Можно, заменить на JS анимацию  */
   animation-name: hidden-to-scroll;
   animation-fill-mode: both;
   animation-timeline: scroll();

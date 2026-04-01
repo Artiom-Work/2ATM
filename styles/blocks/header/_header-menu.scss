@@ -5,11 +5,12 @@
   width: 100%;
 
   &--not-to-scroll {
-    /* Временно , заменить на display none , через JS */
+    /* Можно, заменить на JS анимацию  */
     animation-name: hidden-to-scroll;
     animation-fill-mode: both;
     animation-timeline: scroll();
     animation-range: rem(400) rem(400);
+    animation-timing-function: linear;
   }
 
   &--color-accent {
@@ -18,31 +19,57 @@
 
   &__list {
     @include flex-space-between;
-    @include fluid-text(18, 15);
 
-    column-gap: fluid(40, 16);
-    row-gap: rem(17);
-    padding-block: rem(13.5);
+    font-size: rem(13);
+    column-gap: fluid(35, 16);
+    row-gap: rem(10);
+    padding-block: rem(17);
     font-weight: 700;
-    line-height: 1.3;
+    line-height: 1.2;
     text-transform: uppercase;
+    text-align: center;
+
+    &--scroll-version {
+      column-gap: rem(40);
+      justify-content: center;
+      font-size: rem(18);
+      padding-block: 0;
+      justify-self: center;
+    }
+  }
+
+  &__item {
+    white-space: nowrap;
   }
 }
 @include laptop-media {
   .header-menu {
     &__list {
+      max-width: rem(950);
+      justify-content: center;
       flex-wrap: wrap;
-    }
+      font-size: rem(15);
 
-    &__item {
-      margin-inline: auto;
+      &--scroll-version {
+        max-width: rem(500);
+        justify-content: center;
+        padding-block: rem(7);
+        line-height: 1;
+      }
+      /* 			вот эти 2 обращения по вложенным li это замена местами заправки кондиционеров и Автосервиса */
+      li:nth-child(5) {
+        order: -1;
+      }
+
+      li:nth-child(-n + 3) {
+        order: -2;
+      }
     }
   }
 }
 @include tablet-media {
   .header-menu {
     &__list {
-      font-size: rem(15);
       max-width: rem(760);
     }
   }
@@ -50,13 +77,14 @@
 @include mobile-media {
   .header-menu {
     &--not-to-scroll {
-      /* Временно , заменить на display none , через JS */
+      /* Можно, заменить на JS анимацию  */
       animation-range: rem(50) rem(50);
     }
 
     &__list {
-      padding-block: rem(15);
-      padding-inline: rem(10);
+      padding-block: rem(10);
+      padding-inline: rem(6);
+      row-gap: rem(8.5);
     }
   }
 }

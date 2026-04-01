@@ -10,7 +10,7 @@
 	<link rel="icon" type="image/svg+xml" sizes="48x48" href="./images/icons/favicon.svg">
 	<link rel="apple-touch-icon" sizes="180x180" href="./images/icons/favicon.svg">
 	<meta name="description"
-		content="Сеть шиномонтажей, автомоек и автосервисов в Санкт-Петербурге. Множество филиалов с онлайн-записью. Шиномонтаж, мойка, заправка кондиционеров, развал-схождение. Специальные предложения для клиентов.">
+		content="🛞Сеть шиномонтажей, автомоек и автосервисов в Санкт-Петербурге. Быстрое обслуживание без очередей, запись за 1 минуту. Сертифицированные мастера, контроль качества. Специальные предложения для клиентов.🛞">
 	<link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css">
 	<title>2ATM | Главная</title>
 	<link rel="stylesheet" href="./styles/pages/index-page/index.css ">
@@ -37,6 +37,11 @@
 					</a>
 				</li>
 				<li>
+					<a class="header-top-menu__link" href="#!">
+						Интернет-магазин
+					</a>
+				</li>
+				<li>
 					<a class="header-top-menu__link header-top-menu__link--color-green" href="./offers.html">
 						Спецпредложения
 					</a>
@@ -47,14 +52,15 @@
 		<div class="header__general header__general--not-to-scroll container">
 			<a class="header__logo logo" href="./index.html" aria-label="Логотип 2ATM">
 				<picture>
-					<source srcset="./images/logo/logo-mobile.svg" media="(max-width: 1024px)" type="image/svg+xml">
+					<source srcset="./images/logo/logo-mobile.svg" media="(max-width: 767px)" type="image/svg+xml">
+					<source srcset="./images/logo/logo-tablet.svg" media="(max-width: 1024px)" type="image/svg+xml">
 					<source srcset="./images/logo/logo.svg" type="image/svg+xml">
-					<img class="logo__image" src="./images/logo/logo-mobile.svg" width="273" height="58" alt="Логотип 2ATM">
+					<img class="logo__image" src="./images/logo/logo-mobile.svg" width="208" height="45" alt="Логотип 2ATM">
 				</picture>
 			</a>
 
 			<div class="header__mobile-menu mobile-menu visible-tablet">
-				<input id="menu-switch" type="checkbox">
+				<input id="menu-switch" type="checkbox" data-mobile-menu-switcher>
 				<label class="mobile-menu__burger" for="menu-switch">
 					<span class="mobile-menu__burger-line"></span>
 					<span class="mobile-menu__burger-line"></span>
@@ -62,55 +68,200 @@
 				</label>
 
 				<div class="mobile-menu__wrapper">
-					<nav class="mobile-menu__box header-top-menu">
-						<ul class="header-top-menu__list">
-							<li>
-								<a class="mobile-menu__link mobile-menu__link--color-accent" href="./services.html">
-									Услуги
-								</a>
+					<nav class="mobile-menu__nav scroll-y">
+						<ul class="mobile-menu__list">
+							<li class="mobile-menu__item mobile-menu__item--expandable">
+
+								<button class="mobile-menu__trigger" type="button" aria-expanded="false"
+									onclick="document.querySelector('[data-js-select-header-menu-sublist]').classList.toggle('is-expanded'), this.classList.toggle('is-expanded')">
+									<span>Услуги</span>
+
+									<svg class="mobile-menu__trigger-icon" width="12" height="8" viewBox="0 0 12 8">
+										<use xlink:href="./images/icons/sprite-icons.svg#icon-select-arrow"></use>
+									</svg>
+								</button>
+
+								<ul class="mobile-menu__sublist scroll-y" data-js-select-header-menu-sublist>
+									<li class="mobile-menu__subitem">
+										<a href="./tire-fitting.html" class="mobile-menu__link">Шиномонтаж</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./tire-repair.html" class="mobile-menu__link">Ремонт шин и&nbsp;дисков</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./tire-studding.html" class="mobile-menu__link">Ошиповка шин</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./disk-painting.html" class="mobile-menu__link">Покраска дисков</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./argon-welding.html" class="mobile-menu__link">Аргоновая сварка</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./tire-storage.html" class="mobile-menu__link">Сезонное хранение шин</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./balancing.html" class="mobile-menu__link">Балансировка колес</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./tire-pms.html" class="mobile-menu__link">Установка системы контроля давления
+											в&nbsp;шинах</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./decoking-engine.html" class="mobile-menu__link">Аппаратная раскоксовка двигателя</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./h-engine-cleaning.html" class="mobile-menu__link">Водородная очистка двигателя</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./car-wash.html" class="mobile-menu__link">Автомойка</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./dry-cleaning.html" class="mobile-menu__link">Химчистка</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./body-protection.html" class="mobile-menu__link">Защитные покрытия</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./headlight-protection.html" class="mobile-menu__link">Полировка и&nbsp;бронирование
+											фар</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./refill-conditioning.html" class="mobile-menu__link">Заправка кондиционеров</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./car-service.html" class="mobile-menu__link">Автосервис</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./wheel-alignment.html" class="mobile-menu__link">Развал-схождение</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./404-page.html" class="mobile-menu__link">Техническое обслуживание</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./404-page.html" class="mobile-menu__link">Диагностика автомобиля</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./404-page.html" class="mobile-menu__link">Ремонт ходовой и&nbsp;подвески</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./404-page.html" class="mobile-menu__link">Ремонт тормозной системы</a>
+									</li>
+
+									<li class="mobile-menu__subitem">
+										<a href="./404-page.html" class="mobile-menu__link">Автоэлектрика</a>
+									</li>
+								</ul>
 							</li>
-							<li>
-								<a class="mobile-menu__link" href="./addresses.html">
-									Адреса
-								</a>
+							<li class="mobile-menu__item">
+								<a href="./addresses.html" class="mobile-menu__link">Адреса</a>
 							</li>
-							<li>
-								<a class="mobile-menu__link" href="./corporate.html">
-									Корпоративным клиентам
-								</a>
+
+							<li class="mobile-menu__item">
+								<a href="./offers.html" class="mobile-menu__link">Спецпредложения</a>
 							</li>
-							<li>
-								<a class="mobile-menu__link mobile-menu__link--color-green" href="./offers.html">
-									Спецпредложения
-								</a>
+
+							<li class="mobile-menu__item">
+								<a href="./loyalty.html" class="mobile-menu__link">Программа лояльности</a>
+							</li>
+
+							<li class="mobile-menu__item">
+								<a href="./corporate.html" class="mobile-menu__link">Корпоративным клиентам</a>
+							</li>
+
+							<li class="mobile-menu__item">
+								<a href="./rental-develop.html" class="mobile-menu__link">Аренда и&nbsp;развитие</a>
+							</li>
+
+							<li class="mobile-menu__item">
+								<a href="./404-page.html" class="mobile-menu__link">Работа в&nbsp;2АТМ</a>
+							</li>
+
+							<li class="mobile-menu__item">
+								<a href="./contacts.html" class="mobile-menu__link">Контакты</a>
 							</li>
 						</ul>
 					</nav>
+
+					<a class="mobile-menu__call" href="tel:+78123855054">
+						<svg class="call-up__link-icon call-up__link-icon--mobile" viewBox="0 0 32 32" width="32" height="32">
+							<use xlink:href="./images/icons/sprite-icons.svg#call-up"></use>
+						</svg>
+
+						<span class="mobile-menu__call-inner">
+							<span class="mobile-menu__call-num">
+								+7 (812) 385-50-54
+							</span>
+							<span class="mobile-menu__call-text">круглосуточно</span>
+						</span>
+					</a>
+
+					<div class="mobile-menu__actions">
+						<a class="button button--accent-bg" href="https://artiom-work.github.io/entry-2ATM/first.html"
+							target="_blank" rel="noopener">Запись на сайте</a>
+
+						<a class="button" href="https://t.me/TG_2ATM_BOT" target="_blank" rel="noopener">Запись в Telegram</a>
+					</div>
 				</div>
 			</div>
 
 			<nav class="header__buttons">
-				<address class="call-up hidden-tablet">
-					<svg viewBox="0 0 32 32" width="32" height="32">
-						<use xlink:href="./images/icons/sprite-icons.svg#call-up"></use>
-					</svg>
+				<address class="view-map hidden-laptop">
+					<a class="view-map__link" href="./404-page.html" target="_blank" title="Посмотреть на карте">
+						<img class="view-map__link-icon" src="./images/icons/icon-marker.webp" width="50" height="50" alt=""
+							aria-hidden="true" loading="lazy">
 
-					<a class="call-up__link" href="tel:78123855054" target="_blank" title="Позвонить нам">
-						<span>+7&nbsp;812 385-50-54</span>
-						<span class="call-up__text">круглосуточно</span>
+						<span>Санкт-Петербург</span>
+						<span class="view-map__text">14 точек на&nbsp;карте</span>
 					</a>
 				</address>
 
-				<a class="button button--accent-bg visible-tablet" href="#!">
-					Запись&nbsp;на&nbsp;сайте
+				<address class="call-up">
+					<a class="call-up__link" href="tel:78123855054" target="_blank" title="Позвонить нам">
+						<img class="call-up__link-icon" src="./images/icons/icon-call-up.webp" width="50" height="50" alt=""
+							aria-hidden="true" loading="lazy">
+
+						<span class="hidden-tablet">+7&nbsp;812 385-50-54</span>
+						<span class="call-up__text hidden-tablet">круглосуточно</span>
+					</a>
+				</address>
+
+				<a class="button button--accent-bg" href="https://artiom-work.github.io/entry-2ATM/first.html">
+					<span class="header__buttons-link-text hidden-mobile-medium">
+						Записаться
+					</span>
+					<span class="header__buttons-link-text visible-mobile-medium">
+						Запись&nbsp;на&nbsp;сайте
+					</span>
 				</a>
 
-				<a class="button" href="#!">
-					<span class="header-buttons__link-text hidden-tablet">
-						Записаться&nbsp;в&nbsp;Telegram
-					</span>
+				<a class="button button--light-bg-color" href="https://t.me/TG_2ATM_BOT" target="_blank"
+					aria-label="Записаться в телеграм" title="Перейти в Telegram">
+					<svg class="header__buttons-link-icon hidden-mobile-medium" width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="./images/icons/sprite-icons.svg#telegram-transparent-icon"></use>
+					</svg>
 
-					<span class="header-buttons__link-text visible-tablet">
+					<span class="header__buttons-link-text visible-mobile-medium">
 						Запись&nbsp;в&nbsp;Telegram
 					</span>
 				</a>
@@ -119,52 +270,82 @@
 
 		<nav class="header-menu header-menu--not-to-scroll header-menu--color-accent">
 			<ul class="header-menu__list container">
-				<li class="header-menu__item">
+				<li class="header-menu__item visible-tablet">
 					<a href="./tire-fitting.html">Шиномонтаж</a>
 				</li>
+
+				<li class="header-menu__item hidden-tablet">
+					<a href="./car-wash.html">Мойка</a>
+				</li>
+
 				<li class="header-menu__item">
 					<a href="./car-wash.html">Автомойка</a>
 				</li>
-				<li class="header-menu__item">
-					<a href="./car-service.html">Автосервис</a>
-				</li>
+
 				<li class="header-menu__item">
 					<a href="./refill-conditioning.html">Заправка кондиционеров</a>
 				</li>
 
 				<li class="header-menu__item">
+					<a href="./car-service.html">Автосервис</a>
+				</li>
+
+				<li class="header-menu__item">
 					<a href="./wheel-alignment.html">Развал-схождение</a>
+				</li>
+
+				<li class="header-menu__item">
+					<a href="./decoking-engine.html">Аппаратная раскоксовка двигателя</a>
 				</li>
 			</ul>
 		</nav>
 
 		<div class="header__general header__general--to-scroll container hidden-tablet">
 			<a class="logo logo--short" href="./index.html" aria-label="Логотип 2ATM">
-				<img class="logo__image" src="./images/logo/logo-short.svg" width="45" height="45" alt="Логотип 2ATM">
+				<img class="logo__image" src="./images/logo/logo-short.svg" width="47" height="47" alt="Логотип 2ATM">
 			</a>
 
 			<nav class="header__menu header-menu">
-				<ul class="header-menu__list">
+				<ul class="header-menu__list header-menu__list--scroll-version">
 					<li class="header-menu__item">
 						<a href="./tire-fitting.html">Шиномонтаж</a>
 					</li>
+
 					<li class="header-menu__item">
 						<a href="./car-wash.html">Автомойка</a>
 					</li>
+
 					<li class="header-menu__item">
 						<a href="./refill-conditioning.html">Заправка кондиционеров</a>
 					</li>
+
 					<li class="header-menu__item">
 						<a href="./car-service.html">Автосервис</a>
 					</li>
 				</ul>
 			</nav>
 
-			<a class="button" href="#!">
-				<span class="header-buttons__link-text">
-					Запись&nbsp;в&nbsp;Telegram
-				</span>
-			</a>
+			<nav class="header__buttons">
+				<a class="button button--accent-bg" href="https://artiom-work.github.io/entry-2ATM/first.html">
+					<span class="header__buttons-link-text hidden-mobile-medium">
+						Записаться
+					</span>
+
+					<span class="header__buttons-link-text visible-mobile-medium">
+						Запись&nbsp;на&nbsp;сайте
+					</span>
+				</a>
+
+				<a class="button button--light-bg-color" href="https://t.me/TG_2ATM_BOT">
+					<svg class="header__buttons-link-icon hidden-mobile-medium" width="24" height="24" viewBox="0 0 24 24">
+						<use xlink:href="./images/icons/sprite-icons.svg#telegram-transparent-icon"></use>
+					</svg>
+
+					<span class="header__buttons-link-text visible-mobile-medium">
+						Запись&nbsp;в&nbsp;Telegram
+					</span>
+				</a>
+			</nav>
 		</div>
 	</header>
 
@@ -204,7 +385,7 @@
 				</div>
 
 				<div class="promo__buttons">
-					<a class="promo__button button button--accent-bg" href="#!">
+					<a class="promo__button button button--accent-bg" href="https://artiom-work.github.io/entry-2ATM/first.html">
 						<span class="hidden-tablet">
 							Записаться
 						</span>
@@ -214,7 +395,7 @@
 						</span>
 					</a>
 
-					<a class="promo__button button" href="#!">
+					<a class="promo__button button" href="https://t.me/TG_2ATM_BOT">
 						<span class="hidden-tablet">
 							Быстрее через Telegram
 						</span>
@@ -224,7 +405,6 @@
 						</span>
 					</a>
 				</div>
-
 			</div>
 		</section>
 
@@ -249,23 +429,26 @@
 									<a class="service__link service__link--arrow" href="#!">
 										<span>Сезонная смена резины</span>
 									</a>
-
 								</li>
+
 								<li class="service__list-item">
 									<a class="service__link service__link--arrow" href="./tire-storage.html">
 										<span>Хранение шин</span>
 									</a>
 								</li>
+
 								<li class="service__list-item">
-									<a class="service__link service__link--arrow" href="#!">
+									<a class="service__link service__link--arrow" href="./tire-repair.html">
 										<span>Ремонт дисков</span>
 									</a>
 								</li>
+
 								<li class="service__list-item">
 									<a class="service__link service__link--arrow" href="./tire-repair.html">
 										<span>Ремонт шин</span>
 									</a>
 								</li>
+
 								<li class="service__list-item">
 									<a class="service__link service__link--arrow" href="./tire-studding.html">
 										<span>Ошиповка шин</span>
@@ -290,27 +473,31 @@
 
 							<ul class="services-menu__service-list service__list">
 								<li class="service__list-item">
-									<a class="service__link service__link--arrow" href="#!">
+									<a class="service__link service__link--arrow" href="./car-wash.html">
 										<span>Мойка</span>
 									</a>
 								</li>
+
 								<li class="service__list-item">
 									<a class="service__link service__link--arrow" href="./body-protection.html">
 										<span>Защитные покрытия</span>
 									</a>
 								</li>
+
 								<li class="service__list-item">
 									<a class="service__link service__link--arrow" href="./dry-cleaning.html">
 										<span>химчистка</span>
 									</a>
 								</li>
+
 								<li class="service__list-item">
-									<a class="service__link service__link--arrow" href="#!">
-										<span>предпродажная подготовка</span>
+									<a class="service__link service__link--arrow" href="./headlight-protection.html">
+										<span>Полировка и&nbsp;бронирование фар</span>
 									</a>
 								</li>
+
 								<li class="service__list-item">
-									<a class="service__link service__link--arrow" href="#!">
+									<a class="service__link service__link--arrow" href="./decoking-engine.html">
 										<span>мойка двигателя</span>
 									</a>
 								</li>
@@ -335,28 +522,32 @@
 
 							<ul class="services-menu__service-list service__list">
 								<li class="service__list-item">
-									<a class="service__link service__link--arrow" href="#!">
+									<a class="service__link service__link--arrow" href="./404-page.html">
 										<span>замена масла</span>
 									</a>
 								</li>
+
 								<li class="service__list-item">
-									<a class="service__link service__link--arrow" href="#!">
+									<a class="service__link service__link--arrow" href="./404-page.html">
 										<span>диагностика</span>
 									</a>
 								</li>
+
 								<li class="service__list-item">
-									<a class="service__link service__link--arrow" href="#!">
+									<a class="service__link service__link--arrow" href="./404-page.html">
 										<span>электрика</span>
 									</a>
 								</li>
+
 								<li class="service__list-item">
-									<a class="service__link service__link--arrow" href="#!">
+									<a class="service__link service__link--arrow" href="./404-page.html">
 										<span>тормозная система</span>
 									</a>
 								</li>
+
 								<li class="service__list-item hidden-laptop">
-									<a class="service__link service__link--arrow" href="#!">
-										<span>Подвеска</span>
+									<a class="service__link service__link--arrow" href="./h-engine-cleaning.html">
+										<span>Водородная очистка двигателя</span>
 									</a>
 								</li>
 							</ul>
@@ -396,11 +587,11 @@
 				</ul>
 
 				<nav class="services-menu__buttons">
-					<button class="button button--accent-bg " type="button">
+					<a class="button button--accent-bg" href="https://artiom-work.github.io/entry-2ATM/first.html">
 						Записаться на&nbsp;сайте
-					</button>
+					</a>
 
-					<a class="button" href="#!" target="_blank">
+					<a class="button" href="https://t.me/TG_2ATM_BOT" target="_blank">
 						Записаться в&nbsp;Telegram
 					</a>
 
@@ -414,65 +605,70 @@
 
 			<section class="services-promotion">
 				<h3 class="visually-hidden">Акции на услуги 2АТМ</h3>
+
 				<ul class="services-promotion__list">
 					<li class="services-promotion__list-item">
 						<a href="#!" aria-label="aкция" title="Акция">
 							<article class="services-promotion__card">
 								<h4 class="services-promotion__card-title">
-									СКИДКА 11% ПО&nbsp;БУДНЯМ!
+									СКИДКА 11% ЗА ЗАПИСЬ НА&nbsp;САЙТЕ!
 								</h4>
 								<div class="services-promotion__card-text">
 									<p>
 										Запишись прямо сейчас!<br>
-										Скидка&nbsp;11% на&nbsp;все услуги по&nbsp;будням. Промокод:&nbsp;&laquo;Сайт&raquo;.
-									</p>
-								</div>
-
-								<img class="services-promotion__image" src="./images/promotions/calendar.webp" width="100" height="100"
-									alt="Изображение календаря" loading="lazy">
-							</article>
-						</a>
-					</li>
-
-					<li class="services-promotion__list-item">
-						<a href="#!" aria-label="aкция" title="Акция">
-							<article class="services-promotion__card">
-								<h4 class="services-promotion__card-title">
-									АРГОНОВАЯ СВАРКА + ШИНОМОНТАЖ
-								</h4>
-								<div class="services-promotion__card-text">
-									<p>
-										Аргоновая сварка диска со скидкой&nbsp;20%*&nbsp;на&nbsp;услуги шиномонтажа.
-										Промокод:&nbsp;&laquo;АРГОН&raquo;.
-									</p>
-								</div>
-
-								<img class="services-promotion__image" src="./images/promotions/welding.webp" width="100" height="100"
-									alt="Изображение сварочного держателя" loading="lazy">
-							</article>
-						</a>
-					</li>
-
-					<li class="services-promotion__list-item">
-						<a href="#!" aria-label="aкция" title="Акция">
-							<article class="services-promotion__card">
-								<h4 class="services-promotion__card-title">
-									СКИДКА 25% НА&nbsp;ВСЕ УСЛУГИ
-								</h4>
-								<div class="services-promotion__card-text">
-									<p>
-										При заключении договора сезонного хранения впервые! Промокод: &laquo;ХРАНЕНИЕ&raquo;.
+										Промокод:&nbsp;&laquo;Сайт&raquo;.
 									</p>
 								</div>
 
 								<img class="services-promotion__image" src="./images/promotions/wheel.webp" width="100" height="100"
-									alt="Колесо" loading="lazy">
+									alt="" loading="lazy" aria-hidden="true">
+							</article>
+						</a>
+					</li>
+
+					<li class="services-promotion__list-item">
+						<a href="#!" aria-label="aкция" title="Акция">
+							<article class="services-promotion__card">
+								<h4 class="services-promotion__card-title">
+									СКИДКА 20%* ПО&nbsp;АДРЕСУ ШУШАРЫ, МОСКОВСКОЕ Ш., Д. 16/7
+								</h4>
+
+								<div class="services-promotion__card-text">
+									<p>
+										Промокод:<br>
+										&nbsp;&laquo;20-Шушары&raquo;
+									</p>
+								</div>
+
+								<img class="services-promotion__image services-promotion__image--discount-20"
+									src="./images/promotions/promotion-20.webp" width="158" height="76" alt="" loading="lazy"
+									aria-hidden="true">
+							</article>
+						</a>
+					</li>
+
+					<li class="services-promotion__list-item">
+						<a href="#!" aria-label="aкция" title="Акция">
+							<article class="services-promotion__card">
+								<h4 class="services-promotion__card-title">
+									МОЙКА "ПРЕМИУМ" ПО&nbsp;ЦЕНЕ "ЛЮКС" НОЧЬЮ
+								</h4>
+
+								<div class="services-promotion__card-text">
+									<p>
+										с <time datetime="00:00">00.00</time> до <time datetime="06:00">06.00</time>
+										Жидкий воск<br>в&nbsp;подарок
+									</p>
+								</div>
+
+								<img class="services-promotion__image" src="./images/promotions/promotion-moon.webp" width="100"
+									height="100" alt="" loading="lazy" aria-hidden="true">
 							</article>
 						</a>
 					</li>
 				</ul>
 
-				<a class="accent-color-link" href="#!">
+				<a class="accent-color-link" href="./offers.html">
 					Смотреть все акции
 				</a>
 			</section>
@@ -498,7 +694,7 @@
 						перенести.
 					</div>
 
-					<a class="messenger-action__button button" href="#!" target="_blank">
+					<a class="messenger-action__button button" href="https://t.me/TG_2ATM_BOT" target="_blank">
 						Записаться через бота
 					</a>
 				</div>
@@ -574,41 +770,31 @@
 								<h3 class="visually-hidden">Карточка с адресом сервиса</h3>
 
 								<div class="location-card__image-wrapper">
-									<img class="location-card__image" src="./images/locations/location-card-image-1.webp" width="140"
-										height="204" alt="Фото шиномантажа" loading="lazy">
+									<img class="location-card__image" src="./images/workshops/workshop-1.webp" width="140" height="204"
+										alt="" loading="lazy" aria-hidden="true">
 								</div>
 
 								<div class="location-card__body">
 									<h4 class="location-card__address">
 										<a class="location-card__address-button h6" href="./addresses-card.html"
 											data-js-location-card-address>
-											Шушары, Московское ш., д. 16/7
+											Пулковское ш., 19А
 										</a>
 									</h4>
 
 									<div class="location-card__text-block">
-										<p data-js-location-card-name>
-											Автомойка в&nbsp;Пулково
-										</p>
-
 										<p>
 											<svg width="14" height="14" viewBox="0 0 12 11">
 												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
 											</svg>
 
-											<span data-js-location-card-rating>4,7</span>
-											<span data-js-location-card-set-services>
-												СТО, Мойка<span class="hidden-mobile">, Шиномонтаж, ТО</span>
+											<span>
+												<span data-js-location-card-rating>5,0</span>
+												<span data-js-location-card-set-services>
+													Автомойка</span>
 											</span>
 										</p>
 
-										<p>
-											Ближайшая запись
-											<span class="location-card__register-time location-card__register-time--today"
-												data-js-location-card-register-time>
-												сегодня
-											</span>
-										</p>
 									</div>
 
 									<div class="location-card__buttons">
@@ -628,31 +814,28 @@
 								<h3 class="visually-hidden">Карточка с адресом сервиса</h3>
 
 								<div class="location-card__image-wrapper">
-									<img class="location-card__image" src="./images/locations/location-card-image-1.webp" width="140"
-										height="204" alt="Фото шиномантажа" loading="lazy">
+									<img class="location-card__image" src="./images/workshops/workshop-2.webp" width="140" height="204"
+										alt="" loading="lazy" aria-hidden="true">
 								</div>
 
 								<div class="location-card__body">
 									<h4 class="location-card__address">
 										<a class="location-card__address-button h6" href="./addresses-card.html"
 											data-js-location-card-address>
-											Муринская дорога, д. 24
+											Пулковское ш., 19
 										</a>
 									</h4>
 
 									<div class="location-card__text-block">
-										<p data-js-location-card-name>
-											Автомойка в&nbsp;Пулково
-										</p>
-
 										<p>
 											<svg width="14" height="14" viewBox="0 0 12 11">
 												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
 											</svg>
 
-											<span data-js-location-card-rating>4,7</span>
-											<span data-js-location-card-set-services>
-												СТО, Мойка<span class="hidden-mobile">, Шиномонтаж, ТО</span>
+											<span>
+												<span data-js-location-card-rating>4,7</span>
+												<span data-js-location-card-set-services>
+													Шиномонтаж, Заправка кондиционера, Аппаратная раскоксовка двигателя</span>
 											</span>
 										</p>
 
@@ -660,7 +843,7 @@
 											Ближайшая запись
 											<span class="location-card__register-time location-card__register-time--today"
 												data-js-location-card-register-time>
-												сегодня
+												сегодня в <time datetime="22:15">22:15</time>
 											</span>
 										</p>
 									</div>
@@ -682,31 +865,27 @@
 								<h3 class="visually-hidden">Карточка с адресом сервиса</h3>
 
 								<div class="location-card__image-wrapper">
-									<img class="location-card__image" src="./images/locations/location-card-image-1.webp" width="140"
-										height="204" alt="Фото шиномантажа" loading="lazy">
+									<img class="location-card__image" src="./images/workshops/workshop-3.webp" width="140" height="204"
+										alt="" loading="lazy" aria-hidden="true">
 								</div>
 
 								<div class="location-card__body">
 									<h4 class="location-card__address">
 										<a class="location-card__address-button h6" href="./addresses-card.html"
 											data-js-location-card-address>
-											Муринская дорога, д. 24
+											ул. Софьи-Ковалевской, 22
 										</a>
 									</h4>
 
 									<div class="location-card__text-block">
-										<p data-js-location-card-name>
-											Автомойка в&nbsp;Пулково
-										</p>
-
 										<p>
 											<svg width="14" height="14" viewBox="0 0 12 11">
 												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
 											</svg>
 
-											<span data-js-location-card-rating>4,7</span>
-											<span data-js-location-card-set-services>
-												СТО, Мойка<span class="hidden-mobile">, Шиномонтаж, ТО</span>
+											<span>
+												<span data-js-location-card-rating>4,5</span>
+												<span data-js-location-card-set-services>Шиномонтаж, Заправка кондиционера</span>
 											</span>
 										</p>
 
@@ -714,7 +893,7 @@
 											Ближайшая запись
 											<span class="location-card__register-time location-card__register-time--today"
 												data-js-location-card-register-time>
-												сегодня
+												сегодня в <time datetime="22:15">22:15</time>
 											</span>
 										</p>
 									</div>
@@ -736,31 +915,28 @@
 								<h3 class="visually-hidden">Карточка с адресом сервиса</h3>
 
 								<div class="location-card__image-wrapper">
-									<img class="location-card__image" src="./images/locations/location-card-image-1.webp" width="140"
-										height="204" alt="Фото шиномантажа" loading="lazy">
+									<img class="location-card__image" src="./images/workshops/workshop-4.webp" width="140" height="204"
+										alt="" loading="lazy" aria-hidden="true">
 								</div>
 
 								<div class="location-card__body">
 									<h4 class="location-card__address">
 										<a class="location-card__address-button h6" href="./addresses-card.html"
 											data-js-location-card-address>
-											Муринская дорога, д. 24
+											Зеленогорск, пр. Ленина, д. 88
 										</a>
 									</h4>
 
 									<div class="location-card__text-block">
-										<p data-js-location-card-name>
-											Автомойка в&nbsp;Пулково
-										</p>
-
 										<p>
 											<svg width="14" height="14" viewBox="0 0 12 11">
 												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
 											</svg>
 
-											<span data-js-location-card-rating>4,7</span>
-											<span data-js-location-card-set-services>
-												СТО, Мойка<span class="hidden-mobile">, Шиномонтаж, ТО</span>
+											<span>
+												<span data-js-location-card-rating>4,8</span>
+												<span data-js-location-card-set-services>
+													Мойка, Заправка кондиционера, Шиномонтаж, Развал-схождение, Сервис</span>
 											</span>
 										</p>
 
@@ -768,7 +944,7 @@
 											Ближайшая запись
 											<span class="location-card__register-time location-card__register-time--today"
 												data-js-location-card-register-time>
-												сегодня
+												завтра в <time datetime="09:00">09:00</time>
 											</span>
 										</p>
 									</div>
@@ -790,31 +966,28 @@
 								<h3 class="visually-hidden">Карточка с адресом сервиса</h3>
 
 								<div class="location-card__image-wrapper">
-									<img class="location-card__image" src="./images/locations/location-card-image-1.webp" width="140"
-										height="204" alt="Фото шиномантажа" loading="lazy">
+									<img class="location-card__image" src="./images/workshops/workshop-5.webp" width="140" height="204"
+										alt="" loading="lazy" aria-hidden="true">
 								</div>
 
 								<div class="location-card__body">
 									<h4 class="location-card__address">
 										<a class="location-card__address-button h6" href="./addresses-card.html"
 											data-js-location-card-address>
-											Муринская дорога, д. 24
+											Московское ш., 25/1В
 										</a>
 									</h4>
 
 									<div class="location-card__text-block">
-										<p data-js-location-card-name>
-											Автомойка в&nbsp;Пулково
-										</p>
-
 										<p>
 											<svg width="14" height="14" viewBox="0 0 12 11">
 												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
 											</svg>
 
-											<span data-js-location-card-rating>4,7</span>
-											<span data-js-location-card-set-services>
-												СТО, Мойка<span class="hidden-mobile">, Шиномонтаж, ТО</span>
+											<span>
+												<span data-js-location-card-rating>4,9</span>
+												<span data-js-location-card-set-services>
+													Заправка кондиционера, Шиномонтаж</span>
 											</span>
 										</p>
 
@@ -822,7 +995,662 @@
 											Ближайшая запись
 											<span class="location-card__register-time location-card__register-time--today"
 												data-js-location-card-register-time>
-												сегодня
+												сегодня в <time datetime="22:15">22:15</time>
+											</span>
+										</p>
+									</div>
+
+									<div class="location-card__buttons">
+										<a class="button button--light button--light-accent" href="#!">
+											Записаться
+										</a>
+										<a class="button button--light" href="#!">
+											Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="locations__list-item">
+							<article class="location-card" id="location-card-6">
+								<h3 class="visually-hidden">Карточка с адресом сервиса</h3>
+
+								<div class="location-card__image-wrapper">
+									<img class="location-card__image" src="./images/workshops/workshop-6.webp" width="140" height="204"
+										alt="" loading="lazy" aria-hidden="true">
+								</div>
+
+								<div class="location-card__body">
+									<h4 class="location-card__address">
+										<a class="location-card__address-button h6" href="./addresses-card.html"
+											data-js-location-card-address>
+											Кудрово, Ленинградская ул., д. 9/8
+										</a>
+									</h4>
+
+									<div class="location-card__text-block">
+										<p>
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span>
+												<span data-js-location-card-rating>4,9</span>
+												<span data-js-location-card-set-services>
+													Заправка кондиционера, Шиномонтаж</span>
+											</span>
+										</p>
+
+										<p>
+											Ближайшая запись
+											<span class="location-card__register-time location-card__register-time--today"
+												data-js-location-card-register-time>
+												сегодня в <time datetime="22:15">22:15</time>
+											</span>
+										</p>
+									</div>
+
+									<div class="location-card__buttons">
+										<a class="button button--light button--light-accent" href="#!">
+											Записаться
+										</a>
+										<a class="button button--light" href="#!">
+											Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="locations__list-item">
+							<article class="location-card" id="location-card-7">
+								<h3 class="visually-hidden">Карточка с адресом сервиса</h3>
+
+								<div class="location-card__image-wrapper">
+									<img class="location-card__image" src="./images/workshops/workshop-7.webp" width="140" height="204"
+										alt="" loading="lazy" aria-hidden="true">
+								</div>
+
+								<div class="location-card__body">
+									<h4 class="location-card__address">
+										<a class="location-card__address-button h6" href="./addresses-card.html"
+											data-js-location-card-address>
+											ул. Васенко, д. 12
+										</a>
+									</h4>
+
+									<div class="location-card__text-block">
+										<p>
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span>
+												<span data-js-location-card-rating>4,8</span>
+												<span data-js-location-card-set-services>
+													Заправка кондиционера, Шиномонтаж</span>
+											</span>
+										</p>
+
+										<p>
+											Ближайшая запись
+											<span class="location-card__register-time location-card__register-time--today"
+												data-js-location-card-register-time>
+												сегодня в <time datetime="23:00">23:00</time>
+											</span>
+										</p>
+									</div>
+
+									<div class="location-card__buttons">
+										<a class="button button--light button--light-accent" href="#!">
+											Записаться
+										</a>
+										<a class="button button--light" href="#!">
+											Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="locations__list-item">
+							<article class="location-card" id="location-card-8">
+								<h3 class="visually-hidden">Карточка с адресом сервиса</h3>
+
+								<div class="location-card__image-wrapper">
+									<img class="location-card__image" src="./images/workshops/workshop-8.webp" width="140" height="204"
+										alt="" loading="lazy" aria-hidden="true">
+								</div>
+
+								<div class="location-card__body">
+									<h4 class="location-card__address">
+										<a class="location-card__address-button h6" href="./addresses-card.html"
+											data-js-location-card-address>
+											Пулковское ш., д. 43/1
+										</a>
+									</h4>
+
+									<div class="location-card__text-block">
+										<p>
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span>
+												<span data-js-location-card-rating>4,8</span>
+												<span data-js-location-card-set-services>
+													Заправка кондиционера, Шиномонтаж</span>
+											</span>
+										</p>
+
+										<p>
+											Ближайшая запись
+											<span class="location-card__register-time location-card__register-time--today"
+												data-js-location-card-register-time>
+												сегодня в <time datetime="22:30">22:30</time>
+											</span>
+										</p>
+									</div>
+
+									<div class="location-card__buttons">
+										<a class="button button--light button--light-accent" href="#!">
+											Записаться
+										</a>
+										<a class="button button--light" href="#!">
+											Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="locations__list-item">
+							<article class="location-card" id="location-card-9">
+								<h3 class="visually-hidden">Карточка с адресом сервиса</h3>
+
+								<div class="location-card__image-wrapper">
+									<img class="location-card__image" src="./images/workshops/workshop-9.webp" width="140" height="204"
+										alt="" loading="lazy" aria-hidden="true">
+								</div>
+
+								<div class="location-card__body">
+									<h4 class="location-card__address">
+										<a class="location-card__address-button h6" href="./addresses-card.html"
+											data-js-location-card-address>
+											пр. Металлистов, 116
+										</a>
+									</h4>
+
+									<div class="location-card__text-block">
+										<p>
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span>
+												<span data-js-location-card-rating>4,8</span>
+												<span data-js-location-card-set-services>
+													Заправка кондиционера, Шиномонтаж</span>
+											</span>
+										</p>
+
+										<p>
+											Ближайшая запись
+											<span class="location-card__register-time location-card__register-time--today"
+												data-js-location-card-register-time>
+												сегодня в <time datetime="22:15">22:15</time>
+											</span>
+										</p>
+									</div>
+
+									<div class="location-card__buttons">
+										<a class="button button--light button--light-accent" href="#!">
+											Записаться
+										</a>
+										<a class="button button--light" href="#!">
+											Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="locations__list-item">
+							<article class="location-card" id="location-card-10">
+								<h3 class="visually-hidden">Карточка с адресом сервиса</h3>
+
+								<div class="location-card__image-wrapper">
+									<img class="location-card__image" src="./images/workshops/workshop-10.webp" width="140" height="204"
+										alt="" loading="lazy" aria-hidden="true">
+								</div>
+
+								<div class="location-card__body">
+									<h4 class="location-card__address">
+										<a class="location-card__address-button h6" href="./addresses-card.html"
+											data-js-location-card-address>
+											ул. Савушкина, д. 116 лит. А
+										</a>
+									</h4>
+
+									<div class="location-card__text-block">
+										<p>
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span>
+												<span data-js-location-card-rating>5,0</span>
+												<span data-js-location-card-set-services>
+													Заправка кондиционера, Шиномонтаж</span>
+											</span>
+										</p>
+
+										<p>
+											Ближайшая запись
+											<span class="location-card__register-time location-card__register-time--today"
+												data-js-location-card-register-time>
+												завтра в <time datetime="00:00">00:00</time>
+											</span>
+										</p>
+									</div>
+
+									<div class="location-card__buttons">
+										<a class="button button--light button--light-accent" href="#!">
+											Записаться
+										</a>
+										<a class="button button--light" href="#!">
+											Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="locations__list-item">
+							<article class="location-card" id="location-card-11">
+								<h3 class="visually-hidden">Карточка с адресом сервиса</h3>
+
+								<div class="location-card__image-wrapper">
+									<img class="location-card__image" src="./images/workshops/workshop-11.webp" width="140" height="204"
+										alt="" loading="lazy" aria-hidden="true">
+								</div>
+
+								<div class="location-card__body">
+									<h4 class="location-card__address">
+										<a class="location-card__address-button h6" href="./addresses-card.html"
+											data-js-location-card-address>
+											ул. Карбышева, д. 9
+										</a>
+									</h4>
+
+									<div class="location-card__text-block">
+										<p>
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span>
+												<span data-js-location-card-rating>4,7</span>
+												<span data-js-location-card-set-services>
+													Заправка кондиционера, Шиномонтаж</span>
+											</span>
+										</p>
+
+										<p>
+											Ближайшая запись
+											<span class="location-card__register-time location-card__register-time--today"
+												data-js-location-card-register-time>
+												сегодня в <time datetime="22:15">22:15</time>
+											</span>
+										</p>
+									</div>
+
+									<div class="location-card__buttons">
+										<a class="button button--light button--light-accent" href="#!">
+											Записаться
+										</a>
+										<a class="button button--light" href="#!">
+											Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="locations__list-item">
+							<article class="location-card" id="location-card-12">
+								<h3 class="visually-hidden">Карточка с адресом сервиса</h3>
+
+								<div class="location-card__image-wrapper">
+									<img class="location-card__image" src="./images/workshops/workshop-12.webp" width="140" height="204"
+										alt="" loading="lazy" aria-hidden="true">
+								</div>
+
+								<div class="location-card__body">
+									<h4 class="location-card__address">
+										<a class="location-card__address-button h6" href="./addresses-card.html"
+											data-js-location-card-address>
+											пр. Просвещения, д. 74 корп. 2 лит. А
+										</a>
+									</h4>
+
+									<div class="location-card__text-block">
+										<p>
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span>
+												<span data-js-location-card-rating>4,7</span>
+												<span data-js-location-card-set-services>
+													Заправка кондиционера, Шиномонтаж</span>
+											</span>
+										</p>
+
+										<p>
+											Ближайшая запись
+											<span class="location-card__register-time location-card__register-time--today"
+												data-js-location-card-register-time>
+												сегодня в <time datetime="22:15">22:15</time>
+											</span>
+										</p>
+									</div>
+
+									<div class="location-card__buttons">
+										<a class="button button--light button--light-accent" href="#!">
+											Записаться
+										</a>
+										<a class="button button--light" href="#!">
+											Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="locations__list-item">
+							<article class="location-card" id="location-card-13">
+								<h3 class="visually-hidden">Карточка с адресом сервиса</h3>
+
+								<div class="location-card__image-wrapper">
+									<img class="location-card__image" src="./images/workshops/workshop-13.webp" width="140" height="204"
+										alt="" loading="lazy" aria-hidden="true">
+								</div>
+
+								<div class="location-card__body">
+									<h4 class="location-card__address">
+										<a class="location-card__address-button h6" href="./addresses-card.html"
+											data-js-location-card-address>
+											ул. Руставели, д. 43 лит. А
+										</a>
+									</h4>
+
+									<div class="location-card__text-block">
+										<p>
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span>
+												<span data-js-location-card-rating>4,5</span>
+												<span data-js-location-card-set-services>
+													Заправка кондиционера, Шиномонтаж</span>
+											</span>
+										</p>
+
+										<p>
+											Ближайшая запись
+											<span class="location-card__register-time location-card__register-time--today"
+												data-js-location-card-register-time>
+												сегодня в <time datetime="22:15">22:15</time>
+											</span>
+										</p>
+									</div>
+
+									<div class="location-card__buttons">
+										<a class="button button--light button--light-accent" href="#!">
+											Записаться
+										</a>
+										<a class="button button--light" href="#!">
+											Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="locations__list-item">
+							<article class="location-card" id="location-card-14">
+								<h3 class="visually-hidden">Карточка с адресом сервиса</h3>
+
+								<div class="location-card__image-wrapper">
+									<img class="location-card__image" src="./images/workshops/workshop-14.webp" width="140" height="204"
+										alt="" loading="lazy" aria-hidden="true">
+								</div>
+
+								<div class="location-card__body">
+									<h4 class="location-card__address">
+										<a class="location-card__address-button h6" href="./addresses-card.html"
+											data-js-location-card-address>
+											Шушары, Московское ш., д. 16/7
+										</a>
+									</h4>
+
+									<div class="location-card__text-block">
+										<p>
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span>
+												<span data-js-location-card-rating>5,0</span>
+												<span data-js-location-card-set-services>
+													Заправка кондиционера, Шиномонтаж</span>
+											</span>
+										</p>
+
+										<p>
+											Ближайшая запись
+											<span class="location-card__register-time location-card__register-time--today"
+												data-js-location-card-register-time>
+												сегодня в <time datetime="22:15">22:15</time>
+											</span>
+										</p>
+									</div>
+
+									<div class="location-card__buttons">
+										<a class="button button--light button--light-accent" href="#!">
+											Записаться
+										</a>
+										<a class="button button--light" href="#!">
+											Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="locations__list-item">
+							<article class="location-card" id="location-card-15">
+								<h3 class="visually-hidden">Карточка с адресом сервиса</h3>
+
+								<div class="location-card__image-wrapper">
+									<img class="location-card__image" src="./images/workshops/workshop-15.webp" width="140" height="204"
+										alt="" loading="lazy" aria-hidden="true">
+								</div>
+
+								<div class="location-card__body">
+									<h4 class="location-card__address">
+										<a class="location-card__address-button h6" href="./addresses-card.html"
+											data-js-location-card-address>
+											пр. Ветеранов, 167/2
+										</a>
+									</h4>
+
+									<div class="location-card__text-block">
+										<p>
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span>
+												<span data-js-location-card-rating>5,0</span>
+												<span data-js-location-card-set-services>
+													Заправка кондиционера, Шиномонтаж</span>
+											</span>
+										</p>
+
+										<p>
+											Ближайшая запись
+											<span class="location-card__register-time location-card__register-time--today"
+												data-js-location-card-register-time>
+												сегодня в <time datetime="22:15">22:15</time>
+											</span>
+										</p>
+									</div>
+
+									<div class="location-card__buttons">
+										<a class="button button--light button--light-accent" href="#!">
+											Записаться
+										</a>
+										<a class="button button--light" href="#!">
+											Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="locations__list-item">
+							<article class="location-card" id="location-card-16">
+								<h3 class="visually-hidden">Карточка с адресом сервиса</h3>
+
+								<div class="location-card__image-wrapper">
+									<img class="location-card__image" src="./images/workshops/workshop-16.webp" width="140" height="204"
+										alt="" loading="lazy" aria-hidden="true">
+								</div>
+
+								<div class="location-card__body">
+									<h4 class="location-card__address">
+										<a class="location-card__address-button h6" href="./addresses-card.html"
+											data-js-location-card-address>
+											Зеленогорск, пр. Ленина, д. 88И
+										</a>
+									</h4>
+
+									<div class="location-card__text-block">
+										<p>
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span>
+												<span data-js-location-card-rating>4,8</span>
+												<span data-js-location-card-set-services>
+													Техосмотр</span>
+											</span>
+										</p>
+									</div>
+
+									<div class="location-card__buttons">
+										<a class="button button--light button--light-accent" href="#!">
+											Записаться
+										</a>
+										<a class="button button--light" href="#!">
+											Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="locations__list-item">
+							<article class="location-card" id="location-card-17">
+								<h3 class="visually-hidden">Карточка с адресом сервиса</h3>
+
+								<div class="location-card__image-wrapper">
+									<img class="location-card__image" src="./images/workshops/workshop-17.webp" width="140" height="204"
+										alt="" loading="lazy" aria-hidden="true">
+								</div>
+
+								<div class="location-card__body">
+									<h4 class="location-card__address">
+										<a class="location-card__address-button h6" href="./addresses-card.html"
+											data-js-location-card-address>
+											пр. Испытателей, д. 5 корп. 2 лит. А
+										</a>
+									</h4>
+
+									<div class="location-card__text-block">
+										<p>
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span>
+												<span data-js-location-card-rating>5,0</span>
+												<span data-js-location-card-set-services>
+													Заправка кондиционера, Шиномонтаж</span>
+											</span>
+										</p>
+
+										<p>
+											Ближайшая запись
+											<span class="location-card__register-time location-card__register-time--today"
+												data-js-location-card-register-time>
+												сегодня в <time datetime="22:30">22:30</time>
+											</span>
+										</p>
+									</div>
+
+									<div class="location-card__buttons">
+										<a class="button button--light button--light-accent" href="#!">
+											Записаться
+										</a>
+										<a class="button button--light" href="#!">
+											Подробнее
+										</a>
+									</div>
+								</div>
+							</article>
+						</li>
+
+						<li class="locations__list-item">
+							<article class="location-card" id="location-card-18">
+								<h3 class="visually-hidden">Карточка с адресом сервиса</h3>
+
+								<div class="location-card__image-wrapper">
+									<img class="location-card__image" src="./images/workshops/workshop-7.webp" width="140" height="204"
+										alt="" loading="lazy" aria-hidden="true">
+								</div>
+
+								<div class="location-card__body">
+									<h4 class="location-card__address">
+										<a class="location-card__address-button h6" href="./addresses-card.html"
+											data-js-location-card-address>
+											пр. Суздальский, 32А
+										</a>
+									</h4>
+
+									<div class="location-card__text-block">
+										<p>
+											<svg width="14" height="14" viewBox="0 0 12 11">
+												<use xlink:href="./images/icons/sprite-icons.svg#star-rating"></use>
+											</svg>
+
+											<span>
+												<span data-js-location-card-rating>5,0</span>
+												<span data-js-location-card-set-services>
+													Шиномонтаж, Заправка кондиционера</span>
+											</span>
+										</p>
+
+										<p>
+											Ближайшая запись
+											<span class="location-card__register-time location-card__register-time--today"
+												data-js-location-card-register-time>
+												сегодня в <time datetime="22:30">22:30</time>
 											</span>
 										</p>
 									</div>
@@ -856,11 +1684,12 @@
 			</div>
 
 			<div class="online-registration__buttons hidden-laptop">
-				<a class="online-registration__button button" href="#!" target="_blank">
+				<a class="online-registration__button button" href="https://t.me/TG_2ATM_BOT" target="_blank">
 					В&nbsp;Telegram
 				</a>
 
-				<a class="online-registration__button button button--accent-bg" href="#!" target="_blank">
+				<a class="online-registration__button button button--accent-bg"
+					href="https://artiom-work.github.io/entry-2ATM/first.html" target="_blank">
 					Записаться онлайн
 				</a>
 			</div>
@@ -874,28 +1703,27 @@
 			<ul class="special-offers__list">
 				<li>
 					<article class="special-offer">
-						<picture class="special-offer__image-wrapper special-offer__image-wrapper--dark-filter">
-							<source srcset="./images/special-offers/offer-image-1-mobile.webp" media="(max-width: 767px)"
+						<picture class="special-offer__image-wrapper">
+							<source srcset="./images/special-offers/offer-image-4-mobile.webp" media="(max-width: 767px)"
 								type="image/webp">
-							<source srcset="./images/special-offers/offer-image-1.webp" type="image/webp">
-							<img class="special-offer__image" src="./images/special-offers/offer-image-1-mobile.webp"
-								alt="Карта Bonus 2ATM" width="340" height="220" loading="lazy">
+							<source srcset="./images/special-offers/offer-image-4.webp" type="image/webp">
+							<img class="special-offer__image" src="./images/special-offers/offer-image-4-mobile.webp"
+								alt="Очистка двигателя водородной установкой" width="340" height="220" loading="lazy">
 						</picture>
 
 						<div class="special-offer__body">
 							<h3 class="special-offer__heading h5">
-								Ваша скидка растет с&nbsp;каждым визитом!
+								водородная очистка двигателя&nbsp;&mdash; снизь расход топлива и&nbsp;Добавь мощности мотору!
 							</h3>
 
 							<div class="special-offer__text">
 								<p>
-									Заполните анкету и&nbsp;получите постоянную скидку уже сегодня! Чем больше вы&nbsp;пользуетесь нашими
-									услугами, тем выше ваша выгода. Присоединяйтесь к&nbsp;программе лояльности и&nbsp;экономьте
-									с&nbsp;каждым визитом!
+									Усиление мощности, устранение шума, снижение расхода масла и&nbsp;горючего за&nbsp;60&nbsp;минут.
+									Эффективно, недорого и&nbsp;без разбора двигателя.
 								</p>
 							</div>
 
-							<a class="special-offer__button button button--accent-bg" href="#!">
+							<a class="special-offer__button button button--accent-bg" href="./h-engine-cleaning.html">
 								Узнать подробнее
 							</a>
 						</div>
@@ -925,7 +1753,7 @@
 								</p>
 							</div>
 
-							<a class="special-offer__button button button--accent-bg" href="#!">
+							<a class="special-offer__button button button--accent-bg" href="./corporate.html">
 								Узнать подробнее
 							</a>
 						</div>
@@ -955,7 +1783,7 @@
 							<h3 class="visually-hidden">Отзыв клиента</h3>
 
 							<input class="review-card__button-switcher" id="rewiew-switcher-1" type="checkbox">
-							<label class="review-card__button" for="rewiew-switcher-1" aria-label="Кнопка просмотра текста отзыва">
+							<label class="review-card__button" for="rewiew-switcher-1">
 								<span class="review-card__button-text is-active">Читать дальше</span>
 								<span class="review-card__button-text">Скрыть</span>
 							</label>
@@ -1041,7 +1869,7 @@
 							<h3 class="visually-hidden">Отзыв клиента</h3>
 
 							<input class="review-card__button-switcher" id="rewiew-switcher-2" type="checkbox">
-							<label class="review-card__button" for="rewiew-switcher-2" aria-label="Кнопка просмотра текста отзыва">
+							<label class="review-card__button" for="rewiew-switcher-2">
 								<span class="review-card__button-text is-active">Читать дальше</span>
 								<span class="review-card__button-text">Скрыть</span>
 							</label>
@@ -1126,7 +1954,7 @@
 							<h3 class="visually-hidden">Отзыв клиента</h3>
 
 							<input class="review-card__button-switcher" id="rewiew-switcher-3" type="checkbox">
-							<label class="review-card__button" for="rewiew-switcher-3" aria-label="Кнопка просмотра текста отзыва">
+							<label class="review-card__button" for="rewiew-switcher-3">
 								<span class="review-card__button-text is-active">Читать дальше</span>
 								<span class="review-card__button-text">Скрыть</span>
 							</label>
@@ -1211,7 +2039,7 @@
 							<h3 class="visually-hidden">Отзыв клиента</h3>
 
 							<input class="review-card__button-switcher" id="rewiew-switcher-4" type="checkbox">
-							<label class="review-card__button" for="rewiew-switcher-4" aria-label="Кнопка просмотра текста отзыва">
+							<label class="review-card__button" for="rewiew-switcher-4">
 								<span class="review-card__button-text is-active">Читать дальше</span>
 								<span class="review-card__button-text">Скрыть</span>
 							</label>
@@ -1296,7 +2124,7 @@
 							<h3 class="visually-hidden">Отзыв клиента</h3>
 
 							<input class="review-card__button-switcher" id="rewiew-switcher-5" type="checkbox">
-							<label class="review-card__button" for="rewiew-switcher-5" aria-label="Кнопка просмотра текста отзыва">
+							<label class="review-card__button" for="rewiew-switcher-5">
 								<span class="review-card__button-text is-active">Читать дальше</span>
 								<span class="review-card__button-text">Скрыть</span>
 							</label>
@@ -1381,7 +2209,7 @@
 							<h3 class="visually-hidden">Отзыв клиента</h3>
 
 							<input class="review-card__button-switcher" id="rewiew-switcher-6" type="checkbox">
-							<label class="review-card__button" for="rewiew-switcher-6" aria-label="Кнопка просмотра текста отзыва">
+							<label class="review-card__button" for="rewiew-switcher-6">
 								<span class="review-card__button-text is-active">Читать дальше</span>
 								<span class="review-card__button-text">Скрыть</span>
 							</label>
@@ -1593,11 +2421,12 @@
 			</div>
 
 			<div class="advantages__buttons">
-				<a class="advantages__button button" href="#!" target="_blank">
+				<a class="advantages__button button" href="https://t.me/TG_2ATM_BOT" target="_blank">
 					В&nbsp;Telegram
 				</a>
 
-				<a class="advantages__button button button--accent-bg" href="#!">
+				<a class="advantages__button button button--accent-bg"
+					href="https://artiom-work.github.io/entry-2ATM/first.html">
 					На&nbsp;сайте
 				</a>
 			</div>
@@ -1668,10 +2497,11 @@
 			<ul class="faq-accordion" id="faq-accordion" aria-labelledby="faq-accordion">
 				<li class="faq-accordion__element">
 
-					<input class="faq-accordion__element-switcher" type="checkbox" id="accordion-element-1">
+					<input class="faq-accordion__element-switcher" type="checkbox" id="accordion-element-1"
+						aria-controls="answer-1">
 					<dl class="faq-accordion__content">
 						<dt class="faq-accordion__question">
-							<label class="faq-accordion__question-button" for="accordion-element-1" aria-controls="answer-1">
+							<label class="faq-accordion__question-button" for="accordion-element-1">
 								Как записаться, отменить или перенести запись онлайн?
 
 								<span class="faq-accordion__question-icon" role="img" aria-label="Открыть или закрыть"></span>
@@ -1683,11 +2513,17 @@
 								<h3 class="visually-hidden">Информация о записи онлайн в 2АТМ</h3>
 
 								<p>
-									Вы можете записаться на шиномонтаж, автосервис или автомойку через наш сайт или в Telegram-боте. На
-									сайте авторизуйтесь по номеру телефона (мы используем его только для оповещений об изменениях),
-									выберите свой автомобиль или добавьте новый, затем услугу, мастерскую, дату и время. После авторизации
-									вы всегда увидите свои активные записи и сможете их изменить или отменить. В Telegram-боте всё ещё
-									проще — выберите команду «Записаться» или «Изменить/отменить запись» и следуйте инструкциям.
+									Вы&nbsp;можете записаться на&nbsp;шиномонтаж, автосервис или автомойку через наш <a
+										class="faq-accordion__answer-link"
+										href="https://artiom-work.github.io/entry-2ATM/first.html">сайт</a> или
+									в&nbsp;<a class="faq-accordion__answer-link" href="https://t.me/TG_2ATM_BOT"
+										target="_blank">Telegram-боте</a>.
+									На&nbsp;сайте авторизуйтесь
+									по&nbsp;номеру телефона. Мы&nbsp;используем ваш
+									номер только для оповещений относительно записи. Выберите услугу, автомобиль, мастерскую, дату
+									и&nbsp;время. После авторизации вы&nbsp;сможете просматривать, редактировать или отменять свою запись.
+									В&nbsp;Telegram-боте всё ещё проще&nbsp;&mdash; выберите команду &laquo;Записаться&raquo; или
+									&laquo;Изменить/отменить запись&raquo; и&nbsp;следуйте инструкциям.
 								</p>
 							</div>
 						</dd>
@@ -1696,10 +2532,11 @@
 
 				<li class="faq-accordion__element">
 
-					<input class="faq-accordion__element-switcher" type="checkbox" id="accordion-element-2">
+					<input class="faq-accordion__element-switcher" type="checkbox" id="accordion-element-2"
+						aria-controls="answer-2">
 					<dl class="faq-accordion__content">
 						<dt class="faq-accordion__question">
-							<label class="faq-accordion__question-button" for="accordion-element-2" aria-controls="answer-2">
+							<label class="faq-accordion__question-button" for="accordion-element-2">
 								Как осуществляется хранение шин?
 
 								<span class="faq-accordion__question-icon" role="img" aria-label="Открыть или закрыть"></span>
@@ -1711,12 +2548,10 @@
 								<h3 class="visually-hidden">Информация о хранении шин в 2АТМ</h3>
 
 								<p>
-									Колеса в&nbsp;обязательном порядке пломбируются при клиенте в&nbsp;момент оформления договора
-									хранения. Далее колеса отправляются на&nbsp;отдельный отапливаемый склад и&nbsp;хранятся там
-									по&nbsp;всем правилам хранения колес.
-									Когда клиенту понадобятся колеса, он&nbsp;записывается на&nbsp;мастерскую заранее за&nbsp;два-три дня
-									и&nbsp;мы&nbsp;доставляем колеса к&nbsp;записи. Опять-же при клиенте мы&nbsp;срываем пломбы
-									с&nbsp;колес и&nbsp;после приемки передаем клиенту, либо устанавливаем на&nbsp;авто.
+									Мы&nbsp;пломбируем колёса при вас при оформлении договора&nbsp;&mdash; так можно быть уверенным, что
+									комплект не&nbsp;перепутают и&nbsp;к&nbsp;нему никто не&nbsp;будет иметь доступа. После этого колёса
+									отправляются на&nbsp;отдельный отапливаемый склад. Там они хранятся по&nbsp;правилам:
+									на&nbsp;специальных стеллажах, в&nbsp;подходящих условиях для резины.
 								</p>
 							</div>
 						</dd>
@@ -1724,11 +2559,12 @@
 				</li>
 
 				<li class="faq-accordion__element">
-					<input class="faq-accordion__element-switcher" type="checkbox" id="accordion-element-3">
+					<input class="faq-accordion__element-switcher" type="checkbox" id="accordion-element-3"
+						aria-controls="answer-3">
 					<dl class="faq-accordion__content">
 						<dt class="faq-accordion__question">
-							<label class="faq-accordion__question-button" for="accordion-element-3" aria-controls="answer-3">
-								Как быстро мои шины привезут на&nbsp;шиномонтаж?
+							<label class="faq-accordion__question-button" for="accordion-element-3">
+								Как получить колеса обратно?
 
 								<span class="faq-accordion__question-icon" role="img" aria-label="Открыть или закрыть"></span>
 							</label>
@@ -1736,13 +2572,15 @@
 
 						<dd class="faq-accordion__answer" id="answer-3">
 							<div class="faq-accordion__answer-text">
-								<h3 class="visually-hidden">Информация о времени доставки шин в 2АТМ</h3>
+								<h3 class="visually-hidden">Информация о получении колёс клиента в 2АТМ</h3>
 
 								<p>
-									Для получения колес нужно ОБЯЗАТЕЛЬНО записаться на&nbsp;шиномонтаж с&nbsp;указанием номера договора
-									хранения, даже если нужно просто забрать колеса. Если в&nbsp;сезон записались до&nbsp;14:00,
-									то&nbsp;привезем колеса уже на&nbsp;следующий день. Если после 14&nbsp;часов, то&nbsp;через день.
-									В&nbsp;несезон требуется от&nbsp;двух до&nbsp;трех дней.
+									Когда вам понадобятся колёса, запишитесь на&nbsp;доставку комплекта или на&nbsp;замену резины
+									за&nbsp;2&ndash;3 дня и&nbsp;мы&nbsp;привезем ваш комплект к&nbsp;выбранному времени. В&nbsp;высокий
+									сезон шиномонтажа срок доставки сокращается: если вы&nbsp;записались до&nbsp;14:00, комплект приедет
+									уже на&nbsp;следующий день.
+									Пломбы снимаем при вас. Дальше&nbsp;&mdash; по&nbsp;вашему выбору: либо передаём колёса вам после
+									приёмки, либо сразу устанавливаем их&nbsp;на&nbsp;автомобиль.
 							</div>
 						</dd>
 					</dl>
@@ -1750,10 +2588,11 @@
 
 				<li class="faq-accordion__element">
 
-					<input class="faq-accordion__element-switcher" type="checkbox" id="accordion-element-4">
+					<input class="faq-accordion__element-switcher" type="checkbox" id="accordion-element-4"
+						aria-controls="answer-4">
 					<dl class="faq-accordion__content">
 						<dt class="faq-accordion__question">
-							<label class="faq-accordion__question-button" for="accordion-element-4" aria-controls="answer-4">
+							<label class="faq-accordion__question-button" for="accordion-element-4">
 								Есть&nbsp;ли курьерская доставка шин к&nbsp;вам на&nbsp;хранение или ко&nbsp;мне домой?
 
 								<span class="faq-accordion__question-icon" role="img" aria-label="Открыть или закрыть"></span>
@@ -1775,10 +2614,11 @@
 				</li>
 
 				<li class="faq-accordion__element">
-					<input class="faq-accordion__element-switcher" type="checkbox" id="accordion-element-5">
+					<input class="faq-accordion__element-switcher" type="checkbox" id="accordion-element-5"
+						aria-controls="answer-5">
 					<dl class="faq-accordion__content">
 						<dt class="faq-accordion__question">
-							<label class="faq-accordion__question-button" for="accordion-element-5" aria-controls="answer-5">
+							<label class="faq-accordion__question-button" for="accordion-element-5">
 								Что делать, если потерял договор хранения шин?
 
 								<span class="faq-accordion__question-icon" role="img" aria-label="Открыть или закрыть"></span>
@@ -1801,10 +2641,11 @@
 
 				<li class="faq-accordion__element">
 
-					<input class="faq-accordion__element-switcher" type="checkbox" id="accordion-element-6">
+					<input class="faq-accordion__element-switcher" type="checkbox" id="accordion-element-6"
+						aria-controls="answer-6">
 					<dl class="faq-accordion__content">
 						<dt class="faq-accordion__question">
-							<label class="faq-accordion__question-button" for="accordion-element-6" aria-controls="answer-6">
+							<label class="faq-accordion__question-button" for="accordion-element-6">
 								Как узнать номер моей скидочной карты?
 
 								<span class="faq-accordion__question-icon" role="img" aria-label="Открыть или закрыть"></span>
@@ -1851,7 +2692,6 @@
 					</a>
 				</div>
 			</div>
-
 		</section>
 	</main>
 
@@ -1866,6 +2706,9 @@
 					<p>
 						Сеть шиномонтажей, автомоек и&nbsp;автосервисов с&nbsp;качественным обслуживанием в&nbsp;Санкт-Петербурге
 					</p>
+
+					<p class="visible-tablet">&copy;&nbsp;2009&nbsp;&mdash; 2026 &laquo;Две атмосферы&raquo;</p>
+
 				</div>
 			</div>
 
@@ -1878,13 +2721,14 @@
 					</a>
 				</address>
 
-				<a class="footer__yandex-button" href="" aria-label="yandex-button" title="Перейти в Яндекс">
+				<a class="footer__yandex-button" href="https://ya.ru" target="_blank" aria-label="yandex-button"
+					title="Перейти в Яндекс">
 					<svg width="72" height="92" viewBox="0 0 72 92">
 						<use xlink:href="./images/icons/sprite-icons.svg#yandex-plate"></use>
 					</svg>
 				</a>
 
-				<a class="footer__button button button--accent-bg" href="#!">
+				<a class="footer__button button button--accent-bg" href="https://t.me/TG_2ATM_BOT" target="_blank">
 					Записаться&nbsp;в&nbsp;Telegram
 				</a>
 			</nav>
@@ -1900,6 +2744,10 @@
 					</li>
 
 					<li>
+						<a href="./loyalty.html">Программа лояльности</a>
+					</li>
+
+					<li>
 						<a href="./corporate.html">Корпоративным клиентам</a>
 					</li>
 
@@ -1910,43 +2758,27 @@
 					<li>
 						<a href="./rental-develop.html">Аренда и&nbsp;развитие</a>
 					</li>
+
+					<li>
+						<a href="./404-page.html">Работа в&nbsp;2АТМ</a>
+					</li>
 				</ul>
 			</nav>
 
 			<section class="footer__svc-links footer-svc-links">
-				<h2 class="footer-svc-links__heading">Услуги</h2>
+				<h2 class="visually-hidden">Перечень ссылок на описание услуг в 2АТМ</h2>
 
-				<nav class="footer-svc-links__nemu">
+				<nav class="footer-svc-links__menu">
 					<ul class="footer-svc-links__list">
 						<li>
 							<ul>
 								<li class="footer-svc-links__item">
-									<a class="footer-svc-links__link" href="./car-wash.html">Автомойка</a>
+									<a class="footer-svc-links__link footer-svc-links__link--frequent"
+										href="./tire-fitting.html">Шиномонтаж</a>
 								</li>
 
 								<li class="footer-svc-links__item">
-									<a class="footer-svc-links__link" href="./dry-cleaning.html">Химчистка</a>
-								</li>
-
-								<li class="footer-svc-links__item">
-									<a class="footer-svc-links__link" href="./body-protection.html">Защитные покрытия</a>
-								</li>
-
-								<li class="footer-svc-links__item">
-									<a class="footer-svc-links__link" href="./headlight-protection.html">Полировка&nbsp;и бронирование
-										фар</a>
-								</li>
-							</ul>
-						</li>
-
-						<li>
-							<ul>
-								<li class="footer-svc-links__item">
-									<a class="footer-svc-links__link" href="./tire-fitting.html">Шиномонтаж</a>
-								</li>
-
-								<li class="footer-svc-links__item">
-									<a class="footer-svc-links__link" href="./tire-repair.html">Ремонт шин</a>
+									<a class="footer-svc-links__link" href="./tire-repair.html">Ремонт шин и&nbsp;дисков</a>
 								</li>
 
 								<li class="footer-svc-links__item">
@@ -1960,11 +2792,7 @@
 								<li class="footer-svc-links__item">
 									<a class="footer-svc-links__link" href="./argon-welding.html">Аргоновая сварка</a>
 								</li>
-							</ul>
-						</li>
 
-						<li>
-							<ul>
 								<li class="footer-svc-links__item">
 									<a class="footer-svc-links__link" href="./tire-storage.html">
 										Сезонное хранение шин
@@ -1988,7 +2816,50 @@
 						<li>
 							<ul>
 								<li class="footer-svc-links__item">
-									<a class="footer-svc-links__link" href="./car-service.html">Автосервис</a>
+									<a class="footer-svc-links__link footer-svc-links__link--frequent" href="./decoking-engine.html">
+										Аппаратная раскоксовка двигателя
+									</a>
+								</li>
+
+
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link footer-svc-links__link--frequent"
+										href="./car-wash.html">Автомойка</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link footer-svc-links__link--frequent" href="./refill-conditioning.html">
+										Заправка кондиционеров
+									</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./dry-cleaning.html">Химчистка</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./body-protection.html">Защитные покрытия</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./headlight-protection.html">Полировка&nbsp;и бронирование
+										фар</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./h-engine-cleaning.html">
+										Водородная очистка двигателя
+									</a>
+								</li>
+							</ul>
+						</li>
+
+						<li>
+							<ul>
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link footer-svc-links__link--frequent"
+										href="./car-service.html">Автосервис</a>
 								</li>
 
 								<li class="footer-svc-links__item">
@@ -1996,8 +2867,32 @@
 								</li>
 
 								<li class="footer-svc-links__item">
-									<a class="footer-svc-links__link" href="./refill-conditioning.html">
-										Заправка кондиционеров
+									<a class="footer-svc-links__link" href="./404-page.html">
+										Техническое обслуживание
+									</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./404-page.html">
+										Диагностика автомобиля
+									</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./404-page.html">
+										Ремонт ходовой и&nbsp;подвески
+									</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./404-page.html">
+										Ремонт торомозной системы
+									</a>
+								</li>
+
+								<li class="footer-svc-links__item">
+									<a class="footer-svc-links__link" href="./404-page.html">
+										Автоэлектрика
 									</a>
 								</li>
 							</ul>
@@ -2007,7 +2902,13 @@
 			</section>
 
 			<div class="footer__copyright">
-				<a href="#!">&copy;&nbsp;2025 Две атмосферы</a>
+				<p class="hidden-tablet">&copy;&nbsp;2009&nbsp;&mdash; 2026 &laquo;Две атмосферы&raquo;</p>
+
+				<nav class="footer__legal">
+					<a href="./404-page.html" target="_blank">Согласие на&nbsp;обработку&nbsp;ПД</a>
+					<a href="./404-page.html" target="_blank">Политика обработки персональных данных</a>
+					<a href="./404-page.html">Карта сайта</a>
+				</nav>
 			</div>
 		</div>
 	</footer>
@@ -2020,6 +2921,7 @@
 			centeredSlides: true,
 			spaceBetween: 10,
 			slidesPerView: 1,
+			mousewheel: true,
 			pagination: {
 				el: ".reviews-controls__pagination",
 				type: "fraction",
@@ -2045,6 +2947,7 @@
 			loop: true,
 			slidesPerView: "auto",
 			spaceBetween: 24,
+			mousewheel: true,
 			autoplay: {
 				delay: 2500,
 				disableOnInteraction: false,
@@ -2054,6 +2957,7 @@
 		const advantagesSlider = new Swiper(".advantages__slider", {
 			slidesPerView: "auto",
 			grabCursor: true,
+			mousewheel: true,
 			grid: {
 				rows: 1,
 			},
@@ -2064,6 +2968,7 @@
 			loop: true,
 			slidesPerView: "auto",
 			spaceBetween: 24,
+			mousewheel: true,
 			autoplay: {
 				delay: 2500,
 				disableOnInteraction: false,

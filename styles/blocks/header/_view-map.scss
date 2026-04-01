@@ -1,0 +1,39 @@
+@use "../../healpers" as *;
+/* Block wiew-map . Part of header*/
+@use "../../healpers" as *;
+/* Block call-up . Part of header*/
+.view-map {
+  @include flex-center;
+
+  column-gap: rem(10);
+
+  &__link {
+    display: grid;
+    grid-template: auto auto / rem(50) auto;
+    column-gap: rem(10);
+    font-size: rem(16);
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+
+    &-icon {
+      @include square(rem(50));
+
+      grid-row: span 2;
+      align-self: center;
+      flex-shrink: 0;
+    }
+
+    & > span:first-of-type {
+      align-self: end;
+    }
+  }
+
+  &__text {
+    line-height: 1;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: underline;
+    color: var(--text-color-dark-secondary);
+  }
+}
