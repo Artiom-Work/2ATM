@@ -10,6 +10,7 @@
     position: static;
     translate: 0 0;
     height: auto;
+    width: auto;
     overflow: visible;
   }
 }
@@ -17,6 +18,7 @@
   to {
     translate: 0 rem(-1000);
     height: rem(1);
+    width: rem(1);
     overflow: hidden;
     position: absolute;
   }

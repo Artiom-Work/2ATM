@@ -1,14 +1,14 @@
 @use "../../healpers" as *;
 /* Section page-heading */
 .page-heading {
-  --breadcrumbsColor: var(--color-gray-500);
+  --breadcrumbsColor: var(--text-color-dark-medium);
   --breadcrumbsGap: #{fluid(50, 48)};
 
-  padding-block: rem(24) rem(47);
+  padding-block: rem(24) rem(29);
   color: var(--breadcrumbsColor);
 
   &__breadcrumbs {
-    margin-bottom: rem(18);
+    margin-bottom: rem(10);
 
     &-list {
       display: flex;
@@ -37,7 +37,7 @@
     }
 
     &-link {
-      font-size: fluid(18, 15);
+      font-size: rem(16);
       color: currentColor;
       line-height: 1.5;
     }
@@ -69,6 +69,7 @@
       }
 
       &-link {
+        font-size: rem(15);
         line-height: 1.4;
         letter-spacing: 0.03em;
       }

@@ -106,6 +106,7 @@
   --color-border-active: var(--color-accent);
 
   --border: #{rem(1)} solid var(--color-border);
+  --border-accent: #{rem(1)} solid var(--color-border-active);
   --border-light: #{rem(1)} solid var(--color-border-light);
   --border-extra-light: #{rem(0.8)} solid var(--color-border-extra-light);
 

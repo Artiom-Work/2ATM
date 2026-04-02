@@ -268,6 +268,7 @@ svg * {
   --color-border-extra-light: var(--color-gray-90);
   --color-border-active: var(--color-accent);
   --border: 0.0625rem solid var(--color-border);
+  --border-accent: 0.0625rem solid var(--color-border-active);
   --border-light: 0.0625rem solid var(--color-border-light);
   --border-extra-light: 0.05rem solid var(--color-border-extra-light);
   --border-radius-extra-small: 0.25rem;
@@ -551,6 +552,7 @@ button[aria-label]:not(.promotion__card-link)::before {
     position: static;
     translate: 0 0;
     height: auto;
+    width: auto;
     overflow: visible;
   }
 }
@@ -558,6 +560,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   to {
     translate: 0 -62.5rem;
     height: 0.0625rem;
+    width: 0.0625rem;
     overflow: hidden;
     position: absolute;
   }
@@ -651,7 +654,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   font-size: 0.8125rem;
   line-height: 1.69;
   background-color: var(--color-light);
-  color: var(--text-color-medium);
+  color: var(--text-color-dark-medium);
   border: 0.0625rem solid currentColor;
 }
 .button--light-accent {
@@ -1201,6 +1204,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   position: absolute;
   translate: 0 -62.5rem;
   height: 0.0625rem;
+  width: 0.0625rem;
   overflow: hidden;
   animation-name: visible-to-scroll;
   animation-fill-mode: both;
@@ -1334,13 +1338,13 @@ button[aria-label]:not(.promotion__card-link)::before {
 /*  ===================================  */
 /* Section page-heading */
 .page-heading {
-  --breadcrumbsColor: var(--color-gray-500);
+  --breadcrumbsColor: var(--text-color-dark-medium);
   --breadcrumbsGap: clamp(3rem, 2.9418604651rem + 0.2325581395vw, 3.125rem);
-  padding-block: 1.5rem 2.9375rem;
+  padding-block: 1.5rem 1.8125rem;
   color: var(--breadcrumbsColor);
 }
 .page-heading__breadcrumbs {
-  margin-bottom: 1.125rem;
+  margin-bottom: 0.625rem;
 }
 .page-heading__breadcrumbs-list {
   display: flex;
@@ -1361,7 +1365,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   pointer-events: none;
 }
 .page-heading__breadcrumbs-link {
-  font-size: clamp(0.9375rem, 0.8502906977rem + 0.3488372093vw, 1.125rem);
+  font-size: 1rem;
   color: currentColor;
   line-height: 1.5;
 }
@@ -1384,6 +1388,7 @@ button[aria-label]:not(.promotion__card-link)::before {
     top: 5%;
   }
   .page-heading__breadcrumbs-link {
+    font-size: 0.9375rem;
     line-height: 1.4;
     letter-spacing: 0.03em;
   }
@@ -1482,7 +1487,7 @@ button[aria-label]:not(.promotion__card-link)::before {
 /* Styles for location-card . Source - block locations */
 .location-card {
   --locationCardBg: var(--color-light);
-  --locationCardBgActive: var(--color-accent-200);
+  --locationBorderActive: var(--border-accent);
   --locationCardHeight: 12.75rem;
   display: flex;
   min-height: var(--locationCardHeight);
@@ -1492,16 +1497,16 @@ button[aria-label]:not(.promotion__card-link)::before {
   background-color: var(--locationCardBg);
 }
 .location-card.is-active {
-  background-color: var(--locationCardBgActive);
+  outline: var(--locationBorderActive);
 }
 @media (any-hover: hover) {
   .location-card:hover {
-    background-color: var(--locationCardBgActive);
+    outline: var(--locationBorderActive);
   }
 }
 @media (any-hover: hover) and (any-hover: none) {
   .location-card:active {
-    background-color: var(--locationCardBgActive);
+    outline: var(--locationBorderActive);
   }
 }
 .location-card__image {

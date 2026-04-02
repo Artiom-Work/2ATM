@@ -4,7 +4,7 @@
 
 .location-card {
   --locationCardBg: var(--color-light);
-  --locationCardBgActive: var(--color-accent-200);
+  --locationBorderActive: var(--border-accent);
   --locationCardHeight: #{rem(204)};
 
   display: flex;
@@ -16,11 +16,11 @@
   background-color: var(--locationCardBg);
 
   &.is-active {
-    background-color: var(--locationCardBgActive);
+    outline: var(--locationBorderActive);
   }
 
   @include hover {
-    background-color: var(--locationCardBgActive);
+    outline: var(--locationBorderActive);
   }
 
   &__image {
