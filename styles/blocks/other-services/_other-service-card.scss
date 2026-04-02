@@ -15,7 +15,7 @@
     justify-content: center;
     min-height: inherit;
     width: 100%;
-    padding: rem(8) fluid(20, 10) rem(14);
+    padding: rem(8) fluid(18, 10) rem(14);
     color: var(--text-color-light);
     background-color: var(--otherServiceCardBgColor);
     border-radius: var(--border-radius);
@@ -60,10 +60,22 @@
   }
 }
 
+@include desktop-media {
+  .other-service-card {
+    max-width: unset;
+  }
+}
+
+@include mobile-media {
+  .other-service-card {
+    max-width: rem(220);
+  }
+}
+
 @include mobile-s-media {
   .other-service-card {
     &__link {
-      padding: rem(15) rem(10) rem(21);
+      padding: rem(15) rem(6) rem(21);
     }
   }
 }
