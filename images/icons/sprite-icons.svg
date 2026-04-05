@@ -38,6 +38,14 @@
 		<path d="M16.3445 16.0638L13.082 12.8013"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 	</symbol>
 
+	<symbol id="bird-icon">
+		<path d="M20 6L9 17L4 12"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+	</symbol>
+
+	<symbol id="checkbox-bird-icon">
+		<path d="M1 5.16667L5.16667 8.5L11.4167 1" stroke-width="2" stroke-linecap="round"/>
+	</symbol>
+
 	<symbol id="switch-icon">
 		<path d="M2 2L8 8L2 14"  stroke-width="3" stroke-linecap="round"/>	
 	</symbol>

@@ -10,12 +10,11 @@
 	<link rel="icon" type="image/svg+xml" sizes="48x48" href="./images/icons/favicon.svg">
 	<link rel="apple-touch-icon" sizes="180x180" href="./images/icons/favicon.svg">
 	<meta name="description"
-		content="Специальные условия для корпоративных клиентов 2ATM: обслуживание автопарков, выгодные тарифы, безналичная оплата. Свяжитесь с нами для подбора индивидуальных условий!">
+		content="Комплексное обслуживание автопарка: шиномонтаж, мойка, ТО, заправка кондиционеров. Гибкие условия для юрлиц, отсрочка платежа, работа с крупными компаниями.">
 	<link rel="stylesheet" href="./libs/swiper/swiper-bundle.min.css">
-	<title>2ATM | Корпоративным клиентам</title>
+	<title>Обслуживание корпоративного автопарка в СПб — выгодные условия от 2ATM</title>
 	<link rel="stylesheet" href="./styles/pages/corporate-page/corporate.css">
 </head>
-
 
 <body>
 	<header class="header">
@@ -367,7 +366,7 @@
 				</ul>
 			</nav>
 
-			<h2 class="page-heading__page-name h3" id="page-title">
+			<h2 class="page-heading__page-name h5" id="page-title">
 				Корпоративным клиентам
 			</h2>
 		</section>
@@ -400,21 +399,9 @@
 					</p>
 				</div>
 
-				<div class="promo__buttons">
-					<a class="promo__button button button--accent-bg" href="#!">
-						<span class="hidden-mobile">
-							Связаться с&nbsp;нами
-						</span>
-
-						<span class="visible-mobile">
-							На&nbsp;сайте
-						</span>
-					</a>
-
-					<a class="promo__button button visible-mobile" href="#!">
-						В&nbsp;Telegram
-					</a>
-				</div>
+				<a class="promo__button button button--accent-bg hidden-mobile" href="#!">
+					Связаться с&nbsp;нами
+				</a>
 			</div>
 		</section>
 
@@ -558,21 +545,31 @@
 							</div>
 						</div>
 
-						<button class="callback-form__button button button--accent-bg" type="submit">
+						<div class="callback__policy">
+							<label class="checkbox" for="call-back-agreements" title="Соглашаюсь с политикой конфеденциальности">
+								<input class="visually-hidden" type="checkbox" id="call-back-agreements" name="call-back-agreements"
+									onclick="document.querySelector('[data-js-call-back-form-button]').classList.toggle('disabled')">
+
+								<svg class="checkbox__icon" width="13" height="10" viewBox="0 0 13 10">
+									<use xlink:href="./images/icons/sprite-icons.svg#checkbox-bird-icon"></use>
+								</svg>
+							</label>
+
+							<p>
+								Отправляя сообщение вы&nbsp;соглашаетесь c&nbsp;
+								<a class="callback__policy-link" href="./files/privacy-policy/privacy-policy-2atm.pdf" target="_blank">
+									политикой обработки персональных
+									данных
+								</a>
+							</p>
+						</div>
+
+						<button class="callback-form__button button button--accent-bg disabled" type="submit"
+							onclick="if(this.closest('form').reportValidity()){this.closest('form').reset() , modalOverlay.showModal()}"
+							data-js-call-back-form-button>
 							Отправить
 						</button>
-
 					</form>
-
-					<div class="callback__policy">
-						<p>
-							Отправляя сообщение вы&nbsp;соглашаетесь c&nbsp;
-							<a class="callback__policy-link" href="#!" target="_blank">
-								политикой обработки персональных
-								данных
-							</a>
-						</p>
-					</div>
 				</div>
 
 				<picture class="callback__image-wrapper">
@@ -796,6 +793,23 @@
 				</li>
 
 				<li class="other-services__list-item other-service-card">
+					<a class="other-service-card__link" href="./decoking-engine.html" aria-label="Перейти к описанию услуги"
+						title="Подробее об услуге">
+
+						<img class="other-service-card__image" src="./images/icons/icon-h-engine.webp" width="69" height="69"
+							alt="Раскоксовка двигателя" loading="lazy">
+
+						<h3 class="other-service-card__name">
+							Раскоксовка двигателя
+						</h3>
+
+						<span class="other-service-card__link-text">
+							Подробнее
+						</span>
+					</a>
+				</li>
+
+				<li class="other-services__list-item other-service-card">
 					<a class="other-service-card__link" href="./refill-conditioning.html" aria-label="Перейти к описанию услуги"
 						title="Подробее о заправке кондиционеров">
 
@@ -838,6 +852,23 @@
 
 						<h3 class="other-service-card__name">
 							Сварка аргоном
+						</h3>
+
+						<span class="other-service-card__link-text">
+							Подробнее
+						</span>
+					</a>
+				</li>
+
+				<li class="other-services__list-item other-service-card">
+					<a class="other-service-card__link" href="body-protection.html" aria-label="Перейти к описанию услуги"
+						title="Подробее о развале-схождения">
+
+						<img class="other-service-card__image" src="./images/icons/icon-shield-brush.webp" width="60" height="60"
+							alt="Щётка и щит" loading="lazy">
+
+						<h3 class="other-service-card__name">
+							Полировка кузова
 						</h3>
 
 						<span class="other-service-card__link-text">
@@ -1059,13 +1090,51 @@
 				<p class="hidden-tablet">&copy;&nbsp;2009&nbsp;&mdash; 2026 &laquo;Две атмосферы&raquo;</p>
 
 				<nav class="footer__legal">
-					<a href="./404-page.html" target="_blank">Согласие на&nbsp;обработку&nbsp;ПД</a>
-					<a href="./404-page.html" target="_blank">Политика обработки персональных данных</a>
+					<a href="./files/privacy-policy/privacy-policy-2atm.pdf" target="_blank">Согласие
+						на&nbsp;обработку&nbsp;ПД</a>
+					<a href="./files/privacy-policy/consent-processing-person-data-2atm.pdf" target="_blank">Политика обработки
+						персональных данных</a>
 					<a href="./404-page.html">Карта сайта</a>
 				</nav>
 			</div>
 		</div>
 	</footer>
+
+	<dialog class="succ-submit" id="modalOverlay">
+		<form class="succ-submit__close-button-wrapper" method="dialog">
+			<button class="succ-submit__close-button" type="submit">
+				<span class="visually-hidden">Close modal confirm block</span>
+			</button>
+		</form>
+
+		<div class="succ-submit__inner">
+			<section class="succ-submit__content container" aria-labelledby="succ-submit-title">
+				<h3 class="visually-hidden">Отправка заявки в 2АТМ</h3>
+
+				<div>
+					<h4 class="succ-submit__title h1" id="succ-submit-title">
+						Ваша заявка<br>
+						успешно отправлена!
+					</h4>
+
+					<div class="succ-submit__text">
+						<p>
+							Ваш менеджер свяжется с&nbsp;вами в&nbsp;ближайшее время
+						</p>
+					</div>
+
+					<a class="succ-submit__button button button--accent-bg" href="./index.html">
+						На&nbsp;главную
+					</a>
+				</div>
+
+				<img class=" succ-submit__image" src="./images/gifes/message.gif" width="450" height="450"
+					alt="Сообщение отправлено" loading="lazy">
+
+			</section>
+		</div>
+
+	</dialog>
 
 	<script src="./libs/swiper/swiper-bundle.min.js"></script>
 
@@ -1073,6 +1142,7 @@
 		const possobilitiesSlider = new Swiper(".possobilities__slider", {
 			slidesPerView: "auto",
 			loop: true,
+			mousewheel: true,
 			grid: {
 				rows: 1,
 				fill: 'row',
@@ -1089,6 +1159,7 @@
 					grid: {
 						rows: 2,
 					},
+					mousewheel: false,
 				},
 
 			},
@@ -1107,6 +1178,7 @@
 
 		const ourAdvantagesSlider = new Swiper(".advantages__slider", {
 			slidesPerView: "auto",
+			mousewheel: true,
 			grid: {
 				rows: 1,
 			},

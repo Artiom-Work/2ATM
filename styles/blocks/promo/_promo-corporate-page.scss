@@ -41,11 +41,6 @@
     }
   }
 
-  &__buttons {
-    display: flex;
-    gap: fluid(24, 16);
-  }
-
   &__button {
     position: relative;
     font-size: rem(16);
@@ -126,21 +121,6 @@
       p {
         margin-bottom: 0;
       }
-    }
-
-    &__buttons {
-      justify-content: center;
-    }
-
-    &__button {
-      align-self: center;
-    }
-  }
-}
-@include mobile-s-media {
-  .promo {
-    &__button {
-      font-size: rem(13);
     }
   }
 }

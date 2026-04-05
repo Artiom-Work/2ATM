@@ -1,0 +1,150 @@
+@use "../../healpers" as *;
+
+.checkbox {
+  @include flex-center(true);
+
+  width: rem(20) !important;
+  height: rem(20) !important;
+  flex-shrink: 0;
+  border: var(--border-dark);
+  border-radius: rem(2);
+  background-color: var(--color-light);
+  will-change: transform;
+  transition-duration: var(--transition-duration) !important;
+
+  &::before {
+    @include abs-center;
+    @include square(rem(44));
+
+    content: "";
+  }
+
+  &__icon {
+    width: rem(13);
+    height: rem(10);
+
+    flex-shrink: 0;
+    fill: transparent;
+    stroke: transparent;
+  }
+
+  &:has(input:checked) {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+
+    .checkbox__icon {
+      stroke: var(--color-light);
+    }
+  }
+
+  &:has(input:disabled) {
+    background-color: var(--color-gray-300);
+    border-color: var(--color-gray-300);
+    pointer-events: none;
+  }
+
+  @include hover {
+    box-shadow: 0 0 0 rem(1) var(--color-accent);
+    border-color: var(--color-accent);
+  }
+}
+
+.ratio {
+  @include square(rem(16));
+  @include flex-center(true);
+
+  position: relative;
+  flex-shrink: 0;
+  border: var(--border);
+  border-radius: 100%;
+  background-color: var(--color-light);
+  transition-duration: var(--transition-duration);
+
+  &::after {
+    content: "";
+    width: 50%;
+    height: 50%;
+    background-color: inherit;
+    border-radius: inherit;
+  }
+
+  &:has(input:checked) {
+    &::after {
+      background-color: var(--color-accent);
+    }
+  }
+
+  &:has(input:checked:disabled) {
+    &::after {
+      background-color: var(--color-gray-500);
+    }
+  }
+
+  &:has(input:disabled) {
+    background-color: var(--color-gray-300);
+    border-color: var(--color-gray-300);
+    pointer-events: none;
+  }
+}
+
+.switcher {
+  --pathSwitcherColorDefault: var(--color-gray-300);
+  --pathSwitcherColorActive: var(--color-accent-dark);
+  --switcherUnitColorDefault: var(--color-light);
+  --switcherUnitSize: #{rem(18)};
+
+  position: relative;
+  display: inline-block;
+  width: rem(40);
+  height: rem(22);
+  flex-shrink: 0;
+
+  &::before {
+    @include abs-center;
+    @include square(rem(44));
+
+    content: "";
+  }
+
+  input:checked ~ .switcher__path {
+    background-color: var(--pathSwitcherColorActive);
+  }
+
+  input:checked ~ .switcher__unit {
+    left: calc(100% - #{rem(2)} - var(--switcherUnitSize));
+  }
+
+  &:has(input:disabled) {
+    pointer-events: none;
+    cursor: default;
+    filter: opacity(0.5);
+  }
+
+  @include hover {
+    .switcher__unit {
+      filter: brightness(95%);
+    }
+  }
+
+  &__path {
+    position: absolute;
+    inset: 0;
+    background-color: var(--pathSwitcherColorDefault);
+    border-radius: rem(15);
+    transition-duration: var(--transition-duration);
+    transition-timing-function: ease-in-out;
+  }
+
+  &__unit {
+    width: var(--switcherUnitSize);
+    height: var(--switcherUnitSize);
+
+    position: absolute;
+    top: 50%;
+    left: rem(2);
+    transform: translateY(-50%);
+    background-color: var(--switcherUnitColorDefault);
+    border-radius: 100%;
+    transition-duration: var(--transition-duration) !important;
+  }
+}

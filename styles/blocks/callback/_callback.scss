@@ -43,8 +43,10 @@
   }
 
   &__policy {
-    font-size: rem(16);
+    display: flex;
     text-align: center;
+    column-gap: rem(4);
+    font-size: rem(16);
     width: 100%;
     color: var(--text-color-dark-secondary);
 
@@ -56,6 +58,9 @@
   }
 
   &__image {
+    width: inherit;
+    height: inherit;
+
     &-wrapper {
       border-radius: var(--border-radius-small);
       width: rem(513);
@@ -66,9 +71,6 @@
         height: rem(552);
       }
     }
-
-    width: inherit;
-    height: inherit;
   }
 }
 
@@ -85,6 +87,13 @@
 
     &__form {
       max-width: 100%;
+    }
+
+    &__policy {
+      width: auto;
+      align-self: center;
+      align-items: center;
+      column-gap: rem(10);
     }
   }
 }
@@ -133,6 +142,7 @@
 
     &__policy {
       font-size: rem(15);
+      text-align: start;
     }
   }
 }

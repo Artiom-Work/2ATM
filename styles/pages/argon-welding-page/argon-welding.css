@@ -262,12 +262,14 @@ svg * {
   --color-success: var(--color-green);
   --color-rating-star: var(--color-gray-350);
   --color-rating-star-active: var(--color-gold);
+  --color-border-dark: var(--color-gray-900);
   --color-border-medium: var(--color-gray-700);
   --color-border: var(--color-gray-500);
   --color-border-light: var(--color-gray-350);
   --color-border-extra-light: var(--color-gray-90);
   --color-border-active: var(--color-accent);
-  --border: 0.0625rem solid var(--color-border);
+  --border: 0.0625rem solid var(--color-border-dark);
+  --border-dark: 0.0625rem solid var(--color-border);
   --border-accent: 0.0625rem solid var(--color-border-active);
   --border-light: 0.0625rem solid var(--color-border-light);
   --border-extra-light: 0.05rem solid var(--color-border-extra-light);
@@ -663,6 +665,15 @@ button[aria-label]:not(.promotion__card-link)::before {
 }
 .button--medium-padding {
   padding-inline: 2.15625rem;
+}
+.button:disabled, .button.disabled {
+  color: var(--text-color-dark-medium);
+  background-color: var(--color-gray-300);
+  outline: var(--border-light);
+  pointer-events: none;
+}
+.button:disabled .button__image, .button.disabled .button__image {
+  opacity: 0.4;
 }
 
 @media (width <= 47.99875rem) {

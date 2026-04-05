@@ -262,12 +262,14 @@ svg * {
   --color-success: var(--color-green);
   --color-rating-star: var(--color-gray-350);
   --color-rating-star-active: var(--color-gold);
+  --color-border-dark: var(--color-gray-900);
   --color-border-medium: var(--color-gray-700);
   --color-border: var(--color-gray-500);
   --color-border-light: var(--color-gray-350);
   --color-border-extra-light: var(--color-gray-90);
   --color-border-active: var(--color-accent);
-  --border: 0.0625rem solid var(--color-border);
+  --border: 0.0625rem solid var(--color-border-dark);
+  --border-dark: 0.0625rem solid var(--color-border);
   --border-accent: 0.0625rem solid var(--color-border-active);
   --border-light: 0.0625rem solid var(--color-border-light);
   --border-extra-light: 0.05rem solid var(--color-border-extra-light);
@@ -663,6 +665,15 @@ button[aria-label]:not(.promotion__card-link)::before {
 }
 .button--medium-padding {
   padding-inline: 2.15625rem;
+}
+.button:disabled, .button.disabled {
+  color: var(--text-color-dark-medium);
+  background-color: var(--color-gray-300);
+  outline: var(--border-light);
+  pointer-events: none;
+}
+.button:disabled .button__image, .button.disabled .button__image {
+  opacity: 0.4;
 }
 
 @media (width <= 47.99875rem) {
@@ -1556,17 +1567,17 @@ button[aria-label]:not(.promotion__card-link)::before {
 /*================================*/
 /* Styles for section possobility-card. Part of section possobilities */
 .possobility-card {
-  max-width: 18.5625rem;
+  max-width: 23.125rem;
   width: 100%;
   height: auto !important;
-  padding: 1.25rem 1.25rem 0 1.25rem;
+  padding: 1.25rem;
   outline: var(--border-light);
   border-radius: var(--border-radius-small);
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 1.25rem;
-  background-color: var(--color-accent-axtra-light);
+  background-color: var(--color-gray-25);
 }
 .possobility-card--small-indent {
   row-gap: 0.625rem;
@@ -1594,6 +1605,7 @@ button[aria-label]:not(.promotion__card-link)::before {
 @media (width <= 63.99875rem) {
   .possobility-card {
     min-height: 17.0625rem;
+    max-width: 18.5625rem;
   }
   .possobility-card--big-width-mobile {
     max-width: 20rem;
@@ -1737,8 +1749,10 @@ button[aria-label]:not(.promotion__card-link)::before {
   margin-block: 0 0.5rem;
 }
 .callback__policy {
-  font-size: 1rem;
+  display: flex;
   text-align: center;
+  column-gap: 0.25rem;
+  font-size: 1rem;
   width: 100%;
   color: var(--text-color-dark-secondary);
 }
@@ -1771,6 +1785,12 @@ button[aria-label]:not(.promotion__card-link)::before {
   }
   .callback__form {
     max-width: 100%;
+  }
+  .callback__policy {
+    width: auto;
+    align-self: center;
+    align-items: center;
+    column-gap: 0.625rem;
   }
 }
 @media (width <= 63.99875rem) {
@@ -1805,6 +1825,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   }
   .callback__policy {
     font-size: 0.9375rem;
+    text-align: start;
   }
 }
 /*  ===================================  */

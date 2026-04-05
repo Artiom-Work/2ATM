@@ -99,13 +99,15 @@
   --color-rating-star: var(--color-gray-350);
   --color-rating-star-active: var(--color-gold);
 
+  --color-border-dark: var(--color-gray-900);
   --color-border-medium: var(--color-gray-700);
   --color-border: var(--color-gray-500);
   --color-border-light: var(--color-gray-350);
   --color-border-extra-light: var(--color-gray-90);
   --color-border-active: var(--color-accent);
 
-  --border: #{rem(1)} solid var(--color-border);
+  --border: #{rem(1)} solid var(--color-border-dark);
+  --border-dark: #{rem(1)} solid var(--color-border);
   --border-accent: #{rem(1)} solid var(--color-border-active);
   --border-light: #{rem(1)} solid var(--color-border-light);
   --border-extra-light: #{rem(0.8)} solid var(--color-border-extra-light);
