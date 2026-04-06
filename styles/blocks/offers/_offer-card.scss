@@ -15,26 +15,23 @@
 
     &-wrapper {
       width: rem(404);
-      height: rem(241);
+      height: rem(250);
       border-radius: var(--border-radius-small);
       flex-shrink: 0;
     }
   }
 
   &__heading {
-    min-height: rem(52);
     line-height: 1.3;
     text-transform: uppercase;
-    margin-bottom: fluid(19, 16);
+    margin-bottom: fluid(19, 0);
     color: inherit;
   }
 
   &__text {
     @include fluid-text(18, 12);
 
-    margin-bottom: fluid(19, 16);
-    flex-grow: 1;
-    min-height: rem(81);
+    margin-bottom: fluid(19, 0);
     line-height: 1.5;
     color: inherit;
   }
@@ -42,14 +39,27 @@
   &__link {
     @include fluid-text(18, 16);
 
-    margin-bottom: 0;
     font-weight: 600;
     line-height: 1.5;
     text-decoration: underline;
     text-decoration-skip-ink: none;
     transition-duration: var(--transition-duration) !important;
     color: inherit;
-    margin-bottom: fluid(19, 16);
+    margin-bottom: fluid(19, 0);
+
+    &-icon {
+      @include square(rem(18));
+
+      flex-shrink: 0;
+      fill: transparent;
+      stroke: currentColor;
+    }
+
+    &-text {
+      display: flex;
+      align-items: center;
+      column-gap: rem(10);
+    }
   }
 
   &__button {
@@ -57,6 +67,11 @@
     justify-self: start;
     transition-duration: var(--transition-duration) !important;
     will-change: transform;
+  }
+
+  address {
+    display: inline-block;
+    font-style: normal;
   }
 }
 
@@ -72,11 +87,11 @@
       object-fit: cover;
 
       &-wrapper {
-        position: relative;
+        position: absolute;
         z-index: 1;
         width: 100%;
         min-width: rem(340);
-        height: rem(170);
+        height: 100%;
 
         &::before {
           content: "";
@@ -94,19 +109,23 @@
     }
 
     &__content {
-      position: absolute;
-      left: 0;
-      top: 0;
       padding: rem(26) rem(24);
       z-index: 1;
     }
 
     &__heading {
       line-height: 1.2;
+      margin-bottom: rem(16);
     }
 
     &__text {
       line-height: 1.16667;
+      text-transform: uppercase;
+      margin-bottom: rem(16);
+    }
+
+    &__link {
+      margin-bottom: 0;
     }
 
     &__heading,

@@ -21,6 +21,58 @@
 
     &__list {
       width: 100%;
+
+      &.notExpanded {
+        li:not(:first-child):not(:nth-child(2)):not(:nth-child(3)):not(
+            :nth-child(4)
+          ):not(:nth-child(5)):not(:nth-child(6)) {
+          display: none;
+        }
+
+        & ~ .offers__button-expand {
+          & > span:first-child {
+            display: inline-block;
+          }
+
+          & > span:last-child {
+            display: none;
+          }
+        }
+      }
+
+      & ~ .offers__button-expand {
+        & > span:first-child {
+          display: none;
+        }
+
+        & > span:last-child {
+          display: inline-block;
+        }
+      }
+    }
+
+    &__button-expand {
+      @include reset-button;
+
+      position: relative;
+      cursor: pointer;
+      will-change: transform;
+      transition-duration: var(--transition-duration) !important;
+      z-index: 1;
+
+      &::before {
+        @include abs-center;
+
+        height: rem(44);
+        width: 100%;
+
+        content: "";
+      }
+
+      @include active {
+        scale: 0.96;
+        filter: brightness(80%);
+      }
     }
   }
 }
