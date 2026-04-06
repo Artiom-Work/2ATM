@@ -49,18 +49,19 @@
     }
 
     &__button {
-      display: block;
-      margin-inline: auto;
+      display: flex;
+      justify-self: center;
+      width: auto;
+      // margin-inline: auto;
       font-size: rem(16);
-      width: unset;
     }
   }
 }
 
-@include mobile-medium-media {
-  .offer-description {
-    &__button {
-      width: 100%;
-    }
-  }
-}
+// @include mobile-medium-media {
+//   .offer-description {
+//     &__button {
+//       width: 100%;
+//     }
+//   }
+// }
