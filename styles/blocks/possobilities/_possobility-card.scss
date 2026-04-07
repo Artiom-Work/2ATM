@@ -1,7 +1,9 @@
 @use "../../healpers" as *;
 /* Styles for section possobility-card. Part of section possobilities */
 .possobility-card {
-  max-width: rem(370);
+  --possobilityCardWidth: #{rem(370)};
+
+  max-width: var(--possobilityCardWidth);
   width: 100%;
   height: auto !important;
   padding: rem(20);
@@ -15,6 +17,14 @@
 
   &--small-indent {
     row-gap: rem(10);
+  }
+
+  &--big-width-mobile {
+    --possobilityCardWidth: #{rem(297)};
+  }
+
+  &--static-width {
+    --possobilityCardWidth: #{rem(340)};
   }
 
   &__image {
@@ -42,11 +52,12 @@
 }
 @include tablet-media {
   .possobility-card {
+    --possobilityCardWidth: #{rem(297)};
+
     min-height: rem(273);
-    max-width: rem(297);
 
     &--big-width-mobile {
-      max-width: rem(320);
+      --possobilityCardWidth: #{rem(320)};
     }
 
     &__name {

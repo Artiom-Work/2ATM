@@ -7,17 +7,19 @@
 @use "../../base/animation";
 //common-blocks
 @use "../../blocks/сommon-blocks/button";
+@use "../../blocks/сommon-blocks/inputs";
 @use "../../blocks/сommon-blocks/logo";
 @use "../../blocks/сommon-blocks/section";
 //blocks
-@use "../../blocks/header/_header.scss";
-@use "../../blocks/page-heading/_page-heading.scss";
-@use "../../blocks/promo/_promo-rental-develop-page.scss";
-@use "../../blocks/pride-slogan/_pride-slogan.scss";
-@use "../../blocks/possobilities/_possobilities.scss";
-@use "../../blocks/callback/_callback.scss";
-@use "../../blocks/our-clients/_our-clients.scss";
-@use "../../blocks/about/_about-description.scss";
-@use "../../blocks/advantages/_our-advantages.scss";
-@use "../../blocks/about/_about-gallery.scss";
-@use "../../blocks/footer/_footer.scss";
+@use "../../blocks/header/header";
+@use "../../blocks/page-heading/page-heading";
+@use "../../blocks/promo/promo-rental-develop-page";
+@use "../../blocks/pride-slogan/pride-slogan";
+@use "../../blocks/possobilities/possobilities";
+@use "../../blocks/callback/callback";
+@use "../../blocks/our-clients/our-clients";
+@use "../../blocks/about/about-description";
+@use "../../blocks/advantages/our-advantages";
+@use "../../blocks/about/about-gallery";
+@use "../../blocks/footer/footer";
+@use "../../blocks/succ-submit/succ-submit";

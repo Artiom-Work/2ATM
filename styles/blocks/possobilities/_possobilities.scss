@@ -24,13 +24,10 @@
       max-width: rem(965);
     }
   }
-}
-@include desktop-media-above {
-  .possobilities {
-    &__list {
-      &:has(li:nth-child(7n)) {
-        justify-content: center;
-      }
+
+  &__list {
+    &:has(li:nth-child(7n)) {
+      justify-content: center;
     }
   }
 }

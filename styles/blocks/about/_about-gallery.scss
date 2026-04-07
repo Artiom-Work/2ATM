@@ -25,6 +25,9 @@
   }
 
   &__image {
+    width: inherit;
+    height: inherit;
+
     &-wrapper {
       width: rem(376);
       height: rem(301);
@@ -33,9 +36,6 @@
         width: rem(406);
       }
     }
-
-    width: inherit;
-    height: inherit;
   }
 
   &__button {

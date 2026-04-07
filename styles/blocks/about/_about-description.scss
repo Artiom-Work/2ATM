@@ -7,14 +7,14 @@
   margin-bottom: rem(80);
 
   &__image {
+    width: inherit;
+    height: inherit;
+
     &-wrapper {
       flex-shrink: 0;
       width: rem(618);
       height: rem(530);
     }
-
-    width: inherit;
-    height: inherit;
   }
 
   &__body {
@@ -49,12 +49,23 @@
     font-size: rem(16) !important;
   }
 }
+@include desktop-media {
+  .about-description {
+    &__body {
+      row-gap: rem(20);
+    }
+  }
+}
 @include laptop-media {
   .about-description {
     flex-direction: column;
 
     &__title {
       text-align: center;
+    }
+
+    &__body {
+      row-gap: rem(38);
     }
 
     &__button {
@@ -71,10 +82,6 @@
         width: rem(360);
         height: rem(360);
       }
-    }
-
-    &__body {
-      row-gap: rem(38);
     }
 
     &__title {

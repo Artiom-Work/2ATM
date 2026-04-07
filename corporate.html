@@ -1102,7 +1102,8 @@
 
 	<dialog class="succ-submit" id="modalOverlay">
 		<form class="succ-submit__close-button-wrapper" method="dialog">
-			<button class="succ-submit__close-button" type="submit">
+			<button class="succ-submit__close-button" type="submit"
+				onclick="document.querySelector('[data-js-call-back-form-button]').classList.add('disabled')">
 				<span class="visually-hidden">Close modal confirm block</span>
 			</button>
 		</form>
