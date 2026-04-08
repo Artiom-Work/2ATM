@@ -175,7 +175,7 @@ svg * {
 /* Global variables */
 :root {
   --color-accent-50: #fefdfd;
-  --color-accent-200: #f2e5e1;
+  --color-accent-200: #ffeee6;
   --color-accent-500: #fe4f02;
   --color-accent-600: #dc4401;
   --color-gray-900: #161312;
@@ -247,7 +247,7 @@ svg * {
   --color-blue-light: #2cabea;
   --color-gold: #f8981c;
   --color-orange: #f97b06;
-  --color-extra-light-orange: #ffeee6;
+  --color-extra-light-orange: var(--color-accent-200);
   --color-light: #ffffff;
   --color-dark: #000000;
   --color-black-light: #363535;
@@ -2162,6 +2162,9 @@ button[aria-label]:not(.promotion__card-link)::before {
   --locationScrollThumbColorHover: var(--color-gray-500);
   --locationScrollBgColor: var(--color-gray-90);
   --locationListHeight: 45rem;
+}
+.locations__title {
+  margin-bottom: clamp(1.25rem, 0.9593023256rem + 1.1627906977vw, 1.875rem);
 }
 .locations__filter {
   margin-block: 0 clamp(0.625rem, 0.0436046512rem + 2.3255813953vw, 1.875rem);
