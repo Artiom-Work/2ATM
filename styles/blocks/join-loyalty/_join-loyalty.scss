@@ -1,0 +1,91 @@
+@use "../../healpers" as *;
+@use "../appointment-choose/_appointment-choose.scss";
+/* Section join-loyalty. loyalty page  */
+.join-loyalty {
+  --joinLoyaltyCardColorBg: var(--color-gray-25);
+
+  margin-bottom: fluid(170, 40);
+
+  &__title {
+    margin-bottom: fluid(40, 20);
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: var(--letter-spacing);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: fluid(24, 10);
+    margin-bottom: fluid(40, 20);
+  }
+
+  &__card {
+    background-color: var(--joinLoyaltyCardColorBg);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: fluid(20, 10);
+    border: var(--border-light);
+    border-radius: var(--border-radius-small);
+    padding: fluid(20, 10) fluid(20, 10) fluid(25, 10);
+
+    &-image {
+      @include square(rem(60));
+
+      flex-shrink: 0;
+    }
+
+    &-name {
+      text-align: center;
+      letter-spacing: var(--letter-spacing);
+      line-height: 1.3;
+    }
+  }
+
+  &__text {
+    max-width: rem(832);
+    margin-inline: auto;
+    margin-bottom: fluid(40, 20);
+    width: 100%;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+}
+
+@include tablet-media {
+  .join-loyalty {
+    &__list {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__card {
+      max-width: rem(470);
+      width: 100%;
+      justify-self: center;
+
+      &:last-child {
+        grid-column: 1/3;
+      }
+    }
+  }
+}
+
+@include mobile-medium-media {
+  .join-loyalty {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &__card {
+      &:last-child {
+        grid-column: 1/2;
+      }
+    }
+  }
+}
+/*  ==========================  */
+/*  =====END join-loyalty=====  */
+/*  ==========================  */

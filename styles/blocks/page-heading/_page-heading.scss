@@ -55,7 +55,7 @@
 }
 @include tablet-media {
   .page-heading {
-    padding-block: rem(20) rem(40);
+    padding-block: rem(20) rem(30);
 
     &__breadcrumbs {
       margin-bottom: rem(10);
@@ -70,6 +70,7 @@
 }
 @include mobile-media {
   .page-heading {
+    padding-block: rem(20) rem(40);
     &__breadcrumbs {
       &-list {
         flex-wrap: wrap;

@@ -1,0 +1,20 @@
+// connecting general scss files
+@use "../../base/normolize";
+@use "../../base/fonts";
+@use "../../base/variables";
+@use "../../base/utils";
+@use "../../base/globals";
+@use "../../base/animation";
+//common-blocks
+@use "../../blocks/сommon-blocks/button";
+@use "../../blocks/сommon-blocks/logo";
+@use "../../blocks/сommon-blocks/section";
+//blocks
+@use "../../blocks/header/header";
+@use "../../blocks/page-heading/page-heading";
+@use "../../blocks/promo/promo-loyalty-page";
+@use "../../blocks/check-discount/check-discount";
+@use "../../blocks/about/about-loyalty";
+@use "../../blocks/join-loyalty/join-loyalty";
+@use "../../blocks/advantages/our-advantages";
+@use "../../blocks/footer/footer";

@@ -1390,7 +1390,7 @@ button[aria-label]:not(.promotion__card-link)::before {
 
 @media (width <= 63.99875rem) {
   .page-heading {
-    padding-block: 1.25rem 2.5rem;
+    padding-block: 1.25rem 1.875rem;
   }
   .page-heading__breadcrumbs {
     margin-bottom: 0.625rem;
@@ -1402,6 +1402,9 @@ button[aria-label]:not(.promotion__card-link)::before {
   }
 }
 @media (width <= 47.99875rem) {
+  .page-heading {
+    padding-block: 1.25rem 2.5rem;
+  }
   .page-heading__breadcrumbs-list {
     flex-wrap: wrap;
     column-gap: var(--breadcrumbsGap);
@@ -2426,6 +2429,9 @@ button[aria-label]:not(.promotion__card-link)::before {
     grid-column: span 3;
   }
 }
+/* ================================ */
+/* ===END section other-services=== */
+/* ================================ */
 /* Navigation footer section. part of footer */
 .footer-svc-links__menu {
   font-size: 1rem;
