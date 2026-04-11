@@ -1503,8 +1503,8 @@ button[aria-label]:not(.promotion__card-link)::before {
 /* Styles for common block all-services-menu . ( it's third block in the servaces page )*/
 .services-menu__list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "tire-fitting car-wash" "tire-fitting сar-rapair" "refill-conditioning wheel-alignment";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "tire-fitting tire-fitting car-wash car-wash" "tire-fitting tire-fitting car-wash car-wash" "tire-fitting tire-fitting refill-conditioning refill-conditioning" "h-cleaning h-cleaning сar-rapair wheel-alignment";
   gap: 1.5rem;
 }
 .services-menu__item {
@@ -1532,6 +1532,11 @@ button[aria-label]:not(.promotion__card-link)::before {
   align-items: center;
   grid-area: wheel-alignment;
 }
+.services-menu__item--grid-cell-6 {
+  display: inline-flex;
+  align-items: center;
+  grid-area: h-cleaning;
+}
 .services-menu__name {
   align-self: start;
 }
@@ -1547,12 +1552,16 @@ button[aria-label]:not(.promotion__card-link)::before {
   width: 100%;
 }
 
+@media (width <= 100.06125rem) {
+  .services-menu__list {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: "tire-fitting tire-fitting tire-fitting car-wash car-wash car-wash" "tire-fitting tire-fitting tire-fitting car-wash car-wash car-wash" "tire-fitting tire-fitting tire-fitting refill-conditioning refill-conditioning refill-conditioning" "h-cleaning h-cleaning сar-rapair сar-rapair wheel-alignment wheel-alignment";
+  }
+}
 @media (width <= 81.31125rem) {
   .services-menu__list {
-    grid-template-areas: "tire-fitting car-wash" "tire-fitting refill-conditioning" "tire-fitting сar-rapair" "wheel-alignment wheel-alignment";
-  }
-  .services-menu__item:last-child .services-menu__name {
-    align-self: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "tire-fitting car-wash" "tire-fitting car-wash" "tire-fitting сar-rapair" "tire-fitting wheel-alignment" "refill-conditioning h-cleaning";
   }
 }
 @media (width <= 63.99875rem) {
@@ -1563,11 +1572,8 @@ button[aria-label]:not(.promotion__card-link)::before {
 @media (width <= 47.99875rem) {
   .services-menu__list {
     grid-template-columns: 1fr;
-    grid-template-areas: "tire-fitting" "car-wash" "refill-conditioning" " сar-rapair" " wheel-alignment";
+    grid-template-areas: "tire-fitting" "car-wash" "refill-conditioning" "сar-rapair" "wheel-alignment" "h-cleaning";
     gap: 0.625rem;
-  }
-  .services-menu__item:last-child .services-menu__name {
-    align-self: start;
   }
   .services-menu__item {
     padding: 1.5rem 2.5rem 1.40625rem 1.5rem;

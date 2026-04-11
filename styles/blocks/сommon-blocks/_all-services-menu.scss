@@ -5,11 +5,12 @@
 .services-menu {
   &__list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
-      "tire-fitting car-wash"
-      "tire-fitting сar-rapair"
-      "refill-conditioning wheel-alignment";
+      "tire-fitting tire-fitting car-wash car-wash"
+      "tire-fitting tire-fitting car-wash car-wash"
+      "tire-fitting tire-fitting refill-conditioning refill-conditioning"
+      "h-cleaning h-cleaning сar-rapair wheel-alignment";
     gap: rem(24);
   }
 
@@ -38,6 +39,11 @@
       align-items: center;
       grid-area: wheel-alignment;
     }
+    &--grid-cell-6 {
+      display: inline-flex;
+      align-items: center;
+      grid-area: h-cleaning;
+    }
   }
 
   &__name {
@@ -58,18 +64,29 @@
   }
 }
 
+@include desktop-media {
+  .services-menu {
+    &__list {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-areas:
+        "tire-fitting tire-fitting tire-fitting car-wash car-wash car-wash"
+        "tire-fitting tire-fitting tire-fitting car-wash car-wash car-wash"
+        "tire-fitting tire-fitting tire-fitting refill-conditioning refill-conditioning refill-conditioning"
+        "h-cleaning h-cleaning сar-rapair сar-rapair wheel-alignment wheel-alignment";
+    }
+  }
+}
+
 @include laptop-media {
   .services-menu {
     &__list {
+      grid-template-columns: repeat(2, 1fr);
       grid-template-areas:
         "tire-fitting car-wash"
-        "tire-fitting refill-conditioning"
+        "tire-fitting car-wash"
         "tire-fitting сar-rapair"
-        "wheel-alignment wheel-alignment";
-    }
-
-    &__item:last-child .services-menu__name {
-      align-self: center;
+        "tire-fitting wheel-alignment"
+        "refill-conditioning h-cleaning";
     }
   }
 }
@@ -86,13 +103,10 @@
         "tire-fitting"
         "car-wash"
         "refill-conditioning"
-        " сar-rapair"
-        " wheel-alignment";
+        "сar-rapair"
+        "wheel-alignment"
+        "h-cleaning";
       gap: rem(10);
-    }
-
-    &__item:last-child .services-menu__name {
-      align-self: start;
     }
 
     &__item {
