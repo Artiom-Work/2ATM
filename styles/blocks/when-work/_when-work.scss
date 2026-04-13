@@ -8,6 +8,7 @@
     outline: var(--border-light);
     padding-inline: rem(100) 0;
     border-radius: var(--border-radius-small);
+    background-color: var(--color-gray-25);
 
     &--desktop-padding {
       padding-block: fluid(17.5, 0);

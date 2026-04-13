@@ -2172,13 +2172,15 @@ button[aria-label]:not(.promotion__card-link)::before {
   display: block;
 }
 .services-tabs__table {
-  font-size: clamp(0.9375rem, 0.7921511628rem + 0.5813953488vw, 1.25rem);
-  font-weight: 700;
-  line-height: 1.3;
-  text-transform: uppercase;
+  font-size: clamp(1rem, 0.9418604651rem + 0.2325581395vw, 1.125rem);
+  font-weight: 400;
+  line-height: 1.47;
 }
 .services-tabs__table thead {
-  color: var(--text-color-medium);
+  font-size: clamp(1rem, 0.8837209302rem + 0.4651162791vw, 1.25rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--text-color-dark-medium);
 }
 .services-tabs__table th,
 .services-tabs__table td {
@@ -2187,7 +2189,10 @@ button[aria-label]:not(.promotion__card-link)::before {
 }
 .services-tabs__table th:not(:first-child),
 .services-tabs__table td:not(:first-child) {
+  font-size: clamp(0.9375rem, 0.7921511628rem + 0.5813953488vw, 1.25rem);
   text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 .services-tabs__table th:first-child,
 .services-tabs__table td:first-child {
@@ -2699,6 +2704,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   outline: var(--border-light);
   padding-inline: 6.25rem 0;
   border-radius: var(--border-radius-small);
+  background-color: var(--color-gray-25);
 }
 .when-work__wrapper--desktop-padding {
   padding-block: clamp(0rem, -0.5087209302rem + 2.0348837209vw, 1.09375rem);

@@ -2232,6 +2232,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   outline: var(--border-light);
   padding-inline: 6.25rem 0;
   border-radius: var(--border-radius-small);
+  background-color: var(--color-gray-25);
 }
 .when-work__wrapper--desktop-padding {
   padding-block: clamp(0rem, -0.5087209302rem + 2.0348837209vw, 1.09375rem);
