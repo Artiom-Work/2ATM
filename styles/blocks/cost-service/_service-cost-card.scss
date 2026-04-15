@@ -8,12 +8,12 @@
   gap: rem(17);
 
   height: 100%;
-  outline: var(--border-light);
+  outline: var(--border-extra-light);
   border-radius: var(--border-radius-small);
   padding: rem(30) rem(20);
 
   &--accent-bg {
-    background-color: var(--color-gray-75);
+    background-color: var(--color-gray-100);
   }
 
   &--big-padding {

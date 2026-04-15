@@ -64,6 +64,7 @@
   padding: 0.625rem;
   border: var(--border-light);
   border-radius: var(--border-radius-small);
+  background-color: var(--color-gray-25);
 }
 .attention-info__icon {
   flex-shrink: 0;

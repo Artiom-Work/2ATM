@@ -1695,12 +1695,12 @@ button[aria-label]:not(.promotion__card-link)::before {
   justify-content: center;
   gap: 1.0625rem;
   height: 100%;
-  outline: var(--border-light);
+  outline: var(--border-extra-light);
   border-radius: var(--border-radius-small);
   padding: 1.875rem 1.25rem;
 }
 .service-cost-card--accent-bg {
-  background-color: var(--color-gray-75);
+  background-color: var(--color-gray-100);
 }
 .service-cost-card--big-padding {
   padding-block: 3.125rem;

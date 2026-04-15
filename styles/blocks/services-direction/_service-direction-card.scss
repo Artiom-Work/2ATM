@@ -1,8 +1,9 @@
 @use "../../healpers" as *;
 /* Syles for card services-direction-card. Part of section services-direction  */
 .service-direction-card {
-  outline: var(--border-light);
+  outline: var(--border-extra-light);
   border-radius: var(--border-radius-small);
+  background-color: var(--color-gray-25);
 
   &__image {
     width: inherit;
