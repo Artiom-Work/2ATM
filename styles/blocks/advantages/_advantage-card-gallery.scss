@@ -10,8 +10,8 @@
   border-radius: var(--border-radius-small);
 
   &__image {
-    width: rem(60);
-    height: rem(60);
+    @include square(rem(60));
+
     margin-bottom: rem(20);
     margin-inline: auto;
   }
