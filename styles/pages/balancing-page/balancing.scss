@@ -10,15 +10,15 @@
 @use "../../blocks/сommon-blocks/logo";
 @use "../../blocks/сommon-blocks/section";
 //blocks
-@use "../../blocks/header/_header.scss";
-@use "../../blocks/page-heading/_page-heading.scss";
-@use "../../blocks/promo/_promo-balancing-page.scss";
-@use "../../blocks/reference/_reference.scss";
-@use "../../blocks/cost-service/_cost-service.scss";
-@use "../../blocks/service-situation/_service-situation.scss";
-@use "../../blocks/appointment-choose/_appointment-choose.scss";
-@use "../../blocks/advantages/_our-advantages.scss";
-@use "../../blocks/when-work/_when-work.scss";
-@use "../../blocks/services-list/_services-list.scss";
-@use "../../blocks/other-services/_other-services.scss";
-@use "../../blocks/footer/_footer.scss";
+@use "../../blocks/header/header";
+@use "../../blocks/page-heading/page-heading";
+@use "../../blocks/promo/promo-balancing-page";
+@use "../../blocks/reference/reference";
+@use "../../blocks/cost-service/cost-service";
+@use "../../blocks/service-situation/service-situation";
+@use "../../blocks/appointment-choose/appointment-choose";
+@use "../../blocks/advantages/our-advantages";
+@use "../../blocks/when-work/when-work";
+@use "../../blocks/services-list/services-list";
+@use "../../blocks/other-services/other-services";
+@use "../../blocks/footer/footer";

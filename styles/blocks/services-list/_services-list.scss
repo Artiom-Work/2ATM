@@ -16,7 +16,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: rem(24);
+      gap: rem(24) rem(18);
     }
   }
 
@@ -48,7 +48,7 @@
       left: rem(-20);
       top: 45%;
       translate: 0 -45%;
-      background-color: var(--text-color-medium);
+      background-color: var(--text-color-dark-medium);
       border-radius: 50%;
     }
 
