@@ -1859,9 +1859,9 @@ button[aria-label]:not(.promotion__card-link)::before {
   object-fit: cover;
 }
 
-/*  =================================  */
+/*  ==================================  */
 /*  =====END page-background-block====  */
-/*  =================================  */
+/*  ==================================  */
 /* Block about-service-list. part of section about-service */
 .about-service-list {
   max-width: 29.125rem;

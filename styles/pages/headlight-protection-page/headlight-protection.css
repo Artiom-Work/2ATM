@@ -2141,9 +2141,9 @@ button[aria-label]:not(.promotion__card-link)::before {
   object-fit: cover;
 }
 
-/*  =================================  */
+/*  ==================================  */
 /*  =====END page-background-block====  */
-/*  =================================  */
+/*  ==================================  */
 /* section when-work*/
 .when-work__wrapper {
   display: flex;
