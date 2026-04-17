@@ -1,7 +1,7 @@
 @use "../../healpers" as *;
 /* Styles for block cost-service-table. Part of section cort-service. Table verstion 1 */
 .cost-service-table {
-  font-size: fluid(18, 16);
+  font-size: fluid(18, 15);
   font-weight: 700;
   line-height: 1.1;
   text-transform: uppercase;
@@ -14,7 +14,7 @@
   }
 
   thead {
-    color: var(--text-color-medium);
+    color: var(--text-color-dark-medium);
   }
 
   th,
