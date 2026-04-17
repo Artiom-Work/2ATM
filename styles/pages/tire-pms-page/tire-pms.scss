@@ -10,15 +10,15 @@
 @use "../../blocks/сommon-blocks/logo";
 @use "../../blocks/сommon-blocks/section";
 //blocks
-@use "../../blocks/header/_header.scss";
-@use "../../blocks/page-heading/_page-heading.scss";
-@use "../../blocks/promo/_promo-tire-pms-page.scss";
-@use "../../blocks/reference/_reference.scss";
-@use "../../blocks/cost-service/_cost-service-location.scss";
-@use "../../blocks/service-info/_service-info.scss";
-@use "../../blocks/appointment-choose/_appointment-choose.scss";
-@use "../../blocks/about/_about-service-tire-pms.scss";
-@use "../../blocks/services-list/_services-list.scss";
-@use "../../blocks/when-work/_when-work.scss";
-@use "../../blocks/other-services/_other-services.scss";
-@use "../../blocks/footer/_footer.scss";
+@use "../../blocks/header/header";
+@use "../../blocks/page-heading/page-heading";
+@use "../../blocks/promo/promo-tire-pms-page";
+@use "../../blocks/reference/reference";
+@use "../../blocks/cost-service/cost-service-location";
+@use "../../blocks/service-info/service-info";
+@use "../../blocks/appointment-choose/appointment-choose";
+@use "../../blocks/about/about-service-tire-pms";
+@use "../../blocks/services-list/services-list";
+@use "../../blocks/when-work/when-work";
+@use "../../blocks/other-services/other-services";
+@use "../../blocks/footer/footer";

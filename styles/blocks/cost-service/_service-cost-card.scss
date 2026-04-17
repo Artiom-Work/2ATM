@@ -16,6 +16,11 @@
     background-color: var(--color-gray-100);
   }
 
+  &--border-none {
+    outline: none;
+    border-radius: 0;
+  }
+
   &--big-padding {
     padding-block: rem(50);
     gap: rem(10);
