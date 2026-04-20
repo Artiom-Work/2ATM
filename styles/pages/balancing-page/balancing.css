@@ -1712,6 +1712,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   outline: var(--border-extra-light);
   border-radius: var(--border-radius-small);
   padding: 1.875rem 1.25rem;
+  background-color: var(--color-gray-25);
 }
 .service-cost-card--accent-bg {
   background-color: var(--color-gray-100);
@@ -2023,7 +2024,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   max-width: 18.5625rem;
   width: 100%;
   padding: 1.1875rem 1.25rem 1.5625rem;
-  border: var(--border-light);
+  border: var(--border-extra-light);
   border-radius: var(--border-radius-small);
   background-color: var(--ourAdvantageCardBgColor);
 }

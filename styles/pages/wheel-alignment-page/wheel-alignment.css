@@ -2312,7 +2312,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   max-width: 18.5625rem;
   width: 100%;
   padding: 1.1875rem 1.25rem 1.5625rem;
-  border: var(--border-light);
+  border: var(--border-extra-light);
   border-radius: var(--border-radius-small);
   background-color: var(--ourAdvantageCardBgColor);
 }

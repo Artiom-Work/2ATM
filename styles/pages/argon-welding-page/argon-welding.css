@@ -1655,6 +1655,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   outline: var(--border-extra-light);
   border-radius: var(--border-radius-small);
   padding: 1.875rem 1.25rem;
+  background-color: var(--color-gray-25);
 }
 .service-cost-card--accent-bg {
   background-color: var(--color-gray-100);
@@ -1844,6 +1845,125 @@ button[aria-label]:not(.promotion__card-link)::before {
 /*  ====================================  */
 /*  =====END block-section reference====  */
 /*  ====================================  */
+/* section when-work*/
+.when-work__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.25rem;
+  outline: var(--border-light);
+  padding-inline: 6.25rem 0;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-gray-25);
+}
+.when-work__wrapper--desktop-padding {
+  padding-block: clamp(0rem, -0.5087209302rem + 2.0348837209vw, 1.09375rem);
+}
+.when-work__body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.875rem;
+  max-width: 36.9375rem;
+}
+.when-work__title {
+  line-height: 1.2;
+}
+.when-work__subtitle {
+  line-height: 1.5;
+  color: var(--text-color-dark-secondary);
+}
+.when-work__subtitle--bold {
+  font-size: clamp(1.0625rem, 0.9752906977rem + 0.3488372093vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: var(--text-color-dar);
+}
+.when-work__subtitle:has(ul) ul {
+  margin-block: 0;
+  text-align: start;
+  padding-left: 1.6875rem;
+}
+.when-work__buttons {
+  display: flex;
+  gap: 1.25rem;
+}
+.when-work__button {
+  font-size: clamp(0.9375rem, 0.9084302326rem + 0.1162790698vw, 1rem);
+  font-weight: 700;
+  min-width: 8.75rem;
+  letter-spacing: var(--letter-spacing-big);
+}
+.when-work__button:not(.button--accent-bg) {
+  background: var(--color-blue-light);
+}
+.when-work__image {
+  width: inherit;
+  height: inherit;
+}
+.when-work__image-wrapper {
+  width: 29.3125rem;
+  height: 19.25rem;
+  flex-shrink: 0;
+}
+
+@media (width <= 81.31125rem) {
+  .when-work__wrapper {
+    padding-inline: 2.5rem 0;
+  }
+}
+@media (width <= 63.99875rem) {
+  .when-work__wrapper {
+    padding-inline: 1.25rem 0;
+    padding: 1.25rem;
+  }
+  .when-work__body {
+    row-gap: 1.25rem;
+  }
+  .when-work__buttons {
+    gap: 0.625rem;
+  }
+  .when-work__image-wrapper {
+    width: 20rem;
+    height: 12.1875rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .when-work__wrapper {
+    flex-direction: column;
+  }
+  .when-work__title, .when-work__subtitle {
+    text-align: center;
+  }
+  .when-work__button {
+    width: 100%;
+  }
+  .when-work__image-wrapper {
+    order: -1;
+  }
+}
+@media (width <= 35.93625rem) {
+  .when-work__wrapper {
+    padding-inline: 0;
+  }
+  .when-work__body {
+    row-gap: 1.875rem;
+  }
+  .when-work__title {
+    padding-inline: 1.875rem;
+    line-height: 1.5;
+  }
+  .when-work__title--static-padding {
+    padding-inline: 0;
+  }
+  .when-work__buttons {
+    flex-direction: column;
+    padding-inline: 0.625rem;
+  }
+}
+/*  ==================================  */
+/*  =======END section when-work======  */
+/*  ==================================  */
 /* Block-card for service-steps slider.*/
 .service-steps-card {
   --serviceStepsCardTitleTextColor: var(--color-gray-800);
@@ -1856,7 +1976,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   max-width: 18.5625rem;
   width: 100%;
   padding: 1.1875rem 1.25rem 2rem;
-  border: var(--border-light);
+  border: var(--border-extra-light);
   border-radius: var(--border-radius-small);
   background-color: var(--serviceStepsCardBgColor);
 }
@@ -1924,92 +2044,6 @@ button[aria-label]:not(.promotion__card-link)::before {
 /*  ======================================  */
 /*  =======END section service-steps======  */
 /*  ======================================  */
-/* Block-card for advantage slider( our-advantage ).Part of Section advantages. Differences from blocks advantages in background color and positioning of the card*/
-.advantage-card {
-  --advantageCardTitleTextColor: var(--color-gray-800);
-  --ourAdvantageCardBgColor: var(--color-accent-200);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 1.1875rem;
-  max-width: 18.5625rem;
-  width: 100%;
-  padding: 1.1875rem 1.25rem 1.5625rem;
-  border: var(--border-light);
-  border-radius: var(--border-radius-small);
-  background-color: var(--ourAdvantageCardBgColor);
-}
-.advantage-card__image {
-  width: 3.75rem;
-  height: 3.75rem;
-}
-.advantage-card__heading {
-  font-weight: 700;
-  font-size: 1.125rem;
-  line-height: 1.3;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--advantageCardTitleTextColor);
-}
-.advantage-card__text {
-  color: var(--text-color-dark-secondary);
-  line-height: 1.52;
-}
-
-@media (width <= 47.99875rem) {
-  .advantage-card {
-    padding: 1.25rem 1.25rem 1.125rem;
-    row-gap: 1.125rem;
-  }
-  .advantage-card__heading {
-    font-size: 0.9375rem;
-    line-height: 1.5;
-  }
-  .advantage-card__text {
-    line-height: 1.47;
-  }
-}
-/* Section advantages.Slider(our-advantage). Differences from the advantages section, in the cards.*/
-.advantages {
-  --advantagesSlidesQuantity: 4;
-  overflow-x: hidden;
-}
-.advantages__title {
-  margin-bottom: 3.125rem;
-}
-.advantages__slider-wrapper {
-  display: grid;
-  grid-template-rows: auto !important;
-  grid-template-columns: repeat(var(--advantagesSlidesQuantity), 18.5625rem);
-  column-gap: 1.5rem;
-}
-.advantages__buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 1.25rem;
-}
-.advantages__button {
-  font-size: 1rem;
-}
-
-@media (width <= 63.99875rem) {
-  .advantages__slider {
-    margin-block: 0 1.25rem;
-  }
-  .advantages__buttons {
-    column-gap: 1rem;
-    justify-content: start;
-  }
-}
-@media (width <= 47.99875rem) {
-  .advantages__slider-wrapper {
-    column-gap: 0.625rem;
-  }
-}
-/*  ===================================  */
-/*  =======END section advantages======  */
-/*  ===================================  */
 /* Block about-service-list. part of section about-service */
 .about-service-list {
   max-width: 29.125rem;
@@ -2194,6 +2228,92 @@ button[aria-label]:not(.promotion__card-link)::before {
 /*  ==========================  */
 /*  =====END about-service====  */
 /*  ==========================  */
+/* Block-card for advantage slider( our-advantage ).Part of Section advantages. Differences from blocks advantages in background color and positioning of the card*/
+.advantage-card {
+  --advantageCardTitleTextColor: var(--color-gray-800);
+  --ourAdvantageCardBgColor: var(--color-accent-200);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.1875rem;
+  max-width: 18.5625rem;
+  width: 100%;
+  padding: 1.1875rem 1.25rem 1.5625rem;
+  border: var(--border-extra-light);
+  border-radius: var(--border-radius-small);
+  background-color: var(--ourAdvantageCardBgColor);
+}
+.advantage-card__image {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+.advantage-card__heading {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.3;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--advantageCardTitleTextColor);
+}
+.advantage-card__text {
+  color: var(--text-color-dark-secondary);
+  line-height: 1.52;
+}
+
+@media (width <= 47.99875rem) {
+  .advantage-card {
+    padding: 1.25rem 1.25rem 1.125rem;
+    row-gap: 1.125rem;
+  }
+  .advantage-card__heading {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+  .advantage-card__text {
+    line-height: 1.47;
+  }
+}
+/* Section advantages.Slider(our-advantage). Differences from the advantages section, in the cards.*/
+.advantages {
+  --advantagesSlidesQuantity: 4;
+  overflow-x: hidden;
+}
+.advantages__title {
+  margin-bottom: 3.125rem;
+}
+.advantages__slider-wrapper {
+  display: grid;
+  grid-template-rows: auto !important;
+  grid-template-columns: repeat(var(--advantagesSlidesQuantity), 18.5625rem);
+  column-gap: 1.5rem;
+}
+.advantages__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 1.25rem;
+}
+.advantages__button {
+  font-size: 1rem;
+}
+
+@media (width <= 63.99875rem) {
+  .advantages__slider {
+    margin-block: 0 1.25rem;
+  }
+  .advantages__buttons {
+    column-gap: 1rem;
+    justify-content: start;
+  }
+}
+@media (width <= 47.99875rem) {
+  .advantages__slider-wrapper {
+    column-gap: 0.625rem;
+  }
+}
+/*  ===================================  */
+/*  =======END section advantages======  */
+/*  ===================================  */
 /* Styles for section services-list */
 .services-list {
   max-width: calc(73.125rem + var(--container-padding-x) * 2);
@@ -2280,125 +2400,6 @@ button[aria-label]:not(.promotion__card-link)::before {
 /*  =================================  */
 /*  ====END section services-list====  */
 /*  =================================  */
-/* section when-work*/
-.when-work__wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1.25rem;
-  outline: var(--border-light);
-  padding-inline: 6.25rem 0;
-  border-radius: var(--border-radius-small);
-  background-color: var(--color-gray-25);
-}
-.when-work__wrapper--desktop-padding {
-  padding-block: clamp(0rem, -0.5087209302rem + 2.0348837209vw, 1.09375rem);
-}
-.when-work__body {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1.875rem;
-  max-width: 36.9375rem;
-}
-.when-work__title {
-  line-height: 1.2;
-}
-.when-work__subtitle {
-  line-height: 1.5;
-  color: var(--text-color-dark-secondary);
-}
-.when-work__subtitle--bold {
-  font-size: clamp(1.0625rem, 0.9752906977rem + 0.3488372093vw, 1.25rem);
-  font-weight: 700;
-  line-height: 1.3;
-  text-transform: uppercase;
-  color: var(--text-color-dar);
-}
-.when-work__subtitle:has(ul) ul {
-  margin-block: 0;
-  text-align: start;
-  padding-left: 1.6875rem;
-}
-.when-work__buttons {
-  display: flex;
-  gap: 1.25rem;
-}
-.when-work__button {
-  font-size: clamp(0.9375rem, 0.9084302326rem + 0.1162790698vw, 1rem);
-  font-weight: 700;
-  min-width: 8.75rem;
-  letter-spacing: var(--letter-spacing-big);
-}
-.when-work__button:not(.button--accent-bg) {
-  background: var(--color-blue-light);
-}
-.when-work__image {
-  width: inherit;
-  height: inherit;
-}
-.when-work__image-wrapper {
-  width: 29.3125rem;
-  height: 19.25rem;
-  flex-shrink: 0;
-}
-
-@media (width <= 81.31125rem) {
-  .when-work__wrapper {
-    padding-inline: 2.5rem 0;
-  }
-}
-@media (width <= 63.99875rem) {
-  .when-work__wrapper {
-    padding-inline: 1.25rem 0;
-    padding: 1.25rem;
-  }
-  .when-work__body {
-    row-gap: 1.25rem;
-  }
-  .when-work__buttons {
-    gap: 0.625rem;
-  }
-  .when-work__image-wrapper {
-    width: 20rem;
-    height: 12.1875rem;
-  }
-}
-@media (width <= 47.99875rem) {
-  .when-work__wrapper {
-    flex-direction: column;
-  }
-  .when-work__title, .when-work__subtitle {
-    text-align: center;
-  }
-  .when-work__button {
-    width: 100%;
-  }
-  .when-work__image-wrapper {
-    order: -1;
-  }
-}
-@media (width <= 35.93625rem) {
-  .when-work__wrapper {
-    padding-inline: 0;
-  }
-  .when-work__body {
-    row-gap: 1.875rem;
-  }
-  .when-work__title {
-    padding-inline: 1.875rem;
-    line-height: 1.5;
-  }
-  .when-work__title--static-padding {
-    padding-inline: 0;
-  }
-  .when-work__buttons {
-    flex-direction: column;
-    padding-inline: 0.625rem;
-  }
-}
-/*  ==================================  */
-/*  =======END section when-work======  */
-/*  ==================================  */
 /* Blok-card other-services-card. Part of component other-services */
 .other-service-card {
   --otherServiceCardBgColor: var(--color-gray-800);

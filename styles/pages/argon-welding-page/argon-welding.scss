@@ -12,14 +12,13 @@
 //blocks
 @use "../../blocks/header/header";
 @use "../../blocks/page-heading/page-heading";
-@use "../../blocks/promo/_promo-argon-welding-page.scss";
-@use "../../blocks/cost-service/_cost-service.scss";
+@use "../../blocks/promo/promo-argon-welding-page";
+@use "../../blocks/cost-service/cost-service";
 @use "../../blocks/reference/reference";
-@use "../../blocks/service-steps/_service-steps.scss";
-@use "../../blocks/advantages/_our-advantages.scss";
-@use "../../blocks/about/_about-service-argon-welding.scss";
+@use "../../blocks/when-work/when-work";
+@use "../../blocks/service-steps/service-steps";
+@use "../../blocks/about/about-service-argon-welding";
+@use "../../blocks/advantages/our-advantages";
 @use "../../blocks/services-list/services-list";
-@use "../../blocks/when-work/_when-work.scss";
 @use "../../blocks/other-services/other-services";
-
-@use "../../blocks/footer/_footer.scss";
+@use "../../blocks/footer/footer";

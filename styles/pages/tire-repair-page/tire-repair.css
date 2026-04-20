@@ -1732,6 +1732,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   outline: var(--border-extra-light);
   border-radius: var(--border-radius-small);
   padding: 1.875rem 1.25rem;
+  background-color: var(--color-gray-25);
 }
 .service-cost-card--accent-bg {
   background-color: var(--color-gray-100);
