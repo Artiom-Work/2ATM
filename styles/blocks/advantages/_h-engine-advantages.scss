@@ -1,0 +1,20 @@
+@use "../../healpers" as *;
+@use "h-engine-advantage-card";
+/* Section advantages.Slider(advantages__slider--h-engine only)..*/
+.h-engine-advantages {
+  --advantagesSlidesQuantity: 4;
+  overflow-x: hidden;
+
+  &__slider {
+    &-wrapper {
+      display: grid;
+      grid-template-rows: auto !important;
+      grid-template-columns: repeat(var(--advantagesSlidesQuantity), rem(297));
+
+      column-gap: rem(24);
+    }
+  }
+}
+/*  ===================================  */
+/*  =======END section advantages======  */
+/*  ===================================  */

@@ -9,6 +9,11 @@
     @include square(rem(60));
 
     flex-shrink: 0;
+
+    &--h-icon {
+      width: rem(131);
+      height: rem(165);
+    }
   }
 
   &__text {

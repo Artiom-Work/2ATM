@@ -58,6 +58,8 @@
       border: rem(2) solid currentColor;
       border-radius: 50%;
       transition-duration: var(--transition-duration);
+      flex-shrink: 0;
+      margin-left: rem(16);
 
       &::before,
       &::after {
@@ -85,15 +87,33 @@
 
     &-text {
       color: var(--faqAccordionAnswerColor);
-      font-size: 16px;
+      font-size: rem(16);
       line-height: 1.4;
       padding: rem(10) rem(24) 0 0;
     }
+  }
+}
 
-    &-link {
-      text-decoration: underline;
-      color: var(--color-accent-dark);
-      transition-duration: var(--transition-duration) !important;
+@include mobile-media {
+  .faq-accordion {
+    &__element {
+      &:not(:last-child) {
+        margin-bottom: rem(20);
+      }
+    }
+    &__question {
+      &-button {
+        font-size: rem(15);
+      }
+    }
+
+    &__answer {
+      &-text {
+        color: var(--faqAccordionAnswerColor);
+        font-size: rem(15);
+        line-height: 1.4;
+        padding: rem(10) rem(24) 0 0;
+      }
     }
   }
 }

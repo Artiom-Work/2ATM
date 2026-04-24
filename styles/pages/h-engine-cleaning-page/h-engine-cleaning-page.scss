@@ -1,0 +1,26 @@
+// connecting general scss files
+@use "../../base/normolize";
+@use "../../base/fonts";
+@use "../../base/variables";
+@use "../../base/utils";
+@use "../../base/globals";
+@use "../../base/animation";
+//common-blocks
+@use "../../blocks/сommon-blocks/button";
+@use "../../blocks/сommon-blocks/logo";
+@use "../../blocks/сommon-blocks/section";
+//blocks
+@use "../../blocks/header/header";
+@use "../../blocks/page-heading/page-heading";
+@use "../../blocks/promo/promo-h-engine-cleaning-page";
+@use "../../blocks/reference/reference";
+@use "../../blocks/info-cards/info-cards";
+@use "../../blocks/cost-service/cost-service-h-engine-cleaning-page";
+@use "../../blocks/info-tech/info-tech";
+@use "../../blocks/advantages/h-engine-advantages";
+@use "../../blocks/about/about-service-h-engine-cleaning";
+@use "../../blocks/faq/faq";
+@use "../../blocks/appointment-choose/appointment-choose";
+@use "../../blocks/advantages/our-advantages";
+@use "../../blocks/other-services/other-services";
+@use "../../blocks/footer/_footer";

@@ -1702,6 +1702,10 @@ button[aria-label]:not(.promotion__card-link)::before {
   height: 3.75rem;
   flex-shrink: 0;
 }
+.reference__icon--h-icon {
+  width: 8.1875rem;
+  height: 10.3125rem;
+}
 .reference__text {
   max-width: 52rem;
   font-size: 1.125rem;

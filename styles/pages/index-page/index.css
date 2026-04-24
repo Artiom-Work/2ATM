@@ -2887,6 +2887,8 @@ button[aria-label]:not(.promotion__card-link)::before {
   border: 0.125rem solid currentColor;
   border-radius: 50%;
   transition-duration: var(--transition-duration);
+  flex-shrink: 0;
+  margin-left: 1rem;
 }
 .faq-accordion__question-icon::before, .faq-accordion__question-icon::after {
   position: absolute;
@@ -2909,16 +2911,25 @@ button[aria-label]:not(.promotion__card-link)::before {
 }
 .faq-accordion__answer-text {
   color: var(--faqAccordionAnswerColor);
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.4;
   padding: 0.625rem 1.5rem 0 0;
 }
-.faq-accordion__answer-link {
-  text-decoration: underline;
-  color: var(--color-accent-dark);
-  transition-duration: var(--transition-duration) !important;
-}
 
+@media (width <= 47.99875rem) {
+  .faq-accordion__element:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+  .faq-accordion__question-button {
+    font-size: 0.9375rem;
+  }
+  .faq-accordion__answer-text {
+    color: var(--faqAccordionAnswerColor);
+    font-size: 0.9375rem;
+    line-height: 1.4;
+    padding: 0.625rem 1.5rem 0 0;
+  }
+}
 /*  ===================================  */
 /*  =========END section faq===========  */
 /*  ===================================  */

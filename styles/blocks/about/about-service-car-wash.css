@@ -26,6 +26,9 @@
 .about-service-list__item:not(:last-child) .about-service-list__icon-wrapper--position-decor::after {
   top: calc(100% + 1.25rem);
 }
+.about-service-list__item:not(:last-child) .about-service-list__icon-wrapper--position-decor-220::after {
+  top: 220%;
+}
 .about-service-list__icon-wrapper {
   width: 2rem;
   height: 2rem;
@@ -54,9 +57,22 @@
   .about-service-list__item--small-margin-mobile:not(:last-child) {
     margin-bottom: 0.78125rem;
   }
+  .about-service-list__item--small-padding-mobile {
+    padding: 0.625rem;
+  }
+  .about-service-list__item--small-gap-mobile {
+    gap: 0.625rem;
+  }
   .about-service-list__heading--small-text-mobile {
     font-size: 0.75rem;
     line-height: 1.56;
+  }
+  .about-service-list__heading--small-margin-mobile:not(:last-child) {
+    margin-bottom: 0.25rem;
+  }
+  .about-service-list__text--small-text-mobile {
+    font-size: 0.9375rem;
+    line-height: 1.43;
   }
 }
 /* Section about-service.car-wash page  */

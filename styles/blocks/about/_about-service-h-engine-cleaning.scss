@@ -1,0 +1,179 @@
+@use "../../healpers" as *;
+@use "about-service-list";
+/* Section about-service. h-engint-claaning page only */
+.about-service {
+  &__body {
+    display: flex;
+    justify-content: space-between;
+
+    gap: fluid(24, 20);
+    width: 100%;
+
+    &--px {
+      padding-inline: 0 rem(44);
+    }
+  }
+
+  &__image {
+    border-radius: var(--border-radius-small);
+    width: inherit;
+    height: inherit;
+
+    &-wrapper {
+      position: relative;
+      width: rem(618);
+      height: rem(762);
+      flex-shrink: 0;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: var(--border-radius-small);
+      }
+
+      &--outfit {
+        width: rem(618);
+        height: rem(662);
+
+        &::before {
+          background: var(--color-red-opcity-15);
+        }
+      }
+    }
+  }
+
+  &__content {
+    max-width: rem(530);
+
+    &--outfit {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__heading {
+    margin-block: 0 fluid(40, 20);
+    line-height: 1.2;
+  }
+
+  &__text {
+    color: var(--text-color-dark-secondary);
+    line-height: 1.5;
+
+    p:not(:last-child) {
+      margin-bottom: rem(16);
+    }
+  }
+
+  &__list {
+    max-width: rem(530);
+    width: 100%;
+  }
+}
+@include desktop-media {
+  .about-service {
+    &__body {
+      justify-content: start;
+
+      &--px {
+        padding-inline: 0;
+      }
+    }
+
+    &__image {
+      object-fit: cover;
+
+      &-wrapper {
+        &--shrink-desktop {
+          flex-shrink: 1;
+        }
+      }
+    }
+
+    &__content {
+      max-width: rem(730);
+    }
+
+    &__list {
+      max-width: rem(730);
+    }
+  }
+}
+@include laptop-media {
+  .about-service {
+    &__image {
+      &-wrapper {
+        align-self: center;
+      }
+    }
+
+    &__body {
+      flex-direction: column;
+      align-items: start;
+      padding-inline: unset;
+
+      &--outfit {
+        flex-direction: column-reverse;
+      }
+    }
+
+    &__content {
+      max-width: unset;
+      align-self: center;
+    }
+
+    &__list {
+      max-width: rem(660);
+      margin-inline: auto;
+    }
+  }
+}
+@include mobile-media {
+  .about-service {
+    &__image {
+      &-wrapper {
+        width: rem(340);
+        height: rem(417);
+
+        &--outfit {
+          height: rem(365);
+        }
+      }
+    }
+
+    &__body {
+      &--outfit {
+        gap: rem(40);
+      }
+    }
+
+    &__list {
+      max-width: unset;
+      margin-bottom: rem(10);
+    }
+
+    &__content {
+      &--outfit {
+        padding-inline: rem(10);
+      }
+    }
+
+    &__heading {
+      line-height: 1.5;
+    }
+
+    &__text {
+      p:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+/*  ==========================  */
+/*  =====END about-service====  */
+/*  ==========================  */

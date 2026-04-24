@@ -1,0 +1,88 @@
+@use "../../healpers" as *;
+/* Styles for text block-section info-cards(source -- h-engine-cleaning page) */
+.info-cards {
+  &__title {
+    letter-spacing: var(--letter-spacing);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: fluid(24, 8);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    flex-direction: column;
+    border: var(--border-extra-light);
+    border-radius: var(--border-radius-small);
+    padding: rem(18) rem(20);
+  }
+
+  &__icon {
+    @include square(rem(60));
+  }
+
+  &__card-text {
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+}
+
+@include laptop-media {
+  .info-cards {
+    &__list {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    &__item {
+      grid-column: span 2;
+
+      &:nth-child(7),
+      &:nth-child(8) {
+        grid-column: span 3;
+      }
+    }
+  }
+}
+@include tablet-media {
+  .info-cards {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+      grid-column: span 1;
+
+      &:nth-child(7),
+      &:nth-child(8) {
+        grid-column: span 1;
+      }
+    }
+  }
+}
+@include mobile-s-media {
+  .info-cards {
+    &__list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__item {
+      padding: rem(10);
+      flex-direction: row;
+    }
+
+    &__card-text {
+      text-align: start;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+  }
+}
+/*  =====================================  */
+/*  =====END block-section info-cards====  */
+/*  =====================================  */

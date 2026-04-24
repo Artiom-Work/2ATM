@@ -1,0 +1,144 @@
+@use "../../healpers" as *;
+
+/* Section cost-service. Styles for page h-engine-cleaning page */
+
+.cost-service {
+  --costServiceSlidesQuantity: 7;
+
+  position: relative;
+  max-width: calc(var(--container-width-big) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-block: fluid(144, 20) fluid(105, 20);
+  overflow: hidden;
+
+  &__background {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__title {
+    letter-spacing: var(--letter-spacing);
+  }
+
+  &__address {
+    margin-block: 0 fluid(50, 20);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(20);
+
+    &-info {
+      font-size: rem(18);
+      font-weight: 600;
+      line-height: 1.23;
+    }
+  }
+
+  &__slider {
+    margin-block: 0 fluid(50, 16);
+
+    &-wrapper {
+      display: grid;
+      grid-template-rows: auto !important;
+      grid-template-columns: repeat(var(--costServiceSlidesQuantity), rem(170));
+      column-gap: rem(11.6);
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: fluid(170, 150);
+    padding-block: rem(6) rem(10);
+    padding-inline: rem(10);
+    background-color: var(--color-light);
+    border: var(--border-light);
+    border-radius: var(--border-radius-small);
+    text-align: center;
+
+    &-icon {
+      @include square(rem(70));
+
+      margin-bottom: rem(4);
+    }
+
+    &-term {
+      font-weight: 600;
+      margin-bottom: rem(8);
+    }
+
+    &-definition {
+      line-height: 1;
+    }
+  }
+
+  &__buttons {
+    @include flex-center;
+
+    gap: fluid(20, 10);
+  }
+
+  &__button {
+    font-size: rem(16);
+  }
+}
+
+@include mobile-media {
+  .cost-service {
+    &__slider {
+      &-wrapper {
+        grid-template-columns: repeat(
+          var(--costServiceSlidesQuantity),
+          rem(150)
+        );
+        column-gap: rem(10);
+      }
+    }
+
+    &__card {
+      padding-block: rem(4) rem(10);
+    }
+  }
+}
+@include mobile-medium-media-above {
+  .cost-service {
+    &__address {
+      flex-direction: row;
+
+      &-info {
+        flex-direction: column;
+      }
+    }
+  }
+}
+@include mobile-media-above {
+  .cost-service {
+    &__address {
+      &-info {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+@include mobile-medium-media {
+  .cost-service {
+    &__buttons {
+      flex-direction: column;
+      padding-inline: rem(40);
+    }
+  }
+}
+@include mobile-s-media {
+  .cost-service {
+    &__buttons {
+      padding-inline: 0;
+    }
+  }
+}
+/*  =================================================  */
+/*  =====END cost-service(h-engine-cleaning page)====  */
+/*  =================================================  */
