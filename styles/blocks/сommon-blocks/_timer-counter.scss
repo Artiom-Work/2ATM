@@ -1,0 +1,95 @@
+@use "../../healpers" as *;
+
+/* Section timer-counter. */
+
+.timer-counter {
+  margin-inline: auto;
+  max-width: rem(465);
+
+  &__heading {
+    font-weight: 600;
+    font-size: rem(18);
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: rem(20);
+  }
+
+  &__list {
+    @include flex-space-between;
+
+    li:not(:last-child) {
+      &::after {
+        position: absolute;
+        content: ":";
+        font-size: rem(55);
+        font-weight: 800;
+        line-height: 1.27;
+        height: inherit;
+        left: 100%;
+        top: 0;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: rem(100);
+    height: rem(98);
+
+    text-align: center;
+  }
+
+  &__unit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__text-big {
+    font-weight: 700;
+    font-size: rem(60);
+    line-height: 1.3;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-big);
+  }
+
+  &__text-small {
+    font-size: rem(14);
+    line-height: 1.4;
+  }
+}
+@include tablet-media {
+  .timer-counter {
+    max-width: rem(300);
+
+    &__list {
+      li:not(:last-child) {
+        &::after {
+          font-size: rem(35);
+          line-height: 1.3;
+        }
+      }
+    }
+
+    &__item {
+      width: rem(65);
+      height: rem(72);
+    }
+
+    &__text-big {
+      font-size: rem(40);
+    }
+  }
+}
+@include mobile-medium-media {
+  .timer-counter {
+    &__heading {
+      font-size: rem(16);
+    }
+  }
+}
+/*  ==========================  */
+/*  =====END timer-counter====  */
+/*  ==========================  */

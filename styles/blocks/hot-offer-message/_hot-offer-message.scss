@@ -1,0 +1,42 @@
+@use "../../healpers" as *;
+
+/* Banner section hot-offer-message */
+.hot-offer-message {
+  background-color: var(--color-accent);
+  width: 100%;
+  padding-block: rem(41.5);
+
+  &__text {
+    @include fluid-text(32, 20);
+
+    text-align: center;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-gray-50);
+    padding-inline: rem(100) rem(10);
+  }
+}
+
+@include desktop-media {
+  .hot-offer-message {
+    &__text {
+      padding-inline: var(--container-padding-x);
+    }
+  }
+}
+@include mobile-media {
+  .hot-offer-message {
+    padding-block: rem(15.5);
+
+    &__text {
+      @include fluid-text(32, 20);
+
+      padding-inline: rem(10);
+      line-height: 1.5;
+    }
+  }
+}
+/*  ==============================  */
+/*  =====END hot-offer-message====  */
+/*  ==============================  */

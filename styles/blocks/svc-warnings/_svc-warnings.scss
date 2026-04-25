@@ -1,0 +1,84 @@
+@use "../../healpers" as *;
+/* Section svc-warnings. decoking-engine page */
+.svc-warnings {
+  &__title {
+    text-align: center;
+    letter-spacing: var(--letter-spacing);
+    line-height: 1.2;
+    margin-bottom: fluid(40, 20);
+  }
+
+  &__body {
+    @include flex-space-between;
+
+    gap: rem(20);
+    padding-inline: rem(13) 0;
+  }
+
+  &__image {
+    width: inherit;
+    height: inherit;
+
+    &-wrapper {
+      flex-shrink: 0;
+      width: rem(261);
+      height: rem(283);
+    }
+  }
+
+  &__list {
+    max-width: rem(917);
+
+    &-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-inline: rem(24) 0;
+
+      font-weight: 600;
+      font-size: rem(18);
+      line-height: 1.22;
+
+      &::before {
+        @include square(rem(8));
+
+        content: "";
+        position: absolute;
+        left: rem(2);
+        border-radius: 100%;
+        background-color: var(--color-accent);
+        flex-shrink: 0;
+      }
+    }
+
+    li:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+}
+
+@include mobile-media {
+  .svc-warnings {
+    &__title {
+      line-height: 1.3;
+    }
+
+    &__body {
+      flex-direction: column;
+      padding-inline: unset;
+    }
+  }
+}
+@include mobile-s-media {
+  .svc-warnings {
+    &__image {
+      &-wrapper {
+        width: rem(174);
+        height: rem(189);
+      }
+    }
+  }
+}
+/*  =========================  */
+/*  =====END svc-warnings====  */
+/*  =========================  */

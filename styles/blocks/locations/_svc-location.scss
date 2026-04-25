@@ -1,0 +1,41 @@
+@use "../../healpers" as *;
+@use "svc-location-info";
+@use "map-block";
+/* Section svc-location. */
+.svc-location {
+  --svcLocationBgColor: var(--color-gray-25);
+
+  background-color: var(--svcLocationBgColor);
+  padding-block: fluid(80, 20);
+
+  &__inner {
+    @include flex-space-between;
+
+    gap: rem(20);
+  }
+
+  &__map-block {
+    width: rem(717);
+    height: rem(435);
+  }
+
+  &__info {
+    max-width: rem(463);
+    width: 100%;
+  }
+}
+
+@include mobile-media {
+  .svc-location {
+    &__inner {
+      flex-direction: column;
+    }
+    &__map-block {
+      width: 100%;
+      height: rem(206);
+    }
+  }
+}
+/*  =========================  */
+/*  =====END svc-location====  */
+/*  =========================  */

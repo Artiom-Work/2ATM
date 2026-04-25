@@ -1,0 +1,134 @@
+@use "../../healpers" as *;
+
+/* Section prices-svc. Services prices list and cards */
+.prices-svc {
+  --startListColumnQuantity: 3;
+
+  &__heading {
+    color: var(--text-color-light);
+    font-size: rem(20);
+
+    line-height: 1.3;
+    text-transform: uppercase;
+    text-align: center;
+    margin-block: rem(10);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(var(--startListColumnQuantity), 1fr);
+    gap: rem(10);
+  }
+
+  &__card {
+    @include flex-center;
+
+    gap: rem(10);
+
+    padding: rem(10);
+    background-color: var(--color-light);
+
+    border-radius: var(--border-radius-small);
+
+    &-icon {
+      @include square(rem(80));
+
+      flex-shrink: 0;
+    }
+
+    &-text {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: rem(10);
+      font-weight: 600;
+      line-height: 1.2;
+      text-align: center;
+
+      p:not(:last-child) {
+        margin-bottom: unset;
+      }
+    }
+
+    &-text-small {
+      font-weight: 400;
+      font-size: rem(13);
+      line-height: 1.41;
+      color: var(--text-color-dark-secondary);
+    }
+
+    &-price {
+      @include fluid-text(30, 24);
+
+      font-weight: 700;
+
+      line-height: 1;
+      text-transform: uppercase;
+      color: var(--color-success);
+      letter-spacing: var(--letter-spacing-medium);
+    }
+
+    &-text-through {
+      font-weight: 400;
+      text-decoration: line-through;
+      font-size: rem(16);
+      line-height: 1.2;
+      color: var(--text-color-dark-secondary);
+    }
+  }
+}
+@include laptop-media {
+  .prices-svc {
+    --startListColumnQuantity: 2;
+
+    &__list {
+      &:not(:has(:nth-child(4))) li:nth-child(3) {
+        grid-column: span 2;
+        max-width: rem(505);
+        justify-self: center;
+      }
+    }
+  }
+}
+@include mobile-media {
+  .prices-svc {
+    --startListColumnQuantity: 1;
+
+    &__heading {
+      margin-block: rem(50);
+    }
+
+    &__list {
+      gap: rem(9);
+
+      &:not(:has(:nth-child(4))) li:nth-child(3) {
+        grid-column: span 1;
+        max-width: rem(600);
+        justify-self: center;
+      }
+    }
+
+    &__card {
+      max-width: rem(600);
+      width: 100%;
+      justify-self: center;
+      gap: rem(20);
+
+      &:has(img) {
+        justify-content: start;
+        padding: rem(10) rem(10) rem(10) fluid(400, 18);
+
+        .prices-svc__card-text {
+          align-items: start;
+        }
+      }
+
+      &-text {
+        line-height: 1.4;
+      }
+    }
+  }
+}
+/*  =======================  */
+/*  =====END prices-svc====  */
+/*  =======================  */

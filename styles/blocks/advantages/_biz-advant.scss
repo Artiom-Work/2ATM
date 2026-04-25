@@ -1,0 +1,92 @@
+@use "../../healpers" as *;
+@use "advantages-banner";
+/* Section biz-advant. */
+.biz-advant {
+  @include flex-space-between;
+
+  gap: rem(20);
+  padding-block: fluid(80, 40) 0;
+
+  &__desc {
+    max-width: rem(600);
+    padding-block: rem(40);
+
+    &-logo {
+      margin-bottom: fluid(40, 20);
+      width: rem(330);
+      height: rem(70);
+
+      &-image {
+        width: inherit;
+        height: inherit;
+      }
+
+      @include hover {
+        filter: opacity(50%);
+      }
+      @include active {
+        filter: opacity(30%);
+        scale: 0.98;
+      }
+    }
+
+    &-text {
+      color: var(--text-color-dark-secondary);
+      line-height: 1.5;
+
+      p:not(:last-child) {
+        margin-bottom: rem(16);
+      }
+    }
+  }
+
+  &__banner {
+    max-width: rem(600);
+  }
+}
+
+@include laptop-media {
+  .biz-advant {
+    flex-direction: column-reverse;
+
+    &__desc {
+      max-width: unset;
+
+      &-logo {
+        display: block;
+        margin-inline: auto;
+      }
+    }
+  }
+}
+@include mobile-media {
+  .biz-advant {
+    padding-block: unset;
+
+    &__desc {
+      padding-block: rem(40) 0;
+
+      &-text {
+        p:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+@include mobile-medium-media {
+  .biz-advant {
+    &__desc {
+      &-logo {
+        margin-inline: unset;
+      }
+    }
+
+    &__banner {
+      max-width: rem(400);
+    }
+  }
+}
+/*  =======================  */
+/*  =====END biz-advant====  */
+/*  =======================  */

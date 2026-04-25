@@ -1,0 +1,28 @@
+// connecting general scss files
+@use "../../base/normolize";
+@use "../../base/fonts";
+@use "../../base/variables";
+@use "../../base/utils";
+@use "../../base/globals";
+@use "../../base/animation";
+//common-blocks
+@use "../../blocks/сommon-blocks/button";
+@use "../../blocks/сommon-blocks/logo";
+@use "../../blocks/сommon-blocks/section";
+//blocks
+@use "../../blocks/header/header";
+@use "../../blocks/page-heading/page-heading";
+@use "../../blocks/promo/promo-decoking-engine-page";
+@use "../../blocks/hot-offer-message/hot-offer-message";
+@use "../../blocks/why-svc/why-svc";
+@use "../../blocks/steps-svc/steps-svc";
+@use "../../blocks/move-up/move-up";
+@use "../../blocks/svc-warnings/svc-warnings";
+@use "../../blocks/advantages/biz-advant";
+@use "../../blocks/locations/svc-location";
+@use "../../blocks/cost-service/cost-service-decoking-engine-page";
+@use "../../blocks/about/about-service-decoking-engine";
+@use "../../blocks/faq/faq";
+@use "../../blocks/appointment-choose/appointment-choose";
+@use "../../blocks/other-services/other-services";
+@use "../../blocks/footer/footer";

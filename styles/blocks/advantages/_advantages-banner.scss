@@ -1,0 +1,79 @@
+@use "../../healpers" as *;
+/* Section advantages-banner. */
+.advantages-banner {
+  --advantagesBannerBgColor: var(--color-gray-25);
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: fluid(40, 27);
+
+  background-color: var(--advantagesBannerBgColor);
+  border-radius: rem(20);
+  padding: fluid(74, 20) fluid(40, 20);
+
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  &__list {
+    @include flex-center;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: rem(20);
+    padding-block: rem(20);
+
+    &-icon {
+      @include square(rem(60));
+
+      flex-shrink: 0;
+    }
+
+    &-name {
+      @include fluid-text(18, 15);
+
+      font-weight: 700;
+      line-height: 1.3;
+      text-transform: uppercase;
+      text-align: center;
+      min-width: rem(150);
+    }
+  }
+}
+
+@include mobile-media {
+  .advantages-banner {
+    &__title {
+      line-height: 1.3;
+    }
+
+    &__list {
+      flex-direction: column;
+    }
+
+    &__item {
+      padding-inline: rem(20);
+      padding-block: rem(10);
+
+      &-name {
+        line-height: 1.2;
+        min-width: unset;
+        max-width: rem(155);
+      }
+    }
+  }
+}
+@include mobile-medium-media {
+  .advantages-banner {
+    padding: rem(20) rem(20) rem(28);
+  }
+}
+/*  =============================  */
+/*  =====END advantages-banner===  */
+/*  =============================  */

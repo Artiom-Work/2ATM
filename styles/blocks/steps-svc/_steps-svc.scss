@@ -1,0 +1,114 @@
+@use "../../healpers" as *;
+@use "step-svc-card";
+/* Section steps-svc. decoking-engine page */
+.steps-svc {
+  margin-bottom: fluid(128, 12);
+
+  &__title {
+    margin-bottom: rem(12);
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: var(--letter-spacing);
+  }
+
+  &__slider {
+    max-width: rem(1270);
+
+    &-wrapper {
+      position: relative;
+    }
+
+    &-button {
+      @include flex-center(true);
+      @include square(rem(24));
+
+      flex-shrink: 0;
+      position: absolute;
+      top: rem(220);
+      z-index: 2;
+      border-radius: 50%;
+      border: none;
+      background-color: var(--color-accent);
+      transition-duration: var(--transition-duration) !important;
+      will-change: transform;
+
+      &::before {
+        @include abs-center;
+        @include square(rem(44));
+
+        content: "";
+      }
+
+      &--prev {
+        rotate: -180deg;
+        left: rem(2);
+      }
+
+      &--next {
+        right: -95%;
+      }
+
+      &-icon {
+        flex-shrink: 0;
+        stroke: var(--color-light);
+        fill: var(--color-light);
+      }
+
+      @include hover {
+        filter: brightness(80%);
+      }
+
+      @include active {
+        scale: 0.95;
+      }
+    }
+
+    &-pagination {
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: rem(10);
+
+      span {
+        @include square(rem(10));
+
+        background-color: var(--color-accent);
+        opacity: 0.15;
+
+        @include hover {
+          outline: rem(1) solid var(--color-accent);
+        }
+      }
+
+      span[aria-current="true"] {
+        opacity: 1;
+      }
+    }
+  }
+}
+@include tablet-media {
+  .steps-svc {
+    &__slider {
+      padding-block: 0 rem(40);
+    }
+  }
+}
+@include mobile-media {
+  .steps-svc {
+    &__title {
+      line-height: 1.3;
+      letter-spacing: var(--letter-spacing-medium);
+      margin-bottom: rem(20);
+    }
+
+    &__slider {
+      padding-block: unset;
+    }
+  }
+}
+/*  ======================  */
+/*  =====END steps-svc====  */
+/*  ======================  */

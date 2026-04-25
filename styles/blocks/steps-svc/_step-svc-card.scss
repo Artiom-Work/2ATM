@@ -1,0 +1,112 @@
+@use "../../healpers" as *;
+
+/*  step-svc-card. Block slide card */
+.step-svc-card {
+  @include flex-space-between;
+
+  gap: rem(67);
+  max-width: rem(1077);
+  margin-inline: auto;
+
+  &__image {
+    width: inherit;
+    height: inherit;
+
+    &-wrapper {
+      width: rem(604);
+      height: rem(405);
+      flex-shrink: 0;
+      border-radius: rem(20);
+      overflow: hidden;
+    }
+  }
+
+  &__content {
+    max-width: rem(450);
+    padding: rem(30) rem(40);
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(40);
+  }
+
+  &__number {
+    @include square(rem(103));
+    @include flex-center(true);
+
+    font-size: rem(80);
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--color-accent);
+
+    &-bg {
+      position: absolute;
+      z-index: -1;
+      fill: var(--color-gray-800);
+      width: inherit;
+      height: inherit;
+    }
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: rem(18);
+    line-height: 1.2;
+  }
+}
+@include desktop-media {
+  .step-svc-card {
+    gap: rem(24);
+  }
+}
+@include tablet-media {
+  .step-svc-card {
+    gap: rem(10);
+    padding-inline: rem(10) 0;
+
+    &__image {
+      &-wrapper {
+        width: rem(340);
+        height: rem(228);
+      }
+    }
+
+    &__content {
+      padding: rem(10) rem(10) 0;
+      row-gap: rem(21);
+      max-width: rem(600);
+      width: 100%;
+    }
+
+    &__number {
+      font-size: rem(46);
+      line-height: 1.2;
+      @include square(rem(60));
+    }
+
+    &__text {
+      line-height: 1.23;
+    }
+  }
+}
+@include mobile-media {
+  .step-svc-card {
+    flex-direction: column;
+    padding-inline: unset;
+
+    &__content {
+      padding: rem(20) rem(40) rem(50);
+      align-items: center;
+    }
+  }
+}
+@include mobile-medium-media {
+  .step-svc-card {
+    &__content {
+      max-width: unset;
+      padding: rem(20) rem(10) rem(57);
+    }
+  }
+}
+/*  =========================  */
+/*  =====END step-svc-card===  */
+/*  =========================  */
