@@ -1692,7 +1692,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   align-items: center;
   gap: 1.5rem;
   padding: 0.625rem;
-  border: var(--border-light);
+  border: var(--border-extra-light);
   border-radius: var(--border-radius-small);
   background-color: var(--color-gray-25);
 }
@@ -2245,7 +2245,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   justify-content: space-between;
   align-items: center;
   gap: 1.25rem;
-  outline: var(--border-light);
+  outline: var(--border-extra-light);
   padding-inline: 6.25rem 0;
   border-radius: var(--border-radius-small);
   background-color: var(--color-gray-25);

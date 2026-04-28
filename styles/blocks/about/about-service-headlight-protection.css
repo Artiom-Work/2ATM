@@ -5,7 +5,7 @@
   align-items: center;
   gap: 1.5rem;
   padding: 0.625rem;
-  border: var(--border-light);
+  border: var(--border-extra-light);
   border-radius: var(--border-radius-small);
   background-color: var(--color-gray-25);
 }

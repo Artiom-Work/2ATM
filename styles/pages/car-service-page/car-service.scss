@@ -12,12 +12,12 @@
 //blocks
 @use "../../blocks/header/header";
 @use "../../blocks/page-heading/page-heading";
-@use "../../blocks/promo/_promo-car-service-page.scss";
-@use "../../blocks/promotions/_promotion.scss";
-@use "../../blocks/cost-service/_cost-service-car-service-page.scss";
-@use "../../blocks/appointment-choose/_appointment-choose.scss";
-@use "../../blocks/advantages/_our-advantages.scss";
-@use "../../blocks/when-work/_when-work.scss";
+@use "../../blocks/promo/promo-car-service-page";
+@use "../../blocks/promotions/promotion";
+@use "../../blocks/cost-service/cost-service-car-service-page";
+@use "../../blocks/appointment-choose/appointment-choose";
+@use "../../blocks/advantages/our-advantages";
+@use "../../blocks/when-work/when-work";
 @use "../../blocks/other-services/other-services";
 
-@use "../../blocks/footer/_footer.scss";
+@use "../../blocks/footer/footer";

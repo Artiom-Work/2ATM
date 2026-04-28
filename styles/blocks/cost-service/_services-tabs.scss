@@ -2,7 +2,7 @@
 /* Styles for block-tabs services-tabs. Part of section cost-service. source car-service */
 
 .services-tabs {
-  --serviceTabsButtonBg: var(--color-accent-extra-light);
+  --serviceTabsButtonBg: var(--color-gray-25);
   --serviceTabsActiveButtonBg: var(--color-gray-800);
 
   &__header {
@@ -41,6 +41,7 @@
     background-color: var(--serviceTabsButtonBg);
     border-radius: var(--border-radius-small);
     transition-duration: var(--transition-duration) !important;
+    will-change: transform;
 
     &.is-active {
       background-color: var(--serviceTabsActiveButtonBg);

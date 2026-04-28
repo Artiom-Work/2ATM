@@ -1623,9 +1623,9 @@ button[aria-label]:not(.promotion__card-link)::before {
   --searchBlockHeight: 2.375rem;
   --searchBlockHeightHigh: 3.125rem;
   --searchBgColor: var(--color-light);
-  --searchBgColorHover: var(--color-gray-100);
+  --searchBgColorHover: var(--color-gray-300);
   --searchBorder: var(--border-light);
-  --searchIconColor: var(--color-border-medium);
+  --searchIconColor: var(--color-gray-800);
   position: relative;
   display: block;
   height: 100%;
@@ -1644,6 +1644,9 @@ button[aria-label]:not(.promotion__card-link)::before {
 }
 .search__input--high {
   min-height: var(--searchBlockHeightHigh);
+}
+.search__input--gray-bg {
+  --searchBgColor: var(--color-gray-25);
 }
 .search__input:focus {
   background-color: var(--searchBgColor) !important;
@@ -2701,7 +2704,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   justify-content: space-between;
   align-items: center;
   gap: 1.25rem;
-  outline: var(--border-light);
+  outline: var(--border-extra-light);
   padding-inline: 6.25rem 0;
   border-radius: var(--border-radius-small);
   background-color: var(--color-gray-25);
