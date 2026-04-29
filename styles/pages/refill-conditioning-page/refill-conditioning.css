@@ -1590,63 +1590,6 @@ button[aria-label]:not(.promotion__card-link)::before {
 /*  =============================================  */
 /*  =====END promo block(refill-conditioning)====  */
 /*  =============================================  */
-/* common-block auth-portal. */
-.auth-portal__wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2.90625rem;
-  background-color: var(--color-accent);
-  border-radius: var(--border-radius-small);
-}
-.auth-portal__text {
-  font-weight: 700;
-  font-size: 1.0625rem;
-  line-height: 1.2;
-  text-transform: uppercase;
-  color: var(--text-color-light);
-}
-.auth-portal__image {
-  width: inherit;
-  height: inherit;
-}
-.auth-portal__image-wrapper {
-  width: 3.75rem;
-  height: 3.75rem;
-}
-.auth-portal__button {
-  background-color: var(--color-light);
-  color: var(--text-color-dark);
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.7;
-  letter-spacing: var(--letter-spacing);
-  min-height: var(--auth-portal-button-height);
-  padding-block: 0.375rem;
-}
-
-@media (width <= 63.99875rem) {
-  .auth-portal__wrapper {
-    gap: 0.75rem;
-  }
-}
-@media (width <= 47.99875rem) {
-  .auth-portal__wrapper {
-    flex-direction: column;
-    padding-inline: 0.71875rem;
-    padding-block: 1.25rem;
-  }
-  .auth-portal__text {
-    text-align: center;
-    line-height: 1.2;
-  }
-  .auth-portal__image-wrapper {
-    rotate: 90deg;
-  }
-}
-/*  ==============================  */
-/*  =====END block auth-portal====  */
-/*  ==============================  */
 /* Styles for service-cost-card. Part of cost-service list */
 .service-cost-card {
   display: flex;
@@ -1767,10 +1710,51 @@ button[aria-label]:not(.promotion__card-link)::before {
     text-align: center;
   }
 }
-/* Section cost-service.(short verstion, without buttons) */
-.cost-service__banner {
-  margin-bottom: clamp(0.625rem, 0.2180232558rem + 1.6279069767vw, 1.5rem);
+/* Syles for text-block attention-info */
+.attention-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.625rem;
+  border: var(--border-extra-light);
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-gray-25);
 }
+.attention-info__icon {
+  flex-shrink: 0;
+}
+.attention-info__text {
+  color: var(--text-color-dark-secondary);
+  line-height: 1.47;
+}
+.attention-info__text--static-fs {
+  font-size: 1.125rem;
+}
+.attention-info__text--small {
+  font-size: clamp(0.9375rem, 0.9084302326rem + 0.1162790698vw, 1rem);
+  line-height: 1.36;
+  padding-inline: 0.6875rem;
+}
+.attention-info__text p:not(:last-child) {
+  margin-bottom: 1.0625rem;
+}
+
+@media (width <= 47.99875rem) {
+  .attention-info {
+    flex-direction: column;
+  }
+  .attention-info__text {
+    line-height: 1.49;
+  }
+  .attention-info__text--centred-mobile {
+    text-align: center;
+    line-height: 1.47;
+  }
+}
+/* ===================================== */
+/* ===================================== */
+/* Section cost-service.(short verstion, without buttons) */
 .cost-service__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
