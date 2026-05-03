@@ -99,6 +99,12 @@
     &__text {
       line-height: 1.5;
     }
+
+    &__text {
+      p:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 @include mobile-medium-media {

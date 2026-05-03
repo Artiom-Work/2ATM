@@ -12,13 +12,13 @@
 //blocks
 @use "../../blocks/header/header";
 @use "../../blocks/page-heading/page-heading";
-@use "../../blocks/promo/_promo-wheel-alignment-page.scss";
-@use "../../blocks/about/_about-service-wheel-alignment.scss";
-@use "../../blocks/info-gallery/_info-gallery.scss";
-@use "../../blocks/cost-service/_cost-service-wheel-alignment-page.scss";
-@use "../../blocks/appointment-choose/_appointment-choose.scss";
-@use "../../blocks/when-work/_when-work.scss";
+@use "../../blocks/promo/promo-wheel-alignment-page";
+@use "../../blocks/about/about-service-wheel-alignment";
+@use "../../blocks/info-gallery/info-gallery";
+@use "../../blocks/cost-service/cost-service-wheel-alignment-page";
+@use "../../blocks/appointment-choose/appointment-choose";
+@use "../../blocks/when-work/when-work";
 @use "../../blocks/other-services/other-services";
 
-@use "../../blocks/advantages/_our-advantages.scss";
+@use "../../blocks/advantages/our-advantages";
 @use "../../blocks/footer/footer";

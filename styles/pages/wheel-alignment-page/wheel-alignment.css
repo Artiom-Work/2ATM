@@ -1665,6 +1665,9 @@ button[aria-label]:not(.promotion__card-link)::before {
   .about-service__heading, .about-service__text {
     line-height: 1.5;
   }
+  .about-service__text p:not(:last-child) {
+    margin-bottom: 0;
+  }
 }
 @media (width <= 35.93625rem) {
   .about-service__heading {
@@ -1678,7 +1681,7 @@ button[aria-label]:not(.promotion__card-link)::before {
 .info-gallery {
   --infoGalleryTextColor: var(--color-gray-850);
   --infoGallerySlidesQuantity: 4;
-  --infoGalleryCardBg: 4;
+  --infoGalleryCardBg: var(--color-gray-25);
   overflow-x: hidden;
 }
 .info-gallery__slider {
@@ -1696,7 +1699,7 @@ button[aria-label]:not(.promotion__card-link)::before {
   gap: 1.25rem;
   height: 100%;
   background-color: var(--infoGalleryCardBg);
-  border: var(--border-light);
+  border: var(--border-extra-light);
   border-radius: var(--border-radius-small);
   padding-block: 0 clamp(0.3125rem, 0.1671511628rem + 0.5813953488vw, 0.625rem);
 }
@@ -1741,63 +1744,6 @@ button[aria-label]:not(.promotion__card-link)::before {
 /*  =========================  */
 /*  =====END info-gallery====  */
 /*  =========================  */
-/* common-block auth-portal. */
-.auth-portal__wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2.90625rem;
-  background-color: var(--color-accent);
-  border-radius: var(--border-radius-small);
-}
-.auth-portal__text {
-  font-weight: 700;
-  font-size: 1.0625rem;
-  line-height: 1.2;
-  text-transform: uppercase;
-  color: var(--text-color-light);
-}
-.auth-portal__image {
-  width: inherit;
-  height: inherit;
-}
-.auth-portal__image-wrapper {
-  width: 3.75rem;
-  height: 3.75rem;
-}
-.auth-portal__button {
-  background-color: var(--color-light);
-  color: var(--text-color-dark);
-  font-weight: 700;
-  font-size: 0.875rem;
-  line-height: 1.7;
-  letter-spacing: var(--letter-spacing);
-  min-height: var(--auth-portal-button-height);
-  padding-block: 0.375rem;
-}
-
-@media (width <= 63.99875rem) {
-  .auth-portal__wrapper {
-    gap: 0.75rem;
-  }
-}
-@media (width <= 47.99875rem) {
-  .auth-portal__wrapper {
-    flex-direction: column;
-    padding-inline: 0.71875rem;
-    padding-block: 1.25rem;
-  }
-  .auth-portal__text {
-    text-align: center;
-    line-height: 1.2;
-  }
-  .auth-portal__image-wrapper {
-    rotate: 90deg;
-  }
-}
-/*  ==============================  */
-/*  =====END block auth-portal====  */
-/*  ==============================  */
 /* Syles for text-block attention-info */
 .attention-info {
   display: flex;
@@ -1846,23 +1792,25 @@ button[aria-label]:not(.promotion__card-link)::before {
 .cost-service-table {
   --tableHeadingCellsBgColor: var(--color-gray-800);
   --tableHeadingCellsColor: var(--color-light);
-  --tableCellsBgColor: var(--color-gray-75);
-  font-weight: 700;
-  font-size: 1.0625rem;
-  line-height: 1.2;
-  text-transform: uppercase;
-  max-width: 78.75rem;
+  --tableCellsBgColor: var(--color-gray-100);
+  font-size: 1.125rem;
+  line-height: 1;
+  max-width: 72.5rem;
   width: 100%;
 }
 .cost-service-table__icon {
   fill: var(--tableHeadingCellsColor);
 }
 .cost-service-table__text-small {
-  font-weight: 400;
   font-size: 1rem;
-  line-height: 1.4;
+  line-height: 1;
   color: var(--text-color-dark-secondary);
   text-transform: none;
+}
+.cost-service-table thead {
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
 }
 .cost-service-table tr {
   display: grid;
@@ -1888,7 +1836,7 @@ button[aria-label]:not(.promotion__card-link)::before {
 }
 .cost-service-table th:first-child,
 .cost-service-table td:first-child {
-  min-width: 25.25rem;
+  min-width: 19rem;
   justify-content: start;
   text-align: start;
 }
@@ -1896,12 +1844,12 @@ button[aria-label]:not(.promotion__card-link)::before {
 .cost-service-table td {
   height: 4.75rem;
   border-radius: var(--border-radius-small);
-  padding: 0.4375rem 0.625rem;
+  padding: 0rem 0.625rem;
   align-content: center;
 }
 
 /* Section cost-service for wheel-alignment page */
-.cost-service__banner, .cost-service__table-wrapper, .cost-service__text, .cost-service__attentions {
+.cost-service__table-wrapper, .cost-service__text, .cost-service__attentions, .cost-service__button {
   margin-bottom: clamp(1.25rem, 0.3779069767rem + 3.488372093vw, 3.125rem);
 }
 .cost-service__table-wrapper {
@@ -1916,6 +1864,15 @@ button[aria-label]:not(.promotion__card-link)::before {
 }
 .cost-service__text p {
   margin-bottom: 1.4375rem;
+}
+.cost-service__text--light {
+  color: var(--text-color-dark-secondary);
+  text-align: center;
+}
+.cost-service__button {
+  display: flex;
+  justify-self: center;
+  border: 0.0625rem solid currentColor;
 }
 .cost-service__attentions {
   display: grid;

@@ -1,13 +1,12 @@
 @use "../../healpers" as *;
-@use "../сommon-blocks/auth-portal";
 @use "../сommon-blocks/attention-info";
 @use "cost-service-color-table";
 /* Section cost-service for wheel-alignment page */
 .cost-service {
-  &__banner,
   &__table-wrapper,
   &__text,
-  &__attentions {
+  &__attentions,
+  &__button {
     margin-bottom: fluid(50, 20);
   }
 
@@ -25,6 +24,17 @@
     p {
       margin-bottom: rem(23);
     }
+
+    &--light {
+      color: var(--text-color-dark-secondary);
+      text-align: center;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-self: center;
+    border: rem(1) solid currentColor;
   }
 
   &__attentions {
@@ -66,7 +76,6 @@
     }
   }
 }
-
 @include mobile-media {
   .cost-service {
     &__text {

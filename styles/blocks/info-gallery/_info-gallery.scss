@@ -4,7 +4,7 @@
 .info-gallery {
   --infoGalleryTextColor: var(--color-gray-850);
   --infoGallerySlidesQuantity: 4;
-  --infoGalleryCardBg: 4;
+  --infoGalleryCardBg: var(--color-gray-25);
 
   overflow-x: hidden;
 
@@ -26,7 +26,7 @@
     gap: rem(20);
     height: 100%;
     background-color: var(--infoGalleryCardBg);
-    border: var(--border-light);
+    border: var(--border-extra-light);
     border-radius: var(--border-radius-small);
     padding-block: 0 fluid(10, 5);
 
